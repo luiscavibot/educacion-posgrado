@@ -28,7 +28,7 @@
 }
 
 .accordion-menu.ui.accordion .title:not(.ui) {
-	@apply w-full px-11 cursor-pointer shadow-none rounded-lg mb-0 font-normal text-textColorOne flex items-center justify-between;
+	@apply w-full px-11 cursor-pointer shadow-none rounded-lg mb-0 font-normal text-blanco flex items-center justify-between;
 }
 
 .accordion-menu-aside.ui.accordion {

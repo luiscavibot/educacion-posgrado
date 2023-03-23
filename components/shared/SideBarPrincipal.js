@@ -54,7 +54,7 @@ const SideBarPrincipal = ({ refFooter, refSocialMedia }) => {
 		// <aside className="fixed top-0 bg-gris justify-center inset-y-0 pt-36 w-sidebarWidth left-0 md:flex hidden">
 		<aside className="fixed top-0 bg-gris justify-center inset-y-0 pt-36 w-sidebarWidth left-0 md:flex hidden">
 			<div className="w-full" ref={refAsideContent}>
-				<p className="text-secondary text-lg font-bold px-11">Menú</p>
+				<p className="text-primary text-lg font-bold px-11">Menú</p>
 				<div className="mt-6">
 					<Link href="/" passHref>
 						<a className="inline-flex items-center py-2 px-11 transition w-full hover:text-primary">
@@ -83,7 +83,7 @@ const SideBarPrincipal = ({ refFooter, refSocialMedia }) => {
 											return (
 												<div key={id}>
 													<Link href={link.path}>
-														<a className="inline-flex items-center py-[10px] px-11 transition w-full hover:text-primary">
+														<a className="inline-flex items-center py-[10px] px-11 transition w-full hover:text-secondary">
 															{link.nombreLink}
 														</a>
 													</Link>

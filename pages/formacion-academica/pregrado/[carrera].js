@@ -496,7 +496,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params }) {
 	const rescarrera = await fetch(
-		`${BASE_URL}/carreras/farmacia-y-bioquimica?nombre=${params.carrera}`
+		`${BASE_URL}/carreras/quimica-e-ingenieria-quimica?nombre=${params.carrera}`
 	);
 	const carrera = await rescarrera.json();
 	// console.log('carrera:', carrera);

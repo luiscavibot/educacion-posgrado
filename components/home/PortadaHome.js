@@ -26,8 +26,7 @@ const PortadaHome = ({ eventos }) => {
 						preload="auto"
 						poster="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/video-background/primer-fotograma-farmacia-facultad.jpg"
 						muted={true}
-						className="fixed left-0 top-0 object-cover w-screen h-screen -z-10"
-					>
+						className="fixed left-0 top-0 object-cover w-screen h-screen -z-10">
 						<source
 							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/video-background/video-farmacia-nuevo-comprimido-2.mp4"
 							type="video/mp4"
@@ -37,17 +36,17 @@ const PortadaHome = ({ eventos }) => {
 				<div className="animate__animated animate__fadeInUp text-blanco top-1/3 absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
 						<h1 className="text-4xl md:text-6xl font-semibold max-w-[37.313rem] text-shadow-1">
-							Facultad de Farmacia y Bioquímica
+							Facultad de Química e Ingienería Química
 						</h1>
 						<p className="text-lg mt-2">
 							Universidad Nacional Mayor de San Marcos
 						</p>
 						<RedesSocialesHome
-							facebook="https://www.facebook.com/UNMSMFarmacia"
 							className="text-lg mt-5"
-							youtube="https://www.youtube.com/@UNMSMFarmacia"
-							twitter="https://twitter.com/UNMSMFarmacia"
-							instagram="https://www.instagram.com/unmsmfarmacia/"
+							facebook="https://www.facebook.com/fqiq.unmsm.1946"
+							// youtube="https://www.youtube.com/@UNMSMFarmacia"
+							// twitter="https://twitter.com/UNMSMFarmacia"
+							// instagram="https://www.instagram.com/unmsmfarmacia/"
 						/>
 					</div>
 				</div>
@@ -62,12 +61,10 @@ const PortadaHome = ({ eventos }) => {
 									{eventos.map((evento) => (
 										<Link
 											key={evento.slug}
-											href={`/eventos/${evento.slug}`}
-										>
+											href={`/eventos/${evento.slug}`}>
 											<a
 												key={evento.id}
-												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-48 py-8 px-8 hover:bg-secondary transition-colors duration-300"
-											>
+												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-48 py-8 px-8 hover:bg-secondary transition-colors duration-300">
 												<div>
 													<div className="font-bold text-[40px] leading-none mb-2 text-center">
 														{getDia(
@@ -115,19 +112,16 @@ const PortadaHome = ({ eventos }) => {
 							loop={true}
 							autoplay={{
 								delay: 1500,
-							}}
-						>
+							}}>
 							{eventos.map((evento, index) => (
 								<SwiperSlide key={evento.slug + index}>
 									<div className="bg-tertiary">
 										<Link
 											key={evento.slug}
-											href={`/eventos/${evento.slug}`}
-										>
+											href={`/eventos/${evento.slug}`}>
 											<a
 												key={evento.id}
-												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-44 py-8 px-8 "
-											>
+												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-44 py-8 px-8 ">
 												<div>
 													<div className="font-bold text-[40px] leading-none mb-2 text-center">
 														{getDia(

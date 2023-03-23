@@ -437,7 +437,7 @@ export const MallaCurricular = ({
 			render: () => (
 				<Tab.Pane attached={false}>
 					<div className="overflow-x-auto mt-4 mb-8">
-						{carreraSlug === 'farmacia-y-bioquimica' && (
+						{carreraSlug === 'quimica-e-ingenieria-quimica' && (
 							<table className="table table-striped-even mb-0">
 								<thead>
 									<tr>

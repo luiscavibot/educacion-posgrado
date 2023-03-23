@@ -36,7 +36,7 @@ const HeaderPage = () => {
 						<a className="flex gap-3">
 							<div>
 								<h1 className="text-base sm:text-xl font-bold">
-									Facultad de Farmacia y Bioquímica
+									Facultad de Química e Ingeniería Química
 								</h1>
 								<h2 className="text-[10px] sm:text-base">
 									Universidad Nacional Mayor de San Marcos
@@ -72,7 +72,7 @@ const HeaderPage = () => {
 					</div>
 				</div>
 			</div>
-			<SubMenu theme="primary" color="textColorOne" />
+			<SubMenu theme="blanco" color="textColorOne" />
 		</header>
 	);
 };

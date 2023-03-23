@@ -16,7 +16,7 @@ const Boton = ({
 
 	let primaryStyle = disabled
 		? 'bg-blanco/50 text-disabled hover:bg-blanco hover:shadow-[0px_1px_4px_rgba(0,0,0,0.25)]'
-		: 'bg-primary text-textColorOne hover:bg-complementaryThree hover:shadow-md';
+		: 'bg-primary text-blanco hover:bg-complementaryThree hover:shadow-md';
 	let secondaryStyle =
 		'bg-transparent border  border-secondary text-secondary hover:bg-secondary/20';
 

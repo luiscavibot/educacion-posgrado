@@ -9,8 +9,7 @@ const SubMenu = ({ theme, color }) => {
 		<div
 			className={`${theme ? `bg-${theme}` : ''} ${
 				color ? `text-${color}` : ''
-			} hidden md:block`}
-		>
+			} hidden md:block shadow-submenu`}>
 			<div className="container mx-auto flex justify-end text-xs">
 				<ul className="grid grid-rows-1 grid-flow-col gap-6">
 					<li className="flex items-center  cursor-pointer">

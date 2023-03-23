@@ -255,7 +255,7 @@ export const AdmisionPregrado = ({
 											);
 										}}
 										className="inline-block mr-4">
-										<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-secondary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
+										<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
 											<FaFacebookF />
 										</button>
 									</div>
@@ -267,7 +267,7 @@ export const AdmisionPregrado = ({
 											);
 										}}
 										className="inline-block">
-										<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-secondary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
+										<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
 											<AiFillInstagram />
 										</button>
 									</div>

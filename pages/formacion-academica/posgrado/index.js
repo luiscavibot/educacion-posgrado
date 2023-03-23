@@ -46,13 +46,13 @@ const Index = ({ CarrerasEnProceso }) => {
 						<div className="inline-grid grid-cols-1 md:grid-cols-[330px_330px] gap-5 md:gap-11 w-full md:w-auto">
 							<Link
 								href={
-									'/formacion-academica/posgrado/doctor-en-farmacia-y-bioquimica'
+									'/formacion-academica/posgrado/doctor-en-quimica-e-ingenieria-quimica'
 								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
 											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/doctorado-en-farmacia-y-bioquimica.jpg'
+												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/doctorado-en-quimica-e-ingenieria-quimica.jpg'
 											}
 											objectFit="cover"
 											layout="fill"

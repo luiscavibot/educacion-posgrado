@@ -515,7 +515,7 @@ export async function getStaticPaths() {
 	const paths = [
 		{
 			params: {
-				programa: 'doctor-en-farmacia-y-bioquimica',
+				programa: 'doctor-en-quimica-e-ingenieria-quimica',
 			},
 		},
 		{

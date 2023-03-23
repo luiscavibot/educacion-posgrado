@@ -40,7 +40,7 @@ const Index = ({ CarrerasEnProceso }) => {
 				)}
 
 				<div className="px-4 md:px-0 col-span-full mb-10">
-					<Link href="/formacion-academica/pregrado/farmacia-y-bioquimica">
+					<Link href="/formacion-academica/pregrado/quimica-e-ingenieria-quimica">
 						<div className="cursor-pointer max-w-[917px] mx-auto">
 							<div className="relative rounded-lg overflow-hidden mb-8">
 								<div className="absolute h-full w-full -z-10">
@@ -75,7 +75,7 @@ const Index = ({ CarrerasEnProceso }) => {
 											text="Leer más"
 											primary
 											link={
-												'/formacion-academica/pregrado/farmacia-y-bioquimica'
+												'/formacion-academica/pregrado/quimica-e-ingenieria-quimica'
 											}
 										/>
 									</div>

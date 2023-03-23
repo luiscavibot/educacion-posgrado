@@ -16,6 +16,7 @@ module.exports = {
 				button: '0px 1px 4px rgba(0, 0, 0, 0.2)',
 				'basic-card': '0px 4px 20px rgba(0, 0, 0, 0.1)',
 				'large-card': '0px 1px 5px rgba(0, 0, 0, 0.1)',
+				submenu: '0px 1px 20px rgba(0, 0, 0, 0.15)',
 			},
 			backgroundImage: {
 				bgHeader:
@@ -86,12 +87,12 @@ module.exports = {
 			},
 		},
 		colors: {
-			primary: '#F0C74C', 
-			secondary: '#00518F',
-			tertiary: '#0F314D',
-			complementaryOne: '#F9FBFB',
-			complementaryTwo: '#EFF3F6',
-			complementaryThree: '#F8C300',
+			primary: '#1267A5',
+			secondary: '#101C47',
+			tertiary: '#101C47',
+			complementaryOne: '#EFF3F6',
+			complementaryTwo: '#E6E6E9',
+			complementaryThree: '#198BDE',
 			disabled: '#C7DBEA',
 			// complementaryFour: '#14132A',
 			textColorOne: '#3A464F',

@@ -18,7 +18,7 @@ export default function RedesSocialesHome({
 						window.open(`${facebook}`, '_blank');
 					}}
 					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-secondary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaFacebookF />
 					</button>
 				</div>
@@ -29,7 +29,7 @@ export default function RedesSocialesHome({
 						window.open(`${instagram}`, '_blank');
 					}}
 					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-secondary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillInstagram />
 					</button>
 				</div>
@@ -40,7 +40,7 @@ export default function RedesSocialesHome({
 						window.open(`${twitter}`, '_blank');
 					}}
 					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-secondary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaTwitter />
 					</button>
 				</div>
@@ -51,7 +51,7 @@ export default function RedesSocialesHome({
 						window.open(`${youtube}`, '_blank');
 					}}
 					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-secondary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillYoutube />
 					</button>
 				</div>

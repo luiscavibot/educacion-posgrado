@@ -40,7 +40,7 @@ const Carreras = () => {
 						<div className="col-span-2 hidden lg:block">
 							<div className="h-[22rem] xl:h-[400px] max-w-[800px] relative">
 								<Link
-									href="/formacion-academica/pregrado/farmacia-y-bioquimica"
+									href="/formacion-academica/pregrado/quimica-e-ingenieria-quimica"
 									passHref>
 									<a className="absolute left-0 top-0 w-72 xl:w-[330px] h-[220px] rounded-lg overflow-hidden group hover:z-10">
 										<Image

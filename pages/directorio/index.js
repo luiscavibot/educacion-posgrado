@@ -33,7 +33,7 @@ const Index = (
 					</li>
 					<li className="inline text-negro">Directorio</li>
 				</ul>
-				<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
+				<div className="mx-4 md:mx-0 col-span-full title-page mb-5 text-secondary">
 					Directorio
 				</div>
 				<div className="col-span-full mb-5">

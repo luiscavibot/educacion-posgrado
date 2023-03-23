@@ -23,7 +23,7 @@ const FooterComponent = () => {
 							/>
 							<div>
 								<p className="font-bold mb-2">
-									Facultad de Farmacia y Bioquímica
+									Facultad de Química e Ingeniería Química
 								</p>
 								<p className="font-semibold text-xs">
 									Universidad Nacional Mayor de San Marcos
