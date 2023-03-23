@@ -1,0 +1,27 @@
+[
+	{
+		"numero": 834,
+		"nombre": "Estudiantes de Pregrado y Posgrado",
+		"icono": "User"
+	},
+	{
+		"numero": 24,
+		"nombre": "Grupos de investigación",
+		"icono": "Lupa"
+	},
+	{
+		"numero": 30,
+		"nombre": "Docentes de Renacyt",
+		"icono": "RenacytIcon"
+	},
+	{
+		"numero": 93,
+		"nombre": "Tesis de Posgrado (2020-2022)",
+		"icono": "Birrete"
+	},
+	{
+		"numero": 74,
+		"nombre": "Tesis de Pregrado (2020-2022)",
+		"icono": "HomeTesisPregradoIcon"
+	}
+]

@@ -1,0 +1,14 @@
+svg.flecha-roja {
+	fill: #b0191c;
+	height: 1.2em;
+	width: 1.2em;
+}
+
+svg.flecha-roja.izq {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.swiper {
+	position: static !important;
+}

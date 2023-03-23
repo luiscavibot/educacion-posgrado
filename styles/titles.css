@@ -1,0 +1,11 @@
+.title-page {
+	@apply font-bold text-xl text-tertiary;
+}
+
+.subtitle {
+	@apply font-bold text-[16px];
+}
+
+.sub-cursiva {
+	@apply text-[14px] italic;
+}

@@ -1,0 +1,38 @@
+.bg-fadeIn {
+	@apply animate-fadeIn;
+	animation: fadeIn 0.5s ease-in forwards;
+	animation-iteration-count: 1;
+}
+
+.bg-fadeOut {
+	@apply animate-fadeOut;
+	animation: fadeOut 0.5s ease-in forwards;
+	animation-iteration-count: 1;
+}
+
+.modal-scaleIn {
+	@apply animate-scaleIn;
+	animation: scaleIn 0.3s ease-in forwards;
+	animation-iteration-count: 1;
+}
+
+.modal-scaleOut {
+	@apply animate-scaleOut;
+	animation: scaleOut 0.3s ease-in forwards;
+	animation-iteration-count: 1;
+}
+
+@keyframes spin-downArrow {
+	0%,
+	100% {
+		transform: translateY(-25%);
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	}
+	50% {
+		transform: translateY(25%);
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	}
+}
+.spin-downArrow-animation {
+	animation: spin-downArrow 1s linear infinite;
+}

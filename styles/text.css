@@ -1,0 +1,12 @@
+body {
+	@apply text-negro text-[15px] leading-[22.5px];
+}
+
+.desc-actas {
+	@apply line-clamp-3;
+}
+
+.desc-resoluciones span,
+.desc-memorias span {
+	@apply line-clamp-2;
+}

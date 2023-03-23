@@ -1,0 +1,43 @@
+.rotateIcon {
+	animation: gira 0.3s ease;
+	animation-fill-mode: forwards;
+}
+@keyframes gira {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(180deg);
+	}
+}
+
+.aparecer {
+	animation: aparece 0.3s ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes aparece {
+	0% {
+		transform: scale(0.8);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.efecto-flecha svg path {
+	/* @apply transition; */
+	transition-property: d;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.5s;
+}
+.efecto-flecha {
+	transition-property: background, color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.5s;
+	/* fill: #fff;
+	stroke: #fff;
+	strokeWidth: 1px; */
+}

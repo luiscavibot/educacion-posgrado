@@ -1,0 +1,44 @@
+.mySwiper.swiper {
+	width: 100%;
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+	position: static !important;
+}
+
+.mySwiper .swiper-slide {
+	background-color: #fff;
+	background-position: center;
+	background-size: cover;
+	width: 232px !important;
+}
+
+.mySwiper .swiper-slide.swiper-slide-visible .program-box {
+	opacity: 0.6;
+}
+
+.program-box {
+	width: 100%;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.program-box .text-content {
+	@apply py-5 px-6;
+}
+
+.swiper-slide-active.swiper-slide-visible .program-box {
+	opacity: 1;
+}
+
+.swiper-slide-prev.swiper-slide-visible .program-box,
+.swiper-slide-next.swiper-slide-visible .program-box {
+	opacity: 0.8;
+}
+
+.mySwiper .swiper-slide img {
+	display: block;
+	width: 100%;
+}
+.mySwiper.swiper-3d {
+	perspective: 593px !important;
+}

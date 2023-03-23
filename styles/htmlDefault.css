@@ -1,0 +1,42 @@
+.html-default p {
+	margin-bottom: 1rem;
+}
+.html-default b {
+	font-weight: bold;
+}
+.html-default i {
+	font-style: italic;
+}
+.html-default u {
+	text-decoration: underline;
+}
+.html-default a {
+	@apply text-secondary;
+	text-decoration: none;
+}
+.html-default a:hover {
+	@apply font-semibold;
+}
+.html-default blockquote {
+	@apply bg-blancoTransparente;
+	@apply p-4;
+	@apply rounded-lg;
+	@apply mb-4;
+}
+.html-default ul {
+	@apply list-disc;
+	@apply list-outside;
+	@apply ml-6;
+}
+/* Estilo para tablas */
+.html-default table,
+.html-default th,
+.html-default td,
+.html-default tr {
+	@apply border border-negro;
+}
+
+.html-default th,
+.html-default td {
+	@apply p-2;
+}

@@ -1,0 +1,11 @@
+.breadcrumbs {
+}
+
+.breadcrumbs-item {
+	display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after {
+	content: '>';
+	margin: 0 5px;
+}

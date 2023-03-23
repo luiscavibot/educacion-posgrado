@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @layer base { */
+@import './text';
+@import './link';
+@import './titles';
+@import './inputs';
+/* } */
+
+/* @layer components { */
+@import './breadcrumb.css';
+@import './card.css';
+@import './carousel';
+@import './tabs';
+@import './tables.css';
+@import './pagination.css';
+@import './datePicker.css';
+@import './buttons.css';
+@import './accordion.css';
+@import './menu.css';
+/* } */
+
+/* @layer utilities { */
+@import './list.css';
+@import './fonts';
+@import './carouselTestimonios.css';
+@import './carouselProgramas.css';
+@import './separator.css';
+@import './animation.css';
+@import './masonry.css';
+@import './htmlDefault.css';
+@import './defaultPrograma.css';
+@import './dropdown.css';
+/* } */

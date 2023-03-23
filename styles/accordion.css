@@ -1,0 +1,45 @@
+.ui.accordion .title:not(.ui) {
+	@apply py-4 pl-3 pr-4 cursor-pointer shadow-[0px_4px_24px_rgba(0,_0,_0,_0.1)] rounded-lg mb-5 font-bold flex items-center justify-between;
+}
+
+.ui.accordion .accordion .content,
+.ui.accordion .content {
+	@apply pt-1 break-words hidden;
+}
+.ui.accordion .accordion .active.content,
+.ui.accordion .active.content {
+	@apply block;
+}
+
+.ui.accordion .accordion .title .icon-accordion svg,
+.ui.accordion .title .icon-accordion svg {
+	/* @apply rotate-90; */
+}
+
+.ui.accordion .accordion .active.title .icon-accordion svg,
+.ui.accordion .active.title .icon-accordion svg {
+	/* @apply -rotate-90; */
+}
+
+/* accordion menu */
+
+.accordion-menu.ui.accordion {
+	@apply w-full;
+}
+
+.accordion-menu.ui.accordion .title:not(.ui) {
+	@apply w-full px-11 cursor-pointer shadow-none rounded-lg mb-0 font-normal text-textColorOne flex items-center justify-between;
+}
+
+.accordion-menu-aside.ui.accordion {
+	@apply w-full;
+}
+
+.accordion-menu-aside.ui.accordion .title:not(.ui) {
+	@apply w-full px-11 cursor-pointer shadow-none rounded-lg mb-0 font-normal text-tertiary flex gap-5 items-center justify-between;
+}
+
+/* .accordion-menu.ui.accordion .accordion .content,
+.accordion-menu.ui.accordion .content {
+	@apply pt-1 px-11 break-words;
+} */

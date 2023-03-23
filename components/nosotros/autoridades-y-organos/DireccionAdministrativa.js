@@ -1,0 +1,176 @@
+import React from 'react';
+import Image from 'next/future/image';
+
+import directorPic from '../../../public/img/examples/dir-pregrado-small.png';
+import UserCardIcon from '../../icons/UserCardIcon';
+import CorreoIcon from '../../icons/CorreoIcon';
+import TelefonoStroke from '../../icons/TelefonoStroke';
+import UbicacionStroke from '../../icons/UbicacionStroke';
+import FechaHorarioStroke from '../../icons/FechaHorarioStroke';
+import DocumentosFillIcon from '../../icons/DocumentosFillIcon';
+import Boton from '../../shared/Boton';
+
+const DireccionAdministrativa = () => {
+	return (
+		<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+			<div className="md:col-span-6">
+				<div className="mb-6">
+					<p className="mb-8">
+						Órgano encargado de la gestión económica y
+						administrativa, encargado de controlar y ejecutar las
+						acciones propias de recursos humanos, mantenimiento,
+						publicaciones, recursos financieros y trámite
+						documentario. Asimismo, presta apoyo administrativo a
+						los órganos de gobierno, línea y dirección, ejecuta el
+						presupuesto, control de ingresos y egresos de los
+						recursos económicos de la facultad. Está conformado por
+						el/la director/a de la Dirección Administrativa y el
+						personal administrativo/técnico correspondiente. Conoce
+						más acerca de esta Dirección ingresando al Manual de
+						Organización y Funciones (
+						<a
+							className="text-secondary"
+							href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
+							target="_blank"
+							rel="noopener noreferrer">
+							MOF
+						</a>
+						).
+					</p>
+					<p className="mb-1">
+						<span className="font-bold text-tertiary">
+							Director administrativo
+						</span>
+						<span className="mx-2 text-tertiary font-bold">|</span>
+						<span className="font-bold text-textColorOne">
+							Lic. Renato Antonio Salas Wong
+						</span>
+					</p>
+					<p className="text-sm text-tertiary font-medium italic mb-5">
+						Administrador y especialista en Marketing.
+						<br />
+						Licenciado en Marketing y Dirección de Empresas, y
+						egresado de la Maestría en Administración con mención en
+						Gestión Empresarial.
+					</p>
+					<p className="mb-5">
+						Cuenta con experiencia laboral como gerente
+						administrativo, marketing y comunicaciones en Punto
+						Digital Revolution & Generation, personal de apoyo en la
+						Dirección y Coordinación Académica de la Universidad
+						Complutense de Madrid (España), encargado de gestionar
+						estrategias de comunicación externa en la Unidad de
+						Posgrado de la Facultad de Ciencias Administrativas, y
+						encargado del área de marketing y publicidad en el
+						Centro de Idiomas de la UNMSM; además, fue jefe de la
+						Oficina de Comunicaciones e Imagen Institucional en la
+						Universidad Nacional Intercultural de la Selva Central
+						Juan Santos Atahualpa.
+					</p>
+					<p className="mb-6">
+						Ha recibido el reconocimiento por el “Proceso de
+						implementación y desarrollo del Sistema de Gestión de la
+						Calidad” con base en la norma internacional ISO 9001 en
+						la Escuela de Posgrado de la UNMSM (2015).
+					</p>
+					<div className="flex gap-x-5">
+						<Boton
+							secondary
+							className="mb-6"
+							onClick={() =>
+								window.open(
+									'https://cdn.www.gob.pe/uploads/document/file/3819572/8.%20RR%20Director%20Administrativo%20Renato%20Antonio%20Salas%20Wong.pdf.pdf?v=1667936372',
+									'_blank'
+								)
+							}>
+							<span>
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+							</span>
+							<span>Resolución rectoral</span>
+						</Boton>
+						<a
+							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://drive.google.com/file/d/1UORv5x8NpWZLRVeItX81Yok4jScaw--S/view?usp=sharing"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							Hoja de vida
+						</a>
+					</div>
+				</div>
+			</div>
+			{/* NOTE: COORDINADORES */}
+			<div className="md:col-span-2">
+				<div className="mb-6">
+					<Image
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-administrativo-renato-salas-wong.jpg"
+						width={209}
+						height={224}
+						quality={100}
+						className="w-full object-cover max-w-[254px] m-auto"
+					/>
+				</div>
+
+				{/* <Image
+					src={directorPic}
+					layout="responsive"
+					width={209}
+					height={224}
+					priority={true}
+					alt="Banner Maestría"
+					className="mb-6"
+				/> */}
+
+				<p className="text-tertiary font-black mb-2">Contacto</p>
+				<div className="text-sm">
+					<div>
+						<p className="mb-1 text-tertiary">
+							<span>
+								<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+							</span>
+							<span className="font-bold">Correo</span>
+						</p>
+						<p className="mb-3 break-words">dadmfyb@unmsm.edu.pe</p>
+					</div>
+					<div>
+						<p className="mb-1 text-tertiary">
+							<span>
+								<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+							</span>
+							<span className="font-bold">Teléfono</span>
+						</p>
+						<p className="mb-3 break-words">
+							(+51) 619 7000 anexo 4803
+						</p>
+					</div>
+					{/* <div>
+						<p className="mb-1 text-tertiary">
+							<span>
+								<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+							</span>
+							<span className="font-bold">Dirección</span>
+						</p>
+						<p className="mb-3 break-words">
+							Jr. Puno n.° 1002, Lima, Perú
+						</p>
+					</div>
+					<div>
+						<p className="mb-1 text-tertiary">
+							<span>
+								<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+							</span>
+							<span className="font-bold">
+								Atención presencial
+							</span>
+						</p>
+						<p className="mb-3 break-words">
+							lunes a viernes de 8:00 a. m. a 1:00 p. m. y de 2:00
+							p. m. a 3:45 p. m.
+						</p>
+					</div> */}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default DireccionAdministrativa;

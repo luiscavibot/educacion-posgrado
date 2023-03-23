@@ -1,0 +1,11 @@
+.btn-red {
+	@apply shadow-md rounded-lg py-2 px-3 font-medium text-sm text-secondary hover:shadow-md hover:scale-105 duration-300 bg-secondary text-blanco;
+}
+
+.btn-white {
+	@apply shadow-md rounded-lg py-2 px-3 font-medium text-sm text-secondary hover:shadow-md hover:scale-105 duration-300 bg-blanco text-secondary;
+}
+
+.disabled {
+	@apply !text-disabled !bg-blanco !cursor-not-allowed !pointer-events-none;
+}

@@ -1,0 +1,56 @@
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+	@apply !bg-secondary;
+	border-radius: 2px !important;
+}
+
+.react-datepicker {
+	@apply shadow-xl;
+	border: none !important;
+	@apply p-2;
+	text-transform: capitalize;
+}
+.react-datepicker__header {
+	background-color: transparent !important;
+	border: none !important;
+	font-weight: 700 !important;
+}
+.react-datepicker__current-month {
+	@apply !text-secondary;
+}
+.react-datepicker__navigation {
+	top: 14px !important;
+}
+.react-datepicker__day {
+	margin: 0.4rem !important;
+}
+.react-datepicker-popper[data-placement^='bottom']
+	.react-datepicker__triangle::before {
+	border-bottom-color: #ffffff !important;
+}
+.react-datepicker-popper[data-placement^='bottom']
+	.react-datepicker__triangle::after {
+	border-bottom-color: #ffffff !important;
+}
+.react-datepicker__day-name {
+	margin: 0.4rem !important;
+}
+.react-datepicker__day-names {
+	margin-top: 10px;
+}
+.react-datepicker__day--keyboard-selected {
+	@apply !bg-secondary;
+}
+.react-datepicker__month--selecting-range
+	.react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range, .react-datepicker__month-text--in-selecting-range, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__year-text--in-selecting-range),
+.react-datepicker__month--selecting-range
+	.react-datepicker__month-text--in-range:not(.react-datepicker__day--in-selecting-range, .react-datepicker__month-text--in-selecting-range, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__year-text--in-selecting-range),
+.react-datepicker__month--selecting-range
+	.react-datepicker__quarter-text--in-range:not(.react-datepicker__day--in-selecting-range, .react-datepicker__month-text--in-selecting-range, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__year-text--in-selecting-range),
+.react-datepicker__month--selecting-range
+	.react-datepicker__year-text--in-range:not(.react-datepicker__day--in-selecting-range, .react-datepicker__month-text--in-selecting-range, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__year-text--in-selecting-range) {
+	@apply !bg-secondary/50;
+	color: #ffffff !important;
+	/* background-color: #9e1d1f72 !important; */
+}

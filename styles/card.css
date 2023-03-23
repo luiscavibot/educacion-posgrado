@@ -1,0 +1,30 @@
+.card {
+	@apply block bg-blanco rounded-lg shadow-basic-card text-textColorOne transition duration-300;
+}
+
+.card-box {
+	@apply bg-blanco;
+	border-radius: 16px;
+	/* box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15); */
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .text-content {
+	@apply py-5 px-6;
+}
+
+.card .text-content .title {
+	@apply font-bold mb-1 transition duration-300;
+}
+
+.card:hover .text-content .title {
+	@apply text-secondary;
+}
+
+.card:focus {
+	@apply outline-none ring-2 ring-secondary;
+}
+
+.card .text-content .desc {
+	@apply text-sm;
+}
