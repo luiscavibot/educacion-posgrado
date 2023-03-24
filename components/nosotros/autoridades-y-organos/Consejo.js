@@ -14,7 +14,7 @@ const Consejo = () => {
 					siguientes miembros:
 				</p>
 				<p className="font-bold mb-6">Miembros docentes del Consejo</p>
-				<ul className="mb-6 list-disc list-inside">
+				{/* <ul className="mb-6 list-disc list-inside">
 					<li className="mb-2">Dr. Eduardo Flores Juárez - Decano</li>
 					<li className="mb-2">
 						Dr. Víctor Críspin Pérez – Miembro docente
@@ -34,11 +34,11 @@ const Consejo = () => {
 					<li className="mb-2">
 						Q.F. Alfredo Alonzo Castillo Calle – Profesor auxiliar
 					</li>
-				</ul>
+				</ul> */}
 				<p className="font-bold mb-6">
 					Miembros Estudiantes del Consejo{' '}
 				</p>
-				<ul className="list-disc list-inside">
+				{/* <ul className="list-disc list-inside">
 					<li className="mb-2">
 						Alum. Gianfranco Talavera Gutiérrez
 					</li>
@@ -48,7 +48,7 @@ const Consejo = () => {
 					<li className="mb-2">
 						Alum. Katiushka Melissa Meneses Narva
 					</li>
-				</ul>
+				</ul> */}
 			</div>
 			<Link href="/transparencia?tab=actas-del-consejo">
 				<Boton className="mt-6">

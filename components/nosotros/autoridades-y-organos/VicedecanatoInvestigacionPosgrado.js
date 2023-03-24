@@ -44,38 +44,40 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Felix Hugo Milla Flores
+							Dr. Mario Ceroni Galloso
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal e investigador.
+						Profesor principal, investigador y asesor de tesis.
 						<br />
-						Químico Farmacéutico por la Universidad Nacional Mayor
-						de San Marcos, magíster en Educación con mención en
-						Docencia e Investigación Universitaria por la
-						Universidad de San Martín de Porres, y doctorado en
-						Farmacia y Bioquímica por la UNMSM.
+						Licenciado en Química por la UNMSM, magíster en Química
+						por la PUCP y doctorado en Química por la Universidad de
+						Oviedo.
 					</p>
 					<p className="mb-5">
-						Es docente universitario en la UNMSM, UNAC y Universidad
-						Inca Garcilaso de la Vega. Con experiencia laboral como
-						analista en el convenio Backus y Johnston-ITINTEC, y
-						Jefe Laboratorio Control de Calidad-Bromatológico en la
-						Marina de Guerra del Perú. Además, se ha desempeñado
-						como director del Instituto de Investigación en Ciencias
-						Farmacéuticas y Recursos Naturales de la facultad de
-						Farmacia y Bioquímica (UNMSM); también fue miembro del
-						Consejo de Facultad (2016-2020); y director de la Unidad
-						Posgrado de la Facultad de Farmacia Bioquímica (ene.
-						2020- dic. 2020).
+						Docente principal en la UNMSM por más de 30 años. Se ha
+						desempeñado como evaluador en proyectos de investigación
+						básica en la Universidad Nacional de Ingeniería y en
+						pasantías del Programa Nacional de Investigación
+						Científica y Estudios Avanzados - Prociencia.
 					</p>
 					<p className="mb-6">
-						Ha realizado diversas investigaciones y publicaciones en
-						importantes revistas de divulgación científica; además,
-						ha sido reconocido con tres diplomas de agradecimiento
-						por su labor como jurado calificador del premio ADIFAN
-						Innovación en Ciencias y Tecnología Farmacéuticas, así
-						como otros reconocimientos académicos.
+						Ha realizado más de 35 investigaciones sobre la línea de
+						la síntesis química, organometálica, química de
+						coordinación, seguridad química, entre otros; y fue
+						asesor en diversas tesis para grados de licenciatura,
+						maestría y doctorado. Responsable y participante de
+						proyectos de investigación, de los cuales el último se
+						titula "Síntesis y caracterización de ligandos O, N y S
+						dadores por reacción de n-tiocarbamoil-benzimidoil
+						cloruro con piridina-4-carbohidrazida (isoniacida),
+						piridina-2-carbohidrazida y piridina-3-carbohidrazida.
+						evaluación de la actividad tuberculostática"
+						desarrollado en 2021. Ha recibido distinciones a nivel
+						nacional como el premio a mejor investigador de la
+						Facultad de Química e Ingeniería Química, premio al
+						mérito científico, reconocimiento al investigador con
+						publicaciones científicas, entre otras.
 					</p>
 					<div className="flex gap-x-5">
 						<Boton
@@ -83,8 +85,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 							className="mb-6"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3819509/3.%20RR%20Vicedecano%20de%20Investigaci%C3%B3n%20y%20Posgrado%20Hugo%20Milla%20Flores.pdf.pdf?v=1667935534',
-									'_blank'
+									'https://cdn.www.gob.pe/uploads/document/file/3989201/R.R.%20003343-2021-R%20-vicedecano-investigacion-posgrado-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152819'
 								)
 							}>
 							<span>
@@ -94,7 +95,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						</Boton>
 						<a
 							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96089"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=345"
 							target={'_blank'}
 							rel="noopener noreferrer">
 							Hoja de vida
@@ -134,7 +135,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							vicedecanoip.farmacia@unmsm.edu.pe
+							viceip.quimica@unmsm.edu.pe
 						</p>
 					</div>
 					<div>
@@ -145,7 +146,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 4823
+							(+51) 619 7000 anexo 1204
 						</p>
 					</div>
 					{/* <div>

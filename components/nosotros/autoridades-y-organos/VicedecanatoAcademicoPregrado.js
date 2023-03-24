@@ -42,37 +42,37 @@ const VicedecanatoAcademicoPregrado = () => {
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Victor Luis Izaguirre Pasquel
+							Mg. Manuel Exaltación Bejar Ramos
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal e investigador.
+						Profesor principal, investigador y asesor de tesis.
 						<br />
-						Químico Farmacéutico por la UNMSM, magíster en Ciencias
-						con mención en Farmacología por la Universidad Peruana
-						Cayetano Heredia y doctor en Medicina y Cirugía por la
-						Universidad Miguel Hernández de Elche (España).
+						Licenciado en Ingeniería Química y magíster en Ciencias
+						Químicas por la UNMSM.
 					</p>
 					<p className="mb-5">
-						Es docente de pre y posgrado en la Facultad de Farmacia
-						y Bioquímica de la UNMSM y docente en programas de
-						educación continua del Instituto para la Calidad de la
-						PUCP. En los últimos 20 años, se ha desempeñado en
-						diversos cargos en organizaciones públicas y privadas,
-						entre ellos, desde 2016 al 2020 fue director de la
-						Escuela Profesional de Farmacia y Bioquímica (UNMSM).
-						Cuenta con 19 publicaciones científicas y ha participado
-						en 10 proyectos de investigación que aportan
-						conocimiento en el campo de las ciencias farmacéuticas.
+						Docente y director del Departamento de Química
+						Inorgánica en la UNMSM por más de 40 años. Asimismo, ha
+						publicado trabajos de investigación en revistas
+						científicas entre el 2009 y 2011, tales como Monitoreo
+						de la síntesis del YBa2Cu3O7, mediante la difracción de
+						rayos X en polvo; y Desgaste en los sistemas de
+						inyección diésel por efecto del elevado contenido de
+						azufre en petróleo diesel 2. Cuenta, también, con la
+						publicación de un libro titulado Efecto genotóxico del
+						dióxido de azufre (SO2) de origen antropogénico en la
+						tasa de micronúcleos en ratón y su extrapolación en
+						humanos.
 					</p>
 					<p className="mb-6">
-						Actualmente, es presidente del Comité Técnico de
-						Normalización de Gestión de la Calidad en Organizaciones
-						Educativas (INACAL), evaluador del Premio Nacional a la
-						Calidad y del Premio Iberoamericano a la Calidad, es
-						Académico de Número de la Academia Peruana de Farmacia y
-						miembro del Consejo Consultivo de la Fundación Hipólito
-						Unanue.
+						Obtuvo la distinción de Miembro de la Sociedad Química
+						del Perú, en calidad de Socio Profesional; y el Diploma
+						de Reconocimiento a los Investigadores con Publicaciones
+						Científicas, esto en virtud a su fructífera labor en el
+						campo de la investigación científica que le ha permitido
+						la producción de conocimientos, los mismos que se han
+						plasmado en sus publicaciones en el año 2011.
 					</p>
 					<div className="flex gap-x-5">
 						<Boton
@@ -80,8 +80,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							className="mb-6"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3819485/2.%20RR%20Vicedecano%20Acad%C3%A9mico%20Victor%20Izaguirre%20Pasquel.pdf.pdf?v=1667935135',
-									'_blank'
+									'https://cdn.www.gob.pe/uploads/document/file/3989175/R.R.%20005547-2022-R%20-%20Vicedecano-Academico-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152363'
 								)
 							}>
 							<span>
@@ -91,7 +90,7 @@ const VicedecanatoAcademicoPregrado = () => {
 						</Boton>
 						<a
 							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=14589"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=30705"
 							target={'_blank'}
 							rel="noopener noreferrer">
 							Hoja de vida
@@ -130,11 +129,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							</span>
 							<span className="font-bold">Correo</span>
 						</p>
-						<p className="mb-3 break-words">
-							dacadfyb@unmsm.edu.pe
-							<br />
-							vicedecanato.academico.ffb@unmsm.edu.pe
-						</p>
+						<p className="mb-3 break-words">mbejarr@unmsm.edu.pe</p>
 					</div>
 					<div>
 						<p className="mb-1 text-tertiary">
@@ -144,7 +139,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 4811
+							(+51) 619 7000 anexo 1201
 						</p>
 					</div>
 					{/* <div>
