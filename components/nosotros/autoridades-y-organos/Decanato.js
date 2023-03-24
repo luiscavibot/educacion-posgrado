@@ -59,10 +59,11 @@ const Decanato = () => {
 						de Leipzig-Facultad de Química y Mineralogía. Ha
 						publicado más de 70 artículos científicos en revistas y
 						Congresos internacionales de la especialidad; y escribió
-						también dos libros: "Química de Coordinación-Edit. EDUNI
-						LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
-						2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
-						Perú 2013".
+						también dos libros:
+						{` "Química de Coordinación-Edit. EDUNI
+							LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
+							2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
+							Perú 2013".`}
 					</p>
 					<p className="mb-6">
 						Obtuvo el Mérito científico a mejor investigador en el

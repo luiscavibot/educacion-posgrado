@@ -68,11 +68,12 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						asesor en diversas tesis para grados de licenciatura,
 						maestría y doctorado. Responsable y participante de
 						proyectos de investigación, de los cuales el último se
-						titula "Síntesis y caracterización de ligandos O, N y S
+						titula
+						{` "Síntesis y caracterización de ligandos O, N y S
 						dadores por reacción de n-tiocarbamoil-benzimidoil
 						cloruro con piridina-4-carbohidrazida (isoniacida),
 						piridina-2-carbohidrazida y piridina-3-carbohidrazida.
-						evaluación de la actividad tuberculostática"
+						evaluación de la actividad tuberculostática" `}
 						desarrollado en 2021. Ha recibido distinciones a nivel
 						nacional como el premio a mejor investigador de la
 						Facultad de Química e Ingeniería Química, premio al
