@@ -212,14 +212,14 @@ export const AdmisionPosgrado = ({
 									<p className="font-bold">Paso 7:</p>
 									<p>
 										Envía al correo electrónico de la Unidad
-										de Posgrado de la Facultad de Farmacia y
-										Bioquímica{' '}
+										de Posgrado de la Facultad de Química e
+										Ingeniería Química{' '}
 										<a
 											className="link"
 											target="_blank"
-											href="mailto:upg.farmacia@unmsm.edu.pe"
+											href="mailto:postgrado.quimica@unmsm.edu.pe"
 											rel="noreferrer noopener">
-											(upg.farmacia@unmsm.edu.pe)
+											(postgrado.quimica@unmsm.edu.pe)
 										</a>
 										<span>
 											{' '}
@@ -305,9 +305,9 @@ export const AdmisionPosgrado = ({
 								<a
 									className="link"
 									target="_blank"
-									href="mailto:upg.farmacia@unmsm.edu.pe"
+									href="mailto:postgrado.quimica@unmsm.edu.pe"
 									rel="noreferrer noopener">
-									upg.farmacia@unmsm.edu.pe
+									postgrado.quimica@unmsm.edu.pe
 								</a>
 							</p>
 							<p className="text-[15px]">

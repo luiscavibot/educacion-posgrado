@@ -171,7 +171,7 @@ export async function getStaticProps() {
 	const admision = (await resAdmision.json()).data;
 
 	const resFacultad = await fetch(
-		`${POSGRADO_URL}/facultades?populate=*&filters[nombre][$eq]=Farmacia%20y%20Bioquimica`
+		`${POSGRADO_URL}/facultades?populate=*&filters[nombre][$eq]=Química%20e%20Ingeniería%20Química`
 	);
 
 	const facultad = (await resFacultad.json()).data[0].attributes;
