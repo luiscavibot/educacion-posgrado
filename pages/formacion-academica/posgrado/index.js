@@ -46,7 +46,7 @@ const Index = ({ CarrerasEnProceso }) => {
 						<div className="inline-grid grid-cols-1 md:grid-cols-[330px_330px] gap-5 md:gap-11 w-full md:w-auto">
 							<Link
 								href={
-									'/formacion-academica/posgrado/ingenieria-quimica'
+									'/formacion-academica/posgrado/doctorado-ingenieria-quimica'
 								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
@@ -108,6 +108,7 @@ const Index = ({ CarrerasEnProceso }) => {
 								href={
 									'/formacion-academica/posgrado/ingenieria-quimica'
 								}>
+									
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
