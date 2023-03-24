@@ -22,12 +22,12 @@ export const ModalidadAdmision = ({ programas }) => {
 					Primeros puestos de educación secundaria
 				</p>
 				<p>
-					El postulante por esta modalidad es el que ha concluido sus
-					estudios secundarios, en los dos años anteriores al proceso
-					de admisión, en una institución educativa pública o privada,
+					El postulante por esta modalidad ha concluido sus estudios
+					secundarios, en los dos años anteriores al proceso de
+					admisión, en una institución educativa pública o privada,
 					ubicada en la región Lima o en la región Callao, y ha
-					ocupado uno de los dos primeros puestos en dicha institución
-					según su respectivo cuadro de mérito.
+					ocupado uno de los dos primeros puestos en dicha
+					institución, según su respectivo cuadro de mérito.
 				</p>
 			</div>
 			<div className="mb-6">
@@ -53,7 +53,7 @@ export const ModalidadAdmision = ({ programas }) => {
 					el cuadro de méritos del Centro Preuniversitario de la
 					UNMSM. Para formalizar su ingreso, debe adquirir la carpeta
 					del postulante, pagar el derecho de inscripción al Examen de
-					Admisión 2020-II e inscribirse.
+					Admisión 2023-I e inscribirse.
 				</p>
 			</div>
 			<div className="mb-6">
@@ -91,11 +91,14 @@ export const ModalidadAdmision = ({ programas }) => {
 			</div>
 			<div className="mb-6">
 				<p className="subtitle mb-3">Graduados o titulados</p>
-				<p>
+				<p className=" mb-2">
 					Corresponden a esta modalidad los graduados o titulados en
-					una universidad peruana o extranjera. También podrán
-					postular los titulados de las instituciones y escuelas de
-					educación superior señalados por la ley universitaria.
+					una universidad peruana o extranjera.
+				</p>
+				<p>
+					También podrán postular los titulados de las instituciones y
+					escuelas de educación superior señalados por la ley
+					universitaria.
 				</p>
 			</div>
 			<div className="mb-6">
@@ -106,17 +109,17 @@ export const ModalidadAdmision = ({ programas }) => {
 					Se refiere al traslado externo a la misma carrera de origen
 					del postulante. Pueden postular los estudiantes de otras
 					universidades del país o del extranjero que hayan aprobado
-					por lo menos cuatro periodos lectivos semestrales o dos
-					anuales de acuerdo con su plan de estudios o setenta y dos
+					por lo menos cuatro períodos lectivos semestrales o dos
+					anuales, de acuerdo con su plan de estudios o setenta y dos
 					(72) créditos en la universidad de origen. La última
-					matrícula debe ser posterior a febrero 2019.
+					matrícula debe ser posterior a febrero de 2021.
 				</p>
 			</div>
 			<div className="mb-6">
 				<p className="subtitle mb-3">Traslado interno</p>
 				<p className="mb-3">
 					Corresponde a los alumnos de la UNMSM con matrícula vigente
-					que hayan aprobado, por lo menos, cuatro periodos lectivos
+					que hayan aprobado, por lo menos, cuatro períodos lectivos
 					semestrales o dos anuales de acuerdo con su plan de estudios
 					o setenta y dos (72) créditos. Solo procede el traslado a
 					una Escuela Profesional del área académica a la que
