@@ -26,7 +26,7 @@ const HeaderPage = () => {
 	}, [router.isReady, router.pathname]);
 
 	return (
-		<header className="bg-bgHeader bg-no-repeat bg-cover bg-tertiary text-blanco fixed inset-x-0 z-10">
+		<header className="bg-bgHeader bg-no-repeat bg-cover bg-center bg-tertiary text-blanco fixed inset-x-0 z-10">
 			<div className="container mx-auto px-3 py-3 md:py-5 flex justify-between relative z-10">
 				<div className="md:hidden block">
 					<SideBar interno />

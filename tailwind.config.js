@@ -20,7 +20,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				bgHeader:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/Header.png")',
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/facultad-quimica-header.png")',
 			},
 			fontFamily: {
 				lato: 'Lato',

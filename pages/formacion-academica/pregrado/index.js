@@ -40,85 +40,41 @@ const Index = ({ CarrerasEnProceso }) => {
 				)}
 
 				<div className="px-4 md:px-0 col-span-full mb-10">
-					<Link href="/formacion-academica/pregrado/quimica-e-ingenieria-quimica">
-						<div className="cursor-pointer max-w-[917px] mx-auto">
-							<div className="relative rounded-lg overflow-hidden mb-8">
-								<div className="absolute h-full w-full -z-10">
-									<Image
-										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/minihome-farmacia-bioquimica-pregrado.jpg'
-										}
-										className="object-center object-cover"
-										fill
-										quality={100}
-										alt="vocacion1"
-										priority
-										sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-gradient-to-r from-tertiary via-secondary/50 to-tertiary/50 md:to-transparente -z-10"></div>
-								<div className="text-blanco md:max-w-[338px] md:mx-20 py-16">
-									<p className="font-bold mb-4 text-xl text-center md:text-left">
-										Escuela Profesional de
-										<br />
-										Farmacia y Bioquímica
-									</p>
-									<p className="mb-6 hidden md:block">
-										Tenemos como propósito principal
-										contribuir al desarrollo del país,
-										mediante la formación de profesionales e
-										investigadores químicos farmacéuticos de
-										nivel superior.
-									</p>
-									<div className="hidden md:block">
-										<Boton
-											text="Leer más"
-											primary
-											link={
-												'/formacion-academica/pregrado/quimica-e-ingenieria-quimica'
-											}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Link>
-					<Link href="/formacion-academica/pregrado/ciencias-de-los-alimentos">
+					<Link href="/formacion-academica/pregrado/ingenieria-quimica">
 						<div className="cursor-pointer max-w-[917px] mx-auto">
 							<div className="relative rounded-lg overflow-hidden md:flex md:justify-end mb-8">
 								<div className="absolute h-full w-full -z-10">
 									<Image
 										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/minihome-ciencias-alimentos-invertido.jpg'
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-ingenieria-quimica-facultad-unmsm.jpg'
 										}
 										className="object-center object-cover"
 										fill
 										quality={100}
-										priority
 										alt="vocacion1"
+										priority
 										sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-gradient-to-l from-tertiary via-secondary/50 to-tertiary/50 md:to-transparente -z-10"></div>
-								<div className="text-blanco md:max-w-[276px] md:mx-20 py-16">
+								<div className="text-blanco md:max-w-[338px] md:mx-20 py-16">
 									<p className="font-bold mb-4 text-xl text-center md:text-left">
-										Escuela Profesional de
+										Escuela Profesional
 										<br />
-										Ciencias de los Alimentos
+										de Ingeniería Química
 									</p>
 									<p className="mb-6 hidden md:block">
-										Nuestro objetivo es guiar a
-										profesionales en la ciencia y tecnología
-										de los alimentos para fortalecer los
-										sistemas de investigación y de
-										producción alimentaria actuales.
+										Tenemos como propósito principal
+										contribuir al desarrollo del país,
+										mediante la formación de profesionales
+										con competencias.
 									</p>
 									<div className="hidden md:block">
 										<Boton
 											text="Leer más"
 											primary
 											link={
-												'/formacion-academica/pregrado/ciencias-de-los-alimentos'
+												'/formacion-academica/pregrado/ingenieria-quimica'
 											}
 										/>
 									</div>
@@ -126,13 +82,55 @@ const Index = ({ CarrerasEnProceso }) => {
 							</div>
 						</div>
 					</Link>
-					<Link href="/formacion-academica/pregrado/toxicologia">
+					<Link href="/formacion-academica/pregrado/quimica">
 						<div className="cursor-pointer max-w-[917px] mx-auto">
 							<div className="relative rounded-lg overflow-hidden mb-8">
 								<div className="absolute h-full w-full -z-10">
 									<Image
 										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/minihome-toxicologia-pregrado.jpg'
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-quimica-facultad-unmsm.jpg'
+										}
+										className="object-center object-cover"
+										fill
+										quality={100}
+										priority
+										alt="vocacion1"
+										sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
+									/>
+								</div>
+								<div className="absolute inset-0 bg-gradient-to-r from-tertiary via-secondary/50 to-tertiary/50 md:to-transparente -z-10"></div>
+								<div className="text-blanco md:max-w-[276px] md:mx-20 py-16">
+									<p className="font-bold mb-4 text-xl text-center md:text-left">
+										Escuela Profesional
+										<br />
+										de Química
+									</p>
+									<p className="mb-6 hidden md:block">
+										Tenemos como propósito principal
+										contribuir al desarrollo del país,
+										mediante la formación de profesionales
+										con competencias.
+									</p>
+									<div className="hidden md:block">
+										<Boton
+											text="Leer más"
+											primary
+											link={
+												'/formacion-academica/pregrado/quimica'
+											}
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</Link>
+					<Link href="/formacion-academica/pregrado/ingenieria-agroindustrial">
+						<div className="cursor-pointer max-w-[917px] mx-auto">
+							<div className="relative rounded-lg overflow-hidden md:flex md:justify-end mb-8">
+								<div className="absolute h-full w-full -z-10">
+									<Image
+										src={
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-ingenieria-agroindustrial-facultad-unmsm.jpg'
 										}
 										className="object-center object-cover"
 										fill
@@ -142,26 +140,25 @@ const Index = ({ CarrerasEnProceso }) => {
 										sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
 									/>
 								</div>
-								<div className="absolute inset-0 bg-gradient-to-r from-tertiary via-secondary/50 to-tertiary/50 md:to-transparente -z-10"></div>
+								<div className="absolute inset-0 bg-gradient-to-l from-tertiary via-secondary/50 to-tertiary/50 md:to-transparente -z-10"></div>
 								<div className="text-blanco md:max-w-[338px] md:mx-20 py-16">
 									<p className="font-bold mb-4 text-center md:text-left text-xl">
 										Escuela Profesional de
 										<br />
-										Toxicología
+										Ingeniería Agroindustrial
 									</p>
 									<p className="mb-6 hidden md:block">
-										Nuestra finalidad es generar potencial
-										humano idóneo en los campos de la
-										toxicología y la evaluación de la
-										contaminación ambiental en un nivel
-										científico, técnico y ético.
+										Tenemos como propósito principal
+										contribuir al desarrollo del país,
+										mediante la formación de profesionales
+										con competencias.
 									</p>
 									<div className="hidden md:block">
 										<Boton
 											text="Leer más"
 											primary
 											link={
-												'/formacion-academica/pregrado/toxicologia'
+												'/formacion-academica/pregrado/ingenieria-agroindustrial'
 											}
 										/>
 									</div>

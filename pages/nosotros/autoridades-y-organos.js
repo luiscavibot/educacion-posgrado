@@ -106,7 +106,7 @@ const Autoridades = (
 			<div className="col-span-full mb-5 ">
 				<div className="relative h-bannerMobile md:h-banner xl:h-auto">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/banner-autoridades-farmacia-bioquimica.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/fachada-quimica-ingenieria-unmsm.jpg"
 						layout="responsive"
 						width={1343}
 						height={397}

@@ -46,13 +46,13 @@ const Index = ({ CarrerasEnProceso }) => {
 						<div className="inline-grid grid-cols-1 md:grid-cols-[330px_330px] gap-5 md:gap-11 w-full md:w-auto">
 							<Link
 								href={
-									'/formacion-academica/posgrado/doctor-en-quimica-e-ingenieria-quimica'
+									'/formacion-academica/posgrado/ingenieria-quimica'
 								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
 											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/doctorado-en-quimica-e-ingenieria-quimica.jpg'
+												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/posgrado/minihome/doctorado-ingenieria-quimica-minihome.jpg'
 											}
 											objectFit="cover"
 											layout="fill"
@@ -68,7 +68,7 @@ const Index = ({ CarrerasEnProceso }) => {
 											</span>
 											<br />
 											<span className="text-xl">
-												Farmacia y Bioquímica
+												Ingeniería Química
 											</span>
 										</p>
 									</div>
@@ -76,13 +76,43 @@ const Index = ({ CarrerasEnProceso }) => {
 							</Link>
 							<Link
 								href={
-									'/formacion-academica/posgrado/productos-naturales-y-biocomercio'
+									'/formacion-academica/posgrado/ciencias-quimicas'
 								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
 											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-productos-naturales-y-biocomercio.jpg'
+												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/posgrado/minihome/doctorado-ciencias-quimica-minihome.jpg'
+											}
+											objectFit="cover"
+											layout="fill"
+											quality={100}
+											alt="vocacion1"
+										/>
+									</div>
+									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
+									<div className="text-blanco absolute inset-x-9 bottom-7">
+										<p className="font-bold">
+											<span className="text-xs">
+												Doctorado en
+											</span>
+											<br />
+											<span className="text-xl">
+												Ciencias Químicas
+											</span>
+										</p>
+									</div>
+								</a>
+							</Link>
+							<Link
+								href={
+									'/formacion-academica/posgrado/ingenieria-quimica'
+								}>
+								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
+									<div className="absolute h-full w-full -z-10">
+										<Image
+											src={
+												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/posgrado/minihome/maestria-ingenieria-quimica-minihome.jpg'
 											}
 											objectFit="cover"
 											layout="fill"
@@ -98,22 +128,19 @@ const Index = ({ CarrerasEnProceso }) => {
 											</span>
 											<br />
 											<span className="text-xl">
-												Productos Naturales y
-												Biocomercio
+												Ingeniería Química
 											</span>
 										</p>
 									</div>
 								</a>
 							</Link>
 							<Link
-								href={
-									'/formacion-academica/posgrado/farmacologia-con-mencion-en-farmacologia-experimental'
-								}>
+								href={'/formacion-academica/posgrado/quimica'}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
 											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-ciencias-farmaceuticas-con-mencion-en-farmacolog%C3%ADia-experimental.jpg'
+												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/posgrado/minihome/maestria-quimica-minihome.jpg'
 											}
 											objectFit="cover"
 											layout="fill"
@@ -129,250 +156,7 @@ const Index = ({ CarrerasEnProceso }) => {
 											</span>
 											<br />
 											<span className="text-xl">
-												Farmacología con mención en
-												Farmacología Experimental
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/atencion-farmaceutica'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-atencion-farmaceutica.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Atención Farmacéutica
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/ciencia-de-los-alimentos'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-ciencia-de-los-alimentos.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Ciencia de los Alimentos
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/microbiologia'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-microbiologia.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Microbiología
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/toxicologia'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-toxicologia.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Toxicología
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/biotecnologia'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-biotecnologia.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Biotecnología
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/ciencias-farmaceuticas-con-mencion-en-ciencia-y-tecnologia-cosmetica'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-ciencias-farmaceuticas-con-mencion-en-ciencia-y-tecnologia-cosmetica.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Ciencias Farmacéuticas con
-												mención en Ciencia y Tecnología
-												Cosmética
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/posgrado/quimica-clinica'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/maestria-en-quimica-clinica.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											<span className="text-xs">
-												Maestría en
-											</span>
-											<br />
-											<span className="text-xl">
-												Química Clínica
-											</span>
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={
-									'/formacion-academica/admision?nivel=segundasespecialidades'
-								}>
-								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
-									<div className="absolute h-full w-full -z-10">
-										<Image
-											src={
-												'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/segundas-especialidades-minihome.jpg'
-											}
-											objectFit="cover"
-											layout="fill"
-											quality={100}
-											alt="vocacion1"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/5 -z-10"></div>
-									<div className="text-blanco absolute inset-x-9 bottom-7">
-										<p className="font-bold">
-											{/* <span className="text-xs">
-												Maestría en
-											</span> */}
-											<br />
-											<span className="text-xl">
-												Segundas especialidades
+												Química
 											</span>
 										</p>
 									</div>

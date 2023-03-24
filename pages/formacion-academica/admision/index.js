@@ -53,15 +53,15 @@ const Index = ({ admision, facultad }) => {
 					}
 				);
 				break;
-			case 2:
-				router.push(
-					'/formacion-academica/admision?nivel=segundasespecialidades',
-					undefined,
-					{
-						shallow: true,
-					}
-				);
-				break;
+			// case 2:
+			// 	router.push(
+			// 		'/formacion-academica/admision?nivel=segundasespecialidades',
+			// 		undefined,
+			// 		{
+			// 			shallow: true,
+			// 		}
+			// 	);
+			// 	break;
 		}
 		setActiveIndex(activeIndex);
 	};
@@ -74,8 +74,7 @@ const Index = ({ admision, facultad }) => {
 					attached={false}
 					onClick={(e) => {
 						handleClick(e, 'pregrado');
-					}}
-				>
+					}}>
 					<div className="col-start-3 col-span-10 mb-14">
 						<div className="mb-14">
 							<AdmisionPregrado />
@@ -103,23 +102,23 @@ const Index = ({ admision, facultad }) => {
 				</Tab.Pane>
 			),
 		},
-		{
-			menuItem: 'Segundas Especialidades',
-			render: () => (
-				<Tab.Pane
-					attached={false}
-					onClick={(e) => {
-						handleClick(e, 'segundasespecialidades');
-					}}
-				>
-					<div className="col-start-3 col-span-10 mb-14">
-						<div className="mb-14">
-							<AdmisionSegundasEspecialidades />
-						</div>
-					</div>
-				</Tab.Pane>
-			),
-		},
+		// {
+		// 	menuItem: 'Segundas Especialidades',
+		// 	render: () => (
+		// 		<Tab.Pane
+		// 			attached={false}
+		// 			onClick={(e) => {
+		// 				handleClick(e, 'segundasespecialidades');
+		// 			}}
+		// 		>
+		// 			<div className="col-start-3 col-span-10 mb-14">
+		// 				<div className="mb-14">
+		// 					<AdmisionSegundasEspecialidades />
+		// 				</div>
+		// 			</div>
+		// 		</Tab.Pane>
+		// 	),
+		// },
 	];
 	return (
 		<>
@@ -142,7 +141,7 @@ const Index = ({ admision, facultad }) => {
 					<div className="h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/admision-farmacia-bioquimica.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/admision/admision-banner-facultad-quimica.jpg"
 							layout="responsive"
 							alt="Banner de admisión"
 							width={1080}

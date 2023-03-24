@@ -196,7 +196,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							</p>
 						</div>
 						<a
-							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-primary text-textColorOne hover:bg-complementaryThree hover:shadow-md"
+							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-primary text-blanco hover:bg-complementaryThree hover:shadow-md"
 							href={programa[0].attributes.brochure}
 							target="_blank"
 							rel="noopener noreferrer">
@@ -486,27 +486,29 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 
 			<UltimasNoticias ultimasNoticias={ultimasNoticias} />
 
-			<Modal
-				open={open}
-				onClose={handleClose}
-				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description">
-				<Box
-					className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
-					sx={{
-						position: 'absolute',
-						top: '50%',
-						left: '50%',
-						transform: 'translate(-50%, -50%)',
-						bgcolor: 'transparent',
-					}}>
-					<FormacionContentModal
-						handleClose={handleClose}
-						responsableEmail={coordinadores[0].correo}
-						telefono="(+51) 619 7000 anexo 4812"
-					/>
-				</Box>
-			</Modal>
+			{coordinadores && coordinadores.length > 0 && (
+				<Modal
+					open={open}
+					onClose={handleClose}
+					aria-labelledby="modal-modal-title"
+					aria-describedby="modal-modal-description">
+					<Box
+						className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
+						sx={{
+							position: 'absolute',
+							top: '50%',
+							left: '50%',
+							transform: 'translate(-50%, -50%)',
+							bgcolor: 'transparent',
+						}}>
+						<FormacionContentModal
+							handleClose={handleClose}
+							responsableEmail={coordinadores[0].correo}
+							telefono="(+51) 619 7000 anexo 4812"
+						/>
+					</Box>
+				</Modal>
+			)}
 		</PrincipalLayout>
 	);
 };
@@ -515,54 +517,22 @@ export async function getStaticPaths() {
 	const paths = [
 		{
 			params: {
-				programa: 'doctor-en-quimica-e-ingenieria-quimica',
+				programa: 'ingenieria-quimica',
 			},
 		},
 		{
 			params: {
-				programa: 'productos-naturales-y-biocomercio',
+				programa: 'ciencias-quimicas',
 			},
 		},
 		{
 			params: {
-				programa:
-					'farmacologia-con-mencion-en-farmacologia-experimental',
+				programa: 'ingenieria-quimica',
 			},
 		},
 		{
 			params: {
-				programa: 'atencion-farmaceutica',
-			},
-		},
-		{
-			params: {
-				programa: 'ciencia-de-los-alimentos',
-			},
-		},
-		{
-			params: {
-				programa: 'microbiologia',
-			},
-		},
-		{
-			params: {
-				programa: 'toxicologia',
-			},
-		},
-		{
-			params: {
-				programa: 'biotecnologia',
-			},
-		},
-		{
-			params: {
-				programa:
-					'ciencias-farmaceuticas-con-mencion-en-ciencia-y-tecnologia-cosmetica',
-			},
-		},
-		{
-			params: {
-				programa: 'quimica-clinica',
+				programa: 'quimica',
 			},
 		},
 	];

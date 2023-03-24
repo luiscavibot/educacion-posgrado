@@ -8,7 +8,7 @@ import { getFecha } from '../../../helpers/getFecha';
 export const UltimasNoticias = ({ ultimasNoticias }) => {
 	return (
 		<>
-			{ultimasNoticias && (
+			{ultimasNoticias && ultimasNoticias.length > 0 && (
 				<div className="col-span-full mx-4 md:mx-0">
 					<div>
 						<div className="flex mb-6 font-bold">
