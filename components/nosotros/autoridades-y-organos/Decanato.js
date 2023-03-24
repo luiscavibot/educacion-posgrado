@@ -21,7 +21,7 @@ const Decanato = () => {
 						financiera y administrativamente a la facultad; además,
 						es la máxima autoridad sobre los demás órganos de la
 						facultad. Está conformado por el/la decano/a, quien es
-						el representante ante el Consejo Universitario y
+						el/la representante ante el Consejo Universitario y
 						Asamblea Universitaria, y encabeza el Consejo de
 						Facultad; y la jefatura de la unidad de secretaría,
 						quien revisa y administra el trámite documentario.
@@ -40,42 +40,35 @@ const Decanato = () => {
 						<span className="font-bold text-tertiary">Decano</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Eduardo Flores Juaréz
+							Dr. Jorge Reinaldo Angulo Cornejo
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal e investigador.
+						Profesor principal, investigador y asesor de tesis.
 						<br />
-						Químico farmacéutico, magíster en Microbiología,
-						estudios de maestría en Economía con mención en
-						Políticas Públicas y doctorado en Farmacia y Bioquímica
-						por la UNMSM.
+						Licenciado en Química por la UNMSM; magíster en Química
+						Inorgánica por la UNMSM y doctorado en Química por la
+						Universidad Técnica de Eslovaquia.
 					</p>
 					<p className="mb-5">
-						Es catedrático y asesor de tesis de pre y posgrado en la
-						Facultad de Farmacia y Bioquímica de la UNMSM. También,
-						es investigador y miembro de proyectos monetarios, no
-						monetarios y con fondo externo, especialmente en temas
-						de bioquímica clínica. Durante su gestión como director
-						de la Escuela Profesional de Farmacia y Bioquímica logró
-						la acreditación de la carrera profesional de Farmacia y
-						Bioquímica por el SINEACE y la implementación de la ISO
-						9001-2008 por la fundación Bureau Veritas; además fue
-						decano de su facultad en el periodo 2010-2013,
-						consiguiendo gestionar proyectos de inversión pública.
+						Lleva más de 20 años ejerciendo como docente para la
+						UNMSM. Ha realizado investigaciones en el Instituto de
+						Ciencias Químicas; Facultad de Química e Ingeniería
+						Química, UNMSM. Asimismo, realizó proyectos de
+						Investigación con DAAD en cooperación con la Universidad
+						de Leipzig-Facultad de Química y Mineralogía. Ha
+						publicado más de 70 artículos científicos en revistas y
+						Congresos internacionales de la especialidad; y escribió
+						también dos libros: "Química de Coordinación-Edit. EDUNI
+						LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
+						2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
+						Perú 2013".
 					</p>
 					<p className="mb-6">
-						Ha recibido reconocimientos por su trayectoria académica
-						y labor investigativa, otorgados por la Municipalidad
-						distrital de Bellavista, prov. Sullana (Piura); el
-						Colegio Químico Farmacéutico del Perú; el Colegio
-						Químico Farmacéutico del Callao; el club provincial de
-						Sullana; y la Facultad de Farmacia y Bioquímica de la
-						UNMSM. Actualmente, es presidente de la Asociación de
-						Facultades y Escuelas de Farmacia y Bioquímica del Perú
-						(ASPEFEFB); y presidente del subcomité de Planificación,
-						Presupuesto y Admisión del Comité Nacional del
-						Residentado Químico Farmacéutico (CONAREQF), MINSA.
+						Obtuvo el Mérito científico a mejor investigador en el
+						Área de las ingenierías UNMSM en diversas ocasiones y se
+						desempeñó, también, como director de la Revista de la
+						Sociedad Química del Perú desde el 2005 al 2007.
 					</p>
 					<div className="flex gap-x-5">
 						<Boton
@@ -83,8 +76,7 @@ const Decanato = () => {
 							className="mb-6"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3819472/1.%20RR%20Decano%20Eduardo%20Flores%20Juarez.pdf.pdf?v=1667934889',
-									'_blank'
+									'https://www.gob.pe/institucion/unmsm/normas-legales/3789911-017244-2020-r'
 								)
 							}>
 							<span>
@@ -94,7 +86,7 @@ const Decanato = () => {
 						</Boton>
 						<a
 							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=79354"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086"
 							target={'_blank'}
 							rel="noopener noreferrer">
 							Hoja de vida
@@ -134,7 +126,7 @@ const Decanato = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							decanofyb@unmsm.edu.pe
+							decanoqui@unmsm.edu.pe
 						</p>
 					</div>
 					<div>
@@ -145,7 +137,7 @@ const Decanato = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 4801
+							(+51) 619 7000 anexo 1201
 						</p>
 					</div>
 					{/* <div>
