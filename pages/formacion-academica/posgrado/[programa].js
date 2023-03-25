@@ -517,7 +517,7 @@ export async function getStaticPaths() {
 	const paths = [
 		{
 			params: {
-				programa: 'ingenieria-quimica',
+				programa: 'doctorado-ingenieria-quimica',
 			},
 		},
 		{
@@ -527,7 +527,7 @@ export async function getStaticPaths() {
 		},
 		{
 			params: {
-				programa: 'ingenieria-quimica',
+				programa: 'maestria-ingenieria-quimica',
 			},
 		},
 		{
@@ -543,6 +543,25 @@ export async function getStaticPaths() {
 	};
 }
 export async function getStaticProps({ params }) {
+	const programa = [];
+	const str = params.programa;
+	const arr = str.split('-');
+	const nombrePrograma = arr.slice(1).join('-');
+
+	if (arr === 'maestria') {
+		const resMaestria = await fetch(
+			`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${nombrePrograma}`
+		);
+		const maestria = (await resMaestria.json()).data;
+		programa.push(...maestria);
+	} else if (arr === 'doctorado') {
+		const resDoctorado = await fetch(
+			`${POSGRADO_URL}/doctorados?populate=*&filters[slug][$eq]=${nombrePrograma}`
+		);
+		const doctorado = (await resDoctorado.json()).data;
+		programa.push(...doctorado);
+	}
+
 	const resMaestria = await fetch(
 		`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${params.programa}`
 	);
@@ -561,7 +580,6 @@ export async function getStaticProps({ params }) {
 	});
 	// console.log(doctorado);
 
-	const programa = [];
 	function pushProgramaIfAtLeastTwoExist() {
 		if (maestria.length > 1) {
 			programa.push(...maestria);
