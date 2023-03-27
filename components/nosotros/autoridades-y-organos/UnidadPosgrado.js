@@ -31,7 +31,7 @@ const UnidadPosgrado = () => {
 						Conoce más acerca de esta Unidad ingresando al Manual de
 						Organización y Funciones (
 						<a
-							className="text-secondary"
+							className="link"
 							href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -41,62 +41,70 @@ const UnidadPosgrado = () => {
 					</p>
 					<p className="mb-1">
 						<span className="font-bold text-tertiary">
-							Directora
+							Director
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="font-bold text-textColorOne">
-							Dra. Norma Julia Ramos Cevallos
+							Dr. Marcos Antonio Loroño Gonzáles
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesora principal e investigadora.
+						Profesor principal e investigador
 						<br />
-						Química farmacéutica, magíster en Docencia Universitaria
-						e Investigación Educativa, estudios terminados en la
-						Maestría en Ciencia de los Alimentos, y doctorado en
-						Farmacia y Bioquímica por la UNMSM.
+						Licenciado en Química por la Universidad de Oriente
+						(Venezuela), PhD Physical Chemistry por la Universidad
+						de Cambridge (Inglaterra) y posdoctorados por las
+						universidades de Reims y Dijon (Francia).
 					</p>
 					<p className="mb-5">
-						Es docente universitaria por más de 20 años, responsable
-						del Grupo de Investigación “Recursos Tecnológicos” de la
-						UNMSM, y representante principal de la UNMSM ante el
-						grupo técnico multisectorial de prevención y combate al
-						contrabando, comercio Ilegal y falsificación de
-						productos farmacéuticos en la comisión de Educación y
-						Difusión del CONTRAFALME. Además, es autora y coautora
-						de publicaciones de artículos científicos en revistas
-						nacionales e internacionales.
+						Cuenta con más de 30 años de experiencia en docencia
+						universitaria en instituciones nacionales e
+						internacionales. Se ha desempeñado como consejero
+						universitario en la Universidad de Oriente (UDO),
+						investigador del Centro Nacional para la Investigación
+						Científica en Universidad de Reims Champagne-Ardenne de
+						Francia y evaluador de proyectores en UDO y Fundación
+						Polar. Ha realizado más de 45 investigaciones sobre la
+						línea de cálculos de campos de fuerza, espectroscopia de
+						alta resolución, entre otros; proyectos de investigación
+						y fue asesor en más de 15 tesis para grados de
+						licenciado y maestría.
 					</p>
 					<p className="mb-6">
-						Ha sido expresidenta del sector docente e Investigación
-						del Colegio Departamental del Colegio Químico
-						Farmacéutico de Lima, exjefa de la Unidad Tecnológica
-						Educativa de la Facultad de Farmacia y Bioquímica de la
-						UNMSM, exgerente del SISMED de la DISA en Lima Norte,
-						entre otros cargos notables.
+						Ha recibido la distinción CUM LAUDE (Venezuela) por su
+						primera posición en la promoción universitaria de 1990 y
+						un premio por investigación al mantener una trayectoria
+						investigativa por dos años consecutivos en Inglaterra;
+						alcanzó el premio Award for Research por completar sus
+						estudios como estudiante de PhD en tres años
+						consecutivos y, en Reino Unido logró el premio de mentor
+						científico en el marco de cooperación British Council-
+						CONCYTEC en el año 2020.
 					</p>
 					<div className="flex gap-x-5">
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://cdn.www.gob.pe/uploads/document/file/3989269/R.R.%20003389-2021-R%20-%20Director-UPG-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672154211"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							<span className="flex items-center justify-center">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Resolución rectoral
+							</span>
+						</a>
 						<Boton
 							secondary
-							className="mb-6"
+							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3819559/7.%20RR%20Directora%20de%20la%20UPG%20Norma%20Ramos%20Cevellos.pdf.pdf?v=1667936144',
-									'_blank'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=182002	'
 								)
 							}>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
-							<span>Resolución rectoral</span>
+							<span>Hoja de vida</span>
 						</Boton>
-						<a
-							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=10723"
-							target={'_blank'}
-							rel="noopener noreferrer">
-							Hoja de vida
-						</a>
 					</div>
 				</div>
 			</div>
@@ -104,7 +112,7 @@ const UnidadPosgrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-norma-juli-ramos-cevallos.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-unidad-posgrado-marcos-loro%C3%B1o.jpg"
 						width={209}
 						height={224}
 						quality={100}

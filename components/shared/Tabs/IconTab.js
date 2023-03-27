@@ -20,6 +20,7 @@ import MallaCurricularIcon from '../../icons/MallaCurricularIcon';
 import InversionEconomicaIcon from '../../icons/InversionEconomicaIcon';
 import RequisitosIcon from '../../icons/RequisitosIcon';
 import GuiaProcesoIcon from '../../icons/GuiaProcesoIcon';
+import LupaStroke from '../../icons/LupaStroke';
 
 const IconTab = (label) => {
 	switch (label.label) {
@@ -342,6 +343,13 @@ const IconTab = (label) => {
 			return (
 				<>
 					<MedallaSroke className=" w-[21px] h-[21px]" />
+				</>
+			);
+			break;
+		case 'instituto-de-investigaciones':
+			return (
+				<>
+					<LupaStroke className=" w-[21px] h-[21px] fill-textColorOne" />
 				</>
 			);
 			break;

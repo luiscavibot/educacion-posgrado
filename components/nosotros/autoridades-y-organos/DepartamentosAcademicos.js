@@ -29,7 +29,7 @@ const DepartamentosAcademicos = () => {
 				Conoce más acerca de esta Dirección ingresando al Manual de
 				Organización y Funciones (
 				<a
-					className="text-secondary"
+					className="link"
 					href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
 					target="_blank"
 					rel="noopener noreferrer">
@@ -41,72 +41,80 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Departamento Académico de Bioquímica
+							Departamento Académico de Procesos
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
-								Directora
+								Director
 							</span>
 							<span className="mx-2 text-tertiary font-bold">
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dra. Gloria Clotilde Gordillo Rocha
+								Dr. Raymundo Erazo Erazo
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesora principal e investigadora.
+							Profesor principal, investigador y consultor
+							ambiental
 							<br />
-							Licenciada en Educación Secundaria, en la
-							especialidad de Biología y Química por la UNFV;
-							química farmacéutica; magíster en Recursos Vegetales
-							y Terapéuticos; y doctorado en Farmacia y Bioquímica
-							por la UNMSM.
+							Licenciado en Ingeniería Química por la UNMSM,
+							magíster en Ingeniería Química con especialidad en
+							Bioingeniería y Ciencias Ambientales por la UNMSM y
+							doctorado en Medio Ambiente y Desarrollo Sostenible
+							por la UNFV.
 						</p>
 						<p className="mb-5">
-							Es docente de pregrado en la Facultad de Farmacia y
-							Bioquímica, y ha realizado cursos de especialización
-							como diplomados sobre gestión ambiental y
-							tecnología. Tiene experiencia en el cargo de la
-							Dirección Administrativa y en Grupos de
-							Investigación en donde ha realizado 19 estudios en
-							las diferentes áreas de ciencias de la salud.
-							Además, ha producido más de 20 artículos publicados
-							en revistas de divulgación científica.
+							Cuenta con más de 20 años de experiencia en docencia
+							universitaria de posgrado en instituciones públicas
+							como en la Universidad Nacional José Faustino
+							Sánchez Carrión, Universidad Nacional San Luis
+							Gonzaga de Ica, Universidad Nacional del Centro del
+							Perú, Universidad Nacional de Ingeniería y la UNMSM.
+							Se ha desempeñado como coordinador del Programa
+							Iberoamericano de Ciencia y Tecnología para el
+							Desarrollo, director del Instituto de Investigación
+							de Ingeniería Química y coordinador del Departamento
+							de Procesos.
 						</p>
 						<p className="mb-6">
-							Ha recibido el diploma de reconocimiento a los
-							investigadores con publicaciones científicas en el
-							2013, en virtud a su fructífera labor en el campo de
-							la investigación que le ha permitido la producción
-							de conocimientos científicos. También, ha sido
-							reconocida por su destacada labor en la
-							investigación como asesora de grupos estudiantiles,
-							en el marco de la ceremonia de clausura del año
-							académico (2014).
+							Ha realizado más de 20 investigaciones sobre la
+							línea de intercambiadores de calor, tratamiento de
+							residuos, estudio de la interacción química y
+							bactericida, entre otros; proyectos de
+							investigación, donde el último desarrollado el 2020
+							se enfocó en la aplicación de ozono para incrementar
+							la conservación de carnes de pollo; y fue asesor en
+							más de 20 tesis para grados de maestría y doctorado.
+							Además, ha recibido distinciones a nivel nacional
+							por la UNMSM y a nivel internacional en Estados
+							Unidos por The OAS Summit of Engineering for the
+							Americas.
 						</p>
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989430/R.R.%20010087-2021-R%20-dept-procesos.pdf.pdf?v=1672156592"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819594/012530-2021-R.pdf?v=1667936797',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=240'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=4261"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
@@ -114,7 +122,7 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-bioquimica-gloria-gordillo.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-procesos-raymundo-erazo.jpg"
 							width={209}
 							height={224}
 							quality={100}
@@ -132,7 +140,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								dabioquimica.farmacia@unmsm.edu.pe
+								rerazoe@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -143,7 +151,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4831
+								(+51) 619 7000 anexo 1215
 							</p>
 						</div>
 						{/* <div>
@@ -179,71 +187,78 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Departamento Académico de Farmacotecnia y
-							Administración Farmacéutica
+							Departamento Académico de Química Orgánica
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
-								Directora
+								Director
 							</span>
 							<span className="mx-2 text-tertiary font-bold">
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dra. Norma Julia Ramos Cevallos
+								Dr. Nino Castro Mandujano
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesora principal e investigadora.
+							Profesor principal, investigador y químico
 							<br />
-							Química farmacéutica, magíster en Docencia
-							Universitaria e Investigación Educativa, estudios
-							terminados en la Maestría en Ciencia de los
-							Alimentos, y doctorado en Farmacia y Bioquímica por
-							la UNMSM.
+							Licenciado en Química por la Universidad Nacional de
+							Ingeniería, magíster en Química por la Pontificia
+							Universidad Católica del Perú y doctorado en
+							Ciencias Químicas por la UNMSM.
 						</p>
 						<p className="mb-5">
-							Es docente universitaria por más de 20 años,
-							responsable del Grupo de Investigación “Recursos
-							Tecnológicos” de la UNMSM, y representante principal
-							de la UNMSM ante el grupo técnico multisectorial de
-							prevención y combate al contrabando, comercio Ilegal
-							y falsificación de productos farmacéuticos en la
-							comisión de Educación y Difusión del CONTRAFALME.
-							Además, es autora y coautora de publicaciones de
-							artículos científicos en revistas nacionales e
-							internacionales.
+							Cuenta con más de 15 años de experiencia en docencia
+							universitaria en instituciones privadas como en la
+							Universidad Privada Norbert Winer y Universidad
+							Privada Arzobispo Loayza e instituciones públicas
+							como en la UNMSM. Se ha desempeñado como responsable
+							del laboratorio de Fisicoquímica en la PUCP y
+							docente en el laboratorio de genética en la Facultad
+							de Ciencias Biológicas en la UNMSM.
 						</p>
 						<p className="mb-6">
-							Ha sido expresidenta del sector docente e
-							Investigación del Colegio Departamental del Colegio
-							Químico Farmacéutico de Lima, exjefa de la Unidad
-							Tecnológica Educativa de la Facultad de Farmacia y
-							Bioquímica de la UNMSM, exgerente del SISMED de la
-							DISA en Lima Norte, entre otros cargos notables.
+							Ha realizado más de 45 investigaciones sobre
+							distintos tópicos en química como gestión ambiental,
+							recuperación de proteínas, análisis de ácidos, entre
+							otros. Autor de libros como el último que publicó en
+							el 2022 titulado “Investigación fitoquímica aplicada
+							con aceites esenciales”. Asimismo, fue asesor de
+							tesis y participó en proyectos de investigación
+							aplicada y transferencia tecnológica financiados por
+							instituciones como la Universidad Nacional José
+							Faustino Sánchez Carrión y la UNMSM. Ha recibido
+							diferentes distinciones, dentro de los cuales
+							destaca ser primer puesto en la categoría varios en
+							el Premio Coca-Cola Ecoeficiente (2007), primer
+							lugar en el II Premio ADIFAN a la innovación en
+							ciencias y tecnología farmacéuticas (2016).
 						</p>
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/4008984/RR-014959-2022-R-dept-quimica-organica-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672412302"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819579/011223-2022-R.pdf?v=1667936542',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12092'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=10723"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
@@ -251,7 +266,7 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-norma-juli-ramos-cevallos.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-quimica-organica-nino-castro-unmsm.jpg"
 							width={209}
 							height={224}
 							quality={100}
@@ -269,7 +284,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								daf.farmacia@unmsm.edu.pe
+								ocastrom@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -280,7 +295,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4828
+								(+51) 619 7000 anexo 1212
 							</p>
 						</div>
 						{/* <div>
@@ -316,8 +331,7 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Departamento de Microbiología y Parasitología Básica
-							y Aplicada
+							Departamento Académico de Química Inorgánica
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
@@ -327,60 +341,60 @@ const DepartamentosAcademicos = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dra. María Elena Salazar Salvatierra
+								Mg. Maria Nieves Lino Pacheco
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesora principal e investigadora.
+							Profesora principal, investigador y química
 							<br />
-							Química farmacéutica, magíster en Microbiología, y
-							doctorado en Farmacia y Bioquímica por la UNMSM.
+							Licenciada en Química por la UNMSM y magíster en
+							Química con mención en Química Inorgánica por la
+							UNMSM.
 						</p>
 						<p className="mb-5">
-							Docente universitaria desde hace casi 20 años,
-							responsable de curso y otras actividades inherentes
-							a la docencia en la Universidad Nacional Mayor de
-							San Marcos. Es miembro del Consejo Consultivo y de
-							la Comisión de Trabajo de la Fundación Instituto
-							Hipólito Unanue, socia activa de la Sociedad Química
-							del Perú, y coordinadora del grupo de Investigación
-							BIOBACT en la UNMSM. Fue directora del Centro de
-							Control Analítico (2013-2016) y directora de la
-							Unidad de Investigación (2016-2020) en la Facultad
-							de Farmacia y Bioquímica.
+							Cuenta con más de 25 años de experiencia en docencia
+							universitaria en instituciones estatales como en la
+							Universidad Nacional Federico Villarreal,
+							Universidad Nacional de Ingeniería y la UNMSM.
 						</p>
 						<p className="mb-6">
-							Cuenta con amplia experiencia en microbiología
-							clínica, industrial y de alimentos, amplia labor
-							realizada en análisis microbiológico y fisicoquímico
-							de productos terminados y en proceso, en materia
-							prima e insumos para medicamentos, dispositivos
-							médicos y alimentos; y realiza investigaciones en el
-							área de microbiología clínica, de alimentos, aguas y
-							afines.
+							Ha realizado investigaciones sobre distintos tópicos
+							en química como comparación de la actividad
+							antibacteriana, precursores de complejos
+							supramoleculares, entre otros. Además, participó en
+							proyectos de investigación como Biomonitoreo y
+							Evaluación del grado de contaminación en los
+							laboratorios de la FQIQ y su impacto en la salud y
+							el medio ambiente; y recibió un destacado
+							certificado a nivel internacional desde Alemania
+							para realizar publicaciones en revistas
+							internacionales sobre la síntesis de varios ligado y
+							complejos.
 						</p>
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989408/R.R.%20009214-2021-R%20-%20dept-quimica-inorganica.pdf.pdf?v=1672156307"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3939039/11.%20RR%20Directora%20del%20DA%20de%20Microbiolog%C3%ADa%20Mar%C3%ADa%20Elena%20Salazar.pdf.pdf?v=1671133608',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12743'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=10826"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
@@ -388,7 +402,7 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-microbiologia-maria-elena-salazar.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-inorganica-maria-lino-quimica-unmsm.jpg"
 							width={209}
 							height={224}
 							quality={100}
@@ -406,7 +420,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								damicrobiologia.farmacia@unmsm.edu.pe
+								mbejarr@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -417,7 +431,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4834
+								(+51) 619 7000 anexo 1211
 							</p>
 						</div>
 						{/* <div>
@@ -448,23 +462,22 @@ const DepartamentosAcademicos = () => {
 					</div>
 				</div>
 			</div>
-			<Separator className="mb-6" />
+			{/* <Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Departamento Académico de Farmacología, Bromatología
-							y Toxicología
+							Departamento Académico de Fisicoquímica
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
-								Directora
+								Director
 							</span>
 							<span className="mx-2 text-tertiary font-bold">
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dra. María Elena Montoya Alfaro
+								Mg. Patricio Eudes Muñoz Huillcas
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
@@ -497,34 +510,36 @@ const DepartamentosAcademicos = () => {
 							Rebagliati (2021).
 						</p>
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989408/R.R.%20009214-2021-R%20-%20dept-quimica-inorganica.pdf.pdf?v=1672156307"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3939511/RESOLUCI%C3%93N%20RECTORAL-007832-2021-R%20DESIGNACI%C3%93N%20DRA.%20MARIA%20ELENA%20MONTOYA.pdf.pdf?v=1671138182',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12743'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=98068"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-farmacologia-maria-elena-montoya-alfaro.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-fisioquimica-patricio-mu%C3%B1oz-unmsm.jpg"
 							width={209}
 							height={224}
 							quality={100}
@@ -558,13 +573,14 @@ const DepartamentosAcademicos = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Departamento Académico de Química Básica y Aplicada
+							Departamento Académico de Análisis y Diseño de
+							Procesos
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
@@ -574,63 +590,76 @@ const DepartamentosAcademicos = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Mg. Juan José Ponce Cobos
+								Dr. Walter Esteban Barrutia Feijoo
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesor principal e investigador.
+							Profesor principal, investigador e ingeniero químico
 							<br />
-							Químico farmacéutico, magíster en Ciencias
-							Farmacéuticas con mención en Ciencia y Tecnología
-							Cosmética, y egresado del doctorado en Farmacia y
-							Bioquímica por la UNMSM.
+							Licenciado en Ingeniería Química por la UNMSM,
+							magíster en Ingeniería y doctor con mención en
+							Gestión de Operaciones por Lamar University.
 						</p>
 						<p className="mb-5">
-							Docente universitario desde hace más de 50 años en
-							la Facultad de Farmacia y Bioquímica. Fue director
-							del Departamento Académico de Química Básica y
-							Aplicada (2016-2018), ha participado en proyectos
-							con financiamiento económico, y ha publicado
-							estudios sobre la actividad microbiana, marcadores
-							bioquímicos, entre otros temas. Además, ha realizado
-							estudios de especialización como diplomados y
-							cursos.
+							Becado por el Programa Latinoamericano de Becas para
+							Universidades Americanas (LASPAU) para realizar su
+							maestría en Estados Unidos. Cuenta con más de 25
+							años de experiencia en docencia universitaria de
+							posgrado en instituciones públicas y privadas. Se ha
+							desempeñado como director de la División de Calidad
+							y Producción en Lamar University, director del
+							Departamento de Aseguramiento de la Calidad en
+							Austin Community College, asesor de la presidencia
+							en CONCYTEC, subdirector de cooperación
+							internacional en la Autoridad Nacional del Agua,
+							entre más funciones. Ha realizado distintas
+							investigaciones sobre la línea de recursos hídricos,
+							exportaciones, capacitación y excelencia
+							universitaria, entre otros. Además, participó en
+							proyectos de investigación sobre el análisis de
+							variables prospectivas para lograr un mayor
+							desarrollo de patentes en instituciones públicas,
+							extracción de oleorresinas de la páprika, entre
+							otros.
 						</p>
 						<p className="mb-6">
-							Ha recibido el premio Hipólito Unanue, por su tesis
-							de bachiller titulado Propiedades Alostéricas de la
-							Isoenzima M4 de L-Lactato: NAD Oxidorreductasa de
-							músculo de conejo, en 1975; y se le otorgó el
-							diploma de reconocimiento al Investigador con
-							Publicaciones Científicas por la UNMSM (2014), en
-							virtud de la fructífera labor en el campo de la
-							investigación científica que ha permitido la
-							producción de conocimientos, los mismos que se han
-							plasmado en sus publicaciones.
+							Ha recibido reconocimientos a nivel nacional por su
+							distinguida participación como conferencista en la
+							Conferencia Internacional: Perspectivas de
+							Acreditación de la Universidad Pública y
+							Mejoramiento Académico y Curricular de las Carreras
+							Profesionales y a nivel internacional por su
+							programa de apoyo al diseño e implementación de
+							estrategias para la continuidad del servicio
+							educativo superior de las universidades públicas del
+							Perú desde Estados Unidos y por mejor proyecto de
+							innovación de aprendizaje universitario desde Corea.
 						</p>
 
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989376/R.R.%20003015-2021-R%20-%20dpto-analisis-dise%C3%B1o-procesos-quimica-analitica.pdf.pdf?v=1672155975"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819478/01238-2021-R.pdf?v=1667935058',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=3692'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=97208"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
@@ -638,7 +667,7 @@ const DepartamentosAcademicos = () => {
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-dept-qumica-basica-juan-jose-ponce-cobos.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-analisis-dise%C3%B1o-procesos-walter-barrutia-unmsm.jpg"
 							width={209}
 							height={224}
 							quality={100}
@@ -666,7 +695,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								daqbya.farmacia@unmsm.edu.pe
+								wbarrutiaf@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -677,7 +706,303 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4829
+								(+51) 619 7000 anexo 1210
+							</p>
+						</div>
+						{/* <div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Dirección</span>
+							</p>
+							<p className="mb-3 break-words">
+								Jr. Puno n.° 1002, Lima, Perú
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">
+									Atención presencial
+								</span>
+							</p>
+							<p className="mb-3 break-words">
+								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
+								2:00 p. m. a 3:45 p. m.
+							</p>
+						</div> */}
+					</div>
+				</div>
+			</div>
+			<Separator className="mb-6" />
+			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+				<div className="md:col-span-6">
+					<div className="mb-6">
+						<p className="text-tertiary font-bold mb-5">
+							Departamento Académico de Química Analítica
+						</p>
+						<p className="mb-1">
+							<span className="font-bold text-tertiary">
+								Director
+							</span>
+							<span className="mx-2 text-tertiary font-bold">
+								|
+							</span>
+							<span className="font-bold text-textColorOne">
+								Mg. Holger Jelimer Maldonado García
+							</span>
+						</p>
+						<p className="text-sm text-tertiary font-medium italic mb-5">
+							Profesor principal, investigador y biólogo
+							<br />
+							Licenciado en Ciencias Biológicas por la Universidad
+							Nacional de Trujillo y magíster en Ciencias con
+							mención en Química por la Universidad Peruana
+							Cayetano Heredia
+						</p>
+						<p className="mb-5">
+							Cuenta con más de 45 años de experiencia en docencia
+							universitaria en instituciones estatales como en la
+							UNMSM e instituciones privadas como en la
+							Universidad Peruana Cayetano Heredia. Además es
+							especialista en química de los productos naturales,
+							separaciones químicas, cromatográficas y
+							endocrinología reproductiva.
+						</p>
+						<p className="mb-6">
+							Ha realizado investigaciones sobre distintos tópicos
+							como el equilibrio y la cinética de biosorción,
+							dentro de las cuales destaca su última publicación
+							Estudio de la coagulación de la suspensión coloidal
+							de AgI por influencia de alginato de sodio y sulfato
+							de aluminio en el año 2021. Además, participó en
+							proyectos de investigación sobre extracción,
+							purificación , caracterización y acondicionamiento
+							de biopolímeros; obtención y caracterización de
+							fertilizantes de liberación controlada, entre otros.
+						</p>
+
+						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989376/R.R.%20003015-2021-R%20-%20dpto-analisis-dise%C3%B1o-procesos-quimica-analitica.pdf.pdf?v=1672155975"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
+							<Boton
+								secondary
+								className="mb-6 text-primary"
+								onClick={() =>
+									window.open(
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2207'
+									)
+								}>
+								<span>
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								</span>
+								<span>Hoja de vida</span>
+							</Boton>
+						</div>
+					</div>
+				</div>
+				{/* NOTE: COORDINADORES */}
+				<div className="md:col-span-2">
+					<div className="mb-6">
+						<Image
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-procesos-raymundo-erazo.jpg"
+							width={209}
+							height={224}
+							quality={100}
+							className="w-full object-cover max-w-[254px] m-auto"
+						/>
+					</div>
+
+					{/* <Image
+						src={directorPic}
+						layout="responsive"
+						width={209}
+						height={224}
+						priority={true}
+						alt="Banner Maestría"
+						className="mb-6"
+					/> */}
+
+					<p className="text-tertiary font-black mb-2">Contacto</p>
+					<div className="text-sm">
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Correo</span>
+							</p>
+							<p className="mb-3 break-words">
+								hmaldonadog@unmsm.edu.pe
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Teléfono</span>
+							</p>
+							<p className="mb-3 break-words">
+								(+51) 619 7000 anexo 1214
+							</p>
+						</div>
+						{/* <div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Dirección</span>
+							</p>
+							<p className="mb-3 break-words">
+								Jr. Puno n.° 1002, Lima, Perú
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">
+									Atención presencial
+								</span>
+							</p>
+							<p className="mb-3 break-words">
+								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
+								2:00 p. m. a 3:45 p. m.
+							</p>
+						</div> */}
+					</div>
+				</div>
+			</div>
+			<Separator className="mb-6" />
+			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+				<div className="md:col-span-6">
+					<div className="mb-6">
+						<p className="text-tertiary font-bold mb-5">
+							Departamento Académico de Operaciones Unitarias
+						</p>
+						<p className="mb-1">
+							<span className="font-bold text-tertiary">
+								Director
+							</span>
+							<span className="mx-2 text-tertiary font-bold">
+								|
+							</span>
+							<span className="font-bold text-textColorOne">
+								Ing.Julio Javier Armijo Carranza
+							</span>
+						</p>
+						<p className="text-sm text-tertiary font-medium italic mb-5">
+							Profesor principal e investigador
+							<br />
+							Licenciado y magíster en Ingeniería Química por la
+							UNMSM y magíster en Ciencias con mención en Química
+							por la Universidad Peruana Cayetano Heredia
+						</p>
+						<p className="mb-5">
+							Cuenta con más de 15 años de experiencia en docencia
+							universitaria. Su área de investigación son los
+							procesos de separación mediante la transferencia de
+							masa: membranas, intercambio iónico, adsorción. Ha
+							publicado distintos artículos científicos sobre la
+							línea del modelamiento y simulación del proceso de
+							extracción de aceites, la simulación dinámica de
+							sistemas de ósmosis inversa, entre otros.
+						</p>
+						<p className="mb-6">
+							Participó en proyectos de investigación en torno al
+							efecto de la polarización por concentración en las
+							separaciones por ósmosis inversa, el módulo de
+							operaciones unitarias virtual para la enseñanza de
+							la ingeniería química y, recientemente, sobre el
+							estudio de la cinética de intercambio iónico en
+							columna empacada aplicada al tratamiento de aguas
+							residuales.
+						</p>
+
+						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989468/R.R.%20010901-2021-R%20-dept-operaciones-unitarias.pdf.pdf?v=1672157019"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
+							<Boton
+								secondary
+								className="mb-6 text-primary"
+								onClick={() =>
+									window.open(
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=11405'
+									)
+								}>
+								<span>
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								</span>
+								<span>Hoja de vida</span>
+							</Boton>
+						</div>
+					</div>
+				</div>
+				{/* NOTE: COORDINADORES */}
+				<div className="md:col-span-2">
+					<div className="mb-6">
+						<Image
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-operaciones-unitarias-quimica-ingenieria-waldir-desiderio-unmsm.jpg"
+							width={209}
+							height={224}
+							quality={100}
+							className="w-full object-cover max-w-[254px] m-auto"
+						/>
+					</div>
+
+					{/* <Image
+						src={directorPic}
+						layout="responsive"
+						width={209}
+						height={224}
+						priority={true}
+						alt="Banner Maestría"
+						className="mb-6"
+					/> */}
+
+					<p className="text-tertiary font-black mb-2">Contacto</p>
+					<div className="text-sm">
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Correo</span>
+							</p>
+							<p className="mb-3 break-words">
+								jarmijoc@unmsm.edu.pe
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Teléfono</span>
+							</p>
+							<p className="mb-3 break-words">
+								(+51) 619 7000 anexo 1217
 							</p>
 						</div>
 						{/* <div>

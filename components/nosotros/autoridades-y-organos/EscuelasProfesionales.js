@@ -15,7 +15,7 @@ const EscuelasProfesionales = () => {
 	return (
 		<>
 			<p className="mb-8 col-span-full text-textColorTwo">
-				Son los órganos de línea de la facultad encargada de la
+				Son los órganos de línea de la facultad encargados de la
 				formación profesional para la obtención del grado académico de
 				bachiller, título profesional o licenciatura correspondiente, y
 				de otorgar la certificación progresiva por los módulos de
@@ -29,7 +29,7 @@ const EscuelasProfesionales = () => {
 				Profesional. Conoce más acerca de esta Unidad ingresando al
 				Manual de Organización y Funciones (
 				<a
-					className="text-secondary"
+					className="link"
 					href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
 					target="_blank"
 					rel="noopener noreferrer">
@@ -41,7 +41,7 @@ const EscuelasProfesionales = () => {
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
-							Escuela profesional de Ciencias de los alimentos
+							Escuela Profesional de Química
 						</p>
 						<p className="mb-1">
 							<span className="font-bold text-tertiary">
@@ -51,348 +51,70 @@ const EscuelasProfesionales = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dr. Víctor Crispín Perez
-							</span>
-						</p>
-						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesor principal y médico cirujano.
-							<br />
-							Químico farmacéutico con especialidad en Análisis
-							Bioquímicos y magíster en Microbiología por la UNMSM
-							y doctorado en Salud Pública por la UNFV.
-						</p>
-						<p className="mb-5">
-							Es docente de pre y posgrado en la Facultad de
-							Farmacia y Bioquímica de la UNMSM; y realiza
-							investigaciones sobre la resistencia microbiana a
-							los antibióticos y epidemiología de la tuberculosis.
-							Médico asistente en la Dirección de Salud IV Lima
-							Este (MINSA) por 25 años; además fue miembro de la
-							Asamblea Universitaria durante el periodo 2017-2020.
-							Ha contribuido con 9 artículos científicos sobre
-							microbiología y epidemiología de tuberculosis.
-						</p>
-						<p className="mb-6">
-							Ha recibido medalla de oro en el área de Farmacia y
-							Bioquímica por la Fundación Instituto Hipólito
-							Unanue, y ha sido reconocido con el premio al Mérito
-							Científico por la UNMSM. Actualmente, es miembro del
-							Consejo de Facultad y brinda asesoría de tesis a los
-							alumnos de pre y posgrado.
-						</p>
-						<div className="flex gap-x-5">
-							<Boton
-								secondary
-								className="mb-6"
-								onClick={() =>
-									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819522/4.%20RR%20Director%20de%20la%20EPCA%20Victor%20Crispin%20Perez.pdf.pdf?v=1667935733',
-										'_blank'
-									)
-								}>
-								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
-								</span>
-								<span>Resolución rectoral</span>
-							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=71913"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
-						</div>
-					</div>
-				</div>
-				{/* NOTE: COORDINADORES */}
-				<div className="md:col-span-2">
-					<div className="mb-6">
-						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/director-ciencia-alimentos-victor-crispin-perez.jpg"
-							width={209}
-							height={224}
-							quality={100}
-							className="w-full object-cover max-w-[254px] m-auto"
-						/>
-					</div>
-
-					{/* <Image
-						src={directorPic}
-						layout="responsive"
-						width={209}
-						height={224}
-						priority={true}
-						alt="Banner Maestría"
-						className="mb-6"
-					/> */}
-
-					<p className="text-tertiary font-black mb-2">Contacto</p>
-					<div className="text-sm">
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Correo</span>
-							</p>
-							<p className="mb-3 break-words">
-								eapcienciasalimentos.farmacia@unmsm.edu.pe
-							</p>
-						</div>
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Teléfono</span>
-							</p>
-							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4805
-							</p>
-						</div>
-						{/* <div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Dirección</span>
-							</p>
-							<p className="mb-3 break-words">
-								Jr. Puno n.° 1002, Lima, Perú
-							</p>
-						</div>
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">
-									Atención presencial
-								</span>
-							</p>
-							<p className="mb-3 break-words">
-								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
-								2:00 p. m. a 3:45 p. m.
-							</p>
-						</div> */}
-					</div>
-				</div>
-			</div>
-			<Separator className="mb-6" />
-			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
-				<div className="md:col-span-6">
-					<div className="mb-6">
-						<p className="text-tertiary font-bold mb-5">
-							Escuela Profesional de Farmacia y Bioquímica
-						</p>
-						<p className="mb-1">
-							<span className="font-bold text-tertiary">
-								Director
-							</span>
-							<span className="mx-2 text-tertiary font-bold">
-								|
-							</span>
-							<span className="font-bold text-textColorOne">
-								Dr. Luis Miguel Visitación Felix Veliz
-							</span>
-						</p>
-						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesor principal e investigador.
-							<br />
-							Químico farmacéutico, título de segunda especialidad
-							y magíster en Recursos Vegetales y Terapéuticos y,
-							doctorado en Farmacia y Bioquímica por la UNMSM.
-						</p>
-						<p className="mb-5">
-							Es docente de pregrado en la Facultad de Farmacia y
-							Bioquímica, Facultad de Odontología y Facultad de
-							Ingeniería Industrial; así como en posgrado en la
-							Facultad de Farmacia y Bioquímica de la UNMSM. Ha
-							realizado cursos de especialización como diplomados
-							y programas de formación. Tiene experiencia en cargo
-							de dirección y ha generado diversas publicaciones
-							académicas que enriquecen el acervo bibliográfico
-							del área médica y bioquímica.
-						</p>
-						<p className="mb-6">
-							Ha recibido el reconocimiento por su labor académica
-							participando como miembro B en actividades de
-							investigación y ha sido responsable o miembro de
-							grupos de investigación; así como en eventos
-							científicos congresos, talleres, cursos, seminarios
-							como organizador, ponente y asistente.
-						</p>
-						<div className="flex gap-x-5">
-							<Boton
-								secondary
-								className="mb-6"
-								onClick={() =>
-									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819535/5.%20RR%20Director%20de%20la%20EPFB%20Luis%20Felix%20Veliz.pdf.pdf?v=1667935897',
-										'_blank'
-									)
-								}>
-								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
-								</span>
-								<span>Resolución rectoral</span>
-							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96878"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
-						</div>
-					</div>
-				</div>
-				{/* NOTE: COORDINADORES */}
-				<div className="md:col-span-2">
-					<div className="mb-6">
-						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/director-farmacia-bioquimica-luis-miguel-felix-veliz.jpg"
-							width={209}
-							height={224}
-							quality={100}
-							className="w-full object-cover max-w-[254px] m-auto"
-						/>
-					</div>
-
-					{/* <Image
-						src={directorPic}
-						layout="responsive"
-						width={209}
-						height={224}
-						priority={true}
-						alt="Banner Maestría"
-						className="mb-6"
-					/> */}
-
-					<p className="text-tertiary font-black mb-2">Contacto</p>
-					<div className="text-sm">
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Correo</span>
-							</p>
-							<p className="mb-3 break-words">
-								eapfyb@unmsm.edu.pe
-							</p>
-						</div>
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Teléfono</span>
-							</p>
-							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4808
-							</p>
-						</div>
-						{/* <div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Dirección</span>
-							</p>
-							<p className="mb-3 break-words">
-								Jr. Puno n.° 1002, Lima, Perú
-							</p>
-						</div>
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">
-									Atención presencial
-								</span>
-							</p>
-							<p className="mb-3 break-words">
-								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
-								2:00 p. m. a 3:45 p. m.
-							</p>
-						</div> */}
-					</div>
-				</div>
-			</div>
-			<Separator className="mb-6" />
-			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
-				<div className="md:col-span-6">
-					<div className="mb-6">
-						<p className="text-tertiary font-bold mb-5">
-							Director de la Escuela Profesional de Toxicología
-						</p>
-						<p className="mb-1">
-							<span className="font-bold text-tertiary">
-								Director
-							</span>
-							<span className="mx-2 text-tertiary font-bold">
-								|
-							</span>
-							<span className="font-bold text-textColorOne">
-								Mg. Jesús Lizano Gutierrez
+								Dr. Julio César Santiago Contreras
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
 							Profesor principal e investigador
 							<br />
-							Químico farmacéutico, título de segunda especialidad
-							en Toxicología y Química Legal, magíster en
-							Bromatología y, estudios en curso de doctorado por
-							la UNMSM.
+							Licenciado en Química por la UNMSM, pos-doctorados
+							por la Technology Research Institute (Osaka, Japón),
+							doctorado en Química por la PUCP y doctorado en
+							Ciencias por la Université de Neuchatel (Suiza).
 						</p>
 						<p className="mb-5">
-							Es docente universitario con más de 45 años de
-							experiencia en la cátedra de Toxicología y Química
-							Legal en la Universidad Nacional Mayor de San
-							Marcos, y en la Universidad Norbert Wiener desde el
-							2000 hasta la actualidad; además es miembro del
-							Comité Asesor de la Escuela Profesional de
-							Toxicología, director del Centro de Investigación,
-							Control Toxicológico y Apoyo a la Gestión Ambiental
-							(CICOTOX) y presidente del directorio del Centro de
-							Producción Farmacéutica (CENPROFARMA).
+							Cuenta con más de 25 años de experiencia en docencia
+							universitaria en instituciones públicas como en la
+							UNMSM e instituciones privadas como en la
+							Universidad Peruana Cayetano Heredia y la PUCP. Se
+							ha desempeñado como investigador en el Instituto
+							Peruano de Energía Nuclear (IPEN). Ha realizado más
+							de 40 investigaciones sobre la línea de la actividad
+							antioxidante, caracterización de hidrogeles,
+							tratamiento de quemaduras, entre otros. Es
+							responsable de proyectos multidisciplinarios sobre
+							la terapia fotodinámica del cáncer y tratamiento de
+							efluentes industriales.
 						</p>
 						<p className="mb-6">
-							Cuenta con más de 40 publicaciones académicas, ha
-							realizado asesoramiento y ha sido jurado de trabajo
-							de investigación de 30 Tesis. Obtuvo el primer
-							puesto en el concurso de trabajos de investigación
-							en el I Congreso Internacional de Farmacología y
-							Toxicología (2009), y el diploma de honor de la
-							Facultad de Farmacia y Bioquímica por su desempeño y
-							dedicación al servicio de la Facultad de Farmacia y
-							Bioquímica de la UNMSM (2016).
+							Ha recibido distinciones a nivel nacional como el
+							premio al Primer Puesto de Proyectos de
+							Investigación Científica y Tecnológica, premio de
+							trabajador más destacado en el ámbito
+							Científico-tecnológico en mérito a la obtención de
+							la patente preparación de quitina y quitosano
+							utilizando radiación gamma y el premio Bertha del
+							Rosario Calderón por el IPEN, premio al investigador
+							más destacado de la Fac. de Química e Ing. Química
+							por la UNMSM, incorporación a la Academia Nacional
+							de Ciencias, medalla nuclear por su contribución a
+							las aplicaciones de energía ionizante para la
+							preparación de biomateriales, entre otras.
 						</p>
 						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989300/R.R.%20004741-2021-R%20-ep-quimica-unmsm.pdf.pdf?v=1672154738"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
 							<Boton
 								secondary
-								className="mb-6"
+								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://cdn.www.gob.pe/uploads/document/file/3819548/6.%20RR%20Director%20de%20la%20EPT%20Jes%C3%BAs%20Lizano%20Gutierrez.pdf.pdf?v=1667936031',
-										'_blank'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=62'
 									)
 								}>
 								<span>
-									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
-								<span>Resolución rectoral</span>
+								<span>Hoja de vida</span>
 							</Boton>
-							<a
-								className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=71913"
-								target={'_blank'}
-								rel="noopener noreferrer">
-								Hoja de vida
-							</a>
 						</div>
 					</div>
 				</div>
@@ -400,7 +122,326 @@ const EscuelasProfesionales = () => {
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/director-toxicologia-jesus-victor-lizano.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-escuela-quimica-julio-santiago-unmsm.jpg"
+							width={209}
+							height={224}
+							quality={100}
+							className="w-full object-cover max-w-[254px] m-auto"
+						/>
+					</div>
+
+					{/* <Image
+						src={directorPic}
+						layout="responsive"
+						width={209}
+						height={224}
+						priority={true}
+						alt="Banner Maestría"
+						className="mb-6"
+					/> */}
+
+					<p className="text-tertiary font-black mb-2">Contacto</p>
+					<div className="text-sm">
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Correo</span>
+							</p>
+							<p className="mb-3 break-words">
+								epq.quimica@unmsm.edu.pe
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Teléfono</span>
+							</p>
+							<p className="mb-3 break-words">
+								(+51) 619 7000 anexo 1230
+							</p>
+						</div>
+						{/* <div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Dirección</span>
+							</p>
+							<p className="mb-3 break-words">
+								Jr. Puno n.° 1002, Lima, Perú
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">
+									Atención presencial
+								</span>
+							</p>
+							<p className="mb-3 break-words">
+								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
+								2:00 p. m. a 3:45 p. m.
+							</p>
+						</div> */}
+					</div>
+				</div>
+			</div>
+			<Separator className="mb-6" />
+			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+				<div className="md:col-span-6">
+					<div className="mb-6">
+						<p className="text-tertiary font-bold mb-5">
+							Escuela Profesional de Ingeniería Química
+						</p>
+						<p className="mb-1">
+							<span className="font-bold text-tertiary">
+								Director
+							</span>
+							<span className="mx-2 text-tertiary font-bold">
+								|
+							</span>
+							<span className="font-bold text-textColorOne">
+								Dr. Rubén Alfredo Palomino Infante
+							</span>
+						</p>
+						<p className="text-sm text-tertiary font-medium italic mb-5">
+							Profesor principal e investigador.
+							<br />
+							Licenciado en Ingeniería Química por la Universidad
+							Nacional de San Cristóbal de Huamanga, magíster en
+							Ingeniería Química por la Victoria University of
+							Manchester (Inglaterra) y doctorado en Ingeniería
+							Química por la UNMSM.
+						</p>
+						<p className="mb-5">
+							Cuenta con más de 35 años de experiencia en docencia
+							universitaria en instituciones públicas como en la
+							Universidad Nacional de San Cristóbal de Huamanga,
+							Universidad Nacional del Callao, Universidad
+							Nacional de Trujillo, Universidad Nacional del
+							Altiplano Puno y la UNMSM. Además, ha realizado
+							capacitaciones a nivel de posgrado en ingeniería
+							química, ciencia e ingeniería de materiales,
+							bioprocesos, matemáticas aplicadas, medio ambiente y
+							administración industrial en Inglaterra, Estados
+							Unidos, Brasil, Argentina, Bolivia, México, Colombia
+							y Japón.
+						</p>
+						<p className="mb-6">
+							Ha publicado más de 30 investigaciones sobre
+							distintos tópicos como la socio termodinámica,
+							cinética de crecimiento de plantas, cinética de
+							fermentación, aplicaciones en microscopìa confocal,
+							entre otros. Asimismo, fue asesor de tesis para
+							grados de licenciatura y maestría, y participó en
+							proyectos de investigación en relación a tecnologías
+							avanzadas de separación, tratamiento de agua,
+							ingeniería del producto para generar valor agregado
+							y más. Ha recibido diferentes distinciones, dentro
+							de los cuales destaca ser becario de British
+							Council, Japan International Cooperation Agency,
+							Organización de Estados Americanos, Agencia Española
+							de Cooperación Internacional y el CONCYTEC; y el
+							premio Graña y Montero a la investigación en
+							ingeniería peruana.
+						</p>
+						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989312/R.R.%20006858-2021-R%20-ep-ingenieria-quimica-unmsm.pdf.pdf?v=1672155031"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
+							<Boton
+								secondary
+								className="mb-6 text-primary"
+								onClick={() =>
+									window.open(
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=14077'
+									)
+								}>
+								<span>
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								</span>
+								<span>Hoja de vida</span>
+							</Boton>
+						</div>
+					</div>
+				</div>
+				{/* NOTE: COORDINADORES */}
+				<div className="md:col-span-2">
+					<div className="mb-6">
+						<Image
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-escuela-ingenieria-quimica-ruben-palomino-unmsm.jpg"
+							width={209}
+							height={224}
+							quality={100}
+							className="w-full object-cover max-w-[254px] m-auto"
+						/>
+					</div>
+
+					{/* <Image
+						src={directorPic}
+						layout="responsive"
+						width={209}
+						height={224}
+						priority={true}
+						alt="Banner Maestría"
+						className="mb-6"
+					/> */}
+
+					<p className="text-tertiary font-black mb-2">Contacto</p>
+					<div className="text-sm">
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Correo</span>
+							</p>
+							<p className="mb-3 break-words">
+								epingequi.quimica@unmsm.edu.pe
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Teléfono</span>
+							</p>
+							<p className="mb-3 break-words">
+								(+51) 619 7000 anexo 1208
+							</p>
+						</div>
+						{/* <div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">Dirección</span>
+							</p>
+							<p className="mb-3 break-words">
+								Jr. Puno n.° 1002, Lima, Perú
+							</p>
+						</div>
+						<div>
+							<p className="mb-1 text-tertiary">
+								<span>
+									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								</span>
+								<span className="font-bold">
+									Atención presencial
+								</span>
+							</p>
+							<p className="mb-3 break-words">
+								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
+								2:00 p. m. a 3:45 p. m.
+							</p>
+						</div> */}
+					</div>
+				</div>
+			</div>
+			<Separator className="mb-6" />
+			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+				<div className="md:col-span-6">
+					<div className="mb-6">
+						<p className="text-tertiary font-bold mb-5">
+							Escuela Profesional de Ingeniería Agroindustrial
+						</p>
+						<p className="mb-1">
+							<span className="font-bold text-tertiary">
+								Director
+							</span>
+							<span className="mx-2 text-tertiary font-bold">
+								|
+							</span>
+							<span className="font-bold text-textColorOne">
+								Dr. Edgar Orlando Nagles Vidal
+							</span>
+						</p>
+						<p className="text-sm text-tertiary font-medium italic mb-5">
+							Profesor principal e investigador
+							<br />
+							Licenciado en Química por la Universidad Santiago de
+							Cali de Colombia y doctorado en Química por la
+							Pontificia Universidad Católica de Chile.
+						</p>
+						<p className="mb-5">
+							Cuenta con más de 10 años de experiencia en docencia
+							universitaria en instituciones privadas como en la
+							Pontificia Universidad Católica de Chile y la
+							Universidad de Ibagué en Colombia e instituciones
+							públicas como en la Universidad de la Amazonía en
+							Colombia y la UNMSM.
+						</p>
+
+						<p className="mb-5">
+							Ha publicado más de 50 investigaciones sobre la
+							línea de la electroquímica, su última producción
+							científica publicada este año (2023) se titula
+							“Detection of Allura Red in Food Samples Using
+							Carbon Paste Modified with Lanthanum and Titanium
+							Oxides”. Además, fue asesor de tesis para grados de
+							licenciatura y maestría, y participó en proyectos de
+							investigación en relación al desarrollo de sensores
+							electroquímicos con electrodos de carbono vítreo y
+							electrodos serigrafiados con nano materiales,
+							complejos de coordinación aplicados para detectar
+							dopamina, ácido úrico, ácido ascórbico, flavonoides,
+							pesticidas y metales tóxicos en muestras de
+							alimentos, fluidos biológicos y muestras de agua.
+						</p>
+						<p className="mb-6">
+							Ha recibido diferentes distinciones, dentro de los
+							cuales destaca el premio Manuel Elki Patarroyo a la
+							Investigación en Colombia y el premio Outstanding
+							contribution in reviewing gracias a sus
+							contribuciones a la revista Journal of
+							Electroanalytical Chemistry en Holanda.
+						</p>
+						<div className="flex gap-x-5">
+							<a
+								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+								href="https://cdn.www.gob.pe/uploads/document/file/3989330/R.R.%20004478-2021-R%20-ep-ingenieria-agroindustrial.pdf.pdf?v=1672155259"
+								target={'_blank'}
+								rel="noopener noreferrer">
+								<span className="flex items-center justify-center">
+									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+									Resolución rectoral
+								</span>
+							</a>
+							<Boton
+								secondary
+								className="mb-6 text-primary"
+								onClick={() =>
+									window.open(
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=134878'
+									)
+								}>
+								<span>
+									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								</span>
+								<span>Hoja de vida</span>
+							</Boton>
+						</div>
+					</div>
+				</div>
+				{/* NOTE: COORDINADORES */}
+				<div className="md:col-span-2">
+					<div className="mb-6">
+						<Image
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-escuela-ingenieria-agroindustrial-edgar-nagles-unmsm.jpg"
 							width={209}
 							height={224}
 							quality={100}

@@ -43,6 +43,7 @@ import LibroPersona from '../../components/icons/LibroPersona';
 import GradoIcon from '../../components/icons/GradoIcon';
 import TituloIcon from '../../components/icons/TituloIcon';
 import DuracionIcon from '../../components/icons/DuracionIcon';
+import InstitutoInvestigacion from '../../components/nosotros/autoridades-y-organos/InstitutoInvestigacion';
 
 const Autoridades = (
 	{
@@ -135,6 +136,9 @@ const Autoridades = (
 					<div label="Unidad de Posgrado">
 						<UnidadPosgrado />
 					</div>
+					{/* <div label="Instituto de Investigaciones">
+						<InstitutoInvestigacion />
+					</div> */}
 					<div label="Departamentos académicos">
 						<DepartamentosAcademicos />
 					</div>

@@ -29,7 +29,7 @@ const DireccionAdministrativa = () => {
 						más acerca de esta Dirección ingresando al Manual de
 						Organización y Funciones (
 						<a
-							className="text-secondary"
+							className="link"
 							href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -43,17 +43,17 @@ const DireccionAdministrativa = () => {
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="font-bold text-textColorOne">
-							Lic. Renato Antonio Salas Wong
+							Eco. Delfor Ronald Crispin Galarza
 						</span>
 					</p>
-					<p className="text-sm text-tertiary font-medium italic mb-5">
+					{/* <p className="text-sm text-tertiary font-medium italic mb-5">
 						Administrador y especialista en Marketing.
 						<br />
 						Licenciado en Marketing y Dirección de Empresas, y
 						egresado de la Maestría en Administración con mención en
 						Gestión Empresarial.
-					</p>
-					<p className="mb-5">
+					</p> */}
+					{/* <p className="mb-5">
 						Cuenta con experiencia laboral como gerente
 						administrativo, marketing y comunicaciones en Punto
 						Digital Revolution & Generation, personal de apoyo en la
@@ -72,29 +72,31 @@ const DireccionAdministrativa = () => {
 						implementación y desarrollo del Sistema de Gestión de la
 						Calidad” con base en la norma internacional ISO 9001 en
 						la Escuela de Posgrado de la UNMSM (2015).
-					</p>
+					</p> */}
 					<div className="flex gap-x-5">
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://cdn.www.gob.pe/uploads/document/file/4008957/RR-005779-2021-R-director-administrativo-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672412171"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							<span className="flex items-center justify-center">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Resolución rectoral
+							</span>
+						</a>
 						<Boton
 							secondary
-							className="mb-6"
+							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3819572/8.%20RR%20Director%20Administrativo%20Renato%20Antonio%20Salas%20Wong.pdf.pdf?v=1667936372',
-									'_blank'
+									'https://cdn.www.gob.pe/uploads/document/file/4208051/10.%20R.R.%20Instituto%20de%20investigaciones%20Yolvi%20Oco%C3%B1a.pdf.pdf?v=1677765813'
 								)
 							}>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
-							<span>Resolución rectoral</span>
+							<span>Hoja de vida</span>
 						</Boton>
-						<a
-							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://drive.google.com/file/d/1UORv5x8NpWZLRVeItX81Yok4jScaw--S/view?usp=sharing"
-							target={'_blank'}
-							rel="noopener noreferrer">
-							Hoja de vida
-						</a>
 					</div>
 				</div>
 			</div>
@@ -102,7 +104,7 @@ const DireccionAdministrativa = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/dir-administrativo-renato-salas-wong.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/director-adminsitrativo-delfor-crispin.jpg"
 						width={209}
 						height={224}
 						quality={100}
@@ -129,7 +131,9 @@ const DireccionAdministrativa = () => {
 							</span>
 							<span className="font-bold">Correo</span>
 						</p>
-						<p className="mb-3 break-words">dadmfyb@unmsm.edu.pe</p>
+						<p className="mb-3 break-words">
+							diradmin.quimica@unmsm.edu.pe
+						</p>
 					</div>
 					<div>
 						<p className="mb-1 text-tertiary">
@@ -139,7 +143,7 @@ const DireccionAdministrativa = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 4803
+							(+51) 619 7000 anexo 1205
 						</p>
 					</div>
 					{/* <div>

@@ -30,7 +30,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						Conoce más acerca de este órgano de autoridad ingresando
 						al{' '}
 						<a
-							className="text-secondary"
+							className="link"
 							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -55,52 +55,55 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						Oviedo.
 					</p>
 					<p className="mb-5">
-						Docente principal en la UNMSM por más de 30 años. Se ha
+						Docente en la UNMSM por más de 30 años. Se ha
 						desempeñado como evaluador en proyectos de investigación
 						básica en la Universidad Nacional de Ingeniería y en
 						pasantías del Programa Nacional de Investigación
-						Científica y Estudios Avanzados - Prociencia.
-					</p>
-					<p className="mb-6">
-						Ha realizado más de 35 investigaciones sobre la línea de
-						la síntesis química, organometálica, química de
+						Científica y Estudios Avanzados - Prociencia. Ha
+						realizado más de 35 investigaciones sobre la línea de la
+						síntesis química, organometálica, química de
 						coordinación, seguridad química, entre otros; y fue
 						asesor en diversas tesis para grados de licenciatura,
 						maestría y doctorado. Responsable y participante de
 						proyectos de investigación, de los cuales el último se
-						titula
-						{` "Síntesis y caracterización de ligandos O, N y S
+						titula "Síntesis y caracterización de ligandos O, N y S
 						dadores por reacción de n-tiocarbamoil-benzimidoil
 						cloruro con piridina-4-carbohidrazida (isoniacida),
 						piridina-2-carbohidrazida y piridina-3-carbohidrazida.
-						evaluación de la actividad tuberculostática" `}
-						desarrollado en 2021. Ha recibido distinciones a nivel
-						nacional como el premio a mejor investigador de la
-						Facultad de Química e Ingeniería Química, premio al
-						mérito científico, reconocimiento al investigador con
-						publicaciones científicas, entre otras.
+						evaluación de la actividad tuberculostática"
+						desarrollado en 2021.
+					</p>
+					<p className="mb-6">
+						Ha recibido distinciones a nivel nacional como el premio
+						a mejor investigador de la Facultad de Química e
+						Ingeniería Química, premio al mérito científico,
+						reconocimiento al investigador con publicaciones
+						científicas, entre otras.
 					</p>
 					<div className="flex gap-x-5">
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://cdn.www.gob.pe/uploads/document/file/3989201/R.R.%20003343-2021-R%20-vicedecano-investigacion-posgrado-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152819"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							<span className="flex items-center justify-center">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Resolución rectoral
+							</span>
+						</a>
 						<Boton
 							secondary
-							className="mb-6"
+							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3989201/R.R.%20003343-2021-R%20-vicedecano-investigacion-posgrado-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152819'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=345'
 								)
 							}>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
-							<span>Resolución rectoral</span>
+							<span>Hoja de vida</span>
 						</Boton>
-						<a
-							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=345"
-							target={'_blank'}
-							rel="noopener noreferrer">
-							Hoja de vida
-						</a>
 					</div>
 				</div>
 			</div>
@@ -108,7 +111,7 @@ const VicedecanatoInvestigacionPosgrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/vicedecano-investigacion-hugo-milla.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/vicedecano-investigacion-mario-ceroni.jpg"
 						width={209}
 						height={224}
 						quality={100}
