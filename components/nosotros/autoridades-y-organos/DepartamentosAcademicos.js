@@ -37,7 +37,7 @@ const DepartamentosAcademicos = () => {
 				</a>
 				).
 			</p>
-			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+			{/* <div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
@@ -118,7 +118,6 @@ const DepartamentosAcademicos = () => {
 						</div>
 					</div>
 				</div>
-				{/* NOTE: COORDINADORES */}
 				<div className="md:col-span-2">
 					<div className="mb-6">
 						<Image
@@ -154,34 +153,10 @@ const DepartamentosAcademicos = () => {
 								(+51) 619 7000 anexo 1215
 							</p>
 						</div>
-						{/* <div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<UbicacionStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">Dirección</span>
-							</p>
-							<p className="mb-3 break-words">
-								Jr. Puno n.° 1002, Lima, Perú
-							</p>
-						</div>
-						<div>
-							<p className="mb-1 text-tertiary">
-								<span>
-									<FechaHorarioStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-								</span>
-								<span className="font-bold">
-									Atención presencial
-								</span>
-							</p>
-							<p className="mb-3 break-words">
-								lunes a viernes de 8:00 a. m. a 1:00 p. m. y de
-								2:00 p. m. a 3:45 p. m.
-							</p>
-						</div> */}
+						
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
