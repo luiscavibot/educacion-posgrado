@@ -549,108 +549,49 @@ export async function getStaticProps({ params }) {
 	const primeraPalabra = cadena[0];
 	const resto = cadena.slice(1).join('-');
 
-	if ('doctorado' === primeraPalabra) {
-		const resDoctorado = await fetch(
-			`${POSGRADO_URL}/doctorados?populate=*&filters[slug][$eq]=${resto}`
-		);
-		const doctorado = (await resDoctorado.json()).data;
-		doctorado.push({
-			tipo: 'doctorado',
-		});
-		const programa = [];
-
-		programa.push(...doctorado);
-
-		console.log(programa);
-
-		const resCoordinadoresDoctorado = await fetch(
-			`${POSGRADO_URL}/doctorados?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
-		);
-		const preCoordinadoresDoctorado =
-			await resCoordinadoresDoctorado.json();
-
-		const preCoordinadores = [];
-		preCoordinadores.push(...preCoordinadoresDoctorado.data);
-
-		const coordinadores =
-			preCoordinadores[0].attributes.lista_coordinadores;
-
-		const resDocentesDoctorado = await fetch(
-			`${POSGRADO_URL}/docentes?filters[doctorados][slug]=${resto}&populate=facultad,foto,libro,articulo`
-		);
-		const docentesDoctorado = await resDocentesDoctorado.json();
-
-		const docentes = [];
-		docentes.push(...docentesDoctorado.data);
-
-		const resNoticias = await fetch(
-			`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-		);
-		const ultimasNoticias = await resNoticias.json();
-
-		const resAsignaturasDoctorado = await fetch(
-			`${POSGRADO_URL}/asignaturas?filters[doctorados][slug]=${resto}`
-		);
-
-		const asignaturasDoctorado = await resAsignaturasDoctorado.json();
-
-		const asignaturas = [];
-
-		asignaturas.push(...asignaturasDoctorado.data);
-
-		return {
-			props: {
-				programa,
-				coordinadores,
-				ultimasNoticias,
-				asignaturas,
-			},
-		};
-	}
-
-	
-	const resMaestria = await fetch(
-		`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${resto}`
+	// la variable primeraPalabra segun el params puede tomar los valores de 'doctorado' o 'maestria'
+	const resProgram = await fetch(
+		`${POSGRADO_URL}/${primeraPalabra}s?populate=*&filters[slug][$eq]=${resto}`
 	);
-	const maestria = (await resMaestria.json()).data;
-	maestria.push({
-		tipo: 'maestria',
+	const program = (await resProgram.json()).data;
+	program.push({
+		tipo: primeraPalabra,
 	});
 
 	const programa = [];
 
-	programa.push(...maestria);
-	const resCoordinadoresMaestria = await fetch(
-		`${POSGRADO_URL}/maestrias?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
+	programa.push(...program);
+	const resCoordinadores = await fetch(
+		`${POSGRADO_URL}/${primeraPalabra}s?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
 	);
-	const preCoordinadoresMaestria = await resCoordinadoresMaestria.json();
+	const preCoordinadoresProgram = await resCoordinadores.json();
 
 	const preCoordinadores = [];
-	preCoordinadores.push(...preCoordinadoresMaestria.data);
+	preCoordinadores.push(...preCoordinadoresProgram.data);
 
 	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
 
-	const resDocentesMaestria = await fetch(
-		`${POSGRADO_URL}/docentes?filters[maestrias][slug]=${resto}&populate=facultad,foto,libro,articulo`
+	const resDocentes = await fetch(
+		`${POSGRADO_URL}/docentes?filters[${primeraPalabra}s][slug]=${resto}&populate=facultad,foto,libro,articulo`
 	);
-	const docentesMaestria = await resDocentesMaestria.json();
+	const docentesProgram = await resDocentes.json();
 
 	const docentes = [];
-	docentes.push(...docentesMaestria.data);
+	docentes.push(...docentesProgram.data);
 
 	const resNoticias = await fetch(
 		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
 	);
 	const ultimasNoticias = await resNoticias.json();
 
-	const resAsignaturasMaestria = await fetch(
-		`${POSGRADO_URL}/asignaturas?filters[maestrias][slug]=${resto}`
+	const resAsignaturas = await fetch(
+		`${POSGRADO_URL}/asignaturas?filters[${primeraPalabra}s][slug]=${resto}`
 	);
 
-	const asignaturasMaestria = await resAsignaturasMaestria.json();
+	const asignaturasProgram = await resAsignaturas.json();
 
 	const asignaturas = [];
-	asignaturas.push(...asignaturasMaestria.data);
+	asignaturas.push(...asignaturasProgram.data);
 
 	return {
 		props: {
