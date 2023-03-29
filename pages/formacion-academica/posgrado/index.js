@@ -76,7 +76,7 @@ const Index = ({ CarrerasEnProceso }) => {
 							</Link>
 							<Link
 								href={
-									'/formacion-academica/posgrado/ciencias-quimicas'
+									'/formacion-academica/posgrado/doctorado-ciencias-quimicas'
 								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
@@ -106,7 +106,7 @@ const Index = ({ CarrerasEnProceso }) => {
 							</Link>
 							<Link
 								href={
-									'/formacion-academica/posgrado/ingenieria-quimica'
+									'/formacion-academica/posgrado/maestria-ingenieria-quimica'
 								}>
 									
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
@@ -136,7 +136,7 @@ const Index = ({ CarrerasEnProceso }) => {
 								</a>
 							</Link>
 							<Link
-								href={'/formacion-academica/posgrado/quimica'}>
+								href={'/formacion-academica/posgrado/maestria-quimica'}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
