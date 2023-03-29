@@ -544,11 +544,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	// const programa = [];
 	const str = params.programa;
 	const cadena = str.split('-');
 	const primeraPalabra = cadena[0];
 	const resto = cadena.slice(1).join('-');
+
 	if ('doctorado' === primeraPalabra) {
 		const resDoctorado = await fetch(
 			`${POSGRADO_URL}/doctorados?populate=*&filters[slug][$eq]=${resto}`
@@ -576,7 +576,7 @@ export async function getStaticProps({ params }) {
 			preCoordinadores[0].attributes.lista_coordinadores;
 
 		const resDocentesDoctorado = await fetch(
-			`${POSGRADO_URL}/docentes?filters[doctorados][slug]=${'ingenieria-quimica'}&populate=facultad,foto,libro,articulo`
+			`${POSGRADO_URL}/docentes?filters[doctorados][slug]=${resto}&populate=facultad,foto,libro,articulo`
 		);
 		const docentesDoctorado = await resDocentesDoctorado.json();
 
@@ -606,226 +606,60 @@ export async function getStaticProps({ params }) {
 				asignaturas,
 			},
 		};
-	} else {
-
-		const resMaestria = await fetch(
-			`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${params.programa}`
-		);
-		const maestria = (await resMaestria.json()).data;
-		maestria.push({
-			tipo: 'maestria',
-		});
-		// console.log(maestria); 
-
-		// const resDoctorado = await fetch(
-		// 	`${POSGRADO_URL}/doctorados?populate=*&filters[slug][$eq]=${params.programa}`
-		// );
-		// const doctorado = (await resDoctorado.json()).data;
-		// doctorado.push({
-		// 	tipo: 'doctorado',
-		// });
-
-		const programa = [];
-		function pushProgramaIfAtLeastTwoExist() {
-			if (maestria.length > 1) {
-				programa.push(...maestria);
-			} else if (doctorado.length > 1) {
-				programa.push(...doctorado);
-			}
-		}
-		pushProgramaIfAtLeastTwoExist();
-		// console.log(programa);
-
-		const resCoordinadoresMaestria = await fetch(
-			`${POSGRADO_URL}/maestrias?populate[lista_coordinadores][populate]=*&filters[slug]=${params.programa}`
-		);
-		const preCoordinadoresMaestria = await resCoordinadoresMaestria.json();
-
-		const resCoordinadoresDoctorado = await fetch(
-			`${POSGRADO_URL}/doctorados?populate[lista_coordinadores][populate]=*&filters[slug]=${params.programa}`
-		);
-		const preCoordinadoresDoctorado =
-			await resCoordinadoresDoctorado.json();
-
-		const preCoordinadores = [];
-		function pushCoordinadorIfAtLeastOneExist() {
-			if (preCoordinadoresMaestria.data.length > 0) {
-				preCoordinadores.push(...preCoordinadoresMaestria.data);
-			} else if (preCoordinadoresDoctorado.data.length > 0) {
-				preCoordinadores.push(...preCoordinadoresDoctorado.data);
-			}
-		}
-		pushCoordinadorIfAtLeastOneExist();
-
-		const coordinadores =
-			preCoordinadores[0].attributes.lista_coordinadores;
-
-		const resDocentesMaestria = await fetch(
-			`${POSGRADO_URL}/docentes?filters[maestrias][slug]=${params.programa}&populate=facultad,foto,libro,articulo`
-		);
-		const docentesMaestria = await resDocentesMaestria.json();
-
-		const resDocentesDoctorado = await fetch(
-			`${POSGRADO_URL}/docentes?filters[doctorados][slug]=${params.programa}&populate=facultad,foto,libro,articulo`
-		);
-		const docentesDoctorado = await resDocentesDoctorado.json();
-
-		const docentes = [];
-		function pushDocenteIfAtLeastOneExist() {
-			if (docentesMaestria.data.length > 0) {
-				docentes.push(...docentesMaestria.data);
-			} else if (docentesDoctorado.data.length > 0) {
-				docentes.push(...docentesDoctorado.data);
-			}
-		}
-		pushDocenteIfAtLeastOneExist();
-
-		const resNoticias = await fetch(
-			`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-		);
-		const ultimasNoticias = await resNoticias.json();
-
-		const resAsignaturasMaestria = await fetch(
-			`${POSGRADO_URL}/asignaturas?filters[maestrias][slug]=${params.programa}`
-		);
-
-		const asignaturasMaestria = await resAsignaturasMaestria.json();
-
-		const resAsignaturasDoctorado = await fetch(
-			`${POSGRADO_URL}/asignaturas?filters[doctorados][slug]=${params.programa}`
-		);
-
-		const asignaturasDoctorado = await resAsignaturasDoctorado.json();
-
-		const asignaturas = [];
-		function pushAsignaturaIfAtLeastOneExist() {
-			if (asignaturasMaestria.data.length > 0) {
-				asignaturas.push(...asignaturasMaestria.data);
-			} else if (asignaturasDoctorado.data.length > 0) {
-				asignaturas.push(...asignaturasDoctorado.data);
-			}
-		}
-		pushAsignaturaIfAtLeastOneExist();
-
-		return {
-			props: {
-				programa,
-				coordinadores,
-				ultimasNoticias,
-				asignaturas,
-			},
-		};
 	}
+
+	
+	const resMaestria = await fetch(
+		`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${resto}`
+	);
+	const maestria = (await resMaestria.json()).data;
+	maestria.push({
+		tipo: 'maestria',
+	});
+
+	const programa = [];
+
+	programa.push(...maestria);
+	const resCoordinadoresMaestria = await fetch(
+		`${POSGRADO_URL}/maestrias?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
+	);
+	const preCoordinadoresMaestria = await resCoordinadoresMaestria.json();
+
+	const preCoordinadores = [];
+	preCoordinadores.push(...preCoordinadoresMaestria.data);
+
+	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
+
+	const resDocentesMaestria = await fetch(
+		`${POSGRADO_URL}/docentes?filters[maestrias][slug]=${resto}&populate=facultad,foto,libro,articulo`
+	);
+	const docentesMaestria = await resDocentesMaestria.json();
+
+	const docentes = [];
+	docentes.push(...docentesMaestria.data);
+
+	const resNoticias = await fetch(
+		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
+	);
+	const ultimasNoticias = await resNoticias.json();
+
+	const resAsignaturasMaestria = await fetch(
+		`${POSGRADO_URL}/asignaturas?filters[maestrias][slug]=${resto}`
+	);
+
+	const asignaturasMaestria = await resAsignaturasMaestria.json();
+
+	const asignaturas = [];
+	asignaturas.push(...asignaturasMaestria.data);
+
+	return {
+		props: {
+			programa,
+			coordinadores,
+			ultimasNoticias,
+			asignaturas,
+		},
+	};
 }
-
-// export async function getStaticProps({ params }) {
-
-// 	const resMaestria = await fetch(
-// 		`${POSGRADO_URL}/maestrias?populate=*&filters[slug][$eq]=${params.programa}`
-// 	);
-// 	const maestria = (await resMaestria.json()).data;
-// 	maestria.push({
-// 		tipo: 'maestria',
-// 	});
-// 	// console.log(maestria);
-
-// 	const resDoctorado = await fetch(
-// 		`${POSGRADO_URL}/doctorados?populate=*&filters[slug][$eq]=${params.programa}`
-// 	);
-// 	const doctorado = (await resDoctorado.json()).data;
-// 	doctorado.push({
-// 		tipo: 'doctorado',
-// 	});
-// 	// console.log(doctorado);
-
-// 	const programa = [];
-// 	function pushProgramaIfAtLeastTwoExist() {
-// 		if (maestria.length > 1) {
-// 			programa.push(...maestria);
-// 		} else if (doctorado.length > 1) {
-// 			programa.push(...doctorado);
-// 		}
-// 	}
-// 	pushProgramaIfAtLeastTwoExist();
-// 	// console.log(programa);
-
-// 	const resCoordinadoresMaestria = await fetch(
-// 		`${POSGRADO_URL}/maestrias?populate[lista_coordinadores][populate]=*&filters[slug]=${params.programa}`
-// 	);
-// 	const preCoordinadoresMaestria = await resCoordinadoresMaestria.json();
-
-// 	const resCoordinadoresDoctorado = await fetch(
-// 		`${POSGRADO_URL}/doctorados?populate[lista_coordinadores][populate]=*&filters[slug]=${params.programa}`
-// 	);
-// 	const preCoordinadoresDoctorado = await resCoordinadoresDoctorado.json();
-
-// 	const preCoordinadores = [];
-// 	function pushCoordinadorIfAtLeastOneExist() {
-// 		if (preCoordinadoresMaestria.data.length > 0) {
-// 			preCoordinadores.push(...preCoordinadoresMaestria.data);
-// 		} else if (preCoordinadoresDoctorado.data.length > 0) {
-// 			preCoordinadores.push(...preCoordinadoresDoctorado.data);
-// 		}
-// 	}
-// 	pushCoordinadorIfAtLeastOneExist();
-
-// 	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
-
-// 	const resDocentesMaestria = await fetch(
-// 		`${POSGRADO_URL}/docentes?filters[maestrias][slug]=${params.programa}&populate=facultad,foto,libro,articulo`
-// 	);
-// 	const docentesMaestria = await resDocentesMaestria.json();
-
-// 	const resDocentesDoctorado = await fetch(
-// 		`${POSGRADO_URL}/docentes?filters[doctorados][slug]=${params.programa}&populate=facultad,foto,libro,articulo`
-// 	);
-// 	const docentesDoctorado = await resDocentesDoctorado.json();
-
-// 	const docentes = [];
-// 	function pushDocenteIfAtLeastOneExist() {
-// 		if (docentesMaestria.data.length > 0) {
-// 			docentes.push(...docentesMaestria.data);
-// 		} else if (docentesDoctorado.data.length > 0) {
-// 			docentes.push(...docentesDoctorado.data);
-// 		}
-// 	}
-// 	pushDocenteIfAtLeastOneExist();
-
-// 	const resNoticias = await fetch(
-// 		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-// 	);
-// 	const ultimasNoticias = await resNoticias.json();
-
-// 	const resAsignaturasMaestria = await fetch(
-// 		`${POSGRADO_URL}/asignaturas?filters[maestrias][slug]=${params.programa}`
-// 	);
-
-// 	const asignaturasMaestria = await resAsignaturasMaestria.json();
-
-// 	const resAsignaturasDoctorado = await fetch(
-// 		`${POSGRADO_URL}/asignaturas?filters[doctorados][slug]=${params.programa}`
-// 	);
-
-// 	const asignaturasDoctorado = await resAsignaturasDoctorado.json();
-
-// 	const asignaturas = [];
-// 	function pushAsignaturaIfAtLeastOneExist() {
-// 		if (asignaturasMaestria.data.length > 0) {
-// 			asignaturas.push(...asignaturasMaestria.data);
-// 		} else if (asignaturasDoctorado.data.length > 0) {
-// 			asignaturas.push(...asignaturasDoctorado.data);
-// 		}
-// 	}
-// 	pushAsignaturaIfAtLeastOneExist();
-
-// 	return {
-// 		props: {
-// 			programa,
-// 			coordinadores,
-// 			ultimasNoticias,
-// 			asignaturas,
-// 		},
-// 	};
-// }
 
 export default Escuela;
