@@ -24,11 +24,11 @@ const PortadaHome = ({ eventos }) => {
 						autoPlay="autoplay"
 						loop="loop"
 						preload="auto"
-						poster="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/video-background/primer-fotograma-farmacia-facultad.jpg"
+						poster="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/primer-fotograma-quimica-video.jpg"
 						muted={true}
 						className="fixed left-0 top-0 object-cover w-screen h-screen -z-10">
 						<source
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/video-background/video-farmacia-nuevo-comprimido-2.mp4"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/video-home-quimica-v2.mp4"
 							type="video/mp4"
 						/>
 					</video>

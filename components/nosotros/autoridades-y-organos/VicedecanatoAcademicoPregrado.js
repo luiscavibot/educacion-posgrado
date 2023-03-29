@@ -28,7 +28,7 @@ const VicedecanatoAcademicoPregrado = () => {
 						respectivas Unidades dependientes. Conoce más acerca de
 						este órgano de autoridad ingresando al{' '}
 						<a
-							className="text-secondary"
+							className="link"
 							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -52,49 +52,48 @@ const VicedecanatoAcademicoPregrado = () => {
 						Químicas por la UNMSM.
 					</p>
 					<p className="mb-5">
-						Docente y director del Departamento de Química
-						Inorgánica en la UNMSM por más de 40 años. Asimismo, ha
-						publicado trabajos de investigación en revistas
-						científicas entre el 2009 y 2011, tales como Monitoreo
-						de la síntesis del YBa2Cu3O7, mediante la difracción de
-						rayos X en polvo; y Desgaste en los sistemas de
-						inyección diésel por efecto del elevado contenido de
-						azufre en petróleo diesel 2. Cuenta, también, con la
-						publicación de un libro titulado Efecto genotóxico del
-						dióxido de azufre (SO2) de origen antropogénico en la
-						tasa de micronúcleos en ratón y su extrapolación en
-						humanos.
+						Cuenta con más de 40 años como docente y ha publicado
+						trabajos de investigación en revistas científicas entre
+						el 2009 y 2011, tales como “Monitoreo de la síntesis del
+						YBa2Cu3O7, mediante la difracción de rayos X en polvo”;
+						y{' '}
+						{`“Desgaste en los sistemas de inyección diésel por
+						efecto del elevado contenido de azufre en petróleo
+						diesel 2”. `}
 					</p>
 					<p className="mb-6">
-						Obtuvo la distinción de Miembro de la Sociedad Química
-						del Perú, en calidad de Socio Profesional; y el Diploma
-						de Reconocimiento a los Investigadores con Publicaciones
-						Científicas, esto en virtud a su fructífera labor en el
+						Obtuvo la distinción de miembro de la Sociedad Química
+						del Perú, en calidad de Socio Profesional; y el diploma
+						de reconocimiento a los investigadores con publicaciones
+						científicas, esto en virtud a su fructífera labor en el
 						campo de la investigación científica que le ha permitido
 						la producción de conocimientos, los mismos que se han
 						plasmado en sus publicaciones en el año 2011.
 					</p>
 					<div className="flex gap-x-5">
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://cdn.www.gob.pe/uploads/document/file/3989175/R.R.%20005547-2022-R%20-%20Vicedecano-Academico-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152363"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							<span className="flex items-center justify-center">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Resolución rectoral
+							</span>
+						</a>
 						<Boton
 							secondary
-							className="mb-6"
+							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://cdn.www.gob.pe/uploads/document/file/3989175/R.R.%20005547-2022-R%20-%20Vicedecano-Academico-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152363'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=30705'
 								)
 							}>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
-							<span>Resolución rectoral</span>
+							<span>Hoja de vida</span>
 						</Boton>
-						<a
-							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=30705"
-							target={'_blank'}
-							rel="noopener noreferrer">
-							Hoja de vida
-						</a>
 					</div>
 				</div>
 			</div>
@@ -102,7 +101,7 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/vicedecano-academico-victor-izaguirre.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/vicedecano-academico-manuel-bejar-quimica-unmsm.jpg"
 						width={209}
 						height={224}
 						quality={100}

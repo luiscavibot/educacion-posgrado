@@ -28,7 +28,7 @@ const Decanato = () => {
 						Conoce más acerca de este órgano de autoridad ingresando
 						al{' '}
 						<a
-							className="text-secondary"
+							className="link"
 							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -46,7 +46,7 @@ const Decanato = () => {
 					<p className="text-sm text-tertiary font-medium italic mb-5">
 						Profesor principal, investigador y asesor de tesis.
 						<br />
-						Licenciado en Química por la UNMSM; magíster en Química
+						Licenciado en Química por la UNMSM, magíster en Química
 						Inorgánica por la UNMSM y doctorado en Química por la
 						Universidad Técnica de Eslovaquia.
 					</p>
@@ -59,10 +59,11 @@ const Decanato = () => {
 						de Leipzig-Facultad de Química y Mineralogía. Ha
 						publicado más de 70 artículos científicos en revistas y
 						Congresos internacionales de la especialidad; y escribió
-						también dos libros: "Química de Coordinación-Edit. EDUNI
-						LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
-						2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
-						Perú 2013".
+						también dos libros:
+						{` "Química de Coordinación-Edit. EDUNI
+							LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
+							2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
+							Perú 2013".`}
 					</p>
 					<p className="mb-6">
 						Obtuvo el Mérito científico a mejor investigador en el
@@ -71,26 +72,29 @@ const Decanato = () => {
 						Sociedad Química del Perú desde el 2005 al 2007.
 					</p>
 					<div className="flex gap-x-5">
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086"
+							target={'_blank'}
+							rel="noopener noreferrer">
+							<span className="flex items-center justify-center">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Resolución rectoral
+							</span>
+						</a>
 						<Boton
 							secondary
-							className="mb-6"
+							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
 									'https://www.gob.pe/institucion/unmsm/normas-legales/3789911-017244-2020-r'
 								)
 							}>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-secondary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
-							<span>Resolución rectoral</span>
+							<span>Hoja de vida</span>
 						</Boton>
-						<a
-							className="px-3 py-2 bg-secondary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086"
-							target={'_blank'}
-							rel="noopener noreferrer">
-							Hoja de vida
-						</a>
 					</div>
 				</div>
 			</div>
@@ -98,7 +102,7 @@ const Decanato = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/nosotros/autoridades-y-organos/decano-farmacia-bioquimica.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/decano-quimica-unmsm-jorge-angulo.jpg"
 						width={209}
 						height={224}
 						quality={100}
