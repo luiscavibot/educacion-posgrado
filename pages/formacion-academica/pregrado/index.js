@@ -27,11 +27,9 @@ const Index = ({ CarrerasEnProceso }) => {
 				<div className="px-4 md:px-0 col-span-full mb-8">
 					<p className="title-page mb-6 text-secondary">Pregrado</p>
 					<p>
-						Somos la primera institución a nivel universitario en el
-						Perú en formar profesionales especializados, con una
-						cultura de calidad, divulgación científica,
-						responsabilidad social y comprometidos con el desarrollo
-						sostenible del país.
+						Somos reconocidos por nuestro elevado nivel profesional
+						y nuestra contribución al conocimiento en las áreas de
+						Química, Ingeniería Química e Ingeniería Agroindustrial.
 					</p>
 				</div>
 
@@ -64,10 +62,11 @@ const Index = ({ CarrerasEnProceso }) => {
 										de Ingeniería Química
 									</p>
 									<p className="mb-6 hidden md:block">
-										Tenemos como propósito principal
-										contribuir al desarrollo del país,
-										mediante la formación de profesionales
-										con competencias.
+										Garantizamos contribuir en la formación
+										de profesionales con competencias
+										sólidas en la industria química,
+										considerando aspectos técnicos, sociales
+										y medioambientales.
 									</p>
 									<div className="hidden md:block">
 										<Boton
@@ -106,10 +105,11 @@ const Index = ({ CarrerasEnProceso }) => {
 										de Química
 									</p>
 									<p className="mb-6 hidden md:block">
-										Tenemos como propósito principal
-										contribuir al desarrollo del país,
-										mediante la formación de profesionales
-										con competencias.
+										Nuestra misión es promover la formación
+										de profesionales con amplia experiencia
+										en las áreas de matemáticas, física,
+										química aplicados a los procesos
+										industriales.
 									</p>
 									<div className="hidden md:block">
 										<Boton
@@ -148,10 +148,11 @@ const Index = ({ CarrerasEnProceso }) => {
 										Ingeniería Agroindustrial
 									</p>
 									<p className="mb-6 hidden md:block">
-										Tenemos como propósito principal
-										contribuir al desarrollo del país,
-										mediante la formación de profesionales
-										con competencias.
+										Nos comprometemos a cooperar en el
+										desarrollo agroindustrial nacional a
+										través de la formación integral de
+										profesionales competentes con
+										responsabilidad social.
 									</p>
 									<div className="hidden md:block">
 										<Boton

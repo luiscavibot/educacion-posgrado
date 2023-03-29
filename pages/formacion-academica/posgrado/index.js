@@ -28,12 +28,12 @@ const Index = ({ CarrerasEnProceso }) => {
 						Unidad de Posgrado
 					</p>
 					<p>
-						Nuestros programas de maestría, doctorado y segundas
-						especialidades profundizan en la experiencia educacional
-						interdisciplinaria de los últimos avances científicos y
-						tecnológicos; con el fin de formar profesionales
-						íntegros, globalmente competitivos y comprometidos con
-						la construcción de una sociedad eficiente y sostenible.
+						Nuestros programas de maestría y doctorado profundizan
+						en la experiencia educacional interdisciplinaria de los
+						últimos avances científicos y tecnológicos; con el fin
+						de formar profesionales íntegros, globalmente
+						competitivos y comprometidos con la construcción de una
+						sociedad eficiente y sostenible.
 					</p>
 				</div>
 
@@ -108,7 +108,6 @@ const Index = ({ CarrerasEnProceso }) => {
 								href={
 									'/formacion-academica/posgrado/maestria-ingenieria-quimica'
 								}>
-									
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
@@ -136,7 +135,9 @@ const Index = ({ CarrerasEnProceso }) => {
 								</a>
 							</Link>
 							<Link
-								href={'/formacion-academica/posgrado/maestria-quimica'}>
+								href={
+									'/formacion-academica/posgrado/maestria-quimica'
+								}>
 								<a className="relative rounded-lg overflow-hidden w-full md:w-[330px] h-[262px]">
 									<div className="absolute h-full w-full -z-10">
 										<Image
