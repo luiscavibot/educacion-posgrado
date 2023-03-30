@@ -329,19 +329,17 @@ export const Inversion = ({ programas }) => {
 			<div className="mb-8">
 				<p className="subtitle mb-3">Prospecto de admisión</p>
 				<p className="mb-6">
-					El pago para adquirir el{' '}
-					<span className="font-bold">
-						reglamento de admisión 2023-II
-					</span>{' '}
-					se realiza en el Banco de la Nación, a través de dos formas:
-					{/* <a
+					El pago para adquirir el El pago para adquirir el prospecto
+					o reglamento de admisión 2023-II se realiza en el Banco de
+					la Nación o a través de
+					<a
 						href="https://pagalo.pe/"
 						className="link"
 						target="_blank"
 						rel="noopener noreferrer">
 						{' '}
 						Págalo.pe
-					</a> */}
+					</a>
 				</p>
 				<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
 					<table className="table table-striped mb-0">
@@ -388,9 +386,9 @@ export const Inversion = ({ programas }) => {
 					Inscripción para el examen de admisión
 				</p>
 				<p className="mb-6">
-					{/* Los pagos por derecho de inscripción para el examen de
-					admisión son los siguientes y se pueden realizar en el Banco
-					de la Nación o a través de{' '}
+					Los pagos por derecho de inscripción para el proceso de
+					admisión 2023-II se realizan en el Banco de la Nación o a
+					través de{' '}
 					<a
 						href="https://pagalo.pe/"
 						className="link"
@@ -399,11 +397,7 @@ export const Inversion = ({ programas }) => {
 						{' '}
 						Págalo.pe{' '}
 					</a>
-					(excepto para los postulantes de Instituciones educativas
-					privadas con fines de lucro): */}
-					El pago por las modalidades, según el reglamento, y códigos
-					por derecho de inscripción para el examen de admisión
-					2023-II son los siguientes:
+					con los siguientes datos:
 				</p>
 				<div className="flex flex-wrap justify-center mb-5 gap-y-6">
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
@@ -458,7 +452,8 @@ export const Inversion = ({ programas }) => {
 					sujetos a variaciones.
 				</p> */}
 				<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
-					Si tu Institución educativa es con fines de lucro,
+					Si provienes de una institución educativa privada con fines
+					de lucro
 					<span className="font-bold">
 						{' '}
 						el abono es solo en ventanilla{' '}
@@ -470,8 +465,12 @@ export const Inversion = ({ programas }) => {
 				<p className="subtitle mb-3">Rezagados</p>
 				<p className="mb-6">
 					Los postulantes que no pudieron abonar a su derecho de
-					inscripción dentro de las fechas indicadas en el Cronograma
-					de Admisión 2023-II (
+					inscripción dentro de las fechas indicadas en el
+					<span className="font-bold">
+						{' '}
+						Cronograma de Admisión 2023-II
+					</span>{' '}
+					(
 					<Link href="/formacion-academica/admision?nivel=pregrado&tab=cronograma-academico">
 						<a className="link">Ver cronograma</a>
 					</Link>
@@ -510,9 +509,12 @@ export const Inversion = ({ programas }) => {
 							Código: 9508
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Postulantes
-							que provienen de institución educativa de gestión
-							privada.
+							<span className="font-bold">Para: </span>{' '}
+							Postulantes que provienen de institución educativa
+							de gestión privada{' '}
+							<span className="font-bold">
+								sin fines de lucro{' '}
+							</span>{' '}
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">

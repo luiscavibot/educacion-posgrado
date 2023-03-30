@@ -6,7 +6,7 @@ export const CronogramaAcademico = () => {
 			<p className="mb-6">
 				Entérate aquí hasta cuándo te puedes inscribir y cuáles son las
 				fechas del examen de admisión 2023-II, según el área que
-				postules.
+				postules:
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
@@ -129,13 +129,18 @@ export const CronogramaAcademico = () => {
 										<tr key="3">
 											<td>
 												<p className="pl-7">
-													Área A:{' '}
-													<b>Ciencias de la salud</b>
-													<br />
-													Prueba especial a
-													deportistas calificados,
-													graduados o titulados,
-													traslado interno y externo
+													Área A: Ciencias de la salud
+												</p>
+											</td>
+											<td className="text-center">
+												Sábado 1 de abril de 2023
+											</td>
+										</tr>
+										<tr key="3">
+											<td>
+												<p className="pl-7">
+													Examen especial (todas las
+													áreas)*
 												</p>
 											</td>
 											<td className="text-center">
@@ -159,9 +164,8 @@ export const CronogramaAcademico = () => {
 
 						<tr key="6">
 							<td>
-								Entrega de constancias de ingreso
-								<br />
-								(Todas las áreas)
+								Entrega de constancias de ingreso (todas las
+								áreas)
 							</td>
 							<td className="text-center">
 								del 10 al 14 de abril del 2023
@@ -176,6 +180,13 @@ export const CronogramaAcademico = () => {
 					</tbody>
 				</table>
 			</div>
+			<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
+				*Aplica para las siguientes
+				<span className="font-bold"> modalidades de admisión</span>:
+				Graduados y licenciados/as, traslado externo nacional e
+				internacional, traslado interno y deportistas calificados de
+				alto nivel y deportistas calificados.
+			</p>
 		</>
 	);
 };
