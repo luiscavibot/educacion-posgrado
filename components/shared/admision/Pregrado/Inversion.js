@@ -471,7 +471,7 @@ export const Inversion = ({ programas }) => {
 						Cronograma de Admisión 2023-II
 					</span>{' '}
 					(
-					<Link href="/formacion-academica/admision?nivel=pregrado&tab=cronograma-academico">
+					<Link href="/admision/pregrado?tab=cronograma-academico">
 						<a className="link">Ver cronograma</a>
 					</Link>
 					) podrán hacerlo en la etapa de de{' '}

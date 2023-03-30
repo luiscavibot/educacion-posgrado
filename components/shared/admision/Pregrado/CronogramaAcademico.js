@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const CronogramaAcademico = () => {
@@ -182,7 +183,9 @@ export const CronogramaAcademico = () => {
 			</div>
 			<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
 				*Aplica para las siguientes
-				<span className="font-bold"> modalidades de admisión</span>:
+				<Link href="/admision/pregrado?tab=modalidades-de-admision">
+					<a className="link"> modalidades de admisión:</a>
+				</Link>{' '}
 				Graduados y licenciados/as, traslado externo nacional e
 				internacional, traslado interno y deportistas calificados de
 				alto nivel y deportistas calificados.
