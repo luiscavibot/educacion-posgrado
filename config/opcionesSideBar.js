@@ -1,9 +1,18 @@
 //Aquí se agregan las opciones que se muestran en el menú
 const opcionesSideBar = [
 	{
+		seccion: 'Admisión',
+		links: [
+			{ nombreLink: 'Pregrado', path: '/admision/pregrado' },
+			{
+				nombreLink: 'Posgrado',
+				path: '/admision/posgrado',
+			},
+		],
+	},
+	{
 		seccion: 'Formación académica',
 		links: [
-			{ nombreLink: 'Admisión', path: '/formacion-academica/admision' },
 			{ nombreLink: 'Pregrado', path: '/formacion-academica/pregrado' },
 			{
 				nombreLink: 'Posgrado',

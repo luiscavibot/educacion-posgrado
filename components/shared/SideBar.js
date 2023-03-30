@@ -76,8 +76,7 @@ const SideBar = ({ interno }) => {
 										index={0}
 										onClick={changeAccordion}>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
-											<span>Formación</span>
-											<span>académica</span>
+											<span>Admisión</span>
 										</div>
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-blanco" />
@@ -87,12 +86,45 @@ const SideBar = ({ interno }) => {
 										active={activeIndexAccordion === 0}>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
 											<div onClick={handleSidebar}>
+												<Link href="/admision/pregrado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Pregrado
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/admision/posgrado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Posgrado
+													</a>
+												</Link>
+											</div>
+										</div>
+									</Accordion.Content>
+								</>
+								<>
+									<Accordion.Title
+										active={activeIndexAccordion === 1}
+										index={1}
+										onClick={changeAccordion}>
+										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
+											<span>Formación</span>
+											<span>académica</span>
+										</div>
+										<div className="icon-accordion">
+											<FlechaAbajo className="fill-blanco" />
+										</div>
+									</Accordion.Title>
+									<Accordion.Content
+										active={activeIndexAccordion === 1}>
+										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
+											{/* <div onClick={handleSidebar}>
 												<Link href="/formacion-academica/admision">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Admisión
 													</a>
 												</Link>
-											</div>
+											</div> */}
 											<div onClick={handleSidebar}>
 												<Link href="/formacion-academica/pregrado">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -112,8 +144,8 @@ const SideBar = ({ interno }) => {
 								</>
 								<>
 									<Accordion.Title
-										active={activeIndexAccordion === 1}
-										index={1}
+										active={activeIndexAccordion === 2}
+										index={2}
 										onClick={changeAccordion}>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
 											<span>Noticias y</span>
@@ -124,7 +156,7 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 1}>
+										active={activeIndexAccordion === 2}>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne font-bold">
 											<div onClick={handleSidebar}>
 												<Link href="/noticias">
@@ -145,8 +177,8 @@ const SideBar = ({ interno }) => {
 								</>
 								<>
 									<Accordion.Title
-										active={activeIndexAccordion === 2}
-										index={2}
+										active={activeIndexAccordion === 3}
+										index={3}
 										onClick={changeAccordion}>
 										<span className="font-bold">
 											Nosotros
@@ -156,7 +188,7 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 2}>
+										active={activeIndexAccordion === 3}>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne ">
 											<div onClick={handleSidebar}>
 												<Link href="/nosotros/autoridades-y-organos">
