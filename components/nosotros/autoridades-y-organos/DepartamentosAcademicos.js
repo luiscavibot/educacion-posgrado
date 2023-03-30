@@ -178,10 +178,9 @@ const DepartamentosAcademicos = () => {
 						<p className="text-sm text-tertiary font-medium italic mb-5">
 							Profesor principal, investigador y químico
 							<br />
-							Licenciado en Química por la Universidad Nacional de
-							Ingeniería, magíster en Química por la Pontificia
-							Universidad Católica del Perú y doctorado en
-							Ciencias Químicas por la UNMSM.
+							Licenciado en Química por la UNI, magíster en
+							Química por la PUCP y doctorado en Ciencias Químicas
+							por la UNMSM.
 						</p>
 						<p className="mb-5">
 							Cuenta con más de 15 años de experiencia en docencia
@@ -259,7 +258,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								ocastrom@unmsm.edu.pe
+								organica.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -320,7 +319,7 @@ const DepartamentosAcademicos = () => {
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesora principal, investigador y química
+							Profesora principal, investigadora y química
 							<br />
 							Licenciada en Química por la UNMSM y magíster en
 							Química con mención en Química Inorgánica por la
@@ -337,14 +336,15 @@ const DepartamentosAcademicos = () => {
 							en química como comparación de la actividad
 							antibacteriana, precursores de complejos
 							supramoleculares, entre otros. Además, participó en
-							proyectos de investigación como Biomonitoreo y
+							proyectos de investigación como{' '}
+							{` "Biomonitoreo y
 							Evaluación del grado de contaminación en los
 							laboratorios de la FQIQ y su impacto en la salud y
-							el medio ambiente; y recibió un destacado
-							certificado a nivel internacional desde Alemania
-							para realizar publicaciones en revistas
-							internacionales sobre la síntesis de varios ligado y
-							complejos.
+							el medio ambiente"`}
+							; y recibió un destacado certificado a nivel
+							internacional desde Alemania por realizar
+							publicaciones en revistas internacionales sobre la
+							síntesis de varios ligados y complejos.
 						</p>
 						<div className="flex gap-x-5">
 							<a
@@ -395,7 +395,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								mbejarr@unmsm.edu.pe
+								inorganica.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -573,7 +573,8 @@ const DepartamentosAcademicos = () => {
 							<br />
 							Licenciado en Ingeniería Química por la UNMSM,
 							magíster en Ingeniería y doctor con mención en
-							Gestión de Operaciones por Lamar University.
+							Gestión de Operaciones por Lamar University (Estados
+							Unidos).
 						</p>
 						<p className="mb-5">
 							Becado por el Programa Latinoamericano de Becas para
@@ -670,7 +671,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								wbarrutiaf@unmsm.edu.pe
+								anadisenoprocesos.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -736,7 +737,7 @@ const DepartamentosAcademicos = () => {
 							Licenciado en Ciencias Biológicas por la Universidad
 							Nacional de Trujillo y magíster en Ciencias con
 							mención en Química por la Universidad Peruana
-							Cayetano Heredia
+							Cayetano Heredia.
 						</p>
 						<p className="mb-5">
 							Cuenta con más de 45 años de experiencia en docencia
@@ -751,9 +752,9 @@ const DepartamentosAcademicos = () => {
 							Ha realizado investigaciones sobre distintos tópicos
 							como el equilibrio y la cinética de biosorción,
 							dentro de las cuales destaca su última publicación
-							Estudio de la coagulación de la suspensión coloidal
+							“Estudio de la coagulación de la suspensión coloidal
 							de AgI por influencia de alginato de sodio y sulfato
-							de aluminio en el año 2021. Además, participó en
+							de aluminio” en el año 2021. Además, participó en
 							proyectos de investigación sobre extracción,
 							purificación , caracterización y acondicionamiento
 							de biopolímeros; obtención y caracterización de
@@ -819,7 +820,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								hmaldonadog@unmsm.edu.pe
+								analitica.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -884,7 +885,7 @@ const DepartamentosAcademicos = () => {
 							<br />
 							Licenciado y magíster en Ingeniería Química por la
 							UNMSM y magíster en Ciencias con mención en Química
-							por la Universidad Peruana Cayetano Heredia
+							por la Universidad Peruana Cayetano Heredia.
 						</p>
 						<p className="mb-5">
 							Cuenta con más de 15 años de experiencia en docencia
@@ -966,7 +967,7 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								jarmijoc@unmsm.edu.pe
+								operacionesunitarias.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>

@@ -40,7 +40,7 @@ const Decanato = () => {
 						<span className="font-bold text-tertiary">Decano</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Jorge Reinaldo Angulo Cornejo
+							Profesor principal e investigador
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
@@ -51,30 +51,37 @@ const Decanato = () => {
 						Universidad Técnica de Eslovaquia.
 					</p>
 					<p className="mb-5">
-						Lleva más de 20 años ejerciendo como docente para la
-						UNMSM. Ha realizado investigaciones en el Instituto de
-						Ciencias Químicas; Facultad de Química e Ingeniería
-						Química, UNMSM. Asimismo, realizó proyectos de
-						Investigación con DAAD en cooperación con la Universidad
-						de Leipzig-Facultad de Química y Mineralogía. Ha
-						publicado más de 70 artículos científicos en revistas y
-						Congresos internacionales de la especialidad; y escribió
-						también dos libros:
-						{` "Química de Coordinación-Edit. EDUNI
-							LIMA 2010" , "Koordinationschemie-Edit. SPRINGER Germany
-							2012" , y "Ácidos y Bases- Fondo Editorial UNMSM Lima
-							Perú 2013".`}
+						Lleva más de 40 años ejerciendo como docente
+						universitario de universidades nacionales como la UNI y
+						la UNMSM. Además, se ha desempeñado como supervisor
+						líder de planeamiento en el Banco Central de Reserva del
+						Perú, decano del Colegio de Químicos, director de la
+						revista Sociedad Química del Perú, entre otros cargos.
+						Ha realizado distintas investigaciones publicadas en
+						revistas científicas y congresos internacionales sobre
+						la línea de síntesis química, nuevos materiales, química
+						supramolecular y bioinorgánica; fue asesor de tesis para
+						grados de licenciatura, maestría y doctorado; publicó
+						libros, dentro de las cuales destacan
+						{` "Química de
+						Coordinación” (2010), "Koordinationschemie" (2012) y
+						"Ácidos y Bases” (2013); `}
+						y desarrolló proyectos de investigación con el Servicio
+						Alemán de Intercambio Académico (DAAD) en cooperación
+						con la Universidad de Leipzig y con el grupo español de
+						la Universidad de Burgos financiado por la Agencia
+						Española de Cooperación Internacional (AECID).
 					</p>
 					<p className="mb-6">
-						Obtuvo el Mérito científico a mejor investigador en el
-						Área de las ingenierías UNMSM en diversas ocasiones y se
-						desempeñó, también, como director de la Revista de la
-						Sociedad Química del Perú desde el 2005 al 2007.
+						Recibió reconocimientos a nivel nacional por su
+						distinguida trayectoria en la producción científica, y a
+						nivel internacional como investigador de excelencia por
+						la Universidad de Burgos en España.
 					</p>
 					<div className="flex gap-x-5">
 						<a
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086"
+							href="https://www.gob.pe/institucion/unmsm/normas-legales/3789911-017244-2020-r"
 							target={'_blank'}
 							rel="noopener noreferrer">
 							<span className="flex items-center justify-center">
@@ -87,7 +94,7 @@ const Decanato = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://www.gob.pe/institucion/unmsm/normas-legales/3789911-017244-2020-r'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086'
 								)
 							}>
 							<span>
