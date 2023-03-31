@@ -48,38 +48,39 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal, investigador y asesor de tesis.
+						Profesor principal e investigador
 						<br />
 						Licenciado en Química por la UNMSM, magíster en Química
 						por la PUCP y doctorado en Química por la Universidad de
-						Oviedo.
+						Oviedo (España).
 					</p>
 					<p className="mb-5">
-						Docente en la UNMSM por más de 30 años. Se ha
-						desempeñado como evaluador en proyectos de investigación
-						básica en la Universidad Nacional de Ingeniería y en
-						pasantías del Programa Nacional de Investigación
-						Científica y Estudios Avanzados - Prociencia. Ha
-						realizado más de 35 investigaciones sobre la línea de la
-						síntesis química, organometálica, química de
-						coordinación, seguridad química, entre otros; y fue
-						asesor en diversas tesis para grados de licenciatura,
-						maestría y doctorado. Responsable y participante de
-						proyectos de investigación, de los cuales el último se
-						titula
-						{` "Síntesis y caracterización de ligandos O, N y S
-						dadores por reacción de n-tiocarbamoil-benzimidoil
-						cloruro con piridina-4-carbohidrazida (isoniacida),
-						piridina-2-carbohidrazida y piridina-3-carbohidrazida.
-						evaluación de la actividad tuberculostática"
-						desarrollado en 2021.`}
+						Lleva más de 30 años ejerciendo como docente
+						universitario de universidades nacionales como la UNMSM.
+						Además, se ha desempeñado como evaluador en proyectos de
+						investigación básica en la UNI y en pasantías del
+						Programa Nacional de Investigación Científica y Estudios
+						Avanzados - Prociencia.
+					</p>
+					<p className="mb-5">
+						Ha realizado más de 35 investigaciones publicadas en
+						revistas científicas sobre la línea de síntesis química,
+						organometálica, química de coordinación, seguridad
+						química, entre otros, dentro de las cuales destaca su
+						última publicación
+						{` “Simultaneous Electrochemical
+						Determination of Paracetamol and Allura Red in
+						Pharmaceutical Doses and Food Using a Mo(VI)
+						Oxide-Carbon Paste Microcomposite”`}
+						; y fue asesor de tesis para grados de licenciatura,
+						maestría y doctorado.
 					</p>
 					<p className="mb-6">
-						Ha recibido distinciones a nivel nacional como el premio
-						a mejor investigador de la Facultad de Química e
-						Ingeniería Química, premio al mérito científico,
-						reconocimiento al investigador con publicaciones
-						científicas, entre otras.
+						Recibió reconocimientos a nivel nacional como la
+						distinción a mejor investigador en la Facultad de
+						Química e Ingeniería Química, el premio al méxico
+						científico, el reconocimiento al investigador con
+						publicaciones científicas, entre otras.
 					</p>
 					<div className="flex gap-x-5">
 						<a

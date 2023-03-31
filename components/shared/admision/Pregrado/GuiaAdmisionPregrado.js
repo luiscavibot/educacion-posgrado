@@ -14,8 +14,8 @@ export const GuiaAdmisionPregrado = () => {
 			<div className="mb-6">
 				<div className="mb-6">
 					<p>¿Listo/a para postular? </p>
-					Sigue, por favor, detenidamente el siguiente cronograma para
-					el proceso de admisión 2023-II:
+					Sigue, por favor, detenidamente los siguientes pasos para el
+					proceso de admisión 2023-II:
 				</div>
 
 				<div className="relative">
@@ -32,7 +32,7 @@ export const GuiaAdmisionPregrado = () => {
 							<p>
 								Te recomendamos{' '}
 								<span className="font-bold">revisar el</span>{' '}
-								<Link href="/formacion-academica/admision?nivel=pregrado&tab=cronograma-academico">
+								<Link href="/admision/pregrado?tab=cronograma-academico">
 									<a className="link">cronograma académico</a>
 								</Link>{' '}
 								con la finalidad de tener conocimiento de la
@@ -195,7 +195,13 @@ export const GuiaAdmisionPregrado = () => {
 				</Observacion>
 
 				<div>
-					<p className="font-bold mb-2">Más información</p>
+					<p className="font-bold mb-2">
+						¿Quieres saber más de este proceso de admisión?
+					</p>
+					<p className="mb-2">
+						¡No te preocupes! Estamos aquí para ayudarte.
+						Contáctanos a través de los siguientes datos:
+					</p>
 					<p className="text-[15px]">
 						<span className="font-bold mr-2">Sitio web:</span>
 						<a

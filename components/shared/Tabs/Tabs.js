@@ -66,28 +66,15 @@ const Tabs = ({ children, nombre, carrera }) => {
 					}
 				);
 				break;
-			// case 'admision_pregrado':
-			// 	router.push(
-			// 		`/formacion-academica/admision/?nivel=pregrado&tab=${slugify(
-			// 			newActiveTab
-			// 		)}`,
-			// 		undefined,
-			// 		{
-			// 			shallow: true,
-			// 		}
-			// 	);
-			// 	break;
-			// case 'admision_posgrado':
-			// 	router.push(
-			// 		`/formacion-academica/admision/?nivel=posgrado&tab=${slugify(
-			// 			newActiveTab
-			// 		)}`,
-			// 		undefined,
-			// 		{
-			// 			shallow: true,
-			// 		}
-			// 	);
-			// 	break;
+			case 'admision_pregrado':
+				router.push(
+					`/admision/pregrado/?tab=${slugify(newActiveTab)}`,
+					undefined,
+					{
+						shallow: true,
+					}
+				);
+				break;
 			case 'admision_maestria':
 				router.push(
 					`/admision/posgrado?programa=maestria&tab=${slugify(

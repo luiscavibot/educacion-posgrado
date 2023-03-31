@@ -46,28 +46,34 @@ const VicedecanatoAcademicoPregrado = () => {
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal, investigador y asesor de tesis.
+						Profesor principal e investigador
 						<br />
 						Licenciado en Ingeniería Química y magíster en Ciencias
 						Químicas por la UNMSM.
 					</p>
 					<p className="mb-5">
-						Cuenta con más de 40 años como docente y ha publicado
-						trabajos de investigación en revistas científicas entre
-						el 2009 y 2011, tales como “Monitoreo de la síntesis del
-						YBa2Cu3O7, mediante la difracción de rayos X en polvo”;
-						y{' '}
-						{`“Desgaste en los sistemas de inyección diésel por
-						efecto del elevado contenido de azufre en petróleo
-						diesel 2”. `}
+						Lleva más de 40 años ejerciendo como docente
+						universitario de universidades nacionales como la UNMSM.
+						Además, se ha desempeñado como director del departamento
+						de Química Inorgánica y asesor de tesis para grados de
+						licenciatura. Ha realizado distintas investigaciones
+						publicadas en revistas científicas sobre la línea de la
+						fisicoquímica y nanotecnología, dentro de las cuales
+						destacan
+						{` “Monitoreo de la síntesis del YBa2Cu3O7,
+						mediante la difracción de rayos X en polvo” y “Desgaste
+						en los sistemas de inyección diésel por efecto del
+						elevado contenido de azufre en petróleo diesel 2”`}
+						; y desarrolló proyectos de investigación en cooperación
+						con el Vicerrectorado de Investigación de la UNMSM.
 					</p>
 					<p className="mb-6">
-						Obtuvo la distinción de miembro de la Sociedad Química
-						del Perú, en calidad de Socio Profesional; y el diploma
-						de reconocimiento a los investigadores con publicaciones
-						científicas, esto en virtud a su fructífera labor en el
-						campo de la investigación científica que le ha permitido
-						la producción de conocimientos, los mismos que se han
+						Recibió diferentes distinciones como ser Socio
+						Profesional la Sociedad Química del Perú y el diploma de
+						reconocimiento a los investigadores con publicaciones
+						científicas en virtud a su fructífera labor en el campo
+						de la investigación científica que le ha permitido la
+						producción de conocimientos, los mismos que se han
 						plasmado en sus publicaciones en el año 2011.
 					</p>
 					<div className="flex gap-x-5">
@@ -128,7 +134,9 @@ const VicedecanatoAcademicoPregrado = () => {
 							</span>
 							<span className="font-bold">Correo</span>
 						</p>
-						<p className="mb-3 break-words">mbejarr@unmsm.edu.pe</p>
+						<p className="mb-3 break-words">
+							viceacademico.quimica@unmsm.edu.pe
+						</p>
 					</div>
 					<div>
 						<p className="mb-1 text-tertiary">
@@ -138,7 +146,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 1201
+							(+51) 619 7000 anexo 1207
 						</p>
 					</div>
 					{/* <div>

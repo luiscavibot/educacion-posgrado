@@ -81,7 +81,7 @@ const EscuelasProfesionales = () => {
 							premio al Primer Puesto de Proyectos de
 							Investigación Científica y Tecnológica, premio de
 							trabajador más destacado en el ámbito
-							Científico-tecnológico en mérito a la obtención de
+							científico-tecnológico en mérito a la obtención de
 							la patente preparación de quitina y quitosano
 							utilizando radiación gamma y el premio Bertha del
 							Rosario Calderón por el IPEN, premio al investigador
@@ -469,7 +469,7 @@ const EscuelasProfesionales = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								eaptoxicologia.farmacia@unmsm.edu.pe
+								agroindustrial@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -480,7 +480,7 @@ const EscuelasProfesionales = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4825
+								(+51) 619 7000 anexo anexo 1232
 							</p>
 						</div>
 						{/* <div>

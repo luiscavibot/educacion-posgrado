@@ -140,9 +140,7 @@ const UnidadPosgrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							upg.farmacia@unmsm.edu.pe
-							<br />
-							comunicadosupg.farmacia@unmsm.edu.pe
+							postgrado.quimica@unmsm.edu.pe
 						</p>
 					</div>
 					<div>
@@ -153,7 +151,7 @@ const UnidadPosgrado = () => {
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 4812
+							(+51) 619 7000 anexo 1233
 						</p>
 					</div>
 					{/* <div>

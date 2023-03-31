@@ -18,16 +18,16 @@ export const CuadroVacante = () => {
 					</thead>
 					<tbody>
 						<tr key="1">
-							<td>Ingeniería Química</td>
-							<td className="text-center">81</td>
+							<td>Química</td>
+							<td className="text-center">28</td>
 						</tr>
 						<tr key="2">
-							<td>Química</td>
-							<td className="text-center">32</td>
+							<td>Ingeniería Química</td>
+							<td className="text-center">38</td>
 						</tr>
 						<tr key="3">
 							<td>Ingeniería Agroindustrial</td>
-							<td className="text-center">30</td>
+							<td className="text-center">35</td>
 						</tr>
 					</tbody>
 				</table>

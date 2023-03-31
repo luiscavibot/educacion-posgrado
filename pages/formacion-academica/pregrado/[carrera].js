@@ -389,7 +389,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 					</div>
 					<div
 						label="Admisión"
-						link="/formacion-academica/admision"></div>
+						link="/admision/pregrado"></div>
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14">
