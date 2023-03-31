@@ -486,29 +486,28 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 
 			<UltimasNoticias ultimasNoticias={ultimasNoticias} />
 
-			{coordinadores && coordinadores.length > 0 && (
-				<Modal
-					open={open}
-					onClose={handleClose}
-					aria-labelledby="modal-modal-title"
-					aria-describedby="modal-modal-description">
-					<Box
-						className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
-						sx={{
-							position: 'absolute',
-							top: '50%',
-							left: '50%',
-							transform: 'translate(-50%, -50%)',
-							bgcolor: 'transparent',
-						}}>
-						<FormacionContentModal
-							handleClose={handleClose}
-							responsableEmail={coordinadores[0].correo}
-							telefono="(+51) 619 7000 anexo 4812"
-						/>
-					</Box>
-				</Modal>
-			)}
+			{/* {coordinadores && coordinadores.length > 0 && ( */}
+			<Modal
+				open={open}
+				onClose={handleClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description">
+				<Box
+					className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
+					sx={{
+						position: 'absolute',
+						top: '50%',
+						left: '50%',
+						transform: 'translate(-50%, -50%)',
+						bgcolor: 'transparent',
+					}}>
+					<FormacionContentModal
+						handleClose={handleClose}
+						responsableEmail="postgrado.quimica@unmsm.edu.pe"
+						telefono="(+51) 619 7000 anexo 4812"
+					/>
+				</Box>
+			</Modal>
 		</PrincipalLayout>
 	);
 };

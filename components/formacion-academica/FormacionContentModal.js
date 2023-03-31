@@ -128,13 +128,12 @@ const FormacionContentModal = ({
 										id="userAuthorization"
 										name="userAuthorization">
 										<label className="text-sm">
-											Autorizo a la facultad de Farmacia y
-											Bioquímica usar los datos ingresados
-											en este formulario para enviarme
-											información académica.
-											<span className="text-secondary hover:text-tertiary">
+											Autorizo a la facultad de Química e
+											Ingeniería Química a enviarme
+											información académica relacionada.
+											<span className="link">
 												<a
-													href="https://cdn.www.gob.pe/uploads/document/file/4247321/politica-proteccion-datos-posgrado-farmacia%20y%20bioquimica.pdf.pdf?v=1678725057"
+													href="https://cdn.www.gob.pe/uploads/document/file/4332652/proteccion-datos-facultad-pregrado-ingenieria-quimica_c.pdf?v=1680009060"
 													target="_blank"
 													rel="noreferrer">
 													{' '}
@@ -197,7 +196,7 @@ const FormacionContentModal = ({
 						<div>
 							<p className="leading-none">Dirección</p>
 							<p className="text-sm font-light mt-[0.2rem]">
-								Jr. Puno n.° 1002, Lima, Perú
+								Av. Venezuela s/n, Lima, Perú
 							</p>
 						</div>
 					</div>
@@ -214,7 +213,7 @@ const FormacionContentModal = ({
 					</div>
 					<div className="w-full h-60 rounded-xl overflow-hidden mt-8">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.4568682519158!2d-77.02376904454007!3d-12.055388825303734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8bb46e92859%3A0xa52c7b913d11cbf6!2sFacultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica%20de%20la%20Universidad%20San%20Marcos.!5e0!3m2!1ses-419!2spe!4v1671106582182!5m2!1ses-419!2spe"
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.7676363894593!2d-77.08418219889973!3d-12.060273090669202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c94136a09f71%3A0xbdce59a5fb746268!2sFacultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica%20-%20UNMSM!5e0!3m2!1ses!2spe!4v1680272838702!5m2!1ses!2spe"
 							width="100%"
 							height="100%"
 							style={{ border: 0 }}
