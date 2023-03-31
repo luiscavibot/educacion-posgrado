@@ -16,14 +16,14 @@ export const Requisitos = () => {
 			</Observacion>
 			<div className="overflow-x-auto mt-3">
 				<p className="py-4">
-					El postulante a los programas de maestrías deberá enviar un{' '}
+					El postulante a los programas de doctorado deberá enviar un{' '}
 					<span className="font-bold">correo electrónico</span> (
 					<a
 						className="link"
 						target="_blank"
-						href="mailto:upg.farmacia@unmsm.edu.pe"
+						href="mailto:postgrado.quimica@unmsm.edu.pe"
 						rel="noreferrer noopener">
-						upg.farmacia@unmsm.edu.pe
+						postgrado.quimica@unmsm.edu.pe
 					</a>
 					), que corresponde a la Unidad de Posgrado de esta facultad,
 					y adjuntar el expediente completo con los siguientes
@@ -31,32 +31,26 @@ export const Requisitos = () => {
 				</p>
 				<ol className="list-decimal list-inside">
 					<li className="py-2">
-						<span
+						<a
 							className="link"
-							onClick={() => {
-								window.open(
-									'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/resumen_hv_postulante_9c4d207cfe.pdf?updated_at=2022-06-13T21:07:58.885Z',
-									'_blank'
-								);
-							}}>
+							target="_blank"
+							href="https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/resumen_hv_postulante_9c4d207cfe.pdf?updated_at=2022-06-13T21:07:58.885Z"
+							rel="noreferrer noopener">
 							Resumen de la hoja de vida
-						</span>{' '}
+						</a>{' '}
 						del postulante (documentado, foliado y ordenado de
 						acuerdo a los rubros del formato) en un solo archivo en
 						PDF.
 					</li>
 					<li className="py-2">
-						<span
+						<a
 							className="link"
-							onClick={() => {
-								window.open(
-									'https://www.gob.pe/488-obtener-constancia-de-inscripcion-de-diplomas',
-									'_blank'
-								);
-							}}>
+							target="_blank"
+							href="https://www.gob.pe/488-obtener-constancia-de-inscripcion-de-diplomas"
+							rel="noreferrer noopener">
 							Constancia de inscripción en línea del grado de
 							Bachiller emitido por SUNEDU
-						</span>{' '}
+						</a>{' '}
 						o la copia del diploma de grado de Bachiller fedateado
 						por la universidad de procedencia (*).
 					</li>
@@ -69,7 +63,7 @@ export const Requisitos = () => {
 						Recibo de{' '}
 						<Link
 							href={
-								'/formacion-academica/admision?nivel=posgrado&tab=inversion&programa=doctorado'
+								'/admision/posgrado?programa=doctorado&tab=inversion'
 							}>
 							<a className="link">
 								pago por derecho de inscripción
@@ -79,15 +73,19 @@ export const Requisitos = () => {
 						de la Nación.
 					</li>
 					<li className="py-2">
+						Proyecto de Investigación: consultar detalles en nuestra
+						Unidad de Posgrado (postgrado.quimica@unmsm.edu.pe).
+					</li>
+					<li className="py-2">
 						Otro documento que la Unidad de Posgrado considere con
 						relación al perfil de ingreso de acuerdo al programa de
-						maestría que postulas.
+						doctorado que postulas.
 					</li>
 				</ol>
 				<p className="py-2">
-					(*) Los postulantes que obtuvieron el grado de bachiller en
-					la Universidad Nacional Mayor de San Marcos solo presentarán
-					copia simple.
+					(*)Los postulantes que obtuvieron el grado de maestro o
+					doctor en la Universidad Nacional Mayor de San Marcos solo
+					presentarán copia simple.
 				</p>
 				<p className="py-2">
 					En el caso de graduados en el extranjero, los grados y

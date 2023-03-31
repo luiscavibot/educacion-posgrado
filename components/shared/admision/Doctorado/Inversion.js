@@ -20,7 +20,7 @@ export const Inversion = () => {
 			<div className="overflow-x-auto mt-3">
 				<p className="text-negro font-bold mb-4">
 					Paga tu derecho de inscripción de forma fácil y segura en
-					los siguientes nuestros medios autorizados:
+					los siguientes medios autorizados:
 				</p>
 				<div className="mb-4">
 					<ul className="list-disc list-inside mb-4">
@@ -71,21 +71,21 @@ export const Inversion = () => {
 				<div className="flex flex-wrap justify-center mb-14">
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
 						<p className="text-xl font-bold mb-[10px]">
-							S/. 350.00
+							S/. 400.00
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Bachiller
+							<span className="font-bold">Para</span>: Magíster
 							UNMSM, personal administrativo de la UNMSM, docente
 							de Universidades Nacionales y Magisterio Nacional.
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
 						<p className="text-xl font-bold mb-[10px]">
-							S/. 450.00
+							S/. 500.00
 						</p>
 						<p>
 							<span className="font-bold">Para</span>: Postulantes
-							graduados de otras universidades.
+							(graduados de otras universidades).
 						</p>
 					</div>
 				</div>
@@ -135,12 +135,12 @@ export const Inversion = () => {
 							S/. 350.00
 						</p>
 						<p className="mb-3 font-bold">
-							<span>Transacción</span>: 9650 + código: 9700
+							<span>Transacción</span>: 9650 + código: 9702
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Bachiller
+							<span className="font-bold">Para</span>: Magíster
 							UNMSM, personal administrativo de la UNMSM, docente
-							de Universidades nacionales y Magisterio Nacional.
+							de Universidades Nacionales y Magisterio Nacional.
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
@@ -148,11 +148,11 @@ export const Inversion = () => {
 							S/. 450.00
 						</p>
 						<p className="mb-3 font-bold">
-							<span>Transacción</span>: 9650 + código: 9701
+							<span>Transacción</span>: 9650 + código: 9703
 						</p>
 						<p>
 							<span className="font-bold">Para</span>: Postulantes
-							graduados de otras universidades.
+							(graduados de otras universidades).
 						</p>
 					</div>
 				</div>
@@ -161,7 +161,7 @@ export const Inversion = () => {
 							2022-II, sujetos a variaciones.
 						</p> */}
 			</div>
-			<PagoPagalo programa={'maestria'} />
+			<PagoPagalo programa={'doctorado'} />
 			<div>
 				<p className="mb-9">
 					<span>
@@ -178,7 +178,7 @@ export const Inversion = () => {
 						// className="hover:-translate-y-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm hover:shadow-md duration-300 bg-blanco text-secondary font-semibold inline-flex place-items-center ml-3"
 					>
 						{/* <BsYoutube className="inline mr-3 text-lg" /> */}
-						<span className="text-secondary">tutorial</span>
+						<span className="link">tutorial</span>
 					</button>
 				</p>
 				<p className="font-bold mb-3">
