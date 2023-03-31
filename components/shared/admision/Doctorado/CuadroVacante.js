@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab } from 'semantic-ui-react';
+
 export const CuadroVacante = ({ facultad }) => {
 	return (
 		<>

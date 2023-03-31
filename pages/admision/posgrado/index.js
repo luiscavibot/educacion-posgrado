@@ -9,8 +9,8 @@ import { Tab } from 'semantic-ui-react';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 
-import { AdmisionPregrado } from '../../../components/shared/admision/Pregrado/AdmisionPregrado';
-import { AdmisionPosgrado } from '../../../components/shared/admision/Posgrado/AdmisionPosgrado';
+import { AdmisionMaestria } from '../../../components/shared/admision/Maestria/AdmisionMaestria';
+import { AdmisionDoctorado } from '../../../components/shared/admision/Doctorado/AdmisionDoctorado';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { AdmisionSegundasEspecialidades } from '../../../components/shared/admision/SegundasEspecialidades/AdmisionSegundasEspecialidades';
@@ -19,16 +19,12 @@ const Index = ({ admision, facultad }) => {
 	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
 	useEffect(() => {
-		if (router.query.nivel === 'pregrado') {
+		if (router.query.programa === 'maestria') {
 			setActiveIndex(0);
 			return;
 		}
-		if (router.query.nivel === 'posgrado') {
+		if (router.query.programa === 'doctorado') {
 			setActiveIndex(1);
-			return;
-		}
-		if (router.query.nivel === 'segundasespecialidades') {
-			setActiveIndex(2);
 			return;
 		}
 	}, [router]);
@@ -36,89 +32,64 @@ const Index = ({ admision, facultad }) => {
 	const handleClick = (event, { activeIndex }) => {
 		switch (activeIndex) {
 			case 0:
-				router.push(
-					'/formacion-academica/admision?nivel=pregrado',
-					undefined,
-					{
-						shallow: true,
-					}
-				);
+				router.push('/admision/posgrado?programa=maestria', undefined, {
+					shallow: true,
+				});
 				break;
 			case 1:
 				router.push(
-					'/formacion-academica/admision?nivel=posgrado',
+					'/admision/posgrado?programa=doctorado',
 					undefined,
 					{
 						shallow: true,
 					}
 				);
 				break;
-			// case 2:
-			// 	router.push(
-			// 		'/formacion-academica/admision?nivel=segundasespecialidades',
-			// 		undefined,
-			// 		{
-			// 			shallow: true,
-			// 		}
-			// 	);
-			// 	break;
 		}
 		setActiveIndex(activeIndex);
 	};
 
-	const nivelesEstudios = [
+	const programas = [
 		{
-			menuItem: 'Pregrado',
+			menuItem: 'Maestría',
 			render: () => (
 				<Tab.Pane
 					attached={false}
 					onClick={(e) => {
-						handleClick(e, 'pregrado');
+						handleClick(e, 'maestria');
 					}}>
 					<div className="col-start-3 col-span-10 mb-14">
 						<div className="mb-14">
-							<AdmisionPregrado />
-						</div>
-					</div>
-				</Tab.Pane>
-			),
-		},
-		{
-			menuItem: 'Posgrado',
-			render: () => (
-				<Tab.Pane attached={false}>
-					<div className="col-start-3 col-span-10 mb-14">
-						<div className="mb-14">
-							<AdmisionPosgrado
+							<AdmisionMaestria
 								cronograma={admision[0].attributes.programas[0]}
 								proceso={admision[0].attributes.admision}
 								facultad={facultad}
-								onClick={(e) => {
-									handleClick(e, 'pregrado');
-								}}
 							/>
 						</div>
 					</div>
 				</Tab.Pane>
 			),
 		},
-		// {
-		// 	menuItem: 'Segundas Especialidades',
-		// 	render: () => (
-		// 		<Tab.Pane
-		// 			attached={false}
-		// 			onClick={(e) => {
-		// 				handleClick(e, 'segundasespecialidades');
-		// 			}}
-		// 		>
-		// 			<div className="col-start-3 col-span-10 mb-14">
-		// 				<div className="mb-14">
-		// 					<AdmisionSegundasEspecialidades />
-		// 				</div>
-		// 			</div>
-		// 		</Tab.Pane>
-		// 	),
-		// },
+		{
+			menuItem: 'Doctorado',
+			render: () => (
+				<Tab.Pane
+					attached={false}
+					onClick={(e) => {
+						handleClick(e, 'doctorado');
+					}}>
+					<div className="col-start-3 col-span-10 mb-14">
+						<div className="mb-14">
+							<AdmisionDoctorado
+								cronograma={admision[0].attributes.programas[0]}
+								proceso={admision[0].attributes.admision}
+								facultad={facultad}
+							/>
+						</div>
+					</div>
+				</Tab.Pane>
+			),
+		},
 	];
 	return (
 		<>
@@ -132,7 +103,7 @@ const Index = ({ admision, facultad }) => {
 					<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
 						Formación académica
 					</li>
-					<li className="inline text-negro">Admisión</li>
+					<li className="inline text-negro">Posgrado</li>
 				</ul>
 				<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
 					Admisión
@@ -154,7 +125,7 @@ const Index = ({ admision, facultad }) => {
 				<div className="col-span-11 mb-14">
 					<Tab
 						menu={{ secondary: true, pointing: true }}
-						panes={nivelesEstudios}
+						panes={programas}
 						activeIndex={activeIndex}
 						onTabChange={handleClick}
 					/>
