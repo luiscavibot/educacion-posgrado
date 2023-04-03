@@ -433,9 +433,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 					<div label="Inversión económica">
 						<InversionEconomica programa={programa} ogUrl={ogUrl} />
 					</div>
-					<div
-						label="Admisión"
-						link="/formacion-academica/admision?nivel=posgrado"></div>
+					<div label="Admisión" link="/admision/posgrado"></div>
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14">
