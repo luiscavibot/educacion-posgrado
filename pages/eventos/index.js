@@ -111,7 +111,7 @@ const Eventos = () => {
 					<div className="flex justify-center">
 						<Link href="/eventos/proximos-eventos">
 							<a
-								className={`cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-secondary duration-300 bg-blanco hover:-translate-y-1 mb-14`}>
+								className={`cursor-pointer border-[1px] border-primary rounded-lg py-2 px-3 font-medium text-sm text-primary duration-300 bg-blanco hover:-translate-y-1 mb-14`}>
 								<span className="font-semibold">
 									Ver todos los eventos
 								</span>
@@ -132,7 +132,7 @@ const Eventos = () => {
 					<div className="flex justify-center">
 						<Link href="/eventos/eventos-pasados">
 							<a
-								className={`cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-secondary duration-300 bg-blanco hover:-translate-y-1 mb-14`}>
+								className={`cursor-pointer border-[1px] border-primary  rounded-lg py-2 px-3 font-medium text-sm text-primary duration-300 bg-blanco hover:-translate-y-1 mb-14`}>
 								<span className="font-semibold">
 									Ver todos los eventos
 								</span>

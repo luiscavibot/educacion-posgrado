@@ -58,12 +58,12 @@ const EventosPasados = () => {
 						<a>Inicio</a>
 					</Link>
 				</li>
-				<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+				<li className="font-bold text-secondary inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/eventos">
 						<a>Eventos</a>
 					</Link>
 				</li>
-				<li className="inline text-negro">Eventos pasados</li>
+				<li className="inline text-secondary">Eventos pasados</li>
 			</ul>
 			<div className="ml-4 md:ml-0 col-span-full title-page mb-8">
 				Eventos pasados
