@@ -20,7 +20,9 @@ module.exports = {
 			},
 			backgroundImage: {
 				bgHeader:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/facultad-quimica-header.png")',
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/facultad-header.png")',
+				bgEstadistica:
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/fondo-estadisticas.png")',
 			},
 			fontFamily: {
 				lato: 'Lato',
@@ -123,6 +125,9 @@ module.exports = {
 			addUtilities({
 				'.text-shadow-1': {
 					'text-shadow': '0px 4px 25px rgba(0, 0, 0, 0.75);',
+				},
+				'.text-shadow-2': {
+					'text-shadow': '0px 4px 4px rgba(0, 0, 0, 0.25);',
 				},
 			});
 		}),

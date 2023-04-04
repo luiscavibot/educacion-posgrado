@@ -35,14 +35,19 @@ const Numeros = () => {
 
 	return (
 		<motion.section
-			initial="offscreen"
-			whileInView="onscreen"
+			// initial="offscreen"
+			// whileInView="onscreen"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
 			viewport={{ once: true, amount: 0.3 }}
 			id="numeros"
-			className="mb-14 md:mb-18">
-			<motion.div variants={entradaCardScroll} className="">
-				<div className="h-auto pt-[60px] pb-20 bg-secondary row-span-1 flex justify-center items-center flex-col text-blanco relative">
-					<Image
+			// className="mb-14 md:mb-18"
+			className="">
+			<motion.div
+				// variants={entradaCardScroll}
+				className="">
+				<div className="h-auto pt-11 pb-16 bg-footerOne/90 bg-bgEstadistica bg-no-repeat bg-cover bg-center row-span-1 flex justify-center items-center flex-col text-blanco relative">
+					{/* <Image
 						alt="adn"
 						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/home-estadisticas-adn.png"
 						className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
@@ -57,15 +62,15 @@ const Numeros = () => {
 						fill
 						quality={100}
 						sizes="(max-width: 768px) 100vw,(max-width: 1200px) 1776px,1776px"
-					/>
-					<div className="text-center max-w-[44.875rem] relative mb-10">
+					/> */}
+					{/* <div className="text-center max-w-[44.875rem] relative mb-10">
 						<p className="text-[28px] font-bold leading-9 mb-2 px-4">
 							Somos una institución pionera y referente en la
 							formación de profesionales farmacéuticos a nivel
 							nacional.
 						</p>
-					</div>
-					<div className="grid gap-y-16 gap-x-5 grid-cols-2 sm:grid-cols-5 animate__fadeIn animate__animated">
+					</div> */}
+					<div className="grid gap-y-16 gap-x-5 grid-cols-2 sm:grid-cols-4 animate__fadeIn animate__animated">
 						{numerosProgramasLicenciados.map((item) => {
 							return (
 								<div
@@ -75,7 +80,7 @@ const Numeros = () => {
 										icono={item.icono}
 										className="fill-blanco mb-3"
 									/>
-									<h1 className="text-3xl">
+									<h1 className="text-3xl mb-3">
 										<CountUp
 											end={item.numero}
 											duration={2}
@@ -84,14 +89,18 @@ const Numeros = () => {
 									<h1 className="font-medium text-center max-w-[100px]">
 										{item.nombre}
 									</h1>
+									{item.adicional && (
+										<p className="text-center text-[10px]">
+											{item.adicional}
+										</p>
+									)}
 								</div>
 							);
 						})}
 					</div>
-					{/* <p className="absolute bottom-3 text-sm px-4 text-center">
-						Datos estadísticos de la facultad desde el periodo
-						2021-I hasta la actualidad.
-					</p> */}
+					<p className="absolute bottom-4 text-sm px-4 text-center opacity-50">
+						Estadísticas obtenidas desde el año 2017 a 2022*
+					</p>
 				</div>
 			</motion.div>
 		</motion.section>

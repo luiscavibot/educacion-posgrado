@@ -32,7 +32,7 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 			<motion.div
 				variants={entradaCardScroll}
 				className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid">
-				<div className="col-start-2 col-span-10 flex mb-9 cursor-pointer">
+				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Noticias
 					</h2>
@@ -46,76 +46,77 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 				<div className="col-start-2 col-span-10 grid gap-10">
 					{/* <div className="grid grid-cols-3 grid-rows-[403px_340px] gap-x-4 gap-y-11"> */}
 					<div className="">
-						{noticiasDestacadas && noticiasDestacadas.length > 0 && (
-							<div className="w-full h-full relative col-span-3">
-								<Swiper
-									grabCursor={true}
-									centeredSlides={true}
-									slidesPerView={'auto'}
-									pagination={false}
-									loop={true}
-									modules={[]}
-									className="h-auto md:h-[403px] card !rounded-l-none">
-									<SwiperButtonPrev />
-									<SwiperButtonNext />
-									{noticiasDestacadas.map(
-										(noticiaDestacada) => (
-											<SwiperSlide
-												key={noticiaDestacada.slug}>
-												<Link
-													href={`/noticias/${noticiaDestacada.slug}`}>
-													<a className="grid grid-cols-1 md:grid-cols-5 h-full group">
-														<div className="h-48 md:h-auto col-span-3 relative cursor-pointer">
-															<Image
-																alt={
-																	noticiaDestacada.titulo
-																}
-																priority
-																src={
-																	noticiaDestacada.foto
-																}
-																className="object-cover object-center"
-																fill
-																sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
-																quality={
-																	100
-																}></Image>
-															{/* <div className="absolute inset-0 bg-gradient-to-t from-negroPuro via-transparente to-transparente"></div> */}
-														</div>
-														<div className="col-span-2 bg-blanco px-5 pt-6 pb-28">
-															<div className="line-clamp-10">
-																<span className="font-bold text-base group-hover:text-secondary transition duration-300">
-																	{
+						{noticiasDestacadas &&
+							noticiasDestacadas.length > 0 && (
+								<div className="w-full h-full relative col-span-3">
+									<Swiper
+										grabCursor={true}
+										centeredSlides={true}
+										slidesPerView={'auto'}
+										pagination={false}
+										loop={true}
+										modules={[]}
+										className="h-auto md:h-[403px] card !rounded-l-none">
+										<SwiperButtonPrev />
+										<SwiperButtonNext />
+										{noticiasDestacadas.map(
+											(noticiaDestacada) => (
+												<SwiperSlide
+													key={noticiaDestacada.slug}>
+													<Link
+														href={`/noticias/${noticiaDestacada.slug}`}>
+														<a className="grid grid-cols-1 md:grid-cols-5 h-full group">
+															<div className="h-48 md:h-auto col-span-3 relative cursor-pointer">
+																<Image
+																	alt={
 																		noticiaDestacada.titulo
 																	}
-																</span>
-																<br />
-																<br />
-																{firstRender && (
-																	<span
-																		className="html-default"
-																		dangerouslySetInnerHTML={createMarkup(
-																			noticiaDestacada.cuerpo
-																		)}></span>
-																)}
+																	priority
+																	src={
+																		noticiaDestacada.foto
+																	}
+																	className="object-cover object-center"
+																	fill
+																	sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
+																	quality={
+																		100
+																	}></Image>
+																{/* <div className="absolute inset-0 bg-gradient-to-t from-negroPuro via-transparente to-transparente"></div> */}
 															</div>
-															<div className="absolute bottom-6 text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
-																<BiTimeFive />
-																<p className="ml-1">
-																	{getFecha(
-																		noticiaDestacada.fecha
+															<div className="col-span-2 bg-blanco px-5 pt-6 pb-28">
+																<div className="line-clamp-10">
+																	<span className="font-bold text-base group-hover:text-secondary transition duration-300">
+																		{
+																			noticiaDestacada.titulo
+																		}
+																	</span>
+																	<br />
+																	<br />
+																	{firstRender && (
+																		<span
+																			className="html-default"
+																			dangerouslySetInnerHTML={createMarkup(
+																				noticiaDestacada.cuerpo
+																			)}></span>
 																	)}
-																</p>
+																</div>
+																<div className="absolute bottom-6 text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
+																	<BiTimeFive />
+																	<p className="ml-1">
+																		{getFecha(
+																			noticiaDestacada.fecha
+																		)}
+																	</p>
+																</div>
 															</div>
-														</div>
-													</a>
-												</Link>
-											</SwiperSlide>
-										)
-									)}
-								</Swiper>
-							</div>
-						)}
+														</a>
+													</Link>
+												</SwiperSlide>
+											)
+										)}
+									</Swiper>
+								</div>
+							)}
 					</div>
 					{noticias && noticias.length > 0 && (
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
