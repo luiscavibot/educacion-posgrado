@@ -52,7 +52,7 @@ export default function Home({
 					noticias={noticias}
 				/>
 				<Comunicados />
-				<Numeros />
+				{/* <Numeros /> */}
 				<Carreras />
 				<LinksExternos />
 				<Testimonios />

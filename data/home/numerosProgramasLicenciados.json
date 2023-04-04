@@ -1,27 +1,26 @@
 [
 	{
-		"numero": 834,
-		"nombre": "Estudiantes de Pregrado y Posgrado",
-		"icono": "User"
+		"numero": 1170,
+		"nombre": "Ingresantes de Pregrado",
+		"icono": "User",
+		"adicional": ""
 	},
 	{
-		"numero": 24,
-		"nombre": "Grupos de investigación",
-		"icono": "Lupa"
+		"numero": 1262,
+		"nombre": "Titulados/as",
+		"icono": "Birrete",
+		"adicional": ""
 	},
 	{
-		"numero": 30,
-		"nombre": "Docentes de Renacyt",
-		"icono": "RenacytIcon"
+		"numero": 133,
+		"nombre": "Docentes investigadores",
+		"icono": "Lupa",
+		"adicional": ""
 	},
 	{
-		"numero": 93,
-		"nombre": "Tesis de Posgrado (2020-2022)",
-		"icono": "Birrete"
-	},
-	{
-		"numero": 74,
-		"nombre": "Tesis de Pregrado (2020-2022)",
-		"icono": "HomeTesisPregradoIcon"
+		"numero": 0,
+		"nombre": "Laboratorios",
+		"icono": "Birrete",
+		"adicional": "(Pregrado e Investigación)"
 	}
 ]

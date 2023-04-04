@@ -12,6 +12,7 @@ import FlechaAbajo from '../icons/FlechaAbajo';
 import { getFecha, getDia, getMes } from '../../helpers/getFecha';
 import { getTipoEvento } from '../../helpers/getTipoEvento';
 import { Autoplay } from 'swiper';
+import Numeros from './Numeros';
 
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
@@ -51,8 +52,27 @@ const PortadaHome = ({ eventos }) => {
 					</div>
 				</div>
 			</div>
+			{/* <div className="group h-auto w-full bg-footerOne/90 bg-bgEstadistica bg-no-repeat bg-cover bg-center row-span-1 hidden md:flex justify-center items-center flex-col text-blanco absolute bottom-0">
+				<div className="container mx-auto px-3 grid-cols-12 gap-x-4 grid">
+					<div className="col-start-2 col-span-10 flex">
+						<div className="relative w-full grid grid-cols-3 space-x-6 sm:grid-cols-3 animate__fadeIn animate__animated">
+							<div>
+								<div>
+									<User className={`fill-blanco mb-3`} />
+								</div>
+								<div></div>
+								<div></div>
+							</div>
+							<div>2</div>
+							<div>3</div>
+							<div>4</div>
+						</div>
+					</div>
+				</div>
+			</div> */}
+			<Numeros />
 			{/* if eventos exist and isnt empty */}
-			{eventos && eventos.length > 0 && (
+			{/* {eventos && eventos.length > 0 && (
 				<>
 					<div className="group h-auto w-full bg-tertiary/90 row-span-1 hidden md:flex justify-center items-center flex-col text-blanco absolute bottom-0">
 						<div className="container mx-auto px-3 grid-cols-12 gap-x-4 grid">
@@ -146,13 +166,11 @@ const PortadaHome = ({ eventos }) => {
 										</Link>
 									</div>
 								</SwiperSlide>
-								// <div key={evento.slug + 'n'}>
-								// </div>
 							))}
 						</Swiper>
 					</div>
 				</>
-			)}
+			)} */}
 		</section>
 	);
 };

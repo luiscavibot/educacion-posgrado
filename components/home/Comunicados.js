@@ -21,7 +21,7 @@ const Comunicados = () => {
 						<div className="absolute inset-0 h-full w-full">
 							<Image
 								src={
-									'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/comunicados-home-facultad-farmacia-bioquimica.jpg'
+									'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/comunicados-home.jpg'
 								}
 								className="object-center object-cover"
 								fill
@@ -37,7 +37,7 @@ const Comunicados = () => {
 								Comunicados
 							</h2>
 							<p className="text-blanco font-semibold mb-5">
-								Descubre aquí los últimos avisos de la facultad.
+								Encuentra los últimos avisos de la facultad
 							</p>
 							<Boton
 								text="Más información"
