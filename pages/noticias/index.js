@@ -77,6 +77,25 @@ const Noticias = () => {
 						]}
 					/>
 				</div> */}
+				<InputText
+					value={input}
+					onChange={handleKeyDown}
+					placeholder="Buscar por palabra clave"
+					onKeyDown={handleKeyDown}
+					conIconoBuscador
+					className="w-full md:w-[14rem] inline-block mb-4 md:mb-0"
+					backgroundClass="bg-gris"
+				/>
+				<SelectorIntervalosFechas
+					controles={[
+						endDate,
+						setEndDate,
+						startDate,
+						setStartDate,
+						setPage,
+						INITIAL_PAGE,
+					]}
+				/>
 				<div className="flex items-center mt-8 md:mt-0">
 					<PaginadorNoticias
 						controles={[page, setPage, totalPaginas]}

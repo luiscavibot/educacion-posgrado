@@ -24,7 +24,7 @@ export default function SelectorIntervalosFechas({ controles }) {
 				<p className="text-base font-normal inline-block">Inicio:</p>
 				<div className="relative ml-2 inline-block">
 					<div className="absolute flex items-center justify-center rounded-xl h-10 w-10">
-						<CalendarioIcon className="fill-secondary" />
+						<CalendarioIcon className="fill-primary" />
 					</div>
 					<DatePicker
 						dateFormat={'dd/MM/yyyy'}
@@ -45,7 +45,7 @@ export default function SelectorIntervalosFechas({ controles }) {
 				<p className="text-base font-normal inline-block">Final:</p>
 				<div className="relative ml-2 inline-block">
 					<div className="absolute flex items-center justify-center rounded-xl h-10 w-10">
-						<CalendarioIcon className="fill-secondary" />
+						<CalendarioIcon className="fill-primary" />
 					</div>
 					<DatePicker
 						dateFormat={'dd/MM/yyyy'}

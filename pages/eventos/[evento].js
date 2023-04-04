@@ -11,6 +11,7 @@ import LugarEvento from '../../components/icons/LugarEvento';
 import OrganizadorEvento from '../../components/icons/OrganizadorEvento';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../components/shared/SharedComponent';
+import HorarioIcon from '../../components/icons/HorarioIcon';
 
 const Evento = ({ evento, ultimosEventos }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/eventos/${evento.slug}`;
@@ -88,6 +89,15 @@ const Evento = ({ evento, ultimosEventos }) => {
 										)}
 									</p>
 								</div>
+								{/* <div className="mb-6">
+									<p>
+										<HorarioIcon className="fill-tertiary inline relative bottom-[2px] mr-1" />
+										<span className="text-tertiary font-bold pl-1">
+											Horario
+										</span>
+									</p>
+									<p className="ml-7">{}</p>
+								</div> */}
 								<div className="mb-6">
 									<p>
 										<LugarEvento className="fill-tertiary inline relative bottom-[2px] mr-1" />
