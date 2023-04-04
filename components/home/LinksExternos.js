@@ -8,6 +8,7 @@ import BirreteStroke from '../icons/BirreteStroke';
 import RevistaStroke from '../icons/RevistaStroke';
 import EdificioBibliotecaStroke from '../icons/EdificioBibliotecaStroke';
 import LupaStroke from '../icons/LupaStroke';
+import DocumentClipIcon from '../icons/DocumentoClipIcon';
 import HojaLupaStroke from '../icons/HojaLupaStroke';
 import ManoCorazon from '../icons/ManoCorazon';
 import LibroCintaStroke2 from '../icons/LibroCintaStroke2';
@@ -27,7 +28,7 @@ const LinksExternos = () => {
 					{/* <div className="w-full lg:w-auto lg:max-w-[1022px] md:mx-auto grid grid-cols-2 lg:grid-cols-4 place-items-center gap-x-4 gap-y-8 lg:gap-x-[60px] mb-8"> */}
 					<div className="w-full lg:w-auto lg:max-w-[1022px] md:mx-auto grid grid-cols-2 lg:grid-cols-4 place-items-center gap-x-4 gap-y-8 lg:gap-x-[60px]">
 						<Link href="/formacion-academica/posgrado">
-							<a className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							<a className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<BirreteStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 								</div>
@@ -37,21 +38,26 @@ const LinksExternos = () => {
 						<a
 							onClick={() => {
 								window.open(
-									'https://revistasinvestigacion.unmsm.edu.pe/index.php/farma',
+									'https://sisbib.unmsm.edu.pe/?page=2',
 									'_blank'
 								);
 							}}
-							// onClick={(e) => {
-							// 	e.preventDefault();
-							// }}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
-								<RevistaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
+								<LupaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
 							<p className="text-blanco text-xl">
-								Revista “Ciencia e investigación”
+								Recursos de investigación
 							</p>
 						</a>
+						<Link href="/tramites">
+							<a className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+								<div>
+									<DocumentClipIcon className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
+								</div>
+								<p className="text-blanco text-xl">Trámites</p>
+							</a>
+						</Link>
 						<a
 							onClick={() => {
 								window.open(
@@ -62,27 +68,12 @@ const LinksExternos = () => {
 							// onClick={(e) => {
 							// 	e.preventDefault();
 							// }}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
 								<EdificioBibliotecaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
 							<p className="text-blanco text-xl">
 								Sistemas de bibliotecas
-							</p>
-						</a>
-						<a
-							onClick={() => {
-								window.open(
-									'https://sisbib.unmsm.edu.pe/?page=2',
-									'_blank'
-								);
-							}}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
-							<div>
-								<LupaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
-							</div>
-							<p className="text-blanco text-xl">
-								Recursos de investigación
 							</p>
 						</a>
 					</div>
@@ -97,7 +88,7 @@ const LinksExternos = () => {
 							// onClick={(e) => {
 							// 	e.preventDefault();
 							// }}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
 								<ManoCorazon className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
@@ -113,7 +104,7 @@ const LinksExternos = () => {
 							onClick={(e) => {
 								e.preventDefault();
 							}}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
 								<GrupoPersonasTres className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
@@ -129,7 +120,7 @@ const LinksExternos = () => {
 							onClick={(e) => {
 								e.preventDefault();
 							}}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
 								<HojaLupaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
@@ -145,7 +136,7 @@ const LinksExternos = () => {
 							onClick={(e) => {
 								e.preventDefault();
 							}}
-							className="group bg-tertiary hover:bg-secondary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
+							className="group bg-tertiary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[211px] h-[190px] flex flex-col items-center justify-center px-5 cursor-pointer">
 							<div>
 								<LibroCintaStroke2 className="fill-blanco group-hover:fill-blanco transition-colors duration-300 w-14" />
 							</div>
