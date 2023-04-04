@@ -35,6 +35,10 @@ const Evento = ({ evento, ultimosEventos }) => {
 			return `Del ${getFecha(inicio)} al ${getFecha(final)}`;
 		}
 	};
+	const getValidarFecha = (inicio, final) => {
+		const fechaActual = new Date();
+		return fechaActual >= inicio && fechaActual < final ? true : false;
+	};
 
 	return (
 		<PrincipalLayout metaTags={metaTags}>
@@ -63,7 +67,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 						{evento.titulo}
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mb-8">
-						<div className="text-grisTenue flex justify-start items-center font-bold">
+						<div className="text-textColorTwo flex justify-start items-center font-bold">
 							<p>{evento.tipo.valor}</p>
 						</div>
 					</div>
@@ -102,12 +106,23 @@ const Evento = ({ evento, ultimosEventos }) => {
 									</p>
 									<p className="ml-7">{evento.organizador}</p>
 								</div>
-								{/* <div>
-									<Boton
-										primary
-										text="Añadir a mi calendario"
-									/>
-								</div> */}
+								{getValidarFecha(
+									evento.fecha_inicio,
+									evento.fecha_final
+								) ? (
+									<div className="mt-5">
+										<Boton
+											primary
+											text="Añadir a mi calendario"
+										/>
+									</div>
+								) : (
+									<div className="mt-5 ml-2">
+										<button className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente">
+											Añadir a mi calendario
+										</button>
+									</div>
+								)}
 							</div>
 							<div className="relative w-full md:max-w-[499px] h-56 md:h-80">
 								<Image
@@ -134,7 +149,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 								className="mr-4"
 								secondary
 								onClick={handleOpen}>
-								<CompartirIcon className="fill-secondary inline-block relative -top-[1px] mr-2" />
+								<CompartirIcon className="fill-primary inline-block relative -top-[1px] mr-2" />
 								<span className="font-semibold">Compartir</span>
 							</Boton>
 						</div>

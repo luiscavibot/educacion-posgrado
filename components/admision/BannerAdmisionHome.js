@@ -13,7 +13,7 @@ export const BannerAdmisionHome = ({ setIsOpenHeader }) => {
 				<div>Inscripciones rezagados: hasta el 24 de marzo</div>
 				<div>
 					{/* <Link href="/formacion-academica/admision?posgrado"> */}
-					<Link href="/formacion-academica/admision?nivel=posgrado">
+					<Link href="/admision/pregrado">
 						<a className="link">| Más información</a>
 					</Link>
 				</div>

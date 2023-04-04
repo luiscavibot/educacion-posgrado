@@ -17,26 +17,36 @@ import Testimonios from '../components/home/Testimonios';
 import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
 import { BannerAdmision } from '../components/admision/BannerAdmision';
 
-export default function Home({ noticiasDestacadas, noticias, eventos }) {
-	// const [isOpenHeader, setIsOpenHeader] = useState(true);
-	// const [isOpenBanner, setIsOpenBanner] = useState(true);
+export default function Home({
+	noticiasDestacadas,
+	noticias,
+	eventos,
+	carrerasEnProceso,
+}) {
+	const [isOpenHeader, setIsOpenHeader] = useState(carrerasEnProceso);
+	const [isOpenBanner, setIsOpenBanner] = useState(carrerasEnProceso);
 	return (
 		<FHpages>
 			<SideBar />
 			<div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
-				{/* {isOpenHeader && (
+				{isOpenHeader && (
 					<BannerAdmisionHome setIsOpenHeader={setIsOpenHeader} />
-				)} */}
+				)}
 				<SubMenu theme="tertiary" color="blanco" />
 			</div>
 			<BuscadorGeneral />
 			<PortadaHome eventos={eventos} />
 			<main className="bg-blanco py-14 md:py-18">
-				{/* <div className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid mb-14 md:mb-18 mt-6">
-					<div className="col-start-2 col-span-10">
-						<BannerAdmision setIsOpenBanner={setIsOpenBanner} />
+				{isOpenBanner && (
+					<div className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid mb-14 md:mb-18 mt-6">
+						<div className="col-start-2 col-span-10">
+							<BannerAdmision
+								setIsOpenBanner={setIsOpenBanner}
+								enlace={'/admision/posgrado'}
+							/>
+						</div>
 					</div>
-				</div> */}
+				)}
 				<Noticias
 					noticiasDestacadas={noticiasDestacadas}
 					noticias={noticias}
@@ -68,11 +78,20 @@ export async function getStaticProps() {
 	const resEventos = await fetch(`${BASE_URL}${urlEventos}`);
 	const eventos = await resEventos.json();
 
+	const resCarrerasPregrado = await fetch(
+		`${BASE_URL}/carreras/${SLUG_CARRERA}?tipo=posgrado`
+	);
+	const carrerasPregrado = await resCarrerasPregrado.json();
+	const carrerasEnProceso = carrerasPregrado.some(
+		(carrera) => carrera.en_proceso
+	);
+
 	return {
 		props: {
 			noticiasDestacadas,
 			noticias,
 			eventos,
+			carrerasEnProceso,
 		},
 		revalidate: 400,
 	};

@@ -82,7 +82,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 					<div className="col-span-full mb-5">
 						<div className="flex justify-end">
 							<Boton onClick={handleOpen}>
-								<CompartirIcon className="fill-textColorOne inline-block relative -top-[1px] mr-2" />
+								<CompartirIcon className="fill-complementaryOne inline-block relative -top-[1px] mr-2" />
 								<span className="font-semibold">Compartir</span>
 							</Boton>
 						</div>

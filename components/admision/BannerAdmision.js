@@ -5,7 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import Image from 'next/future/image';
 import anuncio_admision from '../../data/admision/anuncio_admision.json';
 
-export const BannerAdmision = ({ setIsOpenBanner }) => {
+export const BannerAdmision = ({ setIsOpenBanner, enlace }) => {
 	return (
 		// <div className="bg-gris col-span-full grid grid-cols-10 gap-x-4 shadow-[0_4px_20px_4px_rgba(0,0,0,0.04)] mb-8 relative">
 		<div className="bg:none md:bg-[url('https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/circulo-gris.png')] bg-complementaryTwo/60 bg-no-repeat bg-[length:429px] bg-[center_left_-49px] col-span-full grid grid-cols-12 gap-x-4 shadow-[0_4px_20px_4px_rgba(0,0,0,0.04)] mb-8 relative max-w-[917px] mx-auto">
@@ -34,7 +34,7 @@ export const BannerAdmision = ({ setIsOpenBanner }) => {
 					{anuncio_admision.cierreDeInscripciones}
 				</h2>
 				<div className="mt-4 flex justify-start gap-x-6 gap-y-3">
-					<Link href="/formacion-academica/admision?nivel=posgrado">
+					<Link href={enlace}>
 						<a
 							className={`inline-block cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-secondary duration-300 bg-blanco hover:-translate-y-1`}>
 							<span className="font-semibold">
