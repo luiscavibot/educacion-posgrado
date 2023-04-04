@@ -37,7 +37,7 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 						Noticias
 					</h2>
 					<Link href="/noticias" passHref>
-						<a className="text-lg text-secondary font-bold flex items-end hover:text-textColorOne">
+						<a className="text-lg text-primary font-bold flex items-end hover:text-textColorOne">
 							<span className="ml-2">|</span>
 							<p className="ml-2">ver más</p>
 						</a>
@@ -85,7 +85,7 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 															</div>
 															<div className="col-span-2 bg-blanco px-5 pt-6 pb-28">
 																<div className="line-clamp-10">
-																	<span className="font-bold text-base group-hover:text-secondary transition duration-300">
+																	<span className="font-bold text-base group-hover:text-complementaryThree transition duration-300">
 																		{
 																			noticiaDestacada.titulo
 																		}
