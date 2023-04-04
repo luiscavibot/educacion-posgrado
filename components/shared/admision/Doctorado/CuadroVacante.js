@@ -82,7 +82,7 @@ export const CuadroVacante = ({ facultad }) => {
 					</tbody>
 				</table> */}
 
-				<table className="table table-striped mb-6">
+				{/* <table className="table table-striped mb-6">
 					<thead>
 						<tr className="!bg-tertiary text-blanco text-center">
 							<th>Maestría</th>
@@ -93,15 +93,15 @@ export const CuadroVacante = ({ facultad }) => {
 					</thead>
 					<tbody>
 						{facultad.maestrias.data
-							.filter(
-								(maestria) => maestria.attributes.en_proceso
-							)
+							// .filter(
+							// 	(maestria) => maestria.attributes.en_proceso
+							// )
 							.map((maestria, index) => {
 								return (
 									<>
 										<tr key={maestria.attributes.nombre}>
 											<td>
-												{maestria.attributes.nombre}
+												Maestria en {maestria.attributes.nombre}
 											</td>
 											<td className="text-center">
 												{maestria.attributes.vacante}
@@ -130,7 +130,7 @@ export const CuadroVacante = ({ facultad }) => {
 								);
 							})}
 					</tbody>
-				</table>
+				</table> */}
 
 				<table className="table table-striped mb-6">
 					<thead>
@@ -143,15 +143,15 @@ export const CuadroVacante = ({ facultad }) => {
 					</thead>
 					<tbody>
 						{facultad.doctorados.data
-							.filter(
-								(doctorado) => doctorado.attributes.en_proceso
-							)
+							// .filter(
+							// 	(doctorado) => doctorado.attributes.en_proceso
+							// )
 							.map((doctorado, index) => {
 								return (
 									<>
 										<tr key={doctorado.attributes.nombre}>
 											<td>
-												{doctorado.attributes.nombre}
+												Doctorado en {doctorado.attributes.nombre}
 											</td>
 											<td className="text-center">
 												{doctorado.attributes.vacante}
@@ -160,7 +160,7 @@ export const CuadroVacante = ({ facultad }) => {
 									</>
 								);
 							})}
-						{facultad.doctorados.data
+						{/* {facultad.doctorados.data
 							.filter(
 								(doctorado) => !doctorado.attributes.en_proceso
 							)
@@ -178,7 +178,7 @@ export const CuadroVacante = ({ facultad }) => {
 										</tr>
 									</>
 								);
-							})}
+							})} */}
 					</tbody>
 				</table>
 			</div>
