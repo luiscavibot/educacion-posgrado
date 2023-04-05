@@ -14,7 +14,7 @@ const InputCheckbox = ({
 			<div className={`${className}`}>
 				<label className="flex gap-x-2 justify-start place-items-start">
 					<input
-						className="translate-y-1 border-textColorTwo/50 cursor-pointer checked:!bg-secondary visited:!bg-secondary text-secbg-secondary focus:ring-0"
+						className="translate-y-1 border-textColorTwo/50 cursor-pointer checked:!bg-primary visited:!bg-secondary text-secbg-secondary focus:ring-0"
 						type="checkbox"
 						name={name}
 						checked={checked}

@@ -18,7 +18,7 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 							<Link href="/noticias" passHref>
 								<a className="text-secondary flex items-end hover:text-textColorOne">
 									<span className="ml-2">|</span>
-									<p className="ml-2">ver más</p>
+									<p className="ml-2 link">ver más</p>
 								</a>
 							</Link>
 						</div>

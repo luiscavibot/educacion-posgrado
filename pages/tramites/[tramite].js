@@ -202,7 +202,7 @@ const Tramite = ({ ultimasNoticias }) => {
 								<a
 									href=""
 									key={nombre}
-									className="font-semibold mb-4 inline-block text-secondary">
+									className="font-semibold mb-4 inline-block text-secondary link">
 									{nombre}
 								</a>
 							);
