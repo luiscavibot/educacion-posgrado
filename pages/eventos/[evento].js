@@ -24,7 +24,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 		ogImage: evento.foto,
 		ogDescription: evento.organizador,
 	};
-
+	const url = evento.calendario;
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -38,7 +38,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 	};
 	const getValidarFecha = (inicio, final) => {
 		const fechaActual = new Date();
-		return fechaActual >= inicio && fechaActual < final ? true : false;
+		return fechaActual >= inicio && fechaActual < final ? false : true;
 	};
 
 	return (
@@ -119,9 +119,10 @@ const Evento = ({ evento, ultimosEventos }) => {
 								{getValidarFecha(
 									evento.fecha_inicio,
 									evento.fecha_final
-								) ? (
+								) && evento.calendario !== '' ? (
 									<div className="mt-5">
 										<Boton
+											link={evento.calendario}
 											primary
 											text="Añadir a mi calendario"
 										/>
