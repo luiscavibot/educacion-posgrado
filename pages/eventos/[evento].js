@@ -24,7 +24,6 @@ const Evento = ({ evento, ultimosEventos }) => {
 		ogImage: evento.foto,
 		ogDescription: evento.organizador,
 	};
-	const url = evento.calendario;
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -38,7 +37,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 	};
 	const getValidarFecha = (inicio, final) => {
 		const fechaActual = new Date();
-		return fechaActual >= inicio && fechaActual < final ? false : true;
+		return fechaActual >= inicio && fechaActual < final ? true : false;
 	};
 
 	return (
