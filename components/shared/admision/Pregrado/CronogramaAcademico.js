@@ -172,12 +172,12 @@ export const CronogramaAcademico = () => {
 								del 10 al 14 de abril del 2023
 							</td>
 						</tr>
-						<tr key="7">
+						{/* <tr key="7">
 							<td>Inicio de clases</td>
 							<td className="text-center">
 								lunes 17 de abril del 2023
 							</td>
-						</tr>
+						</tr> */}
 					</tbody>
 				</table>
 			</div>
