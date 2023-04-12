@@ -16,7 +16,7 @@ import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
-	tipoPrograma: {
+	programa: {
 		doctoradoCheck: false,
 		maestriasCheck: false,
 		segundasEspecialidadesCheck: false,
@@ -101,25 +101,25 @@ const InfoAcadPosgrado = () => {
 							<InputCheckbox
 								label="Doctorado"
 								name="doctoradoCheck"
-								checked={inputs.tipoPrograma.doctoradoCheck}
+								checked={inputs.programa.doctoradoCheck}
 								onChange={(e) => {
-									handleCheck(e, 'tipoPrograma');
+									handleCheck(e, 'programa');
 								}}
 							/>
 							<InputCheckbox
 								label="Maestrías"
 								name="maestriasCheck"
-								checked={inputs.tipoPrograma.maestriasCheck}
+								checked={inputs.programa.maestriasCheck}
 								onChange={(e) => {
-									handleCheck(e, 'tipoPrograma');
+									handleCheck(e, 'programa');
 								}}
 							/>
 							<InputCheckbox
 								label="Segundas Especialidades"
 								name="segundasEspecialidadesCheck"
-								checked={inputs.tipoPrograma.segundasEspecialidadesCheck}
+								checked={inputs.programa.segundasEspecialidadesCheck}
 								onChange={(e) => {
-									handleCheck(e, 'tipoPrograma');
+									handleCheck(e, 'programa');
 								}}
 							/>
 						</div>

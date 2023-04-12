@@ -5,9 +5,9 @@ const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
 
 const checkValues = {
-	farmaciaBioquimicaCheck: 'farmacia-y-bioquímica',
-	cienciaAlimentosCheck: 'ciencias-de-los-alimentos',
-	ToxicologiaCheck: 'toxicologia',
+	doctoradoCheck: 'DOCTORADO',
+	maestriasCheck: 'MAESTRIA',
+	segundasEspecialidadesCheck: 'SEGUNDASESPECIALIDADES',
 	syllabusCheck: 'SYLLABUS',
 	horariosCheck: 'HORARIOS',
 	planesEstudiosCheck: 'PLANESESTUDIOS',
@@ -28,13 +28,13 @@ export default function useInfoAcadPosgrado(searchParams) {
 		if (keyWords !== '') {
 			url += `&query=${keyWords}`;
 		}
-		const programasChecksArray = Object.keys(checks.tipoPrograma)
-			.filter((key) => checks.tipoPrograma[key])
+		const programasChecksArray = Object.keys(checks.programa)
+			.filter((key) => checks.programa[key])
 			.map((key) => checkValues[key]);
 
 		if (programasChecksArray.length > 0) {
 			programasChecksArray.forEach((check, index) => {
-				url += `&tipoPrograma[${index}]=${check}`;
+				url += `&programas[${index}]=${check}`;
 			});
 		}
 		const recursosChecksArray = Object.keys(checks.recurso)
