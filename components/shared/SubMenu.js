@@ -37,7 +37,7 @@ const SubMenu = ({ theme, color }) => {
 									{
 										name: 'Posgrado',
 										path: '/informacion-academica/posgrado',
-										condicional: true,
+										condicional: false,
 									},
 
 									{

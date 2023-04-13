@@ -8,7 +8,7 @@ import { BannerAdmision } from '../../../components/admision/BannerAdmision';
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 
 const Index = ({ CarrerasEnProceso }) => {
-	const [isOpenBanner, setIsOpenBanner] = useState(true);
+	const [isOpenBanner, setIsOpenBanner] = useState(CarrerasEnProceso);
 	return (
 		<>
 			<PrincipalLayout>
@@ -38,7 +38,10 @@ const Index = ({ CarrerasEnProceso }) => {
 				</div>
 
 				{isOpenBanner && (
-					<BannerAdmision setIsOpenBanner={setIsOpenBanner} />
+					<BannerAdmision
+						setIsOpenBanner={setIsOpenBanner}
+						enlace="/admision/pregrado"
+					/>
 				)}
 
 				<div className="px-4 md:px-0 col-span-full mb-10">
@@ -179,8 +182,9 @@ export async function getStaticProps({ params }) {
 	const carrerasPregrado = await resCarrerasPregrado.json();
 
 	const CarrerasEnProceso = carrerasPregrado.some(
-		(carrera) => carrera.en_proceso === true
+		(carrera) => carrera.en_proceso
 	);
+	// const valor = CarrerasEnProceso.some(objeto => objeto.en_proceso);
 
 	// console.log(CarrerasEnProceso);
 

@@ -82,63 +82,64 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 					<div className="col-span-full mb-5">
 						<div className="flex justify-end">
 							<Boton onClick={handleOpen}>
-								<CompartirIcon className="fill-textColorOne inline-block relative -top-[1px] mr-2" />
+								<CompartirIcon className="fill-complementaryOne inline-block relative -top-[1px] mr-2" />
 								<span className="font-semibold">Compartir</span>
 							</Boton>
 						</div>
 					</div>
-					<div className="mx-4 md:mx-0 col-span-full">
-						<div className="flex mb-6 font-bold">
-							<p className="text-textColorOne">
-								Últimas noticias
-							</p>
-							<Link href="/noticias" passHref>
-								<a className="text-secondary flex items-end hover:text-textColorOne">
-									<span className="ml-2">|</span>
-									<p className="ml-2">ver más</p>
-								</a>
-							</Link>
-						</div>
-					</div>
-					<div
-						className="col-span-full mb-14
-						 ">
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
-							{noticiasRelacionadas &&
-								noticiasRelacionadas.map((noticia) => (
-									<Link
-										key={noticia.id}
-										href={`/noticias/${noticia.slug}`}>
-										<a
-											href="#"
-											className="card !rounded-t-none">
-											<div className="h-[220px] hidden md:block relative w-full">
-												<Image
-													alt={noticia.titulo}
-													src={`${noticia.foto}`}
-													width={502}
-													height={335}
-													className="object-cover h-full w-full"
-												/>
-											</div>
-											<div className="text-content">
-												<p className="title break-words line-clamp-2">
-													{noticia.titulo}
-												</p>
-												<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
-													<BiTimeFive />
-													<p className="ml-1">
-														{getFecha(
-															noticia.fecha
-														)}
-													</p>
-												</div>
-											</div>
+					{!noticiasRelacionadas && (
+						<>
+							<div className="mx-4 md:mx-0 col-span-full">
+								<div className="flex mb-6 font-bold">
+									<p className="text-textColorOne">
+										Últimas noticias
+									</p>
+									<Link href="/noticias" passHref>
+										<a className="text-secondary flex items-end hover:text-textColorOne">
+											<span className="ml-2">|</span>
+											<p className="ml-2 link">ver más</p>
 										</a>
 									</Link>
-								))}
-						</div>
-					</div>
+								</div>
+							</div>
+							<div className="col-span-full mb-14">
+								<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
+									{noticiasRelacionadas.map((noticia) => (
+										<Link
+											key={noticia.id}
+											href={`/noticias/${noticia.slug}`}>
+											<a
+												href="#"
+												className="card !rounded-t-none">
+												<div className="h-[220px] hidden md:block relative w-full">
+													<Image
+														alt={noticia.titulo}
+														src={`${noticia.foto}`}
+														width={502}
+														height={335}
+														className="object-cover h-full w-full"
+													/>
+												</div>
+												<div className="text-content">
+													<p className="title break-words line-clamp-2">
+														{noticia.titulo}
+													</p>
+													<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
+														<BiTimeFive />
+														<p className="ml-1">
+															{getFecha(
+																noticia.fecha
+															)}
+														</p>
+													</div>
+												</div>
+											</a>
+										</Link>
+									))}
+								</div>
+							</div>
+						</>
+					)}
 				</>
 			)}
 			<Modal

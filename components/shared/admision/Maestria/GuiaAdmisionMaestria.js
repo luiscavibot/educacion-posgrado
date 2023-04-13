@@ -18,8 +18,9 @@ export const GuiaAdmisionMaestria = () => {
 	return (
 		<div>
 			<div className="mb-6">
-				¿Listo/a para postular? Sigue, por favor, detenidamente los
-				siguientes pasos del proceso de admisión 2023-I:
+				¿Estás listo/a para postular a una maestría? Sigue, por favor,
+				detenidamente los siguientes pasos del proceso de admisión
+				2023-I:
 			</div>
 			<div className="relative">
 				<div className="grid grid-cols-[88px_auto] mb-10">
@@ -30,11 +31,9 @@ export const GuiaAdmisionMaestria = () => {
 						<p className="font-bold">Paso 1:</p>
 						<p>
 							Te recomendamos
-							<Link href="/formacion-academica/admision?nivel=posgrado&tab=cronograma-academico">
-								<a className="link">
-									{' '}
-									visualizar el cronograma académico{' '}
-								</a>
+							<span className="font-bold">visualizar el </span>
+							<Link href="/admision/posgrado?programa=maestria&tab=cronograma-academico">
+								<a className="link"> cronograma académico </a>
 							</Link>
 							con la finalidad de tener conocimiento de la
 							programación del proceso de admisión.
@@ -64,16 +63,17 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 3:</p>
 						<p>
-							Verifica que
-							<Link href="/formacion-academica/admision?nivel=posgrado&tab=requisitos-para-postular">
-								<a className="link">
-									{' '}
-									cumplas con los requisitos establecidos{' '}
-								</a>
-							</Link>
+							Verifica que{' '}
+							<span className="font-bold">
+								cumplas con los{' '}
+								<Link href="/admision/posgrado?programa=maestria&tab=requisitos-para-postular">
+									<a className="link"> requisitos </a>
+								</Link>
+								establecidos
+							</span>{' '}
 							por la Dirección General de Estudios de Posgrado
 							(DGEP) para postular a los programas de maestrías y
-							doctorados.
+							doctorados
 						</p>
 					</div>
 				</div>
@@ -102,7 +102,7 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 5:</p>
 						<p>
-							<Link href="/formacion-academica/admision?nivel=pregrado&tab=inversion">
+							<Link href="/admision/posgrado?programa=maestria&tab=inversion">
 								<a className="link">
 									{' '}
 									Realiza el pago de inscripción{' '}
@@ -150,8 +150,11 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 7:</p>
 						<p>
-							Envía al correo electrónico de la Unidad de Posgrado
-							de la Facultad de Química e Ingeniería Química{' '}
+							Envía{' '}
+							<span className="font-bold">
+								al correo electrónico de la Unidad de Posgrado
+								de la Facultad de Química e Ingeniería Química
+							</span>{' '}
 							<a
 								className="link"
 								target="_blank"
@@ -180,11 +183,6 @@ export const GuiaAdmisionMaestria = () => {
 								examen de aptitud virtual, evaluación de
 								expediente y entrevista personal.
 							</span>{' '}
-							Programa de doctorado:{' '}
-							<span className="font-bold">
-								sustentación de un proyecto de investigación y
-								la evaluación de expediente.
-							</span>
 						</p>
 					</div>
 				</div>
@@ -200,15 +198,20 @@ export const GuiaAdmisionMaestria = () => {
 								relación de postulantes admitidos que será
 								publicada en el portal web
 							</span>{' '}
-							de la Unidad de Posgrado de la Facultad de Farmacia
-							y Bioquímica y enviada al correo electrónico de cada
-							ingresante.
+							de la Unidad de Posgrado de la Facultad de Química e
+							Ingeniería Química y enviada al correo electrónico
+							de cada ingresante.
 						</p>
 					</div>
 				</div>
 			</div>
 			<div>
-				<p className="font-bold mb-2">Más información</p>
+				<p className="font-bold mb-2">
+					¿Quieres saber más de este proceso de admisión?n
+				</p>
+				<p className="mb-2">
+					¡No te preocupes! Estamos aquí para ayudarte{' '}
+				</p>
 				<p className="text-[15px]">
 					<span className="font-bold mr-2">Sitio web:</span>
 					<a

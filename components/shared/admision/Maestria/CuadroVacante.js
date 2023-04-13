@@ -93,15 +93,15 @@ export const CuadroVacante = ({ facultad }) => {
 					</thead>
 					<tbody>
 						{facultad.maestrias.data
-							.filter(
-								(maestria) => maestria.attributes.en_proceso
-							)
+							// .filter(
+							// 	(maestria) => maestria.attributes.en_proceso
+							// )
 							.map((maestria, index) => {
 								return (
 									<>
 										<tr key={maestria.attributes.nombre}>
 											<td>
-												{maestria.attributes.nombre}
+												Maestría en {maestria.attributes.nombre}
 											</td>
 											<td className="text-center">
 												{maestria.attributes.vacante}
@@ -110,7 +110,7 @@ export const CuadroVacante = ({ facultad }) => {
 									</>
 								);
 							})}
-						{facultad.maestrias.data
+						{/* {facultad.maestrias.data
 							.filter(
 								(maestria) => !maestria.attributes.en_proceso
 							)
@@ -128,11 +128,11 @@ export const CuadroVacante = ({ facultad }) => {
 										</tr>
 									</>
 								);
-							})}
+							})} */}
 					</tbody>
 				</table>
 
-				<table className="table table-striped mb-6">
+				{/* <table className="table table-striped mb-6">
 					<thead>
 						<tr className="!bg-tertiary text-blanco text-center">
 							<th>Doctorado</th>
@@ -180,7 +180,7 @@ export const CuadroVacante = ({ facultad }) => {
 								);
 							})}
 					</tbody>
-				</table>
+				</table> */}
 			</div>
 		</>
 	);

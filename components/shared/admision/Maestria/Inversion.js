@@ -42,10 +42,10 @@ export const Inversion = () => {
 						</li>
 					</ul>
 					<p className="mb-8">
-						A continuación detallamos el número de Cuenta Corriente
-						de la UNMSM en el Banco de Crédito del Perú, para
-						depósitos en ventanilla, cajero, agente o transferencia
-						interbancaria:
+						A continuación, te detallamos el número de Cuenta
+						Corriente de la UNMSM en el Banco de Crédito del Perú
+						para depósitos en ventanilla, cajero, agente o
+						transferencia interbancaria:
 					</p>
 					<div className="mb-8 flex flex-wrap justify-center">
 						<div className="mb-3 md:mb-0 flex items-center gap-x-2">
@@ -178,7 +178,7 @@ export const Inversion = () => {
 						// className="hover:-translate-y-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm hover:shadow-md duration-300 bg-blanco text-secondary font-semibold inline-flex place-items-center ml-3"
 					>
 						{/* <BsYoutube className="inline mr-3 text-lg" /> */}
-						<span className="text-secondary">tutorial</span>
+						<span className="link">tutorial</span>
 					</button>
 				</p>
 				<p className="font-bold mb-3">

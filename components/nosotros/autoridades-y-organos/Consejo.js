@@ -53,7 +53,7 @@ const Consejo = () => {
 			<Link href="/transparencia?tab=actas-del-consejo">
 				<Boton className="mt-6">
 					<span>
-						<DosDocumentosFillStroke className="w-5 h-5 mr-2" />
+						<DosDocumentosFillStroke className="w-5 h-5 mr-2 " />
 					</span>
 					<span>Ver actas del consejo</span>
 				</Boton>

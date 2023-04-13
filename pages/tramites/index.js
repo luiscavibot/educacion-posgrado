@@ -174,28 +174,28 @@ const Index = ({ ultimasNoticias }) => {
 						Formato Único de Trámites
 					</a> */}
 					<a
-						className="font-semibold mb-4 inline-block text-secondary"
+						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
 						href="https://drive.google.com/drive/folders/1wv77kPgQMeulw0iCytGCTSP084Z0ZF2D?usp=sharing"
 						rel="noreferrer noopener">
 						Declaraciones juradas
 					</a>
 					<a
-						className="font-semibold mb-4 inline-block text-secondary"
+						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
 						href="https://drive.google.com/file/d/1Y9VH0Car3ZikXqH4OGewDJV5zscjBV7V/view?usp=sharing"
 						rel="noreferrer noopener">
 						Tarifario de Pregrado
 					</a>
 					<a
-						className="font-semibold mb-4 inline-block text-secondary"
+						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
 						href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/"
 						rel="noreferrer noopener">
 						Módulo de Atención de Trámites
 					</a>
 					<a
-						className="font-semibold mb-4 inline-block text-secondary"
+						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
 						href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/seguimiento-expedientes-unmsm"
 						rel="noreferrer noopener">

@@ -316,7 +316,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 											'_blank'
 										);
 									}}>
-									<HojaVidaIcon className="fill-textColorOne" />
+									<HojaVidaIcon className="fill-blanco" />
 								</Boton>
 								<div className="h-[2px] bg-tertiary/20 mb-5" />
 								<h1 className="text-tertiary font-black mb-2">

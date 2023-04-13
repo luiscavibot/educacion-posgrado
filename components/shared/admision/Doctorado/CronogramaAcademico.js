@@ -23,18 +23,24 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{cronograma.proceso_admision.map((proceso_adm) => {
-							return (
-								<tr
-									key={
-										proceso_adm.actividad +
-										proceso_adm.fecha
-									}>
-									<td>{proceso_adm.actividad}</td>
-									<td>{proceso_adm.fecha}</td>
-								</tr>
-							);
-						})}
+						{cronograma.proceso_admision
+							.filter(
+								(proceso_adm) =>
+									proceso_adm.actividad !=
+									'Entrevista personal presencial o virtual'
+							)
+							.map((proceso_adm) => {
+								return (
+									<tr
+										key={
+											proceso_adm.actividad +
+											proceso_adm.fecha
+										}>
+										<td>{proceso_adm.actividad}</td>
+										<td>{proceso_adm.fecha}</td>
+									</tr>
+								);
+							})}
 					</tbody>
 				</table>
 			</div>
