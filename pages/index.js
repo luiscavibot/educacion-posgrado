@@ -10,7 +10,7 @@ import Carreras from '../components/home/Carreras';
 import Numeros from '../components/home/Numeros';
 import FooterComponent from '../components/shared/FooterComponent';
 import { BASE_URL, SLUG_CARRERA } from '../config/consts';
-import Cenprofarma from '../components/home/Cenprofarma';
+import Unete from '../components/home/Unete';
 import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
 
@@ -56,7 +56,7 @@ export default function Home({
 				<Carreras />
 				<LinksExternos />
 				<Testimonios />
-				<Cenprofarma />
+				<Unete />
 			</main>
 			<FooterComponent />
 		</FHpages>
