@@ -176,7 +176,22 @@ const Tramite = ({ ultimasNoticias }) => {
 						</div>
 					</div>
 					<div className="mx-4 md:mx-0 col-span-2 mb-4 flex flex-col">
-						<p className="font-semibold mb-4">Más trámites</p>
+						{tramites.length > 0 && (
+							<>
+								<p className="font-semibold mb-4">Trámites</p>
+								{tramites.map(({ nombre, enlace }) => {
+									return (
+										<a
+											href=""
+											key={nombre}
+											className="font-semibold mb-4 inline-block text-secondary link">
+											{nombre}
+										</a>
+									);
+								})}
+							</>
+						)}
+						{/* <p className="font-semibold mb-4">Más trámites</p> */}
 						{/* <a
 							className="font-semibold mb-4 inline-block text-secondary"
 							href="">
@@ -197,16 +212,17 @@ const Tramite = ({ ultimasNoticias }) => {
 							href="">
 							Historial académico por años
 						</a> */}
-						{tramites.map(({ nombre, enlace }) => {
-							return (
-								<a
-									href=""
-									key={nombre}
-									className="font-semibold mb-4 inline-block text-secondary link">
-									{nombre}
-								</a>
-							);
-						})}
+						{/* {tramites.length > 0 &&
+							tramites.map(({ nombre, enlace }) => {
+								return (
+									<a
+										href=""
+										key={nombre}
+										className="font-semibold mb-4 inline-block text-secondary link">
+										{nombre}
+									</a>
+								);
+							})} */}
 					</div>
 					{/* <div className="mx-4 md:mx-0 col-start-5 col-span-5 mb-5"> */}
 
@@ -250,20 +266,20 @@ const Tramite = ({ ultimasNoticias }) => {
 export default Tramite;
 
 const tramites = [
-	{
-		nombre: 'Grado académico (Tesis)',
-		enlace: '',
-	},
-	{
-		nombre: 'Título profesional (Tesis)',
-		enlace: '',
-	},
-	{
-		nombre: 'Certificado de estudios por semestres académicos',
-		enlace: '',
-	},
-	{
-		nombre: 'Historial académico por años',
-		enlace: '',
-	},
+	// {
+	// 	nombre: 'Grado académico (Tesis)',
+	// 	enlace: '',
+	// },
+	// {
+	// 	nombre: 'Título profesional (Tesis)',
+	// 	enlace: '',
+	// },
+	// {
+	// 	nombre: 'Certificado de estudios por semestres académicos',
+	// 	enlace: '',
+	// },
+	// {
+	// 	nombre: 'Historial académico por años',
+	// 	enlace: '',
+	// },
 ];
