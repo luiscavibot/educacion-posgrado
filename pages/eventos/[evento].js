@@ -37,7 +37,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 	};
 	const getValidarFecha = (inicio, final) => {
 		const fechaActual = new Date();
-		return fechaActual >= inicio && fechaActual < final ? true : false;
+		return fechaActual < final ? true : false;
 	};
 
 	return (
@@ -88,15 +88,17 @@ const Evento = ({ evento, ultimosEventos }) => {
 										)}
 									</p>
 								</div>
-								{/* <div className="mb-6">
-									<p>
-										<HorarioIcon className="fill-tertiary inline relative bottom-[2px] mr-1" />
-										<span className="text-tertiary font-bold pl-1">
-											Horario
-										</span>
-									</p>
-									<p className="ml-7">{}</p>
-								</div> */}
+								{/* {evento.horario !== '' && (
+									<div className="mb-6">
+										<p>
+											<HorarioIcon className="fill-tertiary inline relative bottom-[2px] mr-1" />
+											<span className="text-tertiary font-bold pl-1">
+												Horario
+											</span>
+										</p>
+										<p className="ml-7">{evento.horario}</p>
+									</div>
+								)} */}
 								<div className="mb-6">
 									<p>
 										<LugarEvento className="fill-tertiary inline relative bottom-[2px] mr-1" />
