@@ -25,11 +25,11 @@ const PrincipalLayout = ({ children, metaTags }) => {
 							{children}
 						</section>
 					</div>
-					<div className="fixed inset-y-0 pt-[25rem] w-14 right-0 md:block hidden">
+					{/* <div className="fixed inset-y-0 pt-[25rem] w-14 right-0 md:block hidden">
 						<div ref={refSocialMedia}>
 							<SocialMediaAside />
 						</div>
-					</div>
+					</div> */}
 					<div ref={refFooter} id="footerId">
 						<FooterComponent />
 					</div>
