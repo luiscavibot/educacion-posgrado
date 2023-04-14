@@ -22,7 +22,7 @@ const Carreras = () => {
 						Carreras
 					</h2>
 					<Link href="/formacion-academica/pregrado" passHref>
-						<a className="text-lg text-secondary font-bold flex items-end hover:text-textColorOne">
+						<a className="text-lg text-primary font-bold flex items-end hover:text-textColorOne">
 							<span className="ml-2">|</span>
 							<p className="ml-2">ver más</p>
 						</a>
