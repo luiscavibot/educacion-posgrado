@@ -30,7 +30,7 @@ const PortadaHome = ({ eventos }) => {
 						muted={true}
 						className="fixed left-0 top-0 object-cover w-screen h-screen -z-10">
 						<source
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/video-home-quimica-v2.mp4"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/video-home-quimica.mp4"
 							type="video/mp4"
 						/>
 					</video>
