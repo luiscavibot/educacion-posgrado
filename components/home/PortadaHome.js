@@ -19,6 +19,7 @@ const PortadaHome = ({ eventos }) => {
 	return (
 		<section className="relative w-full flex flex-col h-screen">
 			<div className=" h-full">
+				<div className="bg-negroPuro/50 bg-bgGradiente absolute w-full h-full inset-0"></div>
 				<div id="bg-video-img">
 					<video
 						aria-describedby="hero-video-description"
