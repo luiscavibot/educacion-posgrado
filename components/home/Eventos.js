@@ -60,8 +60,8 @@ const Eventos = ({
 										key={evento.id}
 										className={`${
 											evento.id === selectedEvent?.id &&
-											'bg-rojoBase'
-										} grid grid-flow-col grid-cols-[min-content_auto] gap-4 px-4 py-2 transition-colors duration-300 text-disabled hover:text-textColorTwo/60`}>
+											'bg-disabled/25 !text-textColorTwo'
+										} grid grid-flow-col grid-cols-[min-content_auto] gap-4 px-4 py-2 transition-colors duration-300 cursor-pointer rounded-lg text-disabled hover:text-textColorTwo/60`}>
 										<div className="bg-textColorTwo/10 w-12 h-12 rounded-lg flex flex-col items-center justify-center">
 											<div className="font-bold text-xl leading-none text-center">
 												{getDia(evento.fecha_inicio)}
@@ -87,9 +87,14 @@ const Eventos = ({
 										key={evento.id}
 										className={`${
 											evento.id === selectedEvent?.id &&
-											'bg-rojoBase'
-										} grid grid-flow-col grid-cols-[min-content_auto] gap-4 px-4 py-2 transition-colors duration-300 text-textColorTwo hover:text-secondary`}>
-										<div className="bg-textColorTwo/10 w-12 h-12 rounded-lg flex flex-col items-center justify-center">
+											'bg-secondary/10 !text-secondary'
+										} grid grid-flow-col grid-cols-[min-content_auto] gap-4 px-4 py-2 transition-colors duration-300 cursor-pointer rounded-lg text-textColorTwo hover:text-secondary`}>
+										<div
+											className={`${
+												evento.id ===
+													selectedEvent?.id &&
+												'bg-secondary/10'
+											} bg-textColorTwo/10 w-12 h-12 rounded-lg flex flex-col items-center justify-center`}>
 											<div className="font-bold text-xl leading-none text-center">
 												{getDia(evento.fecha_inicio)}
 											</div>
