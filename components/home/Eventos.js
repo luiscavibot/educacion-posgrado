@@ -50,8 +50,8 @@ const Eventos = ({
 					</Link>
 				</div>
 				<div className="col-start-2 col-span-10 flex mb-9 bg-blanco shadow-submenu rounded-lg py-11 px-8">
-					<div className="flex flex-row w-full">
-						<div className="basis-2/5 flex flex-col gap-1">
+					<div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full">
+						<div className="basis-2/5 flex flex-col gap-1 md:pr-8">
 							{eventosNoVigentes &&
 								eventosNoVigentes.length > 0 &&
 								eventosNoVigentes.map((evento) => (
@@ -72,8 +72,8 @@ const Eventos = ({
 												).substring(0, 3)}
 											</div>
 										</div>
-										<div className="flex flex-col space-y-3 line-clamp-2">
-											<p className="text-sm font-semibold">
+										<div className="flex flex-col space-y-3">
+											<p className="text-sm font-semibold line-clamp-2">
 												{evento.titulo}
 											</p>
 										</div>
@@ -104,44 +104,48 @@ const Eventos = ({
 												).substring(0, 3)}
 											</div>
 										</div>
-										<div className="flex flex-col space-y-3 line-clamp-2">
-											<p className="text-sm font-semibold">
+										<div className="flex flex-col space-y-3">
+											<p className="text-sm font-semibold line-clamp-2">
 												{evento.titulo}
 											</p>
 										</div>
 									</div>
 								))}
 						</div>
-						<div className="basis-3/5 flex justify-center">
-							<div className="flex flex-col justify-center">
+						<div className="basis-3/5 flex justify-center md:pl-8">
+							<div className="flex flex-col justify-center w-full max-w-[523px]">
 								{selectedEvent && (
 									<>
-										<div className="relative max-w-full w-[523px] h-[184px] rounded-lg overflow-hidden mb-4">
-											<Image
-												quality={100}
-												src={selectedEvent.foto}
-												width={502}
-												height={335}
-												className=" absolute object-cover w-full h-[184px]"
-											/>
-											<Link href={''}>
-												<a className="rounded-lg absolute bottom-4 right-4 bg-primary text-blanco p-3">
-													Ver más
-												</a>
-											</Link>
+										<div className="flex justify-center">
+											<div className="relative max-w-full w-full h-[184px] rounded-lg overflow-hidden mb-4">
+												<Image
+													quality={100}
+													src={selectedEvent.foto}
+													width={502}
+													height={335}
+													className=" absolute object-cover w-full h-[184px]"
+												/>
+												<Boton
+													text="Ver más"
+													link={`/eventos/${selectedEvent.slug}`}
+													className="absolute bottom-4 right-4"
+												/>
+											</div>
 										</div>
-										<p className="text-textColorOne text-sm font-bold mb-3">
+										<p className="text-textColorOne text-sm font-bold mb-2 line-clamp-3">
 											{selectedEvent.titulo}
 										</p>
-										<div className="text-textColorTwo text-sm grid grid-cols-2">
-											<div>
+										<div className="text-textColorTwo text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
+											<div className="order-1">
 												Del 5 al 12 de enero del 2023
 											</div>
-											<div className="order-2">
+											<div className="order-2 md:order-3">
 												10:00 a.m.
 											</div>
-											<div>Google meet</div>
-											<div>
+											<div className="order-3 md:order-2">
+												{selectedEvent.lugar}
+											</div>
+											<div className="order-4">
 												Organizador: Grupo de
 												estudiantes
 											</div>
