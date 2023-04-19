@@ -12,7 +12,7 @@ const Unete = () => {
 			whileInView="onscreen"
 			viewport={{ once: true, amount: 0.3 }}
 			id="unete"
-			className="">
+			className="bg-homebg2/40 py-14 md:py-18">
 			<motion.div
 				variants={entradaCardScroll}
 				className="container mx-auto px-3 grid-cols-12 gap-x-4 grid text-textColorTwo">

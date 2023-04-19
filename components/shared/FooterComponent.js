@@ -8,10 +8,10 @@ import { AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
 import UbicacionStroke from './../icons/UbicacionStroke';
 import TelefonoStroke from './../icons/TelefonoStroke';
 
-const FooterComponent = () => {
+const FooterComponent = ({ inHome }) => {
 	return (
-		<footer>
-			<div className="bg-blanco">
+		<footer className="bg-blanco">
+			<div className={`${inHome && 'bg-homebg2/40'}`}>
 				<div className="h-[50px] overflow-hidden">
 					<svg
 						viewBox="0 0 500 150"

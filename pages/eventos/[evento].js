@@ -3,7 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 import Boton from '../../components/shared/Boton';
-import { getFecha, getDia, getMes3Letras } from '../../helpers/getFecha';
+import {
+	// getFecha,
+	getDia,
+	getMes3Letras,
+	getDuracionFecha,
+} from '../../helpers/getFecha';
 import Cargando from '../../components/resultados/Cargando';
 import CompartirIcon from '../../components/icons/CompartirIcon';
 import FechaEvento from '../../components/icons/FechaEvento';
@@ -28,13 +33,13 @@ const Evento = ({ evento, ultimosEventos }) => {
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
-	const getEventsDate = (inicio, final) => {
-		if (inicio === final) {
-			return getFecha(inicio);
-		} else {
-			return `Del ${getFecha(inicio)} al ${getFecha(final)}`;
-		}
-	};
+	// const getEventsDate = (inicio, final) => {
+	// 	if (inicio === final) {
+	// 		return getFecha(inicio);
+	// 	} else {
+	// 		return `Del ${getFecha(inicio)} al ${getFecha(final)}`;
+	// 	}
+	// };
 	const getValidarFecha = (inicio, final) => {
 		const fechaActual = new Date();
 		return fechaActual < final ? true : false;
@@ -82,7 +87,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 										</span>
 									</p>
 									<p className="ml-7">
-										{getEventsDate(
+										{getDuracionFecha(
 											evento.fecha_inicio,
 											evento.fecha_final
 										)}
@@ -130,7 +135,9 @@ const Evento = ({ evento, ultimosEventos }) => {
 									</div>
 								) : (
 									<div className="mt-5 ml-2">
-										<button disabled className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente disabled:">
+										<button
+											disabled
+											className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente disabled:">
 											Añadir a mi calendario
 										</button>
 									</div>

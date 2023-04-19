@@ -38,7 +38,7 @@ export default function Home({
 			</div>
 			<BuscadorGeneral />
 			<PortadaHome />
-			<main className="bg-blanco py-14 md:py-18">
+			<main className="bg-blanco pt-14 md:pt-18">
 				{isOpenBanner && (
 					<div className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid mb-14 md:mb-18 mt-6">
 						<div className="col-start-2 col-span-10">
@@ -64,7 +64,7 @@ export default function Home({
 				<Testimonios />
 				<Unete />
 			</main>
-			<FooterComponent />
+			<FooterComponent inHome />
 		</FHpages>
 	);
 }

@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
+
 import { FaChevronRight } from 'react-icons/fa';
+import FechaEventosHomeIcon from '../icons/FechaEventosHomeIcon';
+import HorarioEventosHomeIcon from '../icons/HorarioEventosHomeIcon';
+import LugarEventosHomeIcon from '../icons/LugarEventosHomeIcon';
+import OrganizadorEventosHomeIcon from '../icons/OrganizadorEventosHomeIcon';
+
 import { motion } from 'framer-motion';
 import { entradaCardScroll } from '../../consts/animaciones';
 import Boton from '../shared/Boton';
-import { getFecha, getDia, getMes } from '../../helpers/getFecha';
+import {
+	getDuracionFecha,
+	// getFecha,
+	getDia,
+	// getMes,
+	getMes3Letras,
+} from '../../helpers/getFecha';
 
 const Eventos = ({
 	eventosVigentes,
@@ -67,9 +79,12 @@ const Eventos = ({
 												{getDia(evento.fecha_inicio)}
 											</div>
 											<div className="font-bold text-sm leading-none text-center">
-												{getMes(
+												{/* {getMes(
+                                                    evento.fecha_inicio
+                                                ).substring(0, 3)} */}
+												{getMes3Letras(
 													evento.fecha_inicio
-												).substring(0, 3)}
+												)}
 											</div>
 										</div>
 										<div className="flex flex-col space-y-3">
@@ -99,9 +114,12 @@ const Eventos = ({
 												{getDia(evento.fecha_inicio)}
 											</div>
 											<div className="font-bold text-sm leading-none text-center">
-												{getMes(
+												{/* {getMes(
 													evento.fecha_inicio
-												).substring(0, 3)}
+												).substring(0, 3)} */}
+												{getMes3Letras(
+													evento.fecha_inicio
+												)}
 											</div>
 										</div>
 										<div className="flex flex-col space-y-3">
@@ -119,6 +137,7 @@ const Eventos = ({
 										<div className="flex justify-center">
 											<div className="relative max-w-full w-full h-[184px] rounded-lg overflow-hidden mb-4">
 												<Image
+													alt="imagen evento"
 													quality={100}
 													src={selectedEvent.foto}
 													width={502}
@@ -137,17 +156,40 @@ const Eventos = ({
 										</p>
 										<div className="text-textColorTwo text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
 											<div className="order-1">
-												Del 5 al 12 de enero del 2023
+												<p>
+													<FechaEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px] mr-[6px]" />
+													{getDuracionFecha(
+														selectedEvent.fecha_inicio,
+														selectedEvent.fecha_final
+													)}
+												</p>
 											</div>
 											<div className="order-2 md:order-3">
-												10:00 a.m.
+												{selectedEvent.horario && (
+													<p>
+														<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
+														{selectedEvent.horario}
+													</p>
+												)}
 											</div>
 											<div className="order-3 md:order-2">
-												{selectedEvent.lugar}
+												{selectedEvent.lugar && (
+													<p>
+														<LugarEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px] mr-[6px]" />
+														{selectedEvent.lugar}
+													</p>
+												)}
 											</div>
-											<div className="order-4">
-												Organizador: Grupo de
-												estudiantes
+											<div className="order-4 line-clamp-1">
+												{selectedEvent.organizador && (
+													<p>
+														<OrganizadorEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
+														Organizador:{' '}
+														{
+															selectedEvent.organizador
+														}
+													</p>
+												)}
 											</div>
 										</div>
 									</>

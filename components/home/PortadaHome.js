@@ -43,13 +43,13 @@ const PortadaHome = ({ eventos }) => {
 						<p className="text-lg mt-2">
 							Universidad Nacional Mayor de San Marcos
 						</p>
-						<RedesSocialesHome
+						{/* <RedesSocialesHome
 							className="text-lg mt-5"
 							facebook="https://www.facebook.com/fqiq.unmsm.1946"
 							// youtube="https://www.youtube.com/@UNMSMFarmacia"
 							// twitter="https://twitter.com/UNMSMFarmacia"
 							// instagram="https://www.instagram.com/unmsmfarmacia/"
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>
