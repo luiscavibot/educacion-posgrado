@@ -95,7 +95,7 @@ const FooterComponent = ({ inHome }) => {
 								</Link>
 							</p>
 							<p className="">
-								<Link href="//comunicados">
+								<Link href="/comunicados">
 									<a>Comunicados</a>
 								</Link>
 							</p>
