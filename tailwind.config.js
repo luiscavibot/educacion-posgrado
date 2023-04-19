@@ -23,6 +23,8 @@ module.exports = {
 					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/facultad-header.png")',
 				bgEstadistica:
 					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/fondo-estadisticas.png")',
+				bgGradiente:
+					'linear-gradient(180deg,#000000b3,#0000001a 25%,#0000 50%);',
 			},
 			fontFamily: {
 				lato: 'Lato',
@@ -100,6 +102,7 @@ module.exports = {
 			textColorOne: '#3A464F',
 			textColorTwo: '#54626C',
 			footerOne: '#202124',
+			homebg2: '#DEE3F7',
 
 			rojoBase: '#9E1D1F',
 			blanco: '#FFFFFF',
