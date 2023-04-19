@@ -6,6 +6,7 @@ import BuscadorGeneral from '../components/shared/BuscadorGeneral';
 import PortadaHome from '../components/home/PortadaHome';
 import Noticias from '../components/home/Noticias';
 import Comunicados from '../components/home/Comunicados';
+import Eventos from '../components/home/Eventos';
 import Carreras from '../components/home/Carreras';
 import Numeros from '../components/home/Numeros';
 import FooterComponent from '../components/shared/FooterComponent';
@@ -20,7 +21,8 @@ import { BannerAdmision } from '../components/admision/BannerAdmision';
 export default function Home({
 	noticiasDestacadas,
 	noticias,
-	eventos,
+	eventosVigentes,
+	eventosNoVigentes,
 	carrerasEnProceso,
 }) {
 	const [isOpenHeader, setIsOpenHeader] = useState(carrerasEnProceso);
@@ -35,7 +37,7 @@ export default function Home({
 				<SubMenu theme="tertiary" color="blanco" />
 			</div>
 			<BuscadorGeneral />
-			<PortadaHome eventos={eventos} />
+			<PortadaHome />
 			<main className="bg-blanco py-14 md:py-18">
 				{isOpenBanner && (
 					<div className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid mb-14 md:mb-18 mt-6">
@@ -53,6 +55,10 @@ export default function Home({
 				/>
 				<Comunicados />
 				{/* <Numeros /> */}
+				<Eventos
+					eventosVigentes={eventosVigentes}
+					eventosNoVigentes={eventosNoVigentes}
+				/>
 				<Carreras />
 				<LinksExternos />
 				<Testimonios />
@@ -74,9 +80,27 @@ export async function getStaticProps() {
 	const resNoticias = await fetch(`${BASE_URL}${urlNoticias}`);
 	const noticias = await resNoticias.json();
 
-	const urlEventos = `/eventos/${SLUG_CARRERA}/ultimos-vigentes`;
-	const resEventos = await fetch(`${BASE_URL}${urlEventos}`);
-	const eventos = await resEventos.json();
+	// const eventos = [];
+
+	const urlEventosVigentes = `/eventos/${SLUG_CARRERA}/?estado=true&vigentes=true&limit=100`;
+	const resEventosVigentes = await fetch(`${BASE_URL}${urlEventosVigentes}`);
+	const eventosVigentesJSON = await resEventosVigentes.json();
+	const eventosVigentes = eventosVigentesJSON.items;
+
+	// si eventosVigentes.length < 5, traer los eventos no vigentes tal que la suma de los dos sea 5
+
+	let eventosNoVigentes = [];
+	if (eventosVigentes.length < 5) {
+		const urlEventosNoVigentes = `/eventos/${SLUG_CARRERA}/?estado=true&noVigentes=true&limit=${
+			5 - eventosVigentes.length
+		}`;
+		const resEventosNoVigentes = await fetch(
+			`${BASE_URL}${urlEventosNoVigentes}`
+		);
+		const eventosNoVigentesJSON = await resEventosNoVigentes.json();
+		const preEventosNoVigentes = eventosNoVigentesJSON.items;
+		eventosNoVigentes = preEventosNoVigentes;
+	}
 
 	const resCarrerasPregrado = await fetch(
 		`${BASE_URL}/carreras/${SLUG_CARRERA}?tipo=posgrado`
@@ -90,7 +114,8 @@ export async function getStaticProps() {
 		props: {
 			noticiasDestacadas,
 			noticias,
-			eventos,
+			eventosVigentes,
+			eventosNoVigentes,
 			carrerasEnProceso,
 		},
 		revalidate: 400,
