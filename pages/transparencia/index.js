@@ -46,7 +46,7 @@ const Index = ({ years }) => {
 					<div className="relative h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							src={
-								'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/transparencia/banner-transparencia.jpg'
+								'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/transparencia/transparencia-fac-quimica_.jpg'
 							}
 							layout="responsive"
 							width={1343}

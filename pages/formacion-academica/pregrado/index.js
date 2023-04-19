@@ -44,7 +44,7 @@ const Index = ({ CarrerasEnProceso }) => {
 								<div className="absolute h-full w-full -z-10">
 									<Image
 										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-ingenieria-quimica-facultad-unmsm.jpg'
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/eap-ingenieria-quimica-facultad-unmsm.jpg'
 										}
 										className="object-center object-cover"
 										fill
@@ -87,7 +87,7 @@ const Index = ({ CarrerasEnProceso }) => {
 								<div className="absolute h-full w-full -z-10">
 									<Image
 										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-quimica-facultad-unmsm.jpg'
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/eap-quimica-facultad-unmsm+.jpg'
 										}
 										className="object-center object-cover"
 										fill
@@ -130,7 +130,7 @@ const Index = ({ CarrerasEnProceso }) => {
 								<div className="absolute h-full w-full -z-10">
 									<Image
 										src={
-											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/minihome/minihome-eap-ingenieria-agroindustrial-facultad-unmsm.jpg'
+											'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/pregrado/eap-ingenieria-agroindustrial-facultad-unmsm.jpg'
 										}
 										className="object-center object-cover"
 										fill

@@ -88,7 +88,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 										)}
 									</p>
 								</div>
-								{/* {evento.horario !== '' && (
+								{evento.horario && (
 									<div className="mb-6">
 										<p>
 											<HorarioIcon className="fill-tertiary inline relative bottom-[2px] mr-1" />
@@ -98,7 +98,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 										</p>
 										<p className="ml-7">{evento.horario}</p>
 									</div>
-								)} */}
+								)}
 								<div className="mb-6">
 									<p>
 										<LugarEvento className="fill-tertiary inline relative bottom-[2px] mr-1" />
@@ -130,7 +130,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 									</div>
 								) : (
 									<div className="mt-5 ml-2">
-										<button className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente">
+										<button disabled className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente disabled:">
 											Añadir a mi calendario
 										</button>
 									</div>
