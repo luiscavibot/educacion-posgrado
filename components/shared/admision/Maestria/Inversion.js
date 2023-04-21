@@ -74,9 +74,9 @@ export const Inversion = () => {
 							S/. 350.00
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Bachiller
-							UNMSM, personal administrativo de la UNMSM, docente
-							de Universidades Nacionales y Magisterio Nacional.
+							Para bachiller UNMSM, personal administrativo de la
+							UNMSM, docente de universidades nacionales y
+							Magisterio Nacional.
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
@@ -84,8 +84,7 @@ export const Inversion = () => {
 							S/. 450.00
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Postulantes
-							graduados de otras universidades.
+							Para postulantes graduados de otras universidades.
 						</p>
 					</div>
 				</div>
@@ -138,9 +137,9 @@ export const Inversion = () => {
 							<span>Transacción</span>: 9650 + código: 9700
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Bachiller
-							UNMSM, personal administrativo de la UNMSM, docente
-							de Universidades nacionales y Magisterio Nacional.
+							Para bachiller UNMSM, personal administrativo de la
+							UNMSM, docente de Universidades nacionales y
+							Magisterio Nacional.
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
@@ -151,8 +150,7 @@ export const Inversion = () => {
 							<span>Transacción</span>: 9650 + código: 9701
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Postulantes
-							graduados de otras universidades.
+							Para postulantes graduados de otras universidades.
 						</p>
 					</div>
 				</div>
@@ -178,7 +176,7 @@ export const Inversion = () => {
 						// className="hover:-translate-y-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm hover:shadow-md duration-300 bg-blanco text-secondary font-semibold inline-flex place-items-center ml-3"
 					>
 						{/* <BsYoutube className="inline mr-3 text-lg" /> */}
-						<span className="link">tutorial</span>
+						<span className="link">tutorial.</span>
 					</button>
 				</p>
 				<p className="font-bold mb-3">
@@ -218,7 +216,7 @@ export const Inversion = () => {
 					<p>
 						Las solicitudes de devolución de dinero del pago por
 						derecho de inscripción se tramitan una vez finalizado el
-						presente proceso de admisión, si el programa ha sido
+						presente proceso de admisión si el programa ha sido
 						cancelado.
 					</p>
 				</div>
