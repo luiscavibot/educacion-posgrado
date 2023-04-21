@@ -63,7 +63,7 @@ const Eventos = ({
 				</div>
 				<div className="col-start-2 col-span-10 flex mb-9 bg-blanco shadow-submenu rounded-lg py-4 md:py-11 px-4 md:px-8">
 					<div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full">
-						<div className="basis-2/5 flex flex-col gap-1 md:pr-8">
+						<div className="md:basis-2/5 flex flex-col gap-1 md:pr-8 h-[336px] overflow-auto">
 							{eventosNoVigentes &&
 								eventosNoVigentes.length > 0 &&
 								eventosNoVigentes.map((evento) => (
@@ -130,7 +130,7 @@ const Eventos = ({
 									</div>
 								))}
 						</div>
-						<div className="basis-3/5 flex justify-center md:pl-8">
+						<div className="md:basis-3/5 flex justify-center md:pl-8">
 							<div className="flex flex-col justify-center w-full max-w-[523px]">
 								{selectedEvent && (
 									<>
