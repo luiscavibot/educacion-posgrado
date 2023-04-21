@@ -30,7 +30,7 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 1:</p>
 						<p>
-							Te recomendamos
+							Te recomendamos{' '}
 							<span className="font-bold">visualizar el </span>
 							<Link href="/admision/posgrado?programa=maestria&tab=cronograma-academico">
 								<a className="link"> cronograma académico </a>
@@ -72,8 +72,7 @@ export const GuiaAdmisionMaestria = () => {
 								establecidos
 							</span>{' '}
 							por la Dirección General de Estudios de Posgrado
-							(DGEP) para postular a los programas de maestrías y
-							doctorados
+							(DGEP) para postular a los programas de maestrías.
 						</p>
 					</div>
 				</div>
@@ -90,7 +89,7 @@ export const GuiaAdmisionMaestria = () => {
 								target="_blank"
 								href="https://posgrado.unmsm.edu.pe/documentos/resumen-hv-postulante.pdf"
 								rel="noreferrer noopener">
-								llena la hoja de vida
+								llena la hoja de vida.
 							</a>
 						</p>
 					</div>
@@ -138,8 +137,8 @@ export const GuiaAdmisionMaestria = () => {
 							<span className="font-bold">
 								y registrar tus datos.
 							</span>{' '}
-							Una vez que finalices el registro de datos, se
-							generará tu código de postulante.
+							Finalizado el registro de datos, se generará tu
+							código de postulante.
 						</p>
 					</div>
 				</div>
@@ -207,7 +206,7 @@ export const GuiaAdmisionMaestria = () => {
 			</div>
 			<div>
 				<p className="font-bold mb-2">
-					¿Quieres saber más de este proceso de admisión?n
+					¿Quieres saber más de este proceso de admisión?
 				</p>
 				<p className="mb-2">
 					¡No te preocupes! Estamos aquí para ayudarte{' '}
