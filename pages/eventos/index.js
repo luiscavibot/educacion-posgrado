@@ -102,7 +102,7 @@ const Eventos = () => {
 			</div> */}
 			{eventosProxUlt && eventosProxUlt.length > 0 && (
 				<div className="col-span-full mb-2">
-					<div className="text-textColorTwo font-bold text-xl mb-6 px-4 md:px-0">
+					<div className="text-secondary font-bold text-xl mb-6 px-4 md:px-0">
 						Próximos eventos
 					</div>
 					<div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-9 px-8 md:px-0">
@@ -123,11 +123,11 @@ const Eventos = () => {
 
 			{eventosPasUlt && eventosPasUlt.length > 0 && (
 				<div className="col-span-full mb-2">
-					<div className="text-textColorTwo font-bold text-xl mb-6 px-4 md:px-0">
+					<div className="text-secondary font-bold text-xl mb-6 px-4 md:px-0">
 						Eventos pasados
 					</div>
 					<div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-9 px-8 md:px-0">
-						<CardsEventosProximos eventos={eventosPasUlt} />
+						<CardsEventosPasados eventos={eventosPasUlt} />
 					</div>
 					<div className="flex justify-center">
 						<Link href="/eventos/eventos-pasados">

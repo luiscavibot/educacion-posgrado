@@ -44,7 +44,7 @@ const CardsEventosPasados = ({ eventos }) => {
 								</div>
 								<div className="text-content flex flex-col p-5">
 									<div className="grid grid-cols-[45px_auto] gap-x-4 mb-[14px]">
-										<div className="w-[45px] h-[45px] rounded-lg bg-tertiary text-blanco flex flex-col text-center justify-center">
+										<div className="w-[45px] h-[45px] rounded-lg bg-textColorTwo text-blanco flex flex-col text-center justify-center">
 											<span className="text-xl leading-none">
 												{getDia(evento.fecha_inicio)}
 											</span>

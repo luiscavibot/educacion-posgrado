@@ -20,8 +20,8 @@ const CardsEventosProximos = ({ eventos }) => {
 							<a
 								// key={evento.attributes.slug}
 								key={evento.titulo}
-								className="group min-h-[6.2rem] md:min-h-[8.4rem] animate__animated animate__fadeIn mb-6 md:mb-10 bg-blanco cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105">
-								<div className="relative w-full h-[200px]">
+								className="card !rounded-t-none mb-6">
+								<div className="relative w-full h-[200px] hidden md:block">
 									<Image
 										layout="fill"
 										objectFit="cover"
@@ -44,7 +44,7 @@ const CardsEventosProximos = ({ eventos }) => {
 								</div>
 								<div className="text-content flex flex-col p-5">
 									<div className="grid grid-cols-[45px_auto] gap-x-4 mb-[14px]">
-										<div className="w-[45px] h-[45px] rounded-lg bg-textColorTwo text-blanco flex flex-col text-center justify-center">
+										<div className="w-[45px] h-[45px] rounded-lg bg-secondary text-blanco flex flex-col text-center justify-center">
 											<span className="text-xl leading-none">
 												{getDia(evento.fecha_inicio)}
 											</span>

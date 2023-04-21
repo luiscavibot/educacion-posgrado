@@ -178,7 +178,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							</Link>
 						</div>
 					</div> */}
-					<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
+					{/* <div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 						<div>
 							<p className="font-bold text-center">
 								Admisión Posgrado 2023-I
@@ -202,7 +202,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							rel="noopener noreferrer">
 							Ver brochure
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 			<div className="col-span-full mb-14">
@@ -332,25 +332,6 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 								)}
 							</div>
 							<div className="col-span-full md:col-span-2">
-								<div className="mb-5">
-									<p className="mb-1 text-tertiary">
-										<span className="font-bold">
-											Más información
-										</span>
-									</p>
-									<p className="mb-3">
-										Si tienes alguna consulta, descuida,
-										nuestro equipo estará encantado de
-										ayudarte.
-									</p>
-									<div>
-										<button
-											className="flex gap-x-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm duration-100 bg-transparent border  border-secondary text-secondary hover:bg-secondary/20"
-											onClick={() => handleOpen()}>
-											Contáctanos
-										</button>
-									</div>
-								</div>
 								{coordinadores && coordinadores.length > 0 && (
 									<>
 										<div className="mb-5">
@@ -380,9 +361,27 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 												)}
 											</p>
 										</div>
-										{/* <div className="w-full h-[2px] bg-tertiary/50 rounded-lg mb-5"></div> */}
+										<div className="h-[2px] bg-tertiary/20 mb-5" />
 									</>
 								)}
+								<div className="mb-5">
+									<p className="mb-1 text-tertiary">
+										<span className="font-black">
+											Más información
+										</span>
+									</p>
+									<p className="mb-3">
+										Si tienes alguna consulta, descuida,
+										nuestro equipo estará encantado de
+										ayudarte.
+									</p>
+									<Boton
+										text="Contáctanos"
+										secondary
+										bold
+										onClick={() => handleOpen()}
+									/>
+								</div>
 
 								{/* <div>
 									{coordinadores &&
@@ -462,7 +461,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 								/>
 							</span>
 							<p className="text-xl font-bold mb-1">
-								¿Te gustaría saber más sobre este programa?
+								¿Quieres conocer más sobre esta carrera?
 							</p>
 							<p className="text-sm mb-5 md:mt-0 md:max-w-xs m-auto">
 								¡Nuestro equipo se encuentra listo para
@@ -472,7 +471,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							<div>
 								<Boton
 									className="m-auto"
-									text="Contáctanos"
+									text="Compartir"
 									primary
 									onClick={() => handleOpen()}
 								/>

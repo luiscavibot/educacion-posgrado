@@ -259,7 +259,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 								)}
 							</div>
 							<div className="col-span-10 md:col-span-2">
-								{directores &&
+								{/* {directores &&
 									directores.length > 0 &&
 									directores[0].docentes.foto && (
 										<div className="mb-6">
@@ -277,105 +277,64 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 												className="w-full object-cover"
 											/>
 										</div>
-									)}
+									)} */}
 
 								{directores &&
 									directores.length > 0 &&
 									directores[0].docentes.grado &&
 									directores[0].docentes.nombre && (
-										<div>
-											<p className="mb-1 text-tertiary">
-												<span className="font-black">
-													Director/a
-												</span>
-											</p>
-											<p className="mb-3">
-												<span>
-													{
+										<>
+											<div>
+												<p className="mb-1 text-tertiary">
+													<span className="font-black">
+														Director/a
+													</span>
+												</p>
+												<p className="mb-3">
+													<span>
+														{
+															directores[0]
+																.docentes.grado
+														}
+														.
+													</span>{' '}
+													<span>
+														{
+															directores[0]
+																.docentes.nombre
+														}
+													</span>
+												</p>
+											</div>
+											<Boton
+												text="Hoja de vida"
+												className="mb-5"
+												bold
+												onClick={() => {
+													window.open(
 														directores[0].docentes
-															.grado
-													}
-													.
-												</span>{' '}
-												<span>
-													{
-														directores[0].docentes
-															.nombre
-													}
-												</span>
-											</p>
-										</div>
+															?.hojaDeVida,
+														'_blank'
+													);
+												}}>
+												<HojaVidaIcon className="fill-blanco" />
+											</Boton>
+											<div className="h-[2px] bg-tertiary/20 mb-5" />
+										</>
 									)}
-								<Boton
-									text="Hoja de vida"
-									className="mb-5"
-									bold
-									onClick={() => {
-										window.open(
-											directores[0].docentes?.hojaDeVida,
-											'_blank'
-										);
-									}}>
-									<HojaVidaIcon className="fill-blanco" />
-								</Boton>
-								<div className="h-[2px] bg-tertiary/20 mb-5" />
 								<h1 className="text-tertiary font-black mb-2">
-									Informes
+									Más información
 								</h1>
-								<div className="text-sm font">
-									<p className="mb-1 text-tertiary">
-										<span>
-											<CorreoSmallIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-										</span>
-										<span className="font-bold">
-											Correo
-										</span>
-									</p>
-									<div className="mb-3 break-words">
-										<p className="mb-1">
-											{carrera[0].correo || ''}
-										</p>
-									</div>
-									<p className="mb-1 text-tertiary">
-										<span>
-											<TelefonoSmallIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-										</span>
-										<span className="font-bold">
-											Teléfono
-										</span>
-									</p>
-									<div className="mb-3 break-words">
-										<p className="mb-1">
-											{carrera[0].telefono || ''}
-										</p>
-									</div>
-									{/* <p className="mb-1 text-tertiary">
-										<span>
-											<DireccionSmallIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-										</span>
-										<span className="font-bold">
-											Dirección
-										</span>
-									</p>
-									<div className="mb-3 break-words">
-										<p className="mb-1">
-											{carrera[0].direccion || ''}
-										</p>
-									</div>
-									<p className="mb-1 text-tertiary">
-										<span>
-											<HorarioIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-										</span>
-										<span className="font-bold">
-											Atención presencial
-										</span>
-									</p>
-									<div className="mb-3 break-words">
-										<p className="mb-1">
-											{carrera[0].horario || ''}
-										</p>
-									</div> */}
-								</div>
+								<p className="mb-3">
+									Si tienes alguna consulta, descuida, nuestro
+									equipo estará encantado de ayudarte.
+								</p>
+								<Boton
+									text="Contáctanos"
+									secondary
+									bold
+									onClick={() => handleOpen()}
+								/>
 							</div>
 						</div>
 					</div>
@@ -387,9 +346,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 							ogUrl={ogUrl}
 						/>
 					</div>
-					<div
-						label="Admisión"
-						link="/admision/pregrado"></div>
+					<div label="Admisión" link="/admision/pregrado"></div>
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14">
@@ -418,7 +375,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 								/>
 							</span>
 							<p className="text-xl font-bold mb-1">
-								¿Te gustaría saber más sobre esta carrera?
+								¿Quieres conocer más sobre esta carrera?
 							</p>
 							<p className="text-sm mb-5 md:mt-0 md:max-w-xs m-auto">
 								¡Nuestro equipo se encuentra listo para
@@ -427,7 +384,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 							</p>
 							<div className="flex justify-center">
 								<Boton
-									text="Contáctanos"
+									text="Compartir"
 									primary
 									bold
 									onClick={() => handleOpen()}
