@@ -166,27 +166,27 @@ const Index = ({ ultimasNoticias }) => {
 						<span className="mr-2">Enlaces de interés</span>
 						<LinkExtIcon className="fill-secondary" />{' '}
 					</div>
-					{/* <a
+					<a
 						className="font-semibold mb-4 inline-block text-secondary"
 						target="_blank"
 						href="https://drive.google.com/file/d/1SY466ZoRzTIWGuts9rTFVPZQfTgLLrqx/view"
 						rel="noreferrer noopener">
 						Formato Único de Trámites
-					</a> */}
-					<a
+					</a>
+					{/* <a
 						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
-						href="https://drive.google.com/drive/folders/1wv77kPgQMeulw0iCytGCTSP084Z0ZF2D?usp=sharing"
+						href="https://drive.google.com/file/d/1B67SEzlFmOBZX6Waz97UF3ir5VPEQOpo/view?usp=sharing"
 						rel="noreferrer noopener">
 						Declaraciones juradas
-					</a>
-					<a
+					</a> */}
+					{/* <a
 						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
 						href="https://drive.google.com/file/d/1Y9VH0Car3ZikXqH4OGewDJV5zscjBV7V/view?usp=sharing"
 						rel="noreferrer noopener">
 						Tarifario de Pregrado
-					</a>
+					</a> */}
 					<a
 						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"

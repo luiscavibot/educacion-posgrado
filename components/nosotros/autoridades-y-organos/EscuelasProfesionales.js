@@ -30,7 +30,7 @@ const EscuelasProfesionales = () => {
 				Manual de Organización y Funciones (
 				<a
 					className="link"
-					href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
+					href="https://cdn.www.gob.pe/uploads/document/file/1979591/MOF%20de%20la%20Facultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica..pdf?v=1624896516"
 					target="_blank"
 					rel="noopener noreferrer">
 					MOF
