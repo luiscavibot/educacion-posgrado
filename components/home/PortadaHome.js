@@ -38,7 +38,7 @@ const PortadaHome = ({ eventos }) => {
 				<div className="animate__animated animate__fadeInUp text-blanco top-1/3 absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
 						<h1 className="text-4xl md:text-6xl font-semibold max-w-[37.313rem] text-shadow-1">
-							Facultad de Química e Ingienería Química
+							Facultad de Química e Ingeniería Química
 						</h1>
 						<p className="text-lg mt-2">
 							Universidad Nacional Mayor de San Marcos
