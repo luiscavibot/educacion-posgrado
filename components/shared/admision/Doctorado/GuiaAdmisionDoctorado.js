@@ -72,8 +72,7 @@ export const GuiaAdmisionDoctorado = () => {
 								establecidos
 							</span>{' '}
 							por la Dirección General de Estudios de Posgrado
-							(DGEP) para postular a los programas de maestrías y
-							doctorados.
+							(DGEP) para postular a los programas de doctorados.
 						</p>
 					</div>
 				</div>
@@ -92,6 +91,7 @@ export const GuiaAdmisionDoctorado = () => {
 								rel="noreferrer noopener">
 								llena la hoja de vida
 							</a>
+							.
 						</p>
 					</div>
 				</div>
@@ -138,8 +138,8 @@ export const GuiaAdmisionDoctorado = () => {
 							<span className="font-bold">
 								y registrar tus datos.
 							</span>{' '}
-							Una vez que finalices el registro de datos, se
-							generará tu código de postulante.
+							Finalizado el registro de datos, se generará tu
+							código de postulante.
 						</p>
 					</div>
 				</div>
@@ -208,7 +208,7 @@ export const GuiaAdmisionDoctorado = () => {
 			</div>
 			<div>
 				<p className="font-bold mb-2">
-					¿Quieres saber más de este proceso de admisión?n
+					¿Quieres saber más de este proceso de admisión?
 				</p>
 				<p className="mb-2">
 					¡No te preocupes! Estamos aquí para ayudarte{' '}
