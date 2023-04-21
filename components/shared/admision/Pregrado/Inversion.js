@@ -329,9 +329,8 @@ export const Inversion = ({ programas }) => {
 			<div className="mb-8">
 				<p className="subtitle mb-3">Prospecto de admisión</p>
 				<p className="mb-6">
-					El pago para adquirir el El pago para adquirir el prospecto
-					o reglamento de admisión 2023-II se realiza en el Banco de
-					la Nación o a través de
+					El pago para adquirir el prospecto o reglamento de admisión
+					2023-II se realiza en el Banco de la Nación o a través de
 					<a
 						href="https://pagalo.pe/"
 						className="link"
@@ -408,9 +407,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9501
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Postulantes
-							que provienen de institución educativa de gestión
-							pública
+							Para postulantes que provienen de institución
+							educativa de gestión pública
 						</p>
 					</div>
 
@@ -422,9 +420,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9502
 						</p>
 						<p>
-							<span className="font-bold">Para: </span>{' '}
-							Postulantes que provienen de institución educativa
-							de gestión privada{' '}
+							Para postulantes que provienen de institución
+							educativa de gestión privada{' '}
 							<span className="font-bold">
 								sin fines de lucro{' '}
 							</span>{' '}
@@ -438,9 +435,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9549
 						</p>
 						<p>
-							<span className="font-bold">Para: </span>{' '}
-							Postulantes que provienen de institución educativa
-							de gestión privada{' '}
+							Para postulantes que provienen de institución
+							educativa de gestión privada{' '}
 							<span className="font-bold">
 								con fines de lucro{' '}
 							</span>{' '}
@@ -453,7 +449,7 @@ export const Inversion = ({ programas }) => {
 				</p> */}
 				<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
 					Si provienes de una institución educativa privada con fines
-					de lucro
+					de lucro,{' '}
 					<span className="font-bold">
 						{' '}
 						el abono es solo en ventanilla{' '}
@@ -474,7 +470,7 @@ export const Inversion = ({ programas }) => {
 					<Link href="/admision/pregrado?tab=cronograma-academico">
 						<a className="link">Ver cronograma</a>
 					</Link>
-					) podrán hacerlo en la etapa de de{' '}
+					) podrán hacerlo en la etapa de{' '}
 					<span className="font-bold">Rezagados</span> . Los montos a
 					pagar son los siguientes y se pueden realizar en el Banco de
 					la Nación o a través de
@@ -496,9 +492,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9507
 						</p>
 						<p>
-							<span className="font-bold">Para</span>: Postulantes
-							que provienen de institución educativa de gestión
-							pública
+							Para postulantes que provienen de institución
+							educativa de gestión pública
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
@@ -509,9 +504,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9508
 						</p>
 						<p>
-							<span className="font-bold">Para: </span>{' '}
-							Postulantes que provienen de institución educativa
-							de gestión privada{' '}
+							Para postulantes que provienen de institución
+							educativa de gestión privada{' '}
 							<span className="font-bold">
 								sin fines de lucro{' '}
 							</span>{' '}
@@ -525,9 +519,8 @@ export const Inversion = ({ programas }) => {
 							Código: 9520
 						</p>
 						<p>
-							<span className="font-bold">Para: </span>{' '}
-							Postulantes que provienen de institución educativa
-							de gestión privada{' '}
+							Para postulantes que provienen de institución
+							educativa de gestión privada{' '}
 							<span className="font-bold">
 								con fines de lucro{' '}
 							</span>{' '}
