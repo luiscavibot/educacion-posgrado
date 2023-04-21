@@ -14,41 +14,45 @@ const Consejo = () => {
 					siguientes miembros:
 				</p>
 				<p className="font-bold mb-6">Miembros docentes del Consejo</p>
-				{/* <ul className="mb-6 list-disc list-inside">
-					<li className="mb-2">Dr. Eduardo Flores Juárez - Decano</li>
+				<ul className="mb-6 list-disc list-inside">
 					<li className="mb-2">
-						Dr. Víctor Críspin Pérez – Miembro docente
+						Dr. Angulo Cornejo Jorge Reinaldo - Decano
 					</li>
 					<li className="mb-2">
-						Mg. Juan José Ponce Cobos – Miembro docente
+						Mg. Lino Pacheco María Nieves - Miembro docente
 					</li>
 					<li className="mb-2">
-						Dr. Christian Solis Calero – Miembro docente
+						Dr. Palomino Infante Rubén Alfredo - Miembro docente
 					</li>
 					<li className="mb-2">
-						Dr. Jorge Jave Nakayo - Miembro docente
+						Dr. Loroño Gonzalez, Marcos Antonio - Miembro docente
 					</li>
 					<li className="mb-2">
-						Q.F. José F. Jaúregui Maldonado - Miembro docente
+						Ing. Cardenas Ruiz, Jorge Luis - Miembro docente
 					</li>
 					<li className="mb-2">
-						Q.F. Alfredo Alonzo Castillo Calle – Profesor auxiliar
+						Mg. Memenza Zegarra Miriam Estela - Miembro docente
 					</li>
-				</ul> */}
+					<li className="mb-2">
+						Ing. Crisóstomo Gordillo Oscar Amado - Miembro docente
+					</li>
+				</ul>
 				<p className="font-bold mb-6">
 					Miembros Estudiantes del Consejo{' '}
 				</p>
-				{/* <ul className="list-disc list-inside">
+				<ul className="list-disc list-inside">
+					<li className="mb-2">Almna. Michelle Pamela Pinto Rojas</li>
 					<li className="mb-2">
-						Alum. Gianfranco Talavera Gutiérrez
+						Almna. Kerem Yemina Sánchez Chamana
+					</li>
+					<li className="mb-2">Al. Víctor Stwar Rocha Bardales</li>
+					<li className="mb-2">
+						Almna. María Del Carmen Aquise Gutiérrez
 					</li>
 					<li className="mb-2">
-						Alum. Luzvi Valentina Centeno Merino
+						Al. Harold Waldir Julca Salvatierra
 					</li>
-					<li className="mb-2">
-						Alum. Katiushka Melissa Meneses Narva
-					</li>
-				</ul> */}
+				</ul>
 			</div>
 			<Link href="/transparencia?tab=actas-del-consejo">
 				<Boton className="mt-6">
