@@ -17,10 +17,10 @@ import Numeros from './Numeros';
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
 	return (
-		<section className="relative w-full flex flex-col h-screen">
-			<div className="h-full">
+		<section className="relative w-full flex flex-col md:h-screen">
+			<div className="relative md:static h-96 md:h-full">
 				<div className="bg-negroPuro/30 bg-bgGradiente absolute w-full h-full inset-0"></div>
-				<div id="bg-video-img">
+				<div id="bg-video-img" className="relative h-full">
 					<video
 						aria-describedby="hero-video-description"
 						autoPlay="autoplay"
@@ -28,7 +28,7 @@ const PortadaHome = ({ eventos }) => {
 						preload="auto"
 						poster="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/primer-fotograma-video.jpg"
 						muted={true}
-						className="fixed left-0 top-0 object-cover w-screen h-screen -z-10">
+						className="absolute md:fixed left-0 top-0 object-cover w-screen h-full md:h-screen -z-10">
 						<source
 							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/video-home.mp4"
 							type="video/mp4"

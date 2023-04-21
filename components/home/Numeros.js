@@ -46,7 +46,7 @@ const Numeros = () => {
 			<motion.div
 				// variants={entradaCardScroll}
 				className="">
-				<div className="h-auto pt-7 pb-11 lg:pt-11 lg:pb-16 bg-footerOne/90 bg-bgEstadistica bg-no-repeat bg-cover bg-center row-span-1 flex justify-center items-center flex-col text-blanco relative">
+				<div className="h-auto pt-7 pb-14  md:pb-11 lg:pt-11 lg:pb-16 bg-footerOne md:bg-footerOne/90 bg-bgEstadistica bg-no-repeat bg-cover bg-center row-span-1 flex justify-center items-center flex-col text-blanco relative">
 					{/* <Image
 						alt="adn"
 						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/home-estadisticas-adn.png"
