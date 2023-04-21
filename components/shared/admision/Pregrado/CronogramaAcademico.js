@@ -104,10 +104,10 @@ export const CronogramaAcademico = () => {
 											<td>
 												<p className="pl-7">
 													Área D: Ciencias Económicas
-													y de la gestión
+													y de la Gestión
 													<br />
 													Área E: Humanidades y
-													Ciencias jurídicas y
+													Ciencias Jurídicas y
 													Sociales
 												</p>
 											</td>
@@ -118,7 +118,7 @@ export const CronogramaAcademico = () => {
 										<tr key="2">
 											<td>
 												<p className="pl-7">
-													Área B: Ciencias básicas
+													Área B: Ciencias Básicas
 													<br />
 													Área C: Ingenierías
 												</p>
@@ -130,7 +130,7 @@ export const CronogramaAcademico = () => {
 										<tr key="3">
 											<td>
 												<p className="pl-7">
-													Área A: Ciencias de la salud
+													Área A: Ciencias de la Salud
 												</p>
 											</td>
 											<td className="text-center">
@@ -169,7 +169,7 @@ export const CronogramaAcademico = () => {
 								áreas)
 							</td>
 							<td className="text-center">
-								del 10 al 14 de abril del 2023
+								del 10 al 14 de abril de 2023
 							</td>
 						</tr>
 						{/* <tr key="7">
