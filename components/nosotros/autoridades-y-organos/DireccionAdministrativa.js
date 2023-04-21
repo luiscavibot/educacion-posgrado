@@ -30,7 +30,7 @@ const DireccionAdministrativa = () => {
 						Organización y Funciones (
 						<a
 							className="link"
-							href="https://cdn.www.gob.pe/uploads/document/file/1978572/MOF%20de%20la%20Facultad%20de%20Farmacia%20y%20Bioqu%C3%ADmica.pdf"
+							href=""
 							target="_blank"
 							rel="noopener noreferrer">
 							MOF
@@ -84,7 +84,7 @@ const DireccionAdministrativa = () => {
 								Resolución rectoral
 							</span>
 						</a>
-						<Boton
+						{/* <Boton
 							secondary
 							className="mb-6 text-primary"
 							onClick={() =>
@@ -96,7 +96,7 @@ const DireccionAdministrativa = () => {
 								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
 							<span>Hoja de vida</span>
-						</Boton>
+						</Boton> */}
 					</div>
 				</div>
 			</div>

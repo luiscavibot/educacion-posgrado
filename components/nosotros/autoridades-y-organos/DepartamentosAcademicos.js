@@ -172,7 +172,7 @@ const DepartamentosAcademicos = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dr. Nino Castro Mandujano
+								Dr. Olivio Nino Castro Mandujano
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
