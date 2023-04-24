@@ -49,7 +49,7 @@ const Eventos = ({
 			className="mb-14 md:mb-18 bg-homebg2/40">
 			<motion.div
 				variants={entradaCardScroll}
-				className="md:container mx-4 md:mx-auto px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-[72px]">
+				className="md:container mx-4 md:mx-auto md:px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-[72px]">
 				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Eventos
@@ -61,9 +61,9 @@ const Eventos = ({
 						</a>
 					</Link>
 				</div>
-				<div className="col-start-2 col-span-10 flex mb-9 bg-blanco shadow-submenu rounded-lg py-11 px-8">
+				<div className="col-start-2 col-span-10 flex mb-9 bg-blanco shadow-submenu rounded-lg py-4 md:py-11 px-4 md:px-8">
 					<div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full">
-						<div className="basis-2/5 flex flex-col gap-1 md:pr-8">
+						<div className="md:basis-2/5 flex flex-col gap-1 md:pr-8 h-[336px] overflow-auto">
 							{eventosNoVigentes &&
 								eventosNoVigentes.length > 0 &&
 								eventosNoVigentes.map((evento) => (
@@ -130,7 +130,7 @@ const Eventos = ({
 									</div>
 								))}
 						</div>
-						<div className="basis-3/5 flex justify-center md:pl-8">
+						<div className="md:basis-3/5 flex justify-center md:pl-8">
 							<div className="flex flex-col justify-center w-full max-w-[523px]">
 								{selectedEvent && (
 									<>
@@ -165,12 +165,16 @@ const Eventos = ({
 												</p>
 											</div>
 											<div className="order-2 md:order-3">
-												{selectedEvent.horario && (
+												{/* {selectedEvent.horario && (
 													<p>
 														<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
 														{selectedEvent.horario}
 													</p>
-												)}
+												)} */}
+												<p>
+													<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
+													10:00 a.m.
+												</p>
 											</div>
 											<div className="order-3 md:order-2">
 												{selectedEvent.lugar && (
