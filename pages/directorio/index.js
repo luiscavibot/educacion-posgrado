@@ -40,7 +40,7 @@ const Index = (
 					<div className="h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/directorio/directorio-banner.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/directorio/directorio-facultad-quimica.jpg"
 							alt='Directorio "Facultad de Farmacia y Bioquímica"'
 							layout="responsive"
 							width={1022}
