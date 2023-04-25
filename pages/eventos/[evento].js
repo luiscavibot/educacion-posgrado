@@ -17,6 +17,7 @@ import OrganizadorEvento from '../../components/icons/OrganizadorEvento';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../components/shared/SharedComponent';
 import HorarioIcon from '../../components/icons/HorarioIcon';
+import EventoFinalizadoIcon from '../../components/icons/EventoFinalizadoIcon';
 
 const Evento = ({ evento, ultimosEventos }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/eventos/${evento.slug}`;
@@ -40,7 +41,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 	// 		return `Del ${getFecha(inicio)} al ${getFecha(final)}`;
 	// 	}
 	// };
-	const getValidarFecha = (inicio, final) => {
+	const getValidarFecha = (final) => {
 		const fechaActual = new Date();
 		return fechaActual < final ? true : false;
 	};
@@ -69,7 +70,17 @@ const Evento = ({ evento, ultimosEventos }) => {
 						</li>
 					</ul>
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-1">
-						{evento.titulo}
+						<span>
+							{!getValidarFecha(evento.fecha_final) && (
+								<span className="bg-complementaryThree bg-opacity-10 rounded-lg py-1 px-2 mr-2">
+									<span className="text-complementaryThree text-xs inline-flex">
+										<EventoFinalizadoIcon />
+										Evento finalizado
+									</span>
+								</span>
+							)}
+							<span>{evento.titulo}</span>
+						</span>
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mb-8">
 						<div className="text-textColorTwo flex justify-start items-center font-bold">
@@ -122,10 +133,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 									</p>
 									<p className="ml-7">{evento.organizador}</p>
 								</div>
-								{getValidarFecha(
-									evento.fecha_inicio,
-									evento.fecha_final
-								) && evento.calendario !== '' ? (
+								{getValidarFecha(evento.fecha_final) &&
+								evento.calendario !== '' ? (
 									<div className="mt-5">
 										<Boton
 											link={evento.calendario}
