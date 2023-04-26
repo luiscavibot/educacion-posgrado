@@ -572,58 +572,58 @@ export const MallaCurricular = ({
 				</Tab.Pane>
 			),
 		},
-		{
-			menuItem: 'Sexto año',
-			nombre: 'sexto',
-			render: () => (
-				<Tab.Pane attached={false}>
-					<div className="overflow-x-auto mt-4 mb-8">
-						<table className="table table-striped-even mb-0">
-							<thead>
-								<tr>
-									<th
-										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
-										XI ciclo
-									</th>
-								</tr>
-								<tr className="!bg-tertiary/50 text-blanco text-center">
-									<th>Asignatura</th>
-									<th className="md:w-60 text-center">
-										Créditos
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								{asignaturasXAnio
-									.filter(
-										(asignatura) =>
-											asignatura.semestre === 'XI'
-									)
-									.map((asignatura) => {
-										// totalCreditos1 += asignatura.credito;
-										return (
-											<tr key={asignatura.nombre}>
-												<td>{asignatura.nombre}</td>
-												<td className="text-center">
-													{asignatura.credito}
-												</td>
-											</tr>
-										);
-									})}
-								<tr key="total" className="font-bold">
-									<td>Total de créditos</td>
-									<td className="text-center">
-										{/* {totalCreditos1} */}
-										{totalCreditos(asignaturasXAnio, 'XI')}
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</Tab.Pane>
-			),
-		},
+		// {
+		// 	menuItem: 'Sexto año',
+		// 	nombre: 'sexto',
+		// 	render: () => (
+		// 		<Tab.Pane attached={false}>
+		// 			<div className="overflow-x-auto mt-4 mb-8">
+		// 				<table className="table table-striped-even mb-0">
+		// 					<thead>
+		// 						<tr>
+		// 							<th
+		// 								colSpan="2"
+		// 								className="!bg-tertiary text-blanco text-center">
+		// 								XI ciclo
+		// 							</th>
+		// 						</tr>
+		// 						<tr className="!bg-tertiary/50 text-blanco text-center">
+		// 							<th>Asignatura</th>
+		// 							<th className="md:w-60 text-center">
+		// 								Créditos
+		// 							</th>
+		// 						</tr>
+		// 					</thead>
+		// 					<tbody>
+		// 						{asignaturasXAnio
+		// 							.filter(
+		// 								(asignatura) =>
+		// 									asignatura.semestre === 'XI'
+		// 							)
+		// 							.map((asignatura) => {
+		// 								// totalCreditos1 += asignatura.credito;
+		// 								return (
+		// 									<tr key={asignatura.nombre}>
+		// 										<td>{asignatura.nombre}</td>
+		// 										<td className="text-center">
+		// 											{asignatura.credito}
+		// 										</td>
+		// 									</tr>
+		// 								);
+		// 							})}
+		// 						<tr key="total" className="font-bold">
+		// 							<td>Total de créditos</td>
+		// 							<td className="text-center">
+		// 								{/* {totalCreditos1} */}
+		// 								{totalCreditos(asignaturasXAnio, 'XI')}
+		// 							</td>
+		// 						</tr>
+		// 					</tbody>
+		// 				</table>
+		// 			</div>
+		// 		</Tab.Pane>
+		// 	),
+		// },
 		{
 			menuItem: 'Electivos',
 			nombre: '',
