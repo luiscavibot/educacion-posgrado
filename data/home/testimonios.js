@@ -3,6 +3,7 @@ const testimoniosData = [
 		nombre: 'Heydy Merly Torres Ramos',
 		foto: 'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/testimonios/heydi-torres-ingenieria-agroindustrial.jpg',
 		frase: '“Aprovechen todas las formas de conocimiento y úsenlo para crecer como personas, motivar a otros; háganse ciudadanos del mundo.”',
+		// test
 	},
 	{
 		nombre: 'Kevin Arroyo Vilela',
