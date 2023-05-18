@@ -13,14 +13,14 @@ import { getFecha, getDia, getMes } from '../../helpers/getFecha';
 import { getTipoEvento } from '../../helpers/getTipoEvento';
 import { Autoplay } from 'swiper';
 import Numeros from './Numeros';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
 	return (
 		<section className="relative w-full flex flex-col md:h-screen">
 			<div className="relative md:static h-96 md:h-full">
-				<div className="bg-negroPuro/30 bg-bgGradiente absolute w-full h-full inset-0"></div>
-				<div id="bg-video-img" className="relative h-full">
+				{/* <div id="bg-video-img" className="relative h-full">
 					<video
 						aria-describedby="hero-video-description"
 						autoPlay="autoplay"
@@ -34,13 +34,69 @@ const PortadaHome = ({ eventos }) => {
 							type="video/mp4"
 						/>
 					</video>
+				</div> */}
+				<div id="initial-carousel" className="relative">
+					<Splide
+						aria-label="initial carousel"
+						options={{
+							type: 'fade',
+							rewind: true,
+							arrows: false,
+							pagination: false,
+							autoplay: true,
+							pauseOnHover: false,
+							pauseOnFocus: false,
+							// width: '100%',
+							cover: true,
+							height: '100vh',
+							speed: 1000,
+							interval: 6000,
+						}}>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/01-Home-FQIQ.jpg"
+								alt="img carrusel 1"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/02-Home-FQIQ.jpg"
+								alt="img carrusel 2"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/03-Home-FQIQ.jpg"
+								alt="img carrusel 3"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/04-Home-FQIQ.jpg"
+								alt="img carrusel 4"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/05-Home-FQIQ.jpg"
+								alt="img carrusel 5"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<img
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/06-Home-FQIQ.jpg"
+								alt="img carrusel 6"
+							/>
+						</SplideSlide>
+					</Splide>
 				</div>
+				<div className="bg-bgGradienteCarruselPortada opacity-80 absolute w-full h-full inset-0"></div>
 				<div className="animate__animated animate__fadeInUp text-blanco top-1/3 absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
-						<h1 className="text-4xl md:text-6xl font-semibold max-w-[37.313rem] text-shadow-1">
+						<h1 className="text-center text-4xl md:text-[56px] leading-[112%] font-semibold max-w-[37.313rem] mx-auto text-shadow-1">
 							Facultad de Química e Ingeniería Química
 						</h1>
-						<p className="text-lg mt-2">
+						<p className="text-center text-xl mt-2">
 							Universidad Nacional Mayor de San Marcos
 						</p>
 						{/* <RedesSocialesHome

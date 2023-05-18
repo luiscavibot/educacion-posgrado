@@ -25,6 +25,8 @@ module.exports = {
 					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/fondo-estadisticas.png")',
 				bgGradiente:
 					'linear-gradient(180deg,#080a12,#0000001a 25%,#0000);',
+				bgGradienteCarruselPortada:
+					'linear-gradient(180deg, #19191B 0%, rgba(25, 25, 27, 0) 100%);',
 			},
 			fontFamily: {
 				lato: 'Lato',

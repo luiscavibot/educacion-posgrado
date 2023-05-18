@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import '@splidejs/react-splide/dist/css/splide-core.min.css';
+
 /* @layer base { */
 @import './text';
 @import './link';
