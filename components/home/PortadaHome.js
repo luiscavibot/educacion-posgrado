@@ -18,8 +18,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
 	return (
-		<section className="relative w-full flex flex-col md:h-screen">
-			<div className="relative md:static h-96 md:h-full">
+		// <section className="relative w-full flex flex-col md:h-screen">
+		// 	<div className="relative md:static h-96 md:h-full">
+		<section className="relative w-full flex flex-col">
+			<div className="relative md:static h-96 md:h-auto">
 				{/* <div id="bg-video-img" className="relative h-full">
 					<video
 						aria-describedby="hero-video-description"
@@ -46,9 +48,9 @@ const PortadaHome = ({ eventos }) => {
 							autoplay: true,
 							pauseOnHover: false,
 							pauseOnFocus: false,
-							// width: '100%',
-							cover: true,
-							height: '100vh',
+							width: '100%',
+							// cover: true,
+							// height: '100vh',
 							speed: 1000,
 							interval: 6000,
 						}}>

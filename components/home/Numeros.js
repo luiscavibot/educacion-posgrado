@@ -42,7 +42,8 @@ const Numeros = () => {
 			viewport={{ once: true, amount: 0.3 }}
 			id="numeros"
 			// className="mb-14 md:mb-18"
-			className="absolute bottom-0 w-full">
+			// className="absolute bottom-0 w-full"
+			className="relative w-full">
 			<motion.div
 				// variants={entradaCardScroll}
 				className="">
