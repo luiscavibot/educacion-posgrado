@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
+
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -21,7 +22,7 @@ const PortadaHome = ({ eventos }) => {
 		// <section className="relative w-full flex flex-col md:h-screen">
 		// 	<div className="relative md:static h-96 md:h-full">
 		<section className="relative w-full flex flex-col">
-			<div className="relative md:static h-96 md:h-auto">
+			<div className="relative h-screen sm:h-96 md:h-auto">
 				{/* <div id="bg-video-img" className="relative h-full">
 					<video
 						aria-describedby="hero-video-description"
@@ -48,57 +49,100 @@ const PortadaHome = ({ eventos }) => {
 							autoplay: true,
 							pauseOnHover: false,
 							pauseOnFocus: false,
-							width: '100%',
-							// cover: true,
-							// height: '100vh',
 							speed: 1000,
 							interval: 6000,
+							breakpoints: {
+								768: {
+									height: '24rem',
+									cover: true,
+								},
+								640: {
+									height: '100vh',
+									cover: true,
+								},
+							},
 						}}>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/01-Home-FQIQ.jpg"
 								alt="img carrusel 1"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/02-Home-FQIQ.jpg"
 								alt="img carrusel 2"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/03-Home-FQIQ.jpg"
 								alt="img carrusel 3"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/04-Home-FQIQ.jpg"
 								alt="img carrusel 4"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/05-Home-FQIQ.jpg"
 								alt="img carrusel 5"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
-							<img
+							<Image
 								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/carrusel-portada/06-Home-FQIQ.jpg"
 								alt="img carrusel 6"
+								layout="responsive"
+								width={2459}
+								height={1096}
+								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 					</Splide>
 				</div>
 				<div className="bg-bgGradienteCarruselPortada opacity-80 absolute w-full h-full inset-0"></div>
-				<div className="animate__animated animate__fadeInUp text-blanco top-1/3 absolute z-10 text-5xl w-full">
+				<div className="animate__animated animate__fadeInUp text-blanco top-1/2 !-translate-y-1/2 md:max-lg:!-translate-y-[28%] absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
-						<h1 className="text-center text-4xl md:text-[56px] leading-[112%] font-semibold max-w-[37.313rem] mx-auto text-shadow-1">
+						<h1 className="text-center text-[2rem] sm:text-4xl md:text-[56px] 3xl:text-[88px] !leading-[112%] font-semibold max-w-sm md:max-w-[37.313rem] 3xl:max-w-4xl mx-auto text-shadow-1">
 							Facultad de Química e Ingeniería Química
 						</h1>
-						<p className="text-center text-xl mt-2">
+						<p className="text-center text-sm sm:text-base md:text-xl 3xl:text-[32px] mt-2">
 							Universidad Nacional Mayor de San Marcos
 						</p>
 						{/* <RedesSocialesHome

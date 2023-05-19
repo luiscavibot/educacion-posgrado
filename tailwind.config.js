@@ -5,7 +5,14 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
+		container: {
+			padding: '2rem',
+		},
 		extend: {
+			screens: {
+				tablet: '1440px',
+				'3xl': '2350px',
+			},
 			lineClamp: {
 				7: '7',
 				8: '8',

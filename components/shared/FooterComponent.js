@@ -11,7 +11,7 @@ import TelefonoStroke from './../icons/TelefonoStroke';
 const FooterComponent = ({ inHome }) => {
 	return (
 		<footer className="bg-blanco">
-			<div className={`${inHome && 'bg-homebg2/40'}`}>
+			<div className={`${inHome ? 'bg-homebg2/40' : 'hidden'}`}>
 				<div className="h-4 md:h-[50px] overflow-hidden">
 					<svg
 						viewBox="0 0 500 150"

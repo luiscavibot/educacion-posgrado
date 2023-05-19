@@ -28,13 +28,16 @@ const BuscadorGeneral = () => {
 					onClick={() => {
 						window.open('https://unmsm.edu.pe/', '_blank');
 					}}>
-					<Image
-						src="https://biologia-unmsm.s3.us-east-2.amazonaws.com/logo_unmsm_web_central_6ba7dbe312.png"
-						width={256}
-						height={73}
-						priority
-						alt="Logo de la Universidad Nacional Mayor de San Marcos"
-					/>
+					<div className="w-48 tablet:w-64">
+						<Image
+							src="https://biologia-unmsm.s3.us-east-2.amazonaws.com/logo_unmsm_web_central_6ba7dbe312.png"
+							width={256}
+							height={73}
+							priority
+							alt="Logo de la Universidad Nacional Mayor de San Marcos"
+							className="w-full"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
