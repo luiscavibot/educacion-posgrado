@@ -52,11 +52,11 @@ const PortadaHome = ({ eventos }) => {
 							speed: 1000,
 							interval: 6000,
 							breakpoints: {
-								768: {
+								767: {
 									height: '24rem',
 									cover: true,
 								},
-								640: {
+								639: {
 									height: '100vh',
 									cover: true,
 								},
