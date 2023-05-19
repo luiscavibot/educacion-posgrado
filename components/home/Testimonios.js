@@ -16,7 +16,7 @@ import { Autoplay } from 'swiper';
 import useWidth from '../../hooks/useWidth';
 
 const Testimonios = () => {
-	const { isReadyWidth, width } = useWidth(768);
+	const { isReadyWidth, width } = useWidth(1024);
 	const [testimonioElegido, setTestimonioElegido] = useState(
 		testimoniosData[0]
 	);
@@ -53,8 +53,8 @@ const Testimonios = () => {
 								pagination={false}
 								loop={true}
 								className="swiper-testimonios"
-								spaceBetween={width > 768 ? 50 : 0}
-								slidesPerView={width > 768 ? 4 : 1}
+								spaceBetween={width > 1023 ? 50 : 0}
+								slidesPerView={width > 1023 ? 4 : 1}
 								onSwiper={(swiper) => {
 									swiper.on('slideChange', () => {
 										setTestimonioElegido(
@@ -80,9 +80,9 @@ const Testimonios = () => {
 								))}
 							</Swiper>
 						)}
-						<div className="static md:absolute md:w-1/2 md:left-1/2 md:top-1/2 md:-translate-y-1/2 rounded-lg overflow-hidden">
+						<div className="static lg:absolute lg:w-1/2 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 rounded-lg overflow-hidden">
 							<div className="relative">
-								<div className="bg-complementaryTwo px-6 md:pl-[32%] pt-8 pb-9 md:pr-11">
+								<div className="bg-complementaryTwo px-6 lg:pl-[32%] pt-8 pb-9 lg:pr-11">
 									{/* <div className="rounded-lg bg-tertiary w-16 h-1 mb-3"></div> */}
 									<p className="text-xl text-tertiary font-bold mb-2">
 										{testimonioElegido.nombre}
@@ -91,9 +91,9 @@ const Testimonios = () => {
 										{testimonioElegido.frase}
 									</p>
 								</div>
-								{/* <div className="hidden md:block absolute right-0 bottom-0 bg-secondary w-[4.271rem] h-[4.271rem] rounded-full translate-x-1/2 translate-y-1/2 -z-10"></div> */}
-								<div className="absolute left-0 bottom-0 bg-secondary w-1/3 md:w-1/2 h-[10px]"></div>
-								<div className="absolute right-0 bottom-0 bg-primary w-2/3 md:w-1/2 h-[10px]"></div>
+								{/* <div className="hidden lg:block absolute right-0 bottom-0 bg-secondary w-[4.271rem] h-[4.271rem] rounded-full translate-x-1/2 translate-y-1/2 -z-10"></div> */}
+								<div className="absolute left-0 bottom-0 bg-secondary w-1/3 lg:w-1/2 h-[10px]"></div>
+								<div className="absolute right-0 bottom-0 bg-primary w-2/3 lg:w-1/2 h-[10px]"></div>
 							</div>
 						</div>
 					</div>

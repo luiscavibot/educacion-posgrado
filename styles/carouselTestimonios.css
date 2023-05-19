@@ -47,7 +47,7 @@
 
 /* responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.swiper.swiper-testimonios {
 		padding: 24px 0px 0px;
 	}

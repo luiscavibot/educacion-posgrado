@@ -24,9 +24,9 @@ const FooterComponent = ({ inHome }) => {
 				</div>
 			</div>
 			<div className="bg-footerOne">
-				<div className="container mx-auto px-3 grid-cols-12 gap-x-4 md:grid block pt-20 pb-6">
-					<div className="lg:col-start-2 lg:col-span-10 text-blanco grid grid-cols-2 md:grid-cols-[281px_auto_auto_auto_auto] md:grid-rows-1 gap-x-4 md:gap-x-10 gap-y-14 md:gap-y-0 px-4 md:px-0">
-						<div className="col-span-2 md:col-span-1">
+				<div className="container mx-auto px-3 grid-cols-12 gap-x-4 lg:grid block pt-20 pb-6">
+					<div className="lg:col-start-2 lg:col-span-10 text-blanco grid grid-cols-2 lg:grid-cols-[281px_auto_auto_auto_auto] gap-x-4 lg:gap-x-10 gap-y-14 lg:gap-y-0 px-4 lg:px-0">
+						<div className="col-span-2 lg:col-span-1">
 							<div className="grid grid-cols-[84px_auto] gap-x-4 gap-y-[18px] w-full mb-3">
 								<Image
 									src="https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/logo_unmsm_2_8e2e045cd4.png"
