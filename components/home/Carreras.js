@@ -16,7 +16,7 @@ const Carreras = () => {
 			className="mb-14 md:mb-18">
 			<motion.div
 				variants={entradaCardScroll}
-				className="md:container mx-4 md:mx-auto px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary pb-[72px]">
+				className="container mx-4 md:mx-auto px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary pb-[72px]">
 				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Carreras

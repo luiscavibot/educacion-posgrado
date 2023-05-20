@@ -12,6 +12,7 @@
 /* } */
 
 /* @layer components { */
+@import './container.css';
 @import './breadcrumb.css';
 @import './card.css';
 @import './carousel';
