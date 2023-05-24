@@ -74,7 +74,7 @@ const FooterComponent = ({ inHome }) => {
 							<p className="mb-6">
 								<b>Teléfono:</b> (01) 6197000
 								<br />
-								Anexo: 1209
+								Anexo: 1227
 							</p>
 
 							<p className="mb-6">
