@@ -84,7 +84,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 					<div className="col-span-full mb-28">
 						<div className="flex justify-end">
 							<Boton onClick={handleOpen}>
-								<CompartirIcon className="fill-textColorOne inline-block relative -top-[1px] mr-2" />
+								<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
 								<span className="font-semibold">Compartir</span>
 							</Boton>
 						</div>
@@ -155,8 +155,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 				}}
 				sx={{
 					bgcolor: 'rgba(0, 0, 0, 0.5)',
-				}}
-			>
+				}}>
 				<Fade in={open}>
 					<Box
 						className="w-[90%] md:w-auto h-[90vh] md:h-auto overflow-auto rounded-lg"
@@ -166,8 +165,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 							left: '50%',
 							transform: 'translate(-50%, -50%)',
 							bgcolor: 'transparent',
-						}}
-					>
+						}}>
 						<SharedComponent
 							handleClose={handleClose}
 							ogUrl={ogUrl}

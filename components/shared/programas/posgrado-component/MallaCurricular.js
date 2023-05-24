@@ -947,7 +947,7 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 				<div className="mt-2 md:mt-0 flex justify-end">
 					<div className="inline-block">
 						<Boton className="" onClick={handleOpen}>
-							<CompartirIcon className="fill-textColorOne inline-block relative -top-[1px] mr-2" />
+							<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
 							<span className="font-semibold">Compartir</span>
 						</Boton>
 					</div>
