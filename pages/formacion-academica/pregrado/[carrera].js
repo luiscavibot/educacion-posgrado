@@ -384,7 +384,7 @@ const Escuela = ({ carrera, directores, ultimasNoticias, asignaturas }) => {
 							</p>
 							<div className="flex justify-center">
 								<Boton
-									text="Compartir"
+									text="Contáctanos"
 									primary
 									bold
 									onClick={() => handleOpen()}

@@ -471,7 +471,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							<div>
 								<Boton
 									className="m-auto"
-									text="Compartir"
+									text="Contáctanos"
 									primary
 									onClick={() => handleOpen()}
 								/>
