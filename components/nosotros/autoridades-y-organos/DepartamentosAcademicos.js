@@ -37,7 +37,7 @@ const DepartamentosAcademicos = () => {
 				</a>
 				).
 			</p>
-			{/* <div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
+			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
 					<div className="mb-6">
 						<p className="text-tertiary font-bold mb-5">
@@ -51,10 +51,10 @@ const DepartamentosAcademicos = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Dr. Raymundo Erazo Erazo
+								Mg. Leoncio Reyna Mariñas
 							</span>
 						</p>
-						<p className="text-sm text-tertiary font-medium italic mb-5">
+						{/* <p className="text-sm text-tertiary font-medium italic mb-5">
 							Profesor principal, investigador y consultor
 							ambiental
 							<br />
@@ -63,8 +63,8 @@ const DepartamentosAcademicos = () => {
 							Bioingeniería y Ciencias Ambientales por la UNMSM y
 							doctorado en Medio Ambiente y Desarrollo Sostenible
 							por la UNFV.
-						</p>
-						<p className="mb-5">
+						</p> */}
+						{/* <p className="mb-5">
 							Cuenta con más de 20 años de experiencia en docencia
 							universitaria de posgrado en instituciones públicas
 							como en la Universidad Nacional José Faustino
@@ -90,8 +90,8 @@ const DepartamentosAcademicos = () => {
 							por la UNMSM y a nivel internacional en Estados
 							Unidos por The OAS Summit of Engineering for the
 							Americas.
-						</p>
-						<div className="flex gap-x-5">
+						</p> */}
+						{/* <div className="flex gap-x-5 mt-6">
 							<a
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989430/R.R.%20010087-2021-R%20-dept-procesos.pdf.pdf?v=1672156592"
@@ -115,11 +115,11 @@ const DepartamentosAcademicos = () => {
 								</span>
 								<span>Hoja de vida</span>
 							</Boton>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<div className="md:col-span-2">
-					<div className="mb-6">
+					{/* <div className="mb-6">
 						<Image
 							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-procesos-raymundo-erazo.jpg"
 							width={209}
@@ -127,7 +127,7 @@ const DepartamentosAcademicos = () => {
 							quality={100}
 							className="w-full object-cover max-w-[254px] m-auto"
 						/>
-					</div>
+					</div> */}
 
 					<p className="text-tertiary font-black mb-2">Contacto</p>
 					<div className="text-sm">
@@ -139,7 +139,8 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								rerazoe@unmsm.edu.pe
+								lreynam@unmsm.edu.pe /
+								procesos.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -153,10 +154,9 @@ const DepartamentosAcademicos = () => {
 								(+51) 619 7000 anexo 1215
 							</p>
 						</div>
-						
 					</div>
 				</div>
-			</div> */}
+			</div>
 			<Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
@@ -437,7 +437,7 @@ const DepartamentosAcademicos = () => {
 					</div>
 				</div>
 			</div>
-			{/* <Separator className="mb-6" />
+			<Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
 					<div className="mb-6">
@@ -452,40 +452,39 @@ const DepartamentosAcademicos = () => {
 								|
 							</span>
 							<span className="font-bold text-textColorOne">
-								Mg. Patricio Eudes Muñoz Huillcas
+								Dr. Victor Raul Garcia Villegas
 							</span>
 						</p>
 						<p className="text-sm text-tertiary font-medium italic mb-5">
-							Profesora principal e investigadora.
+							Profesor asociado, investigador y químico
 							<br />
-							Química farmacéutica, magíster en Bromatología por
-							la UNMSM, y doctorado en Farmacia por la Universidad
-							de Navarra (España).
+							Licenciado en Química por la UNFV de Lima Perú,
+							doctor en Fisicoquímica Molecular por la Universidad
+							Andrés Bello (Chile), con estancia de investigación
+							en Faculty of Science and Bio-engineering Sciences
+							por la Vrije Universiteit Brussel (Bélgica).
 						</p>
 						<p className="mb-5">
-							Docente universitaria por más de 30 años,
-							responsable de asignaturas en pregrado y posgrado,
-							así como asesora de tesis y jurado evaluador.
-							Colabora constantemente en grupos de investigación,
-							cuyos resultados son publicados en revistas
-							especializadas y cuenta con más de 35 trabajos
-							académicos que han aportado conocimiento relevante a
-							la ciencia de la salud. Fue miembro del Comité de
-							Investigación de la Red Asistencial Rebagliati,
-							Essalud (1999-2021), y miembro del comité de apoyo a
-							la investigación en el Hospital Nacional Edgardo
-							Rebagliati Martins a partir del 2021.
+							Es docente investigador desde hace 10 años con
+							amplia experiencia en estudios
+							teórico-computacionales de acoplamiento molecular
+							ligando-proteína, Docking. Sus investigaciones están
+							orientadas a estudios de estabilidad natural y
+							conformacional desde el enfoque de la dinámica
+							molecular, mediante descriptores de reactividad y
+							estudios de aromaticidad empleando propiedades
+							magnéticas.
 						</p>
 						<p className="mb-6">
-							Obtuvo el mérito científico como investigadora más
-							destacada de la Facultad de Farmacia y Bioquímica en
-							la Universidad Nacional Mayor de San Marcos entre el
-							2002 al 2004. Además, recibió el reconocimiento y
-							felicitación del Hospital Nacional Edgardo
-							Rebagliati (2021).
+							Es miembro responsable de un proyecto de
+							investigación y miembro del Grupo de Investigación
+							Síntesis Química. Además, ha publicado 14 artículos
+							en revistas indizadas, de los cuales, ocho han sido
+							indexadas en WOS y SCOPUS en los últimos cuatro
+							años.
 						</p>
 						<div className="flex gap-x-5">
-							<a
+							{/* <a
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989408/R.R.%20009214-2021-R%20-%20dept-quimica-inorganica.pdf.pdf?v=1672156307"
 								target={'_blank'}
@@ -494,13 +493,13 @@ const DepartamentosAcademicos = () => {
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
 								</span>
-							</a>
+							</a> */}
 							<Boton
 								secondary
 								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12743'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=17858'
 									)
 								}>
 								<span>
@@ -512,7 +511,7 @@ const DepartamentosAcademicos = () => {
 					</div>
 				</div>
 				<div className="md:col-span-2">
-					<div className="mb-6">
+					{/* <div className="mb-6">
 						<Image
 							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/dir-dept-fisioquimica-patricio-mu%C3%B1oz-unmsm.jpg"
 							width={209}
@@ -520,7 +519,7 @@ const DepartamentosAcademicos = () => {
 							quality={100}
 							className="w-full object-cover max-w-[254px] m-auto"
 						/>
-					</div>
+					</div> */}
 
 					<p className="text-tertiary font-black mb-2">Contacto</p>
 					<div className="text-sm">
@@ -532,7 +531,8 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Correo</span>
 							</p>
 							<p className="mb-3 break-words">
-								dafbyt.farmacia@unmsm.edu.pe
+								victor.garcia@unmsm.edu.pe /
+								fisicoquimica.quimica@unmsm.edu.pe
 							</p>
 						</div>
 						<div>
@@ -543,12 +543,12 @@ const DepartamentosAcademicos = () => {
 								<span className="font-bold">Teléfono</span>
 							</p>
 							<p className="mb-3 break-words">
-								(+51) 619 7000 anexo 4832
+								(+51) 619 7000 anexo 1213
 							</p>
 						</div>
 					</div>
 				</div>
-			</div> */}
+			</div>
 			<Separator className="mb-6" />
 			<div className="md:grid md:grid-cols-8 md:gap-7 text-textColorTwo">
 				<div className="md:col-span-6">
