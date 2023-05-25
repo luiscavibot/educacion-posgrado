@@ -17,9 +17,9 @@ import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
 const INITIAL_INPUTS = {
 	keyWords: '',
 	escuela: {
-		farmaciaBioquimicaCheck: false,
-		cienciaAlimentosCheck: false,
-		ToxicologiaCheck: false,
+		quimicaCheck: false,
+		ingenieriaQuimicaCheck: false,
+		ingenieriaAgroindustrialCheck: false,
 	},
 	recurso: {
 		syllabusCheck: false,
@@ -97,28 +97,29 @@ const InfoAcadPregrado = () => {
 						<div
 							role="group"
 							aria-labelledby="checkbox-group"
-							className="flex flex-col gap-y-1 mt-2 mb-8"
-						>
+							className="flex flex-col gap-y-1 mt-2 mb-8">
 							<InputCheckbox
-								label="Farmacia y Bioquímica"
-								name="farmaciaBioquimicaCheck"
-								checked={inputs.escuela.farmaciaBioquimicaCheck}
+								label="Química"
+								name="quimicaCheck"
+								checked={inputs.escuela.quimicaCheck}
 								onChange={(e) => {
 									handleCheck(e, 'escuela');
 								}}
 							/>
 							<InputCheckbox
-								label="Ciencia de los alimentos"
-								name="cienciaAlimentosCheck"
-								checked={inputs.escuela.cienciaAlimentosCheck}
+								label="Ingeniería Química"
+								name="ingenieriaQuimicaCheck"
+								checked={inputs.escuela.ingenieriaQuimicaCheck}
 								onChange={(e) => {
 									handleCheck(e, 'escuela');
 								}}
 							/>
 							<InputCheckbox
-								label="Toxicología"
-								name="ToxicologiaCheck"
-								checked={inputs.escuela.ToxicologiaCheck}
+								label="Ingeniería Agroindustrial"
+								name="ingenieriaAgroindustrialCheck"
+								checked={
+									inputs.escuela.ingenieriaAgroindustrialCheck
+								}
 								onChange={(e) => {
 									handleCheck(e, 'escuela');
 								}}
@@ -129,8 +130,7 @@ const InfoAcadPregrado = () => {
 						<div
 							role="group"
 							aria-labelledby="checkbox-group"
-							className="flex flex-col gap-y-1 mt-2 mb-8"
-						>
+							className="flex flex-col gap-y-1 mt-2 mb-8">
 							<InputCheckbox
 								label="Syllabus"
 								name="syllabusCheck"
@@ -214,8 +214,7 @@ const InfoAcadPregrado = () => {
 											href={infoPregrado.url}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="block mb-7"
-										>
+											className="block mb-7">
 											<div className="mb-1">
 												<p className="text-textColorOne font-bold mr-2 inline-block">
 													{infoPregrado.nombre}
@@ -262,8 +261,7 @@ const InfoAcadPregrado = () => {
 													href={infoPregrado.url}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="block mb-7"
-												>
+													className="block mb-7">
 													<p className="text-textColorOne font-bold mb-1">
 														{infoPregrado.nombre}
 													</p>

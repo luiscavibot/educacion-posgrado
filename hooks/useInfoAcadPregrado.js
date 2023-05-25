@@ -5,9 +5,9 @@ const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
 
 const checkValues = {
-	farmaciaBioquimicaCheck: 'farmacia-y-bioquímica',
-	cienciaAlimentosCheck: 'ciencias-de-los-alimentos',
-	ToxicologiaCheck: 'toxicologia',
+	quimicaCheck: 'quimica',
+	ingenieriaQuimicaCheck: 'ingenieria-quimica',
+	ingenieriaAgroindustrialCheck: 'ingenieria-agroindustrial',
 	syllabusCheck: 'SYLLABUS',
 	horariosCheck: 'HORARIOS',
 	planesEstudiosCheck: 'PLANESESTUDIOS',
