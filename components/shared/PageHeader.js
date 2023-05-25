@@ -26,26 +26,26 @@ const HeaderPage = () => {
 	}, [router.isReady, router.pathname]);
 
 	return (
-		<header className="bg-bgHeader bg-no-repeat bg-cover bg-center bg-tertiary text-blanco fixed inset-x-0 z-10">
+		<header className="bg-bgHeader bg-no-repeat bg-cover md:bg-center bg-tertiary text-blanco fixed inset-x-0 z-10">
 			<div className="container mx-auto px-3 py-3 md:py-5 flex justify-between relative z-10">
 				<div className="md:hidden block">
 					<SideBar interno />
 				</div>
-				<div>
+				<div className="relative left-4">
 					<Link href="/">
 						<a className="flex gap-3">
 							<div>
-								<h1 className="text-xs sm:text-xl font-bold">
+								<h1 className="text-xs sm:text-xl font-bold text-center md:text-left">
 									Facultad de Química e Ingeniería Química
 								</h1>
-								<h2 className="text-[10px] sm:text-base">
+								<h2 className="text-[10px] sm:text-base text-center md:text-left">
 									Universidad Nacional Mayor de San Marcos
 								</h2>
 							</div>
-							<LogoUNMSM className="fill-blanco w-7 block md:hidden" />
 						</a>
 					</Link>
 				</div>
+				<LogoUNMSM className="fill-blanco w-7 block md:hidden" />
 				{/* buscador y logo */}
 				<div className="items-center md:flex hidden">
 					{/* {mostrarBuscardor && (

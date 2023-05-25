@@ -27,8 +27,8 @@ const SideBar = ({ interno }) => {
 			<nav
 				className={
 					sidebar
-						? 'bg-primary fixed z-20 flex h-10 -left-24 top-4 md:top-20 items-center cursor-pointer justify-start px-2 md:px-5 shadow-xl text-blanco hover:brightness-110 duration-700 rounded-r-lg menu-bars'
-						: 'animate__animated animate__fadeInLeft bg-primary fixed z-20 flex h-10 left-0 top-4 md:top-20 items-center cursor-pointer justify-start px-2 md:px-5 shadow-xl text-blanco hover:brightness-110 hover:scale-105 duration-700 rounded-r-lg menu-bars'
+						? 'bg-primary fixed z-20 flex h-10 -left-24 top-3 sm:top-4 md:top-20 items-center cursor-pointer justify-start px-4 md:px-5 shadow-xl text-blanco hover:brightness-110 duration-700 rounded-r-lg menu-bars'
+						: 'animate__animated animate__fadeInLeft bg-primary fixed z-20 flex h-10 left-0 top-3 sm:top-4 md:top-20 items-center cursor-pointer justify-start px-4 md:px-5 shadow-xl text-blanco hover:brightness-110 hover:scale-105 duration-700 rounded-r-lg menu-bars'
 				}
 				onClick={handleSidebar}>
 				<span className={interno ? 'text-blanco' : 'text-blanco'}>
