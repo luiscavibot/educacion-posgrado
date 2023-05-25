@@ -101,7 +101,7 @@ const Index = ({ admision, facultad }) => {
 						</Link>
 					</li>
 					<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-						Formación académica
+						Admisión
 					</li>
 					<li className="inline text-negro">Posgrado</li>
 				</ul>
