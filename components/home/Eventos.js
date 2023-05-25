@@ -156,39 +156,51 @@ const Eventos = ({
 										</p>
 										<div className="text-textColorTwo text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
 											<div className="order-1">
-												<p>
-													<FechaEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px] mr-[6px]" />
-													{getDuracionFecha(
-														selectedEvent.fecha_inicio,
-														selectedEvent.fecha_final
-													)}
-												</p>
+												<div className="grid grid-cols-[24px_auto] gap-2">
+													<FechaEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px]" />
+													<p>
+														{getDuracionFecha(
+															selectedEvent.fecha_inicio,
+															selectedEvent.fecha_final
+														)}
+													</p>
+												</div>
 											</div>
 											<div className="order-2 md:order-3">
 												{selectedEvent.horario && (
-													<p>
-														<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
-														{selectedEvent.horario}
-													</p>
+													<div className="grid grid-cols-[24px_auto] gap-2">
+														<HorarioEventosHomeIcon className="inline-block relative -top-[3px]" />
+														<p>
+															{
+																selectedEvent.horario
+															}
+														</p>
+													</div>
 												)}
 											</div>
 											<div className="order-3 md:order-2">
 												{selectedEvent.lugar && (
-													<p>
-														<LugarEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px] mr-[6px]" />
-														{selectedEvent.lugar}
-													</p>
+													<div className="grid grid-cols-[24px_auto] gap-2">
+														<LugarEventosHomeIcon className="fill-textColorTwo inline-block relative -top-[3px]" />
+														<p>
+															{
+																selectedEvent.lugar
+															}
+														</p>
+													</div>
 												)}
 											</div>
-											<div className="order-4 line-clamp-1">
+											<div className="order-4">
 												{selectedEvent.organizador && (
-													<p>
-														<OrganizadorEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
-														Organizador:{' '}
-														{
-															selectedEvent.organizador
-														}
-													</p>
+													<div className="grid grid-cols-[24px_auto] gap-2">
+														<OrganizadorEventosHomeIcon className="inline-block relative -top-[3px]" />
+														<p className="line-clamp-2">
+															Organizador:{' '}
+															{
+																selectedEvent.organizador
+															}
+														</p>
+													</div>
 												)}
 											</div>
 										</div>
