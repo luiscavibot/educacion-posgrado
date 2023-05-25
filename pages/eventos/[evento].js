@@ -8,6 +8,7 @@ import {
 	getDia,
 	getMes3Letras,
 	getDuracionFecha,
+	CheckEventoFinalizado,
 } from '../../helpers/getFecha';
 import Cargando from '../../components/resultados/Cargando';
 import CompartirIcon from '../../components/icons/CompartirIcon';
@@ -34,18 +35,6 @@ const Evento = ({ evento, ultimosEventos }) => {
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
-	// const getEventsDate = (inicio, final) => {
-	// 	if (inicio === final) {
-	// 		return getFecha(inicio);
-	// 	} else {
-	// 		return `Del ${getFecha(inicio)} al ${getFecha(final)}`;
-	// 	}
-	// };
-	const getValidarFecha = (final) => {
-		const fechaActual = new Date();
-		return fechaActual < final ? true : false;
-	};
-
 	return (
 		<PrincipalLayout metaTags={metaTags}>
 			{!evento ? (
@@ -71,7 +60,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 					</ul>
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-1">
 						<span>
-							{!getValidarFecha(evento.fecha_final) && (
+							{CheckEventoFinalizado(evento.fecha_final) && (
 								<span className="bg-complementaryThree bg-opacity-10 rounded-lg py-1 px-2 mr-2">
 									<span className="text-complementaryThree text-xs inline-flex">
 										<EventoFinalizadoIcon />
@@ -133,8 +122,10 @@ const Evento = ({ evento, ultimosEventos }) => {
 									</p>
 									<p className="ml-7">{evento.organizador}</p>
 								</div>
-								{getValidarFecha(evento.fecha_final) &&
-								evento.calendario !== '' ? (
+								{!CheckEventoFinalizado(evento.fecha_final) &&
+								evento.calendario !== '' &&
+								evento.calendario !== null &&
+								evento.calendario !== undefined ? (
 									<div className="mt-5">
 										<Boton
 											link={evento.calendario}
@@ -143,10 +134,10 @@ const Evento = ({ evento, ultimosEventos }) => {
 										/>
 									</div>
 								) : (
-									<div className="mt-5 ml-2">
+									<div className="mt-5">
 										<button
 											disabled
-											className="bg-blanco border border-blanco px-4 py-2 text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente disabled:">
+											className="bg-blanco border border-blanco px-3 py-2 text-sm text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente duration-300">
 											Añadir a mi calendario
 										</button>
 									</div>

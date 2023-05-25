@@ -59,6 +59,27 @@ export const getMes3Letras = (date) => {
 	return formato_mes3Letras;
 };
 
+export const CheckEventoFinalizado = (final) => {
+	let formatedDayEnd = momentTimeZone.utc(final).format('DD');
+	let formatedMonthEnd = momentTimeZone.utc(final).format('MM');
+	let formatedYearEnd = momentTimeZone.utc(final).format('YYYY');
+	let formatedDateEnd = new Date(
+		`${formatedMonthEnd}/${formatedDayEnd}/${formatedYearEnd}`
+	).getTime();
+	let today = new Date();
+	let formatedDayToday = momentTimeZone.utc(today).format('DD');
+	let formatedMonthToday = momentTimeZone.utc(today).format('MM');
+	let formatedYearToday = momentTimeZone.utc(today).format('YYYY');
+	let formatedDateToday = new Date(
+		`${formatedMonthToday}/${formatedDayToday}/${formatedYearToday}`
+	).getTime();
+	if (formatedDateEnd < formatedDateToday) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
 export const getDuracionFecha = (inicio, final) => {
 	let formatedDayStart = momentTimeZone.utc(inicio).format('DD');
 	let formatedMonthStart = momentTimeZone.utc(inicio).format('MM');
