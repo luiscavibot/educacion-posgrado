@@ -219,8 +219,8 @@ const SideBar = ({ interno }) => {
 							<Accordion className="accordion-menu font-bold">
 								<>
 									<Accordion.Title
-										active={activeIndexAccordion === 3}
-										index={3}
+										active={activeIndexAccordion === 4}
+										index={4}
 										onClick={changeAccordion}>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col text-blanco">
 											<span>Información académica</span>
@@ -230,7 +230,7 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 3}>
+										active={activeIndexAccordion === 4}>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
 											<div onClick={handleSidebar}>
 												<Link href="/informacion-academica/pregrado">
@@ -240,9 +240,11 @@ const SideBar = ({ interno }) => {
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<span className="text-textColorOne/20 inline-flex items-center py-[10px] px-11 transition w-full">
-													Posgrado
-												</span>
+												<Link href="/informacion-academica/posgrado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Posgrado
+													</a>
+												</Link>
 											</div>
 											<div onClick={handleSidebar}>
 												<span className="text-textColorOne/20 inline-flex items-center py-[10px] px-11 transition w-full">
@@ -266,8 +268,8 @@ const SideBar = ({ interno }) => {
 							<Accordion className="accordion-menu font-bold">
 								<>
 									<Accordion.Title
-										active={activeIndexAccordion === 4}
-										index={4}
+										active={activeIndexAccordion === 5}
+										index={5}
 										onClick={changeAccordion}>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col text-blanco">
 											<span>Intranet</span>
@@ -277,7 +279,7 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 4}>
+										active={activeIndexAccordion === 5}>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
 											<div onClick={handleSidebar}>
 												<a
