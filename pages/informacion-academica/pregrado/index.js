@@ -118,7 +118,7 @@ const InfoAcadPregrado = () => {
 				</div>
 				{inputs && searchParams && (
 					<>
-						<div className="col-span-2 mb-5">
+						<div className="col-span-4 lg:col-span-3 2xl:col-span-2 mb-5">
 							<div className="bg-secondary/10 rounded-lg p-6">
 								<p className="text-textColorOne font-bold">
 									Escuela
@@ -126,8 +126,7 @@ const InfoAcadPregrado = () => {
 								<div
 									role="group"
 									aria-labelledby="checkbox-group"
-									className="flex flex-col gap-y-1 mt-2 mb-8"
-								>
+									className="flex flex-col gap-y-1 mt-2 mb-8">
 									{inputs.escuelas?.map((escuela) => {
 										console.log(escuela);
 										return (
@@ -150,8 +149,7 @@ const InfoAcadPregrado = () => {
 								<div
 									role="group"
 									aria-labelledby="checkbox-group"
-									className="flex flex-col gap-y-1 mt-2 mb-8"
-								>
+									className="flex flex-col gap-y-1 mt-2 mb-8">
 									<InputCheckbox
 										label="Syllabus"
 										name="syllabusCheck"
@@ -211,7 +209,7 @@ const InfoAcadPregrado = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-span-10 mb-5">
+						<div className="col-span-8 lg:col-span-9 2xl:col-span-10 mb-5">
 							<div className="flex justify-between">
 								<InputText
 									value={inputs.keyWords}
@@ -240,8 +238,7 @@ const InfoAcadPregrado = () => {
 													href={infoPregrado.url}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="block mb-7"
-												>
+													className="block mb-7">
 													<div className="mb-1">
 														<p className="text-textColorOne font-bold mr-2 inline-block">
 															{
@@ -294,8 +291,7 @@ const InfoAcadPregrado = () => {
 															}
 															target="_blank"
 															rel="noopener noreferrer"
-															className="block mb-7"
-														>
+															className="block mb-7">
 															<p className="text-textColorOne font-bold mb-1">
 																{
 																	infoPregrado.nombre

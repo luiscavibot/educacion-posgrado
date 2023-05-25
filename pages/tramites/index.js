@@ -71,7 +71,7 @@ const Index = ({ ultimasNoticias }) => {
 				<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
 					Trámites
 				</div>
-				<div className="col-span-2 mb-5  min-w-300">
+				<div className="col-span-4 lg:col-span-3 xl:col-span-2 mb-5  min-w-300">
 					<div className="bg-tertiary/10 rounded-lg p-6">
 						<p className="text-textColorOne font-bold">
 							Dirigido a:
@@ -114,7 +114,7 @@ const Index = ({ ultimasNoticias }) => {
 						</div>
 					</div>
 				</div>
-				<div className="col-span-8 mb-6 px-4 md:px-0">
+				<div className="col-span-8 lg:col-span-7 xl:col-span-8 mb-6 px-4 md:px-0">
 					<div className="flex justify-between flex-col md:flex-row">
 						<InputText
 							value={inputs.keyWords}
@@ -122,7 +122,7 @@ const Index = ({ ultimasNoticias }) => {
 							onChange={handleChange}
 							placeholder="Buscar por palabra clave"
 							conIconoBuscador
-							className="w-full md:w-[14rem] inline-block"
+							className="w-full md:w-[14rem] inline-block mb-4"
 							backgroundClass="bg-textColorTwo/5"
 						/>
 						<div className="max-md:flex max-md:justify-center">
@@ -161,53 +161,55 @@ const Index = ({ ultimasNoticias }) => {
 						)}
 					</div>
 				</div>
-				<div className="col-span-2 mb-5">
+				<div className="col-span-full lg:col-span-2 mb-5 px-4">
 					<div className="inline-flex items-center mb-4 font-bold">
 						<span className="mr-2">Enlaces de interés</span>
 						<LinkExtIcon className="fill-secondary" />{' '}
 					</div>
-					<a
-						className="font-semibold mb-4 inline-block text-secondary"
-						target="_blank"
-						href="https://drive.google.com/file/d/1SY466ZoRzTIWGuts9rTFVPZQfTgLLrqx/view"
-						rel="noreferrer noopener">
-						Formato Único de Trámites
-					</a>
-					{/* <a
-						className="font-semibold mb-4 inline-block text-secondary link"
+					<div>
+						<a
+							className="font-semibold mb-4 block text-secondary link"
+							target="_blank"
+							href="https://drive.google.com/file/d/1SY466ZoRzTIWGuts9rTFVPZQfTgLLrqx/view"
+							rel="noreferrer noopener">
+							Formato Único de Trámites
+						</a>
+						{/* <a
+						className="font-semibold mb-4 block text-secondary link"
 						target="_blank"
 						href="https://drive.google.com/file/d/1B67SEzlFmOBZX6Waz97UF3ir5VPEQOpo/view?usp=sharing"
 						rel="noreferrer noopener">
 						Declaraciones juradas
 					</a> */}
-					{/* <a
-						className="font-semibold mb-4 inline-block text-secondary link"
+						{/* <a
+						className="font-semibold mb-4 block text-secondary link"
 						target="_blank"
 						href="https://drive.google.com/file/d/1Y9VH0Car3ZikXqH4OGewDJV5zscjBV7V/view?usp=sharing"
 						rel="noreferrer noopener">
 						Tarifario de Pregrado
 					</a> */}
-					<a
-						className="font-semibold mb-4 inline-block text-secondary link"
-						target="_blank"
-						href="https://drive.google.com/file/d/1TDHzIZuLmYdsmEiguw01GAUyJKdiqb4f/view?usp=share_link"
-						rel="noreferrer noopener">
-						Tarifario de Posgrado
-					</a>
-					<a
-						className="font-semibold mb-4 inline-block text-secondary link"
-						target="_blank"
-						href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/"
-						rel="noreferrer noopener">
-						Módulo de Atención de Trámites
-					</a>
-					<a
-						className="font-semibold mb-4 inline-block text-secondary link"
-						target="_blank"
-						href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/seguimiento-expedientes-unmsm"
-						rel="noreferrer noopener">
-						Seguimiento de trámites
-					</a>
+						<a
+							className="font-semibold mb-4 block text-secondary link"
+							target="_blank"
+							href="https://drive.google.com/file/d/1TDHzIZuLmYdsmEiguw01GAUyJKdiqb4f/view?usp=share_link"
+							rel="noreferrer noopener">
+							Tarifario de Posgrado
+						</a>
+						<a
+							className="font-semibold mb-4 block text-secondary link"
+							target="_blank"
+							href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/"
+							rel="noreferrer noopener">
+							Módulo de Atención de Trámites
+						</a>
+						<a
+							className="font-semibold mb-4 block text-secondary link"
+							target="_blank"
+							href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/seguimiento-expedientes-unmsm"
+							rel="noreferrer noopener">
+							Seguimiento de trámites
+						</a>
+					</div>
 				</div>
 				<UltimasNoticias ultimasNoticias={ultimasNoticias} />
 			</PrincipalLayout>

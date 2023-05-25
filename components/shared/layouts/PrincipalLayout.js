@@ -21,7 +21,7 @@ const PrincipalLayout = ({ children, metaTags }) => {
 				{/* <main className="min-h-screen relative"> */}
 				<main className="relative md:ml-sidebarWidth">
 					<div className="pt-24 md:pt-36 min-h-screen">
-						<section className="container mx-auto md:px-16 md:grid-cols-12 md:gap-x-4 md:grid">
+						<section className="container mx-auto lg:px-8 2xl:px-16 md:grid-cols-12 md:gap-x-4 md:grid">
 							{children}
 						</section>
 					</div>
