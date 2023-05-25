@@ -49,7 +49,7 @@ const Eventos = ({
 			className="mb-14 md:mb-18 bg-homebg2/40">
 			<motion.div
 				variants={entradaCardScroll}
-				className="container md:mx-auto md:px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-18 md:py-[72px]">
+				className="container md:mx-auto px-4 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-18 md:py-[72px]">
 				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Eventos

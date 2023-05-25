@@ -71,7 +71,7 @@ const Index = ({ ultimasNoticias }) => {
 				<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
 					Trámites
 				</div>
-				<div className="col-span-4 lg:col-span-3 xl:col-span-2 mb-5  min-w-300">
+				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 mb-5">
 					<div className="bg-tertiary/10 rounded-lg p-6">
 						<p className="text-textColorOne font-bold">
 							Dirigido a:
@@ -114,7 +114,7 @@ const Index = ({ ultimasNoticias }) => {
 						</div>
 					</div>
 				</div>
-				<div className="col-span-8 lg:col-span-7 xl:col-span-8 mb-6 px-4 md:px-0">
+				<div className="col-span-8 lg:col-span-7 xl:col-span-8 px-4 mb-6 md:px-0">
 					<div className="flex justify-between flex-col md:flex-row">
 						<InputText
 							value={inputs.keyWords}

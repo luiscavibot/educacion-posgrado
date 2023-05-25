@@ -91,7 +91,7 @@ const InfoAcadPosgrado = () => {
 						syllabus, etc.
 					</p>
 				</div>
-				<div className="col-span-4 lg:col-span-3 2xl:col-span-2 mb-5">
+				<div className="col-span-4 lg:col-span-3 2xl:col-span-2 px-4 mb-5">
 					<div className="bg-tertiary/10 rounded-lg p-6">
 						<p className="text-textColorOne font-bold">Programa</p>
 						<div
@@ -188,7 +188,7 @@ const InfoAcadPosgrado = () => {
 							className="flex flex-col gap-y-1 mt-2"></div> */}
 					</div>
 				</div>
-				<div className="col-span-8 lg:col-span-9 2xl:col-span-10 mb-5">
+				<div className="col-span-8 lg:col-span-9 2xl:col-span-10 px-4 mb-5">
 					<div className="flex justify-between">
 						<InputText
 							value={inputs.keyWords}

@@ -6,7 +6,7 @@ module.exports = {
 	],
 	theme: {
 		container: {
-			padding: '1rem',
+			// padding: '1rem',
 		},
 		extend: {
 			screens: {

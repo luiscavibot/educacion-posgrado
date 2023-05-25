@@ -24,7 +24,7 @@ const FooterComponent = ({ inHome }) => {
 				</div>
 			</div>
 			<div className="bg-footerOne">
-				<div className="container mx-auto px-3 grid-cols-12 gap-x-4 lg:grid block pt-20 pb-6">
+				<div className="container mx-auto px-4 grid-cols-12 gap-x-4 lg:grid block pt-20 pb-6">
 					<div className="lg:col-start-2 lg:col-span-10 text-blanco grid grid-cols-2 lg:grid-cols-[281px_auto_auto_auto_auto] gap-x-4 lg:gap-x-10 gap-y-14 lg:gap-y-0 px-4 lg:px-0">
 						<div className="col-span-2 lg:col-span-1">
 							<div className="grid grid-cols-[84px_auto] gap-x-4 gap-y-[18px] w-full mb-3">
@@ -131,7 +131,7 @@ const FooterComponent = ({ inHome }) => {
 						</div>
 					</div>
 				</div>
-				<p className="text-center text-blanco/25 mt-10 md:mt-[88px] py-6 text-xs">
+				<p className="text-center text-blanco/25 mt-10 md:mt-[88px] px-4 py-6 text-xs">
 					Diseñado, desarrollado e implementado por el equipo especial
 					web | Oficina General de Imagen e Institucional de la
 					Universidad Nacional Mayor San Marcos

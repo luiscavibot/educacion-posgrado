@@ -15,7 +15,7 @@ const BuscadorGeneral = () => {
 	return (
 		// <div className="hidden animate__fadeIn animate__animated absolute z-10 md:flex h-10 right-5 top-20 items-center justify-start">
 		<div className="hidden animate__fadeIn animate__animated absolute z-10 h-10 md:block top-20 w-full">
-			<div className="container m-auto flex items-center justify-end">
+			<div className="container px-4 m-auto flex items-center justify-end">
 				{/* <div className="bg-negroTransparente pl-4 pr-3 py-1 mr-7 text-blanco rounded-xl border border-blancoTransparente cursor-pointer flex items-center">
 					<ImSearch />
 					<input

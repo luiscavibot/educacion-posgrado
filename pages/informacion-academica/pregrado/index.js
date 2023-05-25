@@ -118,7 +118,7 @@ const InfoAcadPregrado = () => {
 				</div>
 				{inputs && searchParams && (
 					<>
-						<div className="col-span-4 lg:col-span-3 2xl:col-span-2 mb-5">
+						<div className="col-span-4 lg:col-span-3 2xl:col-span-2 px-4 mb-5">
 							<div className="bg-secondary/10 rounded-lg p-6">
 								<p className="text-textColorOne font-bold">
 									Escuela
@@ -209,7 +209,7 @@ const InfoAcadPregrado = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-span-8 lg:col-span-9 2xl:col-span-10 mb-5">
+						<div className="col-span-8 lg:col-span-9 2xl:col-span-10 px-4 mb-5">
 							<div className="flex justify-between">
 								<InputText
 									value={inputs.keyWords}
