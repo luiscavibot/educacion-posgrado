@@ -34,7 +34,7 @@ const Unete = () => {
 						</div>
 						<div className="grid items-center">
 							<div>
-								<p className="text-[28px] font-bold mb-4 leading-10 text-tertiary">
+								<p className="text-xl md:text-[28px] font-bold mb-4 leading-8 md:leading-10 text-tertiary break-words">
 									¡Únete a nuestra comunidad reconocida a
 									nivel nacional e internacionalmente y haz de
 									tu futuro un éxito!

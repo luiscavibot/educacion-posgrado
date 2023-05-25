@@ -16,7 +16,7 @@ const Carreras = () => {
 			className="mb-14 md:mb-18">
 			<motion.div
 				variants={entradaCardScroll}
-				className="container mx-4 md:mx-auto px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary pb-[72px]">
+				className="container md:mx-auto px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary pb-[72px]">
 				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Carreras
@@ -28,7 +28,7 @@ const Carreras = () => {
 						</a>
 					</Link>
 				</div>
-				<div className="col-start-2 col-span-10 flex mb-9">
+				<div className="col-start-2 col-span-10 flex md:mb-9">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-[18px] w-full">
 						<Link href={'/formacion-academica/pregrado/quimica'}>
 							<a className="relative h-28 md:h-[212px] rounded-lg overflow-hidden grid place-items-center group">

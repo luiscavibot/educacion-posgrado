@@ -49,7 +49,7 @@ const Eventos = ({
 			className="mb-14 md:mb-18 bg-homebg2/40">
 			<motion.div
 				variants={entradaCardScroll}
-				className="container mx-4 md:mx-auto md:px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-[72px]">
+				className="container md:mx-auto md:px-6 lg:px-3 lg:grid-cols-12 gap-x-4 lg:grid text-secondary py-18 md:py-[72px]">
 				<div className="col-start-2 col-span-10 flex mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Eventos
@@ -61,7 +61,7 @@ const Eventos = ({
 						</a>
 					</Link>
 				</div>
-				<div className="col-start-2 col-span-10 flex mb-9 bg-blanco shadow-submenu rounded-lg py-4 md:py-11 px-4 md:px-8">
+				<div className="col-start-2 col-span-10 flex md:mb-9 bg-blanco shadow-submenu rounded-lg py-4 md:py-11 px-4 md:px-8">
 					<div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full">
 						<div className="md:basis-2/5 flex flex-col gap-1 md:pr-8 h-[336px] overflow-auto">
 							{eventosNoVigentes &&

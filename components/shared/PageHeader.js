@@ -35,7 +35,7 @@ const HeaderPage = () => {
 					<Link href="/">
 						<a className="flex gap-3">
 							<div>
-								<h1 className="text-base sm:text-xl font-bold">
+								<h1 className="text-xs sm:text-xl font-bold">
 									Facultad de Química e Ingeniería Química
 								</h1>
 								<h2 className="text-[10px] sm:text-base">
