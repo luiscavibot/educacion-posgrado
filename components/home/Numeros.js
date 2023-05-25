@@ -10,6 +10,7 @@ import User from '../icons/User';
 import Birrete from '../icons/Birrete';
 import RenacytIcon from '../icons/RenacytIcon';
 import Lupa from '../icons/Lupa';
+import Laboratorio from '../icons/Laboratorio';
 import LibrosFillEtiqueta from '../icons/LibrosFillEtiqueta';
 import HomeTesisPregradoIcon from '../icons/HomeTesisPregradoIcon';
 
@@ -28,6 +29,8 @@ const Numeros = () => {
 				return <LibrosFillEtiqueta className={`${className}`} />;
 			case 'Lupa':
 				return <Lupa className={`${className}`} />;
+			case 'Laboratorio':
+				return <Laboratorio className={`${className}`} />;
 			default:
 				return <User className={`${className}`} />;
 		}

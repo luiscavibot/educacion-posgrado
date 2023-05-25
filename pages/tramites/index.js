@@ -190,6 +190,13 @@ const Index = ({ ultimasNoticias }) => {
 					<a
 						className="font-semibold mb-4 inline-block text-secondary link"
 						target="_blank"
+						href="https://drive.google.com/file/d/1TDHzIZuLmYdsmEiguw01GAUyJKdiqb4f/view?usp=share_link"
+						rel="noreferrer noopener">
+						Tarifario de Posgrado
+					</a>
+					<a
+						className="font-semibold mb-4 inline-block text-secondary link"
+						target="_blank"
 						href="https://tramiteonline.unmsm.edu.pe/sgdfd/mat/"
 						rel="noreferrer noopener">
 						Módulo de Atención de Trámites
