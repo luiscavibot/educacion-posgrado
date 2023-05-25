@@ -165,16 +165,12 @@ const Eventos = ({
 												</p>
 											</div>
 											<div className="order-2 md:order-3">
-												{/* {selectedEvent.horario && (
+												{selectedEvent.horario && (
 													<p>
 														<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
 														{selectedEvent.horario}
 													</p>
-												)} */}
-												<p>
-													<HorarioEventosHomeIcon className="inline-block relative -top-[3px] mr-[6px]" />
-													10:00 a.m.
-												</p>
+												)}
 											</div>
 											<div className="order-3 md:order-2">
 												{selectedEvent.lugar && (
