@@ -91,10 +91,10 @@ const DepartamentosAcademicos = () => {
 							Unidos por The OAS Summit of Engineering for the
 							Americas.
 						</p> */}
-						{/* <div className="flex gap-x-5 mt-6">
+						<div className="flex gap-x-5 mt-6">
 							<a
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://cdn.www.gob.pe/uploads/document/file/3989430/R.R.%20010087-2021-R%20-dept-procesos.pdf.pdf?v=1672156592"
+								href="https://www.gob.pe/institucion/unmsm/normas-legales/4252942-resolucion-rectoral-n-005230-2023-r"
 								target={'_blank'}
 								rel="noopener noreferrer">
 								<span className="flex items-center justify-center">
@@ -107,7 +107,7 @@ const DepartamentosAcademicos = () => {
 								className="mb-6 text-primary"
 								onClick={() =>
 									window.open(
-										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=240'
+										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=95716'
 									)
 								}>
 								<span>
@@ -115,7 +115,7 @@ const DepartamentosAcademicos = () => {
 								</span>
 								<span>Hoja de vida</span>
 							</Boton>
-						</div> */}
+						</div>
 					</div>
 				</div>
 				<div className="md:col-span-2">
@@ -484,16 +484,16 @@ const DepartamentosAcademicos = () => {
 							años.
 						</p>
 						<div className="flex gap-x-5">
-							{/* <a
+							<a
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-								href="https://cdn.www.gob.pe/uploads/document/file/3989408/R.R.%20009214-2021-R%20-%20dept-quimica-inorganica.pdf.pdf?v=1672156307"
+								href="https://www.gob.pe/institucion/unmsm/normas-legales/4252935-resolucion-rectoral-n-005595-2023-r"
 								target={'_blank'}
 								rel="noopener noreferrer">
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
 								</span>
-							</a> */}
+							</a>
 							<Boton
 								secondary
 								className="mb-6 text-primary"
