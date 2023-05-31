@@ -42,10 +42,10 @@ export const Inversion = () => {
 						</li>
 					</ul>
 					<p className="mb-8">
-						A continuación, detallamos el número de Cuenta Corriente
-						de la UNMSM en el Banco de Crédito del Perú, para
-						depósitos en ventanilla, cajero, agente o transferencia
-						interbancaria:
+						A continuación, te detallamos el número de Cuenta
+						Corriente de la UNMSM en el Banco de Crédito del Perú
+						para depósitos en ventanilla, cajero, agente o
+						transferencia interbancaria:
 					</p>
 					<div className="mb-8 flex flex-wrap justify-center">
 						<div className="mb-3 md:mb-0 flex items-center gap-x-2">
@@ -74,7 +74,7 @@ export const Inversion = () => {
 							S/. 400.00
 						</p>
 						<p>
-							Para magíster UNMSM, personal administrativo de la
+							Para Magíster UNMSM, personal administrativo de la
 							UNMSM, docente de universidades nacionales y
 							Magisterio Nacional.
 						</p>
@@ -84,7 +84,7 @@ export const Inversion = () => {
 							S/. 500.00
 						</p>
 						<p>
-							Para postulantes (graduados de otras universidades).
+							Para postulantes graduados de otras universidades.
 						</p>
 					</div>
 				</div>
@@ -131,26 +131,26 @@ export const Inversion = () => {
 				<div className="flex justify-center flex-wrap mb-14">
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
 						<p className="text-xl font-bold mb-[10px]">
-							S/. 350.00
+							S/. 400.00
 						</p>
 						<p className="mb-3 font-bold">
 							<span>Transacción</span>: 9650 + código: 9702
 						</p>
 						<p>
-							Para magíster UNMSM, personal administrativo de la
+							Para Magíster UNMSM, personal administrativo de la
 							UNMSM, docente de universidades nacionales y
 							Magisterio Nacional.
 						</p>
 					</div>
 					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
 						<p className="text-xl font-bold mb-[10px]">
-							S/. 450.00
+							S/. 500.00
 						</p>
 						<p className="mb-3 font-bold">
 							<span>Transacción</span>: 9650 + código: 9703
 						</p>
 						<p>
-							Para postulantes (graduados de otras universidades).
+							Para postulantes graduados de otras universidades.
 						</p>
 					</div>
 				</div>
@@ -231,28 +231,28 @@ export const PagoPagalo = ({ programa }) => {
 			key: '1',
 			codigo: '09700',
 			descripcion: 'Epg-Maestría-Inscripción',
-			monto: 'S/ 350',
+			monto: 'S/ 350.00',
 		},
 		{
 			programa: 'maestria',
 			key: '2',
 			codigo: '09701',
 			descripcion: 'Epg-Maestría-Otros',
-			monto: 'S/ 450',
+			monto: 'S/ 450.00',
 		},
 		{
 			programa: 'doctorado',
 			key: '1',
 			codigo: '09702',
 			descripcion: 'Epg-Doctorado-Inscripción',
-			monto: 'S/ 400',
+			monto: 'S/ 400.00',
 		},
 		{
 			programa: 'doctorado',
 			key: '2',
 			codigo: '09703',
 			descripcion: 'Epg-Doctorado-Otros',
-			monto: 'S/ 500',
+			monto: 'S/ 500.00',
 		},
 	];
 	return (
