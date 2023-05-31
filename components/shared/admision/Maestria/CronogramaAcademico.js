@@ -5,7 +5,7 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 		<>
 			<p className="mb-6">
 				Entérate aquí cuáles son todas nuestras actividades para los
-				programas de maestría y doctorado del ciclo 2023-I
+				programas de maestría del ciclo 2023-I
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
