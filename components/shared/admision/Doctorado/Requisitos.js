@@ -49,10 +49,10 @@ export const Requisitos = () => {
 							href="https://www.gob.pe/488-obtener-constancia-de-inscripcion-de-diplomas"
 							rel="noreferrer noopener">
 							Constancia de inscripción en línea del grado de
-							Bachiller emitido por SUNEDU
+							Maestro o Doctor emitido por SUNEDU
 						</a>{' '}
-						o la copia del diploma de grado de Bachiller fedateado
-						por la universidad de procedencia (*).
+						o la copia del diploma de grado de Maestro o Doctor
+						fedateado por la universidad de procedencia (*).
 					</li>
 					<li className="py-2">
 						Copia simple del documento de identidad (DNI, carné de
