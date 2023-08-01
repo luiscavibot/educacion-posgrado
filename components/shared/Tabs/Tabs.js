@@ -48,6 +48,15 @@ const Tabs = ({ children, nombre, carrera }) => {
 					}
 				);
 				break;
+			case 'taller-tesis':
+				router.push(
+					`/investigacion/taller-tesis/?tab=${slugify(newActiveTab)}`,
+					undefined,
+					{
+						shallow: true,
+					}
+				);
+				break;
 			case 'transparencia':
 				router.push(
 					`/transparencia/?tab=${slugify(newActiveTab)}`,
@@ -66,18 +75,9 @@ const Tabs = ({ children, nombre, carrera }) => {
 					}
 				);
 				break;
-			case 'admision_pregrado':
+			case 'admision_diplomatura':
 				router.push(
-					`/admision/pregrado/?tab=${slugify(newActiveTab)}`,
-					undefined,
-					{
-						shallow: true,
-					}
-				);
-				break;
-			case 'admision_maestria':
-				router.push(
-					`/admision/posgrado?programa=maestria&tab=${slugify(
+					`/admision?programa=diplomatura&tab=${slugify(
 						newActiveTab
 					)}`,
 					undefined,
@@ -86,9 +86,27 @@ const Tabs = ({ children, nombre, carrera }) => {
 					}
 				);
 				break;
+			case 'admision_maestria':
+				router.push(
+					`/admision?programa=maestria&tab=${slugify(newActiveTab)}`,
+					undefined,
+					{
+						shallow: true,
+					}
+				);
+				break;
 			case 'admision_doctorado':
 				router.push(
-					`/admision/posgrado?programa=doctorado&tab=${slugify(
+					`/admision?programa=doctorado&tab=${slugify(newActiveTab)}`,
+					undefined,
+					{
+						shallow: true,
+					}
+				);
+				break;
+			case 'admision_posdoctorado':
+				router.push(
+					`/admision?programa=posdoctorado&tab=${slugify(
 						newActiveTab
 					)}`,
 					undefined,
@@ -156,12 +174,14 @@ const Tabs = ({ children, nombre, carrera }) => {
 									label == activeTab
 										? 'current bg-gris md:bg-blanco'
 										: ''
-								}>
+								}
+							>
 								<div
 									className="p-4 flex border-b border-b-secondary/40 cursor-pointer hover:font-black fill-textColorOne"
 									onClick={(e) => {
 										handleClick(e, label, link);
-									}}>
+									}}
+								>
 									<div className="basis-1/12 md:basis-3/12 wrapper-icon">
 										<IconTab label={label} />
 									</div>
@@ -173,7 +193,8 @@ const Tabs = ({ children, nombre, carrera }) => {
 											label === activeTab
 												? 'md:hidden pl-4 self-center inline spin-downArrow-animation'
 												: 'hidden'
-										}>
+										}
+									>
 										<IoIosArrowDown />
 									</div>
 								</div>
@@ -188,14 +209,16 @@ const Tabs = ({ children, nombre, carrera }) => {
 									return (
 										<li
 											className="mt-4 hover:text-tertiary cursor-pointer"
-											key={enlace}>
+											key={enlace}
+										>
 											<a
 												onClick={() => {
 													window.open(
 														enlace.link,
 														'_blank'
 													);
-												}}>
+												}}
+											>
 												{enlace.label}
 											</a>
 										</li>
@@ -213,7 +236,8 @@ const Tabs = ({ children, nombre, carrera }) => {
 							return (
 								<div
 									key={index + label}
-									className="content py-0">
+									className="content py-0"
+								>
 									{one.props.children}
 								</div>
 							);

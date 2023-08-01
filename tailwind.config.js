@@ -27,9 +27,13 @@ module.exports = {
 			},
 			backgroundImage: {
 				bgHeader:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/facultad-header.png")',
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-admision/header.jpg")',
 				bgEstadistica:
 					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/fondo-estadisticas.png")',
+				bgTikTok:
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-admision/cintillo-tiktok.jpg")',
+				bgTikTokGradient:
+					'linear-gradient(180deg, #004283 22.92%, rgba(0, 66, 131, 0.91) 41.15%, rgba(0, 66, 131, 0.76) 58.85%, rgba(0, 66, 131, 0.00) 100%)',
 				bgGradiente:
 					'linear-gradient(180deg,#080a12,#0000001a 25%,#0000);',
 				bgGradienteCarruselPortada:
@@ -100,9 +104,9 @@ module.exports = {
 			},
 		},
 		colors: {
-			primary: '#1267A5',
-			secondary: '#101C47',
-			tertiary: '#101C47',
+			primary: '#A68403',
+			secondary: '#004283',
+			tertiary: '#033759',
 			complementaryOne: '#EFF3F6',
 			complementaryTwo: '#E6E6E9',
 			complementaryThree: '#198BDE',
@@ -110,7 +114,7 @@ module.exports = {
 			// complementaryFour: '#14132A',
 			textColorOne: '#3A464F',
 			textColorTwo: '#54626C',
-			footerOne: '#202124',
+			footerOne: '#252525',
 			homebg2: '#DEE3F7',
 
 			rojoBase: '#9E1D1F',

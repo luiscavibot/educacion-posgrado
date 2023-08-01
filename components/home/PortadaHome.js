@@ -15,6 +15,7 @@ import { getTipoEvento } from '../../helpers/getTipoEvento';
 import { Autoplay } from 'swiper';
 import Numeros from './Numeros';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import Logo from '../icons/Logo';
 
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
@@ -137,14 +138,58 @@ const PortadaHome = ({ eventos }) => {
 					</Splide>
 				</div>
 				<div className="bg-bgGradienteCarruselPortada opacity-80 absolute w-full h-full inset-0"></div>
+				<div className="absolute w-full top-0">
+					<div className="container mx-auto flex justify-between">
+						<div className="md:flex hidden text-blanco">
+							<nav>
+								<ul className="flex items-center gap-7 text-xs font-bold">
+									<li>
+										<Link href={`/admision`}>
+											<a>
+												<span>Admisión</span>
+											</a>
+										</Link>
+									</li>
+									<li>
+										<span>Programas</span>
+									</li>
+									<li>
+										<span>Investigación</span>
+									</li>
+									<li>
+										<span>Comunidad</span>
+									</li>
+									<li>
+										<span>Actualidad</span>
+									</li>
+									<li>
+										<span>Nosotros</span>
+									</li>
+									<li>
+										<Link href={`/blog-gestion-publica`}>
+											<a>
+												<span>
+													Blog de Gestión pública
+												</span>
+											</a>
+										</Link>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div className="text-blanco">
+							<nav>
+								<ul className="flex items-center gap-7 text-xs font-bold">
+									<li>Trámites</li>
+									<li>Intranet</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
 				<div className="animate__animated animate__fadeInUp text-blanco top-1/2 !-translate-y-1/2 md:max-lg:!-translate-y-[28%] absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
-						<h1 className="text-center text-[2rem] sm:text-4xl md:text-[56px] 3xl:text-[88px] !leading-[112%] font-semibold max-w-sm md:max-w-[37.313rem] 3xl:max-w-4xl mx-auto text-shadow-1">
-							Facultad de Química e Ingeniería Química
-						</h1>
-						<p className="text-center text-sm sm:text-base md:text-xl 3xl:text-[32px] mt-2">
-							Universidad Nacional Mayor de San Marcos
-						</p>
+						<Logo className="w-[505px] h-[151px] mx-auto" />
 						{/* <RedesSocialesHome
 							className="text-lg mt-5"
 							facebook="https://www.facebook.com/fqiq.unmsm.1946"

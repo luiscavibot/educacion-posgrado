@@ -8,19 +8,19 @@ import SocialMediaAside from './SocialMediaAside';
 import SideBarPrincipal from '../SideBarPrincipal';
 
 const PrincipalLayout = ({ children, metaTags }) => {
-	const refFooter = useRef(null);
+	// const refFooter = useRef(null);
 	const refSocialMedia = useRef(null);
 	return (
 		<FHpages metaTags={metaTags}>
 			<PageHeader />
 			<div className="block">
-				<SideBarPrincipal
+				{/* <SideBarPrincipal
 					refFooter={refFooter}
 					refSocialMedia={refSocialMedia}
-				/>
+				/> */}
 				{/* <main className="min-h-screen relative"> */}
-				<main className="relative md:ml-sidebarWidth">
-					<div className="pt-24 md:pt-36 min-h-screen">
+				<main className="relative">
+					<div className="pt-24 md:pt-40 min-h-screen">
 						<section className="container mx-auto md:px-4 lg:px-8 2xl:px-16 md:grid-cols-12 md:gap-x-4 md:grid">
 							{children}
 						</section>
@@ -30,7 +30,7 @@ const PrincipalLayout = ({ children, metaTags }) => {
 							<SocialMediaAside />
 						</div>
 					</div> */}
-					<div ref={refFooter} id="footerId">
+					<div id="footerId">
 						<FooterComponent />
 					</div>
 				</main>

@@ -29,14 +29,15 @@ export default function Home({
 	const [isOpenBanner, setIsOpenBanner] = useState(carrerasEnProceso);
 	return (
 		<FHpages>
-			<SideBar />
+			{/* <SideBar /> */}
 			<div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
 				{isOpenHeader && (
 					<BannerAdmisionHome setIsOpenHeader={setIsOpenHeader} />
 				)}
-				<SubMenu theme="tertiary" color="blanco" />
+				{/* <SubMenu theme="tertiary" color="blanco" /> */}
 			</div>
 			<BuscadorGeneral />
+
 			<PortadaHome />
 			<main className="bg-blanco pt-14 md:pt-18">
 				{isOpenBanner && (

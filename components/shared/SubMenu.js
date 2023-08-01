@@ -17,7 +17,7 @@ const SubMenu = ({ theme, color }) => {
 							<a className="py-1">Trámites</a>
 						</Link>
 					</li>
-					<li className="flex items-center  cursor-pointer">
+					{/* <li className="flex items-center  cursor-pointer">
 						<Link href="/comunicados">
 							<a className="py-1">Comunicados</a>
 						</Link>
@@ -58,7 +58,7 @@ const SubMenu = ({ theme, color }) => {
 						<Link href="/transparencia">
 							<a className="py-1">Transparencia</a>
 						</Link>
-					</li>
+					</li> */}
 					<li className="">
 						<DropDown
 							navBar={{

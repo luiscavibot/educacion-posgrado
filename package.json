@@ -1,5 +1,5 @@
 {
-	"name": "facultad-quimica",
+	"name": "posgrado-administracion",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

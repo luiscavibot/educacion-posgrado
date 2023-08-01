@@ -21,6 +21,7 @@ import InversionEconomicaIcon from '../../icons/InversionEconomicaIcon';
 import RequisitosIcon from '../../icons/RequisitosIcon';
 import GuiaProcesoIcon from '../../icons/GuiaProcesoIcon';
 import LupaStroke from '../../icons/LupaStroke';
+import ProcesoEvaluacionIcon from '../../icons/ProcesoEvaluacionIcon';
 
 const IconTab = (label) => {
 	switch (label.label) {
@@ -184,6 +185,13 @@ const IconTab = (label) => {
 			return (
 				<>
 					<GuiaProcesoIcon className="fill-textColorOne" />
+				</>
+			);
+
+		case 'proceso-de-evaluacion':
+			return (
+				<>
+					<ProcesoEvaluacionIcon className="fill-textColorOne" />
 				</>
 			);
 
