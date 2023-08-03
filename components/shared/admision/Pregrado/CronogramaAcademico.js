@@ -15,7 +15,8 @@ export const CronogramaAcademico = () => {
 						<tr>
 							<th
 								colSpan="2"
-								className="!bg-tertiary text-blanco text-center">
+								className="!bg-tertiary text-blanco text-center"
+							>
 								Admisión general 2023 - II
 							</th>
 						</tr>
@@ -181,7 +182,7 @@ export const CronogramaAcademico = () => {
 					</tbody>
 				</table>
 			</div>
-			<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
+			<p className="p-4 bg-complementaryOne/[0.5] rounded-lg py-4 px-8">
 				*Aplica para las siguientes
 				<Link href="/admision/pregrado?tab=modalidades-de-admision">
 					<a className="link"> modalidades de admisión:</a>

@@ -22,142 +22,142 @@ export const Inversion = () => {
 					Paga tu derecho de inscripción de forma fácil y segura en
 					los siguientes medios autorizados:
 				</p>
-				<div className="mb-4">
-					<ul className="list-disc list-inside mb-4">
-						<li className="subtitle">
-							<div className="inline-flex items-center">
-								<span className="mr-2">
-									Banco de Crédito del Perú
-								</span>
-								<button
-									onClick={() => {
-										window.open(
-											'https://bcpzonasegurabeta.viabcp.com/#/iniciar-sesion',
-											'_blank'
-										);
-									}}>
-									<LinkExtIcon className="fill-secondary" />
-								</button>
+				{/* <div>
+					<div className="mb-4">
+						<ul className="list-disc list-inside mb-4">
+							<li className="subtitle">
+								<div className="inline-flex items-center">
+									<span className="mr-2">
+										Banco de Crédito del Perú
+									</span>
+									<button
+										onClick={() => {
+											window.open(
+												'https://bcpzonasegurabeta.viabcp.com/#/iniciar-sesion',
+												'_blank'
+											);
+										}}
+									>
+										<LinkExtIcon className="fill-secondary" />
+									</button>
+								</div>
+							</li>
+						</ul>
+						<p className="mb-8">
+							A continuación, te detallamos el número de Cuenta
+							Corriente de la UNMSM en el Banco de Crédito del
+							Perú para depósitos en ventanilla, cajero, agente o
+							transferencia interbancaria:
+						</p>
+						<div className="mb-8 flex flex-wrap justify-center">
+							<div className="mb-3 md:mb-0 flex items-center gap-x-2">
+								<p>Cta. Cte. n.°</p>
+								<div>
+									<CajaConFuncionCopiar
+										big
+										text="191-0215772014"
+									/>
+								</div>
 							</div>
-						</li>
-					</ul>
-					<p className="mb-8">
-						A continuación, te detallamos el número de Cuenta
-						Corriente de la UNMSM en el Banco de Crédito del Perú
-						para depósitos en ventanilla, cajero, agente o
-						transferencia interbancaria:
+							<div className="ml-3 flex items-center gap-x-2">
+								<p>CCI n.°</p>
+								<div>
+									<CajaConFuncionCopiar
+										big
+										text="002-191-00021577201451"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="flex flex-wrap justify-center mb-14">
+						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+							<p className="text-xl font-bold mb-[10px]">
+								S/. 400.00
+							</p>
+							<p>
+								Para Magíster UNMSM, personal administrativo de
+								la UNMSM, docente de universidades nacionales y
+								Magisterio Nacional.
+							</p>
+						</div>
+						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+							<p className="text-xl font-bold mb-[10px]">
+								S/. 500.00
+							</p>
+							<p>
+								Para postulantes graduados de otras
+								universidades.
+							</p>
+						</div>
+					</div>
+					<p className="text-center text-textColorTwo text-sm italic mb-14">
+						*Los costos corresponden al proceso de admisión 2022-II,
+						sujetos a variaciones.
 					</p>
-					<div className="mb-8 flex flex-wrap justify-center">
-						<div className="mb-3 md:mb-0 flex items-center gap-x-2">
-							<p>Cta. Cte. n.°</p>
-							<div>
-								<CajaConFuncionCopiar
-									big
-									text="191-0215772014"
-								/>
-							</div>
-						</div>
-						<div className="ml-3 flex items-center gap-x-2">
-							<p>CCI n.°</p>
-							<div>
-								<CajaConFuncionCopiar
-									big
-									text="002-191-00021577201451"
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="flex flex-wrap justify-center mb-14">
-					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-						<p className="text-xl font-bold mb-[10px]">
-							S/. 400.00
-						</p>
-						<p>
-							Para Magíster UNMSM, personal administrativo de la
-							UNMSM, docente de universidades nacionales y
-							Magisterio Nacional.
-						</p>
-					</div>
-					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-						<p className="text-xl font-bold mb-[10px]">
-							S/. 500.00
-						</p>
-						<p>
-							Para postulantes graduados de otras universidades.
-						</p>
-					</div>
-				</div>
-				{/* <p className="text-center text-textColorTwo text-sm italic mb-14">
-							*Los costos corresponden al proceso de admisión
-							2022-II, sujetos a variaciones.
-						</p> */}
+				</div> */}
 
-				<div className="mb-8">
-					<ul className="list-disc list-inside mb-4">
-						<li className="subtitle">
-							<div className="inline-flex items-center">
-								<span className="mr-2">Banco de la Nación</span>
-								<button
-									onClick={() => {
-										window.open(
-											'https://www.bn.com.pe/banca-internet/banca-internet.asp',
-											'_blank'
-										);
-									}}>
-									<LinkExtIcon className="fill-secondary" />
-								</button>
-							</div>
-						</li>
-					</ul>
-					<p className="mb-8">
-						Acércate presencialmente a una de sus agencias más
-						cercanas e indica que realizarás un depósito al n.° de
-						TRANSACCIÓN 9650 + el código que corresponda; así como
-						el n.° DNI, carné de extranjería o pasaporte del
-						postulante.
-					</p>
-					{/* <div className="mb-8 flex flex-wrap justify-center">
-								<div className="mb-3 md:mb-0 flex items-center">
-									<p>Cta. Cte. n.°</p>
-									<CajaConFuncionCopiar text="191-0215772014" />
+				<div>
+					<div className="mb-8">
+						<ul className="list-disc list-inside mb-4">
+							<li className="subtitle">
+								<div className="inline-flex items-center">
+									<span className="mr-2">
+										Banco de la Nación
+									</span>
+									<button
+										onClick={() => {
+											window.open(
+												'https://www.bn.com.pe/banca-internet/banca-internet.asp',
+												'_blank'
+											);
+										}}
+									>
+										<LinkExtIcon className="fill-primary" />
+									</button>
 								</div>
-								<div className="ml-3 flex items-center">
-									<p>CCI n.°</p>
-									<CajaConFuncionCopiar text="002-191-00021577201451" />
-								</div>
-							</div> */}
-				</div>
-				<div className="flex justify-center flex-wrap mb-14">
-					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-						<p className="text-xl font-bold mb-[10px]">
-							S/. 400.00
-						</p>
-						<p className="mb-3 font-bold">
-							<span>Transacción</span>: 9650 + código: 9702
-						</p>
-						<p>
-							Para Magíster UNMSM, personal administrativo de la
-							UNMSM, docente de universidades nacionales y
-							Magisterio Nacional.
+							</li>
+						</ul>
+						<p className="mb-8">
+							Acércate presencialmente a una de sus agencias más
+							cercanas e indica que realizarás un depósito al n.°
+							de TRANSACCIÓN 9650 + el código que corresponda; así
+							como el n.° DNI, carné de extranjería o pasaporte
+							del postulante.
 						</p>
 					</div>
-					<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-						<p className="text-xl font-bold mb-[10px]">
-							S/. 500.00
-						</p>
-						<p className="mb-3 font-bold">
-							<span>Transacción</span>: 9650 + código: 9703
-						</p>
-						<p>
-							Para postulantes graduados de otras universidades.
-						</p>
+					<div className="flex justify-center flex-wrap mb-14">
+						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+							<p className="text-xl font-bold mb-[10px]">
+								S/. 400.00
+							</p>
+							<p className="mb-3 font-bold">
+								<span>Transacción</span>: 9650 + código: 9702
+							</p>
+							<p>
+								Para Magíster UNMSM, personal administrativo de
+								la UNMSM, docente de universidades nacionales y
+								Magisterio Nacional.
+							</p>
+						</div>
+						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+							<p className="text-xl font-bold mb-[10px]">
+								S/. 500.00
+							</p>
+							<p className="mb-3 font-bold">
+								<span>Transacción</span>: 9650 + código: 9703
+							</p>
+							<p>
+								Para postulantes graduados de otras
+								universidades.
+							</p>
+						</div>
 					</div>
-				</div>
-				{/* <p className="text-center text-textColorTwo text-sm italic mb-14">
+					{/* <p className="text-center text-textColorTwo text-sm italic mb-14">
 							*Los costos corresponden al proceso de admisión
 							2022-II, sujetos a variaciones.
 						</p> */}
+				</div>
 			</div>
 			<PagoPagalo programa={'doctorado'} />
 			<div>
@@ -212,11 +212,11 @@ export const Inversion = () => {
 						.
 					</li>
 				</ol>
-				<div className="bg-complementaryTwo/[0.5] py-4 px-8 mb-8">
+				<div className="bg-complementaryOne/[0.5] py-4 px-8 mb-8">
 					<p>
 						Las solicitudes de devolución de dinero del pago por
 						derecho de inscripción se tramitan una vez finalizado el
-						presente proceso de admisión si el programa ha sido
+						presente proceso de admisión, si el programa ha sido
 						cancelado.
 					</p>
 				</div>
@@ -264,8 +264,9 @@ export const PagoPagalo = ({ programa }) => {
 						<button
 							onClick={() => {
 								window.open('https://pagalo.pe/', '_blank');
-							}}>
-							<LinkExtIcon className="fill-secondary" />
+							}}
+						>
+							<LinkExtIcon className="fill-primary" />
 						</button>
 					</div>
 				</li>
@@ -277,7 +278,7 @@ export const PagoPagalo = ({ programa }) => {
 			<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
 				<table className="table table-striped mb-0">
 					<thead>
-						<tr className="!bg-secondary text-blanco text-center">
+						<tr className="!bg-tertiary text-blanco text-center">
 							<th>Código</th>
 							<th className="">Descripción</th>
 							<th className="w-32">Monto</th>

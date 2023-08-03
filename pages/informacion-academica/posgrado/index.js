@@ -97,7 +97,8 @@ const InfoAcadPosgrado = () => {
 						<div
 							role="group"
 							aria-labelledby="checkbox-group"
-							className="flex flex-col gap-y-1 mt-2 mb-8">
+							className="flex flex-col gap-y-1 mt-2 mb-8"
+						>
 							<InputCheckbox
 								label="Doctorado"
 								name="doctoradoCheck"
@@ -130,7 +131,8 @@ const InfoAcadPosgrado = () => {
 						<div
 							role="group"
 							aria-labelledby="checkbox-group"
-							className="flex flex-col gap-y-1 mt-2 mb-8">
+							className="flex flex-col gap-y-1 mt-2 mb-8"
+						>
 							<InputCheckbox
 								label="Syllabus"
 								name="syllabusCheck"
@@ -214,7 +216,8 @@ const InfoAcadPosgrado = () => {
 											href={infoPosgrado.url}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="block mb-7">
+											className="block mb-7"
+										>
 											<div className="mb-1">
 												<p className="text-textColorOne font-bold mr-2 inline-block">
 													{infoPosgrado.nombre}
@@ -243,7 +246,7 @@ const InfoAcadPosgrado = () => {
 										).length > 0 ? (
 											<div
 												key="divider"
-												className="bg-complementaryTwo rounded-lg w-full h-[2px] mb-7"
+												className="bg-complementaryOne rounded-lg w-full h-[2px] mb-7"
 											/>
 										) : (
 											''
@@ -261,7 +264,8 @@ const InfoAcadPosgrado = () => {
 													href={infoPosgrado.url}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="block mb-7">
+													className="block mb-7"
+												>
 													<p className="text-textColorOne font-bold mb-1">
 														{infoPosgrado.nombre}
 													</p>

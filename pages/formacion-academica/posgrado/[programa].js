@@ -196,7 +196,7 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 							</p>
 						</div>
 						<a
-							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-primary text-blanco hover:bg-complementaryThree hover:shadow-md"
+							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-primary text-blanco hover:bg-secondary hover:shadow-md"
 							href={programa[0].attributes.brochure}
 							target="_blank"
 							rel="noopener noreferrer">
@@ -290,7 +290,8 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 																className="mb-2"
 																dangerouslySetInnerHTML={{
 																	__html: `${item.texto}`,
-																}}></li>
+																}}
+															></li>
 														)
 													)}
 												</ul>
@@ -348,7 +349,8 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 													(coordinador, index) => (
 														<p
 															className="mb-1"
-															key={index}>
+															key={index}
+														>
 															{
 																coordinador
 																	.docente
@@ -488,7 +490,8 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 				open={open}
 				onClose={handleClose}
 				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description">
+				aria-describedby="modal-modal-description"
+			>
 				<Box
 					className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
 					sx={{
@@ -497,10 +500,11 @@ const Escuela = ({ programa, coordinadores, ultimasNoticias, asignaturas }) => {
 						left: '50%',
 						transform: 'translate(-50%, -50%)',
 						bgcolor: 'transparent',
-					}}>
+					}}
+				>
 					<FormacionContentModal
 						handleClose={handleClose}
-						responsableEmail="postgrado.quimica@unmsm.edu.pe"
+						responsableEmail="admisionupg.administracion@unmsm.edu.pe"
 						telefono="(+51) 619 7000 anexo 4812"
 					/>
 				</Box>

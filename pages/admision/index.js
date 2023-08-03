@@ -12,6 +12,7 @@ import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 import { AdmisionDiplomatura } from '../../components/shared/admision/Diplomatura/AdmisionDiplomatura';
 import { AdmisionMaestria } from '../../components/shared/admision/Maestria/AdmisionMaestria';
 import { AdmisionDoctorado } from '../../components/shared/admision/Doctorado/AdmisionDoctorado';
+import { AdmisionPosdoctorado } from '../../components/shared/admision/Posdoctorado/AdmisionPosdoctorado';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
@@ -31,6 +32,10 @@ const Index = ({ admision, facultad }) => {
 			setActiveIndex(2);
 			return;
 		}
+		if (router.query.programa === 'posdoctorado') {
+			setActiveIndex(3);
+			return;
+		}
 	}, [router]);
 
 	const handleClick = (event, { activeIndex }) => {
@@ -47,6 +52,11 @@ const Index = ({ admision, facultad }) => {
 				break;
 			case 2:
 				router.push('/admision?programa=doctorado', undefined, {
+					shallow: true,
+				});
+				break;
+			case 3:
+				router.push('/admision?programa=posdoctorado', undefined, {
 					shallow: true,
 				});
 				break;
@@ -114,6 +124,23 @@ const Index = ({ admision, facultad }) => {
 				</Tab.Pane>
 			),
 		},
+		{
+			menuItem: 'Posdoctorado',
+			render: () => (
+				<Tab.Pane
+					attached={false}
+					onClick={(e) => {
+						handleClick(e, 'posdoctorado');
+					}}
+				>
+					<div className="col-start-3 col-span-10 mb-14">
+						<div className="mb-14">
+							<AdmisionPosdoctorado />
+						</div>
+					</div>
+				</Tab.Pane>
+			),
+		},
 	];
 	return (
 		<>
@@ -135,7 +162,7 @@ const Index = ({ admision, facultad }) => {
 					<div className="relative md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/admision/admision-banner-facultad-quimica.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/admision/admision-banner.jpg"
 							layout="responsive"
 							alt="Banner de admisión"
 							width={1080}

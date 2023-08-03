@@ -11,16 +11,21 @@ import Paso8 from '../../../icons/Paso8';
 import Paso9 from '../../../icons/Paso9';
 import Link from 'next/link';
 
-import { FaFacebookF } from 'react-icons/fa';
-import { AiFillInstagram } from 'react-icons/ai';
+import Boton from '../../Boton';
+
+import { Modal, Box } from '@mui/material';
+import FormacionContentModal from '../../../formacion-academica/FormacionContentModal';
 
 export const GuiaAdmisionMaestria = () => {
+	const [open, setOpen] = React.useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 	return (
 		<div>
 			<div className="mb-6">
 				¿Estás listo/a para postular a una maestría? Sigue, por favor,
 				detenidamente los siguientes pasos del proceso de admisión
-				2023-I:
+				2023-II:
 			</div>
 			<div className="relative">
 				<div className="grid grid-cols-[88px_auto] mb-10">
@@ -32,7 +37,7 @@ export const GuiaAdmisionMaestria = () => {
 						<p>
 							Te recomendamos{' '}
 							<span className="font-bold">visualizar el </span>
-							<Link href="/admision/posgrado?programa=maestria&tab=cronograma-academico">
+							<Link href="/admision?programa=maestria&tab=cronograma-academico">
 								<a className="link"> cronograma académico </a>
 							</Link>
 							con la finalidad de tener conocimiento de la
@@ -49,8 +54,10 @@ export const GuiaAdmisionMaestria = () => {
 						<p>
 							Luego, debes{' '}
 							<span className="font-bold">
-								verificar que el programa de interés cuente con
-								vacantes
+								verificar que el programa de interés cuente con{' '}
+								<Link href="/admision?programa=maestria&tab=cuadro-de-vacantes">
+									<a className="link">vacantes</a>
+								</Link>
 							</span>{' '}
 							para el proceso de admisión respectivo.
 						</p>
@@ -66,9 +73,9 @@ export const GuiaAdmisionMaestria = () => {
 							Verifica que{' '}
 							<span className="font-bold">
 								cumplas con los{' '}
-								<Link href="/admision/posgrado?programa=maestria&tab=requisitos-para-postular">
-									<a className="link"> requisitos </a>
-								</Link>
+								<Link href="/admision?programa=maestria&tab=requisitos-para-postular">
+									<a className="link">requisitos</a>
+								</Link>{' '}
 								establecidos
 							</span>{' '}
 							por la Dirección General de Estudios de Posgrado
@@ -87,8 +94,9 @@ export const GuiaAdmisionMaestria = () => {
 							<a
 								className="link"
 								target="_blank"
-								href="https://posgrado.unmsm.edu.pe/documentos/resumen-hv-postulante.pdf"
-								rel="noreferrer noopener">
+								href="https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/resumen_hv_postulante_9c4d207cfe.pdf"
+								rel="noreferrer noopener"
+							>
 								llena la hoja de vida.
 							</a>
 						</p>
@@ -101,7 +109,7 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 5:</p>
 						<p>
-							<Link href="/admision/posgrado?programa=maestria&tab=inversion">
+							<Link href="/admision?programa=maestria&tab=inversion">
 								<a className="link">
 									{' '}
 									Realiza el pago de inscripción{' '}
@@ -131,14 +139,15 @@ export const GuiaAdmisionMaestria = () => {
 								className="link"
 								target="_blank"
 								href="https://posgrado.unmsm.edu.pe/admision/inscripcion/"
-								rel="noreferrer noopener">
+								rel="noreferrer noopener"
+							>
 								plataforma virtual
 							</a>{' '}
 							<span className="font-bold">
 								y registrar tus datos.
 							</span>{' '}
-							Finalizado el registro de datos, se generará tu
-							código de postulante.
+							Una vez que finalices el registro de datos, se
+							generará tu código de postulante.
 						</p>
 					</div>
 				</div>
@@ -152,14 +161,15 @@ export const GuiaAdmisionMaestria = () => {
 							Envía{' '}
 							<span className="font-bold">
 								al correo electrónico de la Unidad de Posgrado
-								de la Facultad de Química e Ingeniería Química
+								de la Facultad de Ciencias Administrativas
 							</span>{' '}
 							<a
 								className="link"
 								target="_blank"
-								href="mailto:postgrado.quimica@unmsm.edu.pe"
-								rel="noreferrer noopener">
-								(postgrado.quimica@unmsm.edu.pe)
+								href="mailto:admisionupg.administracion@unmsm.edu.pe"
+								rel="noreferrer noopener"
+							>
+								(admisionupg.administracion@unmsm.edu.pe)
 							</a>
 							<span>
 								{' '}
@@ -179,8 +189,8 @@ export const GuiaAdmisionMaestria = () => {
 							Tendrás que rendir las evaluaciones para el programa
 							de maestría:{' '}
 							<span className="font-bold">
-								examen de aptitud virtual, evaluación de
-								expediente y entrevista personal.
+								examen virtual, evaluación de la hoja de vida y
+								entrevista virtual.
 							</span>{' '}
 						</p>
 					</div>
@@ -197,9 +207,9 @@ export const GuiaAdmisionMaestria = () => {
 								relación de postulantes admitidos que será
 								publicada en el portal web
 							</span>{' '}
-							de la Unidad de Posgrado de la Facultad de Química e
-							Ingeniería Química y enviada al correo electrónico
-							de cada ingresante.
+							de la Unidad de Posgrado de la Facultad de Ciencias
+							Administrativas y enviada al correo electrónico de
+							cada ingresante.
 						</p>
 					</div>
 				</div>
@@ -211,66 +221,37 @@ export const GuiaAdmisionMaestria = () => {
 				<p className="mb-2">
 					¡No te preocupes! Estamos aquí para ayudarte{' '}
 				</p>
-				<p className="text-[15px]">
-					<span className="font-bold mr-2">Sitio web:</span>
-					<a
-						className="link"
-						onClick={() => {
-							window.open(
-								'https://posgrado.unmsm.edu.pe/',
-								'_blank'
-							);
-						}}>
-						https://posgrado.unmsm.edu.pe/
-					</a>
-				</p>
-				<p className="text-[15px]">
-					<span className="font-bold mr-2">Correo electrónico:</span>
-					<a
-						className="link"
-						target="_blank"
-						href="mailto:postgrado.quimica@unmsm.edu.pe"
-						rel="noreferrer noopener">
-						postgrado.quimica@unmsm.edu.pe
-					</a>
-				</p>
-				<p className="text-[15px]">
-					<span className="font-bold mr-2">Dirección:</span>
-					<span>
-						Sede central, Ciudad Universitaria, Lima - Escuela de
-						Posgrado
-					</span>
-				</p>
-				<p className="text-[15px] mb-4">
-					<span className="font-bold mr-2">Teléfono:</span>
-					<span>(+51) 619 7000 anexo 5608, 5617 y 5622</span>
-				</p>
-				<div>
-					<div
-						onClick={() => {
-							window.open(
-								'https://www.facebook.com/admision.sanmarcos/',
-								'_blank'
-							);
+
+				<Boton
+					text="Contáctanos"
+					// secondary
+					bold
+					onClick={() => handleOpen()}
+				/>
+
+				<Modal
+					open={open}
+					onClose={handleClose}
+					aria-labelledby="modal-modal-title"
+					aria-describedby="modal-modal-description"
+				>
+					<Box
+						className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
+						sx={{
+							position: 'absolute',
+							top: '50%',
+							left: '50%',
+							transform: 'translate(-50%, -50%)',
+							bgcolor: 'transparent',
 						}}
-						className="inline-block mr-4">
-						<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-							<FaFacebookF />
-						</button>
-					</div>
-					<div
-						onClick={() => {
-							window.open(
-								'https://www.instagram.com/admision_unmsm/',
-								'_blank'
-							);
-						}}
-						className="inline-block">
-						<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-							<AiFillInstagram />
-						</button>
-					</div>
-				</div>
+					>
+						<FormacionContentModal
+							handleClose={handleClose}
+							responsableEmail="admisionupg.administracion@unmsm.edu.pe"
+							telefono="(+51) 619 7000 anexo 2624"
+						/>
+					</Box>
+				</Modal>
 			</div>
 		</div>
 	);

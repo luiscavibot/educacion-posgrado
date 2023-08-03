@@ -66,7 +66,7 @@ export const InversionEconomica = ({ programa }) => {
 								);
 							})}
 						</ul>
-						<div className="bg-complementaryTwo/[0.5] px-6 py-4 rounded-lg">
+						<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
 							Más información sobre los conceptos y lugares de
 							pago{' '}
 							<Link href="/formacion-academica/admision?posgrado&tab=inversion">
@@ -85,7 +85,8 @@ export const InversionEconomica = ({ programa }) => {
 								className="list-disc list-inside default-programa"
 								dangerouslySetInnerHTML={{
 									__html: `${programa[0].attributes.matricula}`,
-								}}></ul>
+								}}
+							></ul>
 						) : null}
 						<p className="font-medium text-sm mt-4">
 							<em>
@@ -163,7 +164,8 @@ export const InversionEconomica = ({ programa }) => {
 							className="list-disc list-inside default-programa"
 							dangerouslySetInnerHTML={{
 								__html: `${programa[0].attributes.fraccionamiento}`,
-							}}></ul>
+							}}
+						></ul>
 					) : null}
 				</div>
 			</div>

@@ -278,7 +278,7 @@ const TallerTesis = ({ ultimasNoticias }) => {
 												</span>
 											</li>
 										</ul>
-										<div className="bg-complementaryTwo/[0.5] px-6 py-4 rounded-lg">
+										<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
 											Más información sobre los conceptos
 											y lugares de pago{' '}
 											<Link href="/formacion-academica/admision?posgrado&tab=inversion">
@@ -424,7 +424,8 @@ const TallerTesis = ({ ultimasNoticias }) => {
 				open={open}
 				onClose={handleClose}
 				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description">
+				aria-describedby="modal-modal-description"
+			>
 				<Box
 					className="w-[90%] md:w-[60%] h-[90vh] md:h-auto overflow-auto rounded-lg"
 					sx={{
@@ -433,10 +434,11 @@ const TallerTesis = ({ ultimasNoticias }) => {
 						left: '50%',
 						transform: 'translate(-50%, -50%)',
 						bgcolor: 'transparent',
-					}}>
+					}}
+				>
 					<FormacionContentModal
 						handleClose={handleClose}
-						responsableEmail="postgrado.quimica@unmsm.edu.pe"
+						responsableEmail="admisionupg.administracion@unmsm.edu.pe"
 						telefono="(+51) 619 7000 anexo 4812"
 					/>
 				</Box>

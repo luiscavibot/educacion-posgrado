@@ -2,6 +2,7 @@ import React from 'react';
 import { Tabs } from '../../Tabs';
 import { GuiaAdmisionDoctorado } from './GuiaAdmisionDoctorado';
 import { CronogramaAcademico } from './CronogramaAcademico';
+import { ProcesoEvaluacionDoctorado } from './ProcesoEvaluacionDoctorado';
 import { CuadroVacante } from './CuadroVacante';
 import { Requisitos } from './Requisitos';
 import { Inversion } from './Inversion';
@@ -18,7 +19,8 @@ export const AdmisionDoctorado = ({
 				nombre="admision_doctorado"
 				onClick={(e) => {
 					handleClick(e);
-				}}>
+				}}
+			>
 				<div label="Guía para el proceso de admisión">
 					<GuiaAdmisionDoctorado />
 				</div>
@@ -27,6 +29,9 @@ export const AdmisionDoctorado = ({
 						cronograma={cronograma}
 						proceso={proceso}
 					/>
+				</div>
+				<div label="Proceso de evaluación">
+					<ProcesoEvaluacionDoctorado />
 				</div>
 				<div label="Cuadro de vacantes">
 					<CuadroVacante facultad={facultad} />

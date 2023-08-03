@@ -8,7 +8,7 @@ import anuncio_admision from '../../data/admision/anuncio_admision.json';
 export const BannerAdmision = ({ setIsOpenBanner, enlace }) => {
 	return (
 		// <div className="bg-gris col-span-full grid grid-cols-10 gap-x-4 shadow-[0_4px_20px_4px_rgba(0,0,0,0.04)] mb-8 relative">
-		<div className="bg:none md:bg-[url('https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/circulo-gris.png')] bg-complementaryTwo/60 bg-no-repeat bg-[length:429px] bg-[center_left_-49px] col-span-full grid grid-cols-12 gap-x-4 shadow-[0_4px_20px_4px_rgba(0,0,0,0.04)] mb-8 relative max-w-[917px] mx-auto">
+		<div className="bg:none md:bg-[url('https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/circulo-gris.png')] bg-complementaryOne/60 bg-no-repeat bg-[length:429px] bg-[center_left_-49px] col-span-full grid grid-cols-12 gap-x-4 shadow-[0_4px_20px_4px_rgba(0,0,0,0.04)] mb-8 relative max-w-[917px] mx-auto">
 			<div className="hidden md:flex mt-64 md:mt-0 col-start-1 relative col-span-12 md:col-span-6 justify-center items-center">
 				<div className="absolute w-full h-full overflow-hidden">
 					<div className="hidden md:block absolute -bottom-20 -left-2 h-[227px] w-[227px] rounded-full bg-primary"></div>
@@ -36,7 +36,8 @@ export const BannerAdmision = ({ setIsOpenBanner, enlace }) => {
 				<div className="mt-4 flex justify-start gap-x-6 gap-y-3">
 					<Link href={enlace}>
 						<a
-							className={`inline-block cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-secondary duration-300 bg-blanco hover:-translate-y-1`}>
+							className={`inline-block cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-secondary duration-300 bg-blanco hover:-translate-y-1`}
+						>
 							<span className="font-semibold">
 								Más información
 							</span>
@@ -46,7 +47,8 @@ export const BannerAdmision = ({ setIsOpenBanner, enlace }) => {
 						href="https://posgrado.unmsm.edu.pe/admision/inscripcion/"
 						target="_blank"
 						rel="noopener noreferrer"
-						className={`inline-block cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-blanco duration-300 bg-secondary hover:-translate-y-1`}>
+						className={`inline-block cursor-pointer border-[1px] border-secondary rounded-lg py-2 px-3 font-medium text-sm text-blanco duration-300 bg-secondary hover:-translate-y-1`}
+					>
 						<span className="font-semibold">
 							Inscripción online
 						</span>

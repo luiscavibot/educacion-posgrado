@@ -61,8 +61,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-1">
 						<span>
 							{CheckEventoFinalizado(evento.fecha_final) && (
-								<span className="bg-complementaryThree bg-opacity-10 rounded-lg py-1 px-2 mr-2">
-									<span className="text-complementaryThree text-xs inline-flex">
+								<span className="bg-secondary bg-opacity-10 rounded-lg py-1 px-2 mr-2">
+									<span className="text-secondary text-xs inline-flex">
 										<EventoFinalizadoIcon />
 										Evento finalizado
 									</span>
@@ -137,7 +137,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 									<div className="mt-5">
 										<button
 											disabled
-											className="bg-blanco border border-blanco px-3 py-2 text-sm text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente duration-300">
+											className="bg-blanco border border-blanco px-3 py-2 text-sm text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente duration-300"
+										>
 											Añadir a mi calendario
 										</button>
 									</div>
@@ -167,7 +168,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 							<Boton
 								className="mr-4"
 								secondary
-								onClick={handleOpen}>
+								onClick={handleOpen}
+							>
 								<CompartirIcon className="fill-primary inline-block relative -top-[1px] mr-2" />
 								<span className="font-semibold">Compartir</span>
 							</Boton>
@@ -189,18 +191,21 @@ const Evento = ({ evento, ultimosEventos }) => {
 							</div>
 							<div
 								className="col-span-full mb-14
-						 ">
+						 "
+							>
 								<div className="mb-2 grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-9 px-8 md:px-0">
 									{ultimosEventos.map((evento) => (
 										<Link
 											key={evento.slug}
 											// key={evento.titulo}
-											href={`/eventos/${evento.slug}`}>
+											href={`/eventos/${evento.slug}`}
+										>
 											{/* href={`/eventos/${evento.titulo}`}> */}
 											<a
 												// key={evento.attributes.slug}
 												key={evento.titulo}
-												className="card !rounded-t-none">
+												className="card !rounded-t-none"
+											>
 												<div className="relative w-full h-[200px]">
 													<Image
 														layout="fill"
@@ -265,7 +270,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 				}}
 				sx={{
 					bgcolor: 'rgba(0, 0, 0, 0.5)',
-				}}>
+				}}
+			>
 				<Fade in={open}>
 					<Box
 						className="w-[90%] md:w-auto h-[90vh] md:h-auto overflow-auto rounded-lg"
@@ -275,7 +281,8 @@ const Evento = ({ evento, ultimosEventos }) => {
 							left: '50%',
 							transform: 'translate(-50%, -50%)',
 							bgcolor: 'transparent',
-						}}>
+						}}
+					>
 						<SharedComponent
 							handleClose={handleClose}
 							ogUrl={ogUrl}

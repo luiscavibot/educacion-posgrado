@@ -72,15 +72,17 @@ const SideBarPrincipal = ({ refFooter, refSocialMedia }) => {
 									<Accordion.Title
 										active={activeIndexAccordion === id}
 										index={id}
-										onClick={changeAccordion}>
+										onClick={changeAccordion}
+									>
 										{ruta.seccion}
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-tertiary" />
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === id}>
-										<div className="mb-0 py-[10px] bg-complementaryTwo">
+										active={activeIndexAccordion === id}
+									>
+										<div className="mb-0 py-[10px] bg-complementaryOne">
 											{ruta.links.map((link, id) => {
 												return (
 													<div key={id}>

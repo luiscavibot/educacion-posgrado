@@ -83,7 +83,7 @@ const Memorias = () => {
 					<div className="overflow-x-auto mt-3 w-full">
 						<table className="table table-striped-even mb-6">
 							<thead>
-								<tr className="!bg-secondary text-blanco text-center">
+								<tr className="!bg-tertiary text-blanco text-center">
 									<th>Fecha</th>
 									<th>Nombre</th>
 									{/* <th>Descripción</th> */}
@@ -108,9 +108,8 @@ const Memorias = () => {
 												<td className="text-center">
 													<a
 														className="inline-grid place-items-center bg-blanco rounded-lg p-2 shadow-button"
-														href={
-															memoria.documento
-														}>
+														href={memoria.documento}
+													>
 														<DocumentosFillIcon className="fill-secondary" />
 													</a>
 												</td>

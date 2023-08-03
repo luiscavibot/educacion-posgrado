@@ -27,10 +27,12 @@ const Testimonios = () => {
 			initial="offscreen"
 			whileInView="onscreen"
 			viewport={{ once: true, amount: 0.3 }}
-			className="bg-blanco mb-14 md:mb-18 animate__animated animate__fadeInUp">
+			className="bg-blanco mb-14 md:mb-18 animate__animated animate__fadeInUp"
+		>
 			<motion.div
 				variants={entradaCardScroll}
-				className="container mx-auto px-4 md:grid-cols-12 gap-x-4 md:grid">
+				className="container mx-auto px-4 md:grid-cols-12 gap-x-4 md:grid"
+			>
 				<div className="col-start-2 col-span-10 flex md:mb-6">
 					<h2 className="text-4xl font-bold text-tertiary">
 						Testimonios
@@ -61,7 +63,8 @@ const Testimonios = () => {
 											testimoniosData[swiper.realIndex]
 										);
 									});
-								}}>
+								}}
+							>
 								<SwiperButtonNext />
 								{testimoniosData.map((testimonio) => (
 									<SwiperSlide key={testimonio.nombre}>
@@ -82,7 +85,7 @@ const Testimonios = () => {
 						)}
 						<div className="static lg:absolute lg:w-1/2 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 rounded-lg overflow-hidden">
 							<div className="relative">
-								<div className="bg-complementaryTwo px-6 lg:pl-[32%] pt-8 pb-9 lg:pr-11">
+								<div className="bg-complementaryOne px-6 lg:pl-[32%] pt-8 pb-9 lg:pr-11">
 									{/* <div className="rounded-lg bg-tertiary w-16 h-1 mb-3"></div> */}
 									<p className="text-xl text-tertiary font-bold mb-2">
 										{testimonioElegido.nombre}

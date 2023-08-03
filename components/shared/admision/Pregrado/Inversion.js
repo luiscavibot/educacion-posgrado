@@ -335,7 +335,8 @@ export const Inversion = ({ programas }) => {
 						href="https://pagalo.pe/"
 						className="link"
 						target="_blank"
-						rel="noopener noreferrer">
+						rel="noopener noreferrer"
+					>
 						{' '}
 						Págalo.pe
 					</a>
@@ -356,7 +357,8 @@ export const Inversion = ({ programas }) => {
 										href="https://pagalo.pe/"
 										className="link"
 										target="_blank"
-										rel="noopener noreferrer">
+										rel="noopener noreferrer"
+									>
 										Plataforma virtual (Págalo.pe)
 									</a>
 								</td>
@@ -369,7 +371,8 @@ export const Inversion = ({ programas }) => {
 										href="https://www.bn.com.pe/canales-atencion/agencia-lima-metropolitana.asp"
 										className="link"
 										target="_blank"
-										rel="noopener noreferrer">
+										rel="noopener noreferrer"
+									>
 										Presencial en agencia
 									</a>
 								</td>
@@ -392,7 +395,8 @@ export const Inversion = ({ programas }) => {
 						href="https://pagalo.pe/"
 						className="link"
 						target="_blank"
-						rel="noopener noreferrer">
+						rel="noopener noreferrer"
+					>
 						{' '}
 						Págalo.pe{' '}
 					</a>
@@ -447,7 +451,7 @@ export const Inversion = ({ programas }) => {
 					*Los costos corresponden al proceso de admisión 2023-II,
 					sujetos a variaciones.
 				</p> */}
-				<p className="p-4 bg-complementaryTwo/[0.5] rounded-lg py-4 px-8">
+				<p className="p-4 bg-complementaryOne/[0.5] rounded-lg py-4 px-8">
 					Si provienes de una institución educativa privada con fines
 					de lucro,{' '}
 					<span className="font-bold">
@@ -478,7 +482,8 @@ export const Inversion = ({ programas }) => {
 						href="https://pagalo.pe/"
 						className="link"
 						target="_blank"
-						rel="noopener noreferrer">
+						rel="noopener noreferrer"
+					>
 						{' '}
 						Págalo.pe
 					</a>

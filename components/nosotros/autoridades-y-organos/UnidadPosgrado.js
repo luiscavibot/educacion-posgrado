@@ -34,7 +34,8 @@ const UnidadPosgrado = () => {
 							className="link"
 							href="https://cdn.www.gob.pe/uploads/document/file/1979591/MOF%20de%20la%20Facultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica..pdf?v=1624896516"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							MOF
 						</a>
 						).
@@ -86,7 +87,8 @@ const UnidadPosgrado = () => {
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 							href="https://cdn.www.gob.pe/uploads/document/file/3989269/R.R.%20003389-2021-R%20-%20Director-UPG-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672154211"
 							target={'_blank'}
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<span className="flex items-center justify-center">
 								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 								Resolución rectoral
@@ -99,7 +101,8 @@ const UnidadPosgrado = () => {
 								window.open(
 									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=182002	'
 								)
-							}>
+							}
+						>
 							<span>
 								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>
@@ -140,7 +143,7 @@ const UnidadPosgrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							postgrado.quimica@unmsm.edu.pe
+							admisionupg.administracion@unmsm.edu.pe
 						</p>
 					</div>
 					<div>

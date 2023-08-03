@@ -21,13 +21,14 @@ export const Requisitos = () => {
 					<a
 						className="link"
 						target="_blank"
-						href="mailto:postgrado.quimica@unmsm.edu.pe"
-						rel="noreferrer noopener">
-						postgrado.quimica@unmsm.edu.pe
+						href="mailto:admisionupg.administracion@unmsm.edu.pe"
+						rel="noreferrer noopener"
+					>
+						admisionupg.administracion@unmsm.edu.pe
 					</a>
-					), que corresponde a la Unidad de Posgrado de esta facultad,
-					y adjuntar el expediente completo con los siguientes
-					documentos:
+					), que corresponde a la Unidad de Posgrado de Ciencias
+					Administrativas, y adjuntar el expediente completo con los
+					siguientes documentos:
 				</p>
 				<ol className="list-decimal list-inside">
 					<li className="py-2">
@@ -35,7 +36,8 @@ export const Requisitos = () => {
 							className="link"
 							target="_blank"
 							href="https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/resumen_hv_postulante_9c4d207cfe.pdf?updated_at=2022-06-13T21:07:58.885Z"
-							rel="noreferrer noopener">
+							rel="noreferrer noopener"
+						>
 							Resumen de la hoja de vida
 						</a>{' '}
 						del postulante (documentado, foliado y ordenado de
@@ -47,7 +49,8 @@ export const Requisitos = () => {
 							className="link"
 							target="_blank"
 							href="https://www.gob.pe/488-obtener-constancia-de-inscripcion-de-diplomas"
-							rel="noreferrer noopener">
+							rel="noreferrer noopener"
+						>
 							Constancia de inscripción en línea del grado de
 							Bachiller emitido por SUNEDU
 						</a>{' '}
@@ -62,15 +65,13 @@ export const Requisitos = () => {
 					<li className="py-2">
 						Recibo de{' '}
 						<Link
-							href={
-								'/admision/posgrado?programa=maestria&tab=inversion'
-							}>
+							href={'/admision?programa=maestria&tab=inversion'}
+						>
 							<a className="link">
 								pago por derecho de inscripción
 							</a>
 						</Link>{' '}
-						efectuado en el Banco de Crédito del Perú o en el Banco
-						de la Nación.
+						efectuado en el Banco de la Nación o por págalo.pe.
 					</li>
 					<li className="py-2">
 						Otro documento que la Unidad de Posgrado considere con

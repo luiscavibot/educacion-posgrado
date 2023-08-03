@@ -1,11 +1,18 @@
 import React from 'react';
 
-export const CronogramaAcademico = ({ cronograma, proceso }) => {
+const proceso = '2023-II';
+
+export const CronogramaAcademico = (
+	{
+		// cronograma,
+		// proceso
+	}
+) => {
 	return (
 		<>
 			<p className="mb-6">
-				Entérate aquí cuáles son todas nuestras actividades para los
-				programas de maestría del ciclo 2023-I
+				Entérate aquí cuáles son todas nuestras actividades para el
+				programa de maestría del ciclo 2023-II
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
@@ -13,7 +20,8 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						<tr>
 							<th
 								colSpan="2"
-								className="!bg-tertiary text-blanco text-center">
+								className="!bg-tertiary text-blanco text-center"
+							>
 								Admisión general {proceso}
 							</th>
 						</tr>
@@ -23,7 +31,7 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{cronograma.proceso_admision
+						{/* {cronograma.proceso_admision
 							.filter(
 								(proceso_adm) =>
 									proceso_adm.actividad !=
@@ -35,12 +43,40 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 										key={
 											proceso_adm.actividad +
 											proceso_adm.fecha
-										}>
+										}
+									>
 										<td>{proceso_adm.actividad}</td>
 										<td>{proceso_adm.fecha}</td>
 									</tr>
 								);
-							})}
+							})} */}
+						<tr>
+							<td>
+								Inscripción de postulantes y envío de
+								expedientes
+							</td>
+							<td>Hasta el 14 de julio del 2023</td>
+						</tr>
+						<tr>
+							<td>Charla informativa</td>
+							<td>24 de junio del 2023</td>
+						</tr>
+						<tr>
+							<td>Examen de aptitud virtual</td>
+							<td>3 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Entrevista virtual (solo maestría)</td>
+							<td>8 y 9 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Publicación de resultados</td>
+							<td>8 y 9 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Inicio de clases</td>
+							<td>28 de agosto del 2023</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -50,7 +86,8 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						<tr>
 							<th
 								colSpan="2"
-								className="!bg-tertiary text-blanco text-center">
+								className="!bg-tertiary text-blanco text-center"
+							>
 								Proceso de matrícula
 							</th>
 						</tr>
@@ -60,18 +97,46 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{cronograma.proceso_matricula.map((proceso_mat) => {
+						{/* {cronograma.proceso_matricula.map((proceso_mat) => {
 							return (
 								<tr
 									key={
 										proceso_mat.actividad +
 										proceso_mat.fecha
-									}>
+									}
+								>
 									<td>{proceso_mat.actividad}</td>
 									<td>{proceso_mat.fecha}</td>
 								</tr>
 							);
-						})}
+						})} */}
+						<tr>
+							<td>Reactualización de matrícula</td>
+							<td>Hasta el 11 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Matrícula regular</td>
+							<td>Del 07 al 25 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Matrícula de ingresantes</td>
+							<td>Del 21 al 25 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Reserva de matrícula</td>
+							<td>Hasta el 17 de setiembre del 2023</td>
+						</tr>
+						<tr>
+							<td>
+								Matrícula extemporánea y rectificación de
+								matrícula
+							</td>
+							<td>Del 11 al 18 de setiembre del 2023</td>
+						</tr>
+						<tr>
+							<td>Anulación de matrícula</td>
+							<td>Del 13 al 17 de setiembre del 2023</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -81,7 +146,8 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						<tr>
 							<th
 								colSpan="2"
-								className="!bg-tertiary text-blanco text-center">
+								className="!bg-tertiary text-blanco text-center"
+							>
 								Programa de inducción académica
 							</th>
 						</tr>
@@ -91,20 +157,28 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{cronograma.induccion_academica.map(
+						{/* {cronograma.induccion_academica.map(
 							(induccion_acad) => {
 								return (
 									<tr
 										key={
 											induccion_acad.actividad +
 											induccion_acad.fecha
-										}>
+										}
+									>
 										<td>{induccion_acad.actividad}</td>
 										<td>{induccion_acad.fecha}</td>
 									</tr>
 								);
 							}
-						)}
+						)} */}
+						<tr>
+							<td>
+								Capacitación en base de datos, aspectos de
+								investigación y normativa de posgrado
+							</td>
+							<td>01 y 02 de setiembre del 2023</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -114,7 +188,8 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						<tr>
 							<th
 								colSpan="2"
-								className="!bg-tertiary text-blanco text-center">
+								className="!bg-tertiary text-blanco text-center"
+							>
 								Actividades académicas
 							</th>
 						</tr>
@@ -124,20 +199,33 @@ export const CronogramaAcademico = ({ cronograma, proceso }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{cronograma.actividades_academicas.map(
+						{/* {cronograma.actividades_academicas.map(
 							(actividades_acad) => {
 								return (
 									<tr
 										key={
 											actividades_acad.actividad +
 											actividades_acad.fecha
-										}>
+										}
+									>
 										<td>{actividades_acad.actividad}</td>
 										<td>{actividades_acad.fecha}</td>
 									</tr>
 								);
 							}
-						)}
+						)} */}
+						<tr>
+							<td>Inicio de clases</td>
+							<td>28 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Fin de clases</td>
+							<td>16 de diciembre del 2023</td>
+						</tr>
+						<tr>
+							<td>Ingreso de notas</td>
+							<td>Del 18 al 22 de diciembre del 2023</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>

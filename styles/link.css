@@ -1,5 +1,5 @@
 .link {
-	@apply text-primary font-bold cursor-pointer hover:text-textColorOne;
+	@apply text-primary font-bold cursor-pointer hover:text-primary-hover transition duration-300;
 }
 
 .color-inherit {

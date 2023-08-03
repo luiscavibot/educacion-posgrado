@@ -52,7 +52,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										I semestre
 									</th>
 								</tr>
@@ -77,7 +78,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -107,7 +109,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										II semestre
 									</th>
 								</tr>
@@ -132,7 +135,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -172,7 +176,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										III semestre
 									</th>
 								</tr>
@@ -197,7 +202,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -227,7 +233,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										IV semestre
 									</th>
 								</tr>
@@ -252,7 +259,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -305,7 +313,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -355,7 +364,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										I semestre
 									</th>
 								</tr>
@@ -380,7 +390,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -410,7 +421,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										II semestre
 									</th>
 								</tr>
@@ -435,7 +447,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -475,7 +488,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										III semestre
 									</th>
 								</tr>
@@ -500,7 +514,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -530,7 +545,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										IV semestre
 									</th>
 								</tr>
@@ -555,7 +571,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -595,7 +612,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										V semestre
 									</th>
 								</tr>
@@ -620,7 +638,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -650,7 +669,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tr>
 									<th
 										colSpan="2"
-										className="!bg-tertiary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center"
+									>
 										VI semestre
 									</th>
 								</tr>
@@ -675,7 +695,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -728,7 +749,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -777,11 +799,11 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{/* <tr>
 									<th
 										colSpan="2"
-										className="!bg-secondary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center">
 										I semestre
 									</th>
 								</tr> */}
-								<tr className="!bg-secondary/50 text-blanco text-center">
+								<tr className="!bg-tertiary/50 text-blanco text-center">
 									<th>Asignatura</th>
 									<th className="md:w-60 text-center">
 										Créditos
@@ -828,11 +850,11 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{/* <tr>
 									<th
 										colSpan="2"
-										className="!bg-secondary text-blanco text-center">
+										className="!bg-tertiary text-blanco text-center">
 										I semestre
 									</th>
 								</tr> */}
-								<tr className="!bg-secondary/50 text-blanco text-center">
+								<tr className="!bg-tertiary/50 text-blanco text-center">
 									<th>Asignatura</th>
 									<th className="md:w-60 text-center">
 										Créditos
@@ -892,7 +914,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 											<tr
 												key={
 													asignatura.attributes.nombre
-												}>
+												}
+											>
 												<td>
 													{
 														asignatura.attributes
@@ -964,7 +987,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 					}}
 					sx={{
 						bgcolor: 'rgba(0, 0, 0, 0.5)',
-					}}>
+					}}
+				>
 					<Fade in={open}>
 						<Box
 							className="w-[90%] md:w-auto h-[90vh] md:h-auto overflow-auto rounded-lg"
@@ -974,7 +998,8 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								left: '50%',
 								transform: 'translate(-50%, -50%)',
 								bgcolor: 'transparent',
-							}}>
+							}}
+						>
 							<SharedComponent
 								handleClose={handleClose}
 								ogUrl={ogUrl + '?tab=malla-curricular'}

@@ -15,7 +15,7 @@
 	text-decoration: none;
 }
 .html-default a:hover {
-	@apply font-semibold;
+	@apply text-secondary-hover font-semibold;
 }
 .html-default blockquote {
 	@apply bg-blancoTransparente;
