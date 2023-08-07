@@ -1,44 +1,56 @@
-.mySwiper.swiper {
+.carousel-programas.swiper {
 	width: 100%;
 	padding-top: 50px !important;
 	padding-bottom: 50px !important;
 	position: static !important;
 }
 
-.mySwiper .swiper-slide {
+.carousel-programas .swiper-slide {
 	background-color: #fff;
 	background-position: center;
 	background-size: cover;
-	width: 232px !important;
+	width: 290px !important;
 }
 
-.mySwiper .swiper-slide.swiper-slide-visible .program-box {
+.carousel-programas .swiper-slide.swiper-slide-visible .program-box {
 	opacity: 0.6;
 }
 
-.program-box {
+.carousel-programas .program-box {
 	width: 100%;
 	opacity: 0;
 	transition: all 0.3s ease;
 }
 
-.program-box .text-content {
+.carousel-programas .program-box .text-content {
 	@apply py-5 px-6;
 }
 
-.swiper-slide-active.swiper-slide-visible .program-box {
+.carousel-programas .swiper-slide-active.swiper-slide-visible .program-box {
 	opacity: 1;
 }
 
-.swiper-slide-prev.swiper-slide-visible .program-box,
-.swiper-slide-next.swiper-slide-visible .program-box {
+.carousel-programas .program-box .modalidad {
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.carousel-programas
+	.swiper-slide-active.swiper-slide-visible
+	.program-box
+	.modalidad {
+	opacity: 1;
+}
+
+.carousel-programas .swiper-slide-prev.swiper-slide-visible .program-box,
+.carousel-programas .swiper-slide-next.swiper-slide-visible .program-box {
 	opacity: 0.8;
 }
 
-.mySwiper .swiper-slide img {
+.carousel-programas .swiper-slide img {
 	display: block;
 	width: 100%;
 }
-.mySwiper.swiper-3d {
+.carousel-programas .swiper-3d {
 	perspective: 593px !important;
 }

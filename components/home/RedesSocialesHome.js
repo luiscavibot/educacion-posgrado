@@ -13,48 +13,52 @@ export default function RedesSocialesHome({
 	return (
 		<div className={className}>
 			{facebook && (
-				<div
-					onClick={() => {
-						window.open(`${facebook}`, '_blank');
-					}}
-					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+				<a
+					href={facebook}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaFacebookF />
 					</button>
-				</div>
-			)}
-			{instagram && (
-				<div
-					onClick={() => {
-						window.open(`${instagram}`, '_blank');
-					}}
-					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
-						<AiFillInstagram />
-					</button>
-				</div>
+				</a>
 			)}
 			{twitter && (
-				<div
-					onClick={() => {
-						window.open(`${twitter}`, '_blank');
-					}}
-					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+				<a
+					href={twitter}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaTwitter />
 					</button>
-				</div>
+				</a>
 			)}
 			{youtube && (
-				<div
-					onClick={() => {
-						window.open(`${youtube}`, '_blank');
-					}}
-					className="inline">
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-blanco rounded-md p-2 mr-3 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+				<a
+					href={youtube}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillYoutube />
 					</button>
-				</div>
+				</a>
+			)}
+			{instagram && (
+				<a
+					href={instagram}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+						<AiFillInstagram />
+					</button>
+				</a>
 			)}
 		</div>
 	);

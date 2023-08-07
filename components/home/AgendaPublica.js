@@ -11,12 +11,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SwiperButtonNext from './swiper/SwiperButtonNext';
 import SwiperButtonPrev from './swiper/SwiperButtonPrev';
+import VerMasIcon from '../icons/VerMasIcon';
 
 function createMarkup(dom) {
 	return { __html: dom };
 }
 
-const Noticias = ({ noticiasDestacadas, noticias }) => {
+const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 	const [firstRender, setFirstRender] = useState(false);
 	useEffect(() => {
 		setFirstRender(true);
@@ -34,14 +35,15 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 				variants={entradaCardScroll}
 				className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid"
 			>
-				<div className="col-start-2 col-span-10 flex mb-9">
+				<div className="col-start-2 col-span-10 flex items-center gap-x-3 mb-9">
 					<h2 className="text-4xl font-bold text-tertiary">
-						Noticias
+						Agenda Pública
 					</h2>
 					<Link href="/noticias" passHref>
-						<a className="text-lg text-primary font-bold flex items-end hover:text-textColorOne">
-							<span className="ml-2">|</span>
-							<p className="ml-2">ver más</p>
+						<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+							<div className="w-3 inline-block">
+								<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+							</div>
 						</a>
 					</Link>
 				</div>
@@ -91,7 +93,7 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 															</div>
 															<div className="col-span-2 bg-blanco px-5 pt-6 pb-28">
 																<div className="line-clamp-10">
-																	<span className="font-bold text-base group-hover:text-secondary-hover transition duration-300">
+																	<span className="font-bold text-base group-hover:text-secondary transition duration-300">
 																		{
 																			noticiaDestacada.titulo
 																		}
@@ -165,4 +167,4 @@ const Noticias = ({ noticiasDestacadas, noticias }) => {
 	);
 };
 
-export default Noticias;
+export default AgendaPublica;

@@ -13,4 +13,4 @@ export const APP_CORREO =
 		: 'https://appcorreos.unmsm.edu.pe/api/posgrado';
 
 // SLUG DE CARRERA PARA LAS APIS
-export const SLUG_CARRERA = 'quimica-e-ingenieria-quimica';
+export const SLUG_CARRERA = 'farmacia-y-bioquimica';

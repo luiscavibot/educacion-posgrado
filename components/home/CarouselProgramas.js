@@ -26,47 +26,54 @@ export default function CarouselProgramas({ programas }) {
 				// slidesPerView={8}
 				coverflowEffect={{
 					rotate: 0,
-					stretch: 0,
-					depth: 100,
+					stretch: 50,
+					depth: 80,
 					modifier: 2,
 					slideShadows: false,
 				}}
 				pagination={false}
 				loop={true}
 				modules={[EffectCoverflow]}
-				className="mySwiper">
-				<SwiperButtonPrev />
-				<SwiperButtonNext />
+				className="carousel-programas"
+			>
 				{programas.map((programa) => (
 					<SwiperSlide
-						key={`${programa.attributes.nombre}-${programa.tipo}`}>
+						key={`${programa.attributes.nombre}-${programa.tipo}`}
+					>
 						<Link
 							href={
 								programa.tipo === 'Maestrías'
 									? `/maestrias/${programa.attributes.slug}`
 									: `/doctorados/${programa.attributes.slug}`
-							}>
+							}
+						>
 							<a className="card program-box hover:-translate-y-2">
-								<Image
-									alt={programa.attributes.nombre}
-									width={290}
-									height={168}
-									layout="responsive"
-									objectFit="cover"
-									src={
-										programa.attributes.imagen.data
-											? programa.attributes.imagen.data[0]
-													.attributes.url
-											: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-									}></Image>
+								<div className="relative">
+									<Image
+										alt={programa.attributes.nombre}
+										width={290}
+										height={168}
+										layout="responsive"
+										objectFit="cover"
+										src={
+											programa.attributes.imagen.data
+												? programa.attributes.imagen
+														.data[0].attributes.url
+												: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
+										}
+									/>
+									<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
+										Modalidad Presencial
+									</div>
+								</div>
 								<div className="text-content h-32">
-									<p className="text-secondary text-xs font-bold">
+									{/* <p className="text-rojoBase text-xs font-bold">
 										{programa.tipo}
-									</p>
-									<p className="title line-clamp-2">
+									</p> */}
+									<p className="title font-bold line-clamp-2">
 										{programa.attributes.nombre}
 									</p>
-									<p className="line-clamp-2 text-sm">
+									<p className="line-clamp-2">
 										{
 											programa.attributes.facultad.data
 												.attributes.nombre

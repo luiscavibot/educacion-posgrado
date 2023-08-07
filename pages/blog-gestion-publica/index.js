@@ -54,8 +54,8 @@ const Blog = () => {
 						<CardsNoticiasResultados noticias={noticias} />
 					</div>
 					<div className="col-span-2">
-						<div className="rounded-lg bg-bgTikTok bg-cover overflow-hidden">
-							<div className="bg-bgTikTokGradient px-6 py-8 text-blanco h-[25.75rem]">
+						<div className="rounded-lg bg-TikTok bg-cover overflow-hidden">
+							<div className="bg-TikTokGradient px-6 py-8 text-blanco h-[25.75rem]">
 								<p className="text-[2rem] font-bold leading-[normal] mb-3">
 									Visita nuestro Tik tok
 								</p>
