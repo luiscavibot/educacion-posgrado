@@ -18,6 +18,7 @@ import { Autoplay } from 'swiper';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Logo from '../icons/Logo';
 import AsideSocialNetworks from '../shared/AsideSocialNetworks';
+import LogoPosgradoAdministracionVertical from '../icons/LogoPosgradoAdministracionVertical';
 
 const PortadaHome = ({ eventos }) => {
 	// console.log(eventos);
@@ -25,7 +26,7 @@ const PortadaHome = ({ eventos }) => {
 		// <section className="relative w-full flex flex-col md:h-screen">
 		// 	<div className="relative md:static h-96 md:h-full">
 		<section className="relative w-full flex flex-col">
-			<div className="relative h-screen sm:h-96 md:h-auto">
+			<div className="relative h-[calc(100vh_-_170px)] sm:h-96 md:h-auto">
 				<AsideSocialNetworks />
 
 				{/* carrusel fotos */}
@@ -48,7 +49,7 @@ const PortadaHome = ({ eventos }) => {
 									cover: true,
 								},
 								639: {
-									height: '100vh',
+									height: 'calc(100vh - 170px)',
 									cover: true,
 								},
 							},
@@ -170,14 +171,16 @@ const PortadaHome = ({ eventos }) => {
 						</div>
 					</div>
 				</div>
+
+				{/* logo */}
 				<div className="animate__animated animate__fadeInUp text-blanco top-1/2 !-translate-y-1/2 md:max-lg:!-translate-y-[28%] absolute z-10 text-5xl w-full">
 					<div className="container mx-auto px-4">
-						<Logo className="w-[505px] h-[151px] mx-auto" />
+						<Logo className="md:w-[505px] md:h-[151px] mx-auto hidden md:block" />
+						<LogoPosgradoAdministracionVertical className="md:hidden mx-auto" />
 					</div>
 				</div>
 			</div>
 
-			{/* <Numeros /> */}
 			{/* if eventos exist and isnt empty */}
 			{eventos && eventos.length > 0 && (
 				<>
@@ -234,28 +237,37 @@ const PortadaHome = ({ eventos }) => {
 							</div>
 						</div>
 					</div>
-					<div className="w-full text-blanco absolute bottom-0 block md:hidden">
+					<div className="w-full text-blanco bg-secondary block md:hidden">
+						<div className="my-6 mx-4 flex justify-end">
+							<Link href="/eventos">
+								<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente group-hover:bg-primary transition-colors duration-300">
+									<div className="w-3 inline-block">
+										<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+									</div>
+								</a>
+							</Link>
+						</div>
 						<Swiper
 							modules={[Autoplay]}
 							spaceBetween={0}
 							slidesPerView={1}
 							loop={true}
 							autoplay={{
-								delay: 1500,
+								delay: 3500,
 							}}
 						>
 							{eventos.map((evento, index) => (
 								<SwiperSlide key={evento.slug + index}>
-									<div className="bg-tertiary">
+									<div className="bg-secondary">
 										<Link
 											key={evento.slug}
 											href={`/eventos/${evento.slug}`}
 										>
 											<a
 												key={evento.id}
-												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-44 py-8 px-8 "
+												className="grid grid-flow-col grid-cols-[min-content_auto] gap-4 h-44 pb-2 px-8"
 											>
-												<div>
+												<div className="flex flex-col items-center">
 													<div className="font-bold text-[40px] leading-none mb-2 text-center">
 														{getDia(
 															evento.fecha_inicio
@@ -266,12 +278,16 @@ const PortadaHome = ({ eventos }) => {
 															evento.fecha_inicio
 														)}
 													</div>
+													<div>3 p.m.</div>
 												</div>
-												<div className="flex flex-col space-y-3 line-clamp-6">
-													<p className="text-sm font-semibold">
+												<div className="flex flex-col">
+													<p className="mb-[2px] font-bold">
+														{evento.tipo.valor}
+													</p>
+													<p className="text-sm font-normal mb-6 line-clamp-3">
 														{evento.titulo}
 													</p>
-													<p className="text-xs ">
+													<p className="text-xs font-semibold line-clamp-2">
 														{evento.lugar}
 													</p>
 												</div>
@@ -279,8 +295,6 @@ const PortadaHome = ({ eventos }) => {
 										</Link>
 									</div>
 								</SwiperSlide>
-								// <div key={evento.slug + 'n'}>
-								// </div>
 							))}
 						</Swiper>
 					</div>

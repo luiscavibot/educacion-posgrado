@@ -6,7 +6,7 @@ import LinkInternos from '../components/home/LinksInternos';
 import Programas from '../components/home/Programas';
 import FooterComponent from '../components/shared/FooterComponent';
 import { BASE_URL, SLUG_CARRERA, POSGRADO_URL } from '../config/consts';
-import Unete from '../components/home/Unete';
+import Contactanos from '../components/home/Contactanos';
 import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
 
@@ -54,7 +54,7 @@ export default function Home({
 				<Programas maestrias={maestrias} doctorados={doctorados} />
 				<Testimonios />
 				<LinksExternos />
-				<Unete />
+				<Contactanos />
 			</main>
 			<FooterComponent inHome />
 		</FHpages>

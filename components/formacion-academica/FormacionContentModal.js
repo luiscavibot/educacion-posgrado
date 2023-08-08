@@ -20,6 +20,7 @@ const FormacionContentModal = ({
 	escuela,
 	templateType,
 	telefono,
+	noCloseButton,
 }) => {
 	const [isSuccessfull, setIsSuccessfull] = useState(false);
 	const httpBody = {};
@@ -80,8 +81,14 @@ const FormacionContentModal = ({
 				>
 					{({ isSubmitting, isValid, dirty }) => {
 						return (
-							<Form className="bg-blanco col-span-12 md:col-span-7 py-9 px-8">
-								<div className="md:hidden flex justify-end">
+							<Form className="bg-[#EFF3F6] col-span-12 md:col-span-7 py-9 px-8">
+								<div
+									className={`${
+										noCloseButton
+											? 'hidden'
+											: 'md:hidden flex justify-end'
+									}`}
+								>
 									<button
 										onClick={handleClose}
 										type="button"
@@ -161,8 +168,14 @@ const FormacionContentModal = ({
 						);
 					}}
 				</Formik>
-				<div className="bg-tertiary col-span-12 md:col-span-5  text-blanco px-8 py-9">
-					<div className="hidden md:flex justify-end">
+				<div className="bg-secondary col-span-12 md:col-span-5  text-blanco px-8 py-9">
+					<div
+						className={`${
+							noCloseButton
+								? 'hidden'
+								: 'md:flex hidden justify-end'
+						}`}
+					>
 						<button
 							onClick={handleClose}
 							type="button"
@@ -177,7 +190,7 @@ const FormacionContentModal = ({
 						</div>
 						<div>
 							<p className="leading-none">Correo</p>
-							<p className="text-sm font-light mt-[0.2rem]">
+							<p className="text-sm font-light mt-[0.2rem] break-all">
 								{responsableEmail}
 							</p>
 						</div>
