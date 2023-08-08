@@ -28,13 +28,13 @@ const Blog = () => {
 	return (
 		<>
 			<PrincipalLayout>
-				<ul className="px-4 md:px-0 col-span-full text-sm mb-5">
-					<li className="text-textColorTwo font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+				<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+					<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 						<Link href="/">
 							<a>Inicio</a>
 						</Link>
 					</li>
-					<li className="inline text-textColorOne font-bold">
+					<li className="text-textColorOne font-bold inline">
 						Blog de Gestión Pública
 					</li>
 				</ul>

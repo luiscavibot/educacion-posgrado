@@ -1,5 +1,5 @@
 .card {
-	@apply block bg-blanco rounded-lg shadow-basic-card text-textColorOne transition duration-300;
+	@apply block bg-blanco rounded-b-lg overflow-hidden shadow-basic-card text-textColorOne transition duration-300;
 }
 
 .card-box {

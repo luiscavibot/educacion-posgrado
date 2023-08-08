@@ -43,6 +43,8 @@ module.exports = {
 					'linear-gradient(90deg, #004283 22.92%, rgba(0, 66, 131, 0.91) 42.48%, rgba(0, 66, 131, 0.76) 59.22%, rgba(0, 66, 131, 0.00) 100%);',
 				bgGradienteCarruselPortada:
 					'linear-gradient(180deg, #19191B 0%, rgba(25, 25, 27, 0) 100%);',
+				Contacto:
+					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/imagen-cintillo-contacto.jpg")',
 			},
 			fontFamily: {
 				lato: 'Lato',
@@ -121,7 +123,7 @@ module.exports = {
 			},
 			tertiary: '#033759',
 			complementaryOne: '#E0E0E0',
-			// complementaryTwo: '#E6E6E9',
+			complementaryTwo: '#F7F7F8',
 			// complementaryThree: '#198BDE',
 			disabled: '#C7DBEA',
 			// complementaryFour: '#14132A',

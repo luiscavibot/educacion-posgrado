@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Observacion = ({ children, className }) => {
+const Observacion = ({ children, className, label }) => {
 	return (
 		<div
-			className={`bg-complementaryOne/[0.5] rounded-lg py-4 px-8 ${className}`}
+			className={`bg-complementaryTwo rounded-lg py-4 px-8 ${className}`}
 		>
 			<h2 className="font-medium mb-[6px] inline-flex items-center">
 				<p className="font-bold">
@@ -12,7 +12,7 @@ const Observacion = ({ children, className }) => {
 						src="/img/icons/observacion-white-icon.svg"
 						alt=""
 					/>
-					<span>Observación</span>
+					<span>{label ? label : 'Observación'}</span>
 				</p>
 			</h2>
 			<div>{children}</div>
