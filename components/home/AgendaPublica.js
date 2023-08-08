@@ -36,7 +36,7 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 				className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid"
 			>
 				<div className="col-start-2 col-span-10 flex items-center gap-x-3 mb-9">
-					<h2 className="text-4xl font-bold text-tertiary">
+					<h2 className="text-[2rem] font-bold text-tertiary">
 						Agenda Pública
 					</h2>
 					<Link href="/noticias" passHref>

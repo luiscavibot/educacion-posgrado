@@ -28,7 +28,7 @@ const Programas = ({ maestrias, doctorados }) => {
 				variants={entradaCardScroll}
 				className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid"
 			>
-				<h2 className="col-span-10 col-start-2 md:col-span-10 md:col-start-2 text-4xl font-bold text-tertiary">
+				<h2 className="col-span-10 col-start-2 md:col-span-10 md:col-start-2 text-[2rem] font-bold text-tertiary">
 					Programas
 				</h2>
 				<div className="col-start-2 col-span-10 md:col-start-2 md:col-span-3">

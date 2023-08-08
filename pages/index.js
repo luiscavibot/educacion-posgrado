@@ -52,8 +52,8 @@ export default function Home({
 				/>
 				<LinkInternos />
 				<Programas maestrias={maestrias} doctorados={doctorados} />
-				<LinksExternos />
 				<Testimonios />
+				<LinksExternos />
 				<Unete />
 			</main>
 			<FooterComponent inHome />
