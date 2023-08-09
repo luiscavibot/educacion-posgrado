@@ -191,7 +191,7 @@ const PortadaHome = ({ eventos }) => {
 									{eventos.map((evento) => (
 										<Link
 											key={evento.slug}
-											href={`/eventos/${evento.slug}`}
+											href={`/actualidad/eventos/${evento.slug}`}
 										>
 											<a
 												key={evento.id}
@@ -225,7 +225,7 @@ const PortadaHome = ({ eventos }) => {
 										</Link>
 									))}
 									<div className="absolute top-1/2 -translate-y-1/2 -right-4 translate-x-full">
-										<Link href="/eventos">
+										<Link href="/actualidad/eventos">
 											<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente group-hover:bg-primary transition-colors duration-300">
 												<div className="w-3 inline-block">
 													<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
@@ -239,7 +239,7 @@ const PortadaHome = ({ eventos }) => {
 					</div>
 					<div className="w-full text-blanco bg-secondary block md:hidden">
 						<div className="my-6 mx-4 flex justify-end">
-							<Link href="/eventos">
+							<Link href="/actualidad/eventos">
 								<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente group-hover:bg-primary transition-colors duration-300">
 									<div className="w-3 inline-block">
 										<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
@@ -261,7 +261,7 @@ const PortadaHome = ({ eventos }) => {
 									<div className="bg-secondary">
 										<Link
 											key={evento.slug}
-											href={`/eventos/${evento.slug}`}
+											href={`/actualidad/eventos/${evento.slug}`}
 										>
 											<a
 												key={evento.id}

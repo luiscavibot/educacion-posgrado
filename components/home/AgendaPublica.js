@@ -39,7 +39,7 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 					<h2 className="text-[2rem] font-bold text-tertiary">
 						Agenda Pública
 					</h2>
-					<Link href="/noticias" passHref>
+					<Link href="/actualidad/agenda-publica" passHref>
 						<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
 							<div className="w-3 inline-block">
 								<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />

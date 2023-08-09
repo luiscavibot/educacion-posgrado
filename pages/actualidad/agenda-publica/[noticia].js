@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
-import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
+import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 import { BiTimeFive } from 'react-icons/bi';
-import Boton from '../../components/shared/Boton';
-import { getFecha } from '../../helpers/getFecha';
-import Cargando from '../../components/resultados/Cargando';
-import CompartirIcon from '../../components/icons/CompartirIcon';
+import Boton from '../../../components/shared/Boton';
+import { getFecha } from '../../../helpers/getFecha';
+import Cargando from '../../../components/resultados/Cargando';
+import CompartirIcon from '../../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
-import SharedComponent from '../../components/shared/SharedComponent';
+import SharedComponent from '../../../components/shared/SharedComponent';
+import VerMasIcon from '../../../components/icons/VerMasIcon';
 
 const Noticia = ({ noticia, noticiasRelacionadas }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/noticias/${noticia.slug}`;
@@ -33,18 +34,23 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 				</div>
 			) : (
 				<>
-					<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+					<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+						<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/">
 								<a>Inicio</a>
 							</Link>
 						</li>
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/noticias">
-								<a>Noticias</a>
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							Actualidad
+						</li>
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							<Link href="/actualidad/agenda-publica">
+								<a>Agenda Pública</a>
 							</Link>
 						</li>
-						<li className="inline text-negro">{noticia.titulo}</li>
+						<li className="text-textColorOne font-bold inline">
+							{noticia.titulo}
+						</li>
 					</ul>
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-4">
 						{noticia.titulo}
@@ -87,19 +93,25 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 							</Boton>
 						</div>
 					</div>
-					{!noticiasRelacionadas && (
+					{noticiasRelacionadas && (
 						<>
-							<div className="mx-4 md:mx-0 col-span-full">
-								<div className="flex mb-6 font-bold">
-									<p className="text-textColorOne">
-										Últimas noticias
-									</p>
-									<Link href="/noticias" passHref>
-										<a className="text-secondary flex items-end hover:text-textColorOne">
-											<span className="ml-2">|</span>
-											<p className="ml-2 link">ver más</p>
-										</a>
-									</Link>
+							<div className="col-span-full mx-4 md:mx-0">
+								<div>
+									<div className="flex items-center gap-x-3 mb-9">
+										<h2 className="font-bold text-textColorOne">
+											Últimas noticias
+										</h2>
+										<Link
+											href="/actualidad/agenda-publica"
+											passHref
+										>
+											<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+												<div className="w-3 inline-block">
+													<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+												</div>
+											</a>
+										</Link>
+									</div>
 								</div>
 							</div>
 							<div className="col-span-full mb-14">
@@ -107,10 +119,12 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 									{noticiasRelacionadas.map((noticia) => (
 										<Link
 											key={noticia.id}
-											href={`/noticias/${noticia.slug}`}>
+											href={`/noticias/${noticia.slug}`}
+										>
 											<a
 												href="#"
-												className="card !rounded-t-none">
+												className="card !rounded-t-none"
+											>
 												<div className="h-[220px] hidden md:block relative w-full">
 													<Image
 														alt={noticia.titulo}
@@ -154,7 +168,8 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 				}}
 				sx={{
 					bgcolor: 'rgba(0, 0, 0, 0.5)',
-				}}>
+				}}
+			>
 				<Fade in={open}>
 					<Box
 						className="w-[90%] md:w-auto h-[90vh] md:h-auto overflow-auto rounded-lg"
@@ -164,7 +179,8 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 							left: '50%',
 							transform: 'translate(-50%, -50%)',
 							bgcolor: 'transparent',
-						}}>
+						}}
+					>
 						<SharedComponent
 							handleClose={handleClose}
 							ogUrl={ogUrl}

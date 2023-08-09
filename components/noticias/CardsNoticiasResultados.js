@@ -13,21 +13,16 @@ const CardsNoticiasResultados = ({ noticias }) => {
 					noticias.map((noticia) => (
 						<Link
 							key={noticia.slug}
-							// key={noticia.titulo}
-							href={`/noticias/${noticia.slug}`}>
-							{/* href={`/noticias/${noticia.titulo}`}> */}
+							href={`/actualidad/agenda-publica/${noticia.slug}`}
+						>
 							<a
-								// key={noticia.attributes.slug}
 								key={noticia.titulo}
-								className="group min-h-[6.2rem] md:min-h-[8.4rem] animate__animated animate__fadeIn mb-6 md:mb-10 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105">
-								<div className="relative basis-3/12 hidden md:block">
+								className="group min-h-[6.2rem] md:min-h-[8.4rem] animate__animated animate__fadeIn mb-6 md:mb-10 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105"
+							>
+								<div className="relative w-full max-w-[188px] hidden md:block">
 									<Image
 										layout="fill"
 										objectFit="cover"
-										// src={
-										// 	noticia.attributes.banner.data[0]
-										// 		.attributes.url
-										// }
 										src={
 											noticia.foto
 												? `${noticia.foto}`
