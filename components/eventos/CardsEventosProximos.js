@@ -15,12 +15,14 @@ const CardsEventosProximos = ({ eventos }) => {
 						<Link
 							key={evento.slug}
 							// key={evento.titulo}
-							href={`/eventos/${evento.slug}`}>
+							href={`/actualidad/eventos/${evento.slug}`}
+						>
 							{/* href={`/eventos/${evento.titulo}`}> */}
 							<a
 								// key={evento.attributes.slug}
 								key={evento.titulo}
-								className="card !rounded-t-none mb-6">
+								className="card !rounded-t-none mb-6"
+							>
 								<div className="relative w-full h-[200px] hidden md:block">
 									<Image
 										layout="fill"
@@ -44,7 +46,7 @@ const CardsEventosProximos = ({ eventos }) => {
 								</div>
 								<div className="text-content flex flex-col p-5">
 									<div className="grid grid-cols-[45px_auto] gap-x-4 mb-[14px]">
-										<div className="w-[45px] h-[45px] rounded-lg bg-secondary text-blanco flex flex-col text-center justify-center">
+										<div className="w-[45px] h-[45px] rounded-lg bg-tertiary text-blanco flex flex-col text-center justify-center">
 											<span className="text-xl leading-none">
 												{getDia(evento.fecha_inicio)}
 											</span>

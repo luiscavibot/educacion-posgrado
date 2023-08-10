@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
-import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
-import InputText from '../../components/shared/InputText';
-import CardsEventosResultados from '../../components/eventos/CardsEventosResultados';
-import CardsEventosProximos from '../../components/eventos/CardsEventosProximos';
-import CardsEventosPasados from '../../components/eventos/CardsEventosPasados';
+import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
+import InputText from '../../../components/shared/InputText';
+import CardsEventosResultados from '../../../components/eventos/CardsEventosResultados';
+import CardsEventosProximos from '../../../components/eventos/CardsEventosProximos';
+import CardsEventosPasados from '../../../components/eventos/CardsEventosPasados';
 // import SelectorIntervalosFechas from '../../components/eventos/SelectorIntervalosFechas';
-import PaginadorEventos from '../../components/eventos/PaginadorEventos';
-import useEventos from '../../hooks/useEventos';
-import useEventosProximosUltimos from '../../hooks/useEventosProximosUltimos';
-import useEventosPasadosUltimos from '../../hooks/useEventosPasadosUltimos';
+import PaginadorEventos from '../../../components/eventos/PaginadorEventos';
+import useEventos from '../../../hooks/useEventos';
+import useEventosProximosUltimos from '../../../hooks/useEventosProximosUltimos';
+import useEventosPasadosUltimos from '../../../hooks/useEventosPasadosUltimos';
 
 const START_DATE = new Date();
 START_DATE.setMonth(START_DATE.getMonth() - 12);
@@ -52,18 +52,23 @@ const ProximosEventos = () => {
 	};
 	return (
 		<PrincipalLayout>
-			<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-				<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/">
 						<a>Inicio</a>
 					</Link>
 				</li>
-				<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-					<Link href="/eventos">
+				<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+					Actualidad
+				</li>
+				<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+					<Link href="/actualidad/eventos">
 						<a>Eventos</a>
 					</Link>
 				</li>
-				<li className="inline text-negro">Próximos eventos</li>
+				<li className="text-textColorOne font-bold inline">
+					Próximos eventos
+				</li>
 			</ul>
 			<div className="ml-4 md:ml-0 col-span-full title-page mb-8">
 				Próximos eventos

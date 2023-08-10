@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
-import Boton from '../../components/shared/Boton';
+import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
+import Boton from '../../../components/shared/Boton';
 import {
 	// getFecha,
 	getDia,
 	getMes3Letras,
 	getDuracionFecha,
 	CheckEventoFinalizado,
-} from '../../helpers/getFecha';
-import Cargando from '../../components/resultados/Cargando';
-import CompartirIcon from '../../components/icons/CompartirIcon';
-import FechaEvento from '../../components/icons/FechaEvento';
-import LugarEvento from '../../components/icons/LugarEvento';
-import OrganizadorEvento from '../../components/icons/OrganizadorEvento';
+} from '../../../helpers/getFecha';
+import Cargando from '../../../components/resultados/Cargando';
+import CompartirIcon from '../../../components/icons/CompartirIcon';
+import FechaEvento from '../../../components/icons/FechaEvento';
+import LugarEvento from '../../../components/icons/LugarEvento';
+import OrganizadorEvento from '../../../components/icons/OrganizadorEvento';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
-import SharedComponent from '../../components/shared/SharedComponent';
-import HorarioIcon from '../../components/icons/HorarioIcon';
-import EventoFinalizadoIcon from '../../components/icons/EventoFinalizadoIcon';
+import SharedComponent from '../../../components/shared/SharedComponent';
+import HorarioIcon from '../../../components/icons/HorarioIcon';
+import EventoFinalizadoIcon from '../../../components/icons/EventoFinalizadoIcon';
+import VerMasIcon from '../../../components/icons/VerMasIcon';
 
 const Evento = ({ evento, ultimosEventos }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/eventos/${evento.slug}`;
@@ -43,18 +44,21 @@ const Evento = ({ evento, ultimosEventos }) => {
 				</div>
 			) : (
 				<>
-					<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+					<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+						<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/">
 								<a>Inicio</a>
 							</Link>
 						</li>
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/eventos">
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							Actualidad
+						</li>
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							<Link href="/actualidad/eventos">
 								<a>Eventos</a>
 							</Link>
 						</li>
-						<li className="inline text-textColorOne">
+						<li className="text-textColorOne font-bold inline">
 							{evento.titulo}
 						</li>
 					</ul>
@@ -78,7 +82,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mb-5">
 						<div className="flex flex-col-reverse md:flex-row justify-center md:gap-6">
-							<div className="bg-complementaryOne w-full md:max-w-[289px] px-10 py-7">
+							<div className="bg-complementaryTwo w-full md:max-w-[289px] px-10 py-7">
 								<div className="mb-6">
 									<p>
 										<FechaEvento className="fill-tertiary inline relative bottom-[2px] mr-1" />
@@ -115,7 +119,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 								</div>
 								<div className="">
 									<p>
-										<OrganizadorEvento className="fill-tertiary inline relative bottom-[2px] mr-1" />
+										<OrganizadorEvento className="inline relative bottom-[2px] mr-1" />
 										<span className="text-tertiary font-bold">
 											Organizador
 										</span>
@@ -130,7 +134,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 										<Boton
 											link={evento.calendario}
 											primary
-											text="Añadir a mi calendario"
+											text="Agregar al Google calendar"
 										/>
 									</div>
 								) : (
@@ -139,7 +143,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 											disabled
 											className="bg-blanco border border-blanco px-3 py-2 text-sm text-[#C7DBEA] rounded-lg hover:bg-blancoTransparente duration-300"
 										>
-											Añadir a mi calendario
+											Agregar al Google calendar
 										</button>
 									</div>
 								)}
@@ -177,17 +181,24 @@ const Evento = ({ evento, ultimosEventos }) => {
 					</div>
 					{ultimosEventos && ultimosEventos.length > 0 && (
 						<>
-							<div className="mx-4 md:mx-0 col-span-full mb-5 text-base font-semibold">
-								<p>
-									Próximos eventos
-									<Link href="/eventos">
-										<a>
-											<span className="text-secondary text-base font-semibold">
-												&nbsp;|&nbsp;ver todos
-											</span>
-										</a>
-									</Link>
-								</p>
+							<div className="col-span-full mx-4 md:mx-0">
+								<div>
+									<div className="flex items-center gap-x-3 mb-9">
+										<h2 className="font-bold text-textColorOne">
+											Próximos eventos
+										</h2>
+										<Link
+											href="/actualidad/eventos/proximos-eventos"
+											passHref
+										>
+											<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+												<div className="w-3 inline-block">
+													<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+												</div>
+											</a>
+										</Link>
+									</div>
+								</div>
 							</div>
 							<div
 								className="col-span-full mb-14

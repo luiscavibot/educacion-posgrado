@@ -15,12 +15,14 @@ const CardsEventosPasados = ({ eventos }) => {
 						<Link
 							key={evento.slug}
 							// key={evento.titulo}
-							href={`/eventos/${evento.slug}`}>
+							href={`/actualidad/eventos/${evento.slug}`}
+						>
 							{/* href={`/eventos/${evento.titulo}`}> */}
 							<a
 								// key={evento.attributes.slug}
 								key={evento.titulo}
-								className="card !rounded-t-none mb-6">
+								className="card !rounded-t-none mb-6"
+							>
 								<div className="relative w-full h-[200px] hidden md:block">
 									<Image
 										layout="fill"
