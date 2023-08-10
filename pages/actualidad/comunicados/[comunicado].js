@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
-import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
+import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 import { BiTimeFive } from 'react-icons/bi';
-import Boton from '../../components/shared/Boton';
-import { getFecha } from '../../helpers/getFecha';
-import Cargando from '../../components/resultados/Cargando';
-import CompartirIcon from '../../components/icons/CompartirIcon';
+import Boton from '../../../components/shared/Boton';
+import { getFecha } from '../../../helpers/getFecha';
+import Cargando from '../../../components/resultados/Cargando';
+import CompartirIcon from '../../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
-import SharedComponent from '../../components/shared/SharedComponent';
+import SharedComponent from '../../../components/shared/SharedComponent';
+import VerMasIcon from '../../../components/icons/VerMasIcon';
+import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
 
 const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/comunicados/${comunicado.id}`;
@@ -33,18 +35,21 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 				</div>
 			) : (
 				<>
-					<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+					<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+						<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/">
 								<a>Inicio</a>
 							</Link>
 						</li>
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/comunicados">
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							Actualidad
+						</li>
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							<Link href="/actualidad/comunicados">
 								<a>Comunicados</a>
 							</Link>
 						</li>
-						<li className="inline text-negro">
+						<li className="text-textColorOne font-bold inline">
 							{comunicado.nombre}
 						</li>
 					</ul>
@@ -76,12 +81,12 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 						</div>
 					)}
 					<div
-						className="mx-4 md:mx-0 col-span-full mt-5 mb-5 html-default"
+						className="mx-4 md:mx-0 col-start-2 col-span-10 mt-5 mb-5 html-default"
 						dangerouslySetInnerHTML={{
 							__html: comunicado.cuerpoComunicado,
 						}}
 					/>
-					<div className="col-span-full mb-28">
+					<div className="col-span-full mb-28 mx-4 md:mx-0">
 						<div className="flex justify-end">
 							<Boton onClick={handleOpen}>
 								<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
@@ -89,58 +94,69 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 							</Boton>
 						</div>
 					</div>
-					{/* <div className="mx-4 md:mx-0 col-span-full">
-						<div className="flex mb-6 font-bold">
-							<p className="text-textColorOne">
-								Últimas noticias
-							</p>
-							<Link href="/noticias" passHref>
-								<a className="text-secondary flex items-end hover:text-textColorOne">
-									<span className="ml-2">|</span>
-									<p className="ml-2">ver más</p>
+					<div className="col-span-full mx-4 md:mx-0">
+						<div>
+							<div className="flex items-center gap-x-3 mb-9">
+								<h2 className="font-bold text-textColorOne">
+									Más comunicados
+								</h2>
+								<Link href="/comunicados" passHref>
+									<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+										<div className="w-3 inline-block">
+											<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+										</div>
+									</a>
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div className="col-span-full mb-14 mx-4 md:mx-0">
+						<div>
+							<Link key="1" href={`/actualidad/comunicados/118`}>
+								<a
+									key="1"
+									className="group animate__animated animate__fadeIn mb-6 h-[113px] bg-blanco block cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105"
+								>
+									<div className="px-5 py-3 w-full">
+										<div className="mt-[6px] md:mt-0 text-xs relative mb-[2px]">
+											<div className="text-textColorTwo/50 flex justify-start items-center">
+												<BiTimeFive />
+												<p className="ml-1">
+													01 de marzo de 2023
+												</p>
+											</div>
+											<p className="inline-block absolute top-0 right-0">
+												<span className="text-xs text-textColorTwo/80 mr-1 max-md:hidden">
+													Entrada fijada
+												</span>
+												<span>
+													<EntradaFijaIcon className="fill-textColorTwo inline" />
+												</span>
+											</p>
+										</div>
+										<div className="mt-[6px] md:mt-0">
+											<p className="text-base mb-[2px] font-bold leading-6 text-negro group-hover:text-secondary transition duration-300">
+												Comunicado: Curso por segunda
+												repitencia ciclo 2023-1
+											</p>
+
+											<div className="hidden md:block">
+												<p className="line-clamp-2">
+													La primera edición de
+													Crítica y Acción, revista
+													nacional e internacional de
+													reflexión, debate y
+													propuestas del campo de la
+													sociología y áreas afines,
+													fue presentada públicamente.
+												</p>
+											</div>
+										</div>
+									</div>
 								</a>
 							</Link>
 						</div>
 					</div>
-					<div
-						className="col-span-full mb-14
-						 ">
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
-							{noticiasRelacionadas &&
-								noticiasRelacionadas.map((comunicado) => (
-									<Link
-										key={comunicado.id}
-										href={`/noticias/${comunicado.slug}`}>
-										<a
-											href="#"
-											className="card !rounded-t-none">
-											<div className="h-[220px] hidden md:block relative w-full">
-												<Image
-													alt={comunicado.nombre}
-													src={`${comunicado.foto}`}
-													width={502}
-													height={335}
-													className="object-cover h-full w-full"
-												/>
-											</div>
-											<div className="text-content">
-												<p className="title break-words line-clamp-2">
-													{comunicado.nombre}
-												</p>
-												<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
-													<BiTimeFive />
-													<p className="ml-1">
-														{getFecha(
-															comunicado.fecha
-														)}
-													</p>
-												</div>
-											</div>
-										</a>
-									</Link>
-								))}
-						</div>
-					</div> */}
 				</>
 			)}
 			<Modal
@@ -155,7 +171,8 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 				}}
 				sx={{
 					bgcolor: 'rgba(0, 0, 0, 0.5)',
-				}}>
+				}}
+			>
 				<Fade in={open}>
 					<Box
 						className="w-[90%] md:w-auto h-[90vh] md:h-auto overflow-auto rounded-lg"
@@ -165,7 +182,8 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 							left: '50%',
 							transform: 'translate(-50%, -50%)',
 							bgcolor: 'transparent',
-						}}>
+						}}
+					>
 						<SharedComponent
 							handleClose={handleClose}
 							ogUrl={ogUrl}
