@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
-import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
+import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 import { BiTimeFive } from 'react-icons/bi';
-import Boton from '../../../components/shared/Boton';
-import { getFecha } from '../../../helpers/getFecha';
-import Cargando from '../../../components/resultados/Cargando';
-import CompartirIcon from '../../../components/icons/CompartirIcon';
+import Boton from '../../components/shared/Boton';
+import { getFecha } from '../../helpers/getFecha';
+import Cargando from '../../components/resultados/Cargando';
+import CompartirIcon from '../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
-import SharedComponent from '../../../components/shared/SharedComponent';
-import VerMasIcon from '../../../components/icons/VerMasIcon';
+import SharedComponent from '../../components/shared/SharedComponent';
+import VerMasIcon from '../../components/icons/VerMasIcon';
 
-const Noticia = ({ noticia, noticiasRelacionadas }) => {
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/actualidad/agenda-publica/${noticia.slug}`;
+const Blog = ({ noticia, noticiasRelacionadas }) => {
+	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
 	const metaTags = {
 		title: noticia.titulo,
 		description: noticia.resumen,
@@ -40,12 +40,12 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 								<a>Inicio</a>
 							</Link>
 						</li>
-						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
-							Actualidad
-						</li>
+						{/* <li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+							Blog de Gestión Pública
+						</li> */}
 						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/actualidad/agenda-publica">
-								<a>Agenda Pública</a>
+								<a>Blog de Gestión Pública</a>
 							</Link>
 						</li>
 						<li className="text-textColorOne font-bold inline">
@@ -82,10 +82,10 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 						)}
 					</div>
 					<div
-						className="mx-4 md:mx-0 col-span-full mt-5 mb-5 html-default"
+						className="mx-4 md:mx-0 col-span-10 col-start-2 mt-5 mb-5 html-default"
 						dangerouslySetInnerHTML={{ __html: noticia.cuerpo }}
 					/>
-					<div className="col-span-full mb-5">
+					<div className="col-span-full mb-10 mx-4 md:mx-0">
 						<div className="flex justify-end">
 							<Boton onClick={handleOpen}>
 								<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
@@ -93,7 +93,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 							</Boton>
 						</div>
 					</div>
-					{noticiasRelacionadas && (
+					{/* {noticiasRelacionadas && (
 						<>
 							<div className="col-span-full mx-4 md:mx-0">
 								<div>
@@ -153,7 +153,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 								</div>
 							</div>
 						</>
-					)}
+					)} */}
 				</>
 			)}
 			<Modal
@@ -193,7 +193,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 };
 export async function getServerSideProps({ params }) {
 	const resNoticia = await fetch(
-		`${process.env.BACKEND_URL}/noticias/url/${params.noticia}`
+		`${process.env.BACKEND_URL}/noticias/url/${params.blog}`
 	);
 	const noticia = await resNoticia.json();
 	const resNoticiasRelacionadas = await fetch(
@@ -209,4 +209,4 @@ export async function getServerSideProps({ params }) {
 	};
 }
 
-export default Noticia;
+export default Blog;
