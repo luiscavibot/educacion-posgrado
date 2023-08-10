@@ -209,7 +209,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 										<Link
 											key={evento.slug}
 											// key={evento.titulo}
-											href={`/eventos/${evento.slug}`}
+											href={`/actualidad/eventos/${evento.slug}`}
 										>
 											{/* href={`/eventos/${evento.titulo}`}> */}
 											<a

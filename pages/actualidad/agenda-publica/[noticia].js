@@ -119,7 +119,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 									{noticiasRelacionadas.map((noticia) => (
 										<Link
 											key={noticia.id}
-											href={`/noticias/${noticia.slug}`}
+											href={`/actualidad/agenda-publica/${noticia.slug}`}
 										>
 											<a
 												href="#"
