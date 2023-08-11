@@ -16,10 +16,14 @@ import DiriridaaIcon from '../../components/icons/DiriridaaIcon';
 import FechaLimiteIcon from '../../components/icons/FechaLimiteIcon';
 
 import { UltimasNoticias } from '../../components/shared/programas/UltimasNoticias';
+import DocumentosFillIcon from '../../components/icons/DocumentosFillIcon';
+import Observacion from '../../components/shared/Observacion';
+// import useUltimasNoticias from '../../hooks/useUltimasNoticias';
 
 const Tramite = ({ ultimasNoticias }) => {
 	const router = useRouter();
 	const [tramite, setTramite] = useState(null);
+
 	useEffect(() => {
 		const fetchDataTramite = async () => {
 			let response = await fetch(
@@ -64,172 +68,163 @@ const Tramite = ({ ultimasNoticias }) => {
 				</div>
 			) : (
 				<>
-					<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+					<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+						<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/">
 								<a>Inicio</a>
 							</Link>
 						</li>
-						<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/tramites">
 								<a>Trámites</a>
 							</Link>
 						</li>
-						<li className="inline text-negro">{tramite.titulo}</li>
+						<li className="text-textColorOne font-bold inline">
+							{tramite.titulo}
+						</li>
 					</ul>
-					<div className="mx-4 md:mx-0 col-span-full title-page mb-4">
-						{tramite.titulo}
-					</div>
+
 					<div className="mx-4 md:mx-0 col-span-10 mb-4">
-						<div className="bg-tertiary/10 p-6 rounded-lg mb-6">
-							<div className="mb-4">
-								<div className="inline-flex items-center mb-4 font-bold">
-									<DescripcionIcon className="fill-secondary" />
-									<p className="text-textColorOne font-bold text-sm mt-1">
-										Descripción
-									</p>
-								</div>
-								<p
-									className="text-textColorTwo"
-									dangerouslySetInnerHTML={{
-										__html: `${tramite.descripcion}`,
-									}}></p>
-							</div>
-							<div className="mb-4">
-								<div className="inline-flex items-center mb-4 font-bold">
-									<DiriridaaIcon />
-									<p className="text-textColorOne font-bold text-sm mt-1 ml-1">
-										Dirigido a
-									</p>
-								</div>
-								<p
-									className="text-textColorTwo"
-									dangerouslySetInnerHTML={{
-										__html: `${mensaje(tramite.dirigido)}`,
-									}}></p>
-							</div>
-							<div>
-								<div className="inline-flex items-center mb-4 font-bold">
-									<FechaLimiteIcon className="fill-secondary" />
-									<p className="text-textColorOne font-bold text-sm mt-1 ml-1">
-										Fecha límite
-									</p>
-								</div>
+						<div className="title-page mb-4">{tramite.titulo}</div>
+					</div>
 
-								{tramite.fecha ? (
-									<p className="text-textColorTwo">
-										{getFecha(tramite.fecha)}
-									</p>
-								) : (
-									<p className="text-textColorTwo">
-										No existe fecha límite
-									</p>
-								)}
+					<div className="mx-4 md:mx-0 col-span-full lg:col-span-10 mb-4">
+						<div>
+							<div className="bg-complementaryTwo p-6 rounded-lg mb-6">
+								<div className="mb-4">
+									<div className="inline-flex items-center mb-4 font-bold">
+										<DescripcionIcon className="fill-secondary" />
+										<p className="text-textColorOne font-bold text-sm mt-1">
+											Descripción
+										</p>
+									</div>
+									<p
+										className="text-textColorTwo"
+										dangerouslySetInnerHTML={{
+											__html: `${tramite.descripcion}`,
+										}}
+									></p>
+								</div>
+								<div className="mb-4">
+									<div className="inline-flex items-center mb-4 font-bold">
+										<DiriridaaIcon />
+										<p className="text-textColorOne font-bold text-sm mt-1 ml-1">
+											Dirigido a
+										</p>
+									</div>
+									<p
+										className="text-textColorTwo"
+										dangerouslySetInnerHTML={{
+											__html: `${mensaje(
+												tramite.dirigido
+											)}`,
+										}}
+									></p>
+								</div>
+								<div>
+									<div className="inline-flex items-center mb-4 font-bold">
+										<FechaLimiteIcon className="fill-secondary" />
+										<p className="text-textColorOne font-bold text-sm mt-1 ml-1">
+											Fecha límite
+										</p>
+									</div>
+
+									{tramite.fecha ? (
+										<p className="text-textColorTwo">
+											{getFecha(tramite.fecha)}
+										</p>
+									) : (
+										<p className="text-textColorTwo">
+											No existe fecha límite
+										</p>
+									)}
+								</div>
 							</div>
-						</div>
-						<div className="mb-8">
-							<p className="text-textColorOne font-bold mb-2">
-								1. Requisitos
-							</p>
-							<div
-								className="mx-4 md:mx-0 col-span-full mb-5 html-default"
-								dangerouslySetInnerHTML={{
-									__html: tramite.requisitos,
-								}}
-							/>
-						</div>
-						<div className="mb-8">
-							<p className="text-textColorOne font-bold mb-2">
-								2. Proceso
-							</p>
-							<div
-								className="mx-4 md:mx-0 col-span-full mb-5 html-default"
-								dangerouslySetInnerHTML={{
-									__html: tramite.proceso,
-								}}
-							/>
-						</div>
-						<div className="mb-8">
-							<p className="text-textColorOne font-bold mb-2">
-								3. Más información
-							</p>
-							<div>
-								<p>
-									<CorreoIcon className="fill-textColorOne inline mr-2" />
-									<span className="text-textColorOne font-bold">
-										Correo:{' '}
-									</span>
-									<span className="text-textColorTwo">
-										{tramite.correo}
-									</span>
+							<div className="mb-8">
+								<p className="text-textColorOne font-bold mb-2">
+									1. Requisitos
 								</p>
-								<p>
-									<TelefonoIcon className="fill-textColorOne inline mr-2" />
-									<span className="text-textColorOne font-bold">
-										Teléfono:{' '}
-									</span>
-									<span className="text-textColorTwo">
-										(+51) 619 7000 anexo {tramite.anexo}
-									</span>
+								<div
+									className="mx-4 md:mx-0 col-span-full mb-5 html-default"
+									dangerouslySetInnerHTML={{
+										__html: tramite.requisitos,
+									}}
+								/>
+							</div>
+							<div className="mb-8">
+								<p className="text-textColorOne font-bold mb-2">
+									2. Proceso
 								</p>
+								<div
+									className="mx-4 md:mx-0 col-span-full mb-5 html-default"
+									dangerouslySetInnerHTML={{
+										__html: tramite.proceso,
+									}}
+								/>
+							</div>
+							<div className="mb-8">
+								<p className="text-textColorOne font-bold mb-2">
+									3. Más información
+								</p>
+								<div>
+									<p>
+										<CorreoIcon className="fill-textColorOne inline mr-2" />
+										<span className="text-textColorOne font-bold">
+											Correo:{' '}
+										</span>
+										<span className="text-textColorTwo">
+											{tramite.correo}
+										</span>
+									</p>
+									<p>
+										<TelefonoIcon className="fill-textColorOne inline mr-2" />
+										<span className="text-textColorOne font-bold">
+											Teléfono:{' '}
+										</span>
+										<span className="text-textColorTwo">
+											(+51) 619 7000 anexo {tramite.anexo}
+										</span>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div className="mx-4 md:mx-0 col-span-2 mb-4 flex flex-col">
-						{tramites.length > 0 && (
-							<>
-								<p className="font-semibold mb-4">Trámites</p>
-								{tramites.map(({ nombre, enlace }) => {
-									return (
-										<a
-											href=""
-											key={nombre}
-											className="font-semibold mb-4 inline-block text-secondary link">
-											{nombre}
-										</a>
-									);
-								})}
-							</>
-						)}
-						{/* <p className="font-semibold mb-4">Más trámites</p> */}
-						{/* <a
-							className="font-semibold mb-4 inline-block text-secondary"
-							href="">
-							Grado académico (Tesis)
-						</a>
-						<a
-							className="font-semibold mb-4 inline-block text-secondary"
-							href="">
-							Título profesional (Tesis)
-						</a>
-						<a
-							className="font-semibold mb-4 inline-block text-secondary"
-							href="">
-							Certificado de estudios por semestres académicos
-						</a>
-						<a
-							className="font-semibold mb-4 inline-block text-secondary"
-							href="">
-							Historial académico por años
-						</a> */}
-						{/* {tramites.length > 0 &&
-							tramites.map(({ nombre, enlace }) => {
-								return (
-									<a
-										href=""
-										key={nombre}
-										className="font-semibold mb-4 inline-block text-secondary link">
-										{nombre}
-									</a>
-								);
-							})} */}
-					</div>
-					{/* <div className="mx-4 md:mx-0 col-start-5 col-span-5 mb-5"> */}
 
-					<div
-						className="mx-4 md:mx-0 col-span-full mt-5 mb-5 html-default"
-						dangerouslySetInnerHTML={{ __html: tramite.cuerpo }}
-					/>
+					<div className="mx-4 md:mx-0 col-span-full lg:col-span-2 mb-5">
+						<div className="bg-complementaryTwo px-4 py-4 rounded-lg text-sm mb-6">
+							<p className="mb-2">
+								¿Dificultades para realizar un trámite?
+							</p>
+							<Link href="/tramites/preguntas-frecuentes">
+								<a className="font-semibold text-secondary link">
+									Ir Preguntas frecuentes
+								</a>
+							</Link>
+						</div>
+						<a
+							href="#"
+							className="text-blanco text-[15px] py-3 px-4 bg-primary rounded-lg mb-8 inline-flex items-center justify-center gap-x-2 hover:bg-primary-hover transition-colors duration-300"
+							rel="noreferrer noopener"
+							target="_blank"
+						>
+							<span>
+								<DocumentosFillIcon className="fill-blanco" />
+							</span>
+							<span>Descargar FUT</span>
+						</a>
+						<Observacion>
+							<p className="mb-1 text-sm">
+								Si tienes consultas sobre tu{' '}
+								<span className="font-bold">
+									Estado de cuenta
+								</span>
+								, envíanos un mensaje al siguiente correo:
+							</p>
+							<p className="break-all text-xs text-primary font-bold">
+								cobranzas.administracion@unmsm.edu.pe
+							</p>
+						</Observacion>
+					</div>
 				</>
 			)}
 			<UltimasNoticias ultimasNoticias={ultimasNoticias} />
@@ -255,7 +250,6 @@ const Tramite = ({ ultimasNoticias }) => {
 // 		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
 // 	);
 // 	const ultimasNoticias = await resUltimasNoticias.json();
-
 // 	return {
 // 		props: {
 // 			ultimasNoticias,
@@ -264,22 +258,3 @@ const Tramite = ({ ultimasNoticias }) => {
 // }
 
 export default Tramite;
-
-const tramites = [
-	// {
-	// 	nombre: 'Grado académico (Tesis)',
-	// 	enlace: '',
-	// },
-	// {
-	// 	nombre: 'Título profesional (Tesis)',
-	// 	enlace: '',
-	// },
-	// {
-	// 	nombre: 'Certificado de estudios por semestres académicos',
-	// 	enlace: '',
-	// },
-	// {
-	// 	nombre: 'Historial académico por años',
-	// 	enlace: '',
-	// },
-];

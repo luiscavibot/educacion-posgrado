@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
+import VerMasIcon from '../../icons/VerMasIcon';
 
 import { BiTimeFive } from 'react-icons/bi';
 import { getFecha } from '../../../helpers/getFecha';
@@ -11,18 +12,20 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 			{ultimasNoticias && ultimasNoticias.length > 0 && (
 				<div className="col-span-full mx-4 md:mx-0">
 					<div>
-						<div className="flex mb-6 font-bold">
-							<p className="text-textColorOne">
+						<div className="flex items-center gap-x-3 mb-9">
+							<h2 className="font-bold text-textColorOne">
 								Últimas noticias
-							</p>
-							<Link href="/noticias" passHref>
-								<a className="text-secondary flex items-end hover:text-textColorOne">
-									<span className="ml-2">|</span>
-									<p className="ml-2 link">ver más</p>
+							</h2>
+							<Link href="/actualidad/agenda-publica" passHref>
+								<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+									<div className="w-3 inline-block">
+										<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+									</div>
 								</a>
 							</Link>
 						</div>
 					</div>
+
 					<div className="col-start-3 col-span-10 mb-14">
 						<div className="grid grid-cols-3 gap-x-4 gap-y-8">
 							{ultimasNoticias.map((noticia) => (
@@ -33,7 +36,8 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 											noticiaLink: `${noticia.slug}`,
 										},
 									}}
-									key={noticia.id}>
+									key={noticia.id}
+								>
 									<a className="card col-span-3 md:col-span-1 !rounded-t-none">
 										<div className="h-[13.8rem]">
 											<Image
@@ -41,7 +45,8 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 												alt=""
 												width={293}
 												height={168}
-												src={noticia.foto}></Image>
+												src={noticia.foto}
+											></Image>
 										</div>
 										<div className="text-content">
 											<p className="title break-words line-clamp-2">
