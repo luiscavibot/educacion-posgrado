@@ -21,7 +21,7 @@ import AsideSocialNetworks from '../shared/AsideSocialNetworks';
 import LogoPosgradoAdministracionVertical from '../icons/LogoPosgradoAdministracionVertical';
 
 const PortadaHome = ({ eventos }) => {
-	// console.log(eventos);
+	console.log(eventos);
 	return (
 		// <section className="relative w-full flex flex-col md:h-screen">
 		// 	<div className="relative md:static h-96 md:h-full">
@@ -208,7 +208,7 @@ const PortadaHome = ({ eventos }) => {
 															evento.fecha_inicio
 														)}
 													</div>
-													<div>3 p.m.</div>
+													{/* <div>3 p.m.</div> */}
 												</div>
 												<div className="flex flex-col">
 													<p className="mb-[2px] font-bold">

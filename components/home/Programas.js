@@ -7,15 +7,13 @@ import { entradaCardScroll } from '../../consts/animaciones';
 import Boton from '../shared/Boton';
 import { getProgramasCarousel } from '../../helpers/getProgramasCarousel';
 import CarouselProgramas from './CarouselProgramas';
+import { programas } from '../../data/programas/general';
 
-const Programas = ({ maestrias, doctorados }) => {
-	const [dataCarrousel, setDataCarrousel] = useState([]);
-
+const Programas = () => {
+	const [dataCarrousel, setDataCarrousel] = useState(null);
 	useEffect(() => {
-		if (dataCarrousel.length === 0) {
-			setDataCarrousel(getProgramasCarousel(maestrias, doctorados));
-		}
-	}, [dataCarrousel]);
+		setDataCarrousel(getProgramasCarousel(programas));
+	}, []);
 	return (
 		<motion.section
 			initial="offscreen"
@@ -81,7 +79,7 @@ const Programas = ({ maestrias, doctorados }) => {
 				</div>
 				{!dataCarrousel && <>loading</>}
 
-				{dataCarrousel.length > 0 && (
+				{dataCarrousel?.length > 0 && (
 					<div className="col-start-1 col-span-12 md:col-start-5 md:col-span-7 relative">
 						<CarouselProgramas programas={dataCarrousel} />
 					</div>

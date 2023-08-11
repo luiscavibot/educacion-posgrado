@@ -14,3 +14,5 @@ export const APP_CORREO =
 
 // SLUG DE CARRERA PARA LAS APIS
 export const SLUG_CARRERA = 'farmacia-y-bioquimica';
+
+export const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL;

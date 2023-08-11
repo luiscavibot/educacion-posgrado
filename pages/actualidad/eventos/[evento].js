@@ -20,6 +20,7 @@ import SharedComponent from '../../../components/shared/SharedComponent';
 import HorarioIcon from '../../../components/icons/HorarioIcon';
 import EventoFinalizadoIcon from '../../../components/icons/EventoFinalizadoIcon';
 import VerMasIcon from '../../../components/icons/VerMasIcon';
+import { BACKEND } from '../../../config/consts';
 
 const Evento = ({ evento, ultimosEventos }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/eventos/${evento.slug}`;
@@ -64,15 +65,15 @@ const Evento = ({ evento, ultimosEventos }) => {
 					</ul>
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-1">
 						<span>
+							<span>{evento.titulo}</span>
 							{CheckEventoFinalizado(evento.fecha_final) && (
-								<span className="bg-secondary bg-opacity-10 rounded-lg py-1 px-2 mr-2">
+								<span className="bg-secondary bg-opacity-10 rounded-lg py-1 px-2 ml-2">
 									<span className="text-secondary text-xs inline-flex">
 										<EventoFinalizadoIcon />
 										Evento finalizado
 									</span>
 								</span>
 							)}
-							<span>{evento.titulo}</span>
 						</span>
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mb-8">
@@ -306,13 +307,11 @@ const Evento = ({ evento, ultimosEventos }) => {
 };
 
 export async function getServerSideProps({ params }) {
-	const resEvento = await fetch(
-		`${process.env.BACKEND_URL}/eventos/url/${params.evento}`
-	);
+	const resEvento = await fetch(`${BACKEND}/eventos/url/${params.evento}`);
 	const evento = (await resEvento.json())[0];
 
 	let resUltimosEventos = await fetch(
-		`${process.env.BACKEND_URL}/eventos/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}/${evento.id}/ultimos`
+		`${process.env.BACKEND_URL}/eventos/${evento.id}/ultimos`
 	);
 
 	const ultimosEventos = await resUltimosEventos.json();

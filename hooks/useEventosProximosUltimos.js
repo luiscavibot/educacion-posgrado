@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND } from '../config/consts';
 
 export default function useEventosProximosUltimos() {
 	const [eventosProxUlt, setEventosProxUlt] = useState(null);
 	useEffect(() => {
 		setEventosProxUlt(null);
-		let url = `${BASE_URL}/eventos/${SLUG_CARRERA}/ultimos-vigentes`;
+		let url = `${BACKEND}/eventos/ultimos-vigentes`;
 		const fetchDataEventos = async () => {
 			let response = await fetch(url);
 			let res = await response.json();

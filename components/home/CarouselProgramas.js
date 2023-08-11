@@ -19,6 +19,7 @@ export default function CarouselProgramas({ programas }) {
 	return (
 		<>
 			<Swiper
+				autoplay
 				effect={'coverflow'}
 				grabCursor={true}
 				centeredSlides={true}
@@ -38,32 +39,31 @@ export default function CarouselProgramas({ programas }) {
 			>
 				{programas.map((programa) => (
 					<SwiperSlide
-						key={`${programa.attributes.nombre}-${programa.tipo}`}
+						key={`${programa.titulo}-${programa.subtitulo}`}
 					>
 						<Link
 							href={
 								programa.tipo === 'Maestrías'
-									? `/maestrias/${programa.attributes.slug}`
-									: `/doctorados/${programa.attributes.slug}`
+									? `/maestrias/${programa.slug}`
+									: `/doctorados/${programa.slug}`
 							}
 						>
 							<a className="card program-box hover:-translate-y-2">
 								<div className="relative">
 									<Image
-										alt={programa.attributes.nombre}
+										alt={programa.titulo}
 										width={290}
 										height={168}
 										layout="responsive"
 										objectFit="cover"
-										src={
-											programa.attributes.imagen.data
-												? programa.attributes.imagen
-														.data[0].attributes.url
-												: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-										}
+										src={programa.miniHomeImg}
 									/>
 									<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-										Modalidad Presencial
+										{programa.modalidad === 'PRESENCIAL' &&
+											'Modalidad Presencial'}
+										{programa.modalidad ===
+											'SEMIPRESENCIAL' &&
+											'Modalidad Semipresencial'}
 									</div>
 								</div>
 								<div className="text-content h-32">
@@ -71,13 +71,10 @@ export default function CarouselProgramas({ programas }) {
 										{programa.tipo}
 									</p> */}
 									<p className="title font-bold line-clamp-2">
-										{programa.attributes.nombre}
+										{programa.titulo}
 									</p>
 									<p className="line-clamp-2">
-										{
-											programa.attributes.facultad.data
-												.attributes.nombre
-										}
+										{programa.subtitulo}
 									</p>
 								</div>
 							</a>
