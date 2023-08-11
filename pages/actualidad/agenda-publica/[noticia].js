@@ -10,6 +10,7 @@ import CompartirIcon from '../../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../../components/shared/SharedComponent';
 import VerMasIcon from '../../../components/icons/VerMasIcon';
+import { BACKEND } from '../../../config/consts';
 
 const Noticia = ({ noticia, noticiasRelacionadas }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/actualidad/agenda-publica/${noticia.slug}`;
@@ -193,11 +194,12 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 };
 export async function getServerSideProps({ params }) {
 	const resNoticia = await fetch(
-		`${process.env.BACKEND_URL}/noticias/url/${params.noticia}`
+		`${BACKEND}/agenda-publica/url/${params.noticia}`
 	);
 	const noticia = await resNoticia.json();
+	console.log('noticias->', noticia);
 	const resNoticiasRelacionadas = await fetch(
-		`${process.env.BACKEND_URL}/noticias/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}/ultimas?id=${noticia[0].id}`
+		`${BACKEND}/noticias/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}/ultimas?id=${noticia[0].id}`
 	);
 	const noticiasRelacionadas = await resNoticiasRelacionadas.json();
 

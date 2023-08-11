@@ -59,14 +59,14 @@ export async function getStaticProps() {
 	const resEventos = await fetch(`${BACKEND}${urlEventos}`);
 	const eventos = await resEventos.json();
 
-	const urlNoticiasDestacadas = `/noticias/${SLUG_CARRERA}/destacadas`;
+	const urlNoticiasDestacadas = `/agenda-publica/destacadas`;
 	const resNoticiasDestacadas = await fetch(
-		`${BASE_URL}${urlNoticiasDestacadas}`
+		`${BACKEND}${urlNoticiasDestacadas}`
 	);
 	const noticiasDestacadas = await resNoticiasDestacadas.json();
 
-	const urlNoticias = `/noticias/${SLUG_CARRERA}/ultimas-home`;
-	const resNoticias = await fetch(`${BASE_URL}${urlNoticias}`);
+	const urlNoticias = `/agenda-publica/ultimas-home`;
+	const resNoticias = await fetch(`${BACKEND}${urlNoticias}`);
 	const noticias = await resNoticias.json();
 
 	return {

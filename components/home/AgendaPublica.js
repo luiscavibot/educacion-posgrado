@@ -70,7 +70,7 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 													key={noticiaDestacada.slug}
 												>
 													<Link
-														href={`/noticias/${noticiaDestacada.slug}`}
+														href={`/actualidad/agenda-publica/${noticiaDestacada.slug}`}
 													>
 														<a className="grid grid-cols-1 md:grid-cols-5 h-full group">
 															<div className="h-48 md:h-auto col-span-3 relative cursor-pointer">
