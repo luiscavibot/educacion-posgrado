@@ -11,6 +11,9 @@
 .tabs .current {
 	@apply font-black text-secondary fill-secondary;
 }
+.tabs .wrapper-icon svg {
+	@apply fill-textColorOne;
+}
 .tabs .current .wrapper-icon svg {
 	@apply fill-secondary;
 }

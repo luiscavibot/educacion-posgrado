@@ -68,7 +68,7 @@ const InformacioAcademica = () => {
 				<div className="px-4 md:px-0 col-span-full mb-10">
 					<p className="title-page text-secondary">Comunicados</p>
 				</div>
-				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 mb-5">
+				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 md:px-0 mb-5">
 					<div className="bg-complementaryTwo rounded-lg p-6">
 						<p className="text-textColorOne font-bold">
 							Dirigido a:

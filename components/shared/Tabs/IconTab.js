@@ -23,6 +23,7 @@ import GuiaProcesoIcon from '../../icons/GuiaProcesoIcon';
 import LupaStroke from '../../icons/LupaStroke';
 import ProcesoEvaluacionIcon from '../../icons/ProcesoEvaluacionIcon';
 import InscripcionIcon from '../../icons/InscripcionIcon';
+import DocumentClipIcon from '../../icons/DocumentoClipIcon';
 
 const IconTab = (label) => {
 	switch (label.label) {
@@ -35,6 +36,8 @@ const IconTab = (label) => {
 			return <MallaCurricularIcon />;
 		case 'inscripcion':
 			return <InscripcionIcon />;
+		case 'temario':
+			return <DocumentClipIcon className="h-[26px] w-[26px]" />;
 		case 'plana-docente':
 			return (
 				<>
