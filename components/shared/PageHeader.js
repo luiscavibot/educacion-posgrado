@@ -23,7 +23,7 @@ const HeaderPage = () => {
 				</div>
 				<div className="items-end md:flex hidden">
 					<nav>
-						<ul className="flex items-center gap-7 text-xs font-bold">
+						<ul className="flex items-center gap-7 text-sm font-bold">
 							<li>
 								<Link href={`/admision`}>
 									<a>
