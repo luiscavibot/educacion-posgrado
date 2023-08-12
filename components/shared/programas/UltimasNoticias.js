@@ -31,7 +31,7 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 							{ultimasNoticias.map((noticia) => (
 								<Link
 									href={{
-										pathname: `/noticias/[noticiaLink]`,
+										pathname: `/actualidad/agenda-publica/[noticiaLink]`,
 										query: {
 											noticiaLink: `${noticia.slug}`,
 										},

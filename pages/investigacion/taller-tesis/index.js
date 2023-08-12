@@ -19,6 +19,9 @@ import { InversionEconomica } from '../../../components/shared/programas/Inversi
 import { Box } from '@mui/material';
 import FormacionContentModal from '../../../components/formacion-academica/FormacionContentModal';
 import Observacion from '../../../components/shared/Observacion';
+import DuracionIcon from '../../../components/icons/DuracionIcon';
+import { SiGoogleclassroom } from 'react-icons/si';
+import LinkExtIcon from '../../../components/icons/LinkExtIcon';
 
 const TallerTesis = ({ ultimasNoticias }) => {
 	const [open, setOpen] = React.useState(false);
@@ -26,21 +29,18 @@ const TallerTesis = ({ ultimasNoticias }) => {
 	const handleClose = () => setOpen(false);
 	return (
 		<PrincipalLayout>
-			<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-				<li className="text-textColorTwo font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/">
 						<a>Inicio</a>
 					</Link>
 				</li>
-				<li className="text-textColorTwo font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+				<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
 					Investigación
 				</li>
-				{/* <li className="text-textColorTwo font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-					<Link href="/formacion-academica/posgrado">
-						<a>Taller de Tesis</a>
-					</Link>
-				</li> */}
-				<li className="inline text-textColorOne">Taller de Tesis</li>
+				<li className="text-textColorOne font-bold inline">
+					<span>Taller de Tesis</span>
+				</li>
 			</ul>
 			<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
 				Taller de Tesis
@@ -48,7 +48,7 @@ const TallerTesis = ({ ultimasNoticias }) => {
 			<div className="col-span-full mb-5 ">
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
-						src={`https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/formacion-academica/admision/admision-banner-facultad-quimica.jpg`}
+						src={`https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/investigacion/taller-tesis-ciencias-administrativa-posgrado.jpg`}
 						layout="responsive"
 						width={1343}
 						height={397}
@@ -58,355 +58,308 @@ const TallerTesis = ({ ultimasNoticias }) => {
 					/>
 				</div>
 			</div>
-			<div className="col-span-full mb-14">
+			<div className="col-span-full md:col-span-10 mb-14">
 				<Tabs nombre="taller-tesis">
 					<div label="Presentación">
-						<div className="grid grid-cols-8 gap-7">
-							<div className="col-span-10 md:col-span-6">
-								<div className="bg-complementaryOne rounded-lg px-5 pt-5 pb-1 mb-5">
-									<p className="pb-4">
-										<span className="font-bold">
-											Duración:
-										</span>{' '}
-										<span>Tres meses</span>
-									</p>
-									<p className="pb-4">
-										<span className="font-bold">
-											Modalidad:
-										</span>{' '}
-										<span>Semipresencial</span>
-									</p>
-								</div>
-
-								<div className="mb-6">
-									<p>
-										Brindamos una formación académica de
-										calidad para el desempeño profesional
-										competente de nuestros egresados en las
-										distintas etapas, niveles y modalidades
-										de la educación, como también en el
-										ámbito deportivo y en programas de
-										recreación. Contamos con 90 años de una
-										amplia y notable experiencia en la
-										formación de profesionales de Educación
-										Física, con un sólido enfoque pedagógico
-										y humanístico sobre la base de la
-										investigación científica y
-										responsabilidad social, contribuyendo a
-										la calidad de vida de la sociedad.
-										Nuestra Institución es considerada como
-										“Alma Máter de la Educación Física
-										peruana”, debido a que por nuestras
-										aulas han estudiado los más destacados
-										maestros y entrenadores peruanos.{' '}
-									</p>
-								</div>
-
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										Perfil del ingresante:
-									</div>
-									<p>
-										Dirigido a profesionales con grado de
-										Bachiller en Administración o
-										equivalente con formación profesional y
-										filosófica básica, y superar un nivel de
-										suficiencia en pruebas psicotécnicas.
-										Tener un elevado interés que le permita
-										adquirir las habilidades y destrezas
-										necesarias para el desarrollo de la
-										Atención Farmacéutica en los diferentes
-										niveles asistenciales.
-									</p>
-								</div>
-
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										Perfil del graduado:
-									</div>
-									<p>
-										El graduado realizará investigaciones en
-										el ámbito de la Administración en
-										diferentes patologías e investigación en
-										Salud. Manejo y utilizar de forma
-										racional fuentes de información y
-										documentación. Desarrollar sistemas de
-										control de calidad de los servicios
-										farmacéuticos.
-									</p>
-								</div>
-
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										Campo laboral:
-									</div>
-									<p>
-										El Magister tiene una amplia demanda
-										laboral y se puede desempeñar en:
-									</p>
-									<ul className="list-disc list-inside">
-										<li className="mb-2">
-											Docencia en los niveles de
-											educación: Inicial, Primaria,
-											Secundaria y Superior.
-										</li>
-									</ul>
-								</div>
-
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										¿Por qué estudiar con nosotros?
-									</div>
-									<p>
-										Somos una institución acreditada,
-										pionera y referente nacional en la
-										formación de educadores de excelencia,
-										que brinda oportunidad de cambio e
-										innovación en el conocimiento integral
-										de la educación física, de acuerdo a un
-										enfoque pedagógico humanístico y
-										tecnológico, en base a la investigación
-										científica, contribuyendo a la calidad
-										de vida de la sociedad.
-									</p>
-									<br />
-									<p>
-										Buscamos, junto a nuestros alumnos y
-										egresados, promover una sociedad
-										consciente de la práctica de la
-										actividad física continua para mejorar
-										la calidad de vida de todos los
-										peruanos.
-									</p>
-								</div>
-
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										Lugar de realización
-									</div>
-									<ul className="list-disc list-inside">
-										<li className="mb-2">
-											<span className="font-bold">
-												Virtual: (70%):
-											</span>{' '}
-											Lunes -Miércoles -Viernes 6:00 p.m.
-											a 10:30 p.m.
-										</li>
-									</ul>
-								</div>
-								<Observacion>
-									Se requiere mínimo 25 alumnos para la
-									apertura de la maestría.
-								</Observacion>
+						<div>
+							<div className="bg-complementaryTwo rounded-lg px-5 pt-5 pb-1 mb-5">
+								<p className="pb-4 flex space-x-1 items-center">
+									<DuracionIcon className="fill-textColorOne" />
+									<span className="font-bold text-textColorOne">
+										Duración:
+									</span>{' '}
+									<span>
+										10 sesiones de 4 horas académicas (3
+										horas cronológicas)
+									</span>
+								</p>
+								<p className="pb-4 flex space-x-1 items-center">
+									<span className="relative left-[2px] mr-[5px]">
+										<SiGoogleclassroom />
+									</span>
+									<span className="font-bold text-textColorOne">
+										Modalidad:
+									</span>{' '}
+									<span>semipresencial</span>
+								</p>
 							</div>
-							<div className="col-span-full md:col-span-2">
-								<div className="mb-5">
-									<p className="mb-1 text-tertiary">
-										<span>
-											<UserCardIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
-										</span>
-										<span className="font-bold">
-											Coordinador/a
-										</span>
-									</p>
-									<p className="mb-3">
-										Dr. Julio Cesar Santiago Contreras
-									</p>
+
+							<div className="mb-6">
+								<p>
+									Si estás buscando el apoyo necesario para
+									alcanzar tu objetivo de graduación, tenemos
+									la opción perfecta para ti: nuestro curso
+									&#8220;Taller de Formulación de Proyecto de
+									Tesis de Maestría&#8221;. Te brindamos las
+									herramientas y el conocimiento práctico que
+									necesitas para redactar un proyecto de tesis
+									de maestría completo y de calidad. Con la
+									guía experta de nuestros profesionales
+									altamente calificados, aprenderás las
+									estrategias y técnicas clave para
+									desarrollar un proyecto sólido y
+									convincente.
+								</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">Expositor</div>
+								<p>Dr. Ivan Vivanco Aquino</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">Dirigido a:</div>
+								<p>
+									egresados de los programas de maestría de la
+									Unidad de Posgrado FCA
+								</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">Horario:</div>
+								<p>
+									todos los domingos de 8:00 a. m. a 11:00 a.
+									m.
+								</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">Grupos:</div>
+								<p>20 alumnos por grupo (mínimo)</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">Fechas</div>
+								<p>
+									del 6 de agosto al 8 de octubre de 2023 (en
+									función a completar grupos de 20)
+								</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">
+									Clases presenciales:
 								</div>
-								<div className="h-[2px] bg-tertiary/20 mb-5" />
-								<div className="mb-5">
-									<p className="mb-1 text-tertiary">
-										<span className="font-black">
-											Más información
-										</span>
-									</p>
-									<p className="mb-3">
-										Si tienes alguna consulta, descuida,
-										nuestro equipo estará encantado de
-										ayudarte.
-									</p>
-									<Boton
-										text="Contáctanos"
-										secondary
-										bold
-										onClick={() => handleOpen()}
-									/>
+								<p>6 y 13 de agosto</p>
+							</div>
+
+							<div className="mb-6">
+								<div className="subtitle mb-2">
+									Clases virtuales (vía plataforma zoom):
 								</div>
+								<p>del 20 de agosto al 8 de octubre</p>
 							</div>
 						</div>
 					</div>
-					<div label="Admisión" link="/admision/posgrado"></div>
-					<div label="Inversión económica">
-						<div className="grid grid-cols-8">
-							<div className="col-span-full md:col-span-7">
-								<Observacion className="mb-8">
-									<ul className="list-disc list-inside pl-1">
-										<li>
-											La duración total del programa es de
-										</li>
-										<li>
-											Montos referenciales, sujetos a
-											variaciones.
-										</li>
-									</ul>
-								</Observacion>
-								<div className="mb-8">
-									<div className="mb-[18px]">
-										<p className="subtitle mb-4">
-											1. Presupuesto de estudios
-										</p>
-										<ul className="list-disc list-inside mb-4">
-											<li className="mb-1">
-												costo texto{' '}
-												<span className="font-bold">
-													costo precio
-												</span>
-											</li>
-										</ul>
+					<div label="Inscripción">
+						<div>
+							<p className="mb-6">
+								¿Estás listo/a para iniciar nuestro Taller de
+								Tesis? Para inscribirte, simplemente completa
+								nuestro formulario en línea haciendo clic en el
+								siguiente enlace:{' '}
+								<a
+									href="https://forms.gle/DRWNkR9rnLLhjgcV6"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-secondary"
+								>
+									https://forms.gle/DRWNkR9rnLLhjgcV6
+								</a>
+							</p>
+							<p className="subtitle mb-2">Inversión económica</p>
+							<p className="mb-4">
+								Realiza el pago único de S/ 1000.00 y asegura tu
+								lugar en el curso.
+							</p>
+							<p className="mb-4">
+								Podrás realizar el pago en los siguientes medios
+								autorizados:
+							</p>
+							<ul className="list-disc mb-4 ml-5">
+								<li className="mb-6">
+									<div className="inline-flex items-center subtitle mb-2">
+										<span className="mr-2">
+											Banco Pichincha
+										</span>
+										<a
+											href="https://www.pichincha.pe/servicio-al-cliente/nuestras-agencias"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<LinkExtIcon className="fill-primary" />
+										</a>
 									</div>
-								</div>
-								<div className="mb-8">
-									<div className="mb-[18px]">
-										<p className="subtitle mb-4">
-											2. Admisión:
-										</p>
-										<ul className="list-disc list-inside mb-4">
-											<li className="mb-1">
-												admision texto{' '}
-												<span className="font-bold">
-													admision precio
-												</span>
-											</li>
-										</ul>
-										<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
-											Más información sobre los conceptos
-											y lugares de pago{' '}
-											<Link href="/formacion-academica/admision?posgrado&tab=inversion">
-												<a className="font-bold text-secondary">
-													aquí.
-												</a>
-											</Link>
-										</div>
+									<p>
+										Acércate presencialmente a una de sus
+										agencias más cercanas a ti e indica que
+										realizarás un depósito a la cuenta
+										recaudadora UNMSM (Cta. Cte. n.°
+										000270016684). Finalmente, brinda el
+										siguiente concepto de pago{' '}
+										<span className="font-bold">
+											094-030
+										</span>
+										, y ¡listo!
+									</p>
+								</li>
+								<li>
+									<div className="inline-flex items-center subtitle mb-2">
+										<span className="mr-2">
+											Banco de Crédito del Perú
+										</span>
+										<a
+											href="https://www.viabcp.com/"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<LinkExtIcon className="fill-primary" />
+										</a>
 									</div>
-								</div>
-								<div className="mb-8">
-									<div className="mb-[18px]">
-										<p className="subtitle mb-4">
-											3. Matrícula
-										</p>
-
-										<ul className="list-disc list-inside default-programa">
-											jhdf hjsdgfhjgs fgsdjhgfj
-										</ul>
-
-										<p className="font-medium text-sm mt-4">
-											<em>
-												* Los costos corresponden al
-												proceso de admisión 2020,
-												sujetos a variaciones.
-											</em>
-										</p>
-									</div>
-								</div>
-
-								<div className="mb-8">
-									<p className="subtitle mb-4">
-										4. Costo por crédito académico:
+									<p>
+										¡Paga seguro en línea! Ingresa a{' '}
+										<a
+											href="https://www.viabcp.com/"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-secondary"
+										>
+											Vía BCP
+										</a>{' '}
+										y selecciona Banca por internet. Luego,
+										da clic en pago de servicio;
+										posteriormente, registra el código de
+										identificación 094030+DNI (14 dígitos,
+										sin espacios ni guiones), y eso es todo.
 									</p>
-									<p className="mb-4">
-										Los cursos del programa tienen un valor
-										en créditos. Sobre la base del número de
-										créditos matriculados, se determina el
-										pago de un alumno por ciclo.
-									</p>
-									<ul className="list-disc list-inside">
-										<li className="mb-1">
-											costo_credito texto{' '}
-											<span className="font-bold">
-												costo_credito precio
-											</span>
-										</li>
-									</ul>
-									<p className="font-medium text-sm mt-4">
-										<em>
-											* Los costos corresponden al proceso
-											de admisión 2020, sujetos a
-											variaciones.
-										</em>
-									</p>
-								</div>
-
-								<div className="mb-8">
-									<p className="subtitle mb-6">
-										4. Costo por semestre:
-									</p>
-									<div className="bg-gris px-6 py-4 mb-6">
-										<p className="mb-[6px] font-bold">
-											<img
-												className="w-[19px] mb-[1px] mr-1 inline-block"
-												src="/img/icons/observacion-white-icon.svg"
-												alt=""
-											/>
-											<span>Observación</span>
-										</p>
-										<ul className="list-disc list-inside">
-											<li className="mb-1">
-												El semestre está conformado por
-												cuatro meses académicoss
-											</li>
-											<li className="mb-1">
-												El número total de créditos por
-												semestre podría variar de
-												acuerdo a la cantidad de cursos
-												que el alumno se matricule.
-											</li>
-											<li>
-												Monto referencial, sujeto a
-												variaciones.
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+								</li>
+							</ul>
+							<p>
+								No dejes que el punto de partida te detenga.
+								¡Inscríbete ahora en nuestro curso y toma acción
+								hacia tu graduación!
+							</p>
+						</div>
+					</div>
+					<div label="Temario">
+						<div>
+							<p className="mb-6">
+								Entérate aquí qué contenidos académicos
+								abordaremos en el Taller de Tesis:
+							</p>
+						</div>
+						<div className="overflow-x-auto mt-4 mb-8">
+							<table className="table table-striped-even mb-0">
+								<thead>
+									<tr>
+										<th
+											colSpan="2"
+											className="!bg-tertiary text-blanco text-center"
+										>
+											Asignaturas
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											Líneas de investigación, ODS,
+											esquema del proyecto de
+											investigación, redacción APA
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Situación problemática,
+											planteamiento del problema,
+											objetivos de la investigación
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Marco Teórico (antecedentes y bases
+											teóricas)
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Hipótesis y Variables (si la
+											investigación lo requiere)
+										</td>
+									</tr>
+									<tr>
+										<td>Metodología</td>
+									</tr>
+									<tr>
+										<td>
+											Instrumentos de recolección de datos
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Revisión del borrador del proyecto
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Presentación y registro del proyecto
+											de investigación
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</Tabs>
 			</div>
-			<div className="col-span-full mb-14">
-				<div className="relative md:rounded-lg overflow-hidden mb-10">
-					<div className="absolute inset-0 bg-gradient-to-t from-tertiary to-secondary/80 -z-10"></div>
-					<div className="absolute h-full w-full -z-10">
-						<Image
-							src={
-								'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/banner-contacto.png'
-							}
-							className="object-cover h-full w-full"
-							layout="fill"
-							quality={100}
-							alt="vocacion1"
-							width={1022}
-							height={224}
-						/>
-					</div>
-					<div className="text-blanco mx-4 pt-6 pb-9">
-						<div className="flex flex-col text-center">
-							<span className="hidden md:block mr-4">
-								<img
-									className="m-auto"
-									src="/img/icons/correo-mas-informacion-icon.svg"
-									alt=""
-								/>
-							</span>
-							<p className="text-xl font-bold mb-1">
-								¿Quieres conocer más sobre este taller?
-							</p>
-							<p className="text-sm mb-5 md:mt-0 md:max-w-xs m-auto">
-								¡No dudes en contactarnos! Nuestro equipo te
-								responderá lo más pronto posible.
-							</p>
+			<div className="col-span-full md:col-span-2 mt-8 md:pl-6 mx-4 md:mx-0">
+				<div className="mb-5">
+					<p className="mb-1 text-tertiary">
+						<span className="font-black">Más información</span>
+					</p>
+					<p className="mb-3">
+						Si tienes alguna consulta, descuida, nuestro equipo
+						estará encantado de ayudarte.
+					</p>
+					<Boton
+						text="Contáctanos"
+						secondary
+						bold
+						onClick={() => handleOpen()}
+					/>
+				</div>
+			</div>
+			<div className="col-span-full mb-14 max-md:px-4">
+				<div className="rounded-lg bg-Contacto bg-cover bg-center overflow-hidden w-full mb-10">
+					<div className="bg-Gradient px-6 lg:px-24 py-8 text-blanco h-full flex items-center">
+						<div className="flex flex-col md:flex-row w-full justify-between gap-y-4">
 							<div>
+								<div className="grid grid-cols-[48px_auto] gap-x-1 sm:gap-x-4 text-center md:text-left max-md:mb-3">
+									<img
+										className="m-auto"
+										src="/img/icons/correo-mas-informacion-icon.svg"
+										alt=""
+									/>
+									<div className="max-md:flex max-md:items-center">
+										<p className="text-xl font-bold">
+											¿Quieres conocer más sobre este
+											programa?
+										</p>
+										<p className="hidden md:block text-sm md:mt-0 m-auto">
+											¡No dudes en contactarnos! Nuestro
+											equipo te responderá lo más pronto
+											posible.
+										</p>
+									</div>
+								</div>
+								<p className="md:hidden block text-sm md:mt-0 m-auto">
+									¡No dudes en contactarnos! Nuestro equipo te
+									responderá lo más pronto posible.
+								</p>
+							</div>
+							<div className="flex items-center">
 								<Boton
-									className="m-auto"
+									className="md:m-auto"
 									text="Contáctanos"
 									primary
 									onClick={() => handleOpen()}
