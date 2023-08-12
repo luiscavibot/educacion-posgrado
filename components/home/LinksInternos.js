@@ -29,7 +29,10 @@ const LinksInternos = () => {
 											<br />
 											Pública
 										</span>
-										<Link href="/noticias" passHref>
+										<Link
+											href="/blog-gestion-publica"
+											passHref
+										>
 											<a className="grid place-items-center rounded-lg w-9 h-9 bg-primary hover:bg-primary-hover transition-colors duration-300">
 												<div className="w-3 inline-block">
 													<VerMasIcon className="fill-blanco h-full" />
@@ -51,7 +54,10 @@ const LinksInternos = () => {
 								<div>
 									<div className="text-[2rem] font-bold leading-[normal] mb-3 flex gap-x-3">
 										<span>Posdoctorado</span>
-										<Link href="/noticias" passHref>
+										<Link
+											href="/programas/posdoctorado"
+											passHref
+										>
 											<a className="grid place-items-center rounded-lg w-9 h-9 bg-primary hover:bg-primary-hover transition-colors duration-300">
 												<div className="w-3 inline-block">
 													<VerMasIcon className="fill-blanco h-full" />
