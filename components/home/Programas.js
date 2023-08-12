@@ -36,7 +36,7 @@ const Programas = () => {
 					</p>
 					<ul className="font-bold mt-6">
 						<li className="text-lg hover:text-secondary cursor-pointer duration-400">
-							<Link href="/diplomaturas">
+							<Link href="/programas/diplomaturas">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
 									<span id="diplomaturas" className="pl-3">
@@ -46,7 +46,7 @@ const Programas = () => {
 							</Link>
 						</li>
 						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
-							<Link href="/maestrias">
+							<Link href="/programas/maestrias">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
 									<span id="maestrias" className="pl-3">
@@ -56,7 +56,7 @@ const Programas = () => {
 							</Link>
 						</li>
 						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
-							<Link href="/doctorado">
+							<Link href="/programas/doctorado">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
 									<span id="doctorado" className="pl-3">
@@ -66,7 +66,7 @@ const Programas = () => {
 							</Link>
 						</li>
 						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
-							<Link href="/posdoctorado">
+							<Link href="programas/posdoctorado">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
 									<span id="posdoctorado" className="pl-3">

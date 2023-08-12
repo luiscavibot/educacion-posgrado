@@ -25,7 +25,7 @@ const HeaderPage = () => {
 					<nav>
 						<ul className="flex items-center gap-7 text-xs font-bold">
 							<li>
-								<Link href={`/admision`}>
+								<Link href={`/admision?programa=maestria`}>
 									<a>
 										<span>Admisión</span>
 									</a>

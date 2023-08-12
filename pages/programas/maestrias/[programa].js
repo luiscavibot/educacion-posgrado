@@ -23,6 +23,7 @@ import GradoIcon from '../../../components/icons/GradoIcon';
 import DuracionIcon from '../../../components/icons/DuracionIcon';
 import { SiGoogleclassroom } from 'react-icons/si';
 import Observacion from '../../../components/shared/Observacion';
+import { maestrias } from '../../../data/programas/general';
 
 const Programa = ({
 	programa,
@@ -636,22 +637,50 @@ export async function getStaticPaths() {
 	const paths = [
 		{
 			params: {
-				programa: 'doctorado-ingenieria-quimica',
+				programa: 'magister-en-gestion-publica-presencial',
 			},
 		},
 		{
 			params: {
-				programa: 'doctorado-ciencias-quimicas',
+				programa:
+					'magister-en-administracion-con-mencion-en-direccion-de-recursos-humanos-presencial',
 			},
 		},
 		{
 			params: {
-				programa: 'maestria-ingenieria-quimica',
+				programa:
+					'magister-en-gestion-de-negocios-internacionales-con-mencion-en-comercio-internacional-presencial',
 			},
 		},
 		{
 			params: {
-				programa: 'maestria-quimica',
+				programa:
+					'magister-en-administracion-con-mencion-en-finanzas-y-valores-presencial',
+			},
+		},
+		{
+			params: {
+				programa: '',
+			},
+		},
+		{
+			params: {
+				programa: '',
+			},
+		},
+		{
+			params: {
+				programa: '',
+			},
+		},
+		{
+			params: {
+				programa: '',
+			},
+		},
+		{
+			params: {
+				programa: '',
 			},
 		},
 	];
@@ -663,61 +692,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const str = params.programa;
-	const cadena = str.split('-');
-	const primeraPalabra = cadena[0];
-	const resto = cadena.slice(1).join('-');
-
-	// la variable primeraPalabra segun el params puede tomar los valores de 'doctorado' o 'maestria'
-	const resProgram = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate=*&filters[slug][$eq]=${resto}`
-	);
-	const program = (await resProgram.json()).data;
-	program.push({
-		tipo: primeraPalabra,
-	});
-
-	const programa = [];
-
-	programa.push(...program);
-	const resCoordinadores = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
-	);
-	const preCoordinadoresProgram = await resCoordinadores.json();
-
-	const preCoordinadores = [];
-	preCoordinadores.push(...preCoordinadoresProgram.data);
-
-	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
-
-	const resDocentes = await fetch(
-		`${POSGRADO_URL}/docentes?filters[${primeraPalabra}s][slug]=${resto}&populate=facultad,foto,libro,articulo`
-	);
-	const docentesProgram = await resDocentes.json();
-
-	const docentes = [];
-	docentes.push(...docentesProgram.data);
-
-	const resNoticias = await fetch(
-		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-	);
-	const ultimasNoticias = await resNoticias.json();
-
-	const resAsignaturas = await fetch(
-		`${POSGRADO_URL}/asignaturas?filters[${primeraPalabra}s][slug]=${resto}`
-	);
-
-	const asignaturasProgram = await resAsignaturas.json();
-
-	const asignaturas = [];
-	asignaturas.push(...asignaturasProgram.data);
+	const slug = params.programa;
+	const programa = maestrias.filter((maestria) => maestria.slug === slug);
 
 	return {
 		props: {
 			programa,
-			coordinadores,
-			ultimasNoticias,
-			asignaturas,
 		},
 	};
 }

@@ -38,9 +38,7 @@ export default function CarouselProgramas({ programas }) {
 				className="carousel-programas"
 			>
 				{programas.map((programa) => (
-					<SwiperSlide
-						key={`${programa.titulo}-${programa.subtitulo}`}
-					>
+					<SwiperSlide key={programa.slug}>
 						<Link
 							href={
 								programa.tipo === 'Maestrías'

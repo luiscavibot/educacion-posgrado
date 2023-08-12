@@ -6,9 +6,15 @@ import { BASE_URL, SLUG_CARRERA } from '../../../config/consts';
 
 import { BannerAdmision } from '../../../components/admision/BannerAdmision';
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
+import { diplomaturas as programasData } from '../../../data/programas/general';
 
-const Index = ({ CarrerasEnProceso }) => {
-	const [isOpenBanner, setIsOpenBanner] = useState(CarrerasEnProceso);
+const Index = () => {
+	const [programas, setProgramas] = useState(null);
+	useEffect(() => {
+		setProgramas(
+			programasData.filter((programa) => programa.tipo === 'DIPLOMATURA')
+		);
+	}, []);
 	return (
 		<>
 			<PrincipalLayout>
@@ -39,63 +45,46 @@ const Index = ({ CarrerasEnProceso }) => {
 					</p> */}
 				</div>
 
-				{isOpenBanner && (
+				{/* {isOpenBanner && (
 					<BannerAdmision
 						setIsOpenBanner={setIsOpenBanner}
 						enlace="/admision/pregrado"
 					/>
-				)}
+				)} */}
 
 				<div className="px-4 md:px-0 col-span-full mb-10">
 					<div className="grid place-items-center">
 						<div className="inline-grid grid-cols-1 lg:grid-cols-[290px_290px_290px] gap-5 md:gap-11 w-full md:w-auto">
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión de Universidades Públicas`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
-										</div>
-									</div>
-									<div className="text-content">
-										<p className="title font-bold line-clamp-2">
-											Diplomatura en Gestión de
-											Universidades Públicas
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
-										</div>
-									</div>
-									<div className="text-content">
-										<p className="title font-bold line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
+							{programas?.length > 0 &&
+								programas.map((programa) => (
+									<Link
+										key={programa.slug}
+										href={`/programas/maestrias/doctorado-ingenieria-quimica`}
+									>
+										<a className="group card md:max-w-[290px]">
+											<div className="relative h-[168px]">
+												<Image
+													alt={`Diplomatura en Gestión Pública`}
+													width={290}
+													height={168}
+													className="object-cover h-full w-full"
+													src={programa.miniHomeImg}
+												/>
+												<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
+													{programa.modalidad}
+												</div>
+											</div>
+											<div className="text-content text-textColorOne group-hover:text-secondary">
+												<p className="font-bold">
+													{programa.titulo}
+												</p>
+												<p className="line-clamp-2">
+													{programa.subtitulo}
+												</p>
+											</div>
+										</a>
+									</Link>
+								))}
 						</div>
 					</div>
 				</div>
@@ -103,25 +92,5 @@ const Index = ({ CarrerasEnProceso }) => {
 		</>
 	);
 };
-
-export async function getStaticProps({ params }) {
-	const resCarrerasPregrado = await fetch(
-		`${BASE_URL}/carreras/${SLUG_CARRERA}?tipo=posgrado`
-	);
-	const carrerasPregrado = await resCarrerasPregrado.json();
-
-	const CarrerasEnProceso = carrerasPregrado.some(
-		(carrera) => carrera.en_proceso
-	);
-	// const valor = CarrerasEnProceso.some(objeto => objeto.en_proceso);
-
-	// console.log(CarrerasEnProceso);
-
-	return {
-		props: {
-			CarrerasEnProceso,
-		},
-	};
-}
 
 export default Index;
