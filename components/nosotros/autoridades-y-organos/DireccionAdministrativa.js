@@ -29,10 +29,11 @@ const DireccionAdministrativa = () => {
 						más acerca de esta Dirección ingresando al Manual de
 						Organización y Funciones (
 						<a
-							className="link"
+							className="text-secondary"
 							href="https://cdn.www.gob.pe/uploads/document/file/1979591/MOF%20de%20la%20Facultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica..pdf?v=1624896516"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							MOF
 						</a>
 						).
@@ -78,7 +79,8 @@ const DireccionAdministrativa = () => {
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 							href="https://cdn.www.gob.pe/uploads/document/file/4008957/RR-005779-2021-R-director-administrativo-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672412171"
 							target={'_blank'}
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<span className="flex items-center justify-center">
 								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 								Resolución rectoral
