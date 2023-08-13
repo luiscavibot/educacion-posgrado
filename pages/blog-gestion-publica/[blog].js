@@ -10,25 +10,26 @@ import CompartirIcon from '../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../components/shared/SharedComponent';
 import VerMasIcon from '../../components/icons/VerMasIcon';
+import { BACKEND } from '../../config/consts';
 
-const Blog = ({ noticia, noticiasRelacionadas }) => {
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
-	const metaTags = {
-		title: noticia.titulo,
-		description: noticia.resumen,
-		ogUrl,
-		ogType: 'website',
-		ogTitle: noticia.titulo,
-		ogImage: noticia.foto,
-		ogDescription: noticia.resumen,
-	};
+const Blog = ({ blog }) => {
+	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
+	// const metaTags = {
+	// 	title: noticia.titulo,
+	// 	description: noticia.resumen,
+	// 	ogUrl,
+	// 	ogType: 'website',
+	// 	ogTitle: noticia.titulo,
+	// 	ogImage: noticia.foto,
+	// 	ogDescription: noticia.resumen,
+	// };
 
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	return (
-		<PrincipalLayout metaTags={metaTags}>
-			{!noticia ? (
+		<PrincipalLayout>
+			{!blog ? (
 				<div className="col-span-full mt-10 grid place-items-center h-[60vh]">
 					<Cargando />
 				</div>
@@ -49,41 +50,37 @@ const Blog = ({ noticia, noticiasRelacionadas }) => {
 							</Link>
 						</li>
 						<li className="text-textColorOne font-bold inline">
-							{noticia.titulo}
+							{blog.titulo}
 						</li>
 					</ul>
 					<div className="mx-4 md:mx-0 col-span-full title-page mb-4">
-						{noticia.titulo}
+						{blog.titulo}
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mb-4">
 						<div className="text-grisTenue text-xs flex justify-start items-center">
 							<BiTimeFive />
-							<p className="ml-1">{getFecha(noticia.fecha)}</p>
+							<p className="ml-1">{getFecha(blog.fecha)}</p>
 						</div>
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full">
 						<div className="relative max-w-full w-[502px] h-56 md:h-[335px] m-auto">
 							<Image
 								quality={100}
-								src={
-									noticia.foto
-										? `${noticia.foto}`
-										: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-								}
+								src={blog.foto}
 								width={502}
 								height={335}
 								className="object-cover w-full h-full"
 							/>
 						</div>
-						{noticia.pie_foto && (
+						{blog.pie_foto && (
 							<div className="mt-3 text-center text-textColorTwo text-xs max-w-full w-[502px] m-auto">
-								{noticia.pie_foto}
+								{blog.pie_foto}
 							</div>
 						)}
 					</div>
 					<div
 						className="mx-4 md:mx-0 col-span-10 col-start-2 mt-5 mb-5 html-default"
-						dangerouslySetInnerHTML={{ __html: noticia.cuerpo }}
+						dangerouslySetInnerHTML={{ __html: blog.cuerpo }}
 					/>
 					<div className="col-span-full mb-10 mx-4 md:mx-0">
 						<div className="flex justify-end">
@@ -183,7 +180,7 @@ const Blog = ({ noticia, noticiasRelacionadas }) => {
 					>
 						<SharedComponent
 							handleClose={handleClose}
-							ogUrl={ogUrl}
+							// ogUrl={ogUrl}
 						/>
 					</Box>
 				</Fade>
@@ -192,19 +189,15 @@ const Blog = ({ noticia, noticiasRelacionadas }) => {
 	);
 };
 export async function getServerSideProps({ params }) {
-	const resNoticia = await fetch(
-		`${process.env.BACKEND_URL}/noticias/url/${params.blog}`
-	);
-	const noticia = await resNoticia.json();
-	const resNoticiasRelacionadas = await fetch(
-		`${process.env.BACKEND_URL}/noticias/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}/ultimas?id=${noticia[0].id}`
-	);
-	const noticiasRelacionadas = await resNoticiasRelacionadas.json();
+	// const resBlog = await fetch(
+	// 	`${BACKEND}/blog-gestion-publica/url/${params.blog}`
+	// );
+	const resBlog = await fetch(`${BACKEND}/blog-gestion-publica/id/8`);
+	const blog = await resBlog.json();
 
 	return {
 		props: {
-			noticia: noticia[0],
-			noticiasRelacionadas,
+			blog: blog.data,
 		},
 	};
 }

@@ -8,13 +8,13 @@ export default function useBlogGestionPublica() {
 	const [blogGestionPublica, setBlogGestionPublica] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
-		setNoticias(null);
-		let url = `${BACKEND}/blog-gestion-publica`;
+		setBlogGestionPublica(null);
+		let url = `${BACKEND}/blog-gestion-publica?publicado=true`;
 		setIsLoading(true);
 		const fetchDataBlogGestionPublica = async () => {
 			let response = await fetch(url);
 			let res = await response.json();
-			setBlogGestionPublica(res.meta.totalPages);
+			setBlogGestionPublica(res.items);
 			setIsLoading(false);
 		};
 		fetchDataBlogGestionPublica().catch(console.error);

@@ -21,6 +21,7 @@ const Blog = () => {
 	// const [endDate, setEndDate] = useState(END_DATE);
 
 	const { isLoading, blogGestionPublica } = useBlogGestionPublica();
+	console.log(blogGestionPublica);
 
 	return (
 		<>
@@ -53,9 +54,7 @@ const Blog = () => {
 				</div>
 				<div className="col-span-full mb-5 lg:grid lg:grid-cols-12 gap-x-8">
 					<div className="col-span-full xl:col-span-10 mx-4 md:mx-0">
-						{!isLoading && blogGestionPublica?.length > 0 && (
-							<CardsBlogResultados blogs={blogGestionPublica} />
-						)}
+						<CardsBlogResultados blogs={blogGestionPublica} />
 					</div>
 					<div className="hidden xl:block col-span-2">
 						<div className="rounded-lg bg-TikTok bg-cover overflow-hidden">

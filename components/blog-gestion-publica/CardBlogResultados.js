@@ -23,11 +23,7 @@ const CardsBlogResultados = ({ blogs }) => {
 									<Image
 										layout="fill"
 										objectFit="cover"
-										src={
-											blog.foto
-												? `${blog.foto}`
-												: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-										}
+										src={blog.foto}
 									/>
 								</div>
 								<div className="flex flex-col basis-12/12 md:basis-9/12 px-5 py-3">

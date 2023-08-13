@@ -30,11 +30,13 @@ const FHpages = ({
 				/>
 				<meta
 					name="title"
-					content={process.env.NEXT_PUBLIC_TITLE}></meta>
+					content={process.env.NEXT_PUBLIC_TITLE}
+				></meta>
 				<meta name="DC.Title" content={metaTags.ogTitle} />
 				<meta
 					httpEquiv="title"
-					content={process.env.NEXT_PUBLIC_TITLE}></meta>
+					content={process.env.NEXT_PUBLIC_TITLE}
+				></meta>
 				<meta name="description" content={metaTags.ogDescription} />
 				<meta
 					httpEquiv="description"
@@ -42,7 +44,8 @@ const FHpages = ({
 				/>
 				<meta
 					httpEquiv="DC.Description"
-					content={metaTags.ogDescription}></meta>
+					content={metaTags.ogDescription}
+				></meta>
 				<link rel="icon" href="/logito.png"></link>
 				<title>{process.env.NEXT_PUBLIC_TITLE}</title>
 				<meta
