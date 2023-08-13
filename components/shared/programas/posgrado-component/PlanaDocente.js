@@ -119,7 +119,8 @@ export const PlanaDocente = ({ docentes }) => {
 																	.attributes
 																	.url
 															: 'https://posgrado-unmsm.s3.amazonaws.com/coordinador_ejemplo_41e16694ae.png'
-													}></Image>
+													}
+												></Image>
 											</div>
 											<div className="basis-10/12 md:basis-9/12">
 												<p className="subtitle mb-1">
@@ -169,7 +170,8 @@ export const PlanaDocente = ({ docentes }) => {
 															// 	docente
 															// );
 														}}
-														className="link">
+														className="link"
+													>
 														Leer más
 													</button>
 												</div>
@@ -205,9 +207,9 @@ export const PlanaDocente = ({ docentes }) => {
 													onClick={() => {
 														setModalData(docente);
 														setEstadoModal(true);
-														// console.log(docente);
 													}}
-													className="link">
+													className="link"
+												>
 													Leer más
 												</button>
 											</div>
@@ -234,7 +236,8 @@ export const PlanaDocente = ({ docentes }) => {
 																.foto.data
 																.attributes.url
 														: 'https://posgrado-unmsm.s3.amazonaws.com/coordinador_ejemplo_41e16694ae.png'
-												}></Image>
+												}
+											></Image>
 										</div>
 										<div className="grow">
 											<div className="mb-2 md:mb-0 md:block flex flex-col items-center">
@@ -280,7 +283,8 @@ export const PlanaDocente = ({ docentes }) => {
 																'_blank'
 															);
 														}}
-														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4">
+														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4"
+													>
 														<span className="link">
 															ORCID
 														</span>
@@ -295,7 +299,8 @@ export const PlanaDocente = ({ docentes }) => {
 																'_blank'
 															);
 														}}
-														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4">
+														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4"
+													>
 														<span className="link">
 															SIIS
 														</span>
@@ -310,7 +315,8 @@ export const PlanaDocente = ({ docentes }) => {
 																'_blank'
 															);
 														}}
-														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4">
+														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4"
+													>
 														<span className="link">
 															CONCYTEC
 														</span>
@@ -325,7 +331,8 @@ export const PlanaDocente = ({ docentes }) => {
 																'_blank'
 															);
 														}}
-														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4">
+														className="cursor-pointer px-2 rounded-lg shadow-md grid place-items-center h-[30px] mr-1 md:mr-4"
+													>
 														<span className="link">
 															GOOGLE SCHOLAR
 														</span>
@@ -363,7 +370,8 @@ export const PlanaDocente = ({ docentes }) => {
 															index={0}
 															onClick={
 																changeAccordion
-															}>
+															}
+														>
 															Parte o capítulo de
 															libro
 															<div className="icon-accordion">
@@ -372,7 +380,8 @@ export const PlanaDocente = ({ docentes }) => {
 																	height="19"
 																	viewBox="0 0 11 19"
 																	fill="none"
-																	xmlns="http://www.w3.org/2000/svg">
+																	xmlns="http://www.w3.org/2000/svg"
+																>
 																	<path
 																		d="M2.14355 16.2461L8.14355 9.24609L2.14355 2.24609"
 																		stroke="#54626C"
@@ -387,7 +396,8 @@ export const PlanaDocente = ({ docentes }) => {
 															active={
 																activeIndexAccordion ===
 																0
-															}>
+															}
+														>
 															{modalData.attributes.libro.map(
 																(libro) => {
 																	return (
@@ -395,7 +405,8 @@ export const PlanaDocente = ({ docentes }) => {
 																			className="mb-6 px-3"
 																			key={
 																				libro.id
-																			}>
+																			}
+																		>
 																			<li className="font-semibold mb-[2px]">
 																				{
 																					libro.publicado_en
@@ -424,7 +435,8 @@ export const PlanaDocente = ({ docentes }) => {
 															index={1}
 															onClick={
 																changeAccordion
-															}>
+															}
+														>
 															Artículos en
 															revistas
 															<div className="icon-accordion">
@@ -433,7 +445,8 @@ export const PlanaDocente = ({ docentes }) => {
 																	height="19"
 																	viewBox="0 0 11 19"
 																	fill="none"
-																	xmlns="http://www.w3.org/2000/svg">
+																	xmlns="http://www.w3.org/2000/svg"
+																>
 																	<path
 																		d="M2.14355 16.2461L8.14355 9.24609L2.14355 2.24609"
 																		stroke="#54626C"
@@ -448,7 +461,8 @@ export const PlanaDocente = ({ docentes }) => {
 															active={
 																activeIndexAccordion ===
 																1
-															}>
+															}
+														>
 															{modalData.attributes.articulo.map(
 																(articulo) => {
 																	return (
@@ -456,7 +470,8 @@ export const PlanaDocente = ({ docentes }) => {
 																			className="mb-6 px-3"
 																			key={
 																				articulo.id
-																			}>
+																			}
+																		>
 																			<li className="font-semibold mb-[2px]">
 																				{
 																					articulo.publicado_en

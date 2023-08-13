@@ -29,8 +29,6 @@ const Noticias = () => {
 		END_DATE
 	);
 
-	// console.log(noticias);
-
 	const handleKeyDown = (e) => {
 		setInput(e.target.value);
 		if (e.target.value === '') {

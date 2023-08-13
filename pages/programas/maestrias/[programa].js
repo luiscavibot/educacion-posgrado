@@ -7,12 +7,6 @@ import Modal from '@mui/material/Modal';
 import { Tabs } from '../../../components/shared/Tabs';
 import Boton from '../../../components/shared/Boton';
 
-import UserCardIcon from '../../../components/icons/UserCardIcon';
-import CorreoIcon from '../../../components/icons/CorreoIcon';
-import DocumentCheckIcon from '../../../components/icons/DocumentCheckIcon';
-
-import { UltimasNoticias } from '../../../components/shared/programas/UltimasNoticias';
-import { BASE_URL, POSGRADO_URL, SLUG_CARRERA } from '../../../config/consts';
 import { MallaCurricular } from '../../../components/shared/programas/posgrado-component/MallaCurricular';
 import { InversionEconomica } from '../../../components/shared/programas/InversionEconomica';
 
@@ -22,10 +16,9 @@ import VerMasIcon from '../../../components/icons/VerMasIcon';
 import GradoIcon from '../../../components/icons/GradoIcon';
 import DuracionIcon from '../../../components/icons/DuracionIcon';
 import { SiGoogleclassroom } from 'react-icons/si';
-import Observacion from '../../../components/shared/Observacion';
 import { maestrias } from '../../../data/programas/general';
 
-const Programa = ({ programa }) => {
+const Programa = ({ programa, otrosProgramas }) => {
 	console.log('programa->', programa);
 	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/programas/maestrias/${programa.slug}`;
 	// const metaTags = {
@@ -493,7 +486,7 @@ const Programa = ({ programa }) => {
 						<h2 className="font-bold text-textColorOne">
 							Más maestrías
 						</h2>
-						<Link href="/noticias" passHref>
+						<Link href="/programas/maestrias" passHref>
 							<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
 								<div className="w-3 inline-block">
 									<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
@@ -505,85 +498,40 @@ const Programa = ({ programa }) => {
 				<div className="px-4 md:px-0 col-span-full mb-14">
 					<div className="grid place-items-center">
 						<div className="inline-grid grid-cols-1 lg:grid-cols-[290px_290px_290px] gap-5 md:gap-11 w-full md:w-auto">
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card group md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión de Universidades Públicas`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
+							{otrosProgramas?.map((otrosPrograma) => (
+								<Link
+									key={otrosPrograma.slug}
+									href={`/programas/maestrias/${otrosPrograma.slug}`}
+								>
+									<a className="card group md:max-w-[290px]">
+										<div className="relative h-[168px]">
+											<Image
+												alt={`Diplomatura en Gestión de Universidades Públicas`}
+												width={290}
+												height={168}
+												className="object-cover h-full w-full"
+												src={otrosPrograma.miniHomeImg}
+											/>
+											<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
+												{otrosPrograma.modalidad ===
+													'PRESENCIAL' &&
+													'Presencial'}
+												{otrosPrograma.modalidad ===
+													'SEMIPRESENCIAL' &&
+													'Semipresencial'}
+											</div>
 										</div>
-									</div>
-									<div className="text-content text-textColorOne group-hover:text-secondary">
-										<p className="font-bold">
-											Administración
-										</p>
-										<p className="line-clamp-2">
-											Diplomatura en Gestión de
-											Universidades Públicas
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="group card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
+										<div className="text-content text-textColorOne group-hover:text-secondary">
+											<p className="font-bold">
+												{otrosPrograma.titulo}
+											</p>
+											<p className="line-clamp-2">
+												{otrosPrograma.subtitulo}
+											</p>
 										</div>
-									</div>
-									<div className="text-content text-textColorOne group-hover:text-secondary">
-										<p className="font-bold">
-											Administración
-										</p>
-										<p className="line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="group card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
-										</div>
-									</div>
-									<div className="text-content text-textColorOne group-hover:text-secondary">
-										<p className="font-bold">
-											Administración
-										</p>
-										<p className="line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
+									</a>
+								</Link>
+							))}
 						</div>
 					</div>
 				</div>
@@ -634,9 +582,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 	const slug = params.programa;
 	const programa = maestrias.filter((maestria) => maestria.slug == slug);
+	const otrosProgramas = maestrias
+		.sort(() => 0.5 - Math.random())
+		.slice(0, 3);
 	return {
 		props: {
 			programa: programa[0],
+			otrosProgramas,
 		},
 	};
 }

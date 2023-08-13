@@ -23,6 +23,7 @@ import GradoIcon from '../../components/icons/GradoIcon';
 import DuracionIcon from '../../components/icons/DuracionIcon';
 import { SiGoogleclassroom } from 'react-icons/si';
 import Observacion from '../../components/shared/Observacion';
+import { maestrias } from '../../data/programas/general';
 
 const Programa = (
 	{
@@ -45,6 +46,9 @@ const Programa = (
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
+	const otrosProgramas = maestrias
+		.sort(() => 0.5 - Math.random())
+		.slice(0, 3);
 
 	return (
 		<PrincipalLayout>
@@ -209,9 +213,9 @@ const Programa = (
 									</Observacion>
 								</div>
 								<div className="mb-6">
-									<div className="subtitle mb-2">
+									{/* <div className="subtitle mb-2">
 										¿Qué es un posdoctorado?
-									</div>
+									</div> */}
 									<p>
 										La Facultad de Ciencias Administrativas
 										(FCA) en coordinaci&oacute;n con la
@@ -455,75 +459,40 @@ const Programa = (
 				<div className="px-4 md:px-0 col-span-full mb-14">
 					<div className="grid place-items-center">
 						<div className="inline-grid grid-cols-1 lg:grid-cols-[290px_290px_290px] gap-5 md:gap-11 w-full md:w-auto">
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
+							{otrosProgramas?.map((otrosPrograma) => (
+								<Link
+									key={otrosPrograma.slug}
+									href={`/programas/maestrias/${otrosPrograma.slug}`}
+								>
+									<a className="card group md:max-w-[290px]">
+										<div className="relative h-[168px]">
+											<Image
+												alt={`Diplomatura en Gestión de Universidades Públicas`}
+												width={290}
+												height={168}
+												className="object-cover h-full w-full"
+												src={otrosPrograma.miniHomeImg}
+											/>
+											<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
+												{otrosPrograma.modalidad ===
+													'PRESENCIAL' &&
+													'Presencial'}
+												{otrosPrograma.modalidad ===
+													'SEMIPRESENCIAL' &&
+													'Semipresencial'}
+											</div>
 										</div>
-									</div>
-									<div className="text-content">
-										<p className="title font-bold line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
+										<div className="text-content text-textColorOne group-hover:text-secondary">
+											<p className="font-bold">
+												{otrosPrograma.titulo}
+											</p>
+											<p className="line-clamp-2">
+												{otrosPrograma.subtitulo}
+											</p>
 										</div>
-									</div>
-									<div className="text-content">
-										<p className="title font-bold line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
-							<Link
-								href={`/programas/diplomaturas/doctorado-ingenieria-quimica`}
-							>
-								<a className="card md:max-w-[290px]">
-									<div className="relative h-[168px]">
-										<Image
-											alt={`Diplomatura en Gestión Pública`}
-											width={290}
-											height={168}
-											className="object-cover h-full w-full"
-											src={`https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg`}
-										/>
-										<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-											Modalidad Presencial
-										</div>
-									</div>
-									<div className="text-content">
-										<p className="title font-bold line-clamp-2">
-											Diplomatura en Gestión Pública
-										</p>
-									</div>
-								</a>
-							</Link>
+									</a>
+								</Link>
+							))}
 						</div>
 					</div>
 				</div>

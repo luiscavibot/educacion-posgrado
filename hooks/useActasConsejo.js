@@ -35,12 +35,12 @@ export default function useActasConsejo(
 		}
 		url += filtroStartDate + filtroEndDate;
 		url += `&page=${page}`;
-		// console.log(url);
+
 		const fetchDataActasConsejo = async () => {
 			let response = await fetch(url);
 			let res = await response.json();
 			setTotalPaginas(res.meta.totalPages);
-			// console.log(res.items);
+
 			setActasConsejo(res.items);
 			window.scrollTo(0, 0);
 		};

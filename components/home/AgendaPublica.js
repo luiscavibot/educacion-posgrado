@@ -22,7 +22,6 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 	useEffect(() => {
 		setFirstRender(true);
 	}, []);
-	// console.log(noticiasDestacadas);
 	return (
 		<motion.section
 			initial="offscreen"

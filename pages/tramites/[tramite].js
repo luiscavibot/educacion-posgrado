@@ -29,7 +29,6 @@ const Tramite = ({ ultimasNoticias }) => {
 			let response = await fetch(
 				`${BASE_URL}/tramites/id/${router.query.tramite}`
 			);
-			// console.log(response);
 			let {
 				id,
 				titulo,

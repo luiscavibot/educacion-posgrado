@@ -54,7 +54,6 @@ const Autoridades = (
 		// egresados,
 	}
 ) => {
-	// console.log(directores);
 	const [formData, setFormData] = useState({ correo: '' });
 
 	const [estadoModal, setEstadoModal] = useState(false);

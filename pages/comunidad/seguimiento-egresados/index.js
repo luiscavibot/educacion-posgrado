@@ -200,13 +200,13 @@ const SeguimientoEgresados = () => {
 										</p>
 										<div>
 											<p className="line-clamp-3 mb-2 leading-[150%]">
-												"A los jóvenes que quieran
+												&quot;A los jóvenes que quieran
 												estudiar esta carrera, yo les
 												digo sean empeñosos, dedicados y
 												valoren la educación. y a la
 												Universidad Nacional Mayor de
 												San Marcos le digo gracias por
-												dejarme crecer"
+												dejarme crecer&quot;
 											</p>
 										</div>
 									</div>

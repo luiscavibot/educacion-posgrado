@@ -7,7 +7,6 @@ import Link from 'next/link';
 import Cargando from '../resultados/Cargando';
 
 const CardsEventosPasados = ({ eventos }) => {
-	console.log('even---->', eventos);
 	return (
 		<>
 			{eventos ? (

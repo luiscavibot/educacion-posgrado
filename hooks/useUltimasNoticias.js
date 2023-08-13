@@ -12,9 +12,6 @@ export default function useUltimasNoticias() {
 			let response = await fetch(url);
 			let ultimasNoticias = await response.json();
 			setUltimasNoticias(ultimasNoticias);
-			console.log(ultimasNoticias);
-			// return ultimasNoticias;
-			// window.scrollTo(0, 0);
 		};
 		fetchDataUltimasNoticias().catch(console.error);
 	}, []);

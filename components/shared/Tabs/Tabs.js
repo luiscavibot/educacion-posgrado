@@ -9,7 +9,6 @@ import { IoIosArrowDown } from 'react-icons/io';
 import Link from 'next/link';
 
 const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
-	console.log(tipoPrograma);
 	const [activeTab, setActiveTab] = useState(null);
 	const router = useRouter();
 

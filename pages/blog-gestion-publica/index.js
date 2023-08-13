@@ -7,6 +7,7 @@ import Image from 'next/future/image';
 import useNoticias from '../../hooks/useNoticias';
 import VerMasIcon from '../../components/icons/VerMasIcon';
 import CardsBlogResultados from '../../components/blog-gestion-publica/CardBlogResultados';
+import useBlogGestionPublica from '../../hooks/useBlogGestionPublica';
 
 const START_DATE = new Date();
 START_DATE.setMonth(START_DATE.getMonth() - 12);
@@ -15,17 +16,11 @@ const END_DATE = new Date();
 END_DATE.setHours(23, 59, 59, 999);
 
 const Blog = () => {
-	const [entradaBusqueda, setEntradaBusqueda] = useState('');
-	const [startDate, setStartDate] = useState(START_DATE);
-	const [endDate, setEndDate] = useState(END_DATE);
+	// const [entradaBusqueda, setEntradaBusqueda] = useState('');
+	// const [startDate, setStartDate] = useState(START_DATE);
+	// const [endDate, setEndDate] = useState(END_DATE);
 
-	const { noticias, setPage, page, totalPaginas, INITIAL_PAGE } = useNoticias(
-		entradaBusqueda,
-		startDate,
-		endDate,
-		START_DATE,
-		END_DATE
-	);
+	const { isLoading, blogGestionPublica } = useBlogGestionPublica();
 
 	return (
 		<>
@@ -45,15 +40,22 @@ const Blog = () => {
 				</div>
 				<div className="col-span-full mb-5 mx-4 md:mx-0">
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Incidunt, eaque, unde et impedit repellat minus facere
-						iusto tempora non vel minima, quidem exercitationem quis
-						distinctio. Alias iure voluptatibus impedit pariatur!
+						Se presenta un espacio dedicado íntegramente a la
+						gestión pública en el Perú, constituyendo un foro de
+						análisis riguroso sobre las políticas y administraciones
+						que configuran el destino de la nación. En este lugar,
+						se profundizará en las dinámicas, desafíos y
+						oportunidades de la administración estatal, con el
+						propósito de fomentar el debate constructivo y la
+						optimización de procesos que buscan un Perú más
+						eficiente, equitativo y próspero.
 					</p>
 				</div>
 				<div className="col-span-full mb-5 lg:grid lg:grid-cols-12 gap-x-8">
 					<div className="col-span-full xl:col-span-10 mx-4 md:mx-0">
-						<CardsBlogResultados blogs={noticias} />
+						{!isLoading && blogGestionPublica?.length > 0 && (
+							<CardsBlogResultados blogs={blogGestionPublica} />
+						)}
 					</div>
 					<div className="hidden xl:block col-span-2">
 						<div className="rounded-lg bg-TikTok bg-cover overflow-hidden">

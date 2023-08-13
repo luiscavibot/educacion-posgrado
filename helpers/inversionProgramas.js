@@ -6,5 +6,4 @@ export const totalCreditos = (arreglo) => {
 		}
 		return a;
 	});
-	console.log(creditos);
 };

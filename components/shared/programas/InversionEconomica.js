@@ -1,38 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import Observacion from '../Observacion';
+import { getPathTipoPrograma } from '../../../helpers/getPathTipoPrograma';
 
 export const InversionEconomica = ({
 	inversion,
 	tipoPrograma = 'MAESTRIA',
 }) => {
-	console.log(tipoPrograma);
 	const duracion = inversion?.duracion;
 	const costos = inversion?.costos;
 	const admisiones = inversion?.admisiones;
 	const matricula = inversion?.matricula;
 	const costos_credito = inversion?.costos_credito;
-	const getPathTipoPrograma = () => {
-		const result = '';
-		switch (tipoPrograma) {
-			case 'MAESTRIA':
-				result = 'maestria';
-				break;
-			case 'DIPLOMATURA':
-				result = 'diplomatura';
-				break;
-			case 'DOCTORADO':
-				result = 'doctorado';
-				break;
-			case 'POSDOCTORADO':
-				result = 'posdoctorado';
-				break;
-			default:
-				break;
-		}
-		return result;
-	};
-	// const costos_credito = inversion.costo_credito;
 
 	return (
 		<div className="grid grid-cols-8">
@@ -121,7 +100,9 @@ export const InversionEconomica = ({
 								Más información sobre los conceptos y lugares de
 								pago{' '}
 								<Link
-									href={`/admision?programa=${getPathTipoPrograma()}&tab=inversion`}
+									href={`/admision?programa=${getPathTipoPrograma(
+										tipoPrograma
+									)}&tab=inversion`}
 								>
 									<a className="font-bold text-secondary">
 										aquí.
@@ -154,7 +135,9 @@ export const InversionEconomica = ({
 								Más información sobre los conceptos y lugares de
 								pago{' '}
 								<Link
-									href={`/admision?programa=${getPathTipoPrograma()}&tab=inversion`}
+									href={`/admision?programa=${getPathTipoPrograma(
+										tipoPrograma
+									)}&tab=inversion`}
 								>
 									<a className="font-bold text-secondary">
 										aquí.

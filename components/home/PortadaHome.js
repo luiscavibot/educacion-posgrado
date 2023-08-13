@@ -21,7 +21,6 @@ import AsideSocialNetworks from '../shared/AsideSocialNetworks';
 import LogoPosgradoAdministracionVertical from '../icons/LogoPosgradoAdministracionVertical';
 
 const PortadaHome = ({ eventos }) => {
-	console.log(eventos);
 	return (
 		// <section className="relative w-full flex flex-col md:h-screen">
 		// 	<div className="relative md:static h-96 md:h-full">
