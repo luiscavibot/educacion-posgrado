@@ -45,7 +45,7 @@ const Blog = ({ blog }) => {
 							Blog de Gestión Pública
 						</li> */}
 						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/actualidad/agenda-publica">
+							<Link href="/blog-gestion-publica">
 								<a>Blog de Gestión Pública</a>
 							</Link>
 						</li>
@@ -189,15 +189,13 @@ const Blog = ({ blog }) => {
 	);
 };
 export async function getServerSideProps({ params }) {
-	// const resBlog = await fetch(
-	// 	`${BACKEND}/blog-gestion-publica/url/${params.blog}`
-	// );
-	const resBlog = await fetch(`${BACKEND}/blog-gestion-publica/id/8`);
+	const resBlog = await fetch(
+		`${BACKEND}/blog-gestion-publica/url/${params.blog}`
+	);
 	const blog = await resBlog.json();
-
 	return {
 		props: {
-			blog: blog.data,
+			blog: blog[0],
 		},
 	};
 }
