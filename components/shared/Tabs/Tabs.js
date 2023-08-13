@@ -59,7 +59,7 @@ const Tabs = ({ children, nombre, carrera }) => {
 				break;
 			case 'transparencia':
 				router.push(
-					`/transparencia/?tab=${slugify(newActiveTab)}`,
+					`/nosotros/transparencia/?tab=${slugify(newActiveTab)}`,
 					undefined,
 					{
 						shallow: true,

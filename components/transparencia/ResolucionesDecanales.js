@@ -63,10 +63,6 @@ const ResolucionesDecanales = () => {
 
 	return (
 		<>
-			<p className="mb-6">
-				Encuentra aquí todas las Resoluciones Decanales, acerca de las
-				últimas disposiciones de la facultad.
-			</p>
 			<div>
 				<InputText
 					value={input}
@@ -119,14 +115,16 @@ const ResolucionesDecanales = () => {
 													dangerouslySetInnerHTML={{
 														__html: rd.descripcion,
 													}}
-													className="desc-resoluciones"></td>
+													className="desc-resoluciones"
+												></td>
 												{/* <td>{rd.descripcion}</td> */}
 												<td className="text-center">
 													<a
 														className="inline-grid place-items-center bg-blanco rounded-lg p-2 shadow-button"
 														target="_blank"
 														rel="noopener noreferrer"
-														href={rd.documento}>
+														href={rd.documento}
+													>
 														<DocumentosFillIcon className="fill-secondary" />
 													</a>
 												</td>
