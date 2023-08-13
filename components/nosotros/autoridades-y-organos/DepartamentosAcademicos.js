@@ -29,10 +29,11 @@ const DepartamentosAcademicos = () => {
 				Conoce más acerca de esta Dirección ingresando al Manual de
 				Organización y Funciones (
 				<a
-					className="link"
+					className="text-secondary"
 					href="https://cdn.www.gob.pe/uploads/document/file/1979591/MOF%20de%20la%20Facultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica..pdf?v=1624896516"
 					target="_blank"
-					rel="noopener noreferrer">
+					rel="noopener noreferrer"
+				>
 					MOF
 				</a>
 				).
@@ -96,7 +97,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://www.gob.pe/institucion/unmsm/normas-legales/4252942-resolucion-rectoral-n-005230-2023-r"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -109,7 +111,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=95716'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -214,7 +217,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/4008984/RR-014959-2022-R-dept-quimica-organica-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672412302"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -227,7 +231,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12092'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -351,7 +356,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989408/R.R.%20009214-2021-R%20-%20dept-quimica-inorganica.pdf.pdf?v=1672156307"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -364,7 +370,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=12743'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -488,7 +495,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://www.gob.pe/institucion/unmsm/normas-legales/4252935-resolucion-rectoral-n-005595-2023-r"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -501,7 +509,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=17858'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -617,7 +626,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989376/R.R.%20003015-2021-R%20-%20dpto-analisis-dise%C3%B1o-procesos-quimica-analitica.pdf.pdf?v=1672155975"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -630,7 +640,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=3692'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -766,7 +777,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989376/R.R.%20003015-2021-R%20-%20dpto-analisis-dise%C3%B1o-procesos-quimica-analitica.pdf.pdf?v=1672155975"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -779,7 +791,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2207'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>
@@ -913,7 +926,8 @@ const DepartamentosAcademicos = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://cdn.www.gob.pe/uploads/document/file/3989468/R.R.%20010901-2021-R%20-dept-operaciones-unitarias.pdf.pdf?v=1672157019"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -926,7 +940,8 @@ const DepartamentosAcademicos = () => {
 									window.open(
 										'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=11405'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>

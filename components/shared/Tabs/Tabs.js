@@ -30,7 +30,7 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 		switch (nombre) {
 			case 'autoridades':
 				router.push(
-					`/nosotros/autoridades-y-organos?tab=${slugify(
+					`/nosotros/director-y-coordinadores?tab=${slugify(
 						newActiveTab
 					)}`,
 					undefined,
@@ -59,7 +59,7 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 				break;
 			case 'transparencia':
 				router.push(
-					`/transparencia/?tab=${slugify(newActiveTab)}`,
+					`/nosotros/transparencia/?tab=${slugify(newActiveTab)}`,
 					undefined,
 					{
 						shallow: true,

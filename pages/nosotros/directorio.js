@@ -25,13 +25,18 @@ const Index = (
 	return (
 		<>
 			<PrincipalLayout>
-				<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-					<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+				<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+					<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 						<Link href="/">
 							<a>Inicio</a>
 						</Link>
 					</li>
-					<li className="inline text-negro">Directorio</li>
+					<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+						Nosotros
+					</li>
+					<li className="text-textColorOne font-bold inline">
+						<span>Directorio</span>
+					</li>
 				</ul>
 				<div className="mx-4 md:mx-0 col-span-full title-page mb-5 text-secondary">
 					Directorio
@@ -40,7 +45,7 @@ const Index = (
 					<div className="h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/directorio/directorio-facultad-quimica.jpg"
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/directorio-administracion-posgrado.jpg"
 							alt='Directorio "Facultad de Farmacia y Bioquímica"'
 							layout="responsive"
 							width={1022}

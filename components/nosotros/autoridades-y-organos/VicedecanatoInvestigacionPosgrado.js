@@ -30,10 +30,11 @@ const VicedecanatoInvestigacionPosgrado = () => {
 						Conoce más acerca de este órgano de autoridad ingresando
 						al{' '}
 						<a
-							className="link"
+							className="text-secondary"
 							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							Estatuto de la UNMSM
 						</a>
 						.
@@ -87,7 +88,8 @@ const VicedecanatoInvestigacionPosgrado = () => {
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 							href="https://cdn.www.gob.pe/uploads/document/file/3989201/R.R.%20003343-2021-R%20-vicedecano-investigacion-posgrado-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152819"
 							target={'_blank'}
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<span className="flex items-center justify-center">
 								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 								Resolución rectoral
@@ -100,7 +102,8 @@ const VicedecanatoInvestigacionPosgrado = () => {
 								window.open(
 									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=345'
 								)
-							}>
+							}
+						>
 							<span>
 								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 							</span>

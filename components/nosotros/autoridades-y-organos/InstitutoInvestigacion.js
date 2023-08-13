@@ -20,10 +20,11 @@ const InstitutoInvestigacion = () => {
 				a la investigación. Conoce más acerca de esta Unidad ingresando
 				al Manual de Organización y Funciones (
 				<a
-					className="text-primary"
+					className="text-secondary"
 					href="https://cdn.www.gob.pe/uploads/document/file/1979502/MOF%20de%20la%20Facultad%20de%20Educaci%C3%B3n..pdf?v=1624895867"
 					target="_blank"
-					rel="noopener noreferrer">
+					rel="noopener noreferrer"
+				>
 					MOF
 				</a>
 				).
@@ -78,7 +79,8 @@ const InstitutoInvestigacion = () => {
 								className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
 								href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=24333"
 								target={'_blank'}
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								<span className="flex items-center justify-center">
 									<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
 									Resolución rectoral
@@ -91,7 +93,8 @@ const InstitutoInvestigacion = () => {
 									window.open(
 										'https://cdn.www.gob.pe/uploads/document/file/4208051/10.%20R.R.%20Instituto%20de%20investigaciones%20Yolvi%20Oco%C3%B1a.pdf.pdf?v=1677765813'
 									)
-								}>
+								}
+							>
 								<span>
 									<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
 								</span>

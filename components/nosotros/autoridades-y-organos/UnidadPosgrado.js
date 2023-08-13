@@ -31,7 +31,7 @@ const UnidadPosgrado = () => {
 						Conoce más acerca de esta Unidad ingresando al Manual de
 						Organización y Funciones (
 						<a
-							className="link"
+							className="text-secondary"
 							href="https://cdn.www.gob.pe/uploads/document/file/1979591/MOF%20de%20la%20Facultad%20de%20Qu%C3%ADmica%20e%20Ingenier%C3%ADa%20Qu%C3%ADmica..pdf?v=1624896516"
 							target="_blank"
 							rel="noopener noreferrer"
