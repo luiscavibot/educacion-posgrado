@@ -32,7 +32,7 @@ const INITIAL_INPUTS = {
 	// anio: '',
 };
 
-const InfoAcadPosgrado = () => {
+const InfoAcademica = () => {
 	const debounceRef = useRef(null);
 	const [inputs, setInputs] = useState(INITIAL_INPUTS);
 	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
@@ -68,31 +68,29 @@ const InfoAcadPosgrado = () => {
 	return (
 		<>
 			<PrincipalLayout>
-				<ul className="px-4 md:px-0 col-span-full text-tertiary text-sm mb-5">
-					<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
+				<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+					<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 						<Link href="/">
 							<a>Inicio</a>
 						</Link>
 					</li>
-					{/* <li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
-						<Link href="/informacion-academica">
-							<a>Información académica</a>
-						</Link>
-					</li> */}
-					<li className="inline text-negro">
-						Información académica: Posgrado
+					<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+						Comunidad
+					</li>
+					<li className="text-textColorOne font-bold inline">
+						<span>Información académica</span>
 					</li>
 				</ul>
 				<div className="px-4 md:px-0 col-span-full mb-10">
-					<p className="title-page text-secondary mb-6">Posgrado</p>
+					<p className="title-page mb-6">Información académica</p>
 					<p>
 						Todo lo necesario para cursar el semestre con éxito está
 						aquí: horarios, planes de estudios, mallas curriculares,
 						syllabus, etc.
 					</p>
 				</div>
-				<div className="col-span-4 lg:col-span-3 2xl:col-span-2 px-4 mb-5">
-					<div className="bg-tertiary/10 rounded-lg p-6">
+				<div className="col-span-4 lg:col-span-3 2xl:col-span-2 px-4 md:px-0 mb-5">
+					<div className="bg-complementaryTwo rounded-lg p-6">
 						<p className="text-textColorOne font-bold">Programa</p>
 						<div
 							role="group"
@@ -100,9 +98,17 @@ const InfoAcadPosgrado = () => {
 							className="flex flex-col gap-y-1 mt-2 mb-8"
 						>
 							<InputCheckbox
-								label="Doctorado"
-								name="doctoradoCheck"
-								checked={inputs.programa.doctoradoCheck}
+								label="Todos"
+								name="todosCheck"
+								checked={inputs.programa.todosCheck}
+								onChange={(e) => {
+									handleCheck(e, 'programa');
+								}}
+							/>
+							<InputCheckbox
+								label="Diplomados"
+								name="diplomadosCheck"
+								checked={inputs.programa.diplomadosCheck}
 								onChange={(e) => {
 									handleCheck(e, 'programa');
 								}}
@@ -116,11 +122,17 @@ const InfoAcadPosgrado = () => {
 								}}
 							/>
 							<InputCheckbox
-								label="Segundas Especialidades"
-								name="segundasEspecialidadesCheck"
-								checked={
-									inputs.programa.segundasEspecialidadesCheck
-								}
+								label="Doctorado"
+								name="doctoradoCheck"
+								checked={inputs.programa.doctoradoCheck}
+								onChange={(e) => {
+									handleCheck(e, 'programa');
+								}}
+							/>
+							<InputCheckbox
+								label="Posdoctorado"
+								name="posdoctoradoCheck"
+								checked={inputs.programa.posdoctoradoCheck}
 								onChange={(e) => {
 									handleCheck(e, 'programa');
 								}}
@@ -133,6 +145,14 @@ const InfoAcadPosgrado = () => {
 							aria-labelledby="checkbox-group"
 							className="flex flex-col gap-y-1 mt-2 mb-8"
 						>
+							<InputCheckbox
+								label="Todos"
+								name="todosCheck"
+								checked={inputs.recurso.todosCheck}
+								onChange={(e) => {
+									handleCheck(e, 'recurso');
+								}}
+							/>
 							<InputCheckbox
 								label="Syllabus"
 								name="syllabusCheck"
@@ -204,7 +224,60 @@ const InfoAcadPosgrado = () => {
 						<Paginador controles={[page, setPage, totalPages]} />
 					</div>
 					<div className="mt-7">
-						{infoAcadPosgrado ? (
+						<a
+							key={`1`}
+							href={`#`}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="block mb-7"
+						>
+							<div className="mb-1">
+								<p className="text-textColorOne font-bold mr-2 inline-block">
+									Syllabus 2022-II | Maestría en Negocios
+									Internacionales con mención en Comercio
+									Internacional
+								</p>
+								<p className="inline-block">
+									<span className="text-xs text-textColorTwo/80 mr-1">
+										Entrada fijada
+									</span>
+									<span>
+										<EntradaFijaIcon className="fill-textColorTwo inline" />
+									</span>
+								</p>
+							</div>
+							<p className="text-textColorTwo">
+								Última actualización: 10 de noviembre de 2022
+							</p>
+						</a>
+						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
+						<a
+							key={`2`}
+							href={`#`}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="block mb-7"
+						>
+							<div className="mb-1">
+								<p className="text-textColorOne font-bold mr-2 inline-block">
+									Horarios 2021-II | Maestría en
+									Administración con mención en Dirección de
+									Recursos Humanos
+								</p>
+								{/* <p className="inline-block">
+									<span className="text-xs text-textColorTwo/80 mr-1">
+										Entrada fijada
+									</span>
+									<span>
+										<EntradaFijaIcon className="fill-textColorTwo inline" />
+									</span>
+								</p> */}
+							</div>
+							<p className="text-textColorTwo">
+								Última actualización: 10 de noviembre de 2022
+							</p>
+						</a>
+						{/* {infoAcadPosgrado ? (
 							infoAcadPosgrado.length > 0 ? (
 								infoAcadPosgrado
 									.filter(
@@ -246,7 +319,7 @@ const InfoAcadPosgrado = () => {
 										).length > 0 ? (
 											<div
 												key="divider"
-												className="bg-complementaryOne rounded-lg w-full h-[2px] mb-7"
+												className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"
 											/>
 										) : (
 											''
@@ -285,7 +358,7 @@ const InfoAcadPosgrado = () => {
 							<div className=" mt-10 flex justify-center items-center">
 								<Cargando />
 							</div>
-						)}
+						)} */}
 					</div>
 				</div>
 			</PrincipalLayout>
@@ -293,4 +366,4 @@ const InfoAcadPosgrado = () => {
 	);
 };
 
-export default InfoAcadPosgrado;
+export default InfoAcademica;

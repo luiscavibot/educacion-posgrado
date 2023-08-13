@@ -126,7 +126,7 @@ const PortadaHome = ({ eventos }) => {
 					<div className="container mx-auto flex justify-between">
 						<div className="md:flex hidden text-blanco">
 							<nav>
-								<ul className="flex items-center gap-7 text-xs font-bold">
+								<ul className="flex items-center gap-7 text-base font-bold">
 									<li>
 										<Link
 											href={`/admision?programa=maestria`}
@@ -165,7 +165,7 @@ const PortadaHome = ({ eventos }) => {
 						</div>
 						<div className="text-blanco">
 							<nav>
-								<ul className="flex items-center gap-7 text-xs font-bold">
+								<ul className="flex items-center gap-7 text-base font-bold">
 									<li>Trámites</li>
 									<li>Intranet</li>
 								</ul>
