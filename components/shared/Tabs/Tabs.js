@@ -30,7 +30,7 @@ const Tabs = ({ children, nombre, carrera }) => {
 		switch (nombre) {
 			case 'autoridades':
 				router.push(
-					`/nosotros/autoridades-y-organos?tab=${slugify(
+					`/nosotros/director-y-coordinadores?tab=${slugify(
 						newActiveTab
 					)}`,
 					undefined,
