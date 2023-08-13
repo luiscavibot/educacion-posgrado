@@ -24,28 +24,30 @@ import DuracionIcon from '../../components/icons/DuracionIcon';
 import { SiGoogleclassroom } from 'react-icons/si';
 import Observacion from '../../components/shared/Observacion';
 
-const Programa = ({
-	programa,
-	coordinadores,
-	ultimasNoticias,
-	asignaturas,
-}) => {
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/formacion-academica/posgrado/${programa[0].attributes.slug}`;
-	const metaTags = {
-		title: programa[0].nombre,
-		description: programa[0].presentacion,
-		ogUrl,
-		ogType: 'website',
-		ogTitle: programa[0].nombre,
-		ogImage: programa[0].foto,
-		ogDescription: programa[0].presentacion,
-	};
+const Programa = (
+	{
+		// programa,
+		// coordinadores,
+		// ultimasNoticias,
+		// asignaturas,
+	}
+) => {
+	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/formacion-academica/posgrado/${programa[0].attributes.slug}`;
+	// const metaTags = {
+	// 	title: programa[0].nombre,
+	// 	description: programa[0].presentacion,
+	// 	ogUrl,
+	// 	ogType: 'website',
+	// 	ogTitle: programa[0].nombre,
+	// 	ogImage: programa[0].foto,
+	// 	ogDescription: programa[0].presentacion,
+	// };
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
 	return (
-		<PrincipalLayout metaTags={metaTags}>
+		<PrincipalLayout>
 			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
 				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/">
@@ -56,20 +58,17 @@ const Programa = ({
 					Programas
 				</li>
 				<li className="text-textColorOne font-bold inline">
-					<span>Doctorado en Ciencias Administrativas</span>
+					<span>Posdoctorado en Administración</span>
 				</li>
 			</ul>
 			<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
-				<span>Doctorado en Ciencias Administrativas</span>
+				<span>Posdoctorado en Administración</span>
 			</div>
 			<div className="col-span-full mb-5 ">
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
 						src={
-							programa[0].attributes.imagen.data[0].attributes.url
-								? programa[0].attributes.imagen.data[0]
-										.attributes.url
-								: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
+							'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/postdoctorado-ciencias-administrativas.jpg'
 						}
 						layout="responsive"
 						width={1343}
@@ -203,118 +202,85 @@ const Programa = ({
 								<div className="mb-6">
 									<Observacion label="¿Qué es un posdoctorado?">
 										<p>
-											Un posdoctorado es una mención, no
+											Un Posdoctorado es una mención, no
 											un grado académico, por tanto, no es
 											un estudio superior al doctorado.
 										</p>
 									</Observacion>
 								</div>
-
-								{programa[0].attributes.descripcion && (
-									<>
-										<div className="mb-6">
-											<p>
-												{
-													programa[0].attributes
-														.descripcion
-												}
-											</p>
-										</div>
-									</>
-								)}
-
-								{programa[0].attributes.perfil_ingresante && (
-									<>
-										<div className="mb-6">
-											<div className="subtitle mb-2">
-												Perfil del ingresante:
-											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_ingresante
-												}
-											</p>
-										</div>
-									</>
-								)}
-
-								{programa[0].attributes.perfil_egresado && (
-									<>
-										<div className="mb-6">
-											<div className="subtitle mb-2">
-												Perfil del graduado:
-											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_egresado
-												}
-											</p>
-										</div>
-									</>
-								)}
-
-								{programa[0].attributes.campo_laboral &&
-									programa[0].attributes.campo_laboral
-										.length > 0 && (
-										<>
-											<div className="mb-6">
-												<div className="subtitle mb-2">
-													Campo laboral:
-												</div>
-												<ul className="list-disc list-inside">
-													{programa[0].attributes.campo_laboral.map(
-														(item, index) => (
-															<li
-																key={index}
-																className="mb-2"
-																dangerouslySetInnerHTML={{
-																	__html: `${item.texto}`,
-																}}
-															></li>
-														)
-													)}
-												</ul>
-											</div>
-										</>
-									)}
-
-								{programa[0].attributes
-									.porqueEstudiarConNosotros && (
-									<>
-										<div className="mb-6">
-											<div className="subtitle mb-2">
-												¿Por qué estudiar con nosotros?
-											</div>
-											<p>
-												{
-													programa[0].attributes
-														.porqueEstudiarConNosotros
-												}
-											</p>
-										</div>
-									</>
-								)}
-
-								{programa[0].attributes.objetivos && (
-									<>
-										<div className="mb-6">
-											<div className="subtitle mb-2">
-												Objetivos:
-											</div>
-											<p>
-												{
-													programa[0].attributes
-														.objetivos
-												}
-											</p>
-										</div>
-									</>
-								)}
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										¿Qué es un posdoctorado?
+									</div>
+									<p>
+										La Facultad de Ciencias Administrativas
+										(FCA) en coordinaci&oacute;n con la
+										Universidad de Buenos Aires (UBA)
+										ofrecer&aacute; el primer posdoctorado
+										en Administraci&oacute;n
+										convirti&eacute;ndose as&iacute;, en la
+										primera facultad de la Universidad
+										Nacional Mayor de San Marcos en otorgar
+										esta menci&oacute;n. El doctor Ricardo
+										Pahlen Acu&ntilde;a, decano de la
+										Facultad de Ciencias Econ&oacute;micas
+										de la UBA, ser&aacute; el director
+										general de este programa. Mientras que
+										la direcci&oacute;n acad&eacute;mica y
+										administrativa estar&aacute; a cargo del
+										doctor Iv&aacute;n Vivanco Aquino,
+										Coordinador del programa de doctorado de
+										la Unidad de Posgrado de la FCA. Los
+										perfiles, criterios, malla curricular,
+										as&iacute; como aspectos
+										acad&eacute;micos y administrativos, se
+										trabajar&aacute;n de manera coordinada
+										con nuestros pares de la
+										UBA.&iexcl;&Uacute;nete a la vanguardia
+										del conocimiento y contribuye en el
+										campo acad&eacute;mico de las ciencias
+										administrativas!
+									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										Dirigido a:
+									</div>
+									<p>
+										Doctores en administración y carreras
+										afines.
+									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										Nuestro objetivo:
+									</div>
+									<p>
+										Mejorar las capacidades de los
+										profesionales en investigación bajo la
+										mentoría de un experto en el área, que
+										posee una amplia experiencia en el campo
+										de la investigación científica.
+									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										¿Por qué hacer un posdoctorado?
+									</div>
+									<p>
+										Tendrás la oportunidad de crear un
+										artículo de investigación de alto
+										impacto, el cual será publicado en
+										revistas indexadas o libros promovidos
+										por universidades que cuentan con el
+										juicio académico de pares ciegos
+										internacionales, quienes dan validez a
+										tales textos o artículos.
+									</p>
+								</div>
 							</div>
 							<div className="col-span-full md:col-span-2">
-								{coordinadores && coordinadores.length > 0 && (
+								{/* {coordinadores && coordinadores.length > 0 && (
 									<>
 										<div className="mb-5">
 											<p className="mb-1 text-tertiary">
@@ -346,7 +312,7 @@ const Programa = ({
 										</div>
 										<div className="h-[2px] bg-tertiary/20 mb-5" />
 									</>
-								)}
+								)} */}
 								<div className="mb-5">
 									<p className="mb-1 text-tertiary">
 										<span className="font-black">
@@ -405,12 +371,15 @@ const Programa = ({
 							</div>
 						</div>
 					</div>
-					<div label="Admisión" link="/admision"></div>
 					<div
+						label="Admisión"
+						link="/admision?programa=posdoctorado"
+					></div>
+					{/* <div
 						label="Plana docente"
 						link="/comunidad/plana-docente"
-					></div>
-					<div label="Malla curricular">
+					></div> */}
+					{/* <div label="Malla curricular">
 						<MallaCurricular
 							asignaturas={asignaturas}
 							tipo={programa[1].tipo}
@@ -424,7 +393,7 @@ const Programa = ({
 					<div
 						label="Seguimiento de egresados"
 						link="/comunidad/seguimiento-egresados"
-					></div>
+					></div> */}
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14 max-md:px-4">
@@ -588,64 +557,64 @@ const Programa = ({
 	);
 };
 
-export async function getStaticProps({ params }) {
-	const str = 'doctorado-ingenieria-quimica';
-	const cadena = str.split('-');
-	const primeraPalabra = cadena[0];
-	const resto = cadena.slice(1).join('-');
+// export async function getStaticProps({ params }) {
+// 	const str = 'doctorado-ingenieria-quimica';
+// 	const cadena = str.split('-');
+// 	const primeraPalabra = cadena[0];
+// 	const resto = cadena.slice(1).join('-');
 
-	// la variable primeraPalabra segun el params puede tomar los valores de 'doctorado' o 'maestria'
-	const resProgram = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate=*&filters[slug][$eq]=${resto}`
-	);
-	const program = (await resProgram.json()).data;
-	program.push({
-		tipo: primeraPalabra,
-	});
+// 	// la variable primeraPalabra segun el params puede tomar los valores de 'doctorado' o 'maestria'
+// 	const resProgram = await fetch(
+// 		`${POSGRADO_URL}/${primeraPalabra}s?populate=*&filters[slug][$eq]=${resto}`
+// 	);
+// 	const program = (await resProgram.json()).data;
+// 	program.push({
+// 		tipo: primeraPalabra,
+// 	});
 
-	const programa = [];
+// 	const programa = [];
 
-	programa.push(...program);
-	const resCoordinadores = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
-	);
-	const preCoordinadoresProgram = await resCoordinadores.json();
+// 	programa.push(...program);
+// 	const resCoordinadores = await fetch(
+// 		`${POSGRADO_URL}/${primeraPalabra}s?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
+// 	);
+// 	const preCoordinadoresProgram = await resCoordinadores.json();
 
-	const preCoordinadores = [];
-	preCoordinadores.push(...preCoordinadoresProgram.data);
+// 	const preCoordinadores = [];
+// 	preCoordinadores.push(...preCoordinadoresProgram.data);
 
-	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
+// 	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
 
-	const resDocentes = await fetch(
-		`${POSGRADO_URL}/docentes?filters[${primeraPalabra}s][slug]=${resto}&populate=facultad,foto,libro,articulo`
-	);
-	const docentesProgram = await resDocentes.json();
+// 	const resDocentes = await fetch(
+// 		`${POSGRADO_URL}/docentes?filters[${primeraPalabra}s][slug]=${resto}&populate=facultad,foto,libro,articulo`
+// 	);
+// 	const docentesProgram = await resDocentes.json();
 
-	const docentes = [];
-	docentes.push(...docentesProgram.data);
+// 	const docentes = [];
+// 	docentes.push(...docentesProgram.data);
 
-	const resNoticias = await fetch(
-		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-	);
-	const ultimasNoticias = await resNoticias.json();
+// 	const resNoticias = await fetch(
+// 		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
+// 	);
+// 	const ultimasNoticias = await resNoticias.json();
 
-	const resAsignaturas = await fetch(
-		`${POSGRADO_URL}/asignaturas?filters[${primeraPalabra}s][slug]=${resto}`
-	);
+// 	const resAsignaturas = await fetch(
+// 		`${POSGRADO_URL}/asignaturas?filters[${primeraPalabra}s][slug]=${resto}`
+// 	);
 
-	const asignaturasProgram = await resAsignaturas.json();
+// 	const asignaturasProgram = await resAsignaturas.json();
 
-	const asignaturas = [];
-	asignaturas.push(...asignaturasProgram.data);
+// 	const asignaturas = [];
+// 	asignaturas.push(...asignaturasProgram.data);
 
-	return {
-		props: {
-			programa,
-			coordinadores,
-			ultimasNoticias,
-			asignaturas,
-		},
-	};
-}
+// 	return {
+// 		props: {
+// 			programa,
+// 			coordinadores,
+// 			ultimasNoticias,
+// 			asignaturas,
+// 		},
+// 	};
+// }
 
 export default Programa;

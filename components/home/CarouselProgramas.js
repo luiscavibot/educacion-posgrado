@@ -16,6 +16,19 @@ import SwiperButtonNext from './swiper/SwiperButtonNext';
 import SwiperButtonPrev from './swiper/SwiperButtonPrev';
 
 export default function CarouselProgramas({ programas }) {
+	const getUrl = (tipo, slug) => {
+		switch (tipo) {
+			case 'MAESTRIA':
+				return `/programas/maestrias/${slug}`;
+			case 'DOCTORADO':
+				return `/programas/maestrias/${slug}`;
+			case 'DIPLOMATURA':
+				return `/programas/maestrias/${slug}`;
+			default:
+				return '#';
+		}
+	};
+
 	return (
 		<>
 			<Swiper
@@ -39,13 +52,7 @@ export default function CarouselProgramas({ programas }) {
 			>
 				{programas.map((programa) => (
 					<SwiperSlide key={programa.slug}>
-						<Link
-							href={
-								programa.tipo === 'Maestrías'
-									? `/maestrias/${programa.slug}`
-									: `/doctorados/${programa.slug}`
-							}
-						>
+						<Link href={getUrl(programa.tipo, programa.slug)}>
 							<a className="card program-box hover:-translate-y-2">
 								<div className="relative">
 									<Image

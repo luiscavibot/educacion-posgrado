@@ -199,7 +199,7 @@ export async function getServerSideProps({ params }) {
 	const noticia = await resNoticia.json();
 	console.log('noticias->', noticia);
 	const resNoticiasRelacionadas = await fetch(
-		`${BACKEND}/noticias/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}/ultimas?id=${noticia[0].id}`
+		`${BACKEND}/agenda-publica/ultimas?id=${noticia[0].id}`
 	);
 	const noticiasRelacionadas = await resNoticiasRelacionadas.json();
 

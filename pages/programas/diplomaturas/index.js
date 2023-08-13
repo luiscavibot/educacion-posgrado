@@ -59,7 +59,7 @@ const Index = () => {
 								programas.map((programa) => (
 									<Link
 										key={programa.slug}
-										href={`/programas/maestrias/doctorado-ingenieria-quimica`}
+										href={`/programas/diplomaturas/${programa.slug}`}
 									>
 										<a className="group card md:max-w-[290px]">
 											<div className="relative h-[168px]">
@@ -71,7 +71,7 @@ const Index = () => {
 													src={programa.miniHomeImg}
 												/>
 												<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-													{programa.modalidad}
+													virtual
 												</div>
 											</div>
 											<div className="text-content text-textColorOne group-hover:text-secondary">

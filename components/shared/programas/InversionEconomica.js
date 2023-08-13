@@ -2,11 +2,37 @@ import React from 'react';
 import Link from 'next/link';
 import Observacion from '../Observacion';
 
-export const InversionEconomica = ({ programa }) => {
-	const duracion = programa[0].attributes.duracion;
-	const costos = programa[0].attributes.costo_total;
-	const admisiones = programa[0].attributes.admision;
-	const costos_credito = programa[0].attributes.costo_credito;
+export const InversionEconomica = ({
+	inversion,
+	tipoPrograma = 'MAESTRIA',
+}) => {
+	console.log(tipoPrograma);
+	const duracion = inversion?.duracion;
+	const costos = inversion?.costos;
+	const admisiones = inversion?.admisiones;
+	const matricula = inversion?.matricula;
+	const costos_credito = inversion?.costos_credito;
+	const getPathTipoPrograma = () => {
+		const result = '';
+		switch (tipoPrograma) {
+			case 'MAESTRIA':
+				result = 'maestria';
+				break;
+			case 'DIPLOMATURA':
+				result = 'diplomatura';
+				break;
+			case 'DOCTORADO':
+				result = 'doctorado';
+				break;
+			case 'POSDOCTORADO':
+				result = 'posdoctorado';
+				break;
+			default:
+				break;
+		}
+		return result;
+	};
+	// const costos_credito = inversion.costo_credito;
 
 	return (
 		<div className="grid grid-cols-8">
@@ -24,7 +50,8 @@ export const InversionEconomica = ({ programa }) => {
 				<div className="mb-8">
 					<div className="mb-[18px]">
 						<p className="subtitle mb-4">
-							1. Presupuesto de estudios
+							&gt; Presupuesto de estudios por ciclo académico
+							{tipoPrograma !== 'MAESTRIA' && '*'}
 						</p>
 						<ul className="list-disc list-inside mb-4">
 							{costos.map((costo) => {
@@ -38,6 +65,26 @@ export const InversionEconomica = ({ programa }) => {
 								);
 							})}
 						</ul>
+						{(tipoPrograma === 'DIPLOMATURA' ||
+							tipoPrograma === 'DIPLOMATURA') && (
+							<i className="font">
+								*Los costos señalados como pagos para
+								mensualidad o ciclo académico completo
+								corresponden a una matrícula regular de 4 cursos
+								(18 créditos)
+							</i>
+						)}
+						{(tipoPrograma === 'DOCTORADO' ||
+							tipoPrograma === 'DOCTORADO') && (
+							<i className="font">
+								*Los costos señalados como montos de mensualidad
+								o ciclo completo corresponden a una matrícula
+								regular de 15 créditos (I Ciclo), 14 créditos
+								(II Ciclo), 17 créditos (III Ciclo), 16 créditos
+								(IV Ciclo), 14 créditos (V Ciclo) o 20 créditos
+								(VI Ciclo).
+							</i>
+						)}
 						{/* <div className="bg-gris px-6 py-4 rounded-lg">
 							Más información sobre los conceptos y lugares de
 							pago{' '}
@@ -51,36 +98,76 @@ export const InversionEconomica = ({ programa }) => {
 						</div> */}
 					</div>
 				</div>
-				<div className="mb-8">
-					<div className="mb-[18px]">
-						<p className="subtitle mb-4">2. Admisión:</p>
-						<ul className="list-disc list-inside mb-4">
-							{admisiones.map((admision) => {
-								return (
-									<li key={admision.texto} className="mb-1">
-										{admision.texto}{' '}
-										<span className="font-bold">
-											{admision.precio}
-										</span>
-									</li>
-								);
-							})}
-						</ul>
-						<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
-							Más información sobre los conceptos y lugares de
-							pago{' '}
-							<Link href="/formacion-academica/admision?posgrado&tab=inversion">
-								<a className="font-bold text-secondary">
-									aquí.
-								</a>
-							</Link>
+				{admisiones?.length > 0 && (
+					<div className="mb-8">
+						<div className="mb-[18px]">
+							<p className="subtitle mb-4">&gt; Admisión:</p>
+							<ul className="list-disc list-inside mb-4">
+								{admisiones.map((admision) => {
+									return (
+										<li
+											key={admision.texto}
+											className="mb-1"
+										>
+											{admision.texto}{' '}
+											<span className="font-bold">
+												{admision.precio}
+											</span>
+										</li>
+									);
+								})}
+							</ul>
+							<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
+								Más información sobre los conceptos y lugares de
+								pago{' '}
+								<Link
+									href={`/admision?programa=${getPathTipoPrograma()}&tab=inversion`}
+								>
+									<a className="font-bold text-secondary">
+										aquí.
+									</a>
+								</Link>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="mb-8">
+				)}
+				{matricula?.length > 0 && (
+					<div className="mb-8">
+						<div className="mb-[18px]">
+							<p className="subtitle mb-4">&gt; Matrícula:</p>
+							<ul className="list-disc list-inside mb-4">
+								{matricula.map((admision) => {
+									return (
+										<li
+											key={admision.texto}
+											className="mb-1"
+										>
+											{admision.texto}{' '}
+											<span className="font-bold">
+												{admision.precio}
+											</span>
+										</li>
+									);
+								})}
+							</ul>
+							<div className="bg-complementaryOne/[0.5] px-6 py-4 rounded-lg">
+								Más información sobre los conceptos y lugares de
+								pago{' '}
+								<Link
+									href={`/admision?programa=${getPathTipoPrograma()}&tab=inversion`}
+								>
+									<a className="font-bold text-secondary">
+										aquí.
+									</a>
+								</Link>
+							</div>
+						</div>
+					</div>
+				)}
+				{/* <div className="mb-8">
 					<div className="mb-[18px]">
 						<p className="subtitle mb-4">3. Matrícula</p>
-						{programa[0].attributes.matricula ? (
+						{matricula ? (
 							<ul
 								className="list-disc list-inside default-programa"
 								dangerouslySetInnerHTML={{
@@ -95,38 +182,42 @@ export const InversionEconomica = ({ programa }) => {
 							</em>
 						</p>
 					</div>
-				</div>
+				</div> */}
+				{costos_credito?.length > 0 && (
+					<div className="mb-8">
+						<p className="subtitle mb-4">
+							&gt; Costo por crédito académico:
+						</p>
+						<p className="mb-4">
+							Los cursos del programa tienen un valor en créditos.
+							Sobre la base del número de créditos matriculados,
+							se determina el pago de un alumno por ciclo.
+						</p>
+						<ul className="list-disc list-inside">
+							{costos_credito.map((costo_credito) => {
+								return (
+									<li
+										key={costo_credito.texto}
+										className="mb-1"
+									>
+										{costo_credito.texto}{' '}
+										<span className="font-bold">
+											{costo_credito.precio}
+										</span>
+									</li>
+								);
+							})}
+						</ul>
+						{/* <p className="font-medium text-sm mt-4">
+							<em>
+								* Los costos corresponden al proceso de admisión
+								2023, sujetos a variaciones.
+							</em>
+						</p> */}
+					</div>
+				)}
 
-				<div className="mb-8">
-					<p className="subtitle mb-4">
-						4. Costo por crédito académico:
-					</p>
-					<p className="mb-4">
-						Los cursos del programa tienen un valor en créditos.
-						Sobre la base del número de créditos matriculados, se
-						determina el pago de un alumno por ciclo.
-					</p>
-					<ul className="list-disc list-inside">
-						{costos_credito.map((costo_credito) => {
-							return (
-								<li key={costo_credito.texto} className="mb-1">
-									{costo_credito.texto}{' '}
-									<span className="font-bold">
-										{costo_credito.precio}
-									</span>
-								</li>
-							);
-						})}
-					</ul>
-					<p className="font-medium text-sm mt-4">
-						<em>
-							* Los costos corresponden al proceso de admisión
-							2020, sujetos a variaciones.
-						</em>
-					</p>
-				</div>
-
-				<div className="mb-8">
+				{/* <div className="mb-8">
 					{programa[0].attributes.costo_semestre ? (
 						<>
 							<p className="subtitle mb-6">
@@ -167,7 +258,7 @@ export const InversionEconomica = ({ programa }) => {
 							}}
 						></ul>
 					) : null}
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

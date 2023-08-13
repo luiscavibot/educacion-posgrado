@@ -16,38 +16,65 @@ import InputText from '../../../components/shared/InputText';
 import Paginador from '../../../components/shared/Paginador';
 import InputCheckbox from '../../../components/shared/InputCheckbox';
 import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
+import InputRadioButton from '../../../components/shared/InputRadioButton';
+import useActividadCientifica from '../../../hooks/useActividadCientifica';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
 };
+const radioOptions = [
+	{ value: 'ARTICULOSCIENTIFICOS', label: 'Artículos científicos' },
+	{ value: 'ARTICULOSREVISION', label: 'Artículos de revisión' },
+	{ value: 'TESIS', label: 'Tesis' },
+	{ value: 'DOCENTESASESORES', label: 'Docentes asesores' },
+	{
+		value: 'SUSTENTACIONESVIRTUALES',
+		label: 'Sustentaciones virtuales',
+	},
+	{ value: 'LIBROS', label: 'Libros' },
+	{
+		value: 'INVESTIGACIONESDOCTORADO',
+		label: 'Investigaciones de Doctorado',
+	},
+];
 
+function createMarkup(dom) {
+	return { __html: dom };
+}
 const ActividadCientifica = () => {
-	const debounceRef = useRef(null);
-	const [inputs, setInputs] = useState(INITIAL_INPUTS);
-	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
-	const { comunicados, setPage, page, totalPages } =
-		useComunicados(searchParams);
+	const [selectedOption, setSelectedOption] = useState(radioOptions[0].value);
 
-	const handleChange = (e) => {
-		setPage(0);
-		setInputs({
-			...inputs,
-			keyWords: e.target.value,
-		});
-		if (debounceRef.current) clearTimeout(debounceRef.current);
-		debounceRef.current = setTimeout(() => {
-			setSearchParams({
-				...searchParams,
-				keyWords: e.target.value,
-			});
-		}, 500);
+	const handleRadioChange = (event) => {
+		setSelectedOption(event.target.value);
 	};
+	const { actividadesCientificas, isLoading } =
+		useActividadCientifica(selectedOption);
+	// const debounceRef = useRef(null);
+	// const [inputs, setInputs] = useState(INITIAL_INPUTS);
+	// const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
+	// const { comunicados, setPage, page, totalPages } =
+	// 	useComunicados(searchParams);
 
-	const handleCheck = (e) => {
-		setPage(0);
-		setSearchParams({ ...inputs, [e.target.name]: e.target.checked });
-		setInputs({ ...inputs, [e.target.name]: e.target.checked });
-	};
+	// const handleChange = (e) => {
+	// 	setPage(0);
+	// 	setInputs({
+	// 		...inputs,
+	// 		keyWords: e.target.value,
+	// 	});
+	// 	if (debounceRef.current) clearTimeout(debounceRef.current);
+	// 	debounceRef.current = setTimeout(() => {
+	// 		setSearchParams({
+	// 			...searchParams,
+	// 			keyWords: e.target.value,
+	// 		});
+	// 	}, 500);
+	// };
+
+	// const handleCheck = (e) => {
+	// 	setPage(0);
+	// 	setSearchParams({ ...inputs, [e.target.name]: e.target.checked });
+	// 	setInputs({ ...inputs, [e.target.name]: e.target.checked });
+	// };
 
 	return (
 		<>
@@ -74,59 +101,16 @@ const ActividadCientifica = () => {
 				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 md:px-0 mb-5">
 					<div className="bg-complementaryTwo rounded-lg p-6">
 						<p className="text-textColorOne font-bold">Tipo:</p>
-
-						<div
-							role="group"
-							aria-labelledby="checkbox-group"
-							className="flex flex-col gap-y-1 mt-2"
-						>
-							<InputCheckbox
-								label="Artículos científicos"
-								name="articulosCientificosCheck"
-								checked={inputs.articulosCientificosCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Artículos de revisión"
-								name="articulosRevisionCheck"
-								checked={inputs.articulosRevisionCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Tesis"
-								name="tesisCheck"
-								checked={inputs.tesisCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Docentes asesores"
-								name="docentesAsesoresCheck"
-								checked={inputs.docentesAsesoresCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Sustentaciones virtuales"
-								name="sustentacionesVirtualesCheck"
-								checked={inputs.sustentacionesVirtualesCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Libros"
-								name="librosCheck"
-								checked={inputs.librosCheck}
-								onChange={handleCheck}
-							/>
-							<InputCheckbox
-								label="Investigaciones de Doctorado"
-								name="investigacionesDoctoradoCheck"
-								checked={inputs.investigacionesDoctoradoCheck}
-								onChange={handleCheck}
-							/>
-						</div>
+						<InputRadioButton
+							name="Tipo"
+							options={radioOptions}
+							value={selectedOption}
+							onChange={handleRadioChange}
+						/>
 					</div>
 				</div>
 				<div className="col-span-8 lg:col-span-9 xl:col-span-10 px-4 mb-6 md:px-0">
-					<div className="px-4 md:px-0 col-span-full mb-5">
+					{/* <div className="px-4 md:px-0 col-span-full mb-5">
 						<div className="flex justify-between">
 							<InputText
 								value={inputs.keyWords}
@@ -141,66 +125,64 @@ const ActividadCientifica = () => {
 								controles={[page, setPage, totalPages]}
 							/>
 						</div>
-					</div>
+					</div> */}
 					<div className="px-4 md:px-0 col-span-full mb-20">
-						<Link
-							key={`1`}
-							href={`#`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<a
-								key={`1`}
-								className="group min-h-[190px] md:min-h-[200px] animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105"
-							>
-								<div className="relative w-full max-w-[188px] hidden md:block">
-									<Image
-										layout="fill"
-										objectFit="cover"
-										src={
-											'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-										}
-									/>
-								</div>
-								<div className="flex flex-col gap-2 basis-12/12 md:basis-9/12 px-5 py-3 relative">
-									<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
-										<BiTimeFive />
-										<p className="ml-1">
-											{/* {getFecha(noticia.fecha)} */}
-											20 de junio de 2023
-										</p>
-									</div>
-									<div className="mt-[6px] md:mt-0 order-1 md:order-2">
-										<p className="text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
-											Una mirada internacional al Mercado
-											de valores peruano
-										</p>
-										<div>
-											<p className="line-clamp-4 mb-2">
-												La primera edición de Crítica y
-												Acción, revista nacional e
-												internacional de reflexión,
-												debate y propuestas del campo de
-												la sociología y áreas afines.La
-												primera edición de Crítica y
-												Acción, revista nacional e
-												internacional de reflexión,
-												debate y propuestas del campo de
-												la sociología y áreas afines.
-											</p>
-											{/* <span className="text-secondary font-bold">
+						{!isLoading && actividadesCientificas.length === 0 && (
+							<p>No hay resultados</p>
+						)}
+						{actividadesCientificas.length > 0 &&
+							actividadesCientificas.map((actividad) => (
+								<Link
+									key={actividad.slug}
+									href={`#`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<a
+										key={`1`}
+										className="group min-h-[190px] md:min-h-[200px] animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105"
+									>
+										<div className="relative w-full max-w-[188px] hidden md:block">
+											<Image
+												layout="fill"
+												objectFit="cover"
+												src={actividad.foto}
+											/>
+										</div>
+										<div className="flex flex-col gap-2 basis-12/12 md:basis-9/12 px-5 py-3 relative">
+											<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
+												<BiTimeFive />
+												<p className="ml-1">
+													{/* {getFecha(noticia.fecha)} */}
+													20 de junio de 2023
+												</p>
+											</div>
+											<div className="mt-[6px] md:mt-0 order-1 md:order-2">
+												<p className="text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
+													{actividad.nombre}
+												</p>
+												<div>
+													<p
+														className="line-clamp-4 mb-2"
+														dangerouslySetInnerHTML={createMarkup(
+															actividad.resumen
+														)}
+													/>
+													{/* <span className="text-secondary font-bold">
 												{' '}
 												Leer más
 											</span> */}
+												</div>
+											</div>
+											<p className="text-tertiary text-sm absolute bottom-3 left-5">
+												Anthony Ramirez
+											</p>
 										</div>
-									</div>
-									<p className="text-tertiary text-sm absolute bottom-3 left-5">
-										Anthony Ramirez
-									</p>
-								</div>
-							</a>
-						</Link>
-						<div className="mb-8">
+									</a>
+								</Link>
+							))}
+						{/* registro de docentes */}
+						{/* <div className="mb-8">
 							<p className="text-textColorOne font-bold mb-1">
 								Dr. Victor Chalco Flores
 							</p>
@@ -221,7 +203,7 @@ const ActividadCientifica = () => {
 									Industria, innovación e infraestructura
 								</li>
 							</ul>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</PrincipalLayout>

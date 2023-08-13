@@ -10,33 +10,26 @@ import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../SharedComponent';
 import Boton from '../../Boton';
 
-export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
+export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
-	const asignaturasElectivo = getElectivosPosgrado(asignaturas);
 
 	const totalCreditos = (asignaturas, semestre) => {
 		let total = 0;
 		asignaturas
-			.filter(
-				(asignatura) =>
-					asignatura.attributes.semestre === semestre &&
-					asignatura.attributes.tipo === 'normal'
-			)
+			.filter((asignatura) => asignatura.semestre === semestre)
 			.forEach((asignatura) => {
-				total += asignatura.attributes.credito;
+				total += asignatura.credito;
 			});
 		return total;
 	};
 
-	const totalCreditosElectivos = (asignaturas) => {
+	const totalCreditosElectivos = (electivos) => {
 		let total = 0;
-		asignaturas
-			.filter((asignatura) => asignatura.attributes.tipo === 'electivo')
-			.forEach((asignatura) => {
-				total += asignatura.attributes.credito;
-			});
+		electivos.forEach((asignatura) => {
+			total += asignatura.credito;
+		});
 		return total;
 	};
 
@@ -68,29 +61,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'primero'
+											asignatura.semestre === 'primero'
 									)
 									.map((asignatura) => {
 										// totalCreditos1 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -125,29 +105,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'segundo'
+											asignatura.semestre === 'segundo'
 									)
 									.map((asignatura) => {
 										// totalCreditos2 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -192,29 +159,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'tercero'
+											asignatura.semestre === 'tercero'
 									)
 									.map((asignatura) => {
 										// totalCreditos1 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -249,29 +203,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'cuarto'
+											asignatura.semestre === 'cuarto'
 									)
 									.map((asignatura) => {
 										// totalCreditos2 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -295,7 +236,7 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 			render: () => (
 				<Tab.Pane attached={false}>
 					<div className="overflow-x-auto mb-2">
-						{asignaturasElectivo.lenght > 0 ? (
+						{electivos?.length > 0 ? (
 							<table className="table table-striped mb-4">
 								<thead>
 									<tr>
@@ -306,38 +247,24 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 									</tr>
 								</thead>
 								<tbody>
-									{asignaturasElectivo.map((asignatura) => {
+									{electivos.map((asignatura) => {
 										// totalCreditos3 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
 									})}
-									{/* <tr key="total">
+									<tr key="total">
 										<td>Total de créditos</td>
 										<td className="text-center">
-											{totalCreditosElectivos(
-												asignaturas
-											)}
+											{totalCreditosElectivos(electivos)}
 										</td>
-									</tr> */}
+									</tr>
 								</tbody>
 							</table>
 						) : (
@@ -380,29 +307,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'primero'
+											asignatura.semestre === 'primero'
 									)
 									.map((asignatura) => {
 										// totalCreditos1 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -437,29 +351,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'segundo'
+											asignatura.semestre === 'segundo'
 									)
 									.map((asignatura) => {
 										// totalCreditos2 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -504,29 +405,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'tercero'
+											asignatura.semestre === 'tercero'
 									)
 									.map((asignatura) => {
 										// totalCreditos1 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -561,29 +449,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'cuarto'
+											asignatura.semestre === 'cuarto'
 									)
 									.map((asignatura) => {
 										// totalCreditos2 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -628,29 +503,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'quinto'
+											asignatura.semestre === 'quinto'
 									)
 									.map((asignatura) => {
 										// totalCreditos1 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -685,29 +547,16 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								{asignaturas
 									.filter(
 										(asignatura) =>
-											asignatura.attributes.semestre ===
-											'sexto'
+											asignatura.semestre === 'sexto'
 									)
 									.map((asignatura) => {
 										// totalCreditos2 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -731,7 +580,7 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 			render: () => (
 				<Tab.Pane attached={false}>
 					<div className="overflow-x-auto mb-2">
-						{asignaturasElectivo.lenght > 0 ? (
+						{asignaturasElectivo?.length > 0 ? (
 							<table className="table table-striped mb-4">
 								<thead>
 									<tr>
@@ -744,24 +593,12 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								<tbody>
 									{asignaturasElectivo.map((asignatura) => {
 										// totalCreditos3 +=
-										// 	asignatura.attributes.credito;
+										// 	asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -896,7 +733,7 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 			render: () => (
 				<Tab.Pane attached={false}>
 					<div className="overflow-x-auto mb-2">
-						{asignaturasElectivo.lenght > 0 ? (
+						{asignaturasElectivo.length > 0 ? (
 							<table className="table table-striped mb-4">
 								<thead>
 									<tr>
@@ -908,25 +745,12 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 								</thead>
 								<tbody>
 									{asignaturasElectivo.map((asignatura) => {
-										totalCreditos +=
-											asignatura.attributes.credito;
+										totalCreditos += asignatura.credito;
 										return (
-											<tr
-												key={
-													asignatura.attributes.nombre
-												}
-											>
-												<td>
-													{
-														asignatura.attributes
-															.nombre
-													}
-												</td>
+											<tr key={asignatura.nombre}>
+												<td>{asignatura.nombre}</td>
 												<td className="text-center">
-													{
-														asignatura.attributes
-															.credito
-													}
+													{asignatura.credito}
 												</td>
 											</tr>
 										);
@@ -954,20 +778,54 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 	return (
 		<div className="grid grid-cols-8">
 			<div className="col-span-10 md:col-span-7">
-				<Tab
-					menu={{ secondary: true, pointing: true }}
-					panes={
-						tipo === 'maestria' ? tabs_dos_anios : tabs_tres_anios
-					}
-					onTabChange={(e, data) => {
-						let activeIndex = data.activeIndex;
+				{tipo !== 'DIPLOMATURA' ? (
+					<Tab
+						menu={{ secondary: true, pointing: true }}
+						panes={tabs_dos_anios}
+						onTabChange={(e, data) => {
+							let activeIndex = data.activeIndex;
 
-						// setSemestre(data.panes[activeIndex].nombre);
-					}}
-				/>
+							// setSemestre(data.panes[activeIndex].nombre);
+						}}
+					/>
+				) : (
+					<div className="overflow-x-auto mt-4 mb-8">
+						<table className="table table-striped-even mb-0">
+							<thead>
+								<tr className="!bg-tertiary/50 text-blanco text-center">
+									<th>Asignatura</th>
+									<th className="md:w-60 text-center">
+										Créditos
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{asignaturas.map((asignatura) => {
+									// totalCreditos1 +=
+									// 	asignatura.credito;
+									return (
+										<tr key={asignatura.nombre}>
+											<td>{asignatura.nombre}</td>
+											<td className="text-center">
+												{asignatura.credito}
+											</td>
+										</tr>
+									);
+								})}
+								<tr key="total" className="font-bold">
+									<td>Total de créditos</td>
+									<td className="text-center">
+										{/* {totalCreditos1} */}
+										{totalCreditos(asignaturas, 'primero')}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				)}
 				{/* <Malla tipo={tipo} carreraSlug={carreraSlug} /> */}
 
-				<div className="mt-2 md:mt-0 flex justify-end">
+				{/* <div className="mt-2 md:mt-0 flex justify-end">
 					<div className="inline-block">
 						<Boton className="" onClick={handleOpen}>
 							<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
@@ -1002,11 +860,11 @@ export const MallaCurricular = ({ asignaturas, tipo, ogUrl }) => {
 						>
 							<SharedComponent
 								handleClose={handleClose}
-								ogUrl={ogUrl + '?tab=malla-curricular'}
+								// ogUrl={ogUrl + '?tab=malla-curricular'}
 							/>
 						</Box>
 					</Fade>
-				</Modal>
+				</Modal> */}
 			</div>
 		</div>
 	);

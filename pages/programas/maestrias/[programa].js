@@ -25,28 +25,26 @@ import { SiGoogleclassroom } from 'react-icons/si';
 import Observacion from '../../../components/shared/Observacion';
 import { maestrias } from '../../../data/programas/general';
 
-const Programa = ({
-	programa,
-	coordinadores,
-	ultimasNoticias,
-	asignaturas,
-}) => {
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/formacion-academica/posgrado/${programa[0].attributes.slug}`;
-	const metaTags = {
-		title: programa[0].nombre,
-		description: programa[0].presentacion,
-		ogUrl,
-		ogType: 'website',
-		ogTitle: programa[0].nombre,
-		ogImage: programa[0].foto,
-		ogDescription: programa[0].presentacion,
-	};
+const Programa = ({ programa }) => {
+	console.log('programa->', programa);
+	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/programas/maestrias/${programa.slug}`;
+	// const metaTags = {
+	// 	title: programa.titulo,
+	// 	description: programa.description,
+	// 	ogUrl,
+	// 	ogType: 'website',
+	// 	ogTitle: programa,
+	// 	titulo,
+	// 	ogImage: programa,
+	// 	miniHomeImg,
+	// 	ogDescription: programa.description,
+	// };
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
 	return (
-		<PrincipalLayout metaTags={metaTags}>
+		<PrincipalLayout>
 			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
 				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/">
@@ -62,21 +60,16 @@ const Programa = ({
 					</Link>
 				</li>
 				<li className="text-textColorOne font-bold inline">
-					<span>{programa[0].attributes.nombre}</span>
+					<span>{programa.titulo}</span>
 				</li>
 			</ul>
 			<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
-				<span>{programa[0].attributes.nombre}</span>
+				<span>{programa.titulo}</span>
 			</div>
 			<div className="col-span-full mb-5 ">
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
-						src={
-							programa[0].attributes.imagen.data[0].attributes.url
-								? programa[0].attributes.imagen.data[0]
-										.attributes.url
-								: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-						}
+						src={programa.bannerImg}
 						layout="responsive"
 						width={1343}
 						height={397}
@@ -202,7 +195,7 @@ const Programa = ({
 				</div>
 			</div>
 			<div className="col-span-full mb-14">
-				<Tabs nombre="posgrado">
+				<Tabs nombre="posgrado" tipoPrograma="maestrias">
 					<div label="Presentación">
 						<div className="grid grid-cols-8 gap-7">
 							<div className="col-span-10 md:col-span-6">
@@ -214,18 +207,14 @@ const Programa = ({
 										<span className="font-bold text-textColorOne">
 											Grado:
 										</span>{' '}
-										<span>
-											{programa[0].attributes.grado}
-										</span>
+										<span>{programa.grado}</span>
 									</p>
 									<p className="pb-4 flex space-x-1 items-center">
 										<DuracionIcon className="fill-textColorOne" />
 										<span className="font-bold  text-textColorOne">
 											Duración:
 										</span>{' '}
-										<span>
-											{programa[0].attributes.duracion}
-										</span>
+										<span>{programa.duracion}</span>
 									</p>
 									<p className="pb-4 flex space-x-1 items-center">
 										<span className="relative left-[2px] mr-[5px]">
@@ -234,56 +223,47 @@ const Programa = ({
 										<span className="font-bold  text-textColorOne">
 											Modalidad:
 										</span>{' '}
-										<span>Presencial</span>
+										<span>
+											{programa.modalidad ===
+												'PRESENCIAL' && 'Presencial'}
+											{programa.modalidad ===
+												'SEMIPRESENCIAL' &&
+												'Semipresencial'}
+										</span>
 									</p>
 								</div>
 
-								{programa[0].attributes.descripcion && (
+								{programa.description && (
 									<>
 										<div className="mb-6">
-											<p>
-												{
-													programa[0].attributes
-														.descripcion
-												}
-											</p>
+											<p>{programa.description}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.perfil_ingresante && (
+								{programa.perfil_ingresante && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
 												Perfil del ingresante:
 											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_ingresante
-												}
-											</p>
+											<p>{programa.perfil_ingresante}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.perfil_egresado && (
+								{programa.perfil_graduado && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
 												Perfil del graduado:
 											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_egresado
-												}
-											</p>
+											<p>{programa.perfil_graduado}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.campo_laboral &&
+								{/* {programa[0].attributes.campo_laboral &&
 									programa[0].attributes.campo_laboral
 										.length > 0 && (
 										<>
@@ -346,10 +326,10 @@ const Programa = ({
 										Se requiere mínimo 25 alumnos para la
 										apertura de la maestría.
 									</p>
-								</Observacion>
+								</Observacion> */}
 							</div>
 							<div className="col-span-full md:col-span-2">
-								{coordinadores && coordinadores.length > 0 && (
+								{/* {coordinadores && coordinadores.length > 0 && (
 									<>
 										<div className="mb-5">
 											<p className="mb-1 text-tertiary">
@@ -381,7 +361,7 @@ const Programa = ({
 										</div>
 										<div className="h-[2px] bg-tertiary/20 mb-5" />
 									</>
-								)}
+								)} */}
 								<div className="mb-5">
 									<p className="mb-1 text-tertiary">
 										<span className="font-black">
@@ -440,20 +420,24 @@ const Programa = ({
 							</div>
 						</div>
 					</div>
-					<div label="Admisión" link="/admision"></div>
+					<div
+						label="Admisión"
+						link="/admision?programa=maestria"
+					></div>
 					<div
 						label="Plana docente"
 						link="/comunidad/plana-docente"
 					></div>
 					<div label="Malla curricular">
 						<MallaCurricular
-							asignaturas={asignaturas}
-							tipo={programa[1].tipo}
-							ogUrl={ogUrl}
+							asignaturas={programa.asignaturas}
+							tipo={programa.tipo}
+							electivos={programa.electivos}
+							// ogUrl={ogUrl}
 						/>
 					</div>
 					<div label="Inversión económica">
-						<InversionEconomica programa={programa} ogUrl={ogUrl} />
+						<InversionEconomica inversion={programa.inversion} />
 					</div>
 
 					<div
@@ -634,57 +618,13 @@ const Programa = ({
 };
 
 export async function getStaticPaths() {
-	const paths = [
-		{
+	const paths = maestrias.map((maestria) => {
+		return {
 			params: {
-				programa: 'magister-en-gestion-publica-presencial',
+				programa: maestria.slug,
 			},
-		},
-		{
-			params: {
-				programa:
-					'magister-en-administracion-con-mencion-en-direccion-de-recursos-humanos-presencial',
-			},
-		},
-		{
-			params: {
-				programa:
-					'magister-en-gestion-de-negocios-internacionales-con-mencion-en-comercio-internacional-presencial',
-			},
-		},
-		{
-			params: {
-				programa:
-					'magister-en-administracion-con-mencion-en-finanzas-y-valores-presencial',
-			},
-		},
-		{
-			params: {
-				programa: '',
-			},
-		},
-		{
-			params: {
-				programa: '',
-			},
-		},
-		{
-			params: {
-				programa: '',
-			},
-		},
-		{
-			params: {
-				programa: '',
-			},
-		},
-		{
-			params: {
-				programa: '',
-			},
-		},
-	];
-
+		};
+	});
 	return {
 		paths,
 		fallback: false,
@@ -693,11 +633,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const slug = params.programa;
-	const programa = maestrias.filter((maestria) => maestria.slug === slug);
-
+	const programa = maestrias.filter((maestria) => maestria.slug == slug);
 	return {
 		props: {
-			programa,
+			programa: programa[0],
 		},
 	};
 }

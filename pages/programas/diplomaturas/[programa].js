@@ -21,29 +21,25 @@ import FormacionContentModal from '../../../components/formacion-academica/Forma
 import VerMasIcon from '../../../components/icons/VerMasIcon';
 import DuracionIcon from '../../../components/icons/DuracionIcon';
 import { SiGoogleclassroom } from 'react-icons/si';
+import { diplomaturas } from '../../../data/programas/general';
 
-const Programa = ({
-	programa,
-	coordinadores,
-	ultimasNoticias,
-	asignaturas,
-}) => {
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/formacion-academica/posgrado/${programa[0].attributes.slug}`;
-	const metaTags = {
-		title: programa[0].nombre,
-		description: programa[0].presentacion,
-		ogUrl,
-		ogType: 'website',
-		ogTitle: programa[0].nombre,
-		ogImage: programa[0].foto,
-		ogDescription: programa[0].presentacion,
-	};
+const Programa = ({ programa }) => {
+	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/formacion-academica/posgrado/${programa[0].attributes.slug}`;
+	// const metaTags = {
+	// 	title: programa[0].nombre,
+	// 	description: programa[0].presentacion,
+	// 	ogUrl,
+	// 	ogType: 'website',
+	// 	ogTitle: programa[0].nombre,
+	// 	ogImage: programa[0].foto,
+	// 	ogDescription: programa[0].presentacion,
+	// };
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
 	return (
-		<PrincipalLayout metaTags={metaTags}>
+		<PrincipalLayout>
 			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
 				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
 					<Link href="/">
@@ -59,21 +55,16 @@ const Programa = ({
 					</Link>
 				</li>
 				<li className="text-textColorOne font-bold inline">
-					<span>{programa[0].attributes.nombre}</span>
+					<span>{programa.titulo}</span>
 				</li>
 			</ul>
 			<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
-				<span>{programa[0].attributes.nombre}</span>
+				<span>{programa.titulo}</span>
 			</div>
 			<div className="col-span-full mb-5 ">
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
-						src={
-							programa[0].attributes.imagen.data[0].attributes.url
-								? programa[0].attributes.imagen.data[0]
-										.attributes.url
-								: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-						}
+						src={programa.bannerImg}
 						layout="responsive"
 						width={1343}
 						height={397}
@@ -199,7 +190,7 @@ const Programa = ({
 				</div>
 			</div>
 			<div className="col-span-full mb-14">
-				<Tabs nombre="posgrado">
+				<Tabs nombre="posgrado" tipoPrograma="diplomaturas">
 					<div label="Presentación">
 						<div className="grid grid-cols-8 gap-7">
 							<div className="col-span-10 md:col-span-6">
@@ -209,9 +200,7 @@ const Programa = ({
 										<span className="font-bold  text-textColorOne">
 											Duración:
 										</span>{' '}
-										<span>
-											{programa[0].attributes.duracion}
-										</span>
+										<span>{programa.duracion}</span>
 									</p>
 									<p className="pb-4 flex space-x-1 items-center">
 										<span className="relative left-[2px] mr-[5px]">
@@ -220,65 +209,49 @@ const Programa = ({
 										<span className="font-bold  text-textColorOne">
 											Modalidad:
 										</span>{' '}
-										<span>Presencial</span>
+										<span>Virtual</span>
 									</p>
 								</div>
 
-								{programa[0].attributes.descripcion && (
+								{programa.description && (
 									<>
 										<div className="mb-6">
-											<p>
-												{
-													programa[0].attributes
-														.descripcion
-												}
-											</p>
+											<p>{programa.description}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.perfil_ingresante && (
+								{programa.perfil_ingresante && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
 												Perfil del ingresante:
 											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_ingresante
-												}
-											</p>
+											<p>{programa.perfil_ingresante}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.perfil_egresado && (
+								{programa.perfil_graduado && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
 												Perfil del graduado:
 											</div>
-											<p>
-												{
-													programa[0].attributes
-														.perfil_egresado
-												}
-											</p>
+											<p>{programa.perfil_graduado}</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.campo_laboral &&
-									programa[0].attributes.campo_laboral
-										.length > 0 && (
+								{programa.campo_laboral &&
+									programa.campo_laboral.length > 0 && (
 										<>
 											<div className="mb-6">
 												<div className="subtitle mb-2">
 													Campo laboral:
 												</div>
 												<ul className="list-disc list-inside">
-													{programa[0].attributes.campo_laboral.map(
+													{programa.campo_laboral.map(
 														(item, index) => (
 															<li
 																key={index}
@@ -294,8 +267,7 @@ const Programa = ({
 										</>
 									)}
 
-								{programa[0].attributes
-									.porqueEstudiarConNosotros && (
+								{programa.porqueEstudiarConNosotros && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
@@ -303,32 +275,26 @@ const Programa = ({
 											</div>
 											<p>
 												{
-													programa[0].attributes
-														.porqueEstudiarConNosotros
+													programa.porqueEstudiarConNosotros
 												}
 											</p>
 										</div>
 									</>
 								)}
 
-								{programa[0].attributes.objetivos && (
+								{/* {programa.objetivos && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
 												Objetivos:
 											</div>
-											<p>
-												{
-													programa[0].attributes
-														.objetivos
-												}
-											</p>
+											<p>{programa.objetivos}</p>
 										</div>
 									</>
-								)}
+								)} */}
 							</div>
 							<div className="col-span-full md:col-span-2">
-								{coordinadores && coordinadores.length > 0 && (
+								{/* {coordinadores && coordinadores.length > 0 && (
 									<>
 										<div className="mb-5">
 											<p className="mb-1 text-tertiary">
@@ -360,7 +326,7 @@ const Programa = ({
 										</div>
 										<div className="h-[2px] bg-tertiary/20 mb-5" />
 									</>
-								)}
+								)} */}
 								<div className="mb-5">
 									<p className="mb-1 text-tertiary">
 										<span className="font-black">
@@ -419,20 +385,24 @@ const Programa = ({
 							</div>
 						</div>
 					</div>
-					<div label="Inscripción" link="#"></div>
+					<div
+						label="Inscripción"
+						link="/admision?programa=diplomatura"
+					></div>
 					<div
 						label="Plana docente"
-						link="/comunidad/plana-docente"
+						link="/admision?programa=diplomatura"
 					></div>
 					<div label="Malla curricular">
 						<MallaCurricular
-							asignaturas={asignaturas}
-							tipo={programa[1].tipo}
-							ogUrl={ogUrl}
+							asignaturas={programa.asignaturas}
+							tipo={programa.tipo}
+							electivos={programa.electivos}
+							// ogUrl={ogUrl}
 						/>
 					</div>
 					<div label="Inversión económica">
-						<InversionEconomica programa={programa} ogUrl={ogUrl} />
+						<InversionEconomica inversion={programa.inversion} />
 					</div>
 
 					<div
@@ -613,29 +583,13 @@ const Programa = ({
 };
 
 export async function getStaticPaths() {
-	const paths = [
-		{
+	const paths = diplomaturas.map((diplomatura) => {
+		return {
 			params: {
-				programa: 'doctorado-ingenieria-quimica',
+				programa: diplomatura.slug,
 			},
-		},
-		{
-			params: {
-				programa: 'doctorado-ciencias-quimicas',
-			},
-		},
-		{
-			params: {
-				programa: 'maestria-ingenieria-quimica',
-			},
-		},
-		{
-			params: {
-				programa: 'maestria-quimica',
-			},
-		},
-	];
-
+		};
+	});
 	return {
 		paths,
 		fallback: false,
@@ -643,61 +597,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const str = params.programa;
-	const cadena = str.split('-');
-	const primeraPalabra = cadena[0];
-	const resto = cadena.slice(1).join('-');
-
-	// la variable primeraPalabra segun el params puede tomar los valores de 'doctorado' o 'maestria'
-	const resProgram = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate=*&filters[slug][$eq]=${resto}`
+	const slug = params.programa;
+	const programa = diplomaturas.filter(
+		(diplomatura) => diplomatura.slug == slug
 	);
-	const program = (await resProgram.json()).data;
-	program.push({
-		tipo: primeraPalabra,
-	});
-
-	const programa = [];
-
-	programa.push(...program);
-	const resCoordinadores = await fetch(
-		`${POSGRADO_URL}/${primeraPalabra}s?populate[lista_coordinadores][populate]=*&filters[slug]=${resto}`
-	);
-	const preCoordinadoresProgram = await resCoordinadores.json();
-
-	const preCoordinadores = [];
-	preCoordinadores.push(...preCoordinadoresProgram.data);
-
-	const coordinadores = preCoordinadores[0].attributes.lista_coordinadores;
-
-	const resDocentes = await fetch(
-		`${POSGRADO_URL}/docentes?filters[${primeraPalabra}s][slug]=${resto}&populate=facultad,foto,libro,articulo`
-	);
-	const docentesProgram = await resDocentes.json();
-
-	const docentes = [];
-	docentes.push(...docentesProgram.data);
-
-	const resNoticias = await fetch(
-		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-	);
-	const ultimasNoticias = await resNoticias.json();
-
-	const resAsignaturas = await fetch(
-		`${POSGRADO_URL}/asignaturas?filters[${primeraPalabra}s][slug]=${resto}`
-	);
-
-	const asignaturasProgram = await resAsignaturas.json();
-
-	const asignaturas = [];
-	asignaturas.push(...asignaturasProgram.data);
-
 	return {
 		props: {
-			programa,
-			coordinadores,
-			ultimasNoticias,
-			asignaturas,
+			programa: programa[0],
 		},
 	};
 }

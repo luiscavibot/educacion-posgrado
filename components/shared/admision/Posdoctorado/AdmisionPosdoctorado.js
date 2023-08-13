@@ -1,11 +1,11 @@
 import React from 'react';
 import { Tabs } from '../../Tabs';
-import GuiaAdmisionPosdoctorado from './GuiaAdmisionPosdoctorado.js';
+// import GuiaAdmisionPosdoctorado from './GuiaAdmisionPosdoctorado.js';
 import CronogramaPosdoctorado from './CronogramaPosdoctorado.js';
-import ProcesoEvaluacionPosdoctorado from './ProcesoEvaluacionPosdoctorado.js';
-import CuadroVacantesPosdoctorado from './CuadroVacantesPosdoctorado.js';
+// import ProcesoEvaluacionPosdoctorado from './ProcesoEvaluacionPosdoctorado.js';
+// import CuadroVacantesPosdoctorado from './CuadroVacantesPosdoctorado.js';
 import RequisitosPosdoctorado from './RequisitosPosdoctorado.js';
-import InversionPosdoctorado from './InversionPosdoctorado.js';
+// import InversionPosdoctorado from './InversionPosdoctorado.js';
 
 export const AdmisionPosdoctorado = () => {
 	return (
@@ -16,24 +16,24 @@ export const AdmisionPosdoctorado = () => {
 					handleClick(e);
 				}}
 			>
-				<div label="Guía para el proceso de admisión">
+				{/* <div label="Guía para el proceso de admisión">
 					<GuiaAdmisionPosdoctorado />
-				</div>
+				</div> */}
 				<div label="Cronograma académico">
 					<CronogramaPosdoctorado />
 				</div>
-				<div label="Proceso de evaluación">
+				{/* <div label="Proceso de evaluación">
 					<ProcesoEvaluacionPosdoctorado />
-				</div>
-				<div label="Cuadro de vacantes">
+				</div> */}
+				{/* <div label="Cuadro de vacantes">
 					<CuadroVacantesPosdoctorado />
-				</div>
+				</div> */}
 				<div label="Requisitos para postular">
 					<RequisitosPosdoctorado />
 				</div>
-				<div label="Inversión">
+				{/* <div label="Inversión">
 					<InversionPosdoctorado />
-				</div>
+				</div> */}
 			</Tabs>
 		</>
 	);

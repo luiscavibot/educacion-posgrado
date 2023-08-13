@@ -8,7 +8,8 @@ import { slugify } from '../../../helpers/slugify';
 import { IoIosArrowDown } from 'react-icons/io';
 import Link from 'next/link';
 
-const Tabs = ({ children, nombre, carrera }) => {
+const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
+	console.log(tipoPrograma);
 	const [activeTab, setActiveTab] = useState(null);
 	const router = useRouter();
 
@@ -116,8 +117,20 @@ const Tabs = ({ children, nombre, carrera }) => {
 				);
 				break;
 			case 'posgrado':
+				if (tipoPrograma === 'doctorado') {
+					router.push(
+						`/programas/${tipoPrograma}?tab=${slugify(
+							newActiveTab
+						)}`,
+						undefined,
+						{
+							shallow: true,
+						}
+					);
+					break;
+				}
 				router.push(
-					`/formacion-academica/${nombre}/${
+					`/programas/${tipoPrograma}/${
 						router.query.programa
 					}?tab=${slugify(newActiveTab)}`,
 					undefined,

@@ -55,7 +55,7 @@ const Index = () => {
 								programas.map((programa) => (
 									<Link
 										key={programa.slug}
-										href={`/programas/maestrias/doctorado-ingenieria-quimica`}
+										href={`/programas/maestrias/${programa.slug}`}
 									>
 										<a className="group card md:max-w-[290px]">
 											<div className="relative h-[168px]">
