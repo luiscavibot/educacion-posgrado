@@ -61,11 +61,13 @@ const Index = (
 									<div className="relative -left-3">
 										<ComillasTestimoniosIcon className="fill-tertiary mb-4" />
 									</div>
-									<p>
+									<p className="text-tertiary text-xl">
 										En el recorrido hasta la fecha la
-										Facultad se ha fortalecido como la
-										Institución pionera y referente en la
-										formación de los Profesionales
+										Facultad se ha fortalecido como la{' '}
+										<span className="font-bold">
+											Institución pionera y referente en
+											la formación de los Profesionales
+										</span>
 									</p>
 								</div>
 							</div>
