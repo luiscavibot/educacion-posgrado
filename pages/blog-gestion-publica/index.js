@@ -1,28 +1,43 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 import Link from 'next/link';
-import Image from 'next/future/image';
 
 // import CardsNoticiasResultados from '../../components/noticias/CardsNoticiasResultados';
-import useNoticias from '../../hooks/useNoticias';
 import VerMasIcon from '../../components/icons/VerMasIcon';
 import CardsBlogResultados from '../../components/blog-gestion-publica/CardBlogResultados';
 import useBlogGestionPublica from '../../hooks/useBlogGestionPublica';
+import InputText from '../../components/shared/InputText';
 
 const START_DATE = new Date();
 START_DATE.setMonth(START_DATE.getMonth() - 12);
 START_DATE.setHours(0, 0, 0, 0);
 const END_DATE = new Date();
 END_DATE.setHours(23, 59, 59, 999);
+const INITIAL_INPUTS = {
+	keyWords: '',
+};
 
 const Blog = () => {
 	// const [entradaBusqueda, setEntradaBusqueda] = useState('');
 	// const [startDate, setStartDate] = useState(START_DATE);
 	// const [endDate, setEndDate] = useState(END_DATE);
-
-	const { isLoading, blogGestionPublica } = useBlogGestionPublica();
-	console.log(blogGestionPublica);
-
+	const debounceRef = useRef(null);
+	const [inputs, setInputs] = useState(INITIAL_INPUTS);
+	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
+	const { blogGestionPublica } = useBlogGestionPublica(searchParams);
+	const handleChange = (e) => {
+		setInputs({
+			...inputs,
+			keyWords: e.target.value,
+		});
+		if (debounceRef.current) clearTimeout(debounceRef.current);
+		debounceRef.current = setTimeout(() => {
+			setSearchParams({
+				...searchParams,
+				keyWords: e.target.value,
+			});
+		}, 500);
+	};
 	return (
 		<>
 			<PrincipalLayout>
@@ -51,6 +66,17 @@ const Blog = () => {
 						optimización de procesos que buscan un Perú más
 						eficiente, equitativo y próspero.
 					</p>
+				</div>
+				<div className="mb-5">
+					<InputText
+						value={inputs.keyWords}
+						name="buscador"
+						onChange={handleChange}
+						placeholder="Buscar por palabra clave"
+						conIconoBuscador
+						className="w-full md:w-[20rem] inline-block"
+						backgroundClass="bg-textColorTwo/5"
+					/>
 				</div>
 				<div className="col-span-full mb-5 lg:grid lg:grid-cols-12 gap-x-8">
 					<div className="col-span-full xl:col-span-10 mx-4 md:mx-0">

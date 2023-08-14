@@ -3,20 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
-import InfoAcademicaPregradoIcon from '../../../components/icons/InfoAcademicaPregradoIcon';
-import InfoAcademicaPosgradoIcon from '../../../components/icons/InfoAcademicaPosgradoIcon';
-import InfoAcademicaDocentesIcon from '../../../components/icons/InfoAcademicaDocentesIcon';
 
 import { BiTimeFive } from 'react-icons/bi';
 import { getFecha } from '../../../helpers/getFecha';
-import Cargando from '../../../components/resultados/Cargando';
 
-import useComunicados from '../../../hooks/useComunicados';
 import InputText from '../../../components/shared/InputText';
 import Paginador from '../../../components/shared/Paginador';
 import InputCheckbox from '../../../components/shared/InputCheckbox';
-import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
-import InputRadioButton from '../../../components/shared/InputRadioButton';
 import useActividadCientifica from '../../../hooks/useActividadCientifica';
 
 const INITIAL_INPUTS = {
