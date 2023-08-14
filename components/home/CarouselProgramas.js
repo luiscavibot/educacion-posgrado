@@ -21,9 +21,9 @@ export default function CarouselProgramas({ programas }) {
 			case 'MAESTRIA':
 				return `/programas/maestrias/${slug}`;
 			case 'DOCTORADO':
-				return `/programas/maestrias/${slug}`;
+				return `/programas/doctorado`;
 			case 'DIPLOMATURA':
-				return `/programas/maestrias/${slug}`;
+				return `/programas/diplomaturas/${slug}`;
 			default:
 				return '#';
 		}
