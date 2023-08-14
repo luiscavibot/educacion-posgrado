@@ -319,8 +319,7 @@ const SideBar = ({ interno }) => {
 														</a>
 													</Link>
 												</div>
-												<div onClick={handleSidebar}>
-													{/* <Link href="/actualidad/eventos"> */}
+												{/* <div onClick={handleSidebar}>
 													<a
 														href="#"
 														target="_blank"
@@ -329,8 +328,7 @@ const SideBar = ({ interno }) => {
 													>
 														Acreditación ACBSP
 													</a>
-													{/* </Link> */}
-												</div>
+												</div> */}
 												<div onClick={handleSidebar}>
 													<Link href="/nosotros/historia">
 														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -342,6 +340,13 @@ const SideBar = ({ interno }) => {
 													<Link href="/nosotros/transparencia">
 														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 															Transparencia
+														</a>
+													</Link>
+												</div>
+												<div onClick={handleSidebar}>
+													<Link href="/nosotros/directorio">
+														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+															Directorio
 														</a>
 													</Link>
 												</div>
