@@ -14,10 +14,10 @@ import HorariosAtencion from '../icons/HorariosAtencion';
 import MensajeEnviadoCorrectamenteIcon from '../icons/MensajeEnviadoCorrectamenteIcon';
 
 const FormacionContentModal = ({
-	handleClose,
+	handleClose = () => {},
 	responsableEmail,
-	facultad,
-	escuela,
+	facultad = 'Ciencias Administrativas-Unidad de Posgrado',
+	escuela = 'Posgrado',
 	templateType,
 	telefono,
 	noCloseButton,
