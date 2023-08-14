@@ -5,7 +5,7 @@ import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 import { BiTimeFive } from 'react-icons/bi';
 import Boton from '../../components/shared/Boton';
 import { useRouter } from 'next/router';
-import { BASE_URL, SLUG_CARRERA } from '../../config/consts';
+import { BACKEND, BASE_URL, SLUG_CARRERA } from '../../config/consts';
 import { getFecha } from '../../helpers/getFecha';
 import Cargando from '../../components/resultados/Cargando';
 import CompartirIcon from '../../components/icons/CompartirIcon';
@@ -27,7 +27,7 @@ const Tramite = ({ ultimasNoticias }) => {
 	useEffect(() => {
 		const fetchDataTramite = async () => {
 			let response = await fetch(
-				`${BASE_URL}/tramites/id/${router.query.tramite}`
+				`${BACKEND}/tramites/id/${router.query.tramite}`
 			);
 			let {
 				id,

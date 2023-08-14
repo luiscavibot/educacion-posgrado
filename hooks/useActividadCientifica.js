@@ -1,37 +1,50 @@
 import { useState, useEffect } from 'react';
-import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND } from '../config/consts';
 
 const INITIAL_PAGE = 0;
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 10;
 
-export default function useActividadCientifica(selectedOption) {
-	const [actividadesCientificas, setActividadesCientificas] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
+const checkValues = {
+	articulosCientificosCheck: 'ARTICULOSCIENTIFI',
+	articulosDeRevisionCheck: 'ARTICULOSREVISION',
+	tesisCheck: 'TESIS',
+	sustentacionesVirtualesCheck: 'SUSTENTACIONESVIRTUALES',
+	librosCheck: 'LIBROS',
+	investigacionesDeDoctoradoCheck: 'INVESTIGACIONESDEDOCTORADO',
+};
+
+export default function useActividadCientifica(searchParams) {
+	const [totalPages, setTotalPages] = useState(null);
+	const [actividades, setActividades] = useState(null);
+	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
-		setActividadesCientificas([]);
-		let url = `${BACKEND}/produccion-cientifica`;
-		setIsLoading(true);
-		const fetchDataActividadCientifica = async () => {
+		setActividades(null);
+		const { keyWords, ...checks } = searchParams;
+		let url = `${BACKEND}/produccion-cientifica?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
+		if (keyWords !== '') {
+			url += `&query=${keyWords}`;
+		}
+		const checksArray = Object.keys(checks)
+			.filter((key) => checks[key])
+			.map((key) => checkValues[key]);
+
+		if (checksArray.length > 0) {
+			checksArray.forEach((check, index) => {
+				url += `&tipos[${index}]=${check}`;
+			});
+		}
+		const fetchDataActividades = async () => {
 			let response = await fetch(url);
 			let res = await response.json();
-			setIsLoading(false);
-			if (selectedOption) {
-				setActividadesCientificas(
-					res.filter(
-						(actividad) =>
-							actividad.tipo_produccion_academica ===
-							selectedOption
-					)
-				);
-				return;
-			}
-			setActividadesCientificas(res);
+			setTotalPages(res.meta.totalPages);
+			setActividades(res.items);
 		};
-		fetchDataActividadCientifica().catch(console.error);
-		// }, [entradaBusqueda, page, startDate, endDate]);
-	}, [selectedOption]);
+		fetchDataActividades().catch(console.error);
+	}, [searchParams, page]);
 	return {
-		actividadesCientificas,
-		isLoading,
+		actividades,
+		setPage,
+		page,
+		totalPages,
 	};
 }

@@ -14,7 +14,7 @@ export const UltimasNoticias = ({ ultimasNoticias }) => {
 					<div>
 						<div className="flex items-center gap-x-3 mb-9">
 							<h2 className="font-bold text-textColorOne">
-								Últimas noticias
+								Últimas entradas en la Agenda Pública
 							</h2>
 							<Link href="/actualidad/agenda-publica" passHref>
 								<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">

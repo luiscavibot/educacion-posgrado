@@ -1,26 +1,15 @@
 import Link from 'next/link';
-// import Image from 'next/image';
 import Image from 'next/future/image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 
-import { BASE_URL, SLUG_CARRERA } from '../../config/consts';
-
 import Boton from '../../components/shared/Boton';
+import useDirectorio from '../../hooks/useDirectorio';
 
-import useSWR from 'swr';
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-const Index = (
-	{
-		// directorio
-	}
-) => {
-	const { data, error, isLoading } = useSWR(
-		`${BASE_URL}/directorios/${SLUG_CARRERA}`,
-		fetcher
-	);
+const Index = () => {
+	const { directorio: data, isLoading } = useDirectorio('/directorios');
+	console.log(data);
 
 	return (
 		<>
@@ -87,7 +76,7 @@ const Index = (
 								</thead>
 								<tbody>
 									{!isLoading &&
-										data.map((unidad) => {
+										data?.map((unidad) => {
 											return (
 												<tr key={unidad.id}>
 													<td>{unidad.unidad}</td>
@@ -136,18 +125,5 @@ const Index = (
 		</>
 	);
 };
-
-// export async function getStaticProps() {
-
-// 	const resDirectorio = await fetch(
-// 		`${BASE_URL}/directorios/${SLUG_CARRERA}`
-// 	);
-// 	const directorio = await resDirectorio.json();
-// 	return {
-// 		props: {
-// 			directorio,
-// 		},
-// 	};
-// }
 
 export default Index;

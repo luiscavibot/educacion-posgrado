@@ -12,7 +12,7 @@ import SharedComponent from '../../components/shared/SharedComponent';
 import VerMasIcon from '../../components/icons/VerMasIcon';
 import { BACKEND } from '../../config/consts';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, otrosBlog }) => {
 	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
 	// const metaTags = {
 	// 	title: noticia.titulo,
@@ -90,16 +90,16 @@ const Blog = ({ blog }) => {
 							</Boton>
 						</div>
 					</div>
-					{/* {noticiasRelacionadas && (
+					{otrosBlog && (
 						<>
 							<div className="col-span-full mx-4 md:mx-0">
 								<div>
 									<div className="flex items-center gap-x-3 mb-9">
 										<h2 className="font-bold text-textColorOne">
-											Últimas noticias
+											Otras entradas
 										</h2>
 										<Link
-											href="/actualidad/agenda-publica"
+											href="/blog-gestion-publica"
 											passHref
 										>
 											<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
@@ -113,10 +113,10 @@ const Blog = ({ blog }) => {
 							</div>
 							<div className="col-span-full mb-14">
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
-									{noticiasRelacionadas.map((noticia) => (
+									{otrosBlog.map((blog) => (
 										<Link
-											key={noticia.id}
-											href={`/noticias/${noticia.slug}`}
+											key={blog.id}
+											href={`/blog-gestion-publica/${blog.slug}`}
 										>
 											<a
 												href="#"
@@ -124,8 +124,8 @@ const Blog = ({ blog }) => {
 											>
 												<div className="h-[220px] hidden md:block relative w-full">
 													<Image
-														alt={noticia.titulo}
-														src={`${noticia.foto}`}
+														alt={blog.titulo}
+														src={`${blog.foto}`}
 														width={502}
 														height={335}
 														className="object-cover h-full w-full"
@@ -133,13 +133,13 @@ const Blog = ({ blog }) => {
 												</div>
 												<div className="text-content">
 													<p className="title break-words line-clamp-2">
-														{noticia.titulo}
+														{blog.titulo}
 													</p>
 													<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
 														<BiTimeFive />
 														<p className="ml-1">
 															{getFecha(
-																noticia.fecha
+																blog.fecha
 															)}
 														</p>
 													</div>
@@ -150,7 +150,7 @@ const Blog = ({ blog }) => {
 								</div>
 							</div>
 						</>
-					)} */}
+					)}
 				</>
 			)}
 			<Modal
@@ -193,9 +193,16 @@ export async function getServerSideProps({ params }) {
 		`${BACKEND}/blog-gestion-publica/url/${params.blog}`
 	);
 	const blog = await resBlog.json();
+
+	const resOtrosBlog = await fetch(
+		`${BACKEND}/blog-gestion-publica/ultimas?id=${blog[0].id}`
+	);
+	const otrosBlog = await resOtrosBlog.json();
+
 	return {
 		props: {
 			blog: blog[0],
+			otrosBlog,
 		},
 	};
 }

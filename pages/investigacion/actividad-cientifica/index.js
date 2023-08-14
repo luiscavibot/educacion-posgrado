@@ -21,61 +21,53 @@ import useActividadCientifica from '../../../hooks/useActividadCientifica';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
+	articulosCientificosCheck: false,
+	articulosDeRevisionCheck: false,
+	tesisCheck: false,
+	sustentacionesVirtualesCheck: false,
+	librosCheck: false,
+	investigacionesDeDoctoradoCheck: false,
 };
+
 const radioOptions = [
-	{ value: 'ARTICULOSCIENTIFICOS', label: 'Artículos científicos' },
-	{ value: 'ARTICULOSREVISION', label: 'Artículos de revisión' },
-	{ value: 'TESIS', label: 'Tesis' },
-	{ value: 'DOCENTESASESORES', label: 'Docentes asesores' },
-	{
-		value: 'SUSTENTACIONESVIRTUALES',
-		label: 'Sustentaciones virtuales',
-	},
-	{ value: 'LIBROS', label: 'Libros' },
-	{
-		value: 'INVESTIGACIONESDOCTORADO',
-		label: 'Investigaciones de Doctorado',
-	},
+	{ value: 'PUBLICACIONES', label: 'Publicaciones' },
+	{ value: 'DOCENTES_ASESORES', label: 'Docentes asesores' },
 ];
 
 function createMarkup(dom) {
 	return { __html: dom };
 }
 const ActividadCientifica = () => {
+	const debounceRef = useRef(null);
 	const [selectedOption, setSelectedOption] = useState(radioOptions[0].value);
-
 	const handleRadioChange = (event) => {
 		setSelectedOption(event.target.value);
 	};
-	const { actividadesCientificas, isLoading } =
-		useActividadCientifica(selectedOption);
-	// const debounceRef = useRef(null);
-	// const [inputs, setInputs] = useState(INITIAL_INPUTS);
-	// const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
-	// const { comunicados, setPage, page, totalPages } =
-	// 	useComunicados(searchParams);
+	const [inputs, setInputs] = useState(INITIAL_INPUTS);
+	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
+	const { actividades, setPage, page, totalPages } =
+		useActividadCientifica(searchParams);
 
-	// const handleChange = (e) => {
-	// 	setPage(0);
-	// 	setInputs({
-	// 		...inputs,
-	// 		keyWords: e.target.value,
-	// 	});
-	// 	if (debounceRef.current) clearTimeout(debounceRef.current);
-	// 	debounceRef.current = setTimeout(() => {
-	// 		setSearchParams({
-	// 			...searchParams,
-	// 			keyWords: e.target.value,
-	// 		});
-	// 	}, 500);
-	// };
+	const handleChange = (e) => {
+		setPage(0);
+		setInputs({
+			...inputs,
+			keyWords: e.target.value,
+		});
+		if (debounceRef.current) clearTimeout(debounceRef.current);
+		debounceRef.current = setTimeout(() => {
+			setSearchParams({
+				...searchParams,
+				keyWords: e.target.value,
+			});
+		}, 500);
+	};
 
-	// const handleCheck = (e) => {
-	// 	setPage(0);
-	// 	setSearchParams({ ...inputs, [e.target.name]: e.target.checked });
-	// 	setInputs({ ...inputs, [e.target.name]: e.target.checked });
-	// };
-
+	const handleCheck = (e) => {
+		setPage(0);
+		setSearchParams({ ...inputs, [e.target.name]: e.target.checked });
+		setInputs({ ...inputs, [e.target.name]: e.target.checked });
+	};
 	return (
 		<>
 			<PrincipalLayout>
@@ -100,17 +92,100 @@ const ActividadCientifica = () => {
 				</div>
 				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 md:px-0 mb-5">
 					<div className="bg-complementaryTwo rounded-lg p-6">
-						<p className="text-textColorOne font-bold">Tipo:</p>
-						<InputRadioButton
-							name="Tipo"
-							options={radioOptions}
-							value={selectedOption}
-							onChange={handleRadioChange}
-						/>
+						<p className="text-textColorOne font-bold">
+							Elija una opción:
+						</p>
+						<div className="flex flex-col gap-y-1 mt-2">
+							<div key={radioOptions[0].value} className="mb-0">
+								<label className="flex gap-x-2 justify-start place-items-start">
+									<input
+										className="translate-y-1 border-textColorTwo/50 cursor-pointer checked:!bg-primary visited:!bg-secondary text-secbg-secondary focus:ring-0"
+										type="radio"
+										name="Tipo"
+										value={radioOptions[0].value}
+										checked={
+											radioOptions[0].value ===
+											selectedOption
+										}
+										onChange={handleRadioChange}
+									/>
+									{radioOptions[0].label}
+								</label>
+							</div>
+							<div className="ml-6">
+								<div
+									role="group"
+									aria-labelledby="checkbox-group"
+								>
+									<InputCheckbox
+										label="Artículos Científicos"
+										name="articulosCientificosCheck"
+										checked={
+											inputs.articulosCientificosCheck
+										}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
+										label="Artículos de Revisión"
+										name="articulosDeRevisionCheck"
+										checked={
+											inputs.articulosDeRevisionCheck
+										}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
+										label="Tesis"
+										name="tesisCheck"
+										checked={inputs.tesisCheck}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
+										label="Sustentaciones Virtuales"
+										name="sustentacionesVirtualesCheck"
+										checked={
+											inputs.sustentacionesVirtualesCheck
+										}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
+										label="Libros"
+										name="librosCheck"
+										checked={inputs.librosCheck}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
+										label="Investigaciones de Doctorado"
+										name="investigacionesDeDoctoradoCheck"
+										checked={
+											inputs.investigacionesDeDoctoradoCheck
+										}
+										onChange={handleCheck}
+									/>
+								</div>
+							</div>
+						</div>
+						<div className="flex flex-col gap-y-1 mt-2">
+							<div key={radioOptions[1].value} className="mb-2">
+								<label className="flex gap-x-2 justify-start place-items-start">
+									<input
+										className="translate-y-1 border-textColorTwo/50 cursor-pointer checked:!bg-primary visited:!bg-secondary text-secbg-secondary focus:ring-0"
+										type="radio"
+										name="Tipo"
+										value={radioOptions[1].value}
+										checked={
+											radioOptions[1].value ===
+											selectedOption
+										}
+										onChange={handleRadioChange}
+									/>
+									{radioOptions[1].label}
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="col-span-8 lg:col-span-9 xl:col-span-10 px-4 mb-6 md:px-0">
-					{/* <div className="px-4 md:px-0 col-span-full mb-5">
+					<div className="px-4 md:px-0 col-span-full mb-5">
 						<div className="flex justify-between">
 							<InputText
 								value={inputs.keyWords}
@@ -125,21 +200,16 @@ const ActividadCientifica = () => {
 								controles={[page, setPage, totalPages]}
 							/>
 						</div>
-					</div> */}
-					<div className="px-4 md:px-0 col-span-full mb-20">
-						{!isLoading && actividadesCientificas.length === 0 && (
-							<p>No hay resultados</p>
-						)}
-						{actividadesCientificas.length > 0 &&
-							actividadesCientificas.map((actividad) => (
-								<Link
-									key={actividad.slug}
-									href={`#`}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+					</div>
+					{selectedOption === 'PUBLICACIONES' && (
+						<div className="px-4 md:px-0 col-span-full mb-20">
+							{actividades?.length > 0 &&
+								actividades.map((actividad) => (
 									<a
-										key={`1`}
+										key={actividad.slug}
+										href={actividad.link_publicacion}
+										target="_blank"
+										rel="noopener noreferrer"
 										className="group min-h-[190px] md:min-h-[200px] animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105"
 									>
 										<div className="relative w-full max-w-[188px] hidden md:block">
@@ -153,12 +223,11 @@ const ActividadCientifica = () => {
 											<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
 												<BiTimeFive />
 												<p className="ml-1">
-													{/* {getFecha(noticia.fecha)} */}
-													20 de junio de 2023
+													{getFecha(actividad.fecha)}
 												</p>
 											</div>
 											<div className="mt-[6px] md:mt-0 order-1 md:order-2">
-												<p className="text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
+												<p className="line-clamp-1 text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
 													{actividad.nombre}
 												</p>
 												<div>
@@ -175,36 +244,38 @@ const ActividadCientifica = () => {
 												</div>
 											</div>
 											<p className="text-tertiary text-sm absolute bottom-3 left-5">
-												Anthony Ramirez
+												{actividad.autor}
 											</p>
 										</div>
 									</a>
-								</Link>
-							))}
-						{/* registro de docentes */}
-						{/* <div className="mb-8">
-							<p className="text-textColorOne font-bold mb-1">
-								Dr. Victor Chalco Flores
-							</p>
-							<p className="text-textColorTwo mb-2">
-								mvelazquezc@unmsm.edu.pe
-							</p>
-							<ul className="list-disc list-inside">
-								<li>
-									Ll-21: Administración Financiera - ODS 4:
-									Educación de calidad
-								</li>
-								<li>
-									LI-122: Gestión Bancaria - ODS 9: Industria,
-									innovación e infraestructura
-								</li>
-								<li>
-									LI-123: Finanzas Corporativas - ODS 9:
-									Industria, innovación e infraestructura
-								</li>
-							</ul>
-						</div> */}
-					</div>
+								))}
+						</div>
+					)}
+					{selectedOption === 'DOCENTES_ASESORES' &&
+						['', '', '', '', '', '', '', '', '', ''].map(() => (
+							<div className="mb-8">
+								<p className="text-textColorOne font-bold mb-1">
+									Dr. Victor Chalco Flores
+								</p>
+								<p className="text-textColorTwo mb-2">
+									mvelazquezc@unmsm.edu.pe
+								</p>
+								<ul className="list-disc list-inside">
+									<li>
+										Ll-21: Administración Financiera - ODS
+										4: Educación de calidad
+									</li>
+									<li>
+										LI-122: Gestión Bancaria - ODS 9:
+										Industria, innovación e infraestructura
+									</li>
+									<li>
+										LI-123: Finanzas Corporativas - ODS 9:
+										Industria, innovación e infraestructura
+									</li>
+								</ul>
+							</div>
+						))}
 				</div>
 			</PrincipalLayout>
 		</>

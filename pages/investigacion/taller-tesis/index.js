@@ -12,7 +12,12 @@ import CorreoIcon from '../../../components/icons/CorreoIcon';
 import DocumentCheckIcon from '../../../components/icons/DocumentCheckIcon';
 
 import { UltimasNoticias } from '../../../components/shared/programas/UltimasNoticias';
-import { BASE_URL, POSGRADO_URL, SLUG_CARRERA } from '../../../config/consts';
+import {
+	BACKEND,
+	BASE_URL,
+	POSGRADO_URL,
+	SLUG_CARRERA,
+} from '../../../config/consts';
 import { MallaCurricular } from '../../../components/shared/programas/posgrado-component/MallaCurricular';
 import { InversionEconomica } from '../../../components/shared/programas/InversionEconomica';
 
@@ -401,9 +406,7 @@ const TallerTesis = ({ ultimasNoticias }) => {
 };
 
 export async function getStaticProps({ params }) {
-	const resNoticias = await fetch(
-		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-	);
+	const resNoticias = await fetch(`${BACKEND}/agenda-publica/ultimas`);
 	const ultimasNoticias = await resNoticias.json();
 
 	return {

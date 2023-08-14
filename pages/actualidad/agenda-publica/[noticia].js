@@ -100,7 +100,8 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 								<div>
 									<div className="flex items-center gap-x-3 mb-9">
 										<h2 className="font-bold text-textColorOne">
-											Últimas noticias
+											Últimas entradas en la Agenda
+											Pública
 										</h2>
 										<Link
 											href="/actualidad/agenda-publica"

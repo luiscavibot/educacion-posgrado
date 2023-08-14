@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
-import { BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND } from '../config/consts';
 
 const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
 
 const checkValues = {
-	ingresantesCheck: 'INGRESANTE',
-	pregradoCheck: 'PREGRADO',
-	posgradoCheck: 'POSGRADO',
-	egresadosCheck: 'EGRESADO',
-	docentesCheck: 'DOCENTE',
+	estudiantesCheck: 'ESTUDIANTES',
+	egresadosCheck: 'EGRESADOS',
+	docentesCheck: 'DOCENTES',
+	// egresadosCheck: 'EGRESADO',
+	// docentesCheck: 'DOCENTE',
 };
 
 export default function useTramites(searchParams) {
@@ -19,7 +19,7 @@ export default function useTramites(searchParams) {
 	useEffect(() => {
 		setTramites(null);
 		const { keyWords, ...checks } = searchParams;
-		let url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/tramites/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}?estado=true&limit=${PAGE_SIZE}&page=${page}`;
+		let url = `${BACKEND}/tramites?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
 		if (keyWords !== '') {
 			url += `&query=${keyWords}`;
 		}

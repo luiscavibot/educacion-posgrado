@@ -1,13 +1,10 @@
 import Link from 'next/link';
 // import Image from 'next/image';
-import Image from 'next/future/image';
 import React, { useRef, useState } from 'react';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 
-import { BASE_URL, SLUG_CARRERA } from '../../config/consts';
-
-import Boton from '../../components/shared/Boton';
+import { BACKEND } from '../../config/consts';
 
 import Cargando from '../../components/resultados/Cargando';
 
@@ -19,15 +16,12 @@ import useTramites from '../../hooks/useTramites';
 import { UltimasNoticias } from '../../components/shared/programas/UltimasNoticias';
 import { getFecha } from '../../helpers/getFecha';
 import LinkExtIcon from '../../components/icons/LinkExtIcon';
-import EntradaFijaIcon from '../../components/icons/EntradaFijaIcon';
 import Observacion from '../../components/shared/Observacion';
 import DocumentosFillIcon from '../../components/icons/DocumentosFillIcon';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
-	ingresantesCheck: false,
-	pregradoCheck: false,
-	posgradoCheck: false,
+	estudiantesCheck: false,
 	egresadosCheck: false,
 	docentesCheck: false,
 };
@@ -36,9 +30,7 @@ const Index = ({ ultimasNoticias }) => {
 	const debounceRef = useRef(null);
 	const [inputs, setInputs] = useState(INITIAL_INPUTS);
 	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
-
 	const { tramites, setPage, page, totalPages } = useTramites(searchParams);
-
 	const handleChange = (e) => {
 		setPage(0);
 		setInputs({
@@ -136,7 +128,7 @@ const Index = ({ ultimasNoticias }) => {
 						</div>
 					</div>
 					<div className="mt-7">
-						<Link key="111" href={`/tramites/53`}>
+						{/* <Link key="111" href={`/tramites/53`}>
 							<a key="111" className="block mb-6">
 								<div className="mb-1">
 									<p className="text-textColorOne font-bold mr-2 inline-block">
@@ -157,7 +149,7 @@ const Index = ({ ultimasNoticias }) => {
 									que perteneces.
 								</p>
 							</a>
-						</Link>
+						</Link> */}
 						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
 						{tramites ? (
 							tramites.length > 0 ? (
@@ -244,9 +236,7 @@ const Index = ({ ultimasNoticias }) => {
 };
 
 export async function getStaticProps() {
-	const resUltimasNoticias = await fetch(
-		`${BASE_URL}/noticias/${SLUG_CARRERA}/ultimas`
-	);
+	const resUltimasNoticias = await fetch(`${BACKEND}/agenda-publica/ultimas`);
 	const ultimasNoticias = await resUltimasNoticias.json();
 	return {
 		props: {
