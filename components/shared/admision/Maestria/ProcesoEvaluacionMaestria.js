@@ -49,7 +49,7 @@ export const ProcesoEvaluacionMaestria = () => {
 				</ul>
 			</div>
 			<p>
-				El examen virtual se llevará a cabo el jueves 03 de agosto . La
+				El examen virtual se llevará a cabo el jueves 3 de agosto . La
 				entrevista virtual se llevará a cabo el 8 y 9 de agosto, los
 				resultados finales se publicarán el 14 de agosto. El ingreso a
 				cada programa de posgrado es en estricto orden de mérito según

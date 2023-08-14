@@ -239,10 +239,12 @@ const Programa = (
 										as&iacute; como aspectos
 										acad&eacute;micos y administrativos, se
 										trabajar&aacute;n de manera coordinada
-										con nuestros pares de la
-										UBA.&iexcl;&Uacute;nete a la vanguardia
-										del conocimiento y contribuye en el
-										campo acad&eacute;mico de las ciencias
+										con nuestros pares de la UBA.
+									</p>
+									<p>
+										&iexcl;&Uacute;nete a la vanguardia del
+										conocimiento y contribuye en el campo
+										acad&eacute;mico de las ciencias
 										administrativas!
 									</p>
 								</div>

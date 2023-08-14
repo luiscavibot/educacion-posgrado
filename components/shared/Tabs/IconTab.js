@@ -331,28 +331,28 @@ const IconTab = (label) => {
 				</>
 			);
 			break;
-		case 'decanato':
+		case 'director':
 			return (
 				<>
 					<DocumentoEnFolderStroke className=" w-[21px] h-[21px]" />
 				</>
 			);
 			break;
-		case 'vicedecanato-academico':
+		case 'cargo-1':
 			return (
 				<>
 					<BirreteStroke className=" w-[21px] h-[21px]" />
 				</>
 			);
 			break;
-		case 'vicedecanato-de-investigacion-y-posgrado':
+		case 'cargo-2':
 			return (
 				<>
 					<ProbetaStroke className=" w-[21px] h-[21px]" />
 				</>
 			);
 			break;
-		case 'unidad-de-posgrado':
+		case 'cargo-3':
 			return (
 				<>
 					<MedallaSroke className=" w-[21px] h-[21px]" />

@@ -38,18 +38,21 @@ const Decanato = () => {
 						.
 					</p>
 					<p className="mb-1">
-						<span className="font-bold text-tertiary">Decano</span>
+						<span className="font-bold text-tertiary">
+							Director
+						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Profesor principal e investigador
+							Dr. Enrique Javier Cornejo Ramírez
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal, investigador y asesor de tesis.
-						<br />
-						Licenciado en Química por la UNMSM, magíster en Química
-						Inorgánica por la UNMSM y doctorado en Química por la
-						Universidad Técnica de Eslovaquia.
+						{/* Profesor principal, investigador y asesor de tesis. */}
+						{/* <br /> */}
+						Doctor en Ciencias Económicas, Licenciado en
+						administración, con maestría en Administración, maestría
+						en Ciencias en la Universidad de Tennessee. Es doctor en
+						Administración.
 					</p>
 					<p className="mb-5">
 						Lleva más de 40 años ejerciendo como docente
@@ -112,7 +115,7 @@ const Decanato = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/decano-quimica-unmsm-jorge-angulo.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/dr-cornejo.jpg"
 						width={209}
 						height={224}
 						quality={100}

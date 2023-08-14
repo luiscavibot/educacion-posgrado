@@ -115,25 +115,25 @@ const Autoridades = (
 			</div>
 			<div className="col-span-full mb-14">
 				<Tabs nombre="autoridades">
-					<div label="Consejo de facultad">
+					{/* <div label="Consejo de facultad">
 						<Consejo />
-					</div>
-					<div label="Decanato">
+					</div> */}
+					<div label="Director">
 						<Decanato />
 					</div>
-					<div label="Vicedecanato Académico">
+					<div label="Cargo 1">
 						<VicedecanatoAcademicoPregrado />
 					</div>
-					<div label="Vicedecanato de Investigación y Posgrado">
+					<div label="Cargo 2">
 						<VicedecanatoInvestigacionPosgrado />
 					</div>
-					<div label="Unidad de Posgrado">
+					<div label="Cargo 3">
 						<UnidadPosgrado />
 					</div>
 					{/* <div label="Instituto de Investigaciones">
 						<InstitutoInvestigacion />
 					</div> */}
-					<div label="Departamentos académicos">
+					{/* <div label="Departamentos académicos">
 						<DepartamentosAcademicos />
 					</div>
 					<div label="Escuelas profesionales">
@@ -141,7 +141,7 @@ const Autoridades = (
 					</div>
 					<div label="Dirección administrativa">
 						<DireccionAdministrativa />
-					</div>
+					</div> */}
 				</Tabs>
 			</div>
 
