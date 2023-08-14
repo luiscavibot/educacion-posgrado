@@ -58,7 +58,7 @@ const SubMenu = ({ theme, color }) => {
 							<Menu
 								slotProps={{
 									root: {
-										className: `z-10 max-w-[125px]`,
+										className: `z-20 max-w-[125px]`,
 									},
 									listbox: {
 										className:
@@ -67,16 +67,14 @@ const SubMenu = ({ theme, color }) => {
 								}}
 							>
 								<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-									<Link href="/nosotros/director-y-coordinadores">
-										<a
-											href="https://sum.unmsm.edu.pe/"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="hover:text-secondary py-2"
-										>
-											Sistema único de matrícula (SUM)
-										</a>
-									</Link>
+									<a
+										href="https://sum.unmsm.edu.pe/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:text-secondary py-2"
+									>
+										Sistema único de matrícula (SUM)
+									</a>
 								</MenuItem>
 								<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 									<a

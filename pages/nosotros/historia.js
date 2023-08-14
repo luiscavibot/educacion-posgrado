@@ -45,7 +45,7 @@ const Index = (
 				<div className="col-span-full mb-5">
 					<div className="mx-4 md:mx-0 col-span-full mb-4">
 						<div className="mb-8">
-							<div className="w-[394px] md:float-right mb-12 md:ml-6 max-md:mx-auto">
+							<div className="w-full max-w-[394px] md:w-[394px] md:float-right mb-12 md:ml-6 max-md:mx-auto">
 								<Image
 									src={
 										'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/imagen-historia.jpg'

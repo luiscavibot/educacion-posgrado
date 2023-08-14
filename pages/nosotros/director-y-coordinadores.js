@@ -92,11 +92,11 @@ const Autoridades = (
 					Nosotros
 				</li>
 				<li className="text-textColorOne font-bold inline">
-					<span>Directores y coordinadores</span>
+					<span>Director y coordinadores</span>
 				</li>
 			</ul>
 			<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
-				Directores y coordinadores
+				Director y coordinadores
 			</div>
 			<div className="col-span-full mb-5 ">
 				<div className="relative h-bannerMobile md:h-banner xl:h-auto">
