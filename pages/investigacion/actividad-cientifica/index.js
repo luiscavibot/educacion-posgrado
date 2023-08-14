@@ -245,30 +245,34 @@ const ActividadCientifica = () => {
 						</div>
 					)}
 					{selectedOption === 'DOCENTES_ASESORES' &&
-						['', '', '', '', '', '', '', '', '', ''].map(() => (
-							<div className="mb-8">
-								<p className="text-textColorOne font-bold mb-1">
-									Dr. Victor Chalco Flores
-								</p>
-								<p className="text-textColorTwo mb-2">
-									mvelazquezc@unmsm.edu.pe
-								</p>
-								<ul className="list-disc list-inside">
-									<li>
-										Ll-21: Administración Financiera - ODS
-										4: Educación de calidad
-									</li>
-									<li>
-										LI-122: Gestión Bancaria - ODS 9:
-										Industria, innovación e infraestructura
-									</li>
-									<li>
-										LI-123: Finanzas Corporativas - ODS 9:
-										Industria, innovación e infraestructura
-									</li>
-								</ul>
-							</div>
-						))}
+						['', '', '', '', '', '', '', '', '', ''].map(
+							(item, index) => (
+								<div className="mb-8" key={index}>
+									<p className="text-textColorOne font-bold mb-1">
+										Dr. Victor Chalco Flores
+									</p>
+									<p className="text-textColorTwo mb-2">
+										mvelazquezc@unmsm.edu.pe
+									</p>
+									<ul className="list-disc list-inside">
+										<li>
+											Ll-21: Administración Financiera -
+											ODS 4: Educación de calidad
+										</li>
+										<li>
+											LI-122: Gestión Bancaria - ODS 9:
+											Industria, innovación e
+											infraestructura
+										</li>
+										<li>
+											LI-123: Finanzas Corporativas - ODS
+											9: Industria, innovación e
+											infraestructura
+										</li>
+									</ul>
+								</div>
+							)
+						)}
 				</div>
 			</PrincipalLayout>
 		</>

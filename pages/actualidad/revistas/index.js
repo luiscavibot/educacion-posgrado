@@ -1,12 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 import InputText from '../../../components/shared/InputText';
 import CardsRevistasResultados from '../../../components/revistas/CardsRevistasResultados';
-import SelectorIntervalosFechas from '../../../components/noticias/SelectorIntervalosFechas';
 import PaginadorNoticias from '../../../components/noticias/PaginadorNoticias';
-import useNoticias from '../../../hooks/useNoticias';
 import useRevistas from '../../../hooks/useRevistas';
 
 const START_DATE = new Date();
