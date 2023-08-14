@@ -1,14 +1,23 @@
-.ui.accordion .title:not(.ui) {
+.preguntas-wrapper .ui.accordion .title:not(.ui) {
 	@apply py-3 pl-6 pr-6 cursor-pointer border border-complementaryOne rounded-lg mb-5 font-bold flex items-center justify-between;
+}
+
+.ui.accordion .title:not(.ui) {
+	@apply py-3 pl-6 pr-6 cursor-pointer rounded-lg mb-5 font-bold flex items-center justify-between;
 }
 
 .ui.accordion .accordion .content,
 .ui.accordion .content {
 	@apply pt-1 break-words hidden;
 }
+
 .ui.accordion .accordion .active.content,
 .ui.accordion .active.content {
 	@apply block mb-8 px-6;
+}
+
+.accordion-menu .active.content {
+	@apply !px-0;
 }
 
 .ui.accordion .accordion .title .icon-accordion svg,

@@ -56,7 +56,7 @@ const PreguntasFrecuentes = ({ ultimasNoticias }) => {
 				</div>
 
 				<div className="mx-4 md:mx-0 col-span-full lg:col-span-10 mb-4">
-					<div>
+					<div className="preguntas-wrapper">
 						<Accordion>
 							<Accordion.Title
 								active={activeIndex === 0}

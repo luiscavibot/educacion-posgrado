@@ -27,10 +27,11 @@ const SideBar = ({ interno }) => {
 			<nav
 				className={
 					sidebar
-						? 'bg-primary fixed z-20 flex h-10 -left-24 top-3 sm:top-4 md:top-20 items-center cursor-pointer justify-start px-4 md:px-5 shadow-xl text-blanco hover:brightness-110 duration-700 rounded-r-lg menu-bars'
-						: 'animate__animated animate__fadeInLeft bg-primary fixed z-20 flex h-10 left-0 top-3 sm:top-4 md:top-20 items-center cursor-pointer justify-start px-4 md:px-5 shadow-xl text-blanco hover:brightness-110 hover:scale-105 duration-700 rounded-r-lg menu-bars'
+						? 'bg-transparente fixed z-20 flex h-10 -left-24 top-7 md:top-16 items-center cursor-pointer justify-start px-4 md:px-5 text-blanco hover:brightness-110 duration-700 rounded-r-lg menu-bars'
+						: 'animate__animated animate__fadeInLeft bg-transparente fixed z-20 flex h-10 left-0 top-7 md:top-16 items-center cursor-pointer justify-start px-4 md:px-5 text-blanco hover:brightness-110 hover:scale-105 duration-700 rounded-r-lg menu-bars'
 				}
-				onClick={handleSidebar}>
+				onClick={handleSidebar}
+			>
 				<span className={interno ? 'text-blanco' : 'text-blanco'}>
 					<FaBars size={24} />
 				</span>
@@ -44,20 +45,23 @@ const SideBar = ({ interno }) => {
 							? 'bg-negroPuro cursor-pointer fixed z-20 inset-0 opacity-50 visible'
 							: ' opacity-0 hidden transition-opacity duration-1000'
 					}
-					onClick={handleSidebar}></div>
+					onClick={handleSidebar}
+				></div>
 				<div
 					className={
 						sidebar
-							? 'h-screen bg-tertiary md:bg-primary fixed inset-y-0 md:w-sidebarWidth w-full duration-300 transition-left z-30 left-0'
-							: 'h-screen bg-tertiary md:bg-primary fixed inset-y-0 w-64 duration-300 transition-left z-30 -left-80'
-					}>
+							? 'h-screen bg-secondary fixed inset-y-0 md:w-sidebarWidth w-full duration-300 transition-left z-30 left-0'
+							: 'h-screen bg-secondary fixed inset-y-0 w-64 duration-300 transition-left z-30 -left-80'
+					}
+				>
 					<button
-						className="absolute w-16 md:-right-16 right-5 h-12 flex justify-center items-center bg-primary text-blanco top-5 transition-brightness hover:scale-105 hover:brightness-110"
-						onClick={handleSidebar}>
+						className="absolute w-16 md:-right-16 right-5 h-12 flex justify-center items-center bg-secondary text-blanco top-5 transition-brightness hover:scale-105 hover:brightness-110"
+						onClick={handleSidebar}
+					>
 						<FaTimes />
 					</button>
 					<div className="overflow-y-auto h-full">
-						<div className="w-full pt-8 pb-4 bg-primary max-h-full">
+						<div className="w-full pt-8 pb-4 bg-secondary max-h-full">
 							<p className="text-blanco text-lg font-bold px-11">
 								Menú
 							</p>
@@ -74,7 +78,8 @@ const SideBar = ({ interno }) => {
 									<Accordion.Title
 										active={activeIndexAccordion === 0}
 										index={0}
-										onClick={changeAccordion}>
+										onClick={changeAccordion}
+									>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
 											<span>Admisión</span>
 										</div>
@@ -83,19 +88,34 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 0}>
+										active={activeIndexAccordion === 0}
+									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
 											<div onClick={handleSidebar}>
-												<Link href="/admision/pregrado">
+												<Link href="/admision?programa=diplomatura">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Pregrado
+														Diplomaturas
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/admision/posgrado">
+												<Link href="/admision?programa=maestria">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Posgrado
+														Maestrías
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/admision?programa=doctorado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Doctorado
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/admision?programa=posdoctorado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Posdoctorado
 													</a>
 												</Link>
 											</div>
@@ -106,36 +126,44 @@ const SideBar = ({ interno }) => {
 									<Accordion.Title
 										active={activeIndexAccordion === 1}
 										index={1}
-										onClick={changeAccordion}>
+										onClick={changeAccordion}
+									>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
-											<span>Formación</span>
-											<span>académica</span>
+											<span>Programas</span>
 										</div>
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-blanco" />
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 1}>
+										active={activeIndexAccordion === 1}
+									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
-											{/* <div onClick={handleSidebar}>
-												<Link href="/formacion-academica/admision">
-													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Admisión
-													</a>
-												</Link>
-											</div> */}
 											<div onClick={handleSidebar}>
-												<Link href="/formacion-academica/pregrado">
+												<Link href="/programas/diplomaturas">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Pregrado
+														Diplomaturas
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/formacion-academica/posgrado">
+												<Link href="/programas/maestrias">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Posgrado
+														Maestrías
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/programas/doctorado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Doctorado
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/programas/posdoctorado">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Posdoctorado
 													</a>
 												</Link>
 											</div>
@@ -146,29 +174,31 @@ const SideBar = ({ interno }) => {
 									<Accordion.Title
 										active={activeIndexAccordion === 2}
 										index={2}
-										onClick={changeAccordion}>
+										onClick={changeAccordion}
+									>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col font-bold">
-											<span>Noticias y</span>
-											<span>Eventos</span>
+											<span>Investigación</span>
 										</div>
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-blanco" />
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 2}>
+										active={activeIndexAccordion === 2}
+									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne font-bold">
 											<div onClick={handleSidebar}>
-												<Link href="/noticias">
+												<Link href="/investigacion/actividad-cientifica">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Noticias
+														Actividad científica
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/eventos">
+												<Link href="/investigacion/taller-tesis">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Eventos
+														Taller de tesis
+														(Maestrías)
 													</a>
 												</Link>
 											</div>
@@ -179,98 +209,162 @@ const SideBar = ({ interno }) => {
 									<Accordion.Title
 										active={activeIndexAccordion === 3}
 										index={3}
-										onClick={changeAccordion}>
+										onClick={changeAccordion}
+									>
 										<span className="font-bold">
-											Nosotros
+											Comunidad
 										</span>
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-blanco" />
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 3}>
+										active={activeIndexAccordion === 3}
+									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne ">
 											<div onClick={handleSidebar}>
-												<Link href="/nosotros/autoridades-y-organos">
+												<Link href="/nosotros/informacion-academica">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Autoridades y órganos de
-														gobierno
+														Información académica
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/transparencia">
+												<Link href="/nosotros/plana-docente">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Transparencia
+														Plana docente
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/nosotros/seguimiento-egresados">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Seguimiento de egresados
 													</a>
 												</Link>
 											</div>
 										</div>
 									</Accordion.Content>
 								</>
-							</Accordion>
-						</div>
-						<div className="bg-tertiary w-full pt-4 block md:hidden">
-							<Link href="/tramites">
-								<a className="block py-[10px] px-11 text-blanco">
-									Trámites
-								</a>
-							</Link>
-							<Accordion className="accordion-menu font-bold">
 								<>
 									<Accordion.Title
 										active={activeIndexAccordion === 4}
 										index={4}
-										onClick={changeAccordion}>
-										<div className="flex gap-x-1 md:gap-x-0 md:flex-col text-blanco">
-											<span>Información académica</span>
-										</div>
+										onClick={changeAccordion}
+									>
+										<span className="font-bold">
+											Actualidad
+										</span>
 										<div className="icon-accordion">
 											<FlechaAbajo className="fill-blanco" />
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 4}>
-										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
+										active={activeIndexAccordion === 4}
+									>
+										<div className="mb-0 py-[10px] bg-blanco text-textColorOne ">
 											<div onClick={handleSidebar}>
-												<Link href="/informacion-academica/pregrado">
+												<Link href="/actualidad/agenda-publica">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Pregrado
+														Agenda pública
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/informacion-academica/posgrado">
+												<Link href="/actualidad/eventos">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Posgrado
+														Eventos
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<span className="text-textColorOne/20 inline-flex items-center py-[10px] px-11 transition w-full">
-													Docentes
-												</span>
+												<Link href="/actualidad/revistas">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Revistas
+													</a>
+												</Link>
+											</div>
+											<div onClick={handleSidebar}>
+												<Link href="/actualidad/comunicados">
+													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+														Comunicados
+													</a>
+												</Link>
 											</div>
 										</div>
 									</Accordion.Content>
+
+									<>
+										<Accordion.Title
+											active={activeIndexAccordion === 5}
+											index={5}
+											onClick={changeAccordion}
+										>
+											<span className="font-bold">
+												Nosotros
+											</span>
+											<div className="icon-accordion">
+												<FlechaAbajo className="fill-blanco" />
+											</div>
+										</Accordion.Title>
+										<Accordion.Content
+											active={activeIndexAccordion === 5}
+										>
+											<div className="mb-0 py-[10px] bg-blanco text-textColorOne ">
+												<div onClick={handleSidebar}>
+													<Link href="/nosotros/director-y-coordinadores">
+														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+															Director y
+															coordinadores
+														</a>
+													</Link>
+												</div>
+												<div onClick={handleSidebar}>
+													{/* <Link href="/actualidad/eventos"> */}
+													<a
+														href="#"
+														target="_blank"
+														rel="noopener noreferrer"
+														className="inline-flex items-center py-[10px] px-11 transition w-full"
+													>
+														Acreditación ACBSP
+													</a>
+													{/* </Link> */}
+												</div>
+												<div onClick={handleSidebar}>
+													<Link href="/nosotros/historia">
+														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+															Historia
+														</a>
+													</Link>
+												</div>
+												<div onClick={handleSidebar}>
+													<Link href="/nosotros/transparencia">
+														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
+															Transparencia
+														</a>
+													</Link>
+												</div>
+											</div>
+										</Accordion.Content>
+									</>
 								</>
 							</Accordion>
-							<Link href="/transparencia">
+						</div>
+						<div className="bg-secondary w-full pt-4 block md:hidden">
+							<Link href="/tramites">
 								<a className="block py-[10px] px-11 text-blanco">
-									Transparencia
+									Trámites
 								</a>
 							</Link>
-							<Link href="/directorio">
-								<a className="block py-[10px] px-11 text-blanco">
-									Directorio
-								</a>
-							</Link>
+
 							<Accordion className="accordion-menu font-bold">
 								<>
 									<Accordion.Title
-										active={activeIndexAccordion === 5}
-										index={5}
-										onClick={changeAccordion}>
+										active={activeIndexAccordion === 6}
+										index={6}
+										onClick={changeAccordion}
+									>
 										<div className="flex gap-x-1 md:gap-x-0 md:flex-col text-blanco">
 											<span>Intranet</span>
 										</div>
@@ -279,15 +373,18 @@ const SideBar = ({ interno }) => {
 										</div>
 									</Accordion.Title>
 									<Accordion.Content
-										active={activeIndexAccordion === 5}>
+										active={activeIndexAccordion === 6}
+									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
 											<div onClick={handleSidebar}>
 												<a
 													href="https://mail.google.com/mail/u/1/?pli=1#inbox"
 													rel="noopener noreferrer"
 													target={'_blank'}
-													className="inline-flex items-center py-[10px] px-11 transition w-full">
-													Correo institucional
+													className="inline-flex items-center py-[10px] px-11 transition w-full"
+												>
+													Sistema único de matrícula
+													(SUM)
 												</a>
 											</div>
 											<div onClick={handleSidebar}>
@@ -295,18 +392,19 @@ const SideBar = ({ interno }) => {
 													href="https://sum.unmsm.edu.pe/"
 													rel="noopener noreferrer"
 													target={'_blank'}
-													className="inline-flex items-center py-[10px] px-11 transition w-full">
-													Sistema único de matrícula
-													(SUM)
+													className="inline-flex items-center py-[10px] px-11 transition w-full"
+												>
+													MAT
 												</a>
 											</div>
 											<div onClick={handleSidebar}>
 												<a
-													href="http://campus.farmacia.unmsm.edu.pe/"
+													href="#"
 													rel="noopener noreferrer"
 													target={'_blank'}
-													className="inline-flex items-center py-[10px] px-11 transition w-full">
-													Aula virtual (OEV)
+													className="inline-flex items-center py-[10px] px-11 transition w-full"
+												>
+													Aula virtual
 												</a>
 											</div>
 										</div>
@@ -315,9 +413,9 @@ const SideBar = ({ interno }) => {
 							</Accordion>
 							<div>
 								<RedesSocialesHome
-									className="text-lg mt-12 mb-8 flex items-center justify-center"
-									facebook="https://www.facebook.com/fqiq.unmsm.1946"
-									// youtube="https://www.youtube.com/@UNMSMFarmacia"
+									className="text-lg mt-12 mb-8 flex gap-4 items-center justify-center"
+									facebook="https://www.facebook.com/upg.administracion"
+									youtube="https://www.youtube.com/c/fcaunmsm"
 									// twitter="https://twitter.com/UNMSMFarmacia"
 									// instagram="https://www.instagram.com/unmsmfarmacia/"
 								/>
