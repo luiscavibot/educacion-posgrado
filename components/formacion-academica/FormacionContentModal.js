@@ -143,7 +143,7 @@ const FormacionContentModal = ({
 											información sobre sus programas
 											académicos.
 											<a
-												href="https://cdn.www.gob.pe/uploads/document/file/4332652/proteccion-datos-facultad-pregrado-ingenieria-quimica_c.pdf?v=1680009060"
+												href="https://cdn.www.gob.pe/uploads/document/file/4826817/pol%C3%ADtica-protecci%C3%B3n-datos-posgrado-ciencias-administrativas.pdf?v=1689111721"
 												target="_blank"
 												rel="noreferrer"
 												className="text-secondary hover:text-secondary-hover"
