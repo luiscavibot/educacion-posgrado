@@ -11,6 +11,7 @@ import SharedComponent from '../../SharedComponent';
 import Boton from '../../Boton';
 
 export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
+	console.log(tipo);
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -580,7 +581,7 @@ export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
 			render: () => (
 				<Tab.Pane attached={false}>
 					<div className="overflow-x-auto mb-2">
-						{asignaturasElectivo?.length > 0 ? (
+						{electivos?.length > 0 ? (
 							<table className="table table-striped mb-4">
 								<thead>
 									<tr>
@@ -591,7 +592,7 @@ export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
 									</tr>
 								</thead>
 								<tbody>
-									{asignaturasElectivo.map((asignatura) => {
+									{electivos.map((asignatura) => {
 										// totalCreditos3 +=
 										// 	asignatura.credito;
 										return (
@@ -603,14 +604,12 @@ export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
 											</tr>
 										);
 									})}
-									{/* <tr key="total">
+									<tr key="total">
 										<td>Total de créditos</td>
 										<td className="text-center">
-											{totalCreditosElectivos(
-												asignaturas
-											)}
+											{totalCreditosElectivos(electivos)}
 										</td>
-									</tr> */}
+									</tr>
 								</tbody>
 							</table>
 						) : (
@@ -781,7 +780,11 @@ export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
 				{tipo !== 'DIPLOMATURA' ? (
 					<Tab
 						menu={{ secondary: true, pointing: true }}
-						panes={tabs_dos_anios}
+						panes={
+							tipo !== 'DOCTORADO'
+								? tabs_dos_anios
+								: tabs_tres_anios
+						}
 						onTabChange={(e, data) => {
 							let activeIndex = data.activeIndex;
 

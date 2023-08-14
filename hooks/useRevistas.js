@@ -2,21 +2,19 @@ import { useState, useEffect } from 'react';
 import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
 
 const INITIAL_PAGE = 0;
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 10;
 
-export default function useRevistas(
-	entradaBusqueda,
-	startDate,
-	endDate,
-	START_DATE,
-	END_DATE
-) {
+export default function useRevistas(searchParams) {
 	const [totalPaginas, setTotalPaginas] = useState(null);
 	const [revistas, setRevistas] = useState(null);
 	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
 		setRevistas(null);
-		let url = `${BACKEND}/revistas?publicado=true&limit=${PAGE_SIZE}&sort=fecha:DESC`;
+		const { keyWords, ...checks } = searchParams;
+		let url = `${BACKEND}/revistas?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
+		if (keyWords !== '') {
+			url += `&busqueda=${keyWords}`;
+		}
 		// url += `&pagination[pageSize]=${PAGE_SIZE}&sort=fecha%3Adesc`;
 
 		// let filtroStartDate = `&filters[fecha][$gte]=${START_DATE.getTime()}`;
@@ -35,17 +33,18 @@ export default function useRevistas(
 		// 	filtroEndDate = '';
 		// }
 		// url += filtroStartDate + filtroEndDate;
-		url += `&busqueda=${entradaBusqueda}`;
 		const fetchData = async () => {
 			let response = await fetch(url);
+			console.log(url);
 			let res = await response.json();
+			console.log(res);
 			setTotalPaginas(res.meta.totalPages);
 			setRevistas(res.items);
 			window.scrollTo(0, 0);
 		};
 		fetchData().catch(console.error);
 		// }, [entradaBusqueda, page, startDate, endDate]);
-	}, [entradaBusqueda]);
+	}, [searchParams, page]);
 	return {
 		revistas,
 		setPage,

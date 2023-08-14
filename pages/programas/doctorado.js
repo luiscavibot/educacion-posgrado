@@ -7,12 +7,6 @@ import Modal from '@mui/material/Modal';
 import { Tabs } from '../../components/shared/Tabs';
 import Boton from '../../components/shared/Boton';
 
-import UserCardIcon from '../../components/icons/UserCardIcon';
-import CorreoIcon from '../../components/icons/CorreoIcon';
-import DocumentCheckIcon from '../../components/icons/DocumentCheckIcon';
-
-import { UltimasNoticias } from '../../components/shared/programas/UltimasNoticias';
-import { BASE_URL, POSGRADO_URL, SLUG_CARRERA } from '../../config/consts';
 import { MallaCurricular } from '../../components/shared/programas/posgrado-component/MallaCurricular';
 import { InversionEconomica } from '../../components/shared/programas/InversionEconomica';
 

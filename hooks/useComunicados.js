@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
 
 const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
@@ -12,7 +12,7 @@ export default function Comunicados(searchParams) {
 		setComunicados(null);
 		const { keyWords } = searchParams;
 
-		let url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/comunicados/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}?estado=true&limit=${PAGE_SIZE}&page=${page}`;
+		let url = `${BACKEND}/comunicados?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
 		if (keyWords !== '') {
 			url += `&busqueda=${keyWords}`;
 		}

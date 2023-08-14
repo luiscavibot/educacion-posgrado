@@ -118,7 +118,7 @@ const Index = ({ ultimasNoticias }) => {
 							onChange={handleChange}
 							placeholder="Buscar por palabra clave"
 							conIconoBuscador
-							className="w-full md:w-[14rem] inline-block mb-4"
+							className="w-full md:w-[20rem] inline-block mb-4"
 							backgroundClass="bg-textColorTwo/5"
 						/>
 						<div className="max-md:flex max-md:justify-center">
