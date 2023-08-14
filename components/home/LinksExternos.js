@@ -52,17 +52,14 @@ const LinksExternos = () => {
 							</a>
 						</Link>
 
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer"
-						>
-							<div>
-								<LibroCintaStroke2 className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-11" />
-							</div>
-							<p className="text-blanco text-lg">Publicaciones</p>
-						</a>
+						<Link href="/actualidad/revistas">
+							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
+								<div>
+									<LibroCintaStroke2 className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-11" />
+								</div>
+								<p className="text-blanco text-lg">Revistas</p>
+							</a>
+						</Link>
 
 						<Link href="/blog-gestion-publica">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">

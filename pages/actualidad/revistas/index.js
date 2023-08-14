@@ -7,6 +7,7 @@ import CardsRevistasResultados from '../../../components/revistas/CardsRevistasR
 import SelectorIntervalosFechas from '../../../components/noticias/SelectorIntervalosFechas';
 import PaginadorNoticias from '../../../components/noticias/PaginadorNoticias';
 import useNoticias from '../../../hooks/useNoticias';
+import useRevistas from '../../../hooks/useRevistas';
 
 const START_DATE = new Date();
 START_DATE.setMonth(START_DATE.getMonth() - 12);
@@ -21,7 +22,7 @@ const Revistas = () => {
 	const [startDate, setStartDate] = useState(START_DATE);
 	const [endDate, setEndDate] = useState(END_DATE);
 
-	const { noticias, setPage, page, totalPaginas, INITIAL_PAGE } = useNoticias(
+	const { revistas, setPage, page, totalPaginas, INITIAL_PAGE } = useRevistas(
 		entradaBusqueda,
 		startDate,
 		endDate,
@@ -84,10 +85,10 @@ const Revistas = () => {
 					placeholder="Buscar por palabra clave"
 					onKeyDown={handleKeyDown}
 					conIconoBuscador
-					className="w-full md:w-[14rem] inline-block mb-4 md:mb-0"
+					className="w-full md:w-[20rem] inline-block mb-4 md:mb-0"
 					backgroundClass="bg-gris"
 				/>
-				<SelectorIntervalosFechas
+				{/* <SelectorIntervalosFechas
 					controles={[
 						endDate,
 						setEndDate,
@@ -96,7 +97,7 @@ const Revistas = () => {
 						setPage,
 						INITIAL_PAGE,
 					]}
-				/>
+				/> */}
 				<div className="flex items-center mt-8 md:mt-0">
 					<PaginadorNoticias
 						controles={[page, setPage, totalPaginas]}
@@ -106,7 +107,7 @@ const Revistas = () => {
 				)} */}
 			</div>
 			<div className="col-span-full mb-2 min-h-0 md:min-h-[554px]">
-				<CardsRevistasResultados revistas={noticias} />
+				<CardsRevistasResultados revistas={revistas} />
 			</div>
 		</PrincipalLayout>
 	);

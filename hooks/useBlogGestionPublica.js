@@ -13,7 +13,7 @@ export default function useBlogGestionPublica(searchParams) {
 		const { keyWords } = searchParams;
 		let url = `${BACKEND}/blog-gestion-publica?publicado=true`;
 		if (keyWords !== '') {
-			url += `&query=${keyWords}`;
+			url += `&busqueda=${keyWords}`;
 		}
 		console.log(url);
 		// let url = `${BACKEND}/blog-gestion-publica?publicado=true`;
