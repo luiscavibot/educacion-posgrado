@@ -4,14 +4,15 @@ import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
 const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
 
-export default function useRevistas(searchParams) {
+export default function useAgendaPublica(searchParams) {
 	const [totalPaginas, setTotalPaginas] = useState(null);
-	const [revistas, setRevistas] = useState(null);
+	const [agenda, setAgenda] = useState(null);
 	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
-		setRevistas(null);
-		const { keyWords, ...checks } = searchParams;
-		let url = `${BACKEND}/revistas?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
+		setAgenda(null);
+		const { keyWords } = searchParams;
+
+		let url = `${BACKEND}/agenda-publica?publicado=true&limit=${PAGE_SIZE}&sort=fecha:DESC`;
 		if (keyWords !== '') {
 			url += `&busqueda=${keyWords}`;
 		}
@@ -33,20 +34,19 @@ export default function useRevistas(searchParams) {
 		// 	filtroEndDate = '';
 		// }
 		// url += filtroStartDate + filtroEndDate;
+		url += `&page=${page}`;
 		const fetchData = async () => {
 			let response = await fetch(url);
-			console.log(url);
 			let res = await response.json();
-			console.log(res);
 			setTotalPaginas(res.meta.totalPages);
-			setRevistas(res.items);
+			setAgenda(res.items);
 			window.scrollTo(0, 0);
 		};
 		fetchData().catch(console.error);
 		// }, [entradaBusqueda, page, startDate, endDate]);
-	}, [searchParams, page]);
+	}, [page, searchParams]);
 	return {
-		revistas,
+		agenda,
 		setPage,
 		page,
 		totalPaginas,

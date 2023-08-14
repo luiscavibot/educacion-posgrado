@@ -11,6 +11,7 @@ import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../../components/shared/SharedComponent';
 import VerMasIcon from '../../../components/icons/VerMasIcon';
 import EntradaFijaIcon from '../../../components/icons/EntradaFijaIcon';
+import { BACKEND } from '../../../config/consts';
 
 const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/comunicados/${comunicado.id}`;
@@ -196,7 +197,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 };
 export async function getServerSideProps({ params }) {
 	const resComunicado = await fetch(
-		`${process.env.BACKEND_URL}/comunicados/id/${params.comunicado}?estado=true`
+		`${BACKEND}/comunicados/id/${params.comunicado}?publicado=true`
 	);
 	const comunicado = await resComunicado.json();
 	// const resNoticiasRelacionadas = await fetch(

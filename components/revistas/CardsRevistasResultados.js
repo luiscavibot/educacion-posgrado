@@ -7,7 +7,6 @@ import Cargando from '../resultados/Cargando';
 import DocumentosFillIcon from '../icons/DocumentosFillIcon';
 
 const CardsRevistasResultados = ({ revistas }) => {
-	console.log(revistas);
 	return (
 		<>
 			{revistas ? (
@@ -15,7 +14,7 @@ const CardsRevistasResultados = ({ revistas }) => {
 					revistas.map((revista) => (
 						<a
 							key={revista.slug}
-							href="#"
+							href={revista.archivo}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="group min-h-[6.2rem] md:min-h-[8.4rem] animate__animated animate__fadeIn mb-6 md:mb-10 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105"

@@ -5,18 +5,19 @@ import { getFecha } from '../../helpers/getFecha';
 import Link from 'next/link';
 import Cargando from '../resultados/Cargando';
 
-const CardsNoticiasResultados = ({ noticias }) => {
+const CardsNoticiasResultados = ({ agendas }) => {
+	console.log(agendas);
 	return (
 		<>
-			{noticias ? (
-				noticias.length > 0 ? (
-					noticias.map((noticia) => (
+			{agendas ? (
+				agendas.length > 0 ? (
+					agendas.map((agenda) => (
 						<Link
-							key={noticia.slug}
-							href={`/actualidad/agenda-publica/${noticia.slug}`}
+							key={agenda.slug}
+							href={`/actualidad/agenda-publica/${agenda.slug}`}
 						>
 							<a
-								key={noticia.titulo}
+								key={agenda.titulo}
 								className="group min-h-[6.2rem] md:min-h-[8.4rem] animate__animated animate__fadeIn mb-6 md:mb-10 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105"
 							>
 								<div className="relative w-full max-w-[188px] hidden md:block">
@@ -24,8 +25,8 @@ const CardsNoticiasResultados = ({ noticias }) => {
 										layout="fill"
 										objectFit="cover"
 										src={
-											noticia.foto
-												? `${noticia.foto}`
+											agenda.foto
+												? `${agenda.foto}`
 												: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
 										}
 									/>
@@ -34,16 +35,16 @@ const CardsNoticiasResultados = ({ noticias }) => {
 									<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
 										<BiTimeFive />
 										<p className="ml-1">
-											{getFecha(noticia.fecha)}
+											{getFecha(agenda.fecha)}
 										</p>
 									</div>
 									<div className="mt-[6px] md:mt-0 order-1 md:order-2">
 										<p className="text-base font-bold leading-6 text-negro group-hover:text-secondary transition duration-300">
-											{noticia.titulo}
+											{agenda.titulo}
 										</p>
 										<div className="hidden md:block">
 											<p className="line-clamp-2">
-												{noticia.resumen}
+												{agenda.resumen}
 											</p>
 										</div>
 									</div>

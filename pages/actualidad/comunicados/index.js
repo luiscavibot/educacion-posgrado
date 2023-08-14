@@ -2,9 +2,6 @@ import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
-import InfoAcademicaPregradoIcon from '../../../components/icons/InfoAcademicaPregradoIcon';
-import InfoAcademicaPosgradoIcon from '../../../components/icons/InfoAcademicaPosgradoIcon';
-import InfoAcademicaDocentesIcon from '../../../components/icons/InfoAcademicaDocentesIcon';
 
 import { BiTimeFive } from 'react-icons/bi';
 import { getFecha } from '../../../helpers/getFecha';

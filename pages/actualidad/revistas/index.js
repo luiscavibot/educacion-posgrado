@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
@@ -12,32 +12,31 @@ START_DATE.setMonth(START_DATE.getMonth() - 12);
 START_DATE.setHours(0, 0, 0, 0);
 const END_DATE = new Date();
 END_DATE.setHours(23, 59, 59, 999);
+const INITIAL_INPUTS = {
+	keyWords: '',
+};
 
 const Revistas = () => {
-	// const noticiasRef = useRef(null);
-	const [input, setInput] = useState('');
-	const [entradaBusqueda, setEntradaBusqueda] = useState('');
-	const [startDate, setStartDate] = useState(START_DATE);
-	const [endDate, setEndDate] = useState(END_DATE);
-
-	const { revistas, setPage, page, totalPaginas, INITIAL_PAGE } = useRevistas(
-		entradaBusqueda,
-		startDate,
-		endDate,
-		START_DATE,
-		END_DATE
-	);
-
-	const handleKeyDown = (e) => {
-		setInput(e.target.value);
-		if (e.target.value === '') {
-			setEntradaBusqueda('');
-		}
-		if (e.key === 'Enter') {
-			setEntradaBusqueda(e.target.value);
-			setPage(INITIAL_PAGE);
-		}
+	const debounceRef = useRef(null);
+	const [inputs, setInputs] = useState(INITIAL_INPUTS);
+	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
+	const { revistas, setPage, page, totalPaginas, INITIAL_PAGE } =
+		useRevistas(searchParams);
+	const handleChange = (e) => {
+		setPage(0);
+		setInputs({
+			...inputs,
+			keyWords: e.target.value,
+		});
+		if (debounceRef.current) clearTimeout(debounceRef.current);
+		debounceRef.current = setTimeout(() => {
+			setSearchParams({
+				...searchParams,
+				keyWords: e.target.value,
+			});
+		}, 500);
 	};
+
 	return (
 		<PrincipalLayout>
 			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
@@ -78,13 +77,13 @@ const Revistas = () => {
 					/>
 				</div> */}
 				<InputText
-					value={input}
-					onChange={handleKeyDown}
+					value={inputs.keyWords}
+					name="buscador"
+					onChange={handleChange}
 					placeholder="Buscar por palabra clave"
-					onKeyDown={handleKeyDown}
 					conIconoBuscador
-					className="w-full md:w-[20rem] inline-block mb-4 md:mb-0"
-					backgroundClass="bg-gris"
+					className="w-full md:w-[14rem] inline-block mb-4"
+					backgroundClass="bg-textColorTwo/5"
 				/>
 				{/* <SelectorIntervalosFechas
 					controles={[
