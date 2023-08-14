@@ -223,21 +223,21 @@ const SideBar = ({ interno }) => {
 									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne ">
 											<div onClick={handleSidebar}>
-												<Link href="/nosotros/informacion-academica">
+												<Link href="/comunidad/informacion-academica">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Información académica
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/nosotros/plana-docente">
+												<Link href="/comunidad/plana-docente">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Plana docente
 													</a>
 												</Link>
 											</div>
 											<div onClick={handleSidebar}>
-												<Link href="/nosotros/seguimiento-egresados">
+												<Link href="/comunidad/seguimiento-egresados">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Seguimiento de egresados
 													</a>
