@@ -8,6 +8,7 @@ import { AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
 import UbicacionStroke from './../icons/UbicacionStroke';
 import TelefonoStroke from './../icons/TelefonoStroke';
 import Logo from '../icons/Logo';
+import AsideSocialNetworks from './AsideSocialNetworks';
 
 const FooterComponent = ({ inHome }) => {
 	return (

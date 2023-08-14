@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
-import { AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
+import { FaFacebookF, FaTiktok, FaTwitter } from 'react-icons/fa';
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 
 export default function RedesSocialesHome({
 	facebook = '',
@@ -9,6 +9,8 @@ export default function RedesSocialesHome({
 	twitter = '',
 	youtube = '',
 	className = '',
+	linkedin = '',
+	tiktok = '',
 }) {
 	return (
 		<div className={className}>
@@ -57,6 +59,30 @@ export default function RedesSocialesHome({
 				>
 					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillInstagram />
+					</button>
+				</a>
+			)}
+			{linkedin && (
+				<a
+					href={linkedin}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+						<AiFillLinkedin />
+					</button>
+				</a>
+			)}
+			{tiktok && (
+				<a
+					href={tiktok}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline"
+				>
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-blanco bg-transparente rounded-md outline outline-1 outline-blanco p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+						<FaTiktok />
 					</button>
 				</a>
 			)}
