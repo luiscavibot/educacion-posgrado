@@ -1,0 +1,34 @@
+svg.transmitiendo .live1 {
+	animation: live1 1.3s linear infinite;
+}
+svg.transmitiendo .live2 {
+	animation: live2 1.3s linear infinite;
+}
+@keyframes live1 {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes live2 {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	85% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
