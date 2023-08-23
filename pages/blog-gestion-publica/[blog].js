@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/future/image';
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
@@ -10,9 +10,11 @@ import CompartirIcon from '../../components/icons/CompartirIcon';
 import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../components/shared/SharedComponent';
 import VerMasIcon from '../../components/icons/VerMasIcon';
-import { BACKEND } from '../../config/consts';
+import { useRouter } from 'next/router';
+import useBlogGestionPublica from '../../hooks/useBlogGestionPublica';
+import dynamic from 'next/dynamic';
 
-const Blog = ({ blog, otrosBlog }) => {
+const Blog = () => {
 	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
 	// const metaTags = {
 	// 	title: noticia.titulo,
@@ -23,134 +25,148 @@ const Blog = ({ blog, otrosBlog }) => {
 	// 	ogImage: noticia.foto,
 	// 	ogDescription: noticia.resumen,
 	// };
+	const router = useRouter();
+	useEffect(() => {
+		if (router.isReady) {
+			setSearchParams((slug) => ({ ...slug, slug: router.query.blog }));
+		}
+	}, [router]);
 
+	const [searchParams, setSearchParams] = useState({
+		keyWords: null,
+		slug: null,
+	});
+
+	const {
+		blogGestionPublica: blog,
+		isLoading,
+		otrosBlog,
+		error,
+	} = useBlogGestionPublica(searchParams);
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
-	return (
-		<PrincipalLayout>
-			{!blog ? (
+
+	if (isLoading)
+		return (
+			<PrincipalLayout>
 				<div className="col-span-full mt-10 grid place-items-center h-[60vh]">
 					<Cargando />
 				</div>
-			) : (
-				<>
-					<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
-						<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/">
-								<a>Inicio</a>
-							</Link>
-						</li>
-						{/* <li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
-							Blog de Gestión Pública
-						</li> */}
-						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
-							<Link href="/blog-gestion-publica">
-								<a>Blog de Gestión Pública</a>
-							</Link>
-						</li>
-						<li className="text-textColorOne font-bold inline">
-							{blog.titulo}
-						</li>
-					</ul>
-					<div className="mx-4 md:mx-0 col-span-full title-page mb-4">
-						{blog.titulo}
-					</div>
-					<div className="mx-4 md:mx-0 col-span-full mb-4">
-						<div className="text-grisTenue text-xs flex justify-start items-center">
-							<BiTimeFive />
-							<p className="ml-1">{getFecha(blog.fecha)}</p>
-						</div>
-					</div>
-					<div className="mx-4 md:mx-0 col-span-full">
-						<div className="relative max-w-full w-[502px] h-56 md:h-[335px] m-auto">
-							<Image
-								quality={100}
-								src={blog.foto}
-								width={502}
-								height={335}
-								className="object-cover w-full h-full"
-							/>
-						</div>
-						{blog.pie_foto && (
-							<div className="mt-3 text-center text-textColorTwo text-xs max-w-full w-[502px] m-auto">
-								{blog.pie_foto}
-							</div>
-						)}
-					</div>
-					<div
-						className="mx-4 md:mx-0 col-span-10 col-start-2 mt-5 mb-5 html-default"
-						dangerouslySetInnerHTML={{ __html: blog.cuerpo }}
+			</PrincipalLayout>
+		);
+
+	if (error) return <PrincipalLayout>Error: {error.message}</PrincipalLayout>;
+
+	return (
+		<PrincipalLayout>
+			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
+				<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
+					<Link href="/">
+						<a>Inicio</a>
+					</Link>
+				</li>
+				<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
+					<Link href="/blog-gestion-publica">
+						<a>Blog de Gestión Pública</a>
+					</Link>
+				</li>
+				<li className="text-textColorOne font-bold inline">
+					{blog.titulo}
+				</li>
+			</ul>
+			<div className="mx-4 md:mx-0 col-span-full title-page mb-4">
+				{blog.titulo}
+			</div>
+			<div className="mx-4 md:mx-0 col-span-full mb-4">
+				<div className="text-grisTenue text-xs flex justify-start items-center">
+					<BiTimeFive />
+					<p className="ml-1">{getFecha(blog.fecha)}</p>
+				</div>
+			</div>
+			<div className="mx-4 md:mx-0 col-span-full">
+				<div className="relative max-w-full w-[502px] h-56 md:h-[335px] m-auto">
+					<Image
+						quality={100}
+						src={blog.foto}
+						width={502}
+						height={335}
+						className="object-cover w-full h-full"
+						alt={blog.titulo}
 					/>
-					<div className="col-span-full mb-10 mx-4 md:mx-0">
-						<div className="flex justify-end">
-							<Boton onClick={handleOpen}>
-								<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
-								<span className="font-semibold">Compartir</span>
-							</Boton>
+				</div>
+				{blog.pie_foto && (
+					<div className="mt-3 text-center text-textColorTwo text-xs max-w-full w-[502px] m-auto">
+						{blog.pie_foto}
+					</div>
+				)}
+			</div>
+			<div
+				className="mx-4 md:mx-0 col-span-10 col-start-2 mt-5 mb-5 html-default"
+				dangerouslySetInnerHTML={{ __html: blog.cuerpo }}
+			/>
+			<div className="col-span-full mb-10 mx-4 md:mx-0">
+				<div className="flex justify-end">
+					<Boton onClick={handleOpen}>
+						<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
+						<span className="font-semibold">Compartir</span>
+					</Boton>
+				</div>
+			</div>
+			{otrosBlog && (
+				<>
+					<div className="col-span-full mx-4 md:mx-0">
+						<div>
+							<div className="flex items-center gap-x-3 mb-9">
+								<h2 className="font-bold text-textColorOne">
+									Otras entradas
+								</h2>
+								<Link href="/blog-gestion-publica" passHref>
+									<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
+										<div className="w-3 inline-block">
+											<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
+										</div>
+									</a>
+								</Link>
+							</div>
 						</div>
 					</div>
-					{otrosBlog && (
-						<>
-							<div className="col-span-full mx-4 md:mx-0">
-								<div>
-									<div className="flex items-center gap-x-3 mb-9">
-										<h2 className="font-bold text-textColorOne">
-											Otras entradas
-										</h2>
-										<Link
-											href="/blog-gestion-publica"
-											passHref
-										>
-											<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">
-												<div className="w-3 inline-block">
-													<VerMasIcon className="fill-primary group-hover:fill-blanco transition-colors duration-300 h-full" />
-												</div>
-											</a>
-										</Link>
-									</div>
-								</div>
-							</div>
-							<div className="col-span-full mb-14">
-								<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
-									{otrosBlog.map((blog) => (
-										<Link
-											key={blog.id}
-											href={`/blog-gestion-publica/${blog.slug}`}
-										>
-											<a
-												href="#"
-												className="card !rounded-t-none"
-											>
-												<div className="h-[220px] hidden md:block relative w-full">
-													<Image
-														alt={blog.titulo}
-														src={`${blog.foto}`}
-														width={502}
-														height={335}
-														className="object-cover h-full w-full"
-													/>
-												</div>
-												<div className="text-content">
-													<p className="title break-words line-clamp-2">
-														{blog.titulo}
-													</p>
-													<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
-														<BiTimeFive />
-														<p className="ml-1">
-															{getFecha(
-																blog.fecha
-															)}
-														</p>
-													</div>
-												</div>
-											</a>
-										</Link>
-									))}
-								</div>
-							</div>
-						</>
-					)}
+					<div className="col-span-full mb-14">
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
+							{otrosBlog.map((blog) => (
+								<Link
+									key={blog.id}
+									href={`/blog-gestion-publica/${blog.slug}`}
+								>
+									<a
+										href="#"
+										className="card !rounded-t-none"
+									>
+										<div className="h-[220px] hidden md:block relative w-full">
+											<Image
+												alt={blog.titulo}
+												src={`${blog.foto}`}
+												width={502}
+												height={335}
+												className="object-cover h-full w-full"
+											/>
+										</div>
+										<div className="text-content">
+											<p className="title break-words line-clamp-2">
+												{blog.titulo}
+											</p>
+											<div className="text-textColorTwo/50 text-xs mt-2 flex justify-start items-center">
+												<BiTimeFive />
+												<p className="ml-1">
+													{getFecha(blog.fecha)}
+												</p>
+											</div>
+										</div>
+									</a>
+								</Link>
+							))}
+						</div>
+					</div>
 				</>
 			)}
 			<Modal
@@ -188,23 +204,4 @@ const Blog = ({ blog, otrosBlog }) => {
 		</PrincipalLayout>
 	);
 };
-export async function getServerSideProps({ params }) {
-	const resBlog = await fetch(
-		`${BACKEND}/blog-gestion-publica/url/${params.blog}`
-	);
-	const blog = await resBlog.json();
-
-	const resOtrosBlog = await fetch(
-		`${BACKEND}/blog-gestion-publica/ultimas?id=${blog[0].id}`
-	);
-	const otrosBlog = await resOtrosBlog.json();
-
-	return {
-		props: {
-			blog: blog[0],
-			otrosBlog,
-		},
-	};
-}
-
 export default Blog;

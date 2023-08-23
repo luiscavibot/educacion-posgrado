@@ -1,33 +1,54 @@
-import { useState, useEffect } from 'react';
-import { BACKEND, SLUG_CARRERA } from '../config/consts';
+// useBlogGestionPublica.js
+import useSWR from 'swr';
+import axios from 'axios';
+import { BACKEND } from '../config/consts';
 
-const INITIAL_PAGE = 0;
-const PAGE_SIZE = 8;
+const fetcher = async (url) => {
+	const response = await axios.get(url);
+	return response.data;
+};
 
-export default function useBlogGestionPublica(searchParams) {
-	console.log(searchParams);
-	const [blogGestionPublica, setBlogGestionPublica] = useState(null);
-	const [isLoading, setIsLoading] = useState(false);
-	useEffect(() => {
-		setBlogGestionPublica(null);
-		const { keyWords } = searchParams;
-		let url = `${BACKEND}/blog-gestion-publica?publicado=true`;
-		if (keyWords !== '') {
-			url += `&busqueda=${keyWords}`;
+const useBlogGestionPublica = (params = {}) => {
+	const buildURL = () => {
+		let baseURL = `${BACKEND}/blog-gestion-publica`;
+		let queryParams = '?publicado=true';
+
+		if (params.slug) {
+			return `${baseURL}/url/${params.slug}${queryParams}`;
+		} else if (params.keyWords) {
+			queryParams += `&busqueda=${encodeURIComponent(params.keyWords)}`;
+			return `${baseURL}${queryParams}`;
 		}
-		console.log(url);
-		// let url = `${BACKEND}/blog-gestion-publica?publicado=true`;
-		setIsLoading(true);
-		const fetchDataBlogGestionPublica = async () => {
-			let response = await fetch(url);
-			let res = await response.json();
-			setBlogGestionPublica(res.items);
-			setIsLoading(false);
-		};
-		fetchDataBlogGestionPublica().catch(console.error);
-	}, [searchParams]);
+		return `${baseURL}${queryParams}`;
+	};
+
+	const url = buildURL();
+	const { data, error } = useSWR(url, fetcher);
+
+	const otrosBlogUrl =
+		params.slug && data
+			? `${BACKEND}/blog-gestion-publica/ultimas?publicado=true&id=${data[0].id}`
+			: null;
+
+	const { data: otrosBlogData } = useSWR(otrosBlogUrl, fetcher);
+
+	let blogGestionPublica = null;
+	let otrosBlog = otrosBlogData;
+
+	if (data) {
+		if (params.slug) {
+			blogGestionPublica = data[0];
+		} else {
+			blogGestionPublica = data.items;
+		}
+	}
+
 	return {
 		blogGestionPublica,
-		isLoading,
+		otrosBlog,
+		isLoading: !data && !error,
+		error: error,
 	};
-}
+};
+
+export default useBlogGestionPublica;
