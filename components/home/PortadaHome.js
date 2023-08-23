@@ -503,7 +503,7 @@ const PortadaHome = ({ eventos }) => {
 														}`}
 													>
 														<TransmitiendoIcon className="w-6 h-6 fill-primary relative -top-[1px]" />
-														<span>
+														<span className="text-sm">
 															Transmitiendo en
 															vivo
 														</span>
