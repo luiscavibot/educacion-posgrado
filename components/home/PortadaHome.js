@@ -472,8 +472,8 @@ const PortadaHome = ({ eventos }) => {
 											key={evento.slug}
 											// href={`/actualidad/eventos/${evento.slug}`}
 											href={`${
-												false
-													? 'https://www.google.com/'
+												true
+													? `https://www.google.com/`
 													: `/actualidad/eventos/${evento.slug}`
 											}`}
 										>
@@ -497,7 +497,7 @@ const PortadaHome = ({ eventos }) => {
 												<div className="flex flex-col">
 													<p
 														className={`flex flex-row gap-x-1 ${
-															false
+															true
 																? 'block'
 																: 'hidden'
 														}`}
