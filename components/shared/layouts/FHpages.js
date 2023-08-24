@@ -13,7 +13,7 @@ const FHpages = ({
 	children,
 }) => {
 	return (
-		<div className="font-lato">
+		<div className="font-lato relative">
 			<Head>
 				<meta charSet="UTF-8" />
 				<meta

@@ -17,7 +17,7 @@ import { Autoplay } from 'swiper';
 // import Numeros from './Numeros';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Logo from '../icons/Logo';
-import AsideSocialNetworks from '../shared/AsideSocialNetworks';
+// import AsideSocialNetworks from '../shared/AsideSocialNetworks';
 import LogoPosgradoAdministracionVertical from '../icons/LogoPosgradoAdministracionVertical';
 
 import { Menu } from '@mui/base/Menu';
@@ -41,7 +41,7 @@ const PortadaHome = ({ eventos }) => {
 		// 	<div className="relative md:static h-96 md:h-full">
 		<section className="relative w-full flex flex-col">
 			<div className="relative h-[calc(100vh_-_170px)] sm:h-96 md:h-auto">
-				<AsideSocialNetworks />
+				{/* <AsideSocialNetworks /> */}
 
 				{/* carrusel fotos */}
 				<div id="initial-carousel" className="relative">
