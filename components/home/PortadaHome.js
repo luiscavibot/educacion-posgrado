@@ -27,6 +27,7 @@ import { Dropdown } from '@mui/base/Dropdown';
 import DocumentosIcon from '../icons/DocumentosIcon';
 import UserIcon from '../icons/UserIcon';
 import SideBar from '../shared/SideBar';
+import TransmitiendoIcon from '../icons/TransmitiendoIcon';
 
 const PortadaHome = ({ eventos }) => {
 	// const createHandleMenuClick = (menuItem) => {
@@ -469,7 +470,12 @@ const PortadaHome = ({ eventos }) => {
 									{eventos.map((evento) => (
 										<Link
 											key={evento.slug}
-											href={`/actualidad/eventos/${evento.slug}`}
+											// href={`/actualidad/eventos/${evento.slug}`}
+											href={`${
+												true
+													? `https://www.google.com/`
+													: `/actualidad/eventos/${evento.slug}`
+											}`}
 										>
 											<a
 												key={evento.id}
@@ -489,6 +495,19 @@ const PortadaHome = ({ eventos }) => {
 													{/* <div>3 p.m.</div> */}
 												</div>
 												<div className="flex flex-col">
+													<p
+														className={`flex flex-row gap-x-1 ${
+															true
+																? 'block'
+																: 'hidden'
+														}`}
+													>
+														<TransmitiendoIcon className="w-6 h-6 fill-primary relative -top-[1px]" />
+														<span className="text-sm">
+															Transmitiendo en
+															vivo
+														</span>
+													</p>
 													<p className="mb-[2px] font-bold">
 														{evento.tipo.valor}
 													</p>
