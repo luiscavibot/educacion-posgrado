@@ -37,7 +37,7 @@ const LinksExternos = () => {
 									<AdmisionHomeIcon className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-9" />
 								</div>
 								<p className="text-blanco text-lg">
-									Admisión de Mestrías
+									Admisión de Maestrías
 								</p>
 							</a>
 						</Link>
