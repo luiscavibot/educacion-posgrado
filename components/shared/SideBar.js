@@ -355,6 +355,11 @@ const SideBar = ({ interno }) => {
 									</>
 								</>
 							</Accordion>
+							<Link href="/blog-gestion-publica">
+								<a className="inline-flex font-bold items-center py-[10px] px-11 transition w-full">
+									Blog de Gestión pública
+								</a>
+							</Link>
 						</div>
 						<div className="bg-secondary w-full pt-4 block md:hidden">
 							<Link href="/tramites">
