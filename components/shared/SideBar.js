@@ -419,10 +419,10 @@ const SideBar = ({ interno }) => {
 							<div>
 								<RedesSocialesHome
 									className="text-lg mt-12 mb-8 flex gap-4 items-center justify-center"
-									facebook="https://www.facebook.com/upg.administracion"
-									youtube="https://www.youtube.com/c/fcaunmsm"
-									// twitter="https://twitter.com/UNMSMFarmacia"
-									// instagram="https://www.instagram.com/unmsmfarmacia/"
+									facebook={`${process.env.NEXT_PUBLIC_FACEBOOK}`}
+									youtube={`${process.env.NEXT_PUBLIC_YOUTUBE}`}
+									tiktok={`${process.env.NEXT_PUBLIC_TIKTOK}`}
+									linkedin={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
 								/>
 							</div>
 						</div>

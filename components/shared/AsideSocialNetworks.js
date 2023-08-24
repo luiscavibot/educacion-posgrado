@@ -9,12 +9,10 @@ const AsideSocialNetworks = () => {
 			<div className="container px-4 m-auto flex items-center justify-end">
 				<RedesSocialesHome
 					className="text-lg flex flex-col gap-3"
-					facebook="https://www.facebook.com/upg.administracion"
-					youtube="https://www.youtube.com/c/fcaunmsm"
-					tiktok="https://www.tiktok.com/@posgradoadministracionsm"
-					linkedin="https://www.linkedin.com/company/posgradoadministracionunmsm/"
-					// twitter="https://twitter.com/UNMSMFarmacia"
-					// instagram="https://www.instagram.com/unmsmfarmacia/"
+					facebook={`${process.env.NEXT_PUBLIC_FACEBOOK}`}
+					youtube={`${process.env.NEXT_PUBLIC_YOUTUBE}`}
+					tiktok={`${process.env.NEXT_PUBLIC_TIKTOK}`}
+					linkedin={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
 				/>
 			</div>
 		</div>
