@@ -92,7 +92,7 @@ const Blog = () => {
 									Encuentra nuestro contenido especial
 								</p>
 								<a
-									href="https://www.tiktok.com/@posgradoadministracionsm"
+									href={`${process.env.NEXT_PUBLIC_TIKTOK}`}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="grid place-items-center rounded-lg w-9 h-9 bg-primary hover:bg-primary-hover transition-colors duration-300"
