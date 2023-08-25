@@ -239,6 +239,17 @@ const PortadaHome = ({ eventos }) => {
 														</a>
 													</Link>
 												</MenuItem>
+												<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+													<a
+														rel="noopener noreferrer"
+														target="_blank"
+														href="https://revistasinvestigacion.unmsm.edu.pe/index.php/administrativas/index"
+														className="hover:text-secondary py-2"
+													>
+														Gestión en el Tercer
+														Milenio
+													</a>
+												</MenuItem>
 											</Menu>
 										</Dropdown>
 									</li>

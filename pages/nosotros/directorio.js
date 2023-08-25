@@ -6,6 +6,9 @@ import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 
 import Boton from '../../components/shared/Boton';
 import useDirectorio from '../../hooks/useDirectorio';
+function createMarkup(dom) {
+	return { __html: dom };
+}
 
 const Index = () => {
 	const { directorio: data, isLoading } = useDirectorio('/directorios');
@@ -47,7 +50,7 @@ const Index = () => {
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mt-10 mb-4 flex items-center justify-between">
 						<p className="text-sm font-normal md:font-bold mr-4">
-							Central telefónica: 619-7000
+							{/* Central telefónica: 619-7000 */}
 						</p>
 						<Boton
 							primary
@@ -67,10 +70,10 @@ const Index = () => {
 							<table className="table table-striped mb-6">
 								<thead>
 									<tr>
-										<th>Unidad</th>
+										{/* <th>Unidad</th> */}
 										<th>Cargo</th>
 										<th>Nombre</th>
-										<th>Anexo</th>
+										{/* <th>Anexo</th> */}
 										<th>Correo</th>
 									</tr>
 								</thead>
@@ -79,10 +82,17 @@ const Index = () => {
 										data?.map((unidad) => {
 											return (
 												<tr key={unidad.id}>
-													<td>{unidad.unidad}</td>
-													<td>{unidad.cargo}</td>
-													<td>{unidad.nombre}</td>
+													{/* <td>{unidad.unidad}</td> */}
 													<td>
+														<span
+															className="html-default"
+															dangerouslySetInnerHTML={createMarkup(
+																unidad.cargo
+															)}
+														></span>
+													</td>
+													<td>{unidad.nombre}</td>
+													{/* <td>
 														{unidad.anexo.map(
 															(anexo, index) => (
 																<p key={index}>
@@ -90,7 +100,7 @@ const Index = () => {
 																</p>
 															)
 														)}
-													</td>
+													</td> */}
 													<td>
 														{unidad.correos.map(
 															(correo, index) => (

@@ -97,7 +97,7 @@ const HeaderPage = () => {
 											},
 											listbox: {
 												className:
-													'text-sm box-border p-1.5 my-2 mx-0 rounded-xl overflow-auto outline-0 bg-blanco text-textColorOne min-w-listbox shadow-md',
+													'text-sm box-border p-1.5 my-2 mx-0 rounded-xl overflow-none outline-0 bg-blanco text-textColorOne min-w-listbox shadow-md',
 											},
 										}}
 									>
@@ -114,6 +114,18 @@ const HeaderPage = () => {
 													Taller de tesis (Maestrías)
 												</a>
 											</Link>
+										</MenuItem>
+										<MenuItem>
+											<div className='className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0'>
+												<a
+													rel="noopener noreferrer"
+													target="_blank"
+													href="https://revistasinvestigacion.unmsm.edu.pe/index.php/administrativas/index"
+													className="hover:text-secondary py-2"
+												>
+													Gestión en el Tercer Milenio
+												</a>
+											</div>
 										</MenuItem>
 									</Menu>
 								</Dropdown>
@@ -227,7 +239,7 @@ const HeaderPage = () => {
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/nosotros/director-y-coordinadores">
 												<a className="hover:text-secondary py-2">
-													Director y coordinadores
+													Autoridades
 												</a>
 											</Link>
 										</MenuItem>

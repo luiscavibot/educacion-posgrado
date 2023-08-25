@@ -202,6 +202,16 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
+											<div onClick={handleSidebar}>
+												<a
+													rel="noopener noreferrer"
+													target="_blank"
+													href="https://revistasinvestigacion.unmsm.edu.pe/index.php/administrativas/index"
+													className="inline-flex items-center py-[10px] px-11 transition w-full"
+												>
+													Gestión en el Tercer Milenio
+												</a>
+											</div>
 										</div>
 									</Accordion.Content>
 								</>
