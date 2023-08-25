@@ -2,7 +2,6 @@ import React from 'react';
 import { Tabs } from '../../Tabs';
 import GuiaAdmisionDiplomatura from './GuiaAdmisionDiplomatura';
 import CronogramaDiplomatura from './CronogramaDiplomatura';
-import ProcesoEvaluacionDiplomatura from './ProcesoEvaluacionDiplomatura';
 import CuadroVacantesDiplomatura from './CuadroVacantesDiplomatura';
 import RequisitosDiplomatura from './RequisitosDiplomatura';
 import InversionDiplomatura from './InversionDiplomatura';
@@ -22,13 +21,10 @@ export const AdmisionDiplomatura = () => {
 				<div label="Cronograma académico">
 					<CronogramaDiplomatura />
 				</div>
-				<div label="Proceso de evaluación">
-					<ProcesoEvaluacionDiplomatura />
-				</div>
 				<div label="Cuadro de vacantes">
 					<CuadroVacantesDiplomatura />
 				</div>
-				<div label="Requisitos para postular">
+				<div label="Requisitos para la inscripcion">
 					<RequisitosDiplomatura />
 				</div>
 				<div label="Inversión">

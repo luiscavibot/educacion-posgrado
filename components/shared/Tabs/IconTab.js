@@ -161,13 +161,13 @@ const IconTab = (label) => {
 		case 'requisitos-para-postular':
 			return (
 				<>
-					{/* <span>
-						<img
-							className="w-[24px] mb-[2px] mr-1 inline-block"
-							src="/img/icons/requisitos-icon.svg"
-							alt=""
-						/>
-					</span> */}
+					<RequisitosIcon className="fill-textColorOne" />
+				</>
+			);
+
+		case 'requisitos-para-la-inscripcion':
+			return (
+				<>
 					<RequisitosIcon className="fill-textColorOne" />
 				</>
 			);
@@ -175,13 +175,6 @@ const IconTab = (label) => {
 		case 'modalidades-de-admision':
 			return (
 				<>
-					{/* <span>
-						<img
-							className="w-[24px] mb-[2px] mr-1 inline-block"
-							src="/img/icons/requisitos-icon.svg"
-							alt=""
-						/>
-					</span> */}
 					<RequisitosIcon className="fill-textColorOne" />
 				</>
 			);

@@ -1,6 +1,10 @@
 .html-default p {
 	margin-bottom: 1rem;
 }
+.html-default > :not(:last-child) {
+	display: block;
+	margin-bottom: 1rem;
+}
 .html-default b {
 	font-weight: bold;
 }
