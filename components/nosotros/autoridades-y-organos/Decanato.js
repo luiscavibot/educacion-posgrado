@@ -16,15 +16,17 @@ const Decanato = () => {
 			<div className="md:col-span-6">
 				<div className="mb-6">
 					<p className="mb-8">
-						Máxima autoridad de dirección y gobierno de la facultad,
-						encargado de dirigir, proponer y ejecutar académica,
-						financiera y administrativamente a la facultad; además,
-						es la máxima autoridad sobre los demás órganos de la
-						facultad. Está conformado por el/la decano/a, quien es
-						el/la representante ante el Consejo Universitario y
-						Asamblea Universitaria, y encabeza el Consejo de
-						Facultad; y la jefatura de la unidad de secretaría,
-						quien revisa y administra el trámite documentario.
+						Organismo de apoyo al Decanato con el ejercicio de sus
+						funciones y está encargado de coordinar y organizar las
+						actividades de investigación, así como las relacionadas
+						con estudios de investigación de los institutos y de la
+						Unidad de Posgrado. Promueve la incorporación y
+						desarrollo de todos los docentes en el campo de la
+						investigación; e incentiva la publicación y difusión de
+						los trabajos de investigación, tesis, patentes,
+						artículos, entre otros relacionados. Está conformado por
+						el/la vicedecano/a de Investigación y Posgrado, Unidades
+						dependientes y personal administrativo correspondiente.
 						Conoce más acerca de este órgano de autoridad ingresando
 						al{' '}
 						<a
@@ -39,7 +41,7 @@ const Decanato = () => {
 					</p>
 					<p className="mb-1">
 						<span className="font-bold text-tertiary">
-							Director
+							Vicedecano académico
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
@@ -47,45 +49,54 @@ const Decanato = () => {
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						{/* Profesor principal, investigador y asesor de tesis. */}
-						{/* <br /> */}
-						Doctor en Ciencias Económicas, Licenciado en
-						administración, con maestría en Administración, maestría
-						en Ciencias en la Universidad de Tennessee. Es doctor en
-						Administración.
+						Licenciado en Economía por la Universidad de Lima,
+						magíster en Administración por la Universidad de San
+						Martín de Porres y doctor en Administración por la
+						Universidad Nacional Federico Villareal
 					</p>
 					<p className="mb-5">
-						Lleva más de 40 años ejerciendo como docente
-						universitario de universidades nacionales como la UNI y
-						la UNMSM. Además, se ha desempeñado como supervisor
-						líder de planeamiento en el Banco Central de Reserva del
-						Perú, decano del Colegio de Químicos, director de la
-						revista Sociedad Química del Perú, entre otros cargos.
-						Ha realizado distintas investigaciones publicadas en
-						revistas científicas y congresos internacionales sobre
-						la línea de síntesis química, nuevos materiales, química
-						supramolecular y bioinorgánica; fue asesor de tesis para
-						grados de licenciatura, maestría y doctorado; publicó
-						libros, dentro de las cuales destacan
-						{` "Química de
-						Coordinación” (2010), "Koordinationschemie" (2012) y
-						"Ácidos y Bases” (2013); `}
-						y desarrolló proyectos de investigación con el Servicio
-						Alemán de Intercambio Académico (DAAD) en cooperación
-						con la Universidad de Leipzig y con el grupo español de
-						la Universidad de Burgos financiado por la Agencia
-						Española de Cooperación Internacional (AECID).
+						Lleva más de 40 años ejerciendo como docente a nivel de
+						pregrado y posgrado en universidades de Perú, Ecuador y
+						Bolivia. Se ha desempeñado como presidente del Instituto
+						de Comercio Exterior del Perú; ministro tanto de
+						Vivienda, Construcción y Saneamiento como de Transportes
+						y Comunicaciones; presidente ejecutivo del Banco de la
+						Nación del Perú; director del Banco Central de Reserva
+						del Perú; presidente ejecutivo del Banco de la Vivienda
+						del Perú; miembro titular del Consejo Consultivo del
+						Banco Latinoamericano de Exportaciones, secretario Pro
+						Témpore del Parlamento Andino y dos veces director del
+						Departamento de Economía de la Universidad de Lima.
 					</p>
 					<p className="mb-6">
-						Recibió reconocimientos a nivel nacional por su
-						distinguida trayectoria en la producción científica, y a
-						nivel internacional como investigador de excelencia por
-						la Universidad de Burgos en España.
+						Ha publicado más de 1500 artículos científicos y ensayos
+						en revistas peruanas e internacionales. Asimismo, ha
+						escrito 36 libros de los cuales los más recientes son
+						{`“La Innovación Política: No es sólo cuestión de hacer
+						campañas y ganar elecciones”`}{' '}
+						(2018),{' '}
+						{`“El Paso siguiente
+						de la Globalización”`}{' '}
+						(2017) y{' '}
+						{`“El Eslabón de la
+						Economía: Usura, Interés y Economía”`}{' '}
+						(2017). Ha realizado diferentes investigaciones para la
+						Facultad de Economía de la Universidad de Lima, la Junta
+						del Acuerdo de Cartagena, el Programa de las Naciones
+						Unidas para el Desarrollo, entre otras instituciones.
+						Obtuvo numerosas distinciones a lo largo de su vida
+						profesional como el premio América Latina otorgado por
+						la Asociación Latinoamérica de Integración y la
+						Fundación Banco de Boston de Buenos Aires-Argentina,
+						ganador del concurso para periodista especializados en
+						economía organizado por el City Bank National
+						Association, y muchas más condecoraciones por su
+						producción científica y sus labores.
 					</p>
 					<div className="flex gap-x-5">
 						<a
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://www.gob.pe/institucion/unmsm/normas-legales/3789911-017244-2020-r"
+							href="https://cdn.www.gob.pe/uploads/document/file/5047023/RESOLUCI%C3%93N%20RECTORAL-002705-2022-R%20DIRECTOR%20UNIDAD%20DE%20POSGRADO%20CORNEJO%20RAMIREZ%20FCA.pdf?v=1693000077"
 							target={'_blank'}
 							rel="noopener noreferrer"
 						>
@@ -99,7 +110,7 @@ const Decanato = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2086'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=73943'
 								)
 							}
 						>
@@ -143,10 +154,10 @@ const Decanato = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							decanoqui@unmsm.edu.pe
+							vicedecanoip.administracion@unmsm.edu.pe
 						</p>
 					</div>
-					<div>
+					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>
 								<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
@@ -156,7 +167,7 @@ const Decanato = () => {
 						<p className="mb-3 break-words">
 							(+51) 619 7000 anexo 1201
 						</p>
-					</div>
+					</div> */}
 					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>

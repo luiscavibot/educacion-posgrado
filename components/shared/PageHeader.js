@@ -164,7 +164,7 @@ const HeaderPage = () => {
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/comunidad/seguimiento-egresados">
 												<a className="hover:text-secondary py-2">
-													Seguimiento de egresados
+													Testimonios de egresados
 												</a>
 											</Link>
 										</MenuItem>

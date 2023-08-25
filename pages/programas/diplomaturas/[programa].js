@@ -409,7 +409,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					</div>
 
 					<div
-						label="Seguimiento de egresados"
+						label="Testimonios de egresados"
 						link="/comunidad/seguimiento-egresados"
 					></div>
 				</Tabs>

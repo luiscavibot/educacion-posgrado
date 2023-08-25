@@ -16,71 +16,72 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-6">
 				<div className="mb-6">
 					<p className="mb-8">
-						Organismo de apoyo al Decanato con el ejercicio de sus
-						funciones. Se encarga de emitir y resguardar las actas
-						promocionales de las asignaturas de pregrado y posgrado,
-						los registros de grados, títulos y otros documentos
-						otorgados por la facultad. Además, se encarga de
-						coordinar con entidades que concedan becas y prácticas
-						preprofesionales a estudiantes y, así como de gestionar
-						convenios con instituciones internacionales. Está
-						conformado por el/la vicedecano/a académico y sus
-						respectivas Unidades dependientes. Conoce más acerca de
-						este órgano de autoridad ingresando al{' '}
+						Es la Unidad Académica encargada de proponer el plan de
+						trabajo y presupuesto anual de las actividades
+						académicas, planificar el calendario académico y de
+						matrícula, e integrar el Comité Directivo de la Unidad
+						de Posgrado. Dirige y supervisa al personal docente, se
+						hace responsable del proceso de evaluación de
+						actividades académicas y del desempeño de los
+						profesores, y brinda asesoramiento pedagógico a los
+						docentes. Planifica, organiza y dirige el proceso de
+						admisión, supervisa la actualización de los syllabus, y
+						firma las constancias referidas área de su competencia.
+						Conoce más acerca de esta Unidad ingresando al{' '}
 						<a
 							className="text-secondary"
-							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
+							href="https://administracion.unmsm.edu.pe/1web2022/wp-content/uploads/2022/03/MOF-FCA.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Estatuto de la UNMSM
+							Manual de Organización y Funciones (MOF)
 						</a>
 						.
 					</p>
 					<p className="mb-1">
 						<span className="font-bold text-tertiary">
-							Vicedecano académico
+							Coordinador académico
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Mg. Manuel Exaltación Bejar Ramos
+							Dr. Ebor Fairlie Frisancho
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal e investigador
-						<br />
-						Licenciado en Ingeniería Química y magíster en Ciencias
-						Químicas por la UNMSM.
+						Licenciado en Administración de Empresas, magíster en
+						Admistración con mención en Gestión Empresarial y doctor
+						en Ciencias Administrativas por la Universidad Nacional
+						de San Marcos
 					</p>
 					<p className="mb-5">
-						Lleva más de 40 años ejerciendo como docente
-						universitario de universidades nacionales como la UNMSM.
-						Además, se ha desempeñado como director del departamento
-						de Química Inorgánica y asesor de tesis para grados de
-						licenciatura. Ha realizado distintas investigaciones
-						publicadas en revistas científicas sobre la línea de la
-						fisicoquímica y nanotecnología, dentro de las cuales
-						destacan
-						{` “Monitoreo de la síntesis del YBa2Cu3O7,
-						mediante la difracción de rayos X en polvo” y “Desgaste
-						en los sistemas de inyección diésel por efecto del
-						elevado contenido de azufre en petróleo diesel 2”`}
-						; y desarrolló proyectos de investigación en cooperación
-						con el Vicerrectorado de Investigación de la UNMSM.
+						Cuenta con más de 20 años de experiencia en docencia
+						universitaria en instituciones nacionales como la
+						Universidad Nacional Mayor de San Marcos y la
+						Universidad Nacional San Cristóbal de Huamanga, y
+						particulares como la Universidad de San Martín de
+						Porres. Se ha desempeñado como jefe de la Oficina de
+						Calidad Académica y Acreditación, coordinador del área
+						de Administración del convenio con REVALORA del
+						Ministerio de Trabajo, jefe encargado de la Oficina de
+						Asesoría y Orientación al Estudiante, entre otros
+						cargos.
 					</p>
 					<p className="mb-6">
-						Recibió diferentes distinciones como ser Socio
-						Profesional la Sociedad Química del Perú y el diploma de
-						reconocimiento a los investigadores con publicaciones
-						científicas en virtud a su fructífera labor en el campo
-						de la investigación científica que le ha permitido la
-						producción de conocimientos, los mismos que se han
-						plasmado en sus publicaciones en el año 2011.
+						Ha realizado distintas investigaciones y participado en
+						proyectos de turismo y desarrollo sostenible como el de
+						experiencia en redes temáticas de docencia con el Grupo
+						La Rabida de la Universidad Internacional de Andalucía.
+						Asimismo, realizó una pasantía internacional en
+						Université de Bordeaux de Francia y partició en
+						coonferencias internacionales de la Escuela Complutense
+						Latinoamericana en Chile y Argentina, el programa de
+						becarios KOICA en Corea, y en ACBSP International
+						Conference de Estados Unidos.
 					</p>
 					<div className="flex gap-x-5">
 						<a
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://cdn.www.gob.pe/uploads/document/file/3989175/R.R.%20005547-2022-R%20-%20Vicedecano-Academico-facultad-quimica-ingenieria-quimica.pdf.pdf?v=1672152363"
+							href="https://cdn.www.gob.pe/uploads/document/file/5047091/RESOLUCI%C3%93N%20RECTORAL-018975-2020-R%20COORDINADOR%20ACADEMICO%20FAIRLIE%20FRISANCHO%20UPG.pdf?v=1693000753"
 							target={'_blank'}
 							rel="noopener noreferrer"
 						>
@@ -94,7 +95,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=30705'
+									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=4512'
 								)
 							}
 						>
@@ -110,7 +111,7 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/nosotros/autoridades/vicedecano-academico-manuel-bejar-quimica-unmsm.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/1516649364370.jpeg"
 						width={209}
 						height={224}
 						quality={100}
@@ -138,10 +139,10 @@ const VicedecanatoAcademicoPregrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							viceacademico.quimica@unmsm.edu.pe
+							coordacadupg.administracion@unmsm.edu.pe
 						</p>
 					</div>
-					<div>
+					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>
 								<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
@@ -151,7 +152,7 @@ const VicedecanatoAcademicoPregrado = () => {
 						<p className="mb-3 break-words">
 							(+51) 619 7000 anexo 1207
 						</p>
-					</div>
+					</div> */}
 					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>

@@ -83,11 +83,11 @@ const SeguimientoEgresados = () => {
 						Comunidad
 					</li>
 					<li className="text-textColorOne font-bold inline">
-						<span>Seguimiento de egresados</span>
+						<span>Testimonios de egresados</span>
 					</li>
 				</ul>
 				<div className="px-4 md:px-0 col-span-full mb-8">
-					<p className="title-page">Seguimiento de egresados</p>
+					<p className="title-page">Testimonios de egresados</p>
 				</div>
 				<div className="col-span-full lg:col-span-2 px-4 md:px-0 mb-5">
 					<div className="bg-complementaryTwo rounded-lg p-6 max-xl:break-all">

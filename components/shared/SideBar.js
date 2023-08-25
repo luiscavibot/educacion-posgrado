@@ -249,7 +249,7 @@ const SideBar = ({ interno }) => {
 											<div onClick={handleSidebar}>
 												<Link href="/comunidad/seguimiento-egresados">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Seguimiento de egresados
+														Testimonios de egresados
 													</a>
 												</Link>
 											</div>
@@ -324,8 +324,7 @@ const SideBar = ({ interno }) => {
 												<div onClick={handleSidebar}>
 													<Link href="/nosotros/director-y-coordinadores">
 														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-															Director y
-															coordinadores
+															Autoridades
 														</a>
 													</Link>
 												</div>

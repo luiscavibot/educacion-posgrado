@@ -324,14 +324,14 @@ const IconTab = (label) => {
 				</>
 			);
 			break;
-		case 'director':
+		case 'vicedecanato-de-investigacion-y-posgrado':
 			return (
 				<>
 					<DocumentoEnFolderStroke className=" w-[21px] h-[21px]" />
 				</>
 			);
 			break;
-		case 'cargo-1':
+		case 'coordinacion-academica-de-la-unidad-de-posgrado':
 			return (
 				<>
 					<BirreteStroke className=" w-[21px] h-[21px]" />
