@@ -1,22 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FHpages from '../components/shared/layouts/FHpages';
 import PortadaHome from '../components/home/PortadaHome';
 import AgendaPublica from '../components/home/AgendaPublica';
 import LinkInternos from '../components/home/LinksInternos';
 import Programas from '../components/home/Programas';
 import FooterComponent from '../components/shared/FooterComponent';
-import {
-	BASE_URL,
-	SLUG_CARRERA,
-	POSGRADO_URL,
-	BACKEND,
-} from '../config/consts';
+import { BACKEND, CORREO_COMUNICACIONES } from '../config/consts';
 import Contactanos from '../components/home/Contactanos';
 import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
-
-import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
-import { BannerAdmision } from '../components/admision/BannerAdmision';
 
 export default function Home({ noticiasDestacadas, noticias, eventos }) {
 	return (
@@ -47,7 +39,7 @@ export default function Home({ noticiasDestacadas, noticias, eventos }) {
 				<Programas />
 				<Testimonios />
 				<LinksExternos />
-				<Contactanos />
+				<Contactanos mail={CORREO_COMUNICACIONES} />
 			</main>
 			<FooterComponent inHome />
 		</FHpages>

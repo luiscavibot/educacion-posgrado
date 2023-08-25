@@ -1,5 +1,4 @@
 import { Form, Formik } from 'formik';
-import Link from 'next/link';
 import React, { useState } from 'react';
 import { CerrarIcon } from '../icons';
 import CorreoIcon from '../icons/CorreoIcon';

@@ -1,12 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/future/image';
 import { motion } from 'framer-motion';
 import { entradaCardScroll } from '../../consts/animaciones';
-import Boton from '../shared/Boton';
 import FormacionContentModal from '../formacion-academica/FormacionContentModal';
 
-const Contactanos = () => {
+const Contactanos = ({ mail }) => {
 	return (
 		<motion.section
 			initial="offscreen"
@@ -22,7 +19,7 @@ const Contactanos = () => {
 				<div className="col-start-2 col-span-10">
 					<FormacionContentModal
 						noCloseButton
-						responsableEmail="admisionupg.administracion@unmsm.edu.pe"
+						responsableEmail={mail}
 						telefono="(+51) 619 7000 anexo 2624"
 					/>
 				</div>

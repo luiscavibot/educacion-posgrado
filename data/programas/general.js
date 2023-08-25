@@ -11,6 +11,8 @@ export const maestrias = [
 			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-gestion-publica.jpg',
 		grado: 'Magíster en Gestión Pública',
 		duracion: '2 años (4 semestres)',
+		porqueEstudiarConNosotros:
+			'Somos la mejor universidad pública del país y la segunda a nivel nacional de todas las universidades, según dos rankings internacionales: QS Universities Rankings y Webometrics 2023.',
 		description:
 			'Este programa académico se enfoca en brindar los conocimientos y las habilidades  para gerenciar de manera moderna y eficiente los recursos del estado, y de esta manera formar líderes íntegros y técnicamente capaces para dirigir el país. Se requiere en el Perú del soporte de una gestión pública conformada por servidores y funcionarios honestos, capaces y orientados a fortalecer el rol promotor de las entidades estatales  para que estas puedan cumplir sus fines y mostrar resultados en dos aspectos sustantivos: construir la ciudadanía y gobernabilidad democrática, e impulsar el desarrollo nacional que debe reflejarse en una mejor calidad de vida y bienestar social.',
 		perfil_ingresante:
@@ -2008,6 +2010,9 @@ export const doctorados = [
 		duracion: '3 años (6 semestres)',
 		description:
 			'Este programa académico está enfocado en formar investigadores en las áreas de Management, Finanzas, Talento Humano, Marketing y Operaciones que puedan desempeñarse en universidades y en centros de investigación de reconocido prestigio.  Mantiene a los estudiantes en contacto con los principales problemas del mundo empresarial y les proporciona un conocimiento profundo y actualizado de la empresa, y la formación en métodos cuantitativos y cualitativos que les permite llevar a cabo trabajos de investigación empírica de alta calidad. Asimismo, tras reconocer el proceso de cambio del modelo productivo hacia una economía sostenible, es necesario ubicar a los doctores como actores principales de la sociedad en la generación, transferencia y adecuación de la investigación, el desarrollo y la innovación. Los doctores han de jugar un papel de capital importancia en todas las instituciones y las organizaciones empresariales implicadas en la creación de nuevos conocimientos, y la transferencia de los mismos hacia el bienestar de la sociedad.',
+		porqueEstudiarConNosotros:
+			'Somos la mejor universidad pública del país y la segunda a nivel nacional de todas las universidades, según dos rankings internacionales: QS Universities Rankings y Webometrics 2023.',
+
 		perfil_ingresante:
 			'Dirigido a profesionales con formación de posgrado en las diferentes áreas de conocimiento propias de las Ciencias Empresariales: Marketing y Comercialización, Dirección Financiera, Recursos Humanos, Organización y Dirección de Empresas, y Dirección de Operaciones; a su vez, es recomendable que posean formación metodológica cuantitativa en Estadística e Investigación Operativa y en Métodos Cuantitativos para la Economía y la Empresa. Asimismo, el ingresante debe tener la capacidad para sintetizar conocimientos de una determinada disciplina, analizar problemas de forma crítica y exponer nuevas líneas de investigación relevantes.',
 		perfil_graduado:
@@ -2214,7 +2219,7 @@ export const diplomaturas = [
 			{ texto: 'Docentes universitarios.' },
 		],
 		porqueEstudiarConNosotros:
-			'Somos líderes en producción científica entre las instituciones de educación superior en Perú. Nuestra tradición histórica y rigurosidad académica te brindarán una experiencia enriquecedora. Pero eso no es todo, porque en nuestra facultad, tendrás la increíble oportunidad de convalidar tu diplomatura y dar paso a una futura maestría. ¡No dejes pasar esta oportunidad y sé parte de nuestra Diplomatura en Gestión de Universidades Públicas!',
+			'Somos la mejor universidad pública del país y la segunda a nivel nacional de todas las universidades, según dos rankings internacionales: QS Universities Rankings y Webometrics 2023.',
 		asignaturas: [
 			{
 				semestre: 'primero',
@@ -2300,7 +2305,7 @@ export const diplomaturas = [
 			},
 		],
 		porqueEstudiarConNosotros:
-			'Somos líderes en producción científica entre las instituciones de educación superior en Perú. Nuestra tradición histórica y rigurosidad académica te brindarán una experiencia enriquecedora,  con posibilidades laborales y de éxito que el nombre de San Marcos tiene como valor agregado. Ser parte de nuestra facultad te permitirá convalidar tu diplomatura y dar paso a una futura maestría. ¡No dejes pasar esta oportunidad y sé parte de nuestra Diplomatura en Gestión Pública!',
+			'Somos la mejor universidad pública del país y la segunda a nivel nacional de todas las universidades, según dos rankings internacionales: QS Universities Rankings y Webometrics 2023.',
 		asignaturas: [
 			{
 				semestre: 'primero',

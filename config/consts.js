@@ -16,3 +16,5 @@ export const APP_CORREO =
 export const SLUG_CARRERA = 'farmacia-y-bioquimica';
 
 export const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL;
+export const CORREO_COMUNICACIONES =
+	process.env.NEXT_PUBLIC_CORREO_COMUNICACIONES;

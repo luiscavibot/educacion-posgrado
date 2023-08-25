@@ -19,7 +19,6 @@ import { SiGoogleclassroom } from 'react-icons/si';
 import { maestrias } from '../../../data/programas/general';
 
 const Programa = ({ programa, otrosProgramas }) => {
-	console.log('programa->', programa);
 	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/programas/maestrias/${programa.slug}`;
 	// const metaTags = {
 	// 	title: programa.titulo,
@@ -176,14 +175,14 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span>14 de julio del 2023</span>
 							</p>
 						</div>
-						<a
+						{/* <a
 							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-secondary text-blanco hover:bg-secondary-hover hover:shadow-md"
 							href={`#`}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							Ver brochure
-						</a>
+						</a> */}
 					</div>
 				</div>
 			</div>
@@ -255,7 +254,20 @@ const Programa = ({ programa, otrosProgramas }) => {
 										</div>
 									</>
 								)}
-
+								{programa.porqueEstudiarConNosotros && (
+									<>
+										<div className="mb-6">
+											<div className="subtitle mb-2">
+												¿Por qué estudiar con nosotros?
+											</div>
+											<p>
+												{
+													programa.porqueEstudiarConNosotros
+												}
+											</p>
+										</div>
+									</>
+								)}
 								{/* {programa[0].attributes.campo_laboral &&
 									programa[0].attributes.campo_laboral
 										.length > 0 && (

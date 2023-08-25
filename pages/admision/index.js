@@ -124,23 +124,6 @@ const Index = ({ admision, facultad }) => {
 				</Tab.Pane>
 			),
 		},
-		{
-			menuItem: 'Posdoctorado',
-			render: () => (
-				<Tab.Pane
-					attached={false}
-					onClick={(e) => {
-						handleClick(e, 'posdoctorado');
-					}}
-				>
-					<div className="col-start-3 col-span-10 mb-14">
-						<div className="mb-14">
-							<AdmisionPosdoctorado />
-						</div>
-					</div>
-				</Tab.Pane>
-			),
-		},
 	];
 	return (
 		<>

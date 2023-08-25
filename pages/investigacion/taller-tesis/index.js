@@ -396,7 +396,7 @@ const TallerTesis = ({ ultimasNoticias }) => {
 				>
 					<FormacionContentModal
 						handleClose={handleClose}
-						responsableEmail="admisionupg.administracion@unmsm.edu.pe"
+						responsableEmail="egresadosupg.fca@unmsm.edu.pe"
 						telefono="(+51) 619 7000 anexo 4812"
 					/>
 				</Box>
