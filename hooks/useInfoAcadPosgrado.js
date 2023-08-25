@@ -8,12 +8,11 @@ const PAGE_SIZE = 10;
 const checkValues = {
 	doctoradoCheck: 'DOCTORADO',
 	maestriasCheck: 'MAESTRIA',
-	segundasEspecialidadesCheck: 'SEGUNDASESPECIALIDADES',
+	diplomaturasCheck: 'DIPLOMATURA',
+	posdoctoradoCheck: 'POSDOCTORADO',
 	syllabusCheck: 'SYLLABUS',
 	horariosCheck: 'HORARIOS',
 	planesEstudiosCheck: 'PLANESESTUDIOS',
-	planesCurricularesCheck: 'PLANESCURRICULARES',
-	mallasCurricularesCheck: 'MALLASCURRICULARES',
 	otrosCheck: 'OTROS',
 };
 

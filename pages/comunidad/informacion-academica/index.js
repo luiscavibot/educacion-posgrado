@@ -19,14 +19,13 @@ const INITIAL_INPUTS = {
 	programa: {
 		doctoradoCheck: false,
 		maestriasCheck: false,
-		segundasEspecialidadesCheck: false,
+		posdoctoradoCheck: false,
+		diplomaturasCheck: false,
 	},
 	recurso: {
 		syllabusCheck: false,
 		horariosCheck: false,
 		planesEstudiosCheck: false,
-		planesCurricularesCheck: false,
-		mallasCurricularesCheck: false,
 		otrosCheck: false,
 	},
 	// anio: '',
@@ -97,18 +96,18 @@ const InfoAcademica = () => {
 							aria-labelledby="checkbox-group"
 							className="flex flex-col gap-y-1 mt-2 mb-8"
 						>
-							<InputCheckbox
+							{/* <InputCheckbox
 								label="Todos"
 								name="todosCheck"
 								checked={inputs.programa.todosCheck}
 								onChange={(e) => {
 									handleCheck(e, 'programa');
 								}}
-							/>
+							/> */}
 							<InputCheckbox
-								label="Diplomados"
-								name="diplomadosCheck"
-								checked={inputs.programa.diplomadosCheck}
+								label="Diplomaturas"
+								name="diplomaturasCheck"
+								checked={inputs.programa.diplomaturasCheck}
 								onChange={(e) => {
 									handleCheck(e, 'programa');
 								}}
@@ -145,14 +144,14 @@ const InfoAcademica = () => {
 							aria-labelledby="checkbox-group"
 							className="flex flex-col gap-y-1 mt-2 mb-8"
 						>
-							<InputCheckbox
+							{/* <InputCheckbox
 								label="Todos"
 								name="todosCheck"
 								checked={inputs.recurso.todosCheck}
 								onChange={(e) => {
 									handleCheck(e, 'recurso');
 								}}
-							/>
+							/> */}
 							<InputCheckbox
 								label="Syllabus"
 								name="syllabusCheck"
@@ -177,22 +176,22 @@ const InfoAcademica = () => {
 									handleCheck(e, 'recurso');
 								}}
 							/>
-							<InputCheckbox
+							{/* <InputCheckbox
 								label="Planes curriculares"
 								name="planesCurricularesCheck"
 								checked={inputs.recurso.planesCurricularesCheck}
 								onChange={(e) => {
 									handleCheck(e, 'recurso');
 								}}
-							/>
-							<InputCheckbox
+							/> */}
+							{/* <InputCheckbox
 								label="Mallas curriculares"
 								name="mallasCurricularesCheck"
 								checked={inputs.recurso.mallasCurricularesCheck}
 								onChange={(e) => {
 									handleCheck(e, 'recurso');
 								}}
-							/>
+							/> */}
 							<InputCheckbox
 								label="Otros"
 								name="otrosCheck"
