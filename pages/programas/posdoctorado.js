@@ -199,17 +199,19 @@ const Programa = (
 				</div>
 			</div>
 			<div className="col-span-full mb-14">
-				<Tabs nombre="posgrado">
+				<Tabs nombre="posdoctorado">
 					<div label="Presentación">
 						<div className="grid grid-cols-8 gap-7">
 							<div className="col-span-10 md:col-span-6">
 								<div className="mb-6">
 									<Observacion label="¿Qué es un posdoctorado?">
-										<p>
-											Un Posdoctorado es una mención, no
-											un grado académico, por tanto, no es
-											un estudio superior al doctorado.
-										</p>
+										<>
+											Es un periodo de tiempo (considerado
+											también como estancia posdoctoral)
+											que se utiliza para profundizar e
+											investigar el campo o líneas de
+											estudio de la tesis doctoral.
+										</>
 									</Observacion>
 								</div>
 								<div className="mb-6">
@@ -218,34 +220,38 @@ const Programa = (
 									</div> */}
 									<p>
 										La Facultad de Ciencias Administrativas
-										(FCA) en coordinaci&oacute;n con la
-										Universidad de Buenos Aires (UBA)
-										ofrecer&aacute; el primer posdoctorado
-										en Administraci&oacute;n
-										convirti&eacute;ndose as&iacute;, en la
-										primera facultad de la Universidad
-										Nacional Mayor de San Marcos en otorgar
-										esta menci&oacute;n. El doctor Ricardo
-										Pahlen Acu&ntilde;a, decano de la
-										Facultad de Ciencias Econ&oacute;micas
-										de la UBA, ser&aacute; el director
-										general de este programa. Mientras que
-										la direcci&oacute;n acad&eacute;mica y
-										administrativa estar&aacute; a cargo del
-										doctor Iv&aacute;n Vivanco Aquino,
-										Coordinador del programa de doctorado de
-										la Unidad de Posgrado de la FCA. Los
-										perfiles, criterios, malla curricular,
-										as&iacute; como aspectos
-										acad&eacute;micos y administrativos, se
-										trabajar&aacute;n de manera coordinada
-										con nuestros pares de la UBA.
+										de la UNMSM, en coordinación con la
+										Facultad de Ciencias Económicas de la
+										Universidad de Buenos Aires (UBA),
+										presenta el primer posdoctorado en
+										Administración con el objetivo que los
+										profesionales y doctores en
+										Administración y ciencias afines mejoren
+										sus capacidades de investigación bajo la
+										mentoría de un experto en el área y así
+										contribuir a la generación de nuevos
+										conocimientos.
 									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										¿Cuál es el objetivo?
+									</div>
 									<p>
-										&iexcl;&Uacute;nete a la vanguardia del
-										conocimiento y contribuye en el campo
-										acad&eacute;mico de las ciencias
-										administrativas!
+										Lograr que los participantes profundicen
+										conocimientos en un tema especializado,
+										siguiendo su línea de trabajo doctoral.
+									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										¿Cómo se obtiene?
+									</div>
+									<p>
+										Los estudiantes se certifican con un
+										artículo de investigación de alto
+										impacto bajo la tutoría de un docente
+										investigador de amplia experiencia.
 									</p>
 								</div>
 								<div className="mb-6">
@@ -254,34 +260,23 @@ const Programa = (
 									</div>
 									<p>
 										Doctores en administración y carreras
-										afines.
+										afines de la UNMSM, que pertenezcan a un
+										grupo de investigación reconocido por
+										Vicerrectorado de Investigación y
+										Posgrado (VRIP), que deseen continuar su
+										formación académica en la investigación
+										en las ciencias económicas y de la
+										gestión.
 									</p>
 								</div>
 								<div className="mb-6">
 									<div className="subtitle mb-2">
-										Nuestro objetivo:
+										Duración del programa:
 									</div>
 									<p>
-										Mejorar las capacidades de los
-										profesionales en investigación bajo la
-										mentoría de un experto en el área, que
-										posee una amplia experiencia en el campo
-										de la investigación científica.
-									</p>
-								</div>
-								<div className="mb-6">
-									<div className="subtitle mb-2">
-										¿Por qué hacer un posdoctorado?
-									</div>
-									<p>
-										Tendrás la oportunidad de crear un
-										artículo de investigación de alto
-										impacto, el cual será publicado en
-										revistas indexadas o libros promovidos
-										por universidades que cuentan con el
-										juicio académico de pares ciegos
-										internacionales, quienes dan validez a
-										tales textos o artículos.
+										Abarca un período de 6 meses a 2 años.
+										Al finalizar, la Facultad expide un
+										certificado.
 									</p>
 								</div>
 							</div>
@@ -377,10 +372,86 @@ const Programa = (
 							</div>
 						</div>
 					</div>
-					<div
-						label="Admisión"
-						link="/admision?programa=posdoctorado"
-					></div>
+					<div label="Inscripción">
+						<>
+							<div className="mb-6">
+								<div className="subtitle mb-2">
+									Proceso de inscripción:
+								</div>
+								<p className="mb-2">
+									Del 15 al 25 de agosto, los interesados
+									deben remitir los siguientes documentos:
+								</p>
+								<ul className="list-disc list-inside mb-3">
+									<li className="mb-2">
+										Solicitud de inscripción (
+										<a
+											href="https://docs.google.com/document/d/1x78YJOjdO68f5PP4YoG-a96SzlKwf7YV/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Anexo 1
+										</a>
+										)
+									</li>
+									<li className="mb-2">
+										Presentación de CV (
+										<a
+											href="https://docs.google.com/document/d/10VpffJuqBzvq2okRE2WXkf412S0NwiYF/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Anexo 2
+										</a>
+										)
+									</li>
+									<li className="mb-2">
+										Proyecto de investigación (
+										<a
+											href="https://docs.google.com/document/d/1CnkUO_wFEZtgGDrYZTeWuLhq241MqdfF/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Anexo 3
+										</a>
+										)
+									</li>
+									<li className="mb-2">
+										Copia de Título de Doctor (Anexo 4)
+									</li>
+								</ul>
+								<p className="mb-3">
+									Todos estos documentos, cuyos formatos se
+									adjuntan a la presente, deben ser enviados
+									en formato PDF al correo{' '}
+									<a
+										href="mailto:posdoctorado.administracion@unmsm.edu.pe"
+										className="link break-words"
+									>
+										posdoctorado.administracion@unmsm.edu.pe
+									</a>
+								</p>
+								<p className="mb-2">
+									<span className="font-bold">
+										Proceso de evaluación:
+									</span>{' '}
+									del 26 y 27 de agosto
+								</p>
+								<p className="mb-2">
+									<span className="font-bold">
+										Presentación de resultados:
+									</span>{' '}
+									28 de agosto
+								</p>
+								<p className="mb-2">
+									<span className="font-bold">
+										Inauguración:
+									</span>{' '}
+									29 de agosto
+								</p>
+							</div>
+						</>
+					</div>
 					{/* <div
 						label="Plana docente"
 						link="/comunidad/plana-docente"

@@ -115,6 +115,15 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 					}
 				);
 				break;
+			case 'posdoctorado':
+				router.push(
+					`/programas/posdoctorado?tab=${slugify(newActiveTab)}`,
+					undefined,
+					{
+						shallow: true,
+					}
+				);
+				break;
 			case 'posgrado':
 				if (tipoPrograma === 'doctorado') {
 					router.push(
