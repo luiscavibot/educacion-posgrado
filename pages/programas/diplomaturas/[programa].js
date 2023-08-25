@@ -402,7 +402,10 @@ const Programa = ({ programa, otrosProgramas }) => {
 						/>
 					</div>
 					<div label="Inversión económica">
-						<InversionEconomica inversion={programa.inversion} />
+						<InversionEconomica
+							inversion={programa.inversion}
+							tipoPrograma="DIPLOMATURA"
+						/>
 					</div>
 
 					<div
