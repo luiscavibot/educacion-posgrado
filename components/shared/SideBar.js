@@ -355,6 +355,11 @@ const SideBar = ({ interno }) => {
 									</>
 								</>
 							</Accordion>
+							<Link href="/blog-gestion-publica">
+								<a className="inline-flex font-bold items-center py-[10px] px-11 transition w-full">
+									Blog de Gestión pública
+								</a>
+							</Link>
 						</div>
 						<div className="bg-secondary w-full pt-4 block md:hidden">
 							<Link href="/tramites">
@@ -419,10 +424,10 @@ const SideBar = ({ interno }) => {
 							<div>
 								<RedesSocialesHome
 									className="text-lg mt-12 mb-8 flex gap-4 items-center justify-center"
-									facebook="https://www.facebook.com/upg.administracion"
-									youtube="https://www.youtube.com/c/fcaunmsm"
-									// twitter="https://twitter.com/UNMSMFarmacia"
-									// instagram="https://www.instagram.com/unmsmfarmacia/"
+									facebook={`${process.env.NEXT_PUBLIC_FACEBOOK}`}
+									youtube={`${process.env.NEXT_PUBLIC_YOUTUBE}`}
+									tiktok={`${process.env.NEXT_PUBLIC_TIKTOK}`}
+									linkedin={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
 								/>
 							</div>
 						</div>

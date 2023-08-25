@@ -10,9 +10,14 @@ import Contactanos from '../components/home/Contactanos';
 import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
 
+import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
+import { BannerAdmision } from '../components/admision/BannerAdmision';
+import AsideSocialNetworks from '../components/home/AsideSocialNetworks';
+
 export default function Home({ noticiasDestacadas, noticias, eventos }) {
 	return (
 		<FHpages>
+			<AsideSocialNetworks />
 			{/* <SideBar /> */}
 			{/* <div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
 				{isOpenHeader && (

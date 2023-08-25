@@ -17,7 +17,7 @@ import { Autoplay } from 'swiper';
 // import Numeros from './Numeros';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Logo from '../icons/Logo';
-import AsideSocialNetworks from '../shared/AsideSocialNetworks';
+// import AsideSocialNetworks from '../shared/AsideSocialNetworks';
 import LogoPosgradoAdministracionVertical from '../icons/LogoPosgradoAdministracionVertical';
 
 import { Menu } from '@mui/base/Menu';
@@ -41,7 +41,7 @@ const PortadaHome = ({ eventos }) => {
 		// 	<div className="relative md:static h-96 md:h-full">
 		<section className="relative w-full flex flex-col">
 			<div className="relative h-[calc(100vh_-_170px)] sm:h-96 md:h-auto">
-				<AsideSocialNetworks />
+				{/* <AsideSocialNetworks /> */}
 
 				{/* carrusel fotos */}
 				<div id="initial-carousel" className="relative">
@@ -71,60 +71,66 @@ const PortadaHome = ({ eventos }) => {
 					>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/carousel/fondo-portada-01.jpg"
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-01.jpg"
 								alt="img carrusel 1"
 								layout="responsive"
 								width={2459}
 								height={1096}
-								// objectFit="cover"
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/carousel/fondo-portada-02.jpg"
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-03.jpg"
 								alt="img carrusel 2"
 								layout="responsive"
 								width={2459}
 								height={1096}
-								// objectFit="cover"
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/carousel/fondo-portada-03.jpg"
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-07.jpg"
 								alt="img carrusel 3"
 								layout="responsive"
 								width={2459}
 								height={1096}
-								// objectFit="cover"
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/carousel/fondo-portada-04.jpg"
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-08.jpg"
 								alt="img carrusel 4"
 								layout="responsive"
 								width={2459}
 								height={1096}
-								// objectFit="cover"
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/carousel/fondo-portada-05.jpg"
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-06.jpg"
 								alt="img carrusel 5"
 								layout="responsive"
 								width={2459}
 								height={1096}
-								// objectFit="cover"
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							<Image
+								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-02.jpg"
+								alt="img carrusel 6"
+								layout="responsive"
+								width={2459}
+								height={1096}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>

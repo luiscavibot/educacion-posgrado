@@ -15,14 +15,14 @@ const HeaderPage = () => {
 	return (
 		<header className="bg-bgHeader bg-no-repeat bg-cover lg:bg-center bg-secondary text-blanco fixed inset-x-0 z-10">
 			<SubMenu theme="footerOne" color="blanco" />
-			<div className="container mx-auto px-3 py-3 lg:py-5 flex justify-between relative z-10">
+			<div className="container mx-auto px-4 lg:px-8 2xl:px-16 py-3 lg:py-5 flex justify-between relative z-10">
 				<div className="lg:hidden block">
 					<SideBar interno />
 				</div>
-				<div className="relative left-4">
+				<div className="">
 					<Link href="/">
 						<a>
-							<Logo />
+							<Logo className="h-[70px] w-full" />
 						</a>
 					</Link>
 				</div>
