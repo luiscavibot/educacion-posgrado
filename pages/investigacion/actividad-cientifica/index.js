@@ -11,6 +11,7 @@ import InputText from '../../../components/shared/InputText';
 import Paginador from '../../../components/shared/Paginador';
 import InputCheckbox from '../../../components/shared/InputCheckbox';
 import useActividadCientifica from '../../../hooks/useActividadCientifica';
+import Cargando from '../../../components/resultados/Cargando';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
@@ -20,6 +21,7 @@ const INITIAL_INPUTS = {
 	sustentacionesVirtualesCheck: false,
 	librosCheck: false,
 	investigacionesDeDoctoradoCheck: false,
+	gestionEnElTercerMilenioCheck: false,
 };
 
 const radioOptions = [
@@ -111,6 +113,14 @@ const ActividadCientifica = () => {
 									aria-labelledby="checkbox-group"
 								>
 									<InputCheckbox
+										label="Gestión en el Tercer Milenio"
+										name="gestionEnElTercerMilenioCheck"
+										checked={
+											inputs.gestionEnElTercerMilenioCheck
+										}
+										onChange={handleCheck}
+									/>
+									<InputCheckbox
 										label="Artículos Científicos"
 										name="articulosCientificosCheck"
 										checked={
@@ -194,85 +204,117 @@ const ActividadCientifica = () => {
 							/>
 						</div>
 					</div>
-					{selectedOption === 'PUBLICACIONES' && (
-						<div className="px-4 md:px-0 col-span-full mb-20">
-							{actividades?.length > 0 &&
-								actividades.map((actividad) => (
-									<a
-										key={actividad.slug}
-										href={actividad.link_publicacion}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="group min-h-[190px] md:min-h-[200px] animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105"
-									>
-										<div className="relative w-full max-w-[188px] hidden md:block">
-											<Image
-												layout="fill"
-												objectFit="cover"
-												src={actividad.foto}
-											/>
-										</div>
-										<div className="flex flex-col gap-2 basis-12/12 md:basis-9/12 px-5 py-3 relative">
-											<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
-												<BiTimeFive />
-												<p className="ml-1">
-													{getFecha(actividad.fecha)}
-												</p>
-											</div>
-											<div className="mt-[6px] md:mt-0 order-1 md:order-2">
-												<p className="line-clamp-1 text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
-													{actividad.nombre}
-												</p>
-												<div>
-													<p
-														className="line-clamp-4 mb-2"
-														dangerouslySetInnerHTML={createMarkup(
-															actividad.resumen
-														)}
-													/>
-													{/* <span className="text-secondary font-bold">
-												{' '}
-												Leer más
-											</span> */}
+					{actividades && actividades.length > 0 ? (
+						<>
+							{selectedOption === 'PUBLICACIONES' && (
+								<div className="px-4 md:px-0 col-span-full mb-20">
+									{actividades?.length > 0 &&
+										actividades.map((actividad) => (
+											<a
+												key={actividad.slug}
+												href={
+													actividad.link_publicacion
+												}
+												target="_blank"
+												rel="noopener noreferrer"
+												className={`group ${
+													actividad.tipo_produccion_academica !==
+														'GESTIONENELTERCERMILENIO' &&
+													'min-h-[190px] md:min-h-[200px]'
+												} animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105`}
+											>
+												{actividad.tipo_produccion_academica !==
+													'GESTIONENELTERCERMILENIO' && (
+													<div className="relative w-full max-w-[188px] hidden md:block">
+														<Image
+															layout="fill"
+															objectFit="cover"
+															src={actividad.foto}
+														/>
+													</div>
+												)}
+												<div className="flex flex-col gap-2 basis-12/12 md:basis-9/12 px-5 py-3 relative">
+													<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
+														<BiTimeFive />
+														<p className="ml-1">
+															{getFecha(
+																actividad.fecha
+															)}
+														</p>
+													</div>
+
+													<div>
+														<div className="mt-[6px] md:mt-0 order-1 md:order-2">
+															<p className="line-clamp-1 text-base font-bold leading-6 text-negro mb-2 group-hover:text-secondary transition duration-300">
+																{actividad.tipo_produccion_academica ===
+																	'GESTIONENELTERCERMILENIO' &&
+																	'Revista de investigación: Gestión en el Tercer Milenio - '}
+																{
+																	actividad.nombre
+																}
+															</p>
+															{actividad.tipo_produccion_academica !==
+																'GESTIONENELTERCERMILENIO' && (
+																<div>
+																	<p
+																		className="line-clamp-4 mb-2"
+																		dangerouslySetInnerHTML={createMarkup(
+																			actividad.resumen
+																		)}
+																	/>
+																	{/* <span className="text-secondary font-bold">
+														{' '}
+														Leer más
+													</span> */}
+																</div>
+															)}
+														</div>
+														<p className="text-tertiary text-sm absolute bottom-3 left-5">
+															{actividad.autor}
+														</p>
+													</div>
 												</div>
-											</div>
-											<p className="text-tertiary text-sm absolute bottom-3 left-5">
-												{actividad.autor}
+											</a>
+										))}
+								</div>
+							)}
+							{selectedOption === 'DOCENTES_ASESORES' &&
+								['', '', '', '', '', '', '', '', '', ''].map(
+									(item, index) => (
+										<div className="mb-8" key={index}>
+											<p className="text-textColorOne font-bold mb-1">
+												Dr. Victor Chalco Flores
 											</p>
+											<p className="text-textColorTwo mb-2">
+												mvelazquezc@unmsm.edu.pe
+											</p>
+											<ul className="list-disc list-inside">
+												<li>
+													Ll-21: Administración
+													Financiera - ODS 4:
+													Educación de calidad
+												</li>
+												<li>
+													LI-122: Gestión Bancaria -
+													ODS 9: Industria, innovación
+													e infraestructura
+												</li>
+												<li>
+													LI-123: Finanzas
+													Corporativas - ODS 9:
+													Industria, innovación e
+													infraestructura
+												</li>
+											</ul>
 										</div>
-									</a>
-								))}
+									)
+								)}
+						</>
+					) : (
+						<div className="px-4 mt-6 md:px-0 flex items-center justify-center">
+							<Cargando />
 						</div>
 					)}
-					{selectedOption === 'DOCENTES_ASESORES' &&
-						['', '', '', '', '', '', '', '', '', ''].map(
-							(item, index) => (
-								<div className="mb-8" key={index}>
-									<p className="text-textColorOne font-bold mb-1">
-										Dr. Victor Chalco Flores
-									</p>
-									<p className="text-textColorTwo mb-2">
-										mvelazquezc@unmsm.edu.pe
-									</p>
-									<ul className="list-disc list-inside">
-										<li>
-											Ll-21: Administración Financiera -
-											ODS 4: Educación de calidad
-										</li>
-										<li>
-											LI-122: Gestión Bancaria - ODS 9:
-											Industria, innovación e
-											infraestructura
-										</li>
-										<li>
-											LI-123: Finanzas Corporativas - ODS
-											9: Industria, innovación e
-											infraestructura
-										</li>
-									</ul>
-								</div>
-							)
-						)}
 				</div>
 			</PrincipalLayout>
 		</>

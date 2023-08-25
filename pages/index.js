@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FHpages from '../components/shared/layouts/FHpages';
 import PortadaHome from '../components/home/PortadaHome';
 import AgendaPublica from '../components/home/AgendaPublica';
@@ -11,19 +11,26 @@ import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
 
 import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
-import { BannerAdmision } from '../components/admision/BannerAdmision';
+// import { BannerAdmision } from '../components/admision/BannerAdmision';
 import AsideSocialNetworks from '../components/home/AsideSocialNetworks';
+import useAlertasInformativas from '../hooks/useAlerta';
 
 export default function Home({ noticiasDestacadas, noticias, eventos }) {
+	const [isOpenHeader, setIsOpenHeader] = useState(true);
+	const { alerta } = useAlertasInformativas();
+
 	return (
 		<FHpages>
 			<AsideSocialNetworks />
 			{/* <SideBar /> */}
-			{/* <div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
-				{isOpenHeader && (
-					<BannerAdmisionHome setIsOpenHeader={setIsOpenHeader} />
+			<div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
+				{isOpenHeader && alerta && (
+					<BannerAdmisionHome
+						alerta={alerta}
+						setIsOpenHeader={setIsOpenHeader}
+					/>
 				)}
-			</div> */}
+			</div>
 
 			<PortadaHome eventos={eventos} />
 
