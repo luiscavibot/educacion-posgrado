@@ -1,24 +1,20 @@
-import { useState, useEffect } from 'react';
+import useSWR from 'swr';
 import { BACKEND } from '../config/consts';
 
+const fetcher = async (url) => {
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Error al obtener datos');
+	}
+	return response.json();
+};
+
 export default function useDirectorio() {
-	const [directorio, setDirectorio] = useState(null);
-	const [isLoading, setIsLoading] = useState(false);
-	useEffect(() => {
-		setDirectorio(null);
-		let url = `${BACKEND}/directorios`;
-		setIsLoading(true);
-		const fetchDirectorio = async () => {
-			let response = await fetch(url);
-			let res = await response.json();
-			console.log(res);
-			setDirectorio(res);
-			setIsLoading(false);
-		};
-		fetchDirectorio().catch(console.error);
-	}, []);
+	const { data, error } = useSWR(`${BACKEND}/directorios`, fetcher);
+
 	return {
-		directorio,
-		isLoading,
+		directorio: data,
+		isLoading: !error && !data,
+		isError: error,
 	};
 }

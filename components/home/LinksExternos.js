@@ -57,7 +57,7 @@ const LinksExternos = () => {
 								<div>
 									<LibroCintaStroke2 className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-11" />
 								</div>
-								<p className="text-blanco text-lg">Revistas</p>
+								<p className="text-blanco text-lg">Boletines</p>
 							</a>
 						</Link>
 
