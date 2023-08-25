@@ -131,7 +131,7 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 							{noticias.map((noticia) => (
 								<Link
 									key={noticia.id}
-									href={`/noticias/${noticia.slug}`}
+									href={`/actualidad/agenda-publica/${noticia.slug}`}
 								>
 									<a className="col-span-1 row-span-1 card bg-blanco hover:shadow-md hover:brightness-105 hover:-translate-y-1 cursor-pointer !rounded-t-none">
 										<div className="h-[220px] relative w-full">

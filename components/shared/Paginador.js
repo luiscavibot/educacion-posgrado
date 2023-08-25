@@ -8,9 +8,9 @@ const INITIAL_PAGE = 1;
 const PAGE_SIZE = 3;
 
 export default function PaginadorNoticias({ controles }) {
-	const [page, setPage, totalPaginas] = controles;
+	const [page, setPage, totalPages] = controles;
 
-	if (totalPaginas !== 0) {
+	if (totalPages !== 0) {
 		return (
 			<Pagination
 				prevItem={{
@@ -21,7 +21,7 @@ export default function PaginadorNoticias({ controles }) {
 					content: (
 						<FlechaDerechaIcon
 							page={page}
-							totalPaginas={totalPaginas}
+							totalPaginas={totalPages}
 						/>
 					),
 					icon: true,
@@ -33,7 +33,7 @@ export default function PaginadorNoticias({ controles }) {
 				firstItem={null}
 				lastItem={null}
 				siblingRange={1}
-				totalPages={totalPaginas || 0}
+				totalPages={totalPages || 0}
 				onPageChange={(e, { activePage }) => {
 					setPage(activePage - 1);
 				}}

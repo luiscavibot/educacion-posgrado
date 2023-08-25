@@ -224,7 +224,7 @@ const InfoAcademica = () => {
 						<Paginador controles={[page, setPage, totalPages]} />
 					</div>
 					<div className="mt-7">
-						<a
+						{/* <a
 							key={`1`}
 							href={`#`}
 							target="_blank"
@@ -250,34 +250,9 @@ const InfoAcademica = () => {
 								Última actualización: 10 de noviembre de 2022
 							</p>
 						</a>
-						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
-						<a
-							key={`2`}
-							href={`#`}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="block mb-7"
-						>
-							<div className="mb-1">
-								<p className="text-textColorOne font-bold mr-2 inline-block">
-									Horarios 2021-II | Maestría en
-									Administración con mención en Dirección de
-									Recursos Humanos
-								</p>
-								{/* <p className="inline-block">
-									<span className="text-xs text-textColorTwo/80 mr-1">
-										Entrada fijada
-									</span>
-									<span>
-										<EntradaFijaIcon className="fill-textColorTwo inline" />
-									</span>
-								</p> */}
-							</div>
-							<p className="text-textColorTwo">
-								Última actualización: 10 de noviembre de 2022
-							</p>
-						</a>
-						{/* {infoAcadPosgrado ? (
+						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div> */}
+
+						{infoAcadPosgrado ? (
 							infoAcadPosgrado.length > 0 ? (
 								infoAcadPosgrado
 									.filter(
@@ -358,7 +333,7 @@ const InfoAcademica = () => {
 							<div className=" mt-10 flex justify-center items-center">
 								<Cargando />
 							</div>
-						)} */}
+						)}
 					</div>
 				</div>
 			</PrincipalLayout>
