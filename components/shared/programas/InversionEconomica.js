@@ -200,48 +200,211 @@ export const InversionEconomica = ({
 					</div>
 				)}
 
-				{/* <div className="mb-8">
-					{programa[0].attributes.costo_semestre ? (
-						<>
-							<p className="subtitle mb-6">
-								4. Costo por semestre:
-							</p>
-							<div className="bg-gris px-6 py-4 mb-6">
-								<p className="mb-[6px] font-bold">
-									<img
-										className="w-[19px] mb-[1px] mr-1 inline-block"
-										src="/img/icons/observacion-white-icon.svg"
-										alt=""
-									/>
-									<span>Observación</span>
-								</p>
-								<ul className="list-disc list-inside">
-									<li className="mb-1">
-										El semestre está conformado por cuatro
-										meses académicoss
-									</li>
-									<li className="mb-1">
-										El número total de créditos por semestre
-										podría variar de acuerdo a la cantidad
-										de cursos que el alumno se matricule.
-									</li>
-									<li>
-										Monto referencial, sujeto a variaciones.
-									</li>
-								</ul>
+				<div className="mb-8">
+					<p className="subtitle mb-4">&gt; Fraccionamiento:</p>
+					<p className="mb-4">
+						Los cursos del programa tienen un valor en créditos.
+						Sobre la base del número de créditos matriculados, se
+						determina el pago de un alumno por ciclo.
+					</p>
+					<ul className="list-disc list-inside">
+						<li className="mb-1">
+							<span>
+								Inversión económica de S/ 4 860.00 fraccionado
+								en las siguientes cuotas:
+							</span>
+							<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
+								<table className="table table-striped mb-6">
+									<thead>
+										<tr className="!bg-tertiary text-blanco text-center">
+											<th>Cuotas</th>
+											<th className="w-32 md:w-60 text-center">
+												Monto
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cuota 1</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 2</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 3</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 4</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 5</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 6</td>
+											<td className="text-center">
+												S/ 810.00
+											</td>
+										</tr>
+										<tr className="font-bold">
+											<td>Total</td>
+											<td className="md:w-60 text-center">
+												S/ 4 860.00
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-						</>
-					) : null}
-
-					{programa[0].attributes.costo_semestre ? (
-						<ul
-							className="list-disc list-inside default-programa"
-							dangerouslySetInnerHTML={{
-								__html: `${programa[0].attributes.fraccionamiento}`,
-							}}
-						></ul>
-					) : null}
-				</div> */}
+						</li>
+						<li className="mb-1">
+							<span>
+								Inversión económica de S/ 4 374.00, con
+								descuento corporativo de 10% (3 participantes),
+								fraccionado en las siguientes cuotas:
+							</span>
+							<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
+								<table className="table table-striped mb-6">
+									<thead>
+										<tr className="!bg-tertiary text-blanco text-center">
+											<th>Cuotas</th>
+											<th className="w-32 md:w-60 text-center">
+												Monto
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cuota 1</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 2</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 3</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 4</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 5</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 6</td>
+											<td className="text-center">
+												S/ 729.00
+											</td>
+										</tr>
+										<tr className="font-bold">
+											<td>Total</td>
+											<td className="md:w-60 text-center">
+												S/ 4 374.00
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<li className="mb-1">
+							<span>
+								Inversión económica de S/ 4 131.00, con
+								descuento corporativo del 15% (20
+								participantes), fraccionado en las siguientes
+								cuotas:
+							</span>
+							<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
+								<table className="table table-striped mb-6">
+									<thead>
+										<tr className="!bg-tertiary text-blanco text-center">
+											<th>Cuotas</th>
+											<th className="w-32 md:w-60 text-center">
+												Monto
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cuota 1</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 2</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 3</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 4</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 5</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr>
+											<td>Cuota 6</td>
+											<td className="text-center">
+												S/ 688.50
+											</td>
+										</tr>
+										<tr className="font-bold">
+											<td>Total</td>
+											<td className="md:w-60 text-center">
+												S/ 4 131.00
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+					</ul>
+					{/* <ul
+						className="list-disc list-inside default-programa"
+						dangerouslySetInnerHTML={{
+							__html: `${programa[0].attributes.fraccionamiento}`,
+						}}
+					></ul> */}
+				</div>
 			</div>
 		</div>
 	);
