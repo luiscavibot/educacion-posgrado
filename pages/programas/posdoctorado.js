@@ -203,7 +203,7 @@ const Programa = (
 					<div label="Presentación">
 						<div className="grid grid-cols-8 gap-7">
 							<div className="col-span-10 md:col-span-6">
-								<div className="mb-6">
+								{/* <div className="mb-6">
 									<Observacion label="¿Qué es un posdoctorado?">
 										<>
 											Es un periodo de tiempo (considerado
@@ -213,7 +213,7 @@ const Programa = (
 											estudio de la tesis doctoral.
 										</>
 									</Observacion>
-								</div>
+								</div> */}
 								<div className="mb-6">
 									{/* <div className="subtitle mb-2">
 										¿Qué es un posdoctorado?
@@ -231,6 +231,18 @@ const Programa = (
 										mentoría de un experto en el área y así
 										contribuir a la generación de nuevos
 										conocimientos.
+									</p>
+								</div>
+								<div className="mb-6">
+									<div className="subtitle mb-2">
+										¿Qué es un posdoctorado?
+									</div>
+									<p>
+										Es un periodo de tiempo (considerado
+										también como estancia posdoctoral) que
+										se utiliza para profundizar e investigar
+										el campo o líneas de estudio de la tesis
+										doctoral.
 									</p>
 								</div>
 								<div className="mb-6">
@@ -384,37 +396,35 @@ const Programa = (
 								</p>
 								<ul className="list-disc list-inside mb-3">
 									<li className="mb-2">
-										Solicitud de inscripción (
 										<a
+											className="hover:text-primary-hover"
 											href="https://docs.google.com/document/d/1x78YJOjdO68f5PP4YoG-a96SzlKwf7YV/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											Anexo 1
+											Solicitud de inscripción ( Anexo 1 )
 										</a>
-										)
 									</li>
 									<li className="mb-2">
-										Presentación de CV (
 										<a
+											className="hover:text-primary-hover"
 											href="https://docs.google.com/document/d/10VpffJuqBzvq2okRE2WXkf412S0NwiYF/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											Anexo 2
+											Presentación de CV ( Anexo 2 )
 										</a>
-										)
 									</li>
 									<li className="mb-2">
-										Proyecto de investigación (
 										<a
+											className="hover:text-primary-hover"
 											href="https://docs.google.com/document/d/1CnkUO_wFEZtgGDrYZTeWuLhq241MqdfF/edit?usp=drive_link&ouid=111397810678881490243&rtpof=true&sd=true"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											Anexo 3
+											Proyecto de investigación ( Anexo 3
+											)
 										</a>
-										)
 									</li>
 									<li className="mb-2">
 										Copia de Título de Doctor (Anexo 4)

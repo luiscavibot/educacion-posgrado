@@ -48,10 +48,12 @@ const Revistas = () => {
 				<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
 					Actualidad
 				</li>
-				<li className="text-textColorOne font-bold inline">Revistas</li>
+				<li className="text-textColorOne font-bold inline">
+					Boletines
+				</li>
 			</ul>
 			<div className="ml-4 md:ml-0 col-span-full title-page mb-4">
-				Revistas
+				Boletines
 			</div>
 			<div className="col-span-full mb-8 md:mb-8 flex flex-col md:flex-row justify-between items-center">
 				{/* NOTE: Extiendo el ancho del input+contenedor al 100% para la versión responsive */}

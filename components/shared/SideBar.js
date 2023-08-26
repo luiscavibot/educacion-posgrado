@@ -290,7 +290,7 @@ const SideBar = ({ interno }) => {
 											<div onClick={handleSidebar}>
 												<Link href="/actualidad/revistas">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Revistas
+														Boletines
 													</a>
 												</Link>
 											</div>

@@ -65,7 +65,7 @@ const IconTab = (label) => {
 				</>
 			);
 
-		case 'seguimiento-de-egresados':
+		case 'testimonios-de-egresados':
 			return (
 				<>
 					<span>
