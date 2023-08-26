@@ -12,6 +12,7 @@ import Paginador from '../../../components/shared/Paginador';
 import InputCheckbox from '../../../components/shared/InputCheckbox';
 import useActividadCientifica from '../../../hooks/useActividadCientifica';
 import Cargando from '../../../components/resultados/Cargando';
+import docentesAsesoresData from '../../../data/docentesAsesores';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
@@ -188,22 +189,24 @@ const ActividadCientifica = () => {
 					</div>
 				</div>
 				<div className="col-span-8 lg:col-span-9 xl:col-span-10 px-4 mb-6 md:px-0">
-					<div className="px-4 md:px-0 col-span-full mb-5">
-						<div className="flex justify-between">
-							<InputText
-								value={inputs.keyWords}
-								name="buscador"
-								onChange={handleChange}
-								placeholder="Buscar por palabra clave"
-								conIconoBuscador
-								className="w-full md:w-[14rem] inline-block"
-								backgroundClass="bg-textColorTwo/5"
-							/>
-							<Paginador
-								controles={[page, setPage, totalPages]}
-							/>
+					{selectedOption !== 'DOCENTES_ASESORES' && (
+						<div className="px-4 md:px-0 col-span-full mb-5">
+							<div className="flex justify-between">
+								<InputText
+									value={inputs.keyWords}
+									name="buscador"
+									onChange={handleChange}
+									placeholder="Buscar por palabra clave"
+									conIconoBuscador
+									className="w-full md:w-[14rem] inline-block"
+									backgroundClass="bg-textColorTwo/5"
+								/>
+								<Paginador
+									controles={[page, setPage, totalPages]}
+								/>
+							</div>
 						</div>
-					</div>
+					)}
 					{actividades && actividades.length > 0 ? (
 						<>
 							{selectedOption === 'PUBLICACIONES' && (
@@ -279,36 +282,36 @@ const ActividadCientifica = () => {
 								</div>
 							)}
 							{selectedOption === 'DOCENTES_ASESORES' &&
-								['', '', '', '', '', '', '', '', '', ''].map(
-									(item, index) => (
-										<div className="mb-8" key={index}>
-											<p className="text-textColorOne font-bold mb-1">
-												Dr. Victor Chalco Flores
-											</p>
-											<p className="text-textColorTwo mb-2">
-												mvelazquezc@unmsm.edu.pe
-											</p>
-											<ul className="list-disc list-inside">
-												<li>
-													Ll-21: Administración
-													Financiera - ODS 4:
-													Educación de calidad
-												</li>
-												<li>
-													LI-122: Gestión Bancaria -
-													ODS 9: Industria, innovación
-													e infraestructura
-												</li>
-												<li>
-													LI-123: Finanzas
-													Corporativas - ODS 9:
-													Industria, innovación e
-													infraestructura
-												</li>
-											</ul>
-										</div>
-									)
-								)}
+								docentesAsesoresData.map((docente) => (
+									<div className="mb-8" key={docente.nombre}>
+										<p className="text-textColorOne font-bold mb-1">
+											{docente.nombre}
+										</p>
+										<p className="text-textColorTwo mb-2">
+											{docente.correo}
+										</p>
+										<ul className="list-disc list-inside">
+											{docente?.ods1 && (
+												<li>{docente?.ods1}</li>
+											)}
+											{docente?.ods2 && (
+												<li>{docente?.ods2}</li>
+											)}
+											{docente?.ods3 && (
+												<li>{docente?.ods3}</li>
+											)}
+											{docente?.ods4 && (
+												<li>{docente?.ods4}</li>
+											)}
+											{docente?.ods5 && (
+												<li>{docente?.ods5}</li>
+											)}
+											{docente?.ods6 && (
+												<li>{docente?.ods6}</li>
+											)}
+										</ul>
+									</div>
+								))}
 						</>
 					) : (
 						<div className="px-4 mt-6 md:px-0 flex items-center justify-center">
