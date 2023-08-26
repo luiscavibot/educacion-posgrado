@@ -26,6 +26,7 @@ module.exports = {
 				submenu: '0px 1px 20px rgba(0, 0, 0, 0.15)',
 			},
 			backgroundImage: {
+				alert: 'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/cintillo-alerta-informativa.jpg")',
 				bgEventos:
 					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/fondos-eventos.jpg")',
 				bgHeader:

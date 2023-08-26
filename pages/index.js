@@ -23,7 +23,7 @@ export default function Home({ noticiasDestacadas, noticias, eventos }) {
 		<FHpages>
 			<AsideSocialNetworks />
 			{/* <SideBar /> */}
-			<div className="fixed max-md:bottom-0 md:top-0 z-20 w-full">
+			<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
 				{isOpenHeader && alerta && (
 					<BannerAdmisionHome
 						alerta={alerta}
