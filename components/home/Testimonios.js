@@ -5,7 +5,7 @@ import SwiperButtonNext from './swiper/SwiperButtonNext';
 import Link from 'next/link';
 import Image from 'next/future/image';
 
-import testimoniosData from '../../data/home/testimonios';
+import testimoniosData from '../../data/testimonios';
 
 import { motion } from 'framer-motion';
 import { entradaCardScroll } from '../../consts/animaciones';
@@ -51,7 +51,7 @@ const Testimonios = () => {
 				</div>
 				<div className="col-start-2 col-span-10 mb-9">
 					<p className="text-center">
-						Nuestros alumnos nos dejan sus testimonio.
+						Nuestros alumnos nos dejan sus testimonios.
 					</p>
 				</div>
 				<div className="col-start-2 col-span-10">

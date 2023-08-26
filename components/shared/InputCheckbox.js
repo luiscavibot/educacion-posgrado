@@ -4,7 +4,6 @@ const InputCheckbox = ({
 	onChange = () => {},
 	label = '',
 	name = '',
-	value = '',
 	checked = false,
 	className = '',
 }) => {

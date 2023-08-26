@@ -30,6 +30,7 @@ import SideBar from '../shared/SideBar';
 import TransmitiendoIcon from '../icons/TransmitiendoIcon';
 
 const PortadaHome = ({ eventos }) => {
+	console.log(eventos);
 	// const createHandleMenuClick = (menuItem) => {
 	// 	return () => {
 	// 		console.log(`Clicked on ${menuItem}`);
@@ -488,8 +489,8 @@ const PortadaHome = ({ eventos }) => {
 											key={evento.slug}
 											// href={`/actualidad/eventos/${evento.slug}`}
 											href={`${
-												true
-													? `https://www.google.com/`
+												evento.en_vivo
+													? evento?.transmision_en_vivo
 													: `/actualidad/eventos/${evento.slug}`
 											}`}
 										>
@@ -513,13 +514,13 @@ const PortadaHome = ({ eventos }) => {
 												<div className="flex flex-col">
 													<p
 														className={`flex flex-row gap-x-1 ${
-															true
+															evento.en_vivo
 																? 'block'
 																: 'hidden'
 														}`}
 													>
 														<TransmitiendoIcon className="w-6 h-6 fill-primary relative -top-[1px]" />
-														<span className="text-sm">
+														<span className="text-primary font-bold text-sm">
 															Transmitiendo en
 															vivo
 														</span>
