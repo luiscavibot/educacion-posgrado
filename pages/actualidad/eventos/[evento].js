@@ -310,9 +310,7 @@ export async function getServerSideProps({ params }) {
 	const resEvento = await fetch(`${BACKEND}/eventos/url/${params.evento}`);
 	const evento = (await resEvento.json())[0];
 
-	let resUltimosEventos = await fetch(
-		`${process.env.BACKEND_URL}/eventos/${evento.id}/ultimos`
-	);
+	let resUltimosEventos = await fetch(`${BACKEND}/${evento.id}/ultimos`);
 
 	const ultimosEventos = await resUltimosEventos.json();
 

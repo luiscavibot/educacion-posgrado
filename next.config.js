@@ -12,6 +12,7 @@ const nextConfig = {
 			'unmsm-web-static-files.s3.amazonaws.com',
 			'robohash.org',
 			'biologia-unmsm.s3.us-east-2.amazonaws.com',
+			'unmsm-static-files.s3.us-east-2.amazonaws.com',
 		],
 	},
 	output: 'standalone',
