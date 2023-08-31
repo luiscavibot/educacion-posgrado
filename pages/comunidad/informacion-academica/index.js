@@ -84,8 +84,7 @@ const InfoAcademica = () => {
 					<p className="title-page mb-6">Información académica</p>
 					<p>
 						Todo lo necesario para cursar el semestre con éxito está
-						aquí: horarios, planes de estudios, mallas curriculares,
-						syllabus, etc.
+						aquí: horarios, planes de estudios, syllabus, etc.
 					</p>
 				</div>
 				<div className="col-span-4 lg:col-span-3 2xl:col-span-2 px-4 md:px-0 mb-5">
