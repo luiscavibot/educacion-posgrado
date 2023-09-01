@@ -53,7 +53,7 @@ const TallerTesis = ({ ultimasNoticias }) => {
 			<div className="col-span-full mb-5 ">
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
-						src={`https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/investigacion/taller-tesis-ciencias-administrativa-posgrado.jpg`}
+						src={`https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Investigaci%C3%B3n/taller-tesis-ciencias-administrativa-posgrado.jpg`}
 						layout="responsive"
 						width={1343}
 						height={397}

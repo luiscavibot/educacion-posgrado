@@ -30,7 +30,7 @@ import SideBar from '../shared/SideBar';
 import TransmitiendoIcon from '../icons/TransmitiendoIcon';
 
 const PortadaHome = ({ eventos }) => {
-	console.log(eventos);
+	// console.log(eventos);
 	// const createHandleMenuClick = (menuItem) => {
 	// 	return () => {
 	// 		console.log(`Clicked on ${menuItem}`);
@@ -72,7 +72,7 @@ const PortadaHome = ({ eventos }) => {
 					>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-01.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_0.jpg"
 								alt="img carrusel 1"
 								layout="responsive"
 								width={2459}
@@ -83,7 +83,7 @@ const PortadaHome = ({ eventos }) => {
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-03.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_03.jpg"
 								alt="img carrusel 2"
 								layout="responsive"
 								width={2459}
@@ -94,7 +94,7 @@ const PortadaHome = ({ eventos }) => {
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-07.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_07.jpg"
 								alt="img carrusel 3"
 								layout="responsive"
 								width={2459}
@@ -105,7 +105,7 @@ const PortadaHome = ({ eventos }) => {
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-08.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_08.jpg"
 								alt="img carrusel 4"
 								layout="responsive"
 								width={2459}
@@ -116,7 +116,7 @@ const PortadaHome = ({ eventos }) => {
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-06.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_06.jpg"
 								alt="img carrusel 5"
 								layout="responsive"
 								width={2459}
@@ -127,7 +127,7 @@ const PortadaHome = ({ eventos }) => {
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/Carrusel/fondo-portada-02.jpg"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_02.jpg"
 								alt="img carrusel 6"
 								layout="responsive"
 								width={2459}

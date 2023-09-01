@@ -11,7 +11,7 @@ import SharedComponent from '../../SharedComponent';
 import Boton from '../../Boton';
 
 export const MallaCurricular = ({ asignaturas, tipo, electivos }) => {
-	console.log(tipo);
+	// console.log(tipo);
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);

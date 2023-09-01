@@ -137,7 +137,7 @@ const Index = () => {
 					<div className="relative md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/admision/admision-banner.jpg"
+							src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/admision/admision-administracion-posgrado.jpg"
 							layout="responsive"
 							alt="Banner de admisión"
 							width={1080}

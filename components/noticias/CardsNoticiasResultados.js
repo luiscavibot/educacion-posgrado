@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Cargando from '../resultados/Cargando';
 
 const CardsNoticiasResultados = ({ agendas }) => {
-	console.log(agendas);
+	// console.log(agendas);
 	return (
 		<>
 			{agendas ? (
@@ -24,11 +24,7 @@ const CardsNoticiasResultados = ({ agendas }) => {
 									<Image
 										layout="fill"
 										objectFit="cover"
-										src={
-											agenda.foto
-												? `${agenda.foto}`
-												: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-										}
+										src={agenda.foto}
 									/>
 								</div>
 								<div className="flex flex-col basis-12/12 md:basis-9/12 px-5 py-3">

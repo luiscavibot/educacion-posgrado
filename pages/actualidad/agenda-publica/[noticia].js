@@ -66,11 +66,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 						<div className="relative max-w-full w-[502px] h-56 md:h-[335px] m-auto">
 							<Image
 								quality={100}
-								src={
-									noticia.foto
-										? `${noticia.foto}`
-										: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-								}
+								src={noticia.foto}
 								width={502}
 								height={335}
 								className="object-cover w-full h-full"
@@ -198,7 +194,7 @@ export async function getServerSideProps({ params }) {
 		`${BACKEND}/agenda-publica/url/${params.noticia}`
 	);
 	const noticia = await resNoticia.json();
-	console.log('noticias->', noticia);
+	// console.log('noticias->', noticia);
 	const resNoticiasRelacionadas = await fetch(
 		`${BACKEND}/agenda-publica/ultimas?id=${noticia[0].id}`
 	);

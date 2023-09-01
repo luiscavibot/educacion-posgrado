@@ -72,7 +72,7 @@ const Programa = (
 				<div className="relative md:h-banner xl:h-auto">
 					<Image
 						src={
-							'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/postdoctorado-ciencias-administrativas.jpg'
+							'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/postdoctorado-ciencias-administrativas.jpg'
 						}
 						layout="responsive"
 						width={1343}

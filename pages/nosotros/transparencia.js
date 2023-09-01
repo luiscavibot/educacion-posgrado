@@ -31,7 +31,7 @@ const Index = () => {
 					<div className="relative h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							src={
-								'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/transparencia-administracion-posgrado.jpg'
+								'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/transparencia-administracion-posgrado.jpg'
 							}
 							layout="responsive"
 							width={1343}

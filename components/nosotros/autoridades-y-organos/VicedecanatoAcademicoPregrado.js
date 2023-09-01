@@ -111,7 +111,7 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/1516649364370.jpeg"
+						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-Ebor-Fairlie.jpeg"
 						width={209}
 						height={224}
 						quality={100}
