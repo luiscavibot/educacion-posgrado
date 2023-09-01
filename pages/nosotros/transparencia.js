@@ -8,23 +8,12 @@ import { Tabs } from '../../components/shared/Tabs';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 
-import { BASE_URL, SLUG_CARRERA } from '../../config/consts';
+import { BACKEND, BASE_URL, SLUG_CARRERA } from '../../config/consts';
 import DocumentosOficiales from '../../components/transparencia/DocumentosOficiales';
 import ResolucionesDecanales from '../../components/transparencia/ResolucionesDecanales';
+import { DOCUMENTOS_OFICIALES_YEARS } from '../../consts/documentosOficiales';
 
-const Index = ({ years }) => {
-	const directorios = [
-		{
-			menuItem: 'Programas de Maestrías y doctorados',
-			render: () => (
-				<Tab.Pane attached={false}>
-					<div className="col-start-3 col-span-10 mb-14">
-						<div className="mb-14"></div>
-					</div>
-				</Tab.Pane>
-			),
-		},
-	];
+const Index = () => {
 	return (
 		<>
 			<PrincipalLayout>
@@ -62,10 +51,12 @@ const Index = ({ years }) => {
 				<div className="col-span-full mb-14">
 					<Tabs nombre="transparencia">
 						<div label="Documentos oficiales">
-							<DocumentosOficiales years={years} />
+							{/* <DocumentosOficiales
+								years={DOCUMENTOS_OFICIALES_YEARS}
+							/> */}
 						</div>
 						<div label="Resoluciones decanales">
-							<ResolucionesDecanales />
+							{/* <ResolucionesDecanales /> */}
 						</div>
 					</Tabs>
 				</div>
@@ -73,22 +64,5 @@ const Index = ({ years }) => {
 		</>
 	);
 };
-
-export async function getStaticProps() {
-	let years = [];
-	const resYears = await fetch(
-		`${BASE_URL}/documentos-oficiales/${SLUG_CARRERA}/years`
-	);
-	const _years = await resYears.json();
-	_years.forEach((e) => {
-		years.push({ nombre: `${e}` });
-	});
-
-	return {
-		props: {
-			years,
-		},
-	};
-}
 
 export default Index;

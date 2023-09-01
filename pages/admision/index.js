@@ -16,7 +16,7 @@ import { AdmisionPosdoctorado } from '../../components/shared/admision/Posdoctor
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const Index = ({ admision, facultad }) => {
+const Index = () => {
 	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
 	useEffect(() => {
@@ -93,11 +93,7 @@ const Index = ({ admision, facultad }) => {
 				>
 					<div className="col-start-3 col-span-10 mb-14">
 						<div className="mb-14">
-							<AdmisionMaestria
-								cronograma={admision[0].attributes.programas[0]}
-								proceso={admision[0].attributes.admision}
-								facultad={facultad}
-							/>
+							<AdmisionMaestria />
 						</div>
 					</div>
 				</Tab.Pane>
@@ -114,11 +110,7 @@ const Index = ({ admision, facultad }) => {
 				>
 					<div className="col-start-3 col-span-10 mb-14">
 						<div className="mb-14">
-							<AdmisionDoctorado
-								cronograma={admision[0].attributes.programas[0]}
-								proceso={admision[0].attributes.admision}
-								facultad={facultad}
-							/>
+							<AdmisionDoctorado />
 						</div>
 					</div>
 				</Tab.Pane>
@@ -183,24 +175,5 @@ const Index = ({ admision, facultad }) => {
 		</>
 	);
 };
-
-export async function getStaticProps() {
-	const resAdmision = await fetch(
-		`${POSGRADO_URL}/admisiones?populate[programas][populate]=*`
-	);
-	const admision = (await resAdmision.json()).data;
-
-	const resFacultad = await fetch(
-		`${POSGRADO_URL}/facultades?populate=*&filters[nombre][$eq]=Química%20e%20Ingeniería%20Química`
-	);
-
-	const facultad = (await resFacultad.json()).data[0].attributes;
-	return {
-		props: {
-			admision,
-			facultad,
-		},
-	};
-}
 
 export default Index;

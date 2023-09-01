@@ -7,12 +7,7 @@ import { CuadroVacante } from './CuadroVacante';
 import { Requisitos } from './Requisitos';
 import { Inversion } from './Inversion';
 
-export const AdmisionDoctorado = ({
-	cronograma,
-	proceso,
-	// programas,
-	facultad,
-}) => {
+export const AdmisionDoctorado = () => {
 	return (
 		<>
 			<Tabs
@@ -25,16 +20,13 @@ export const AdmisionDoctorado = ({
 					<GuiaAdmisionDoctorado />
 				</div>
 				<div label="Cronograma académico">
-					<CronogramaAcademico
-						cronograma={cronograma}
-						proceso={proceso}
-					/>
+					<CronogramaAcademico />
 				</div>
 				<div label="Proceso de evaluación">
 					<ProcesoEvaluacionDoctorado />
 				</div>
 				<div label="Cuadro de vacantes">
-					<CuadroVacante facultad={facultad} />
+					<CuadroVacante />
 				</div>
 				<div label="Requisitos para postular">
 					<Requisitos />
