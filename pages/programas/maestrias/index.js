@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/future/image';
 import React, { useEffect, useState } from 'react';
 
-import { BannerAdmision } from '../../../components/admision/BannerAdmision';
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 import { maestrias as programasData } from '../../../data/programas/general';
 
@@ -40,13 +39,6 @@ const Index = () => {
 						sociedad eficiente y sostenible.
 					</p> */}
 				</div>
-
-				{/* {isOpenBanner && (
-					<BannerAdmision
-						setIsOpenBanner={setIsOpenBanner}
-						enlace="/admision/pregrado"
-					/>
-				)} */}
 
 				<div className="px-4 md:px-0 col-span-full mb-10">
 					<div className="grid place-items-center">

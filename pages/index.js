@@ -11,7 +11,6 @@ import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
 
 import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
-// import { BannerAdmision } from '../components/admision/BannerAdmision';
 import AsideSocialNetworks from '../components/home/AsideSocialNetworks';
 import useAlertasInformativas from '../hooks/useAlerta';
 
@@ -35,14 +34,6 @@ export default function Home({ noticiasDestacadas, noticias, eventos }) {
 			<PortadaHome eventos={eventos} />
 
 			<main className="bg-blanco pt-14 md:pt-18">
-				{/* <div className="container mx-auto px-3 md:grid-cols-12 gap-x-4 md:grid mb-14 md:mb-18 mt-6">
-					<div className="col-start-2 col-span-10">
-						<BannerAdmision
-							setIsOpenBanner={setIsOpenBanner}
-							enlace={'/admision/posgrado'}
-						/>
-					</div>
-				</div> */}
 				<AgendaPublica
 					noticiasDestacadas={noticiasDestacadas}
 					noticias={noticias}

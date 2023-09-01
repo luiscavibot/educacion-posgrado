@@ -6,9 +6,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-gestion-publica-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-gestion-publica.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-gestion-publica.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-gestion-publica.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-gestion-publica.jpg',
 		grado: 'Magíster en Gestión Pública',
 		duracion: '2 años (4 semestres)',
 		porqueEstudiarConNosotros:
@@ -180,9 +180,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-direccion-de-recursos-humanos-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-direccion-recursos-humanos.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-direccion-recursos-humanos.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-direccion-recursos-humanos.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-direccion-recursos-humanos.jpg',
 		grado: 'Magíster en Administración con Mención en Dirección de Recursos Humanos',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -332,9 +332,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-gestion-de-negocios-internacionales-con-mencion-en-comercio-internacional-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-negocios-internacionales.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-negocios-internacionales.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-negocios-internacionales.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-negocios-internacionales.jpg',
 		grado: 'Magíster en Gestión de Negocios Internacionales con Mención en Comercio Internacional',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -466,9 +466,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-finanzas-y-valores-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-finanzas-valores.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-finanzas-valores.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-finanzas-valores.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-finanzas-valores.jpg',
 		grado: 'Magíster en Administración con Mención en Finanzas y Valores',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -600,9 +600,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-marketing-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-marketing.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-marketing.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-marketing.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-marketing.jpg',
 		grado: 'Magíster en Administración con Mención en Marketing',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -734,9 +734,9 @@ export const maestrias = [
 		modalidad: 'PRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-gestion-empresarial-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-gestion-empresarial.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-gestion-empresarial.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-gestion-empresarial.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-gestion-empresarial.jpg',
 		grado: 'Magíster en Administración con Mención en Gestión Empresarial.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1063,9 +1063,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-direccion-de-recursos-humanos-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-direccion-recursos-humanos.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-direccion-recursos-humanos.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-direccion-recursos-humanos.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-direccion-recursos-humanos.jpg',
 		grado: 'Magíster en Administración con Mención en Dirección de Recursos Humanos.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1219,9 +1219,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-gestion-de-negocios-internacionales-con-mencion-en-comercio-internacional-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-negocios-internacionales.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-negocios-internacionales.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-negocios-internacionales.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-negocios-internacionales.jpg',
 		grado: 'Magíster en Gestión de Negocios Internacionales con Mención en Comercio Internacional.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1357,9 +1357,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-finanzas-y-valores-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-finanzas-valores.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-finanzas-valores.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-finanzas-valores.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-finanzas-valores.jpg',
 		grado: 'Magíster en Administración con Mención en Finanzas y Valores.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1513,9 +1513,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-gestion-publica-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-gestion-publica.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-gestion-publica.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-gestion-publica.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-gestion-publica.jpg',
 		grado: 'Magíster en Gestión Pública.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1689,9 +1689,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-marketing-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-marketing.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-marketing.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-marketing.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-marketing.jpg',
 		grado: 'Magíster en Administración con Mención en Marketing',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -1845,9 +1845,9 @@ export const maestrias = [
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'magister-en-administracion-con-mencion-en-gestion-empresarial-semipresencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-gestion-empresarial.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-maestria-administracion-gestion-empresarial.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/maestria-administracion-gestion-empresarial.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/maestria-administracion-gestion-empresarial.jpg',
 		grado: 'Magíster en Administración con Mención en Gestión Empresarial.',
 		duracion: '2 años (4 semestres)',
 		description:
@@ -2003,9 +2003,9 @@ export const doctorados = [
 		modalidad: 'PRESENCIAL',
 		slug: 'doctorado-en-gestion-publica-presencial',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-doctorado-ciencias-administrativas.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-doctorado-ciencias-administrativas.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/doctorado-ciencias-administrativas.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/doctorado-ciencias-administrativas.jpg',
 		grado: 'Doctor/a en Ciencias Administrativas',
 		duracion: '3 años (6 semestres)',
 		description:
@@ -2200,9 +2200,9 @@ export const diplomaturas = [
 		modalidad: 'VIRTUAL',
 		slug: 'diplomatura-en-gestion-de-universidades-publicas',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-doctorado-ciencias-administrativas.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-diplomatura-gestion-universidades-publicas.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/diplomatura-gestion-universidades-publicas.jpeg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/diplomatura-gestion-universidades-publicas.jpg',
 		grado: '',
 		duracion: '6 meses',
 		description:
@@ -2283,9 +2283,9 @@ export const diplomaturas = [
 		modalidad: 'VIRTUAL',
 		slug: 'diplomatura-en-gestion-publica',
 		miniHomeImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Minihome/minihome-maestria-administracion-direccion-recursos-humanos.jpg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Minihome/minihome-diplomado-gestion-publica.jpg',
 		bannerImg:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Programas/Banner/diplomado-gestion-publica.jpeg',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Programas/Banner/diplomado-gestion-publica.jpg',
 		grado: '',
 		duracion: '6 meses',
 		description:

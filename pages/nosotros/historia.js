@@ -48,7 +48,7 @@ const Index = (
 							<div className="w-full max-w-[394px] md:w-[394px] md:float-right mb-12 md:ml-6 max-md:mx-auto">
 								<Image
 									src={
-										'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/imagen-historia.jpg'
+										'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/imagen-historia.jpg'
 									}
 									layout="responsive"
 									width={394}

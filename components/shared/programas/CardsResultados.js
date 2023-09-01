@@ -11,7 +11,8 @@ const CardsResultados = ({ resultados, tipo }) => {
 							pathname: `/${tipo}/[programa]`,
 							query: { programa: `${resultado.url}` },
 						}}
-						key={resultado.nombre}>
+						key={resultado.nombre}
+					>
 						<a className="card animate__animated animate__fadeIn">
 							<Image
 								alt=""
@@ -22,11 +23,8 @@ const CardsResultados = ({ resultados, tipo }) => {
 								// src={
 								// 	'https://swiperjs.com/demos/images/nature-1.jpg'
 								// }
-								src={
-									resultado.imagen
-										? resultado.imagen
-										: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-								}></Image>
+								src={resultado.imagen}
+							></Image>
 							<div className="text-content">
 								<p className="title">{resultado.nombre}</p>
 								<p className="desc">

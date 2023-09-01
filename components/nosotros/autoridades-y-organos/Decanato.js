@@ -126,7 +126,7 @@ const Decanato = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/dr-cornejo.jpg"
+						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-cornejo.jpg"
 						width={209}
 						height={224}
 						quality={100}

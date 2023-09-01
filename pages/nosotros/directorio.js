@@ -12,7 +12,7 @@ function createMarkup(dom) {
 
 const Index = () => {
 	const { directorio: data, isLoading } = useDirectorio('/directorios');
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<>
@@ -37,7 +37,7 @@ const Index = () => {
 					<div className="h-bannerMobile md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Nosotros/directorio-administracion-posgrado.jpg"
+							src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/directorio-administracion-posgrado.jpg"
 							alt='Directorio "Facultad de Farmacia y Bioquímica"'
 							layout="responsive"
 							width={1022}

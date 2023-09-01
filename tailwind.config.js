@@ -26,26 +26,24 @@ module.exports = {
 				submenu: '0px 1px 20px rgba(0, 0, 0, 0.15)',
 			},
 			backgroundImage: {
-				alert: 'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fca-posgrado/Home/cintillo-alerta-informativa.jpg")',
+				alert: 'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/cintillo-alerta-informativa.jpg")',
 				bgEventos:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/fondos-eventos.jpg")',
+					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/fondos-eventos.jpg")',
 				bgHeader:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-admision/header.jpg")',
-				bgEstadistica:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-quimica/home/fondo-estadisticas.png")',
-				TikTok: 'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-admision/cintillo-tiktok.jpg")',
+					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/fondo-header.jpg")',
+				TikTok: 'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/cintillo-tiktok-seccion-investigacion.jpg")',
 				TikTokGradient:
 					'linear-gradient(180deg, #004283 22.92%, rgba(0, 66, 131, 0.91) 41.15%, rgba(0, 66, 131, 0.76) 58.85%, rgba(0, 66, 131, 0.00) 100%)',
 				BlogGestionPublica:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/blog-gestion-publica-imagen.jpg")',
+					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/blog-gestion-publica-imagen.jpg")',
 				Posdoctorado:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/posdoctorado-imagen.jpg")',
+					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/posdoctorado-imagen.jpg")',
 				Gradient:
 					'linear-gradient(90deg, #004283 22.92%, rgba(0, 66, 131, 0.91) 42.48%, rgba(0, 66, 131, 0.76) 59.22%, rgba(0, 66, 131, 0.00) 100%);',
 				bgGradienteCarruselPortada:
 					'linear-gradient(180deg, #19191B 0%, rgba(25, 25, 27, 0) 100%);',
 				Contacto:
-					'url("https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/posgrado-administracion/home/imagen-cintillo-contacto.jpg")',
+					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/imagen-cintillo-contacto.jpg")',
 			},
 			fontFamily: {
 				lato: 'Lato',

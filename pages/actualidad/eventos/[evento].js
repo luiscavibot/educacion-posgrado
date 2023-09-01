@@ -154,12 +154,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 									layout="fill"
 									objectFit="cover"
 									quality={100}
-									src={
-										evento.foto
-											? // ? `https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/${evento.foto}`
-											  evento.foto
-											: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-									}
+									src={evento.foto}
 								/>
 							</div>
 						</div>
@@ -228,12 +223,7 @@ const Evento = ({ evento, ultimosEventos }) => {
 														// 	evento.attributes.banner.data[0]
 														// 		.attributes.url
 														// }
-														src={
-															evento.foto
-																? // ? `https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/${evento.foto}`
-																  evento.foto
-																: 'https://posgrado-unmsm.s3.amazonaws.com/fondo_programa_c0563685fb.jpg'
-														}
+														src={evento.foto}
 													/>
 													<div className="absolute top-4 left-4 bg-blanco px-[10px] py-[2px] rounded-[4px] font-bold">
 														{evento.tipo_evento}

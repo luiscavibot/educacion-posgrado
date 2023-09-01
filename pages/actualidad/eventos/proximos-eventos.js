@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import PrincipalLayout from '../../../components/shared/layouts/PrincipalLayout';
 import InputText from '../../../components/shared/InputText';
-import CardsEventosResultados from '../../../components/eventos/CardsEventosResultados';
+// import CardsEventosResultados from '../../../components/eventos/CardsEventosResultados';
 import CardsEventosProximos from '../../../components/eventos/CardsEventosProximos';
 import CardsEventosPasados from '../../../components/eventos/CardsEventosPasados';
 // import SelectorIntervalosFechas from '../../components/eventos/SelectorIntervalosFechas';

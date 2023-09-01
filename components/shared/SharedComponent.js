@@ -13,31 +13,31 @@ import {
 const socialNetworks = [
 	{
 		imageUrl:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/facebookIcon.png',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/compartir/facebookShareIcon.png',
 		alt: 'facebook',
 		shareComponent: FacebookShareButton,
 	},
 	{
 		imageUrl:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/twitterIcon.png',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/compartir/twitterShareIcon.png',
 		alt: 'twitter',
 		shareComponent: TwitterShareButton,
 	},
 	{
 		imageUrl:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/whatsappIcon.png',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/compartir/whatsappShareIcon.png',
 		alt: 'whatsapp',
 		shareComponent: WhatsappShareButton,
 	},
 	{
 		imageUrl:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-farmacia-bioquimica/email-icon-compartir.png',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/compartir/emailShareIcon.png',
 		alt: 'gmail',
 		shareComponent: EmailShareButton,
 	},
 	{
 		imageUrl:
-			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/linkedinIcon.png',
+			'https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/compartir/linkedinShareIcon.png',
 		alt: 'linkedin',
 		shareComponent: LinkedinShareButton,
 	},
@@ -51,7 +51,8 @@ const SharedComponent = ({ handleClose, ogUrl }) => {
 					<button
 						onClick={handleClose}
 						type="button"
-						className="absolute hover:fill-blanco -right-7 -top-5 text-xs rounded-md h-7 w-7 flex items-center justify-center fill-tertiary hover:bg-secondary/25 shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
+						className="absolute hover:fill-blanco -right-7 -top-5 text-xs rounded-md h-7 w-7 flex items-center justify-center fill-tertiary hover:bg-secondary/25 shadow-[0px_1px_4px_rgba(0,0,0,0.25)]"
+					>
 						<CerrarIcon className="" />
 					</button>
 				</div>
