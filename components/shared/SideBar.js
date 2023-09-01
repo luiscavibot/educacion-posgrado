@@ -112,13 +112,13 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<Link href="/admision?programa=posdoctorado">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Posdoctorado
 													</a>
 												</Link>
-											</div>
+											</div> */}
 										</div>
 									</Accordion.Content>
 								</>
