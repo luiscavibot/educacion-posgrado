@@ -3,15 +3,9 @@ import Link from 'next/link';
 import Image from 'next/future/image';
 import React from 'react';
 
-import { Tab } from 'semantic-ui-react';
 import { Tabs } from '../../components/shared/Tabs';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
-
-import { BACKEND, BASE_URL, SLUG_CARRERA } from '../../config/consts';
-import DocumentosOficiales from '../../components/transparencia/DocumentosOficiales';
-import ResolucionesDecanales from '../../components/transparencia/ResolucionesDecanales';
-import { DOCUMENTOS_OFICIALES_YEARS } from '../../consts/documentosOficiales';
 
 const Index = () => {
 	return (

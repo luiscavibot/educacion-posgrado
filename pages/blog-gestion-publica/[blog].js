@@ -12,7 +12,7 @@ import SharedComponent from '../../components/shared/SharedComponent';
 import VerMasIcon from '../../components/icons/VerMasIcon';
 import { useRouter } from 'next/router';
 import useBlogGestionPublica from '../../hooks/useBlogGestionPublica';
-import dynamic from 'next/dynamic';
+import CommentsBlock from '../../components/blog-gestion-publica/CommentsBlock';
 
 const Blog = () => {
 	// const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/blog-gestion-publica/${noticia.slug}`;
@@ -25,6 +25,7 @@ const Blog = () => {
 	// 	ogImage: noticia.foto,
 	// 	ogDescription: noticia.resumen,
 	// };
+
 	const router = useRouter();
 	useEffect(() => {
 		if (router.isReady) {
@@ -105,7 +106,7 @@ const Blog = () => {
 				className="mx-4 md:mx-0 col-span-10 col-start-2 mt-5 mb-5 html-default"
 				dangerouslySetInnerHTML={{ __html: blog.cuerpo }}
 			/>
-			<div className="col-span-full mb-10 mx-4 md:mx-0">
+			<div className="col-span-10 col-start-2 mb-4 mx-4 md:mx-0">
 				<div className="flex justify-end">
 					<Boton onClick={handleOpen}>
 						<CompartirIcon className="fill-blanco inline-block relative -top-[1px] mr-2" />
@@ -113,6 +114,7 @@ const Blog = () => {
 					</Boton>
 				</div>
 			</div>
+			<CommentsBlock />
 			{otrosBlog && (
 				<>
 					<div className="col-span-full mx-4 md:mx-0">
