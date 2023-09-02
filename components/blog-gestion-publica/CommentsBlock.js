@@ -96,7 +96,7 @@ const CommentsBlock = ({ gestionPublicaId }) => {
 										name="name"
 										type="text"
 										placeholder="Nombres y apellidos"
-										className="col-span-5 md:col-span-4"
+										className="col-span-10 md:col-span-4"
 									/>
 									<TextAreaInput
 										name="content"
@@ -128,7 +128,7 @@ const CommentsBlock = ({ gestionPublicaId }) => {
 											<blockquote>
 												{comment.content}
 											</blockquote>
-											<p className="text-end italic">
+											<p className="text-end italic text-xs mt-5">
 												{formatDistanceToNow(
 													new Date(comment.updatedAt),
 													{
