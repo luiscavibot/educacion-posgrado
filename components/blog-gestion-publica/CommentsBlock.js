@@ -115,7 +115,7 @@ const CommentsBlock = ({ gestionPublicaId }) => {
 										}
 									/>
 								</div>
-								<hr class="border-t-2 border-grisTenue/10 my-8" />
+								<hr className="border-t-2 border-grisTenue/10 my-8" />
 								{allComments.length > 0 &&
 									allComments.map((comment) => (
 										<div
