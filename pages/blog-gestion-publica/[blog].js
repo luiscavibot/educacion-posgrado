@@ -114,7 +114,7 @@ const Blog = () => {
 					</Boton>
 				</div>
 			</div>
-			<CommentsBlock />
+			{blog?.id && <CommentsBlock gestionPublicaId={blog.id} />}
 			{otrosBlog && (
 				<>
 					<div className="col-span-full mx-4 md:mx-0">
