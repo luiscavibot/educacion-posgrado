@@ -7,6 +7,7 @@ import Boton from '../../components/shared/Boton';
 import useFetchComment from '../../hooks/useComments';
 import { formatDistanceToNow } from 'date-fns';
 import { es } from 'date-fns/locale';
+import { BACKEND } from '../../config/consts';
 
 const initialValues = {
 	name: '',
@@ -39,7 +40,7 @@ const CommentsBlock = ({ gestionPublicaId }) => {
 
 		try {
 			const response = await fetch(
-				`http://localhost:4000/comments/create/${gestionPublicaId}`,
+				`${BACKEND}/comments/create/${gestionPublicaId}`,
 				{
 					method: 'POST',
 					headers: {
