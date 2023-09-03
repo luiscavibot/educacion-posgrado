@@ -189,7 +189,7 @@ const Index = ({ ultimasNoticias }) => {
 						</p>
 						<Link href="/tramites/preguntas-frecuentes">
 							<a className="font-semibold text-secondary link">
-								Ir Preguntas frecuentes
+								Ir a Preguntas frecuentes
 							</a>
 						</Link>
 					</div>

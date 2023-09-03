@@ -69,6 +69,8 @@ export default function CarouselProgramas({ programas }) {
 										{programa.modalidad ===
 											'SEMIPRESENCIAL' &&
 											'Modalidad Semipresencial'}
+										{programa.modalidad === 'VIRTUAL' &&
+											'Modalidad Virtual'}
 									</div>
 								</div>
 								<div className="text-content h-32">
