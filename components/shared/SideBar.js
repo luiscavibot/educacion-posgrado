@@ -212,6 +212,16 @@ const SideBar = ({ interno }) => {
 													Gestión en el Tercer Milenio
 												</a>
 											</div>
+											<div onClick={handleSidebar}>
+												<a
+													rel="noopener noreferrer"
+													target="_blank"
+													href="https://administracion.unmsm.edu.pe/grupos-de-investigaciones/"
+													className="inline-flex items-center py-[10px] px-11 transition w-full"
+												>
+													Grupos de Investigación
+												</a>
+											</div>
 										</div>
 									</Accordion.Content>
 								</>

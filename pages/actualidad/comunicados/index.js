@@ -65,7 +65,7 @@ const InformacioAcademica = () => {
 				<div className="px-4 md:px-0 col-span-full mb-10">
 					<p className="title-page text-secondary">Comunicados</p>
 				</div>
-				<div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 md:px-0 mb-5">
+				{/* <div className="col-span-4 lg:col-span-3 xl:col-span-2 px-4 md:px-0 mb-5">
 					<div className="bg-complementaryTwo rounded-lg p-6">
 						<p className="text-textColorOne font-bold">
 							Dirigido a:
@@ -96,8 +96,8 @@ const InformacioAcademica = () => {
 							/>
 						</div>
 					</div>
-				</div>
-				<div className="col-span-8 lg:col-span-9 xl:col-span-10 px-4 mb-6 md:px-0">
+				</div> */}
+				<div className="col-span-full lg:col-span-full xl:col-span-full px-4 mb-6 md:px-0">
 					<div className="px-4 md:px-0 col-span-full mb-5">
 						<div className="flex justify-between">
 							<InputText

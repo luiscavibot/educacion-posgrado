@@ -127,6 +127,18 @@ const HeaderPage = () => {
 												</a>
 											</div>
 										</MenuItem>
+										<MenuItem>
+											<div className='className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0'>
+												<a
+													rel="noopener noreferrer"
+													target="_blank"
+													href="https://administracion.unmsm.edu.pe/grupos-de-investigaciones/"
+													className="hover:text-secondary py-2"
+												>
+													Grupos de Investigación
+												</a>
+											</div>
+										</MenuItem>
 									</Menu>
 								</Dropdown>
 							</li>

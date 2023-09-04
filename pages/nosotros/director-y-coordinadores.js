@@ -118,7 +118,7 @@ const Autoridades = (
 					{/* <div label="Consejo de facultad">
 						<Consejo />
 					</div> */}
-					<div label="Vicedecanato de Investigación y Posgrado">
+					<div label="Director de la Unidad de Posgrado">
 						<Decanato />
 					</div>
 					<div label="Coordinación Académica de la Unidad de Posgrado">

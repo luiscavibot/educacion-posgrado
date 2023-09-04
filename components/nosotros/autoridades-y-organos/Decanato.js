@@ -41,7 +41,7 @@ const Decanato = () => {
 					</p>
 					<p className="mb-1">
 						<span className="font-bold text-tertiary">
-							Vicedecano académico
+							Director de la Unidad de Posgrado
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">

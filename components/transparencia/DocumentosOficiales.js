@@ -22,6 +22,7 @@ const END_DATE = new Date();
 END_DATE.setHours(23, 59, 59, 999);
 
 const DocumentosOficiales = ({ years }) => {
+	console.log(years);
 	const initialInputs = {
 		year: '',
 		buscador: '',
@@ -167,9 +168,8 @@ const DocumentosOficiales = ({ years }) => {
 														className="inline-grid place-items-center bg-blanco rounded-lg p-2 shadow-button"
 														target="_blank"
 														rel="noopener noreferrer"
-														href={
-															documento.archivo
-														}>
+														href={documento.archivo}
+													>
 														<DocumentosFillIcon className="fill-secondary" />
 													</a>
 												</td>
