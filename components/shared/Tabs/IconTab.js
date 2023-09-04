@@ -302,7 +302,7 @@ const IconTab = (label) => {
 				</>
 			);
 
-		case 'resoluciones-decanales':
+		case 'resoluciones':
 			return (
 				<>
 					<HojaTexto className="fill-textColorOne" />

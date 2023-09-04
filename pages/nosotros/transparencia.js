@@ -6,6 +6,9 @@ import React from 'react';
 import { Tabs } from '../../components/shared/Tabs';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
+import { DOCUMENTOS_OFICIALES_YEARS } from '../../data/transparencia';
+import DocumentosOficiales from '../../components/transparencia/DocumentosOficiales';
+import ResolucionesDecanales from '../../components/transparencia/ResolucionesDecanales';
 
 const Index = () => {
 	return (
@@ -45,12 +48,12 @@ const Index = () => {
 				<div className="col-span-full mb-14">
 					<Tabs nombre="transparencia">
 						<div label="Documentos oficiales">
-							{/* <DocumentosOficiales
+							<DocumentosOficiales
 								years={DOCUMENTOS_OFICIALES_YEARS}
-							/> */}
+							/>
 						</div>
-						<div label="Resoluciones decanales">
-							{/* <ResolucionesDecanales /> */}
+						<div label="Resoluciones">
+							<ResolucionesDecanales />
 						</div>
 					</Tabs>
 				</div>

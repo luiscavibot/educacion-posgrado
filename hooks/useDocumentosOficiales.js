@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
 
 const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
@@ -10,7 +10,7 @@ export default function useDocumentosOficiales(entradaBusqueda, year) {
 	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
 		setDocumentosOficiales(null);
-		let url = `${BASE_URL}/documentos-oficiales/${SLUG_CARRERA}?estado=true&limit=${PAGE_SIZE}`;
+		let url = `${BACKEND}/documentos-oficiales?estado=true&limit=${PAGE_SIZE}`;
 
 		if (year != '') {
 			url += `&anio=${year}`;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BASE_URL, SLUG_CARRERA } from '../config/consts';
+import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
 import { formatDate } from '../helpers/formatDate';
 
 const INITIAL_PAGE = 0;
@@ -17,7 +17,7 @@ export default function useResolucionesDecanales(
 	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
 		setResolucionesDecanales(null);
-		let url = `${BASE_URL}/resoluciones-decanales/${SLUG_CARRERA}?estado=true&limit=${PAGE_SIZE}`;
+		let url = `${BACKEND}/resoluciones-decanales?estado=true&limit=${PAGE_SIZE}`;
 
 		let filtroStartDate = `&fecha_inicio=${formatDate(START_DATE)}`;
 		let filtroEndDate = `&fecha_fin=${formatDate(END_DATE)}`;
