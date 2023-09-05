@@ -55,34 +55,27 @@ export const CronogramaAcademico = (
 								Inscripción de postulantes y envío de
 								expedientes
 							</td>
-							<td>
-								Del 02 de enero al 28 de febrero de agosto del
-								2023
-							</td>
+							<td>Del 8 de mayo al 14 de julio del 2023</td>
 						</tr>
 						<tr>
 							<td>Inscripción extemporánea</td>
-							<td>Del 01 al 07 de marzo del 2023</td>
+							<td>Del 15 de julio al 11 de agosto del 2023</td>
 						</tr>
 						<tr>
-							<td>Examen de aptitud virtual</td>
-							<td>11 de marzo del 2023</td>
+							<td>Examen de aptitud virtual o presencial</td>
+							<td>12 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Sustentación del proyecto de investigación</td>
-							<td>12 y 13 de marzo del 2023</td>
+							<td>13 y 14 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Evaluación del expediente</td>
-							<td>14 de marzo del 2023</td>
-						</tr>
-						<tr>
-							<td>Entrevista personal virtual</td>
-							<td>15 y 16 de marzo del 2023</td>
+							<td>15 y 16 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Publicación de resultados</td>
-							<td>20 de marzo del 2023</td>
+							<td>22 de agosto del 2023</td>
 						</tr>
 					</tbody>
 				</table>
@@ -119,30 +112,30 @@ export const CronogramaAcademico = (
 						})} */}
 						<tr>
 							<td>Reactualización de matrícula</td>
-							<td>Hasta el 17 de marzo del 2023</td>
+							<td>Hasta el 11 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Matrícula regular</td>
-							<td>Del 06 al 31 de marzo del 2023</td>
+							<td>Del 7 al 31 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Matrícula de ingresantes</td>
-							<td>Del 27 al 31 de marzo del 2023</td>
+							<td>Del 28 al 31 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>
 								Matrícula extemporánea y rectificación de
 								matrícula
 							</td>
-							<td>Del 17 al 24 de abril del 2023</td>
+							<td>Del 11 al 18 de setiembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Reserva de matrícula</td>
-							<td>Hasta el 23 de junio del 2023</td>
+							<td>Hasta el 17 de setiembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Anulación de matrícula</td>
-							<td>Del 19 al 23 de junio del 2023</td>
+							<td>Del 13 al 17 de setiembre del 2023</td>
 						</tr>
 					</tbody>
 				</table>
@@ -184,7 +177,7 @@ export const CronogramaAcademico = (
 								Capacitación en base de datos, aspectos de
 								investigación y normativa de posgrado
 							</td>
-							<td>19 de marzo del 2023</td>
+							<td>1 y 2 de setiembre del 2023</td>
 						</tr>
 					</tbody>
 				</table>
@@ -223,15 +216,15 @@ export const CronogramaAcademico = (
 						)} */}
 						<tr>
 							<td>Inicio de clases</td>
-							<td>03 de abril del 2023</td>
+							<td>4 de setiembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Fin de clases</td>
-							<td>22 de julio del 2023</td>
+							<td>23 de diciembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Ingreso de notas</td>
-							<td>Del 24 al 27 de julio del 2023</td>
+							<td>Del 25 al 29 de diciembre del 2023</td>
 						</tr>
 					</tbody>
 				</table>

@@ -414,7 +414,10 @@ const Programa = ({ programa, otrosProgramas }) => {
 							</div>
 						</div>
 					</div>
-					<div label="Admisión" link="/admision"></div>
+					<div
+						label="Admisión"
+						link="/admision?programa=doctorado"
+					></div>
 					<div
 						label="Plana docente"
 						link="/comunidad/plana-docente"

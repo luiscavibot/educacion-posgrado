@@ -391,7 +391,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					></div>
 					<div
 						label="Plana docente"
-						link="/admision?programa=diplomatura"
+						link="/comunidad/plana-docente"
 					></div>
 					<div label="Malla curricular">
 						<MallaCurricular
@@ -407,7 +407,6 @@ const Programa = ({ programa, otrosProgramas }) => {
 							tipoPrograma="DIPLOMATURA"
 						/>
 					</div>
-
 					<div
 						label="Testimonios de egresados"
 						link="/comunidad/seguimiento-egresados"

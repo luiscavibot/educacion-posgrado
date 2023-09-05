@@ -95,7 +95,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=4512'
+									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+Fairlie+Frisancho+Ebor+-+Coordinador+Acade%CC%81mico.pdf'
 								)
 							}
 						>

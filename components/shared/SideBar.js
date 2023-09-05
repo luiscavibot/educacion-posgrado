@@ -426,7 +426,7 @@ const SideBar = ({ interno }) => {
 													MAT
 												</a>
 											</div>
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<a
 													href="#"
 													rel="noopener noreferrer"
@@ -435,7 +435,7 @@ const SideBar = ({ interno }) => {
 												>
 													Aula virtual
 												</a>
-											</div>
+											</div> */}
 										</div>
 									</Accordion.Content>
 								</>

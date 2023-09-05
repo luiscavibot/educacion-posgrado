@@ -62,11 +62,12 @@ const Index = (
 										<ComillasTestimoniosIcon className="fill-tertiary mb-4" />
 									</div>
 									<p className="text-tertiary text-xl">
-										En el recorrido hasta la fecha la
-										Facultad se ha fortalecido como la{' '}
+										La Unidad de Posgrado de la Facultad de
+										Ciencias Administrativas{' '}
 										<span className="font-bold">
-											Institución pionera y referente en
-											la formación de los Profesionales
+											brinda diez programas de
+											especialización integral
+											para profesionales
 										</span>
 									</p>
 								</div>
@@ -76,9 +77,21 @@ const Index = (
 								(FCA) aprobó su primer programa de maestría con
 								las cuatro siguientes menciones: en Marketing,
 								en Gestión Empresarial, en Dirección de Recursos
-								Humanos y en Finanzas y Valores.
+								Humanos y en Finanzas y Valores. Luego se
+								añadieron las maestrías en Gestión Pública y en
+								Negocios Internacionales con mención en Comercio
+								Internacional. De esta manera, a la fecha, la
+								Unidad de Posgrado de la FCA brinda seis
+								programas de maestría con distintas menciones,
+								un doctorado en Ciencias Administrativas y dos
+								diplomaturas, en Gestión Pública y Gestión de
+								Universidades Públicas. Asimismo, se encuentra
+								en proceso el lanzamiento del primer programa de
+								Posdoctorado de la Universidad Nacional Mayor de
+								San Marcos, Decana de América, dirigido a
+								doctores en administración y carreras afines.
 							</p>
-							<p className="mb-6">
+							{/* <p className="mb-6">
 								Luego se añadieron las maestrías en Gestión
 								Pública y en Negocios Internacionales con
 								mención en Comercio Internacional.
@@ -97,7 +110,7 @@ const Index = (
 								Universidad Nacional Mayor de San Marcos, Decana
 								de América, dirigido a doctores en
 								administración y carreras afines.
-							</p>
+							</p> */}
 						</div>
 						<div>
 							<p className="font-bold text-xl mb-2">Misión</p>
@@ -111,7 +124,7 @@ const Index = (
 								y al desarrollo sostenible del país y la
 								sociedad en su conjunto.
 							</p>
-							<p className="font-bold text-xl mb-2">Misión</p>
+							<p className="font-bold text-xl mb-2">Visión</p>
 							<p>
 								Ser la Unidad de Posgrado líder en el Perú y
 								latinoamérica que presente como marca distintiva

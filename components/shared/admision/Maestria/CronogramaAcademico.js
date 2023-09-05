@@ -55,27 +55,27 @@ export const CronogramaAcademico = (
 								Inscripción de postulantes y envío de
 								expedientes
 							</td>
-							<td>Hasta el 14 de julio del 2023</td>
+							<td>Del 8 de mayo al 14 de julio del 2023</td>
 						</tr>
 						<tr>
-							<td>Charla informativa</td>
-							<td>24 de junio del 2023</td>
+							<td>Inscripción extemporánea</td>
+							<td>Del 15 de julio al 11 de agosto del 2023</td>
 						</tr>
 						<tr>
-							<td>Examen de aptitud virtual</td>
-							<td>3 de agosto del 2023</td>
+							<td>Examen de aptitud virtual o presencial</td>
+							<td>12 de agosto del 2023</td>
 						</tr>
 						<tr>
-							<td>Entrevista virtual (solo maestría)</td>
-							<td>8 y 9 de agosto del 2023</td>
+							<td>Evaluación del expediente</td>
+							<td>15 y 16 de agosto del 2023</td>
+						</tr>
+						<tr>
+							<td>Entrevista personal virtual o presencial</td>
+							<td>17 y 18 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Publicación de resultados</td>
-							<td>8 y 9 de agosto del 2023</td>
-						</tr>
-						<tr>
-							<td>Inicio de clases</td>
-							<td>28 de agosto del 2023</td>
+							<td>22 de agosto del 2023</td>
 						</tr>
 					</tbody>
 				</table>
@@ -116,15 +116,11 @@ export const CronogramaAcademico = (
 						</tr>
 						<tr>
 							<td>Matrícula regular</td>
-							<td>Del 07 al 25 de agosto del 2023</td>
+							<td>Del 7 al 31 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>Matrícula de ingresantes</td>
-							<td>Del 21 al 25 de agosto del 2023</td>
-						</tr>
-						<tr>
-							<td>Reserva de matrícula</td>
-							<td>Hasta el 17 de setiembre del 2023</td>
+							<td>Del 28 al 31 de agosto del 2023</td>
 						</tr>
 						<tr>
 							<td>
@@ -132,6 +128,10 @@ export const CronogramaAcademico = (
 								matrícula
 							</td>
 							<td>Del 11 al 18 de setiembre del 2023</td>
+						</tr>
+						<tr>
+							<td>Reserva de matrícula</td>
+							<td>Hasta el 17 de setiembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Anulación de matrícula</td>
@@ -216,15 +216,15 @@ export const CronogramaAcademico = (
 						)} */}
 						<tr>
 							<td>Inicio de clases</td>
-							<td>28 de agosto del 2023</td>
+							<td>04 de setiembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Fin de clases</td>
-							<td>16 de diciembre del 2023</td>
+							<td>23 de diciembre del 2023</td>
 						</tr>
 						<tr>
 							<td>Ingreso de notas</td>
-							<td>Del 18 al 22 de diciembre del 2023</td>
+							<td>Del 25 al 29 de diciembre del 2023</td>
 						</tr>
 					</tbody>
 				</table>

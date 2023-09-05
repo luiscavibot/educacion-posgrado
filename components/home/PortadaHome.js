@@ -461,14 +461,14 @@ const PortadaHome = ({ eventos }) => {
 														MAT
 													</a>
 												</MenuItem>
-												<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+												{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 													<a
 														href="#"
 														className="hover:text-secondary py-2"
 													>
 														Aula virtual
 													</a>
-												</MenuItem>
+												</MenuItem> */}
 											</Menu>
 										</Dropdown>
 									</li>

@@ -528,7 +528,7 @@ const Programa = (
 				<div>
 					<div className="flex items-center gap-x-3 mb-9">
 						<h2 className="font-bold text-textColorOne">
-							Más diplomaturas
+							Más programas
 						</h2>
 						<Link href="/noticias" passHref>
 							<a className="grid place-items-center rounded-lg w-9 h-9 border-[1.5px] border-primary bg-transparente hover:bg-primary/[0.12] transition-colors duration-300">

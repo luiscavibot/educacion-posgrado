@@ -49,18 +49,25 @@ const Decanato = () => {
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Licenciado en Economía por la Universidad de Lima,
-						magíster en Administración por la Universidad de San
-						Martín de Porres y doctor en Administración por la
-						Universidad Nacional Federico Villareal
+						Profesor principal de la escuela profesional de
+						Administración de Negocios Internacionales de la
+						Universidad Nacional Mayor de San Marcos (UNMSM),
+						vicedecano de investigación y posgrado, y director de la
+						Unidad de Posgrado en la Facultad de Ciencias
+						Administrativas (FCA) de la misma universidad.
 					</p>
 					<p className="mb-5">
-						Lleva más de 40 años ejerciendo como docente a nivel de
-						pregrado y posgrado en universidades de Perú, Ecuador y
-						Bolivia. Se ha desempeñado como presidente del Instituto
-						de Comercio Exterior del Perú; ministro tanto de
-						Vivienda, Construcción y Saneamiento como de Transportes
-						y Comunicaciones; presidente ejecutivo del Banco de la
+						En su gestión como director del Posgrado de la FCA ha
+						promovido la conformación del primer programa de
+						Posdoctorado en Administración de la UNMSM, realizado en
+						conjunto con la Facultad de Ciencias Económicas de la
+						Universidad de Buenos Aires.
+					</p>
+					<p className="mb-6">
+						Se ha desempeñado como presidente del Instituto de
+						Comercio Exterior del Perú; ministro tanto de Vivienda,
+						Construcción y Saneamiento como de Transportes y
+						Comunicaciones; presidente ejecutivo del Banco de la
 						Nación del Perú; director del Banco Central de Reserva
 						del Perú; presidente ejecutivo del Banco de la Vivienda
 						del Perú; miembro titular del Consejo Consultivo del
@@ -71,19 +78,12 @@ const Decanato = () => {
 					<p className="mb-6">
 						Ha publicado más de 1500 artículos científicos y ensayos
 						en revistas peruanas e internacionales. Asimismo, ha
-						escrito 36 libros de los cuales los más recientes son
-						{`“La Innovación Política: No es sólo cuestión de hacer
-						campañas y ganar elecciones”`}{' '}
-						(2018),{' '}
-						{`“El Paso siguiente
-						de la Globalización”`}{' '}
-						(2017) y{' '}
-						{`“El Eslabón de la
-						Economía: Usura, Interés y Economía”`}{' '}
-						(2017). Ha realizado diferentes investigaciones para la
-						Facultad de Economía de la Universidad de Lima, la Junta
-						del Acuerdo de Cartagena, el Programa de las Naciones
-						Unidas para el Desarrollo, entre otras instituciones.
+						escrito 39 libros, siendo el más reciente: “El comercio
+						exterior peruano en los siglos XX y XXI”, editado por el
+						Fondo Editorial de la UNMSM y presentado en la 27. ª
+						Feria Internacional del Libro de Lima 2023.
+					</p>
+					<p className="mb-6">
 						Obtuvo numerosas distinciones a lo largo de su vida
 						profesional como el premio América Latina otorgado por
 						la Asociación Latinoamérica de Integración y la
@@ -92,6 +92,16 @@ const Decanato = () => {
 						economía organizado por el City Bank National
 						Association, y muchas más condecoraciones por su
 						producción científica y sus labores.
+					</p>
+					<p className="mb-6">
+						Puede revisar sus publicaciones:{' '}
+						<a
+							target={'_blank'}
+							rel="noopener noreferrer"
+							href="https://enriquecornejoramirez.com/"
+						>
+							https://enriquecornejoramirez.com/
+						</a>
 					</p>
 					<div className="flex gap-x-5">
 						<a
@@ -110,7 +120,7 @@ const Decanato = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=73943'
+									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+CORNEJO+RAMIREZ+ENRIQUE.pdf'
 								)
 							}
 						>
