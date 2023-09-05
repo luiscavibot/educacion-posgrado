@@ -41,7 +41,7 @@ const ActividadCientifica = () => {
 	};
 	const [inputs, setInputs] = useState(INITIAL_INPUTS);
 	const [searchParams, setSearchParams] = useState(INITIAL_INPUTS);
-	const { actividades, setPage, page, totalPages } =
+	const { actividades, setPage, page, totalPages, isLoading } =
 		useActividadCientifica(searchParams);
 
 	const handleChange = (e) => {
@@ -120,6 +120,10 @@ const ActividadCientifica = () => {
 											inputs.gestionEnElTercerMilenioCheck
 										}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Artículos Científicos"
@@ -128,6 +132,10 @@ const ActividadCientifica = () => {
 											inputs.articulosCientificosCheck
 										}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Artículos de Revisión"
@@ -136,12 +144,20 @@ const ActividadCientifica = () => {
 											inputs.articulosDeRevisionCheck
 										}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Tesis"
 										name="tesisCheck"
 										checked={inputs.tesisCheck}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Sustentaciones Virtuales"
@@ -150,12 +166,20 @@ const ActividadCientifica = () => {
 											inputs.sustentacionesVirtualesCheck
 										}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Libros"
 										name="librosCheck"
 										checked={inputs.librosCheck}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 									<InputCheckbox
 										label="Investigaciones de Doctorado"
@@ -164,6 +188,10 @@ const ActividadCientifica = () => {
 											inputs.investigacionesDeDoctoradoCheck
 										}
 										onChange={handleCheck}
+										disabled={
+											selectedOption ===
+											'DOCENTES_ASESORES'
+										}
 									/>
 								</div>
 							</div>
@@ -220,22 +248,19 @@ const ActividadCientifica = () => {
 												}
 												target="_blank"
 												rel="noopener noreferrer"
-												className={`group ${
-													actividad.tipo_produccion_academica !==
-														'GESTIONENELTERCERMILENIO' &&
-													'min-h-[190px] md:min-h-[200px]'
-												} animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105`}
+												className={`group min-h-[190px] md:min-h-[200px] animate__animated animate__fadeIn mb-6 md:mb-8 bg-blanco flex flex-row cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105`}
 											>
-												{actividad.tipo_produccion_academica !==
+												<div className="relative w-full max-w-[188px] hidden md:block">
+													<Image
+														layout="fill"
+														objectFit="cover"
+														src={actividad.foto}
+														objectPosition={'top'}
+													/>
+												</div>
+												{/* {actividad.tipo_produccion_academica !==
 													'GESTIONENELTERCERMILENIO' && (
-													<div className="relative w-full max-w-[188px] hidden md:block">
-														<Image
-															layout="fill"
-															objectFit="cover"
-															src={actividad.foto}
-														/>
-													</div>
-												)}
+												)} */}
 												<div className="flex flex-col gap-2 basis-12/12 md:basis-9/12 px-5 py-3 relative">
 													<div className="mt-[6px] md:mt-0 order-2 md:order-1 text-grisTenue text-xs flex justify-start items-center">
 														<BiTimeFive />
@@ -314,9 +339,17 @@ const ActividadCientifica = () => {
 								))}
 						</>
 					) : (
-						<div className="px-4 mt-6 md:px-0 flex items-center justify-center">
-							<Cargando />
-						</div>
+						<>
+							{isLoading ? (
+								<div className="px-4 mt-6 md:px-0 flex items-center justify-center">
+									<Cargando />
+								</div>
+							) : (
+								<div className="px-4 mt-6 md:px-0 flex items-center justify-start">
+									<p>No se encontraron resultados.</p>
+								</div>
+							)}
+						</>
 					)}
 				</div>
 			</PrincipalLayout>

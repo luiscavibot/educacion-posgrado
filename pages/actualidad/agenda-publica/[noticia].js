@@ -11,8 +11,10 @@ import { Backdrop, Box, Fade, Modal } from '@mui/material';
 import SharedComponent from '../../../components/shared/SharedComponent';
 import VerMasIcon from '../../../components/icons/VerMasIcon';
 import { BACKEND } from '../../../config/consts';
+import { replaceUrlPrefix } from '../../../helpers/transformS3ToCdn';
 
 const Noticia = ({ noticia, noticiasRelacionadas }) => {
+	console.log(noticia);
 	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/actualidad/agenda-publica/${noticia.slug}`;
 	const metaTags = {
 		title: noticia.titulo,
@@ -66,10 +68,11 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 						<div className="relative max-w-full w-[502px] h-56 md:h-[335px] m-auto">
 							<Image
 								quality={100}
-								src={noticia.foto}
+								src={replaceUrlPrefix(noticia.foto)}
 								width={502}
 								height={335}
 								className="object-cover w-full h-full"
+								alt={noticia.titulo}
 							/>
 						</div>
 						{noticia.pie_foto && (

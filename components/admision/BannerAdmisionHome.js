@@ -11,10 +11,12 @@ export const BannerAdmisionHome = ({ setIsOpenHeader, alerta }) => {
 				<span>
 					<CampanaIcon className="fill-textColorOne" />
 				</span>
-				<div className="font-bold text-textColorOne">
+				<div className="font-bold text-textColorOne text-lg">
 					{alerta.titulo}
 				</div>
-				<div className="text-textColorOne">{alerta.descripcion}</div>
+				<div className="text-textColorOne text-lg">
+					{alerta.descripcion}
+				</div>
 				<div>
 					{/* <Link href="/formacion-academica/admision?posgrado"> */}
 					<Link href={alerta.url}>

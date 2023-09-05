@@ -6,6 +6,7 @@ const InputCheckbox = ({
 	name = '',
 	checked = false,
 	className = '',
+	disabled = false,
 }) => {
 	return (
 		//NOTE: Modifico el ancho de este componente al 100% para versión móvil
@@ -18,6 +19,7 @@ const InputCheckbox = ({
 						name={name}
 						checked={checked}
 						onChange={onChange}
+						disabled={disabled}
 					/>
 					{label}
 				</label>

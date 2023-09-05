@@ -115,7 +115,7 @@ const InformacioAcademica = () => {
 						</div>
 					</div>
 					<div className="px-4 md:px-0 col-span-full mb-20">
-						<Link key="1" href={`/actualidad/comunicados/118`}>
+						{/* <Link key="1" href={`/actualidad/comunicados/118`}>
 							<a
 								key="1"
 								className="group animate__animated animate__fadeIn mb-6 h-[113px] bg-blanco block cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md hover:-translate-y-1 duration-300 hover:brightness-105"
@@ -156,8 +156,8 @@ const InformacioAcademica = () => {
 									</div>
 								</div>
 							</a>
-						</Link>
-						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
+						</Link> */}
+						{/* <div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div> */}
 						{comunicados ? (
 							comunicados.length > 0 ? (
 								comunicados.map((comunicado) => (
