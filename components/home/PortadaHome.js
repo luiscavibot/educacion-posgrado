@@ -72,66 +72,67 @@ const PortadaHome = ({ eventos }) => {
 					>
 						<SplideSlide>
 							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_0.jpg"
-								alt="img carrusel 1"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/ceremonia-posdoctorado.jpg"
+								alt="ceremonia-posdoctorado"
 								layout="responsive"
-								width={2459}
-								height={1096}
+								width={2868}
+								height={1265}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_03.jpg"
-								alt="img carrusel 2"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/docentes-posgrado.jpg"
+								alt="docentes-posgrado"
 								layout="responsive"
-								width={2459}
-								height={1096}
+								width={2868}
+								height={1265}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_07.jpg"
-								alt="img carrusel 3"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado.jpg"
+								alt="fondo-portada-administracion-posgrado"
 								layout="responsive"
-								width={2459}
-								height={1096}
+								width={2868}
+								height={1265}
+								quality={100}
+								className="w-auto h-full md:w-full md:h-auto object-cover"
+							/>
+						</SplideSlide>
+						<SplideSlide>
+							{' '}
+							<Image
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/alumnos-posgrado.jpg"
+								alt="alumnos-posgrado"
+								layout="responsive"
+								width={2868}
+								height={1265}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_08.jpg"
-								alt="img carrusel 4"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/alumnos-posgrado-aula.jpg"
+								alt="alumnos-posgrado-aula"
 								layout="responsive"
-								width={2459}
-								height={1096}
+								width={2868}
+								height={1265}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>
 						</SplideSlide>
 						<SplideSlide>
 							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_06.jpg"
-								alt="img carrusel 5"
+								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/exterior-fca.jpg"
+								alt="exterior-fca"
 								layout="responsive"
-								width={2459}
-								height={1096}
-								quality={100}
-								className="w-auto h-full md:w-full md:h-auto object-cover"
-							/>
-						</SplideSlide>
-						<SplideSlide>
-							<Image
-								src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/Carrusel/fondo-portada-administracion-posgrado_02.jpg"
-								alt="img carrusel 6"
-								layout="responsive"
-								width={2459}
-								height={1096}
+								width={2868}
+								height={1265}
 								quality={100}
 								className="w-auto h-full md:w-full md:h-auto object-cover"
 							/>

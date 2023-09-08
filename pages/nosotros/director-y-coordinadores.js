@@ -115,9 +115,9 @@ const Autoridades = (
 			</div>
 			<div className="col-span-full mb-14">
 				<Tabs nombre="autoridades">
-					{/* <div label="Consejo de facultad">
+					<div label="Decano">
 						<Consejo />
-					</div> */}
+					</div>
 					<div label="Director de la Unidad de Posgrado">
 						<Decanato />
 					</div>

@@ -1,12 +1,7 @@
 import React from 'react';
 import Image from 'next/future/image';
 
-import directorPic from '../../../public/img/examples/dir-pregrado-small.png';
-import UserCardIcon from '../../icons/UserCardIcon';
 import CorreoIcon from '../../icons/CorreoIcon';
-import TelefonoStroke from '../../icons/TelefonoStroke';
-import UbicacionStroke from '../../icons/UbicacionStroke';
-import FechaHorarioStroke from '../../icons/FechaHorarioStroke';
 import DocumentosFillIcon from '../../icons/DocumentosFillIcon';
 import Boton from '../../shared/Boton';
 

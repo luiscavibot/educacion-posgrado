@@ -317,7 +317,7 @@ const IconTab = (label) => {
 			);
 			break;
 		// opciones Autoridades
-		case 'consejo-de-facultad':
+		case 'decano':
 			return (
 				<>
 					<PersonaMicrofonoStroke className=" w-[21px] h-[21px]" />
