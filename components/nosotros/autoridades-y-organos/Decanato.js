@@ -115,7 +115,7 @@ const Decanato = () => {
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+CORNEJO+RAMIREZ+ENRIQUE.pdf'
+									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/unmsm-cv-cornejo-ramirez.pdf'
 								)
 							}
 						>

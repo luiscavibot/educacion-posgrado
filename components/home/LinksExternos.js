@@ -72,13 +72,13 @@ const LinksExternos = () => {
 							</a>
 						</Link>
 
-						<Link href="/nosotros/transparencia">
+						<Link href="/actualidad/comunicados">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<HojaLupaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-9" />
 								</div>
 								<p className="text-blanco text-lg">
-									Transparencia
+									Comunicados
 								</p>
 							</a>
 						</Link>

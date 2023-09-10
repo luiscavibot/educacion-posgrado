@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/future/image';
+// import Image from 'next/future/image';
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
-import { BiTimeFive } from 'react-icons/bi';
-import Boton from '../../components/shared/Boton';
+// import { BiTimeFive } from 'react-icons/bi';
+// import Boton from '../../components/shared/Boton';
 import { useRouter } from 'next/router';
-import { BACKEND, BASE_URL, SLUG_CARRERA } from '../../config/consts';
+import { BACKEND } from '../../config/consts';
 import { getFecha } from '../../helpers/getFecha';
 import Cargando from '../../components/resultados/Cargando';
-import CompartirIcon from '../../components/icons/CompartirIcon';
-import CorreoIcon from '../../components/icons/CorreoIcon';
-import TelefonoIcon from '../../components/icons/TelefonoIcon';
+// import CompartirIcon from '../../components/icons/CompartirIcon';
+// import CorreoIcon from '../../components/icons/CorreoIcon';
+// import TelefonoIcon from '../../components/icons/TelefonoIcon';
 import DescripcionIcon from '../../components/icons/DescripcionIcon';
 import DiriridaaIcon from '../../components/icons/DiriridaaIcon';
 import FechaLimiteIcon from '../../components/icons/FechaLimiteIcon';
 
-import { UltimasNoticias } from '../../components/shared/programas/UltimasNoticias';
+// import { UltimasNoticias } from '../../components/shared/programas/UltimasNoticias';
 import DocumentosFillIcon from '../../components/icons/DocumentosFillIcon';
 import Observacion from '../../components/shared/Observacion';
 // import useUltimasNoticias from '../../hooks/useUltimasNoticias';
@@ -39,6 +39,7 @@ const Tramite = ({ ultimasNoticias }) => {
 				proceso,
 				correo,
 				anexo,
+				mas_informacion,
 			} = (await response.json()).data;
 			setTramite({
 				id,
@@ -50,6 +51,7 @@ const Tramite = ({ ultimasNoticias }) => {
 				proceso,
 				correo,
 				anexo,
+				mas_informacion,
 			});
 		};
 
@@ -165,26 +167,12 @@ const Tramite = ({ ultimasNoticias }) => {
 								<p className="text-textColorOne font-bold mb-2">
 									3. Más información
 								</p>
-								<div>
-									<p>
-										<CorreoIcon className="fill-textColorOne inline mr-2" />
-										<span className="text-textColorOne font-bold">
-											Correo:{' '}
-										</span>
-										<span className="text-textColorTwo">
-											{tramite.correo}
-										</span>
-									</p>
-									<p>
-										<TelefonoIcon className="fill-textColorOne inline mr-2" />
-										<span className="text-textColorOne font-bold">
-											Teléfono:{' '}
-										</span>
-										<span className="text-textColorTwo">
-											(+51) 619 7000 anexo {tramite.anexo}
-										</span>
-									</p>
-								</div>
+								<div
+									className="mx-4 md:mx-0 col-span-full mb-5 html-default"
+									dangerouslySetInnerHTML={{
+										__html: tramite.mas_informacion,
+									}}
+								/>
 							</div>
 						</div>
 					</div>
@@ -226,7 +214,7 @@ const Tramite = ({ ultimasNoticias }) => {
 					</div>
 				</>
 			)}
-			<UltimasNoticias ultimasNoticias={ultimasNoticias} />
+			{/* <UltimasNoticias ultimasNoticias={ultimasNoticias} /> */}
 		</PrincipalLayout>
 	);
 	function mensaje(mensaje) {

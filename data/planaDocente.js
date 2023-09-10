@@ -91,7 +91,7 @@ export const planaDocenteData = [
 		names: 'Cornejo Ramirez, Enrique Javier',
 		degree: 'Doctor en Administración',
 		correo: 'ecornejor@unmsm.edu.pe',
-		cv: 'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=73943',
+		cv: 'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/unmsm-cv-cornejo-ramirez.pdf',
 		linkedin:
 			'https://www.linkedin.com/in/enrique-javier-cornejo-ramirez-68374b8a/',
 		origin: 'Nacional',
@@ -125,7 +125,7 @@ export const planaDocenteData = [
 		names: 'Fairlie Frisancho, Ebor',
 		degree: 'Doctor en Ciencias Administrativas',
 		correo: 'efairlie@unmsm.edu.pe',
-		cv: 'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=4512',
+		cv: 'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/cv-fairlie-frisancho-ebor-coordinador-acade%CC%81mico.pdf',
 		origin: 'Nacional',
 	},
 	{
@@ -266,7 +266,7 @@ export const planaDocenteData = [
 		correo: 'jmayurib@unmsm.edu.pe',
 		cv: 'https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=93047',
 		linkedin:
-			'https://www.linkedin.com/in/jorge-vicente-mayuri-barron-610b40/',
+			'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/unmsm-ficha-jorge-mayuri.pdf',
 		origin: 'Nacional',
 	},
 	{
