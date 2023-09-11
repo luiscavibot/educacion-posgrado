@@ -30,9 +30,7 @@ const Consejo = () => {
 						.
 					</p>
 					<p className="mb-1">
-						<span className="font-bold text-tertiary">
-							Director de la Unidad de Posgrado
-						</span>
+						<span className="font-bold text-tertiary">Decano</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
 							Dr. Augusto Hidalgo Sánchez

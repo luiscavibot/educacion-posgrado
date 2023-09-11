@@ -159,7 +159,7 @@ const Decanato = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							vicedecanoip.administracion@unmsm.edu.pe
+							ecornejor@unmsm.edu.pe
 						</p>
 					</div>
 					{/* <div>

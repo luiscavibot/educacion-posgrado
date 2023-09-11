@@ -44,44 +44,51 @@ const VicedecanatoAcademicoPregrado = () => {
 						</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Ebor Fairlie Frisancho
+							Dr. Iván Dazir Berleine Vivanco Aquino
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Licenciado en Administración de Empresas, magíster en
-						Admistración con mención en Gestión Empresarial y doctor
-						en Ciencias Administrativas por la Universidad Nacional
-						de San Marcos
+						Doctor en Ciencias Administrativas por la Universidad
+						Nacional Mayor de San Marcos, Doctor en Gestión y
+						Desarrollo del ICTE Magíster en Administración de
+						empresas por la Universidad Nacional Pedro Ruíz Gallo
 					</p>
 					<p className="mb-5">
-						Cuenta con más de 20 años de experiencia en docencia
-						universitaria en instituciones nacionales como la
-						Universidad Nacional Mayor de San Marcos y la
-						Universidad Nacional San Cristóbal de Huamanga, y
-						particulares como la Universidad de San Martín de
-						Porres. Se ha desempeñado como jefe de la Oficina de
-						Calidad Académica y Acreditación, coordinador del área
-						de Administración del convenio con REVALORA del
-						Ministerio de Trabajo, jefe encargado de la Oficina de
-						Asesoría y Orientación al Estudiante, entre otros
-						cargos.
+						Docente en la Escuela de Posgrado de la Universidad
+						Nacional Mayor de San Marcos (UNMSM) desde el 2014. Es
+						investigador RENACYT Carlos Monge IV. Especialista en
+						metodología de la investigación y temas en Gestión
+						Pública. En el 2019 obtuvo el primer lugar en la
+						evaluación de satisfacción docente por los alumnos del
+						doctorado en Ciencias Administrativas (FCA) y maestría
+						en Gestión Pública en la Facultad de Ciencias
+						Administrativas. Su íntegra vocación por la docencia le
+						permitió asesorar con acierto a Karin Quijada, quien se
+						convirtió, en el 2023, en la primera mujer con
+						discapacidad auditiva en obtener su doctorado por la
+						Decana de América. Egresado del doctorado en Filosofía
+						por la UNMSM. Es coordinador académico y administrativo
+						del programa de Posdoctorado en Administración, que
+						realiza la FCA en coordinación con la Facultad de
+						Ciencias Económicas de la Universidad de Buenos Aires
+						(UBA).
 					</p>
 					<p className="mb-6">
-						Ha realizado distintas investigaciones y participado en
-						proyectos de turismo y desarrollo sostenible como el de
-						experiencia en redes temáticas de docencia con el Grupo
-						La Rabida de la Universidad Internacional de Andalucía.
-						Asimismo, realizó una pasantía internacional en
-						Université de Bordeaux de Francia y partició en
-						coonferencias internacionales de la Escuela Complutense
-						Latinoamericana en Chile y Argentina, el programa de
-						becarios KOICA en Corea, y en ACBSP International
-						Conference de Estados Unidos.
+						Primer puesto y designado como el mejor docente del año
+						académico del 2022 de la Facultad de Ciencias
+						Administrativas de la FCA UNMSM. Primer lugar en la
+						Evaluación de Satisfacción Docente por los Alumnos del
+						Doctorado en Ciencias Administrativas y Maestría en
+						Gestión Pública, en la Facultad de Ciencias
+						Administrativas Unidad de Posgrado. 2019 Reconocimiento
+						Destacada labor como Asesor a la mejor Tesis Doctoral de
+						la Facultad de Ciencias Contables del 2019-2020 en la
+						UNMSM.
 					</p>
 					<div className="flex gap-x-5">
 						<a
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://cdn.www.gob.pe/uploads/document/file/5047091/RESOLUCI%C3%93N%20RECTORAL-018975-2020-R%20COORDINADOR%20ACADEMICO%20FAIRLIE%20FRISANCHO%20UPG.pdf?v=1693000753"
+							// href="https://cdn.www.gob.pe/uploads/document/file/5047091/RESOLUCI%C3%93N%20RECTORAL-018975-2020-R%20COORDINADOR%20ACADEMICO%20FAIRLIE%20FRISANCHO%20UPG.pdf?v=1693000753"
 							target={'_blank'}
 							rel="noopener noreferrer"
 						>
@@ -94,9 +101,10 @@ const VicedecanatoAcademicoPregrado = () => {
 							secondary
 							className="mb-6 text-primary"
 							onClick={() =>
-								window.open(
-									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+Fairlie+Frisancho+Ebor+-+Coordinador+Acade%CC%81mico.pdf'
-								)
+								window
+									.open
+									// 'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+Fairlie+Frisancho+Ebor+-+Coordinador+Acade%CC%81mico.pdf'
+									()
 							}
 						>
 							<span>
@@ -111,7 +119,7 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-Ebor-Fairlie.jpeg"
+						// src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-Ebor-Fairlie.jpeg"
 						width={209}
 						height={224}
 						quality={100}
@@ -139,7 +147,7 @@ const VicedecanatoAcademicoPregrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							coordacadupg.administracion@unmsm.edu.pe
+							ivivancoa@unmsm.edu.pe
 						</p>
 					</div>
 					{/* <div>
