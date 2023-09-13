@@ -426,16 +426,16 @@ const SideBar = ({ interno }) => {
 													MAT
 												</a>
 											</div>
-											{/* <div onClick={handleSidebar}>
+											<div onClick={handleSidebar}>
 												<a
-													href="#"
+													href="https://forms.gle/6QHcRQ5gZQKxpZpn8"
 													rel="noopener noreferrer"
 													target={'_blank'}
 													className="inline-flex items-center py-[10px] px-11 transition w-full"
 												>
-													Aula virtual
+													Registro de pagos
 												</a>
-											</div> */}
+											</div>
 										</div>
 									</Accordion.Content>
 								</>

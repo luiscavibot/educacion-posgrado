@@ -462,14 +462,14 @@ const PortadaHome = ({ eventos }) => {
 														MAT
 													</a>
 												</MenuItem>
-												{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+												<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 													<a
-														href="#"
+														href="https://forms.gle/6QHcRQ5gZQKxpZpn8"
 														className="hover:text-secondary py-2"
 													>
-														Aula virtual
+														Registro de pagos
 													</a>
-												</MenuItem> */}
+												</MenuItem>
 											</Menu>
 										</Dropdown>
 									</li>
@@ -603,7 +603,7 @@ const PortadaHome = ({ eventos }) => {
 															evento.fecha_inicio
 														)}
 													</div>
-													<div>3 p.m.</div>
+													{/* <div>3 p.m.</div> */}
 												</div>
 												<div className="flex flex-col">
 													<p className="mb-[2px] font-bold">

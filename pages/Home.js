@@ -5,11 +5,10 @@ import AgendaPublica from '../components/home/AgendaPublica';
 import LinkInternos from '../components/home/LinksInternos';
 import Programas from '../components/home/Programas';
 import FooterComponent from '../components/shared/FooterComponent';
-import { BACKEND, CORREO_COMUNICACIONES } from '../config/consts';
+import { CORREO_COMUNICACIONES } from '../config/consts';
 import Contactanos from '../components/home/Contactanos';
 import LinksExternos from '../components/home/LinksExternos';
 import Testimonios from '../components/home/Testimonios';
-
 import { BannerAdmisionHome } from '../components/admision/BannerAdmisionHome';
 import AsideSocialNetworks from '../components/home/AsideSocialNetworks';
 import useAlertasInformativas from '../hooks/useAlerta';
@@ -21,39 +20,38 @@ export default function Home() {
 	const { isLoading, eventosVigentes, agendaDestacadas, ultimasHome } =
 		useHome();
 
+	console.log(eventosVigentes);
+
 	return (
 		<FHpages>
-			{!isLoading &&
-				agendaDestacadas &&
-				ultimasHome &&
-				eventosVigentes && (
-					<>
-						<AsideSocialNetworks />
-						<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
-							{isOpenHeader && alerta && (
-								<BannerAdmisionHome
-									alerta={alerta}
-									setIsOpenHeader={setIsOpenHeader}
-								/>
-							)}
-						</div>
-
-						<PortadaHome eventos={eventosVigentes} />
-
-						<main className="bg-blanco pt-14 md:pt-18">
-							<AgendaPublica
-								noticiasDestacadas={agendaDestacadas}
-								noticias={ultimasHome}
+			{!isLoading && (
+				<>
+					<AsideSocialNetworks />
+					<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
+						{isOpenHeader && alerta && (
+							<BannerAdmisionHome
+								alerta={alerta}
+								setIsOpenHeader={setIsOpenHeader}
 							/>
-							<LinkInternos />
-							<Programas />
-							<Testimonios />
-							<LinksExternos />
-							<Contactanos mail={CORREO_COMUNICACIONES} />
-						</main>
-						<FooterComponent inHome />
-					</>
-				)}
+						)}
+					</div>
+
+					<PortadaHome eventos={eventosVigentes} />
+
+					<main className="bg-blanco pt-14 md:pt-18">
+						<AgendaPublica
+							noticiasDestacadas={agendaDestacadas}
+							noticias={ultimasHome}
+						/>
+						<LinkInternos />
+						<Programas />
+						<Testimonios />
+						<LinksExternos />
+						<Contactanos mail={CORREO_COMUNICACIONES} />
+					</main>
+					<FooterComponent inHome />
+				</>
+			)}
 		</FHpages>
 	);
 }
