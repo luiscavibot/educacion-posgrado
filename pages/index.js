@@ -70,6 +70,6 @@ export async function getStaticProps() {
 			noticias,
 			eventos,
 		},
-		revalidate: 400,
+		// revalidate: 400,
 	};
 }

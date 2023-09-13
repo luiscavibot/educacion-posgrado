@@ -111,7 +111,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 							</div>
 						</div>
 					</div>
-					<div className="col-span-full mb-14 mx-4 md:mx-0">
+					{/* <div className="col-span-full mb-14 mx-4 md:mx-0">
 						<div>
 							<Link key="1" href={`/actualidad/comunicados/118`}>
 								<a
@@ -157,7 +157,7 @@ const Comunicado = ({ comunicado, noticiasRelacionadas }) => {
 								</a>
 							</Link>
 						</div>
-					</div>
+					</div> */}
 				</>
 			)}
 			<Modal
