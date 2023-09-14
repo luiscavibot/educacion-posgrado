@@ -101,10 +101,9 @@ const VicedecanatoAcademicoPregrado = () => {
 							secondary
 							className="mb-6 text-primary"
 							onClick={() =>
-								window
-									.open
-									// 'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/CV+Fairlie+Frisancho+Ebor+-+Coordinador+Acade%CC%81mico.pdf'
-									()
+								window.open(
+									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/CV-VIVANCO-AQUINO-IVAN-DAZIR.pdf'
+								)
 							}
 						>
 							<span>
@@ -119,7 +118,7 @@ const VicedecanatoAcademicoPregrado = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						// src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-Ebor-Fairlie.jpeg"
+						src="https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/fotos-docentes-y-autoridades/vivanco-aquino-ivan.jpg"
 						width={209}
 						height={224}
 						quality={100}

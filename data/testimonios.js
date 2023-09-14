@@ -1,5 +1,15 @@
 const testimoniosData = [
 	{
+		nombre: 'Karin Janett Quijada Lovaton',
+		programa: 'Doctorado en Ciencias Administrativas',
+		tipoPrograma: 'doctorado',
+		cargo: 'Especialista en Audición y Lenguaje - Programa Nacional AURORA',
+		linkedin:
+			'https://www.linkedin.com/in/karin-janett-quijada-lovaton-2ba01b132/',
+		frase: 'Tener una discapacidad no fue un impedimento para estudiar un doctorado en la prestigiosa Universidad. La accesibilidad en la comunicación en los estudiantes con discapacidad auditiva a nivel universitario ha sido una adecuada estrategia para continuar con mis estudios; por ende, me ayudaron a desarrollar mis capacidades y habilidades en las ciencias administrativas. Finalmente, exhorto a todos y todas a trabajar por la inclusión.',
+		foto: 'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/testimonios/KARIN_QUIJADA.jpeg',
+	},
+	{
 		nombre: 'María Carranza Ancajima',
 		programa: 'Maestría en Gestión Pública',
 		tipoPrograma: 'maestrias',
