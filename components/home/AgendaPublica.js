@@ -90,18 +90,18 @@ const AgendaPublica = ({ noticiasDestacadas, noticias }) => {
 																></Image>
 																{/* <div className="absolute inset-0 bg-gradient-to-t from-negroPuro via-transparente to-transparente"></div> */}
 															</div>
-															<div className="col-span-2 bg-blanco px-5 pt-6 pb-28">
+															<div className="col-span-2 bg-blanco px-5 pt-6 pb-14 md:pb-28">
 																<div className="line-clamp-10">
 																	<span className="font-bold text-base group-hover:text-secondary transition duration-300">
 																		{
 																			noticiaDestacada.titulo
 																		}
 																	</span>
-																	<br />
-																	<br />
+																	<br className="hidden md:block" />
+																	<br className="hidden md:block" />
 																	{firstRender && (
 																		<span
-																			className="html-default"
+																			className="hidden md:block html-default"
 																			dangerouslySetInnerHTML={createMarkup(
 																				noticiaDestacada.cuerpo
 																			)}

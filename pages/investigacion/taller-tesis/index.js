@@ -67,6 +67,11 @@ const TallerTesis = ({ ultimasNoticias }) => {
 				<Tabs nombre="taller-tesis">
 					<div label="Presentación">
 						<div>
+							<div className="bg-primary hover:bg-primary-hover mb-4 py-4">
+								<h1 className="text-complementaryTwo text-center font-bold">
+									VACANTES AGOTADAS
+								</h1>
+							</div>
 							<div className="bg-complementaryTwo rounded-lg px-5 pt-5 pb-1 mb-5">
 								<p className="pb-4 flex space-x-1 items-center">
 									<DuracionIcon className="fill-textColorOne" />
@@ -158,6 +163,11 @@ const TallerTesis = ({ ultimasNoticias }) => {
 					</div>
 					<div label="Inscripción">
 						<div>
+							<div className="bg-primary hover:bg-primary-hover mb-4 py-4">
+								<h1 className="text-complementaryTwo text-center font-bold">
+									VACANTES AGOTADAS
+								</h1>
+							</div>
 							<p className="mb-6">
 								¿Estás listo/a para iniciar nuestro Taller de
 								Tesis? Para inscribirte, simplemente completa
