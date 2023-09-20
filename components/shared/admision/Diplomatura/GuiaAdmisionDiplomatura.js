@@ -166,10 +166,10 @@ const GuiaAdmisionDiplomatura = () => {
 							<a
 								className="link"
 								target="_blank"
-								href="mailto:capacitacion.upgfca@unmsm.edu.pe"
+								href="mailto:diplomaturasupgfca@unmsm.edu.pe"
 								rel="noreferrer noopener"
 							>
-								capacitacion.upgfca@unmsm.edu.pe
+								diplomaturasupgfca@unmsm.edu.pe
 							</a>
 							,{' '}
 							<a
