@@ -1,55 +1,36 @@
-import { useState, useEffect } from 'react';
-import { BACKEND, BASE_URL, SLUG_CARRERA } from '../config/consts';
+import useSWR from 'swr';
+import { BACKEND } from '../config/consts';
+import { useState } from 'react';
 
 const INITIAL_PAGE = 0;
 const PAGE_SIZE = 10;
 
-export default function useRevistas(searchParams) {
-	const [totalPaginas, setTotalPaginas] = useState(null);
-	const [revistas, setRevistas] = useState(null);
-	const [page, setPage] = useState(INITIAL_PAGE);
-	useEffect(() => {
-		setRevistas(null);
-		const { keyWords, ...checks } = searchParams;
-		let url = `${BACKEND}/revistas?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
-		if (keyWords !== '') {
-			url += `&busqueda=${keyWords}`;
-		}
-		// url += `&pagination[pageSize]=${PAGE_SIZE}&sort=fecha%3Adesc`;
+async function fetcher(url) {
+	const response = await fetch(url);
+	return response.json();
+}
 
-		// let filtroStartDate = `&filters[fecha][$gte]=${START_DATE.getTime()}`;
-		// let filtroEndDate = `&filters[fecha][$lte]=${END_DATE.getTime()}`;
-		// if (startDate !== START_DATE) {
-		// 	filtroStartDate = `&filters[fecha][$gte]=${startDate.getTime()}`;
-		// }
-		// if (endDate !== END_DATE) {
-		// 	filtroEndDate = `&filters[fecha][$lte]=${endDate.getTime()}`;
-		// }
-		// if (entradaBusqueda !== '') {
-		// 	url += `&filters[$or][0][titulo][$contains]=${entradaBusqueda}`;
-		// 	url += `&filters[$or][1][subtitulo][$contains]=${entradaBusqueda}`;
-		// 	url += `&filters[$or][2][cuerpo][$contains]=${entradaBusqueda}`;
-		// 	filtroStartDate = '';
-		// 	filtroEndDate = '';
-		// }
-		// url += filtroStartDate + filtroEndDate;
-		const fetchData = async () => {
-			let response = await fetch(url);
-			console.log(url);
-			let res = await response.json();
-			console.log(res);
-			setTotalPaginas(res.meta.totalPages);
-			setRevistas(res.items);
-			window.scrollTo(0, 0);
-		};
-		fetchData().catch(console.error);
-		// }, [entradaBusqueda, page, startDate, endDate]);
-	}, [searchParams, page]);
+export default function useRevistas(searchParams) {
+	const { keyWords } = searchParams;
+	const [page, setPage] = useState(INITIAL_PAGE);
+
+	let url = `${BACKEND}/revistas?publicado=true&limit=${PAGE_SIZE}&page=${page}&sort=fecha%3Adesc`;
+	if (keyWords !== '') {
+		url += `&busqueda=${keyWords}`;
+	}
+
+	const { data, error } = useSWR(url, fetcher);
+
+	const revistas = data ? data.items : null;
+	const totalPaginas = data ? data.meta.totalPages : null;
+
 	return {
 		revistas,
 		setPage,
 		page,
 		totalPaginas,
 		INITIAL_PAGE,
+		isLoading: !error && !data,
+		isError: error,
 	};
 }
