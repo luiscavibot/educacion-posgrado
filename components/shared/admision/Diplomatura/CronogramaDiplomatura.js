@@ -30,7 +30,7 @@ const CronogramaDiplomatura = () => {
 						</tr>
 						<tr>
 							<td>Inscripción de postulantes</td>
-							<td>Hasta el 20 de septiembre del 2023</td>
+							<td>Hasta el 22 de septiembre del 2023</td>
 						</tr>
 					</tbody>
 				</table>
