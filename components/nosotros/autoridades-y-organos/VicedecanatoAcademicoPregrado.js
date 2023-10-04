@@ -88,7 +88,7 @@ const VicedecanatoAcademicoPregrado = () => {
 					<div className="flex gap-x-5">
 						<a
 							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							// href="https://cdn.www.gob.pe/uploads/document/file/5047091/RESOLUCI%C3%93N%20RECTORAL-018975-2020-R%20COORDINADOR%20ACADEMICO%20FAIRLIE%20FRISANCHO%20UPG.pdf?v=1693000753"
+							href="https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/resoluciones/RESOLUCIO%CC%81N+RECTORAL-011049-2023-R.pdf"
 							target={'_blank'}
 							rel="noopener noreferrer"
 						>
