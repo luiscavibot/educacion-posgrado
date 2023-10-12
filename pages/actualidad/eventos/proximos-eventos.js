@@ -37,7 +37,7 @@ const ProximosEventos = () => {
 	// 	END_DATE
 	// );
 
-	const { eventosProxUlt } = useEventosProximosUltimos();
+	const { eventosProxUlt } = useEventosProximosUltimos(false);
 	// const { eventosPasUlt } = useEventosPasadosUltimos();
 
 	const handleKeyDown = (e) => {
