@@ -13,6 +13,7 @@ import InputCheckbox from '../../../components/shared/InputCheckbox';
 import useActividadCientifica from '../../../hooks/useActividadCientifica';
 import Cargando from '../../../components/resultados/Cargando';
 import docentesAsesoresData from '../../../data/docentesAsesores';
+import protocolosInvestigacion from '../../../data/protocolosInvestigacion';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
@@ -28,6 +29,7 @@ const INITIAL_INPUTS = {
 const radioOptions = [
 	{ value: 'PUBLICACIONES', label: 'Publicaciones' },
 	{ value: 'DOCENTES_ASESORES', label: 'Docentes asesores' },
+	{ value: 'PROTOCOLOS_INVESTIGACION', label: 'Protocolos de investigación' },
 ];
 
 function createMarkup(dom) {
@@ -122,7 +124,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -134,7 +138,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -146,7 +152,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -156,7 +164,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -168,7 +178,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -178,7 +190,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 									<InputCheckbox
@@ -190,7 +204,9 @@ const ActividadCientifica = () => {
 										onChange={handleCheck}
 										disabled={
 											selectedOption ===
-											'DOCENTES_ASESORES'
+												'DOCENTES_ASESORES' ||
+											selectedOption ===
+												'PROTOCOLOS_INVESTIGACION'
 										}
 									/>
 								</div>
@@ -214,27 +230,46 @@ const ActividadCientifica = () => {
 								</label>
 							</div>
 						</div>
+						<div className="flex flex-col gap-y-1 mt-2">
+							<div key={radioOptions[2].value} className="mb-2">
+								<label className="flex gap-x-2 justify-start place-items-start">
+									<input
+										className="translate-y-1 border-textColorTwo/50 cursor-pointer checked:!bg-primary visited:!bg-secondary text-secbg-secondary focus:ring-0"
+										type="radio"
+										name="Tipo"
+										value={radioOptions[2].value}
+										checked={
+											radioOptions[2].value ===
+											selectedOption
+										}
+										onChange={handleRadioChange}
+									/>
+									{radioOptions[2].label}
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="col-span-8 lg:col-span-9 xl:col-span-10 px-4 mb-6 md:px-0">
-					{selectedOption !== 'DOCENTES_ASESORES' && (
-						<div className="px-4 md:px-0 col-span-full mb-5">
-							<div className="flex justify-between">
-								<InputText
-									value={inputs.keyWords}
-									name="buscador"
-									onChange={handleChange}
-									placeholder="Buscar por palabra clave"
-									conIconoBuscador
-									className="w-full md:w-[14rem] inline-block"
-									backgroundClass="bg-textColorTwo/5"
-								/>
-								<Paginador
-									controles={[page, setPage, totalPages]}
-								/>
+					{selectedOption !== 'DOCENTES_ASESORES' ||
+						(selectedOption !== 'PROTOCOLOS_INVESTIGACION' && (
+							<div className="px-4 md:px-0 col-span-full mb-5">
+								<div className="flex justify-between">
+									<InputText
+										value={inputs.keyWords}
+										name="buscador"
+										onChange={handleChange}
+										placeholder="Buscar por palabra clave"
+										conIconoBuscador
+										className="w-full md:w-[14rem] inline-block"
+										backgroundClass="bg-textColorTwo/5"
+									/>
+									<Paginador
+										controles={[page, setPage, totalPages]}
+									/>
+								</div>
 							</div>
-						</div>
-					)}
+						))}
 					{actividades && actividades.length > 0 ? (
 						<>
 							{selectedOption === 'PUBLICACIONES' && (
@@ -283,9 +318,8 @@ const ActividadCientifica = () => {
 															</p>
 															{actividad.tipo_produccion_academica !==
 																'GESTIONENELTERCERMILENIO' && (
-																<div>
-																	<p
-																		className="line-clamp-4 mb-2"
+																<div className="line-clamp-4 mb-2">
+																	<div
 																		dangerouslySetInnerHTML={createMarkup(
 																			actividad.resumen
 																		)}
@@ -335,6 +369,22 @@ const ActividadCientifica = () => {
 												<li>{docente?.ods6}</li>
 											)}
 										</ul>
+									</div>
+								))}
+							{selectedOption === 'PROTOCOLOS_INVESTIGACION' &&
+								protocolosInvestigacion.map((protocolo) => (
+									<div
+										className="mb-4 py-2 px-4 bg-blanco cursor-pointer shadow-[0px_1px_5px_rgba(0,_0,_0,_0.1)] hover:shadow-md duration-300 hover:brightness-105"
+										key={protocolo.n}
+									>
+										<a
+											href={protocolo.LinkDocumento}
+											target="_blank"
+											className="text-textColorOne font-semibold mb-1"
+											rel="noopener noreferrer"
+										>
+											{protocolo.nombreDocumento}
+										</a>
 									</div>
 								))}
 						</>
