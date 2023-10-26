@@ -19,11 +19,11 @@ const END_DATE = new Date();
 END_DATE.setHours(23, 59, 59, 999);
 
 const ProximosEventos = () => {
-	const eventosRef = useRef(null);
-	const [input, setInput] = useState('');
-	const [entradaBusqueda, setEntradaBusqueda] = useState('');
-	const [startDate, setStartDate] = useState(START_DATE);
-	const [endDate, setEndDate] = useState(END_DATE);
+	// const eventosRef = useRef(null);
+	// const [input, setInput] = useState('');
+	// const [entradaBusqueda, setEntradaBusqueda] = useState('');
+	// const [startDate, setStartDate] = useState(START_DATE);
+	// const [endDate, setEndDate] = useState(END_DATE);
 	// const [eventosPasadosUltimos, setEventosPasadosUltimos] = useState(
 	// 	useEventosPasadosUltimos()
 	// );
@@ -40,16 +40,16 @@ const ProximosEventos = () => {
 	const { eventosProxUlt } = useEventosProximosUltimos(false);
 	// const { eventosPasUlt } = useEventosPasadosUltimos();
 
-	const handleKeyDown = (e) => {
-		setInput(e.target.value);
-		if (e.target.value === '') {
-			setEntradaBusqueda('');
-		}
-		if (e.key === 'Enter') {
-			setEntradaBusqueda(e.target.value);
-			setPage(INITIAL_PAGE);
-		}
-	};
+	// const handleKeyDown = (e) => {
+	// 	setInput(e.target.value);
+	// 	if (e.target.value === '') {
+	// 		setEntradaBusqueda('');
+	// 	}
+	// 	if (e.key === 'Enter') {
+	// 		setEntradaBusqueda(e.target.value);
+	// 		setPage(INITIAL_PAGE);
+	// 	}
+	// };
 	return (
 		<PrincipalLayout>
 			<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
