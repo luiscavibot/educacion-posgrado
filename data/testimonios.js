@@ -1,5 +1,15 @@
 const testimoniosData = [
 	{
+		nombre: 'Paul Rivera Jaramillo',
+		programa: 'Maestría en Gestión Pública',
+		tipoPrograma: 'maestria',
+		cargo: 'Jefe de comunicaciones de la Oficina General de Imagen Institucional UNMSM',
+		linkedin:
+			'https://www.linkedin.com/in/paul-rivera-jaramillo-0baa86a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+		frase: 'Ser sanmarquino es un gran honor por la gran calidad de enseñanza e investigación que promueve vuestra casa superior de estudios. Agradezco a la plana docente y autoridades por formar líderes que contribuyen al desarrollo del país en cada uno de sus proyectos y cargos a nivel nacional e internacional.',
+		foto: 'https://unmsm-static-files.s3.us-east-2.amazonaws.com/fca-posgrado/testimonios/Paul-Rivera.jpg',
+	},
+	{
 		nombre: 'Karin Janett Quijada Lovaton',
 		programa: 'Doctorado en Ciencias Administrativas',
 		tipoPrograma: 'doctorado',
