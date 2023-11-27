@@ -63,15 +63,6 @@ export default function CarouselProgramas({ programas }) {
 										objectFit="cover"
 										src={programa.miniHomeImg}
 									/>
-									<div className="absolute top-5 left-0 bg-secondary rounded-r-lg text-blanco p-2 font-bold modalidad">
-										{programa.modalidad === 'PRESENCIAL' &&
-											'Modalidad Presencial'}
-										{programa.modalidad ===
-											'SEMIPRESENCIAL' &&
-											'Modalidad Semipresencial'}
-										{programa.modalidad === 'VIRTUAL' &&
-											'Modalidad Virtual'}
-									</div>
 								</div>
 								<div className="text-content h-32">
 									{/* <p className="text-rojoBase text-xs font-bold">

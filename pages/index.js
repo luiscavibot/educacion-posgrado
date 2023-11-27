@@ -45,7 +45,7 @@ export default function Home() {
 								noticiasDestacadas={agendaDestacadas}
 								noticias={ultimasHome}
 							/>
-							<LinkInternos />
+							{/* <LinkInternos /> */}
 							<Programas />
 							<Testimonios />
 							<LinksExternos />

@@ -28,7 +28,7 @@ module.exports = {
 			backgroundImage: {
 				alert: 'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/cintillo-alerta-informativa.jpg")',
 				bgEventos:
-					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Home/fondos-eventos.jpg")',
+					'url("https://unmsm-static-files.s3.us-east-2.amazonaws.com/educacion/backgroundinicio/bg-educacion-posgrado.jpg")',
 				bgHeader:
 					'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/fondo-header.jpg")',
 				TikTok: 'url("https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/especiales/cintillo-tiktok-seccion-investigacion.jpg")',
@@ -112,12 +112,12 @@ module.exports = {
 		colors: {
 			// primary: '#A68403',
 			primary: {
-				DEFAULT: '#A68403',
+				DEFAULT: '#30824E',
 				hover: '#AA8B14',
 			},
 			// secondary: '#004283',
 			secondary: {
-				DEFAULT: '#004283',
+				DEFAULT: '#1C1B3B',
 				hover: '#084873',
 			},
 			tertiary: '#033759',

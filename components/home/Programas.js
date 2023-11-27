@@ -35,7 +35,7 @@ const Programas = () => {
 						comunidad sanmarquina.
 					</p>
 					<ul className="font-bold mt-6">
-						<li className="text-lg hover:text-secondary cursor-pointer duration-400">
+						{/* <li className="text-lg hover:text-secondary cursor-pointer duration-400">
 							<Link href="/programas/diplomaturas">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
@@ -44,7 +44,7 @@ const Programas = () => {
 									</span>
 								</a>
 							</Link>
-						</li>
+						</li> */}
 						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
 							<Link href="/programas/maestrias">
 								<a className="flex items-center justify-start">
@@ -65,7 +65,7 @@ const Programas = () => {
 								</a>
 							</Link>
 						</li>
-						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
+						{/* <li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
 							<Link href="programas/posdoctorado">
 								<a className="flex items-center justify-start">
 									<FaChevronRight />
@@ -74,7 +74,7 @@ const Programas = () => {
 									</span>
 								</a>
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 				{!dataCarrousel && <>loading</>}
