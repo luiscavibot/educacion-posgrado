@@ -15,7 +15,7 @@ import { replaceUrlPrefix } from '../../../helpers/transformS3ToCdn';
 
 const Noticia = ({ noticia, noticiasRelacionadas }) => {
 	console.log(noticia);
-	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/actualidad/agenda-publica/${noticia.slug}`;
+	const ogUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/noticias/${noticia.slug}`;
 	const metaTags = {
 		title: noticia.titulo,
 		description: noticia.resumen,
@@ -48,7 +48,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 						</li>
 						<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
 							<Link href="/actualidad/agenda-publica">
-								<a>Agenda Pública</a>
+								<a>Noticias</a>
 							</Link>
 						</li>
 						<li className="text-textColorOne font-bold inline">
@@ -99,8 +99,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 								<div>
 									<div className="flex items-center gap-x-3 mb-9">
 										<h2 className="font-bold text-textColorOne">
-											Últimas entradas en la Agenda
-											Pública
+											Últimas noticias
 										</h2>
 										<Link
 											href="/actualidad/agenda-publica"
@@ -117,7 +116,7 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 							</div>
 							<div className="col-span-full mb-14">
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
-									{noticiasRelacionadas.map((noticia) => (
+									{noticiasRelacionadas?.map((noticia) => (
 										<Link
 											key={noticia.id}
 											href={`/actualidad/agenda-publica/${noticia.slug}`}
@@ -193,15 +192,14 @@ const Noticia = ({ noticia, noticiasRelacionadas }) => {
 	);
 };
 export async function getServerSideProps({ params }) {
-	const resNoticia = await fetch(
-		`${BACKEND}/agenda-publica/url/${params.noticia}`
-	);
+	const resNoticia = await fetch(`${BACKEND}/noticias/url/${params.noticia}`);
 	const noticia = await resNoticia.json();
 	// console.log('noticias->', noticia);
 	const resNoticiasRelacionadas = await fetch(
-		`${BACKEND}/agenda-publica/ultimas?id=${noticia[0].id}`
+		`${BACKEND}/noticias/educacion/ultimas?id=${noticia[0].id}`
 	);
 	const noticiasRelacionadas = await resNoticiasRelacionadas.json();
+	console.log('noticiasRelacionadas->', noticiasRelacionadas);
 
 	return {
 		props: {

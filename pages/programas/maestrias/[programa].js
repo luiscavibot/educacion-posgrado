@@ -254,17 +254,13 @@ const Programa = ({ programa, otrosProgramas }) => {
 										</div>
 									</>
 								)}
-								{programa.porqueEstudiarConNosotros && (
+								{programa.objetivos && (
 									<>
 										<div className="mb-6">
 											<div className="subtitle mb-2">
-												¿Por qué estudiar con nosotros?
+												Objetivos
 											</div>
-											<p>
-												{
-													programa.porqueEstudiarConNosotros
-												}
-											</p>
+											<p>{programa.objetivos}</p>
 										</div>
 									</>
 								)}
@@ -429,10 +425,10 @@ const Programa = ({ programa, otrosProgramas }) => {
 						label="Admisión"
 						link="/admision?programa=maestria"
 					></div>
-					<div
+					{/* <div
 						label="Plana docente"
 						link="/comunidad/plana-docente"
-					></div>
+					></div> */}
 					<div label="Malla curricular">
 						<MallaCurricular
 							asignaturas={programa.asignaturas}
@@ -444,11 +440,11 @@ const Programa = ({ programa, otrosProgramas }) => {
 					<div label="Inversión económica">
 						<InversionEconomica inversion={programa.inversion} />
 					</div>
-
+					{/* 
 					<div
 						label="Testimonios de egresados"
 						link="/comunidad/seguimiento-egresados"
-					></div>
+					></div> */}
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14 max-md:px-4">

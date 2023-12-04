@@ -4,8 +4,8 @@ export const POSGRADO_URL = 'https://cm.posgrado.unmsm.edu.pe/api';
 // export const APP_CORREO = 'http://localhost:8080/api/posgrado';
 export const BASE_URL =
 	process.env.NODE_ENV === 'development'
-		? 'https://general-back.unmsm.click'
-		: 'https://general-back.unmsm.click';
+		? 'https://unmsm-general-back.digitalbonds.link'
+		: 'https://unmsm-general-back.digitalbonds.link';
 
 export const APP_CORREO =
 	process.env.NODE_ENV === 'development'

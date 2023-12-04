@@ -20,32 +20,24 @@ export const CuadroVacante = ({ facultad }) => {
 					<tbody>
 						<tr>
 							<td>
-								Maestría en Administración con mención en
-								Gestión Empresarial
+								Maestría en Educación con mención en Gestión de
+								la Educación
 							</td>
-							<td className="text-center">105</td>
-						</tr>
-						<tr>
-							<td>Maestría en Marketing</td>
 							<td className="text-center">-</td>
-						</tr>
-						<tr>
-							<td>Maestría en Finanzas y Valores</td>
-							<td className="text-center">35</td>
 						</tr>
 						<tr>
 							<td>
-								Maestría en Gestión de Negocios Internacionales
+								Maestría en Educación con mención en Docencia
+								Universitaria
 							</td>
 							<td className="text-center">-</td>
 						</tr>
 						<tr>
-							<td>Maestría en Dirección de Recursos Humanos</td>
-							<td className="text-center">70</td>
-						</tr>
-						<tr>
-							<td>Maestría en Gestión Pública</td>
-							<td className="text-center">210</td>
+							<td>
+								Maestría en Educación con mención en Evaluación
+								y Acreditación de la Calidad de la Educación
+							</td>
+							<td className="text-center">-</td>
 						</tr>
 					</tbody>
 				</table>

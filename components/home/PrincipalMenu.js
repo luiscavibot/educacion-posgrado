@@ -47,7 +47,7 @@ const PrincipalMenu = () => {
 										}}
 									>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/diplomaturas">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-gestion-de-la-educacion">
 												<a className="hover:text-secondary py-2">
 													MEd. con mención en Gestión
 													de la Educación
@@ -55,7 +55,7 @@ const PrincipalMenu = () => {
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/maestrias">
+											<Link href="/programas/maestrias/">
 												<a className="hover:text-secondary py-2">
 													MEd. con mención en Docencia
 													Universitaria
@@ -63,7 +63,7 @@ const PrincipalMenu = () => {
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/doctorado">
+											<Link href="/programas/maestrias/">
 												<a className="hover:text-secondary py-2">
 													MEd. con mención en
 													Evaluación y Acreditación de
@@ -241,13 +241,13 @@ const PrincipalMenu = () => {
 												</a>
 											</Link>
 										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+										{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/actualidad/eventos">
 												<a className="hover:text-secondary py-2">
 													Eventos
 												</a>
 											</Link>
-										</MenuItem>
+										</MenuItem> */}
 										{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/actualidad/boletines">
 												<a className="hover:text-secondary py-2">
@@ -368,14 +368,14 @@ const PrincipalMenu = () => {
 												MAT
 											</a>
 										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+										{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<a
 												href="https://forms.gle/6QHcRQ5gZQKxpZpn8"
 												className="hover:text-secondary py-2"
 											>
 												Registro de pagos
 											</a>
-										</MenuItem>
+										</MenuItem> */}
 									</Menu>
 								</Dropdown>
 							</li>

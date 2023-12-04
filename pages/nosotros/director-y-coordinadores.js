@@ -101,7 +101,7 @@ const Autoridades = (
 			<div className="col-span-full mb-5 ">
 				<div className="relative h-bannerMobile md:h-banner xl:h-auto">
 					<Image
-						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/directores-coordinadores-administracion-posgrado.jpg"
+						src="https://unmsm-static-files.s3.us-east-2.amazonaws.com/educacion/backgroundinicio/frontis-educacion.jpg"
 						layout="responsive"
 						width={1343}
 						height={397}
@@ -121,9 +121,9 @@ const Autoridades = (
 					<div label="Director de la Unidad de Posgrado">
 						<Decanato />
 					</div>
-					<div label="Coordinación Académica de la Unidad de Posgrado">
+					{/* <div label="Coordinación Académica de la Unidad de Posgrado">
 						<VicedecanatoAcademicoPregrado />
-					</div>
+					</div> */}
 					{/* <div label="Cargo 2">
 						<VicedecanatoInvestigacionPosgrado />
 					</div>

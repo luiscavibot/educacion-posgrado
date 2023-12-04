@@ -18,42 +18,38 @@ import { useHome } from '../hooks/useHome';
 export default function Home() {
 	const [isOpenHeader, setIsOpenHeader] = useState(true);
 	const { alerta } = useAlertasInformativas();
-	const { isLoading, eventosVigentes, agendaDestacadas, ultimasHome } =
-		useHome();
+	const { isLoading, agendaDestacadas, ultimasHome } = useHome();
 
 	return (
 		<FHpages>
-			{!isLoading &&
-				agendaDestacadas &&
-				ultimasHome &&
-				eventosVigentes && (
-					<>
-						<AsideSocialNetworks />
-						<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
-							{isOpenHeader && alerta && (
-								<BannerAdmisionHome
-									alerta={alerta}
-									setIsOpenHeader={setIsOpenHeader}
-								/>
-							)}
-						</div>
-
-						<PortadaHome eventos={eventosVigentes} />
-
-						<main className="bg-blanco pt-14 md:pt-18">
-							<AgendaPublica
-								noticiasDestacadas={agendaDestacadas}
-								noticias={ultimasHome}
+			{!isLoading && agendaDestacadas && ultimasHome && (
+				<>
+					<AsideSocialNetworks />
+					<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
+						{isOpenHeader && alerta && (
+							<BannerAdmisionHome
+								alerta={alerta}
+								setIsOpenHeader={setIsOpenHeader}
 							/>
-							{/* <LinkInternos /> */}
-							<Programas />
-							<Testimonios />
-							<LinksExternos />
-							<Contactanos mail={CORREO_COMUNICACIONES} />
-						</main>
-						<FooterComponent inHome />
-					</>
-				)}
+						)}
+					</div>
+
+					<PortadaHome />
+
+					<main className="bg-blanco pt-14 md:pt-18">
+						<AgendaPublica
+							noticiasDestacadas={agendaDestacadas}
+							noticias={ultimasHome}
+						/>
+						{/* <LinkInternos /> */}
+						<Programas />
+						{/* <Testimonios /> */}
+						<LinksExternos />
+						<Contactanos mail={CORREO_COMUNICACIONES} />
+					</main>
+					<FooterComponent inHome />
+				</>
+			)}
 		</FHpages>
 	);
 }

@@ -10,10 +10,11 @@ import { Menu } from '@mui/base/Menu';
 import { MenuButton } from '@mui/base/MenuButton';
 import { MenuItem } from '@mui/base/MenuItem';
 import { Dropdown } from '@mui/base/Dropdown';
+import Image from 'next/image';
 
 const HeaderPage = () => {
 	return (
-		<header className="bg-bgHeader bg-no-repeat bg-cover lg:bg-center bg-secondary text-blanco fixed inset-x-0 z-10">
+		<header className="bg-bgEventos bg-no-repeat bg-cover lg:bg-center bg-secondary text-blanco fixed inset-x-0 z-10">
 			<SubMenu theme="footerOne" color="blanco" />
 			<div className="container mx-auto px-4 lg:px-8 2xl:px-16 py-3 lg:py-5 flex justify-between relative z-10">
 				<div className="lg:hidden block">
@@ -21,12 +22,22 @@ const HeaderPage = () => {
 				</div>
 				<div className="">
 					<Link href="/">
-						<a>
-							<Logo className="h-[70px] w-full" />
+						<a className="flex items-center gap-3">
+							<div className="w-10">
+								<Image
+									src="https://unmsm-static-files.s3.us-east-2.amazonaws.com/general/escudo-unmsm.png"
+									alt="escudo-unmsm"
+									width={130.94}
+									height={158}
+								/>
+							</div>
+							<p className="font-bold">
+								Estudios de Posgrado en Educación
+							</p>
 						</a>
 					</Link>
 				</div>
-				<div className="items-end lg:flex hidden">
+				<div className="items-center lg:flex hidden">
 					<nav>
 						<ul className="flex items-start gap-1 text-sm font-bold">
 							<li>
@@ -39,13 +50,12 @@ const HeaderPage = () => {
 							<li>
 								<Dropdown>
 									<MenuButton className="cursor-pointer box-border rounded-lg px-4 py-2 leading-normal bg-transparente text-blanco hover:bg-transparente hover:border-transparente focus-visible:border-transparente focus-visible:hover:border-transparente focus-visible:outline-0 focus-visible:shadow-outline-transparente">
-										Programas
+										Maestrías
 									</MenuButton>
-
 									<Menu
 										slotProps={{
 											root: {
-												className: `z-20 max-w-[125px] relative before:block before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0 before:border-8 before:border-solid before:border-transparente before:border-b-blanco`,
+												className: `z-20 max-w-[225px] relative before:block before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0 before:border-8 before:border-solid before:border-transparente before:border-b-blanco`,
 											},
 											listbox: {
 												className:
@@ -54,30 +64,27 @@ const HeaderPage = () => {
 										}}
 									>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/diplomaturas">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-gestion-de-la-educacion">
 												<a className="hover:text-secondary py-2">
-													Diplomaturas
+													Med. con mención en Gestión
+													de la Educación
 												</a>
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/maestrias">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-docencia-universitaria">
 												<a className="hover:text-secondary py-2">
-													Maestrías
+													Med. con mención en Docencia
+													Universitaria
 												</a>
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/doctorado">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-evaluacion-y-acreditacion-de-la-calidad-de-la-educacion">
 												<a className="hover:text-secondary py-2">
-													Doctorado
-												</a>
-											</Link>
-										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/posdoctorado">
-												<a className="hover:text-secondary py-2">
-													Posdoctorado
+													Med. con mención en
+													Evaluación y Acreditación de
+													la Calidad de la Educación
 												</a>
 											</Link>
 										</MenuItem>
@@ -85,62 +92,11 @@ const HeaderPage = () => {
 								</Dropdown>
 							</li>
 							<li>
-								<Dropdown>
-									<MenuButton className="cursor-pointer box-border rounded-lg px-4 py-2 leading-normal bg-transparente text-blanco hover:bg-transparente hover:border-transparente focus-visible:border-transparente focus-visible:hover:border-transparente focus-visible:outline-0 focus-visible:shadow-outline-transparente">
-										Investigación
-									</MenuButton>
-
-									<Menu
-										slotProps={{
-											root: {
-												className: `z-20 max-w-[125px] relative before:block before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0 before:border-8 before:border-solid before:border-transparente before:border-b-blanco`,
-											},
-											listbox: {
-												className:
-													'text-sm box-border p-1.5 my-2 mx-0 rounded-xl overflow-none outline-0 bg-blanco text-textColorOne min-w-listbox shadow-md',
-											},
-										}}
-									>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/investigacion/actividad-cientifica">
-												<a className="hover:text-secondary py-2">
-													Actividad científica
-												</a>
-											</Link>
-										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/investigacion/taller-tesis">
-												<a className="hover:text-secondary py-2">
-													Taller de tesis (Maestrías)
-												</a>
-											</Link>
-										</MenuItem>
-										<MenuItem>
-											<div className='className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0'>
-												<a
-													rel="noopener noreferrer"
-													target="_blank"
-													href="https://revistasinvestigacion.unmsm.edu.pe/index.php/administrativas/index"
-													className="hover:text-secondary py-2"
-												>
-													Gestión en el Tercer Milenio
-												</a>
-											</div>
-										</MenuItem>
-										<MenuItem>
-											<div className='className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0'>
-												<a
-													rel="noopener noreferrer"
-													target="_blank"
-													href="https://administracion.unmsm.edu.pe/grupos-de-investigaciones/"
-													className="hover:text-secondary py-2"
-												>
-													Grupos de Investigación
-												</a>
-											</div>
-										</MenuItem>
-									</Menu>
-								</Dropdown>
+								<Link href={`/programas/doctorado`}>
+									<a className="block px-4 py-2">
+										<span>Doctorado</span>
+									</a>
+								</Link>
 							</li>
 							<li>
 								<Dropdown>
@@ -203,21 +159,7 @@ const HeaderPage = () => {
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/actualidad/agenda-publica">
 												<a className="hover:text-secondary py-2">
-													Agenda pública
-												</a>
-											</Link>
-										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/actualidad/eventos">
-												<a className="hover:text-secondary py-2">
-													Eventos
-												</a>
-											</Link>
-										</MenuItem>
-										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/actualidad/boletines">
-												<a className="hover:text-secondary py-2">
-													Boletines
+													Noticias
 												</a>
 											</Link>
 										</MenuItem>
@@ -278,13 +220,6 @@ const HeaderPage = () => {
 										</MenuItem>
 									</Menu>
 								</Dropdown>
-							</li>
-							<li>
-								<Link href={`/blog-gestion-publica`}>
-									<a className="block px-4 py-2">
-										<span>Blog de Gestión pública</span>
-									</a>
-								</Link>
 							</li>
 						</ul>
 					</nav>

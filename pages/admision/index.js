@@ -20,68 +20,69 @@ const Index = () => {
 	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
 	useEffect(() => {
-		if (router.query.programa === 'diplomatura') {
+		// if (router.query.programa === 'diplomatura') {
+		// 	setActiveIndex(0);
+		// 	return;
+		// }
+		if (router.query.programa === 'maestria') {
 			setActiveIndex(0);
 			return;
 		}
-		if (router.query.programa === 'maestria') {
+		if (router.query.programa === 'doctorado') {
 			setActiveIndex(1);
 			return;
 		}
-		if (router.query.programa === 'doctorado') {
-			setActiveIndex(2);
-			return;
-		}
-		if (router.query.programa === 'posdoctorado') {
-			setActiveIndex(3);
-			return;
-		}
+		// if (router.query.programa === 'posdoctorado') {
+		// 	setActiveIndex(3);
+		// 	return;
+		// }
 	}, [router]);
 
 	const handleClick = (event, { activeIndex }) => {
+		console.log('activeIndex-->', activeIndex);
 		switch (activeIndex) {
 			case 0:
-				router.push('/admision?programa=diplomatura', undefined, {
-					shallow: true,
-				});
-				break;
-			case 1:
 				router.push('/admision?programa=maestria', undefined, {
 					shallow: true,
 				});
 				break;
-			case 2:
+			case 1:
 				router.push('/admision?programa=doctorado', undefined, {
 					shallow: true,
 				});
 				break;
-			case 3:
-				router.push('/admision?programa=posdoctorado', undefined, {
-					shallow: true,
-				});
-				break;
+			// case 2:
+			// 	router.push('/admision?programa=diplomatura', undefined, {
+			// 		shallow: true,
+			// 	});
+			// 	break;
+			// case 3:
+			// 	router.push('/admision?programa=posdoctorado', undefined, {
+			// 		shallow: true,
+			// 	});
+			// 	break;
 		}
 		setActiveIndex(activeIndex);
 	};
 
 	const programas = [
-		{
-			menuItem: 'Diplomaturas',
-			render: () => (
-				<Tab.Pane
-					attached={false}
-					onClick={(e) => {
-						handleClick(e, 'diplomatura');
-					}}
-				>
-					<div className="col-start-3 col-span-10 mb-14">
-						<div className="mb-14">
-							<AdmisionDiplomatura />
-						</div>
-					</div>
-				</Tab.Pane>
-			),
-		},
+		// {
+		// 	menuItem: 'Diplomaturas',
+		// 	render: () => (
+		// 		<Tab.Pane
+		// 			attached={false}
+		// 			onClick={(e) => {
+		// 				handleClick(e, 'diplomatura');
+		// 			}}
+		// 		>
+		// 			<div className="col-start-3 col-span-10 mb-14">
+		// 				<div className="mb-14">
+		// 					<AdmisionDiplomatura />
+		// 				</div>
+		// 			</div>
+		// 		</Tab.Pane>
+		// 	),
+		// },
 		{
 			menuItem: 'Maestría',
 			render: () => (
@@ -137,7 +138,7 @@ const Index = () => {
 					<div className="relative md:h-banner xl:h-auto">
 						<Image
 							priority
-							src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/admision/admision-administracion-posgrado.jpg"
+							src="https://unmsm-static-files.s3.us-east-2.amazonaws.com/educacion/posgrado/admision-posgrado-educacion.jpg"
 							layout="responsive"
 							alt="Banner de admisión"
 							width={1080}

@@ -4,6 +4,7 @@ import Image from 'next/future/image';
 import CorreoIcon from '../../icons/CorreoIcon';
 import DocumentosFillIcon from '../../icons/DocumentosFillIcon';
 import Boton from '../../shared/Boton';
+import TelefonoStroke from '../../icons/TelefonoStroke';
 
 const Consejo = () => {
 	return (
@@ -15,12 +16,15 @@ const Consejo = () => {
 						encargado de dirigir, proponer y ejecutar académica,
 						financiera y administrativamente a la facultad; además,
 						es la máxima autoridad sobre los demás órganos de la
-						facultad. Es el representante ante el Consejo
-						Universitario y Asamblea Universitaria, y encabeza el
-						Consejo de Facultad. Conoce más acerca de esta autoridad
-						ingresando al{' '}
+						facultad. Está conformado por el/la decano/a, quien es
+						el/la representante ante el Consejo Universitario y
+						Asamblea Universitaria, y encabeza el Consejo de
+						Facultad; y la jefatura de la unidad de secretaría,
+						quien revisa y administra el trámite documentario.
+						Conoce más acerca de este órgano de autoridad ingresando
+						al{' '}
 						<a
-							className="text-secondary"
+							className="text-primary"
 							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -33,69 +37,69 @@ const Consejo = () => {
 						<span className="font-bold text-tertiary">Decano</span>
 						<span className="mx-2 text-tertiary font-bold">|</span>
 						<span className="text-textColorOne font-bold">
-							Dr. Augusto Hidalgo Sánchez
+							Dr. Miguel Gerardo Inga Arias
 						</span>
 					</p>
 					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Bachiller en Ciencias Económicas, Licenciado en
-						administración, con maestría en Administración, maestría
-						en Ciencias en la Universidad de Tennessee. Es doctor en
-						Administración.
+						Profesor principal, investigador y lingüista
+						<br />
+						Licenciado en Educación con mención en Lengua y
+						Literatura, magíster en Lingüística y doctorado en
+						Educación por la UNMSM.
 					</p>
 					<p className="mb-5">
-						Fue Vicedecano de Investigación y Posgrado de la
-						Facultad de Ciencias Administrativas de la UNMSM;
-						Presidente de la Comisión Organizadora del programa de
-						Estudios Generales de la UNMSM; Director de la Escuela
-						de Administración de Negocios Internacionales;
-						Vicepresidente Administrativo (a cargo de la
-						organización inicial), de la Universidad Nacional de
-						Cañete; así como Decano de la Facultad de Administración
-						(el primer decano, a cargo de su institucionalización),
-						de la Universidad Norbert Wiener, entre otros cargos.
+						Catedrático con más de 35 años de experiencia en
+						instituciones educativas de nivel secundario,
+						preuniversitario y universitario, tanto de pre y
+						posgrado. Creador, junto con los doctores Gonzalo
+						Pacheco y Raymundo Casas, de la Prueba de Destrezas
+						Cognitivas (DECO), y miembro de la Red Latinoamericana
+						de Estudios sobre trabajo docente (Red Estrado). Además,
+						fue jefe de la Oficina de Estudios y Elaboración de
+						Pruebas de la Oficina de Admisión de la UNMSM
+						(2012-2016) y vicedecano académico de la Facultad de
+						Educación de la UNMSM (2016-2017).
 					</p>
 					<p className="mb-6">
-						Con más de 40 años de experiencia profesional, el doctor
-						Hidalgo es catedrático principal en la UNMSM y se ha
-						desempeñado como docente en pre y posgrado en otras
-						universidades del país; así como docente invitado en la
-						Universidad Técnica de Machala – Ecuador. Su producción
-						intelectual se refleja como autor, coautor y editor de
-						numerosos libros y ha publicado diversos artículos
-						científicos en revistas especializadas. También ha
-						desempeñado cargos gerenciales, entre ellos Gerente de
-						la Red Asistencial de Lambayeque de EsSalud. Gerente
-						General del Hospital Nacional “Almanzor Aguinaga Asenjo”
-						de Chiclayo – EsSalud y Secretario Técnico (Gerente
-						General) del Consejo Transitorio de Administración
-						Regional (CTAR) de La Libertad-Trujillo.
+						Articulista habitual en la revista del Instituto de
+						Investigaciones y revistas indizadas; es autor, entre
+						otros títulos, de Memoria Operativa, inferencia y
+						gramática en la comprensión lectora, (editorial
+						académica española) y Comprensión lectora: el modelo de
+						destrezas cognitivas, (Mantaro). Ha recibido la
+						distinción como investigador en Ciencia y Tecnología del
+						SINACYT: investigador REGINA y el reconocimiento de la
+						UNMSM por la asesoría de tesis Presuposición pragmática
+						e ironía verbal: la cognición irónica. Desde el 2018, es
+						responsable del Grupo de Investigación Conocimiento y
+						Desarrollo hasta la fecha.
 					</p>
 					<div className="flex gap-x-5">
-						<a
-							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://cdn.www.gob.pe/uploads/document/file/1964954/R.R.%20N.%C2%BA%20017240%20-%202020.-%20Encargar%20a%20las%20Facultades%2C%20Secretar%C3%ADa%20General%2C%20Direcci%C3%B3n%20General%20de%20Administraci%C3%B3n%2C%20Oficinas%20Generales%20y%20Dependencias%20de%20la%20Universidad%2C%20el%20cumplimiento%20de%20la%20presente%20Resoluci%C3%B3n..pdf?v=1624460552"
-							target={'_blank'}
-							rel="noopener noreferrer"
-						>
-							<span className="flex items-center justify-center">
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
-								Resolución rectoral
-							</span>
-						</a>
 						<Boton
 							secondary
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://administracion.unmsm.edu.pe/1web2022/wp-content/uploads/2022/04/CV_DR_AUGUSTO_HIDALGO_SANCHEZ.pdf'
+									'https://cdn.www.gob.pe/uploads/document/file/3981416/1.%20RR%20Decano%20Miguel%20Inga%20Arias.pdf.pdf?v=1672069416'
 								)
 							}
 						>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-primary" />
 							</span>
-							<span>Hoja de vida</span>
+							<span>Resolución rectoral</span>
 						</Boton>
+						<a
+							className="px-3 py-2 bg-primary hover:bg-tertiary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=80367"
+							target={'_blank'}
+							rel="noopener noreferrer"
+						>
+							<span className="flex">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Hoja de vida
+							</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +107,7 @@ const Consejo = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/img_decano_augusto_hidalgo.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/nosotros/autoridades-y-organos/decano-educacion-miguel-inga-unmsm.jpg"
 						width={209}
 						height={224}
 						quality={100}
@@ -121,30 +125,30 @@ const Consejo = () => {
 					className="mb-6"
 				/> */}
 
-				<p className="text-tertiary font-black mb-2">Contacto</p>
+				<p className="text-secondary font-black mb-2">Contacto</p>
 				<div className="text-sm">
 					<div>
-						<p className="mb-1 text-tertiary">
+						<p className="mb-1 text-secondary">
 							<span>
-								<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								<CorreoIcon className="fill-secondary inline mr-2 relative bottom-[1px]" />
 							</span>
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							ahidalgos@unmsm.edu.pe
+							decanoedu@unmsm.edu.pe
 						</p>
 					</div>
-					{/* <div>
-						<p className="mb-1 text-tertiary">
+					<div>
+						<p className="mb-1 text-secondary">
 							<span>
-								<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								<TelefonoStroke className="fill-secondary inline mr-2 relative bottom-[1px]" />
 							</span>
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 1201
+							(+51) 619 7000 anexo 3001
 						</p>
-					</div> */}
+					</div>
 					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>

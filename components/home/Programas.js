@@ -29,22 +29,12 @@ const Programas = () => {
 				<h2 className="col-span-10 col-start-2 md:col-span-10 md:col-start-2 text-[2rem] font-bold text-tertiary">
 					Programas
 				</h2>
-				<div className="col-start-2 col-span-10 md:col-start-2 md:col-span-3">
+				{/* <div className="col-start-2 col-span-10 md:col-start-2 md:col-span-3">
 					<p className="mt-6">
 						Conoce los programas que ofrecemos y sé parte de nuestra
 						comunidad sanmarquina.
 					</p>
 					<ul className="font-bold mt-6">
-						{/* <li className="text-lg hover:text-secondary cursor-pointer duration-400">
-							<Link href="/programas/diplomaturas">
-								<a className="flex items-center justify-start">
-									<FaChevronRight />
-									<span id="diplomaturas" className="pl-3">
-										Diplomaturas
-									</span>
-								</a>
-							</Link>
-						</li> */}
 						<li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
 							<Link href="/programas/maestrias">
 								<a className="flex items-center justify-start">
@@ -65,22 +55,12 @@ const Programas = () => {
 								</a>
 							</Link>
 						</li>
-						{/* <li className="text-lg mt-6 hover:text-secondary cursor-pointer duration-400">
-							<Link href="programas/posdoctorado">
-								<a className="flex items-center justify-start">
-									<FaChevronRight />
-									<span id="posdoctorado" className="pl-3">
-										Posdoctorado
-									</span>
-								</a>
-							</Link>
-						</li> */}
 					</ul>
-				</div>
+				</div> */}
 				{!dataCarrousel && <>loading</>}
 
 				{dataCarrousel?.length > 0 && (
-					<div className="col-start-1 col-span-12 md:col-start-5 md:col-span-7 relative">
+					<div className="col-start-2 col-span-10 md:col-start-2 md:col-span-10 relative">
 						<CarouselProgramas programas={dataCarrousel} />
 					</div>
 				)}

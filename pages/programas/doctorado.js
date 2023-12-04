@@ -256,6 +256,16 @@ const Programa = ({ programa, otrosProgramas }) => {
 										</div>
 									</>
 								)}
+								{programa.objetivos && (
+									<>
+										<div className="mb-6">
+											<div className="subtitle mb-2">
+												Objetivos
+											</div>
+											<p>{programa.objetivos}</p>
+										</div>
+									</>
+								)}
 
 								{/* {programa.campo_laboral &&
 									programa.campo_laboral
@@ -315,12 +325,12 @@ const Programa = ({ programa, otrosProgramas }) => {
 									</>
 								)} */}
 
-								<Observacion>
+								{/* <Observacion>
 									<p>
 										Se requiere mínimo 25 alumnos para la
 										apertura de la maestría.
 									</p>
-								</Observacion>
+								</Observacion> */}
 							</div>
 							<div v className="col-span-full md:col-span-2">
 								{/* {coordinadores && coordinadores.length > 0 && (

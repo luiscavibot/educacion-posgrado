@@ -1,56 +1,59 @@
 import Link from 'next/link';
+// import Image from 'next/image';
 import Image from 'next/future/image';
 import React from 'react';
 
 import PrincipalLayout from '../../components/shared/layouts/PrincipalLayout';
 
+import { BASE_URL } from '../../config/consts';
+
 import Boton from '../../components/shared/Boton';
-import useDirectorio from '../../hooks/useDirectorio';
-function createMarkup(dom) {
-	return { __html: dom };
-}
+
+import useSWR from 'swr';
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Index = () => {
-	const { directorio: data, isLoading } = useDirectorio('/directorios');
-	// console.log(data);
+	const { data, error } = useSWR(
+		`${BASE_URL}/directorios/educacion`,
+		fetcher
+	);
+
+	const directorio = data;
+
+	if (error) return <div>Failed to load</div>;
+	if (!data) return <div>Loading...</div>;
 
 	return (
 		<>
 			<PrincipalLayout>
-				<ul className="px-4 md:px-0 col-span-full text-[13px] mb-5">
-					<li className="text-textColorTwo inline after:content-['\003e'] after:ml-1 mr-1">
+				<ul className="px-4 md:px-0 col-span-full text-secondary text-sm mb-5">
+					<li className="font-bold inline after:content-['\003e'] after:ml-1 mr-1">
 						<Link href="/">
 							<a>Inicio</a>
 						</Link>
 					</li>
-					<li className="text-textColorOne inline after:content-['\003e'] after:ml-1 mr-1">
-						Nosotros
-					</li>
-					<li className="text-textColorOne font-bold inline">
-						<span>Directorio</span>
-					</li>
+					<li className="inline text-negro">Directorio</li>
 				</ul>
-				<div className="mx-4 md:mx-0 col-span-full title-page mb-5 text-secondary">
+				<div className="mx-4 md:mx-0 col-span-full title-page mb-5">
 					Directorio
 				</div>
 				<div className="col-span-full mb-5">
-					<div className="h-bannerMobile md:h-banner xl:h-auto">
+					<div className="h-bannerMobile md:h-banner">
 						<Image
 							priority
-							src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/directorio-administracion-posgrado.jpg"
-							alt='Directorio "Facultad de Farmacia y Bioquímica"'
+							src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/directorio-educacion-banner.png"
+							alt="imagen directorio"
 							layout="responsive"
 							width={1022}
 							height={303}
 							quality={100}
 							className="w-full h-full object-cover"
-							sizes="(max-width: 768px) 100vw, (max-width: 1280px) 896px, 1408px"
-							// sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
 						/>
 					</div>
 					<div className="mx-4 md:mx-0 col-span-full mt-10 mb-4 flex items-center justify-between">
 						<p className="text-sm font-normal md:font-bold mr-4">
-							{/* Central telefónica: 619-7000 */}
+							Central telefónica: 619-7000
 						</p>
 						<Boton
 							primary
@@ -70,49 +73,41 @@ const Index = () => {
 							<table className="table table-striped mb-6">
 								<thead>
 									<tr>
-										{/* <th>Unidad</th> */}
+										<th>Unidad</th>
 										<th>Cargo</th>
 										<th>Nombre</th>
-										{/* <th>Anexo</th> */}
+										<th>Anexo</th>
 										<th>Correo</th>
 									</tr>
 								</thead>
 								<tbody>
-									{!isLoading &&
-										data?.map((unidad) => {
-											return (
-												<tr key={unidad.id}>
-													{/* <td>{unidad.unidad}</td> */}
-													<td>
-														<span
-															className="html-default"
-															dangerouslySetInnerHTML={createMarkup(
-																unidad.cargo
-															)}
-														></span>
-													</td>
-													<td>{unidad.nombre}</td>
-													{/* <td>
-														{unidad.anexo.map(
-															(anexo, index) => (
-																<p key={index}>
-																	{anexo}
-																</p>
-															)
-														)}
-													</td> */}
-													<td>
-														{unidad.correos.map(
-															(correo, index) => (
-																<p key={index}>
-																	{correo}
-																</p>
-															)
-														)}
-													</td>
-												</tr>
-											);
-										})}
+									{directorio.map((unidad) => {
+										return (
+											<tr key={unidad.id}>
+												<td>{unidad.unidad}</td>
+												<td>{unidad.cargo}</td>
+												<td>{unidad.nombre}</td>
+												<td>
+													{unidad.anexo.map(
+														(anexo, index) => (
+															<p key={index}>
+																{anexo}
+															</p>
+														)
+													)}
+												</td>
+												<td>
+													{unidad.correos.map(
+														(correo, index) => (
+															<p key={index}>
+																{correo}
+															</p>
+														)
+													)}
+												</td>
+											</tr>
+										);
+									})}
 								</tbody>
 							</table>
 						</div>
@@ -130,10 +125,21 @@ const Index = () => {
 							}}
 						/>
 					</div>
+					<div className="hidden"></div>
 				</div>
 			</PrincipalLayout>
 		</>
 	);
 };
+
+// export async function getStaticProps() {
+// 	const resDirectorio = await fetch(`${BASE_URL}/directorios/educacion`);
+// 	const directorio = await resDirectorio.json();
+// 	return {
+// 		props: {
+// 			directorio,
+// 		},
+// 	};
+// }
 
 export default Index;

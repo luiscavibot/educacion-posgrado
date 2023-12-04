@@ -9,6 +9,7 @@ const nextConfig = {
 			'unmsm-web-static-files.s3.sa-east-1.amazonaws.com',
 			'dj6bwr7wzo1hi.cloudfront.net',
 			'unmsm-static-files.s3.us-east-2.amazonaws.com',
+			'posgrado-unmsm.s3.sa-east-1.amazonaws.com',
 		],
 	},
 	output: 'standalone',

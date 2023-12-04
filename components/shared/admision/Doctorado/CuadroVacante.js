@@ -19,8 +19,10 @@ export const CuadroVacante = ({ facultad }) => {
 					</thead>
 					<tbody>
 						<tr>
-							<td>Doctorado en Ciencias Administrativas</td>
-							<td className="text-center">25</td>
+							<td>
+								Doctorado en Educación y Docencia Universitaria
+							</td>
+							<td className="text-center">-</td>
 						</tr>
 					</tbody>
 				</table>

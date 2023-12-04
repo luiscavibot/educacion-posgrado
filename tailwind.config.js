@@ -120,7 +120,7 @@ module.exports = {
 				DEFAULT: '#1C1B3B',
 				hover: '#084873',
 			},
-			tertiary: '#033759',
+			tertiary: '#30824E',
 			complementaryOne: '#E0E0E0',
 			complementaryTwo: '#F7F7F8',
 			// complementaryThree: '#198BDE',

@@ -31,43 +31,39 @@ const LinksExternos = () => {
 				<div className="col-start-2 col-span-10">
 					{/* <div className="w-full lg:w-auto lg:max-w-[1022px] md:mx-auto grid grid-cols-2 lg:grid-cols-4 place-items-center gap-x-4 gap-y-8 lg:gap-x-[60px] mb-8"> */}
 					<div className="w-full lg:w-auto lg:max-w-[1022px] md:mx-auto grid grid-cols-2 lg:grid-cols-5 place-items-center gap-x-4 gap-y-8 lg:gap-x-[60px]">
-						<Link href="/admision?programa=maestria">
+						<Link href="/admision">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<AdmisionHomeIcon className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-9" />
 								</div>
-								<p className="text-blanco text-lg">
-									Admisión de Maestrías
-								</p>
+								<p className="text-blanco text-lg">Admisión</p>
 							</a>
 						</Link>
-						<Link href="/investigacion/actividad-cientifica">
+						<Link href="/actualidad/noticias">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<LupaStroke className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-9" />
 								</div>
-								<p className="text-blanco text-lg">
-									Actividad científica
-								</p>
+								<p className="text-blanco text-lg">Noticias</p>
 							</a>
 						</Link>
 
-						<Link href="/actualidad/boletines">
+						<Link href="/tramites">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<LibroCintaStroke2 className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-11" />
 								</div>
-								<p className="text-blanco text-lg">Boletines</p>
+								<p className="text-blanco text-lg">Trámites</p>
 							</a>
 						</Link>
 
-						<Link href="/blog-gestion-publica">
+						<Link href="/informacion-academica">
 							<a className="group bg-secondary hover:bg-primary transition-colors duration-300 text-center rounded-lg w-full md:w-[188px] h-[140px] flex flex-col items-center justify-center px-5 cursor-pointer">
 								<div>
 									<BlogGestionPublicaHomeIcon className="fill-blanco group-hover:fill-blanco transition-colors duration-300 h-9" />
 								</div>
 								<p className="text-blanco text-lg">
-									Blog de Gestión Pública
+									Información Académica
 								</p>
 							</a>
 						</Link>

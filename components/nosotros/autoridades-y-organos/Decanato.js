@@ -4,6 +4,7 @@ import Image from 'next/future/image';
 import CorreoIcon from '../../icons/CorreoIcon';
 import DocumentosFillIcon from '../../icons/DocumentosFillIcon';
 import Boton from '../../shared/Boton';
+import TelefonoStroke from '../../icons/TelefonoStroke';
 
 const Decanato = () => {
 	return (
@@ -11,119 +12,95 @@ const Decanato = () => {
 			<div className="md:col-span-6">
 				<div className="mb-6">
 					<p className="mb-8">
-						Organismo de apoyo al Decanato con el ejercicio de sus
-						funciones y está encargado de coordinar y organizar las
-						actividades de investigación, así como las relacionadas
-						con estudios de investigación de los institutos y de la
-						Unidad de Posgrado. Promueve la incorporación y
-						desarrollo de todos los docentes en el campo de la
-						investigación; e incentiva la publicación y difusión de
-						los trabajos de investigación, tesis, patentes,
-						artículos, entre otros relacionados. Está conformado por
-						el/la vicedecano/a de Investigación y Posgrado, Unidades
-						dependientes y personal administrativo correspondiente.
-						Conoce más acerca de este órgano de autoridad ingresando
-						al{' '}
+						Órgano de línea de la facultad encargado de planificar,
+						organizar y dirigir tanto las actividades académicas
+						como administrativas, orientadas al perfeccionamiento
+						profesional a través de los estudios de diplomaturas,
+						segundas especialidades, maestrías y doctorados. Además,
+						presenta el número de vacantes para el concurso de
+						admisión de los programas de posgrado. Dependen
+						jerárquicamente del Consejo de Facultad, sujeta
+						funcional y normativamente de la Escuela de Posgrado de
+						la Universidad Nacional Mayor de San Marcos. Está
+						conformado por el/la director/a de la Unidad de Posgrado
+						y el personal administrativo/técnico correspondiente.
+						Conoce más acerca de esta Unidad ingresando al Manual de
+						Organización y Funciones (
 						<a
-							className="text-secondary"
-							href="https://sum.unmsm.edu.pe/assets/Estatuto/estatuto.pdf"
+							className="text-primary"
+							href="https://cdn.www.gob.pe/uploads/document/file/1979502/MOF%20de%20la%20Facultad%20de%20Educaci%C3%B3n..pdf?v=1624895867"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Estatuto de la UNMSM
+							MOF
 						</a>
-						.
+						).
 					</p>
 					<p className="mb-1">
-						<span className="font-bold text-tertiary">
-							Director de la Unidad de Posgrado
+						<span className="font-bold text-secondary">
+							Director
 						</span>
-						<span className="mx-2 text-tertiary font-bold">|</span>
-						<span className="text-textColorOne font-bold">
-							Dr. Enrique Javier Cornejo Ramírez
+						<span className="mx-2 text-secondary font-bold">|</span>
+						<span className="font-bold text-textColorOne">
+							Dr. Edgar Froilán Damián Núñez
 						</span>
 					</p>
-					<p className="text-sm text-tertiary font-medium italic mb-5">
-						Profesor principal de la escuela profesional de
-						Administración de Negocios Internacionales de la
-						Universidad Nacional Mayor de San Marcos (UNMSM),
-						vicedecano de investigación y posgrado, y director de la
-						Unidad de Posgrado en la Facultad de Ciencias
-						Administrativas (FCA) de la misma universidad.
+					<p className="text-sm text-secondaryy font-medium italic mb-5">
+						Docente principal e investigador
+						<br />
+						Licenciado en Educación Física por la Universidad
+						Nacional Mayor de San Marcos, magíster Educación con
+						mención en Actividad Física para el Desarrollo por la
+						UNMSM y doctorado en Educación por la UNMSM.
 					</p>
 					<p className="mb-5">
-						En su gestión como director del Posgrado de la FCA ha
-						promovido la conformación del primer programa de
-						Posdoctorado en Administración de la UNMSM, realizado en
-						conjunto con la Facultad de Ciencias Económicas de la
-						Universidad de Buenos Aires.
+						Cuenta con experiencia de más de 25 años en docencia
+						universitaria en instituciones privadas como en la
+						Universidad Alas Peruanas e instituciones públicas como
+						en la UNMSM. En los últimos 15 años, se ha desempeñado
+						como director del Colegio Aplicación San Marcos
+						(2009-2011), director administrativo de la Facultad de
+						Educación (2012-2016), director de la Escuela
+						Profesional de Educación Física (2016) y director
+						académico de la Escuela Profesional de Educación Física
+						(2016-2020).
 					</p>
 					<p className="mb-6">
-						Se ha desempeñado como presidente del Instituto de
-						Comercio Exterior del Perú; ministro tanto de Vivienda,
-						Construcción y Saneamiento como de Transportes y
-						Comunicaciones; presidente ejecutivo del Banco de la
-						Nación del Perú; director del Banco Central de Reserva
-						del Perú; presidente ejecutivo del Banco de la Vivienda
-						del Perú; miembro titular del Consejo Consultivo del
-						Banco Latinoamericano de Exportaciones, secretario Pro
-						Témpore del Parlamento Andino y dos veces director del
-						Departamento de Economía de la Universidad de Lima.
-					</p>
-					<p className="mb-6">
-						Ha publicado más de 1500 artículos científicos y ensayos
-						en revistas peruanas e internacionales. Asimismo, ha
-						escrito 39 libros, siendo el más reciente: “El comercio
-						exterior peruano en los siglos XX y XXI”, editado por el
-						Fondo Editorial de la UNMSM y presentado en la 27. ª
-						Feria Internacional del Libro de Lima 2023.
-					</p>
-					<p className="mb-6">
-						Obtuvo numerosas distinciones a lo largo de su vida
-						profesional como el premio América Latina otorgado por
-						la Asociación Latinoamérica de Integración y la
-						Fundación Banco de Boston de Buenos Aires-Argentina,
-						ganador del concurso para periodista especializados en
-						economía organizado por el City Bank National
-						Association, y muchas más condecoraciones por su
-						producción científica y sus labores.
-					</p>
-					<p className="mb-6">
-						Puede revisar sus publicaciones:{' '}
-						<a
-							target={'_blank'}
-							rel="noopener noreferrer"
-							href="https://enriquecornejoramirez.com/"
-						>
-							https://enriquecornejoramirez.com/
-						</a>
+						Ha realizado más de 15 investigaciones sobre la línea de
+						rendimiento académico, actividad física, desarrollo
+						psicomotriz, pedagogía universitaria, entre otros
+						tópicos. Además, es autor de distintos libros, dentro de
+						los cuales destaca Bases biológicas y psicológicas del
+						comportamiento humano (2014) y Pedagogía Universitaria
+						(2016); y ha sido asesor en más de medio ciento de tesis
+						para grados de maestría y doctorado.
 					</p>
 					<div className="flex gap-x-5">
-						<a
-							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
-							href="https://cdn.www.gob.pe/uploads/document/file/5047023/RESOLUCI%C3%93N%20RECTORAL-002705-2022-R%20DIRECTOR%20UNIDAD%20DE%20POSGRADO%20CORNEJO%20RAMIREZ%20FCA.pdf?v=1693000077"
-							target={'_blank'}
-							rel="noopener noreferrer"
-						>
-							<span className="flex items-center justify-center">
-								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
-								Resolución rectoral
-							</span>
-						</a>
 						<Boton
 							secondary
 							className="mb-6 text-primary"
 							onClick={() =>
 								window.open(
-									'https://dj6bwr7wzo1hi.cloudfront.net/fca-posgrado/cv-docentes/unmsm-cv-cornejo-ramirez.pdf'
+									'https://cdn.www.gob.pe/uploads/document/file/4208029/10.%20R.%20R.%20Director%20de%20la%20Unidad%20Posgrado%20Edgar%20Damian.pdf.pdf?v=1677765377'
 								)
 							}
 						>
 							<span>
-								<DocumentosFillIcon className="w-5 h-5 mr-1 fill-primary" />
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-primary" />
 							</span>
-							<span>Hoja de vida</span>
+							<span>Resolución rectoral</span>
 						</Boton>
+						<a
+							className="px-3 py-2 bg-primary hover:bg-secondary duration-300 text-blanco rounded-md text-sm font-medium shadow-[0px_1px_4px_rgba(0,0,0,0.25)] mb-6"
+							href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=75508"
+							target={'_blank'}
+							rel="noopener noreferrer"
+						>
+							<span className="flex">
+								<DocumentosFillIcon className="w-5 h-5 mr-2 fill-complementaryOne" />
+								Hoja de vida
+							</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -131,7 +108,7 @@ const Decanato = () => {
 			<div className="md:col-span-2">
 				<div className="mb-6">
 					<Image
-						src="https://dj6bwr7wzo1hi.cloudfront.net/Im%C3%A1genes/Nosotros/dr-cornejo.jpg"
+						src="https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/nosotros/autoridades-y-organos/vicedecano-investigacion-posgrado-educacion-edgar-damian.jpg"
 						width={209}
 						height={224}
 						quality={100}
@@ -149,30 +126,30 @@ const Decanato = () => {
 					className="mb-6"
 				/> */}
 
-				<p className="text-tertiary font-black mb-2">Contacto</p>
+				<p className="text-secondary font-black mb-2">Contacto</p>
 				<div className="text-sm">
 					<div>
-						<p className="mb-1 text-tertiary">
+						<p className="mb-1 text-secondary">
 							<span>
-								<CorreoIcon className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								<CorreoIcon className="fill-secondary inline mr-2 relative bottom-[1px]" />
 							</span>
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							ecornejor@unmsm.edu.pe
+							upg.educacion@unmsm.edu.pe
 						</p>
 					</div>
-					{/* <div>
-						<p className="mb-1 text-tertiary">
+					<div>
+						<p className="mb-1 text-secondary">
 							<span>
-								<TelefonoStroke className="fill-tertiary inline mr-2 relative bottom-[1px]" />
+								<TelefonoStroke className="fill-secondary inline mr-2 relative bottom-[1px]" />
 							</span>
 							<span className="font-bold">Teléfono</span>
 						</p>
 						<p className="mb-3 break-words">
-							(+51) 619 7000 anexo 1201
+							(+51) 619 7000 anexo 3051
 						</p>
-					</div> */}
+					</div>
 					{/* <div>
 						<p className="mb-1 text-tertiary">
 							<span>

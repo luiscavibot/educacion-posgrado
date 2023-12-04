@@ -14,6 +14,7 @@ import { data } from 'autoprefixer';
 import Link from 'next/link';
 import SwiperButtonNext from './swiper/SwiperButtonNext';
 import SwiperButtonPrev from './swiper/SwiperButtonPrev';
+import 'swiper/css/navigation';
 
 export default function CarouselProgramas({ programas }) {
 	const getUrl = (tipo, slug) => {
@@ -30,14 +31,15 @@ export default function CarouselProgramas({ programas }) {
 	};
 
 	return (
-		<>
+		<div className="relative">
 			<Swiper
 				autoplay
 				effect={'coverflow'}
 				grabCursor={true}
 				centeredSlides={true}
 				slidesPerView={'auto'}
-				// slidesPerView={8}
+				// navigation={true}
+				// slidesPerView={5}
 				coverflowEffect={{
 					rotate: 0,
 					stretch: 50,
@@ -50,6 +52,8 @@ export default function CarouselProgramas({ programas }) {
 				modules={[EffectCoverflow]}
 				className="carousel-programas"
 			>
+				<SwiperButtonPrev />
+				<SwiperButtonNext />
 				{programas.map((programa) => (
 					<SwiperSlide key={programa.slug}>
 						<Link href={getUrl(programa.tipo, programa.slug)}>
@@ -80,6 +84,6 @@ export default function CarouselProgramas({ programas }) {
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</>
+		</div>
 	);
 }

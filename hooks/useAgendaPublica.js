@@ -12,7 +12,7 @@ export default function useAgendaPublica(searchParams) {
 		setAgenda(null);
 		const { keyWords } = searchParams;
 
-		let url = `${BACKEND}/agenda-publica?publicado=true&limit=${PAGE_SIZE}&sort=fecha:DESC`;
+		let url = `${BASE_URL}/noticias/educacion?estado=true&limit=${PAGE_SIZE}&sort=fecha:DESC`;
 		if (keyWords !== '') {
 			url += `&busqueda=${keyWords}`;
 		}

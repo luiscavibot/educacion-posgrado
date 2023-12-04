@@ -6,26 +6,26 @@ import axios from 'axios';
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 export const useHome = () => {
-	const { data: eventosVigentes, error: errorEventos } = useSWR(
-		`${BACKEND}/eventos/ultimos-vigentes`,
-		fetcher
-	);
+	// const { data: eventosVigentes, error: errorEventos } = useSWR(
+	// 	`${BACKEND}/eventos/ultimos-vigentes`,
+	// 	fetcher
+	// );
 
 	const { data: agendaDestacadas, error: errorAgendaDestacadas } = useSWR(
-		`${BACKEND}/agenda-publica/destacadas`,
+		`${BACKEND}/noticias/educacion/destacadas`,
 		fetcher
 	);
 
 	const { data: ultimasHome, error: errorUltimasHome } = useSWR(
-		`${BACKEND}/agenda-publica/ultimas-home`,
+		`${BACKEND}/noticias/educacion/ultimas-home`,
 		fetcher
 	);
 
 	return {
-		eventosVigentes,
+		// eventosVigentes,
 		agendaDestacadas,
 		ultimasHome,
-		isLoading: !eventosVigentes && !agendaDestacadas && !ultimasHome,
-		isError: errorEventos || errorAgendaDestacadas || errorUltimasHome,
+		isLoading: !agendaDestacadas && !ultimasHome,
+		isError: errorAgendaDestacadas || errorUltimasHome,
 	};
 };
