@@ -12,12 +12,13 @@ export const useHome = () => {
 	// );
 
 	const { data: agendaDestacadas, error: errorAgendaDestacadas } = useSWR(
-		`${BACKEND}/noticias/educacion/destacadas`,
+		`${BACKEND}/noticias/educacion/destacadas?targetProject=POSGRADO`,
 		fetcher
 	);
+	console.log('agendaDestacadas--->', agendaDestacadas);
 
 	const { data: ultimasHome, error: errorUltimasHome } = useSWR(
-		`${BACKEND}/noticias/educacion/ultimas-home`,
+		`${BACKEND}/noticias/educacion/ultimas-home?targetProject=POSGRADO`,
 		fetcher
 	);
 
