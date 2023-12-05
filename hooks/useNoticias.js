@@ -16,7 +16,7 @@ export default function useNoticias(
 	const [page, setPage] = useState(INITIAL_PAGE);
 	useEffect(() => {
 		setNoticias(null);
-		let url = `${BASE_URL}/noticias/${SLUG_CARRERA}?estado=true&limit=${PAGE_SIZE}&sort=fecha:DESC`;
+		let url = `${BASE_URL}/noticias/${SLUG_CARRERA}?estado=true&limit=${PAGE_SIZE}&sort=fecha:DESC&targetProject=POSGRADO`;
 		// url += `&pagination[pageSize]=${PAGE_SIZE}&sort=fecha%3Adesc`;
 
 		// let filtroStartDate = `&filters[fecha][$gte]=${START_DATE.getTime()}`;

@@ -102,7 +102,7 @@ const PortadaHome = () => {
 								/>
 							</div>
 							<h1 className="text-4xl text-center font-semibold">
-								Estudios de Posgrado en Educación
+								Posgrado Educación
 							</h1>
 							<h2 className="mt-2 text-2xl text-center">
 								Universidad Nacional Mayor de San Marcos

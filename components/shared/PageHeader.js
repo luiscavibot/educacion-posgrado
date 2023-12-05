@@ -31,9 +31,7 @@ const HeaderPage = () => {
 									height={158}
 								/>
 							</div>
-							<p className="font-bold">
-								Estudios de Posgrado en Educación
-							</p>
+							<p className="font-bold">Posgrado Educación</p>
 						</a>
 					</Link>
 				</div>
