@@ -21,10 +21,10 @@ export const Requisitos = () => {
 					<a
 						className="link"
 						target="_blank"
-						href="mailto:admisionupg.administracion@unmsm.edu.pe"
+						href="mailto:upg.educacion@unmsm.edu.pe"
 						rel="noreferrer noopener"
 					>
-						admisionupg.administracion@unmsm.edu.pe
+						upg.educacion@unmsm.edu.pe
 					</a>
 					), que corresponde a la Unidad de Posgrado de esta facultad,
 					y adjuntar el expediente completo con los siguientes
@@ -76,7 +76,7 @@ export const Requisitos = () => {
 					</li>
 					<li className="py-2">
 						Proyecto de Investigación: consultar detalles en nuestra
-						Unidad de Posgrado (consultasupg.fca@unmsm.edu.pe).
+						Unidad de Posgrado (upg.educacion@unmsm.edu.pe).
 					</li>
 					<li className="py-2">
 						Otro documento que la Unidad de Posgrado considere con

@@ -160,7 +160,7 @@ const GuiaAdmisionDiplomatura = () => {
 							<span className="font-bold">
 								te enviaremos un correo electrónico de
 								confirmación de la Unidad de Posgrado de la
-								Facultad de Ciencias Administrativas
+								Facultad de Educación
 							</span>{' '}
 							(
 							<a
@@ -217,8 +217,7 @@ const GuiaAdmisionDiplomatura = () => {
 								relación de postulantes admitidos que será
 								publicada en el portal web
 							</span>{' '}
-							de la Unidad de Posgrado de la Facultad de Ciencias
-							Administrativas y enviada al correo electrónico de
+							de la Unidad de Posgrado de la Facultad de Educación y enviada al correo electrónico de
 							cada ingresante.
 						</p>
 					</div>

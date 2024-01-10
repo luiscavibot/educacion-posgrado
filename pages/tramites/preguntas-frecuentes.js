@@ -88,7 +88,7 @@ const PreguntasFrecuentes = ({ ultimasNoticias }) => {
 								<p>
 									Envíe un correo al Área de Admisión{' '}
 									<span className="break-all font-bold">
-										(admisionupg.administracion@unmsm.edu.pe)
+										(upg.educacion@unmsm.edu.pe)
 									</span>{' '}
 									detallando la información que necesita.
 								</p>
@@ -124,7 +124,7 @@ const PreguntasFrecuentes = ({ ultimasNoticias }) => {
 									Dirija su consulta al correo del Área de
 									Admisión{' '}
 									<span className="break-all font-bold">
-										(admisionupg.administracion@unmsm.edu.pe)
+										(upg.educacion@unmsm.edu.pe)
 									</span>{' '}
 									o ingrese a la sección de{' '}
 									<Link href="/admision?programa=maestria">
@@ -223,12 +223,12 @@ const PreguntasFrecuentes = ({ ultimasNoticias }) => {
 							<Accordion.Content active={activeIndex === 7}>
 								<p>
 									Usted puede sugerir un docente de la
-									Facultad de Ciencias Administrativas (FCA)
-									con el que previamente haya conversado para
-									que sea su asesor. En caso de no proponer a
-									ningún docente, puede omitirse esta parte y
-									la UPG le asignará un docente asesor según
-									su tema de proyecto de tesis.
+									Facultad de Educación (FCA) con el que
+									previamente haya conversado para que sea su
+									asesor. En caso de no proponer a ningún
+									docente, puede omitirse esta parte y la UPG
+									le asignará un docente asesor según su tema
+									de proyecto de tesis.
 								</p>
 							</Accordion.Content>
 

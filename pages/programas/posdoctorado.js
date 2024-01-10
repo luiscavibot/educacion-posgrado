@@ -219,18 +219,17 @@ const Programa = (
 										¿Qué es un posdoctorado?
 									</div> */}
 									<p>
-										La Facultad de Ciencias Administrativas
-										de la UNMSM, en coordinación con la
-										Facultad de Ciencias Económicas de la
-										Universidad de Buenos Aires (UBA),
-										presenta el primer posdoctorado en
-										Administración con el objetivo que los
-										profesionales y doctores en
-										Administración y ciencias afines mejoren
-										sus capacidades de investigación bajo la
-										mentoría de un experto en el área y así
-										contribuir a la generación de nuevos
-										conocimientos.
+										la Facultad de Educación de la UNMSM, en
+										coordinación con la Facultad de Ciencias
+										Económicas de la Universidad de Buenos
+										Aires (UBA), presenta el primer
+										posdoctorado en Administración con el
+										objetivo que los profesionales y
+										doctores en Administración y ciencias
+										afines mejoren sus capacidades de
+										investigación bajo la mentoría de un
+										experto en el área y así contribuir a la
+										generación de nuevos conocimientos.
 									</p>
 								</div>
 								<div className="mb-6">

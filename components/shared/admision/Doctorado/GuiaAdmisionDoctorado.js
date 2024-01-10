@@ -161,15 +161,15 @@ export const GuiaAdmisionDoctorado = () => {
 							<span className="font-bold">
 								{' '}
 								al correo electrónico de la Unidad de Posgrado
-								de la Facultad de Ciencias Administrativas
+								de la Facultad de Educación
 							</span>{' '}
 							<a
 								className="link"
 								target="_blank"
-								href="mailto:admisionupg.administracion@unmsm.edu.pe"
+								href="mailto:upg.educacion@unmsm.edu.pe"
 								rel="noreferrer noopener"
 							>
-								(admisionupg.administracion@unmsm.edu.pe)
+								(upg.educacion@unmsm.edu.pe)
 							</a>
 							<span>
 								{' '}
@@ -207,9 +207,8 @@ export const GuiaAdmisionDoctorado = () => {
 								relación de postulantes admitidos que será
 								publicada en el portal web
 							</span>{' '}
-							de la Unidad de Posgrado de la Facultad de Ciencias
-							Administrativas y enviada al correo electrónico de
-							cada ingresante.
+							de la Unidad de Posgrado de la Facultad de Educación
+							y enviada al correo electrónico de cada ingresante.
 						</p>
 					</div>
 				</div>
@@ -246,7 +245,7 @@ export const GuiaAdmisionDoctorado = () => {
 					>
 						<FormacionContentModal
 							handleClose={handleClose}
-							responsableEmail="admisionupg.administracion@unmsm.edu.pe"
+							responsableEmail="upg.educacion@unmsm.edu.pe"
 							telefono="(+51) 619 7000 anexo 2624"
 						/>
 					</Box>

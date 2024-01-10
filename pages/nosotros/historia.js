@@ -73,13 +73,13 @@ const Index = (
 								</div>
 							</div>
 							<p className="mb-6">
-								En 1990, la Facultad de Ciencias Administrativas
-								(FCA) aprobó su primer programa de maestría con
-								las cuatro siguientes menciones: en Marketing,
-								en Gestión Empresarial, en Dirección de Recursos
-								Humanos y en Finanzas y Valores. Luego se
-								añadieron las maestrías en Gestión Pública y en
-								Negocios Internacionales con mención en Comercio
+								En 1990, la Facultad de Educación (FCA) aprobó
+								su primer programa de maestría con las cuatro
+								siguientes menciones: en Marketing, en Gestión
+								Empresarial, en Dirección de Recursos Humanos y
+								en Finanzas y Valores. Luego se añadieron las
+								maestrías en Gestión Pública y en Negocios
+								Internacionales con mención en Comercio
 								Internacional. De esta manera, a la fecha, la
 								Unidad de Posgrado de la FCA brinda seis
 								programas de maestría con distintas menciones,

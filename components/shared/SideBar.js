@@ -73,8 +73,13 @@ const SideBar = ({ interno }) => {
 									</a>
 								</Link>
 							</div>
+							<Link href="/admision">
+								<a className="block py-[10px] px-11 mt-5 text-blanco">
+									Admisión
+								</a>
+							</Link>
 							<Accordion className="accordion-menu font-bold">
-								<>
+								{/* <>
 									<Accordion.Title
 										active={activeIndexAccordion === 0}
 										index={0}
@@ -87,17 +92,11 @@ const SideBar = ({ interno }) => {
 											<FlechaAbajo className="fill-blanco" />
 										</div>
 									</Accordion.Title>
+
 									<Accordion.Content
 										active={activeIndexAccordion === 0}
 									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
-											<div onClick={handleSidebar}>
-												<Link href="/admision?programa=diplomatura">
-													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Diplomaturas
-													</a>
-												</Link>
-											</div>
 											<div onClick={handleSidebar}>
 												<Link href="/admision?programa=maestria">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -112,16 +111,9 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
-											{/* <div onClick={handleSidebar}>
-												<Link href="/admision?programa=posdoctorado">
-													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Posdoctorado
-													</a>
-												</Link>
-											</div> */}
 										</div>
 									</Accordion.Content>
-								</>
+								</> */}
 								<>
 									<Accordion.Title
 										active={activeIndexAccordion === 1}
@@ -139,13 +131,13 @@ const SideBar = ({ interno }) => {
 										active={activeIndexAccordion === 1}
 									>
 										<div className="mb-0 py-[10px] bg-blanco text-textColorOne">
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<Link href="/programas/diplomaturas">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Diplomaturas
 													</a>
 												</Link>
-											</div>
+											</div> */}
 											<div onClick={handleSidebar}>
 												<Link href="/programas/maestrias">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -160,17 +152,10 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
-											<div onClick={handleSidebar}>
-												<Link href="/programas/posdoctorado">
-													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Posdoctorado
-													</a>
-												</Link>
-											</div>
 										</div>
 									</Accordion.Content>
 								</>
-								<>
+								{/* <>
 									<Accordion.Title
 										active={activeIndexAccordion === 2}
 										index={2}
@@ -224,7 +209,7 @@ const SideBar = ({ interno }) => {
 											</div>
 										</div>
 									</Accordion.Content>
-								</>
+								</> */}
 								<>
 									<Accordion.Title
 										active={activeIndexAccordion === 3}
@@ -256,13 +241,13 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<Link href="/comunidad/seguimiento-egresados">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Testimonios de egresados
 													</a>
 												</Link>
-											</div>
+											</div> */}
 										</div>
 									</Accordion.Content>
 								</>
@@ -286,7 +271,7 @@ const SideBar = ({ interno }) => {
 											<div onClick={handleSidebar}>
 												<Link href="/actualidad/agenda-publica">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
-														Agenda pública
+														Noticas
 													</a>
 												</Link>
 											</div>
@@ -297,13 +282,13 @@ const SideBar = ({ interno }) => {
 													</a>
 												</Link>
 											</div>
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<Link href="/actualidad/boletines">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 														Boletines
 													</a>
 												</Link>
-											</div>
+											</div> */}
 											<div onClick={handleSidebar}>
 												<Link href="/actualidad/comunicados">
 													<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -348,13 +333,13 @@ const SideBar = ({ interno }) => {
 														Acreditación ACBSP
 													</a>
 												</div> */}
-												<div onClick={handleSidebar}>
+												{/* <div onClick={handleSidebar}>
 													<Link href="/nosotros/historia">
 														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
 															Historia
 														</a>
 													</Link>
-												</div>
+												</div> */}
 												<div onClick={handleSidebar}>
 													<Link href="/nosotros/transparencia">
 														<a className="inline-flex items-center py-[10px] px-11 transition w-full">
@@ -374,13 +359,13 @@ const SideBar = ({ interno }) => {
 									</>
 								</>
 							</Accordion>
-							<Link href="/blog-gestion-publica">
+							{/* <Link href="/blog-gestion-publica">
 								<a className="text-blanco inline-flex font-bold items-center py-[10px] px-11 transition w-full">
 									Blog de Gestión pública
 								</a>
-							</Link>
+							</Link> */}
 						</div>
-						<div className="bg-secondary w-full pt-4 block md:hidden">
+						<div className="bg-secondary w-full block md:hidden">
 							<Link href="/tramites">
 								<a className="block py-[10px] px-11 text-blanco">
 									Trámites

@@ -61,7 +61,7 @@ const DireccionAdministrativa = () => {
 						Dirección y Coordinación Académica de la Universidad
 						Complutense de Madrid (España), encargado de gestionar
 						estrategias de comunicación externa en la Unidad de
-						Posgrado de la Facultad de Ciencias Administrativas, y
+						Posgrado de la Facultad de Educación, y
 						encargado del área de marketing y publicidad en el
 						Centro de Idiomas de la UNMSM; además, fue jefe de la
 						Oficina de Comunicaciones e Imagen Institucional en la

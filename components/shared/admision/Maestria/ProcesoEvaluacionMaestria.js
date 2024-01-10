@@ -5,8 +5,7 @@ export const ProcesoEvaluacionMaestria = () => {
 		<div>
 			<p className="mb-2">
 				El proceso de evaluación de la Unidad de Posgrado de la Facultad
-				de Ciencias Administrativas de la UNMSM consta de tres
-				componentes:
+				de Educación de la UNMSM consta de tres componentes:
 			</p>
 			<div className="mb-6">
 				<ul className="list-disc list-outside pl-4 mb-4">

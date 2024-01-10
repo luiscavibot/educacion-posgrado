@@ -143,7 +143,7 @@ const UnidadPosgrado = () => {
 							<span className="font-bold">Correo</span>
 						</p>
 						<p className="mb-3 break-words">
-							admisionupg.administracion@unmsm.edu.pe
+							upg.educacion@unmsm.edu.pe
 						</p>
 					</div>
 					<div>

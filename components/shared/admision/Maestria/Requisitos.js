@@ -21,10 +21,10 @@ export const Requisitos = () => {
 					<a
 						className="link"
 						target="_blank"
-						href="mailto:admisionupg.administracion@unmsm.edu.pe"
+						href="mailto:upg.educacion@unmsm.edu.pe"
 						rel="noreferrer noopener"
 					>
-						admisionupg.administracion@unmsm.edu.pe
+						upg.educacion@unmsm.edu.pe
 					</a>
 					), que corresponde a la Unidad de Posgrado de Ciencias
 					Administrativas, y adjuntar el expediente completo con los

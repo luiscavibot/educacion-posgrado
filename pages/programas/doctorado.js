@@ -447,10 +447,10 @@ const Programa = ({ programa, otrosProgramas }) => {
 						/>
 					</div>
 
-					<div
+					{/* <div
 						label="Testimonios de egresados"
 						link="/comunidad/seguimiento-egresados"
-					></div>
+					></div> */}
 				</Tabs>
 			</div>
 			<div className="col-span-full mb-14 max-md:px-4">
@@ -570,7 +570,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 				>
 					<FormacionContentModal
 						handleClose={handleClose}
-						responsableEmail="admisionupg.administracion@unmsm.edu.pe"
+						responsableEmail="upg.educacion@unmsm.edu.pe"
 						telefono="(+51) 619 7000 anexo 4812"
 					/>
 				</Box>
