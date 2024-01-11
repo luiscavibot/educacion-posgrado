@@ -150,14 +150,14 @@ const Index = () => {
 						<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 							<div>
 								<p className="font-bold text-center">
-									Admisión de Posgrado 2023-II
+									Admisión de Posgrado 2024-I
 								</p>
 							</div>
 							<div className="mb-2 md:mb-0">
 								<p className="text-center">
 									<span>
-										Cierre de inscripciones: 14 de julio del
-										2023
+										Cierre de inscripciones: 21 de marzo del
+										2024
 									</span>
 								</p>
 							</div>
