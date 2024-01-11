@@ -1,18 +1,15 @@
 import React from 'react';
 
-const proceso = '2023-II';
-
-export const CronogramaAcademico = (
-	{
-		// cronograma,
-		// proceso
-	}
-) => {
+export const CronogramaAcademico = () => {
 	return (
 		<>
 			<p className="mb-6">
-				Entérate aquí cuáles son todas nuestras actividades para el
-				programa de doctorado del ciclo 2023-I
+				El proceso de admisión a los programas de maestrías de la Unidad
+				de Posgrado de la facultad de Ciencias Biológicas se desarrolla
+				semestralmente, según cronograma aprobado por el VRIP.
+			</p>
+			<p className="mb-6 text-center font-bold text-lg">
+				SEMESTRE 2024-I
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
@@ -22,7 +19,7 @@ export const CronogramaAcademico = (
 								colSpan="2"
 								className="!bg-tertiary text-blanco text-center"
 							>
-								Admisión general {proceso}
+								Proceso de Admisión
 							</th>
 						</tr>
 						<tr className="!bg-tertiary/50 text-blanco text-center">
@@ -31,55 +28,82 @@ export const CronogramaAcademico = (
 						</tr>
 					</thead>
 					<tbody>
-						{/* {cronograma.proceso_admision
-							.filter(
-								(proceso_adm) =>
-									proceso_adm.actividad !=
-									'Entrevista personal presencial o virtual'
-							)
-							.map((proceso_adm) => {
-								return (
-									<tr
-										key={
-											proceso_adm.actividad +
-											proceso_adm.fecha
-										}
-									>
-										<td>{proceso_adm.actividad}</td>
-										<td>{proceso_adm.fecha}</td>
-									</tr>
-								);
-							})} */}
 						<tr>
 							<td>
-								Inscripción de postulantes y envío de
-								expedientes
+								Envío a DGEP de Resolución de Decanato que
+								aprueba el cuadro de vacantes
 							</td>
-							<td>Del 8 de mayo al 14 de julio del 2023</td>
+							<td>Hasta el 22 de diciembre 2023</td>
 						</tr>
 						<tr>
-							<td>Inscripción extemporánea</td>
-							<td>Del 15 de julio al 11 de agosto del 2023</td>
+							<td>
+								Convocatoria, cuadro de vacantes para posgrado -
+								RR
+							</td>
+							<td>26 al 29 de diciembre 2023</td>
 						</tr>
 						<tr>
-							<td>Examen de aptitud virtual o presencial</td>
-							<td>12 de agosto del 2023</td>
+							<td>
+								Inscripción de postulantes y envío de expediente
+							</td>
+							<td>02 de enero al 21 de marzo 2024</td>
 						</tr>
 						<tr>
-							<td>Sustentación del proyecto de investigación</td>
-							<td>13 y 14 de agosto del 2023</td>
+							<td>
+								Examen de aptitud para maestrías y doctorados
+							</td>
+							<td>Hasta el 23 de marzo 2024</td>
+						</tr>
+						<tr>
+							<td>
+								Sustentación del proyecto de investigación (solo
+								doctorado)
+							</td>
+							<td>Hasta el 24 de marzo</td>
 						</tr>
 						<tr>
 							<td>Evaluación del expediente</td>
-							<td>15 y 16 de agosto del 2023</td>
+							<td>Hasta el 25 de marzo</td>
+						</tr>
+						<tr>
+							<td>Entrevista personal (solo maestría)</td>
+							<td>Hasta el 26 de marzo</td>
+						</tr>
+						<tr>
+							<td>
+								Ingreso de evaluación al SISEVA para generación
+								de actas
+							</td>
+							<td>27 al 28 de marzo</td>
 						</tr>
 						<tr>
 							<td>Publicación de resultados</td>
-							<td>22 de agosto del 2023</td>
+							<td>30 de marzo</td>
+						</tr>
+						<tr>
+							<td>
+								Resolución de Decanato de ingresantes. Envío a
+								la DGEP y a la oficina del SUM
+							</td>
+							<td>01 de abril</td>
+						</tr>
+						<tr>
+							<td>
+								Consolidado de ingresantes envío a la Oficina de
+								Planificación
+							</td>
+							<td>02 de abril</td>
+						</tr>
+						<tr>
+							<td>
+								Oficina de Planificación envío a MINEDU — SUNEDU
+							</td>
+							<td>05 de abril</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
 					<thead>
@@ -97,49 +121,37 @@ export const CronogramaAcademico = (
 						</tr>
 					</thead>
 					<tbody>
-						{/* {cronograma.proceso_matricula.map((proceso_mat) => {
-							return (
-								<tr
-									key={
-										proceso_mat.actividad +
-										proceso_mat.fecha
-									}
-								>
-									<td>{proceso_mat.actividad}</td>
-									<td>{proceso_mat.fecha}</td>
-								</tr>
-							);
-						})} */}
 						<tr>
 							<td>Reactualización de matrícula</td>
-							<td>Hasta el 11 de agosto del 2023</td>
+							<td>Hasta el 01 de marzo</td>
 						</tr>
 						<tr>
 							<td>Matrícula regular</td>
-							<td>Del 7 al 31 de agosto del 2023</td>
+							<td>26 de febrero al 05 de abril</td>
 						</tr>
 						<tr>
 							<td>Matrícula de ingresantes</td>
-							<td>Del 28 al 31 de agosto del 2023</td>
+							<td>01 al 05 de abril</td>
 						</tr>
 						<tr>
 							<td>
 								Matrícula extemporánea y rectificación de
 								matrícula
 							</td>
-							<td>Del 11 al 18 de setiembre del 2023</td>
+							<td>17 al 25 de abril</td>
 						</tr>
 						<tr>
 							<td>Reserva de matrícula</td>
-							<td>Hasta el 17 de setiembre del 2023</td>
+							<td>Hasta el 23 de junio</td>
 						</tr>
 						<tr>
 							<td>Anulación de matrícula</td>
-							<td>Del 13 al 17 de setiembre del 2023</td>
+							<td>19 al 24 de junio</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
 					<thead>
@@ -157,31 +169,17 @@ export const CronogramaAcademico = (
 						</tr>
 					</thead>
 					<tbody>
-						{/* {cronograma.induccion_academica.map(
-							(induccion_acad) => {
-								return (
-									<tr
-										key={
-											induccion_acad.actividad +
-											induccion_acad.fecha
-										}
-									>
-										<td>{induccion_acad.actividad}</td>
-										<td>{induccion_acad.fecha}</td>
-									</tr>
-								);
-							}
-						)} */}
 						<tr>
 							<td>
 								Capacitación en base de datos, aspectos de
 								investigación y normativa de posgrado
 							</td>
-							<td>1 y 2 de setiembre del 2023</td>
+							<td>06 y 07 de abril 2024</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
 					<thead>
@@ -199,36 +197,229 @@ export const CronogramaAcademico = (
 						</tr>
 					</thead>
 					<tbody>
-						{/* {cronograma.actividades_academicas.map(
-							(actividades_acad) => {
-								return (
-									<tr
-										key={
-											actividades_acad.actividad +
-											actividades_acad.fecha
-										}
-									>
-										<td>{actividades_acad.actividad}</td>
-										<td>{actividades_acad.fecha}</td>
-									</tr>
-								);
-							}
-						)} */}
 						<tr>
 							<td>Inicio de clases</td>
-							<td>4 de setiembre del 2023</td>
+							<td>08 de abril 2024</td>
 						</tr>
 						<tr>
 							<td>Fin de clases</td>
-							<td>23 de diciembre del 2023</td>
+							<td>27 de julio 2024</td>
 						</tr>
 						<tr>
 							<td>Ingreso de notas</td>
-							<td>Del 25 al 29 de diciembre del 2023</td>
+							<td>30 de julio al 03 de agosto 2024</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+
+			<p className="mb-6 text-center font-bold text-lg">
+				SEMESTRE 2024-II
+			</p>
+
+			<div className="overflow-x-auto mt-4 mb-8">
+				<table className="table table-striped-even mb-0">
+					<thead>
+						<tr>
+							<th
+								colSpan="2"
+								className="!bg-tertiary text-blanco text-center"
+							>
+								Proceso de Admisión
+							</th>
+						</tr>
+						<tr className="!bg-tertiary/50 text-blanco text-center">
+							<th>Actividades</th>
+							<th className="md:w-60 text-center">Fechas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Envío a DGEP de Resolución de Decanato que
+								aprueba el cuadro de vacantes
+							</td>
+							<td>15 al 22 de abril</td>
+						</tr>
+						<tr>
+							<td>
+								Convocatoria, cuadro de vacantes para posgrado -
+								RR
+							</td>
+							<td>23 de abril al 03 de mayo</td>
+						</tr>
+						<tr>
+							<td>
+								Inscripción de postulantes y envío de expediente
+							</td>
+							<td>06 de mayo al 09 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Examen de aptitud para maestrías y doctorados
+							</td>
+							<td>Hasta el 10 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Sustentación del proyecto de investigación (solo
+								doctorado)
+							</td>
+							<td>Hasta el 11 de agosto</td>
+						</tr>
+						<tr>
+							<td>Evaluación del expediente</td>
+							<td>Hasta el 13 de agosto</td>
+						</tr>
+						<tr>
+							<td>Entrevista personal (solo maestría)</td>
+							<td>Hasta el 15 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Ingreso de evaluación al SISEVA para generación
+								de actas
+							</td>
+							<td>16 de agosto</td>
+						</tr>
+						<tr>
+							<td>Publicación de resultados</td>
+							<td>17 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Resolución de Decanato de ingresantes. Envío a
+								la DGEP y a la oficina del SUM
+							</td>
+							<td>19 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Consolidado de ingresantes envío a la Oficina de
+								Planificación
+							</td>
+							<td>20 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Oficina de Planificación envío a MINEDU — SUNEDU
+							</td>
+							<td>21 de agosto</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div className="overflow-x-auto mt-4 mb-8">
+				<table className="table table-striped-even mb-0">
+					<thead>
+						<tr>
+							<th
+								colSpan="2"
+								className="!bg-tertiary text-blanco text-center"
+							>
+								Proceso de matrícula
+							</th>
+						</tr>
+						<tr className="!bg-tertiary/50 text-blanco text-center">
+							<th>Actividades</th>
+							<th className="md:w-60 text-center">Fechas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Reactualización de matrícula</td>
+							<td>Hasta el 09 de agosto</td>
+						</tr>
+						<tr>
+							<td>Matrícula regular</td>
+							<td>12 al 31 de agosto</td>
+						</tr>
+						<tr>
+							<td>Matrícula de ingresantes</td>
+							<td>27 al 31 de agosto</td>
+						</tr>
+						<tr>
+							<td>
+								Matrícula extemporánea y rectificación de
+								matrícula
+							</td>
+							<td>11 al 18 de setiembre</td>
+						</tr>
+						<tr>
+							<td>Reserva de matrícula</td>
+							<td>Hasta el 05 de noviembre</td>
+						</tr>
+						<tr>
+							<td>Anulación de matrícula</td>
+							<td>11 al 15 de noviembre</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div className="overflow-x-auto mt-4 mb-8">
+				<table className="table table-striped-even mb-0">
+					<thead>
+						<tr>
+							<th
+								colSpan="2"
+								className="!bg-tertiary text-blanco text-center"
+							>
+								Programa de inducción académica
+							</th>
+						</tr>
+						<tr className="!bg-tertiary/50 text-blanco text-center">
+							<th>Actividades</th>
+							<th className="md:w-60 text-center">Fechas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Capacitación en base de datos, aspectos de
+								investigación y normativa de posgrado
+							</td>
+							<td>31 de agosto y 01 de setiembre</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div className="overflow-x-auto mt-4 mb-8">
+				<table className="table table-striped-even mb-0">
+					<thead>
+						<tr>
+							<th
+								colSpan="2"
+								className="!bg-tertiary text-blanco text-center"
+							>
+								Actividades académicas
+							</th>
+						</tr>
+						<tr className="!bg-tertiary/50 text-blanco text-center">
+							<th>Actividades</th>
+							<th className="md:w-60 text-center">Fechas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Inicio de clases</td>
+							<td>02 de setiembre</td>
+						</tr>
+						<tr>
+							<td>Fin de clases</td>
+							<td>22 de diciembre</td>
+						</tr>
+						<tr>
+							<td>Ingreso de notas</td>
+							<td>23 al 27 de diciembre</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p>Fuente: R.R. n° 013822-2023-R/UNMSM</p>
 		</>
 	);
 };
