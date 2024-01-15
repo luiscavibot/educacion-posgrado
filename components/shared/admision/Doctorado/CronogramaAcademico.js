@@ -5,7 +5,7 @@ export const CronogramaAcademico = () => {
 		<>
 			<p className="mb-6">
 				El proceso de admisión a los programas de maestrías de la Unidad
-				de Posgrado de la facultad de Ciencias Biológicas se desarrolla
+				de Posgrado de la facultad de Educación se desarrolla
 				semestralmente, según cronograma aprobado por el VRIP.
 			</p>
 			<p className="mb-6 text-center font-bold text-lg">
