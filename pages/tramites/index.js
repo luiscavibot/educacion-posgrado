@@ -106,7 +106,7 @@ const Index = ({ ultimasNoticias }) => {
 							envíanos un mensaje al siguiente correo:
 						</p>
 						<p className="break-all text-xs text-primary font-bold">
-							cobranzas.administracion@unmsm.edu.pe
+							controldepagosupg.fe@unmsm.edu.pe
 						</p>
 					</Observacion>
 				</div>
