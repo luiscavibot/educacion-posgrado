@@ -60,7 +60,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://www.bn.com.pe/canales-atencion/agencia-lima-metropolitana.asp"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									agencia del Banco de la Nación
 								</a>{' '}
 								más cercana a ti.
@@ -83,7 +84,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://admision.unmsm.edu.pe/portal/"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									Oficina Central de Admisión
 								</a>{' '}
 								(OCA) e ingresa los datos solicitados del
@@ -116,7 +118,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://www.bn.com.pe/canales-atencion/agencia-lima-metropolitana.asp"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									agencia del Banco de la Nación
 								</a>{' '}
 								o virtualmente por la plataforma{' '}
@@ -124,7 +127,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://pagalo.pe/"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									Págalo.pe
 								</a>
 								. Ten listo el número de prospecto y DNI del
@@ -148,7 +152,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://admision.unmsm.edu.pe/portal/"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									OCA
 								</a>{' '}
 								y registra los datos solicitados para generar el
@@ -178,7 +183,8 @@ export const GuiaAdmisionPregrado = () => {
 									href="https://admision.unmsm.edu.pe/portal/"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="link">
+									className="link"
+								>
 									OCA
 								</a>
 								.
@@ -209,7 +215,8 @@ export const GuiaAdmisionPregrado = () => {
 												'_blank"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="link">
+							className="link"
+						>
 							admision.unmsm.edu.pe
 						</a>
 					</p>
@@ -229,7 +236,8 @@ export const GuiaAdmisionPregrado = () => {
 									'_blank'
 								);
 							}}
-							className="inline-block mr-4">
+							className="inline-block mr-4"
+						>
 							<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
 								<FaFacebookF />
 							</button>
@@ -241,7 +249,8 @@ export const GuiaAdmisionPregrado = () => {
 									'_blank'
 								);
 							}}
-							className="inline-block">
+							className="inline-block"
+						>
 							<button className="w-[36px] h-[36px] flex items-center justify-center mb-2 text-primary bg-blanco rounded-lg p-2 text-base shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
 								<AiFillInstagram />
 							</button>

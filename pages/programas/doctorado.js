@@ -158,7 +158,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 						<div>
 							<p className="font-bold text-center">
-								Admisión Posgrado 2023-II
+								Admisión Posgrado 2024-I
 							</p>
 						</div>
 						<div className="mb-2 md:mb-0">
