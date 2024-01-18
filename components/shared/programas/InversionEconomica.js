@@ -19,8 +19,6 @@ export const InversionEconomica = ({
 				<Observacion className="mb-8">
 					<ul className="list-disc list-inside pl-1">
 						<li>
-							{/* La duración total del programa es de dos años,
-							conformado por cuatro meses. */}
 							La duración total del programa es de {duracion}.
 						</li>
 						<li>Montos referenciales, sujetos a variaciones.</li>
@@ -147,25 +145,6 @@ export const InversionEconomica = ({
 						</div>
 					</div>
 				)}
-				{/* <div className="mb-8">
-					<div className="mb-[18px]">
-						<p className="subtitle mb-4">3. Matrícula</p>
-						{matricula ? (
-							<ul
-								className="list-disc list-inside default-programa"
-								dangerouslySetInnerHTML={{
-									__html: `${programa[0].attributes.matricula}`,
-								}}
-							></ul>
-						) : null}
-						<p className="font-medium text-sm mt-4">
-							<em>
-								* Los costos corresponden al proceso de admisión
-								2020, sujetos a variaciones.
-							</em>
-						</p>
-					</div>
-				</div> */}
 				{costos_credito?.length > 0 && (
 					<div className="mb-8">
 						<p className="subtitle mb-4">
