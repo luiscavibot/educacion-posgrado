@@ -63,6 +63,10 @@ export const Requisitos = () => {
 					</li>
 					<li className="py-2">Partida de nacimiento (opcional).</li>
 					<li className="py-2">
+						Certificado o constancia de un idioma extranjero o
+						nativo por examen de suficiencia.
+					</li>
+					<li className="py-2">
 						Recibo de{' '}
 						<Link
 							href={'/admision?programa=doctorado&tab=inversion'}

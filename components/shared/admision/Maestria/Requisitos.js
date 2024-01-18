@@ -26,9 +26,9 @@ export const Requisitos = () => {
 					>
 						upg.educacion@unmsm.edu.pe
 					</a>
-					), que corresponde a la Unidad de Posgrado de Ciencias
-					Administrativas, y adjuntar el expediente completo con los
-					siguientes documentos:
+					), que corresponde a la Unidad de Posgrado de esta facultad,
+					y adjuntar el expediente completo con los siguientes
+					documentos:
 				</p>
 				<ol className="list-decimal list-inside">
 					<li className="py-2">
