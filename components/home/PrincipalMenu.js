@@ -75,7 +75,7 @@ const PrincipalMenu = () => {
 								</Dropdown>
 							</li>
 							<li>
-								<Dropdown>
+								{/* <Dropdown>
 									<MenuButton className="cursor-pointer box-border rounded-lg px-4 py-2 leading-normal bg-transparente text-blanco hover:bg-transparente hover:border-transparente focus-visible:border-transparente focus-visible:hover:border-transparente focus-visible:outline-0 focus-visible:shadow-outline-transparente">
 										Doctorado
 									</MenuButton>
@@ -91,13 +91,6 @@ const PrincipalMenu = () => {
 											},
 										}}
 									>
-										{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/diplomaturas">
-												<a className="hover:text-secondary py-2">
-													Diplomaturas
-												</a>
-											</Link>
-										</MenuItem> */}
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/programas/maestrias">
 												<a className="hover:text-secondary py-2">
@@ -120,7 +113,12 @@ const PrincipalMenu = () => {
 											</Link>
 										</MenuItem>
 									</Menu>
-								</Dropdown>
+								</Dropdown> */}
+								<Link href={`/programas/doctorado`}>
+									<a className="block px-4 py-2">
+										<span>Doctorado</span>
+									</a>
+								</Link>
 							</li>
 							{/* <li>
 								<Dropdown>
