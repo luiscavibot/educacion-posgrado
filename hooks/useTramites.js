@@ -19,7 +19,7 @@ export default function useTramites(searchParams) {
 	useEffect(() => {
 		setTramites(null);
 		const { keyWords, ...checks } = searchParams;
-		let url = `${BACKEND}/tramites?publicado=true&limit=${PAGE_SIZE}&page=${page}`;
+		let url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/tramites/${process.env.NEXT_PUBLIC_FACULTAD_SLUG}?estado=true&limit=${PAGE_SIZE}&page=${page}&sort=updated_at:DESC&targetProject=POSGRADO`;
 		if (keyWords !== '') {
 			url += `&query=${keyWords}`;
 		}
