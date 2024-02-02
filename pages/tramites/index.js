@@ -18,6 +18,7 @@ import { getFecha } from '../../helpers/getFecha';
 import LinkExtIcon from '../../components/icons/LinkExtIcon';
 import Observacion from '../../components/shared/Observacion';
 import DocumentosFillIcon from '../../components/icons/DocumentosFillIcon';
+import FijadoIcon from '../../components/icons/FijadoIcon';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
@@ -153,25 +154,54 @@ const Index = ({ ultimasNoticias }) => {
 						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
 						{tramites ? (
 							tramites.length > 0 ? (
-								tramites.map((tramite) => (
-									<Link
-										key={tramite.id}
-										href={`/tramites/${tramite.id}`}
-									>
-										<a
+								<>
+									{
+										tramites.filter((tramite) => (tramite.fijar))
+										.map((tramite) => (
+											<Link
+												key={tramite.id}
+												href={`/tramites/${tramite.id}`}
+											>
+												<a
+													key={tramite.id}
+													className="block mb-6"
+												>
+													<p className="text-textColorOne font-bold mb-1">
+														{tramite.titulo}
+														&nbsp;&nbsp;
+														<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
+													</p>
+													<p className="text-textColorTwo">
+														Última actualización:{' '}
+														{getFecha(tramite.updated_at)}
+													</p>
+												</a>
+											</Link>
+										))
+									}
+									{
+									tramites.filter((tramite) => (!tramite.fijar))
+									.map((tramite) => (
+										<Link
 											key={tramite.id}
-											className="block mb-6"
+											href={`/tramites/${tramite.id}`}
 										>
-											<p className="text-textColorOne font-bold mb-1">
-												{tramite.titulo}
-											</p>
-											<p className="text-textColorTwo">
-												Última actualización:{' '}
-												{getFecha(tramite.updated_at)}
-											</p>
-										</a>
-									</Link>
-								))
+											<a
+												key={tramite.id}
+												className="block mb-6"
+											>
+												<p className="text-textColorOne font-bold mb-1">
+													{tramite.titulo}
+												</p>
+												<p className="text-textColorTwo">
+													Última actualización:{' '}
+													{getFecha(tramite.updated_at)}
+												</p>
+											</a>
+										</Link>
+									))
+									}
+								</>
 							) : (
 								<p>No hay resultados</p>
 							)
