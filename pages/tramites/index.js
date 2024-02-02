@@ -18,6 +18,7 @@ import { getFecha } from '../../helpers/getFecha';
 import LinkExtIcon from '../../components/icons/LinkExtIcon';
 import Observacion from '../../components/shared/Observacion';
 import DocumentosFillIcon from '../../components/icons/DocumentosFillIcon';
+import FijadoIcon from '../../components/icons/FijadoIcon';
 
 const INITIAL_INPUTS = {
 	keyWords: '',
@@ -128,28 +129,51 @@ const Index = ({ ultimasNoticias }) => {
 						</div>
 					</div>
 					<div className="mt-7">
-						{/* <Link key="111" href={`/tramites/53`}>
-							<a key="111" className="block mb-6">
-								<div className="mb-1">
-									<p className="text-textColorOne font-bold mr-2 inline-block">
-										Registro de Pagos | Estudiantes
-									</p>
-									<p className="inline-block">
-										<span className="text-xs text-textColorTwo/80 mr-1">
-											Entrada fijada
-										</span>
-										<span>
-											<EntradaFijaIcon className="fill-textColorTwo inline" />
-										</span>
-									</p>
-								</div>
-								<p className="line-clamp-2">
-									Todo lo que necesitas saber para registrar
-									correctamente los pagos del programa(s) al
-									que perteneces.
+						<Link
+							key="a"
+							href={`/tramites/grado-academico-magister`}
+						>
+							<a className={`block mb-7`}>
+								<p className="text-textColorOne font-bold mb-1">
+									{`Protocolo de trámite para la obtención del grado académico de magíster`}
+									&nbsp;&nbsp;
+									<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
+								</p>
+								<p className="text-textColorTwo">
+									{/* Última actualización: {getFecha(fecha)} */}
+									Última actualización: 17 de mayo de 2023
 								</p>
 							</a>
-						</Link> */}
+						</Link>
+						<Link key="b" href={`/tramites/grado-academico-doctor`}>
+							<a className={`block mb-7`}>
+								<p className="text-textColorOne font-bold mb-1">
+									{`Protocolo de trámite para la obtención del grado académico de doctor`}
+									&nbsp;&nbsp;
+									<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
+								</p>
+								<p className="text-textColorTwo">
+									{/* Última actualización: {getFecha(fecha)} */}
+									Última actualización: 17 de mayo de 2023
+								</p>
+							</a>
+						</Link>
+						<Link
+							key="b"
+							href={`/tramites/titulo-segunda-especialidad`}
+						>
+							<a className={`block mb-7`}>
+								<p className="text-textColorOne font-bold mb-1">
+									{`Protocolo de trámite para la obtención del título de Segunda Especialidad`}
+									&nbsp;&nbsp;
+									<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
+								</p>
+								<p className="text-textColorTwo">
+									{/* Última actualización: {getFecha(fecha)} */}
+									Última actualización: 17 de mayo de 2023
+								</p>
+							</a>
+						</Link>
 						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
 						{tramites ? (
 							tramites.length > 0 ? (
@@ -158,12 +182,15 @@ const Index = ({ ultimasNoticias }) => {
 										key={tramite.id}
 										href={`/tramites/${tramite.id}`}
 									>
-										<a
-											key={tramite.id}
-											className="block mb-6"
-										>
+										<a className="block mb-7">
 											<p className="text-textColorOne font-bold mb-1">
 												{tramite.titulo}
+												{tramite.fijar && (
+													<>
+														&nbsp;&nbsp;
+														<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
+													</>
+												)}
 											</p>
 											<p className="text-textColorTwo">
 												Última actualización:{' '}
