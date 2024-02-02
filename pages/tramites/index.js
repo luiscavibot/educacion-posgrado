@@ -174,31 +174,60 @@ const Index = ({ ultimasNoticias }) => {
 								</p>
 							</a>
 						</Link>
-						<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
+
 						{tramites ? (
 							tramites.length > 0 ? (
-								tramites.map((tramite) => (
-									<Link
-										key={tramite.id}
-										href={`/tramites/${tramite.id}`}
-									>
-										<a className="block mb-7">
-											<p className="text-textColorOne font-bold mb-1">
-												{tramite.titulo}
-												{tramite.fijar && (
-													<>
+								<>
+									{tramites
+										.filter((tramite) => tramite.fijar)
+										.map((tramite) => (
+											<Link
+												key={tramite.id}
+												href={`/tramites/${tramite.id}`}
+											>
+												<a
+													key={tramite.id}
+													className="block mb-6"
+												>
+													<p className="text-textColorOne font-bold mb-1">
+														{tramite.titulo}
 														&nbsp;&nbsp;
 														<FijadoIcon className="fill-secondary inline-block relative -top-[1px]" />
-													</>
-												)}
-											</p>
-											<p className="text-textColorTwo">
-												Última actualización:{' '}
-												{getFecha(tramite.updated_at)}
-											</p>
-										</a>
-									</Link>
-								))
+													</p>
+													<p className="text-textColorTwo">
+														Última actualización:{' '}
+														{getFecha(
+															tramite.updated_at
+														)}
+													</p>
+												</a>
+											</Link>
+										))}
+									<div className="w-full bg-complementaryOne rounded-lg h-[2px] mb-6"></div>
+									{tramites
+										.filter((tramite) => !tramite.fijar)
+										.map((tramite) => (
+											<Link
+												key={tramite.id}
+												href={`/tramites/${tramite.id}`}
+											>
+												<a
+													key={tramite.id}
+													className="block mb-6"
+												>
+													<p className="text-textColorOne font-bold mb-1">
+														{tramite.titulo}
+													</p>
+													<p className="text-textColorTwo">
+														Última actualización:{' '}
+														{getFecha(
+															tramite.updated_at
+														)}
+													</p>
+												</a>
+											</Link>
+										))}
+								</>
 							) : (
 								<p>No hay resultados</p>
 							)
