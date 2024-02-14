@@ -5,7 +5,7 @@ export const CuadroVacante = ({ facultad }) => {
 		<>
 			<p>
 				Recuerda que la siguiente cantidad de vacantes corresponden al
-				proceso de admisión 2023-I
+				proceso de admisión 2024-I
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
 				<table className="table table-striped mb-6">
@@ -13,7 +13,7 @@ export const CuadroVacante = ({ facultad }) => {
 						<tr className="!bg-tertiary text-blanco text-center">
 							<th>Programas</th>
 							<th className="w-32 md:w-60 text-center">
-								Vacantes
+								Vacantes presenciales
 							</th>
 						</tr>
 					</thead>
@@ -22,7 +22,7 @@ export const CuadroVacante = ({ facultad }) => {
 							<td>
 								Doctorado en Educación y Docencia Universitaria
 							</td>
-							<td className="text-center">-</td>
+							<td className="text-center">30</td>
 						</tr>
 					</tbody>
 				</table>
