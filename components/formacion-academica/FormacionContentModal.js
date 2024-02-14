@@ -15,7 +15,7 @@ import MensajeEnviadoCorrectamenteIcon from '../icons/MensajeEnviadoCorrectament
 const FormacionContentModal = ({
 	handleClose = () => {},
 	responsableEmail,
-	facultad = 'Ciencias Administrativas-Unidad de Posgrado',
+	facultad = 'Facultad de Educación-Unidad de Posgrado',
 	escuela = 'Posgrado',
 	templateType,
 	telefono,
