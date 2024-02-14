@@ -12,7 +12,10 @@ export const CuadroVacante = ({ facultad }) => {
 					<thead>
 						<tr className="!bg-tertiary text-blanco text-center">
 							<th>Maestría</th>
-							<th className="w-32 md:w-60 text-center">
+							<th className="w-4 text-center">
+								Vacantes presenciales
+							</th>
+							<th className="w-4 text-center">
 								Vacantes semipresenciales
 							</th>
 						</tr>
@@ -23,21 +26,24 @@ export const CuadroVacante = ({ facultad }) => {
 								Maestría en Educación con mención en Gestión de
 								la Educación
 							</td>
-							<td className="text-center">-</td>
+							<td className="text-center">40</td>
+							<td className="text-center">30</td>
 						</tr>
 						<tr>
 							<td>
 								Maestría en Educación con mención en Docencia
 								Universitaria
 							</td>
-							<td className="text-center">-</td>
+							<td className="text-center">40</td>
+							<td className="text-center">30</td>
 						</tr>
 						<tr>
 							<td>
 								Maestría en Educación con mención en Evaluación
 								y Acreditación de la Calidad de la Educación
 							</td>
-							<td className="text-center">-</td>
+							<td className="text-center">30</td>
+							<td className="text-center">30</td>
 						</tr>
 					</tbody>
 				</table>
