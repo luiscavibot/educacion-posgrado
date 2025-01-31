@@ -8,9 +8,9 @@ export const CronogramaAcademico = () => {
 				de Posgrado de la facultad de Educación se desarrolla
 				semestralmente, según cronograma aprobado por el VRIP.
 			</p>
-			<p className="mb-6 text-center font-bold text-lg">
+			{/* <p className="mb-6 text-center font-bold text-lg">
 				SEMESTRE 2024-I
-			</p>
+			</p> */}
 			<div className="overflow-x-auto mt-4 mb-8">
 				<table className="table table-striped-even mb-0">
 					<thead>
@@ -19,7 +19,7 @@ export const CronogramaAcademico = () => {
 								colSpan="2"
 								className="!bg-tertiary text-blanco text-center"
 							>
-								Proceso de Admisión
+								Admisión general 2025-I
 							</th>
 						</tr>
 						<tr className="!bg-tertiary/50 text-blanco text-center">
@@ -30,75 +30,63 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>
-								Envío a DGEP de Resolución de Decanato que
-								aprueba el cuadro de vacantes
+								Envío a DGEP Resolución de Decanato que aprueba el cuadro de vacantes para la admisión 2025-I y 2025-II
 							</td>
-							<td>Hasta el 22 de diciembre 2023</td>
+							<td>9 al 13 de diciembre de 2024</td>
 						</tr>
 						<tr>
 							<td>
-								Convocatoria, cuadro de vacantes para posgrado -
-								RR
+								Aprobación de cuadro de vacantes para posgrado de la UNMSM con RR
 							</td>
-							<td>26 al 29 de diciembre 2023</td>
+							<td>16 al 31 de diciembre del 2024</td>
 						</tr>
 						<tr>
 							<td>
 								Inscripción de postulantes y envío de expediente
 							</td>
-							<td>02 de enero al 21 de marzo 2024</td>
+							<td>Del 02 de enero al 28 de marzo</td>
 						</tr>
 						<tr>
 							<td>
-								Examen de aptitud para maestrías y doctorados
+								Examen de aptitud
 							</td>
-							<td>Hasta el 23 de marzo 2024</td>
+							<td>Hasta 29 de marzo</td>
 						</tr>
 						<tr>
 							<td>
-								Sustentación del proyecto de investigación (solo
-								doctorado)
+								Evaluación del expediente
 							</td>
-							<td>Hasta el 24 de marzo</td>
-						</tr>
-						<tr>
-							<td>Evaluación del expediente</td>
-							<td>Hasta el 25 de marzo</td>
+							<td>Hasta el 31 de marzo</td>
 						</tr>
 						<tr>
 							<td>Entrevista personal (solo maestría)</td>
-							<td>Hasta el 26 de marzo</td>
+							<td>Hasta el 02 de abril</td>
+						</tr>
+						<tr>
+							<td>Ingreso de evaluación al SISEVA para generación de actas</td>
+							<td>04 de abril</td>
 						</tr>
 						<tr>
 							<td>
-								Ingreso de evaluación al SISEVA para generación
-								de actas
-							</td>
-							<td>27 al 28 de marzo</td>
-						</tr>
-						<tr>
-							<td>Publicación de resultados</td>
-							<td>30 de marzo</td>
-						</tr>
-						<tr>
-							<td>
-								Resolución de Decanato de ingresantes. Envío a
-								la DGEP y a la oficina del SUM
-							</td>
-							<td>01 de abril</td>
-						</tr>
-						<tr>
-							<td>
-								Consolidado de ingresantes envío a la Oficina de
-								Planificación
-							</td>
-							<td>02 de abril</td>
-						</tr>
-						<tr>
-							<td>
-								Oficina de Planificación envío a MINEDU — SUNEDU
+								Publicación de resultados
 							</td>
 							<td>05 de abril</td>
+						</tr>
+						<tr>
+							<td>Resolución de Decanato de ingresantes, envío a la DGEP y la oficina del SUM</td>
+							<td>07 de abril</td>
+						</tr>
+						<tr>
+							<td>
+								Consolidado de ingresantes, envío a la Oficina de Planificación
+							</td>
+							<td>08 de abril</td>
+						</tr>
+						<tr>
+							<td>
+								Oficina de Planificación envío a MINEDU - SUNEDU
+							</td>
+							<td>10 de abril</td>
 						</tr>
 					</tbody>
 				</table>
@@ -123,30 +111,30 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>Reactualización de matrícula</td>
-							<td>Hasta el 01 de marzo</td>
+							<td>Hasta el 03 de marzo</td>
 						</tr>
 						<tr>
 							<td>Matrícula regular</td>
-							<td>26 de febrero al 05 de abril</td>
+							<td>Del 10 de marzo al 11 de abril</td>
 						</tr>
 						<tr>
 							<td>Matrícula de ingresantes</td>
-							<td>01 al 05 de abril</td>
+							<td>Del 08 al 14 de abril</td>
 						</tr>
 						<tr>
 							<td>
 								Matrícula extemporánea y rectificación de
 								matrícula
 							</td>
-							<td>17 al 25 de abril</td>
+							<td>Del 24 al 30 de abril</td>
 						</tr>
 						<tr>
 							<td>Reserva de matrícula</td>
-							<td>Hasta el 23 de junio</td>
+							<td>Hasta el 24 de junio</td>
 						</tr>
 						<tr>
 							<td>Anulación de matrícula</td>
-							<td>19 al 24 de junio</td>
+							<td>Del 19 al 24 de junio</td>
 						</tr>
 					</tbody>
 				</table>
@@ -174,7 +162,7 @@ export const CronogramaAcademico = () => {
 								Capacitación en base de datos, aspectos de
 								investigación y normativa de posgrado
 							</td>
-							<td>06 y 07 de abril 2024</td>
+							<td>12 y/o 13 de abril</td>
 						</tr>
 					</tbody>
 				</table>
@@ -199,21 +187,21 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>Inicio de clases</td>
-							<td>08 de abril 2024</td>
+							<td>14 de abril</td>
 						</tr>
 						<tr>
 							<td>Fin de clases</td>
-							<td>27 de julio 2024</td>
+							<td>03 de agosto</td>
 						</tr>
 						<tr>
 							<td>Ingreso de notas</td>
-							<td>30 de julio al 03 de agosto 2024</td>
+							<td>Del 04 al 07 de agosto</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 
-			<p className="mb-6 text-center font-bold text-lg">
+			{/* <p className="mb-6 text-center font-bold text-lg">
 				SEMESTRE 2024-II
 			</p>
 
@@ -417,9 +405,10 @@ export const CronogramaAcademico = () => {
 						</tr>
 					</tbody>
 				</table>
-			</div>
+			</div> */}
 
-			<p>Fuente: R.R. n° 013822-2023-R/UNMSM</p>
+			<p>Fuente: <a href="https://posgrado.unmsm.edu.pe/wp-content/uploads/2024/12/RESOLUCION-RECTORAL-014629-2024-R.pdf" target="_blank" rel="noopener noreferrer" className="link">R.R. N° 014629-2024-R/UNMSM</a></p>
+			<p><a href="https://posgrado.unmsm.edu.pe/cronograma/" target="_blank" rel="noopener noreferrer" className="link">https://posgrado.unmsm.edu.pe/cronograma/</a></p>
 		</>
 	);
 };

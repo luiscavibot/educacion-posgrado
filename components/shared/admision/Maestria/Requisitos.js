@@ -71,7 +71,7 @@ export const Requisitos = () => {
 								pago por derecho de inscripción
 							</a>
 						</Link>{' '}
-						efectuado en el Banco de la Nación o por págalo.pe.
+						realizado vía SanMarket-UNMSM y pagado en BCP (App o agente) o Yape.
 					</li>
 					<li className="py-2">
 						Otro documento que la Unidad de Posgrado considere con

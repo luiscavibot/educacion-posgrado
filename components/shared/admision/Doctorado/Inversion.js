@@ -17,170 +17,165 @@ export const Inversion = () => {
 				</p>
 			</Observacion>
 
-			<div className="overflow-x-auto mt-3">
-				<p className="text-negro font-bold mb-4">
-					Paga tu derecho de inscripción de forma fácil y segura en
-					los siguientes medios autorizados:
-				</p>
-				{/* <div>
-					<div className="mb-4">
-						<ul className="list-disc list-inside mb-4">
-							<li className="subtitle">
-								<div className="inline-flex items-center">
-									<span className="mr-2">
-										Banco de Crédito del Perú
-									</span>
-									<button
-										onClick={() => {
-											window.open(
-												'https://bcpzonasegurabeta.viabcp.com/#/iniciar-sesion',
-												'_blank'
-											);
-										}}
-									>
-										<LinkExtIcon className="fill-secondary" />
-									</button>
-								</div>
-							</li>
-						</ul>
-						<p className="mb-8">
-							A continuación, te detallamos el número de Cuenta
-							Corriente de la UNMSM en el Banco de Crédito del
-							Perú para depósitos en ventanilla, cajero, agente o
-							transferencia interbancaria:
-						</p>
-						<div className="mb-8 flex flex-wrap justify-center">
-							<div className="mb-3 md:mb-0 flex items-center gap-x-2">
-								<p>Cta. Cte. n.°</p>
-								<div>
-									<CajaConFuncionCopiar
-										big
-										text="191-0215772014"
-									/>
-								</div>
-							</div>
-							<div className="ml-3 flex items-center gap-x-2">
-								<p>CCI n.°</p>
-								<div>
-									<CajaConFuncionCopiar
-										big
-										text="002-191-00021577201451"
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="flex flex-wrap justify-center mb-14">
-						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-							<p className="text-xl font-bold mb-[10px]">
-								S/. 400.00
-							</p>
-							<p>
-								Para Magíster UNMSM, personal administrativo de
-								la UNMSM, docente de universidades nacionales y
-								Magisterio Nacional.
-							</p>
-						</div>
-						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-							<p className="text-xl font-bold mb-[10px]">
-								S/. 500.00
-							</p>
-							<p>
-								Para postulantes graduados de otras
-								universidades.
-							</p>
-						</div>
-					</div>
-					<p className="text-center text-textColorTwo text-sm italic mb-14">
-						*Los costos corresponden al proceso de admisión 2022-II,
-						sujetos a variaciones.
+			<div className="flex justify-center flex-wrap mb-4 md:mb-14">
+				<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+					<p className="text-xl font-bold mb-[10px]">
+						S/. 400.00
 					</p>
-				</div> */}
-
-				<div>
-					<div className="mb-8">
-						<ul className="list-disc list-inside mb-4">
-							<li className="subtitle">
-								<div className="inline-flex items-center">
-									<span className="mr-2">
-										Banco de la Nación
-									</span>
-									<button
-										onClick={() => {
-											window.open(
-												'https://www.bn.com.pe/banca-internet/banca-internet.asp',
-												'_blank'
-											);
-										}}
-									>
-										<LinkExtIcon className="fill-primary" />
-									</button>
-								</div>
-							</li>
-						</ul>
-						<p className="mb-8">
-							Acércate presencialmente a una de sus agencias más
-							cercanas e indica que realizarás un depósito al n.°
-							de TRANSACCIÓN 9650 + el código que corresponda; así
-							como el n.° DNI, carné de extranjería o pasaporte
-							del postulante.
-						</p>
-					</div>
-					<div className="flex justify-center flex-wrap mb-14">
-						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-							<p className="text-xl font-bold mb-[10px]">
-								S/. 400.00
-							</p>
-							<p className="mb-3 font-bold">
-								<span>Transacción</span>: 9650 + código: 9702
-							</p>
-							<p>
-								Para Magíster UNMSM, personal administrativo de
-								la UNMSM, docente de universidades nacionales y
-								Magisterio Nacional.
-							</p>
-						</div>
-						<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
-							<p className="text-xl font-bold mb-[10px]">
-								S/. 500.00
-							</p>
-							<p className="mb-3 font-bold">
-								<span>Transacción</span>: 9650 + código: 9703
-							</p>
-							<p>
-								Para postulantes graduados de otras
-								universidades.
-							</p>
-						</div>
-					</div>
-					{/* <p className="text-center text-textColorTwo text-sm italic mb-14">
-							*Los costos corresponden al proceso de admisión
-							2022-II, sujetos a variaciones.
-						</p> */}
+					{/* <p className="mb-3 font-bold">
+						<span>Transacción</span>: 9650 + código: 9700
+					</p> */}
+					<p>
+						Para magister UNMSM, personal administrativo de
+						la UNMSM, docente de universidades nacionales y
+						Magisterio Nacional.
+					</p>
+				</div>
+				<div className="mb-6 md:mb-0 pt-6 w-[289px] mx-4 card flex flex-col px-6 py-8">
+					<p className="text-xl font-bold mb-[10px]">
+						S/. 500.00
+					</p>
+					{/* <p className="mb-3 font-bold">
+						<span>Transacción</span>: 9650 + código: 9701
+					</p> */}
+					<p>
+						Para postulantes graduados de otras
+						universidades.
+					</p>
 				</div>
 			</div>
-			<PagoPagalo programa={'doctorado'} />
-			<div>
-				<p className="mb-9">
-					<span>
-						En caso de tener dudas con el trámite puedes revisar el
-						siguiente{' '}
-					</span>
-					<button
-						onClick={() => {
-							window.open(
-								'https://www.youtube.com/watch?v=1pQDLq1Rv0Y&ab_channel=BuenasPr%C3%A1cticasjlp',
-								'_blank'
-							);
-						}}
-						// className="hover:-translate-y-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm hover:shadow-md duration-300 bg-blanco text-secondary font-semibold inline-flex place-items-center ml-3"
-					>
-						{/* <BsYoutube className="inline mr-3 text-lg" /> */}
-						<span className="link">tutorial</span>.
-					</button>
+
+			<p className="text-negro font-bold mb-4">
+				Paga tu derecho de inscripción de forma fácil y segura con estos pasos:
+			</p>
+
+			<div className="mb-4">
+				<div className="subtitle mb-4">
+					<div className="inline-flex items-center">
+						<span className="mr-2">
+							1. Generar ticket en SanMarket-UNMSM
+						</span>
+					</div>
+				</div>
+				<div className="relative pb-[56.25%] w-full">
+					<iframe 
+					className="absolute top-0 left-0 w-full h-full" 
+					src="https://www.youtube.com/embed/wDpbuHt1xg4?si=G0ykZewH8ZVtB0UL" 
+					title="YouTube video player" 
+					frameBorder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" 
+					allowFullScreen>
+					</iframe>
+				</div>
+			</div>
+			<div className="mb-4">
+				<div className="subtitle mb-4">
+					<div className="inline-flex items-center">
+						<span className="mr-2">
+							2. Realizar el pago
+						</span>
+					</div>
+				</div>
+				<div className="relative pb-[56.25%] w-full">
+					<iframe 
+					className="absolute top-0 left-0 w-full h-full" 
+					src="https://www.youtube.com/embed/ZupbHHyZZcg?si=tRokEAFyS006IzaA" 
+					title="YouTube video player" 
+					frameBorder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" 
+					allowFullScreen>
+					</iframe>
+				</div>
+			</div>
+			<div className="mb-4 pl-4">
+				<ul className="list-disc list-inside mb-4">
+					<li className="subtitle">
+						<div className="inline-flex items-center">
+							<span className="mr-2">
+								Banco de Crédito del Perú (APP BCP)
+							</span>
+						</div>
+					</li>
+				</ul>
+				<ul className="list-[circle] ml-10 mb-4">
+					<li>
+						<b>PASO 1</b> - Ingresar a <b>“PAGAR SERVICIO”</b>
+					</li>
+					<li>
+						<b>PASO 2</b> - Digitar el siguiente nombre{' '}
+						<b>“UNIVERSIDAD NAC MAYOR DE SAN MARCOS”</b>
+					</li>
+					<li>
+						<b>PASO 3</b> - Seleccionar servicio{' '}
+						<b>“PAGOS VARIOS”</b>
+					</li>
+					<li>
+						<b>PASO 4</b> - Ingresar código de cliente
+					</li>
+					<li>
+						<b>PASO 5</b> - Seleccionar <b>MONTO A PAGAR</b>
+					</li>
+					<li>
+						<b>PASO 6</b> - ¡Confirmar que el pago sea exitoso!
+					</li>
+				</ul>
+				{/* <p className="text-textColorTwo text-sm italic mb-1">
+					(*)Son los mismos códigos de pago para el Banco de la Nación
+					y a través del portal Pagalo.pe
 				</p>
+				<p className="text-textColorTwo text-sm italic mb-14">
+					(**)Bachiller UNMSM, Magíster UNMSM, personal administrativo
+					de la UNMSM, docente de Universidades Nacionales y
+					Magisterio Nacional.
+				</p> */}
+			</div>
+			<div className="mb-4 pl-4">
+				<ul className="list-disc list-inside mb-4">
+					<li className="subtitle">
+						<div className="inline-flex items-center">
+							<span className="mr-2">
+								Yape
+							</span>
+						</div>
+					</li>
+				</ul>
+				<ul className="list-[circle] ml-10 mb-4">
+					<li>
+						<b>PASO 1</b> - Ingresar a <b>“YAPEAR SERVICIO”</b>
+					</li>
+					<li>
+						<b>PASO 2</b> - Digitar el siguiente nombre{' '}
+						<b>“Universidad Nacional Mayor de San Marcos”</b>
+					</li>
+					{/* <li>
+						<b>PASO 3</b> - Seleccionar servicio{' '}
+						<b>“PAGOS VARIOS”</b>
+					</li> */}
+					<li>
+						<b>PASO 3</b> - Ingresar código de cliente
+					</li>
+					<li>
+						<b>PASO 4</b> - Seleccionar <b>MONTO A PAGAR</b>
+					</li>
+					<li>
+						<b>PASO 5</b> - ¡Confirmar que el pago sea exitoso!
+					</li>
+				</ul>
+				{/* <p className="text-textColorTwo text-sm italic mb-1">
+					(*)Son los mismos códigos de pago para el Banco de la Nación
+					y a través del portal Pagalo.pe
+				</p>
+				<p className="text-textColorTwo text-sm italic mb-14">
+					(**)Bachiller UNMSM, Magíster UNMSM, personal administrativo
+					de la UNMSM, docente de Universidades Nacionales y
+					Magisterio Nacional.
+				</p> */}
+			</div>
+			<div>
 				<p className="font-bold mb-3">
-					Aspectos a considerar en el Banco de la Nación:
+					Aspectos a considerar:
 				</p>
 				<ol className="list-decimal list-inside mb-6">
 					<li className="mb-5">
@@ -307,6 +302,22 @@ export const PagoPagalo = ({ programa }) => {
 					</tbody>
 				</table>
 			</div>
+			<p className="mb-9">
+				<span>
+					En caso de tener dudas con el trámite puedes revisar el
+					siguiente{' '}
+				</span>
+				<a
+					href="https://www.youtube.com/watch?v=1pQDLq1Rv0Y&ab_channel=BuenasPr%C3%A1cticasjlp"
+					target="_blank"
+					rel="noreferrer noopener"
+					className="link"
+					// className="hover:-translate-y-1 shadow-[0px_1px_4px_rgba(0,0,0,0.25)] rounded-lg py-2 px-3 text-sm hover:shadow-md duration-300 bg-blanco text-secondary font-semibold inline-flex place-items-center ml-3"
+				>
+					{/* <BsYoutube className="inline mr-3 text-lg" /> */}
+					<span className="link">tutorial.</span>
+				</a>
+			</p>
 		</>
 	);
 };

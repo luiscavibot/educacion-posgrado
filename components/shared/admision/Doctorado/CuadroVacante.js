@@ -5,7 +5,7 @@ export const CuadroVacante = ({ facultad }) => {
 		<>
 			<p>
 				Recuerda que la siguiente cantidad de vacantes corresponden al
-				proceso de admisión 2024-I
+				proceso de admisión 2025-I
 			</p>
 			<div className="overflow-x-auto mt-4 mb-8 max-w-xl mx-auto">
 				<table className="table table-striped mb-6">

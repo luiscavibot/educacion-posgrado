@@ -25,7 +25,7 @@ export const GuiaAdmisionMaestria = () => {
 			<div className="mb-6">
 				¿Estás listo/a para postular a una maestría? Sigue, por favor,
 				detenidamente los siguientes pasos del proceso de admisión
-				2024-I:
+				2025-I:
 			</div>
 			<div className="relative">
 				<div className="grid grid-cols-[88px_auto] mb-10">
@@ -109,16 +109,14 @@ export const GuiaAdmisionMaestria = () => {
 					<div className="ml-12">
 						<p className="font-bold">Paso 5:</p>
 						<p>
-							<Link href="/admision?programa=maestria&tab=inversion">
+							<Link
+								href="/admision?programa=maestria&tab=inversion"
+							>
 								<a className="link">
-									{' '}
-									Realiza el pago de inscripción{' '}
+									Realiza el pago de inscripción
 								</a>
 							</Link>
-							en el Banco de Crédito del Perú o en el Banco de la
-							Nación, indicando el n.° de documento de identidad
-							del postulante (DNI, carné de extranjería o
-							pasaporte).
+							{' '}a través de la plataforma San Market UNMSM y se completan utilizando las siguientes opciones: Banco BCP (de manera presencial o por banca digital) o Yape (aplicación móvil).
 						</p>
 					</div>
 				</div>
@@ -189,8 +187,8 @@ export const GuiaAdmisionMaestria = () => {
 							Tendrás que rendir las evaluaciones para el programa
 							de maestría:{' '}
 							<span className="font-bold">
-								examen virtual, evaluación de la hoja de vida y
-								entrevista virtual.
+								examen de aptitud, evaluación de la hoja de vida y
+								entrevista personal.
 							</span>{' '}
 						</p>
 					</div>
