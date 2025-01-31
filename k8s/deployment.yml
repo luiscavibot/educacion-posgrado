@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: educacion-posgrado-website-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: educacion-posgrado-website-app
+    template:
+        metadata:
+            labels:
+                app: educacion-posgrado-website-app
+        spec:
+            containers:
+                - name: educacion-posgrado-website-container
+                  image: 365227208102.dkr.ecr.us-east-2.amazonaws.com/educacion-posgrado-website:latest
+                  ports:
+                      - containerPort: 3000
+                  env:
+                      - name: NODE_ENV
+                        value: 'production'
+                  resources:
+                      requests:
+                          memory: '100Mi'
+                          cpu: '100m'
+                      limits:
+                          memory: '256Mi'
+                          cpu: '200m'
