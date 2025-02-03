@@ -166,7 +166,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span className="font-bold">
 									Cierre de inscripciones:
 								</span>{' '}
-								<span>14 de julio del 2023</span>
+								<span>28 de marzo del 2025</span>
 							</p>
 						</div>
 						{/* <a

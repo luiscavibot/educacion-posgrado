@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 	const [activeTab, setActiveTab] = useState(null);
+	const tabs_type_object = children.filter((child) => child && typeof child === 'object');
 	const router = useRouter();
 
 	useEffect(() => {
@@ -17,13 +18,15 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 		if (!router.isReady) {
 			return;
 		}
-		const labels = children.map((child) => slugify(child.props.label));
+		const labels = tabs_type_object.map((child) =>
+			slugify(child.props.label)
+		);
 		if (labels.includes(router.query.tab)) {
 			setActiveTab(router.query.tab);
 		} else {
-			setActiveTab(slugify(children[0].props.label));
+			setActiveTab(slugify(tabs_type_object[0].props.label));
 		}
-	}, [router.query, children, router.isReady]);
+	}, [router.query, tabs_type_object, router.isReady]);
 
 	const pushInsideRoute = (newActiveTab) => {
 		setActiveTab(slugify(newActiveTab));
@@ -185,7 +188,7 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 		activeTab && (
 			<div className="mx-4 md:mx-0 cont-grid-tabs mt-8">
 				<ul className="tabs">
-					{children.map((tab, index) => {
+					{tabs_type_object.map((tab, index) => {
 						const label = slugify(tab.props.label);
 						const link = tab.props.link;
 						return (
@@ -251,7 +254,7 @@ const Tabs = ({ children, nombre, carrera, tipoPrograma }) => {
 				</ul>
 				{/* NOTE: Los divs dentro de content-tabs tenían un py-5, pero se procede a setearlos a 0 */}
 				<div className="content-tabs">
-					{children.map((one, index) => {
+					{tabs_type_object.map((one, index) => {
 						const label = slugify(one.props.label);
 						if (slugify(label) === activeTab)
 							return (

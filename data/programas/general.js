@@ -1,5 +1,249 @@
 export const maestrias = [
 	{
+		titulo: 'Maestría Profesional en didactica en la matemática',
+		tipo: 'MAESTRIA',
+		subtitulo: '',
+		modalidad: 'PRESENCIAL',
+		slug: 'maestria-profesional-en-didactica-en-la-matematica',
+		miniHomeImg:
+			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_minihome_7990fd6a64.webp',
+		bannerImg:
+			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_banner_b80517614d.webp',
+		grado: 'Magíster en Didactica en la Matemática',
+		duracion: '2 años (4 semestres)',
+		objetivos:
+			'Formar profesionales capaces de analizar y comprender los procesos de aprendizaje y enseñanza de la matemática. Desarrollar habilidades para diseñar y evaluar estrategias didácticas que favorezcan la comprensión y el aprendizaje significativo de la matemática. Fomentar la capacidad de reflexionar críticamente sobre los enfoques y metodologías utilizados en la enseñanza de la matemática para reforzar su desarrollo académico y profesional. Proporcionar herramientas metodológicas y digitales para la investigación en el campo de la didáctica de la matemática.',
+		description:
+			'La Maestría profesional en didáctica de la matemática es un programa académico diseñado para formar profesionales capacitados en la enseñanza y aprendizaje de las matemáticas. El programa busca profundizar en los conocimientos teóricos y prácticos relacionados con la didáctica específica de la disciplina, así como promover una reflexión crítica sobre las metodologías y estrategias pedagógicas utilizadas en la enseñanza de las matemáticas. La maestría contempla tanto cursos teóricos como cursos prácticos, con el objetivo de que los estudiantes adquieran las habilidades necesarias para diseñar propuestas de enseñanza innovadoras y eficaces. Asimismo, se promueve la realización de investigaciones en el campo de la didáctica de la matemática, con la finalidad de contribuir al avance teórico y práctico de la disciplina. La Maestría profesional en didáctica de la matemática está diseñada para bachilleres y profesionales graduados de las diversas carreras y profesiones, que deseen complementar su formación profesional y desarrollar las competencias en la enseñanza de las matemáticas.',
+		perfil_ingresante:
+			'Los aspirantes para ingresar a la Maestría profesional en didáctica de la matemática deben ser profesionales que previamente cuentan con un título profesional o grado de bachiller, los cuales cuentan con una experiencia importante en el sector laboral y requieren los estudios necesarios para poder aspirar a mejores posiciones dentro de las diversas instituciones. Aplica los conocimientos adquiridos a la resolución de problemas en entornos nuevos o poco conocidos dentro de contextos más amplios (o multidisciplinares) relacionados con el área de estudio. Integra conocimientos para enfrentarse a la complejidad de formular juicios a partir de una información que, siendo incompleta o limitada, incluya reflexiones sobre las responsabilidades sociales y éticas vinculadas a la aplicación de sus conocimientos y juicios. Practica las tecnologías de la comunicación en la vida cotidiana. Se muestra favorable hacia el aprendizaje autónomo permanente. Muestra compromiso social por el desarrollo humano.',
+		perfil_graduado:
+			'Analiza y evalúa de manera crítica diferentes perspectivas y enfoques en su área de especialización y será capaz de cuestionar supuestos y preconcepciones y de proponer ideas innovadoras y creativas. Tiene un alto conocimiento y dominio teórico y práctico en su campo de estudio. Maneja habilidades de co-creatividad, comunicativas y visual. Realiza investigaciones originales y aporta nuevas ideas y conocimientos a su campo de estudio. Implementa proyectos de investigación de alto nivel aplicando métodos y técnicas adecuadas para recopilar y analizar datos. Aplica el diseño del pensamiento en el desarrollo de problemas matemáticos complejos y toma decisiones basadas en evidencias y datos sólidos.',
+		// asignaturas: [
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Formulación y evaluación de proyectos educativos',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de la educación virtual',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de aprendizajes',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Fundamentos de la investigación científica: Metodología de la investigación',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de la Educación Pública',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Desarrollo de la Investigación I: Investigación interdisciplinaria',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Taller de redacción y edición científica',
+		// 		credito: 4,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Asesoría de Tesis I: Retroalimentación sobre el desarrollo de la tesis',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Desarrollo de la Investigación II: Aspectos metodológicos',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Taller de análisis de datos para la Investigación',
+		// 		credito: 4,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Asesoría de Tesis II: Retroalimentación sobre el desarrollo de la tesis',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'cuarto',
+		// 		nombre: 'Desarrollo de la Investigación III: Informe y redacción de tesis',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'cuarto',
+		// 		nombre: 'Asesoría de Tesis III: Retroalimentación sobre el informe de tesis',
+		// 		credito: 10,
+		// 	},
+		// ],
+		// electivos: [],
+		// inversion: {
+		// 	duracion: '2 años (4 semestres)',
+		// 	costos: [
+		// 		{
+		// 			texto: 'El costo mensual del programa de maestría es de',
+		// 			precio: 'S/720.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo total por ciclo académico del programa de maestría es de',
+		// 			precio: 'S/2,520.00',
+		// 		},
+		// 	],
+		// 	admisiones: [
+		// 		{
+		// 			texto: 'El costo para bachiller UNMSM, personal administrativo UNMSM, docentes de universidades nacionales y magisterio nacionales es de',
+		// 			precio: 'S/350.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo para postulantes graduados de otras universidades es de',
+		// 			precio: 'S/450.00',
+		// 		},
+		// 	],
+		// 	matricula: [
+		// 		{
+		// 			texto: 'El costo por derecho de matrícula UPG para el alumno es de',
+		// 			precio: 'S/348.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo por derecho de matrícula EPG para el alumno es de',
+		// 			precio: 'S/52.00',
+		// 		},
+		// 	],
+		// },
+	},
+	{
+		titulo: 'Maestría Profesional en didactica de la comunicación e innovación',
+		tipo: 'MAESTRIA',
+		subtitulo: '',
+		modalidad: 'PRESENCIAL',
+		slug: 'maestria-profesional-en-didactica-de-la-comunicacion-e-innovacion',
+		miniHomeImg:
+			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_minihome_88ed10e960.webp',
+		bannerImg:
+			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_banner_cd49c8f441.webp',
+		grado: 'Magíster en Didactica de la comunicación e innovación',
+		duracion: '2 años (4 semestres)',
+		objetivos:
+			'Desarrollar competencias en investigación para ser productores de ciencia como base de su desarrollo académico y profesional. Formar educadores comprometidos con la formación integral del estudiante para aportar en los diferentes contextos sociales y culturales. Formar profesionales conocedores de la didáctica de la comunicación para potenciar la formación integral de los estudiantes y sociedad. Potenciar especialistas en comunicación e innovación para iniciar una eficiente carrera profesional en el campo de la docencia.',
+		description:
+			'En este contexto, la Unidad de Posgrado de la Facultad de Educación ha respondido a las demandas cambiantes de la sociedad y del entorno educativo. Como resultado, ha desarrollado y ofrece el programa de Maestría profesional en didáctica de la comunicación e innovación en modalidad semipresencial. Esta iniciativa refleja el compromiso de la facultad con la mejora continua y la actualización de sus programas de posgrado para satisfacer las necesidades de los estudiantes y las expectativas de calidad educativa',
+		perfil_ingresante:
+			'Profesionales universitarios con grado de bachiller. Posee conocimientos básicos sobre la realidad nacional e internacional. Tiene un nivel adecuado de comprensión lectora. Conoce las tecnologías de la comunicación en la vida cotidiana. Muestra respeto y tolerancia por la diversidad. Expresa opiniones y deducciones que predicen su rechazo a situaciones incorrectas.',
+		perfil_graduado:
+			'Aplica conocimientos y estrategias de la comunicación para la ejecución y evaluación curricular pertinente en la IE. Analiza los avances multidisciplinarios de la ciencia y tecnología para diseñar propuestas pedagógicas y didácticas efectivas en la elaboración de sesiones y experiencias de aprendizaje. Domina estrategias de la comunicación e innovación para gestionar y evaluar el desarrollo del aprendizaje en términos de competencias. Diseña marcos teórico-metodológicos para desarrollar investigaciones en el campo de la comunicación e innovación correctamente.',
+		// asignaturas: [
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Formulación y evaluación de proyectos educativos',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de la educación virtual',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de aprendizajes',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Fundamentos de la investigación científica: Metodología de la investigación',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'primero',
+		// 		nombre: 'Gestión de la Educación Pública',
+		// 		credito: 3,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Desarrollo de la Investigación I: Investigación interdisciplinaria',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Taller de redacción y edición científica',
+		// 		credito: 4,
+		// 	},
+		// 	{
+		// 		semestre: 'segundo',
+		// 		nombre: 'Asesoría de Tesis I: Retroalimentación sobre el desarrollo de la tesis',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Desarrollo de la Investigación II: Aspectos metodológicos',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Taller de análisis de datos para la Investigación',
+		// 		credito: 4,
+		// 	},
+		// 	{
+		// 		semestre: 'tercero',
+		// 		nombre: 'Asesoría de Tesis II: Retroalimentación sobre el desarrollo de la tesis',
+		// 		credito: 6,
+		// 	},
+		// 	{
+		// 		semestre: 'cuarto',
+		// 		nombre: 'Desarrollo de la Investigación III: Informe y redacción de tesis',
+		// 		credito: 8,
+		// 	},
+		// 	{
+		// 		semestre: 'cuarto',
+		// 		nombre: 'Asesoría de Tesis III: Retroalimentación sobre el informe de tesis',
+		// 		credito: 10,
+		// 	},
+		// ],
+		// electivos: [],
+		// inversion: {
+		// 	duracion: '2 años (4 semestres)',
+		// 	costos: [
+		// 		{
+		// 			texto: 'El costo mensual del programa de maestría es de',
+		// 			precio: 'S/720.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo total por ciclo académico del programa de maestría es de',
+		// 			precio: 'S/2,520.00',
+		// 		},
+		// 	],
+		// 	admisiones: [
+		// 		{
+		// 			texto: 'El costo para bachiller UNMSM, personal administrativo UNMSM, docentes de universidades nacionales y magisterio nacionales es de',
+		// 			precio: 'S/350.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo para postulantes graduados de otras universidades es de',
+		// 			precio: 'S/450.00',
+		// 		},
+		// 	],
+		// 	matricula: [
+		// 		{
+		// 			texto: 'El costo por derecho de matrícula UPG para el alumno es de',
+		// 			precio: 'S/348.00',
+		// 		},
+		// 		{
+		// 			texto: 'El costo por derecho de matrícula EPG para el alumno es de',
+		// 			precio: 'S/52.00',
+		// 		},
+		// 	],
+		// },
+	},
+	{
 		titulo: 'Maestría en Educación con mención en Gestión de la Educación',
 		tipo: 'MAESTRIA',
 		subtitulo: '',

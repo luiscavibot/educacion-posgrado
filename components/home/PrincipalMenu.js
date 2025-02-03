@@ -49,25 +49,39 @@ const PrincipalMenu = () => {
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-gestion-de-la-educacion">
 												<a className="hover:text-secondary py-2">
-													MEd. con mención en Gestión
+													M. Ed. con mención en Gestión
 													de la Educación
 												</a>
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/maestrias/">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-docencia-universitaria">
 												<a className="hover:text-secondary py-2">
-													MEd. con mención en Docencia
+													M. Ed. con mención en Docencia
 													Universitaria
 												</a>
 											</Link>
 										</MenuItem>
 										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
-											<Link href="/programas/maestrias/">
+											<Link href="/programas/maestrias/maestria-en-educacion-con-mencion-en-evaluacion-y-acreditacion-de-la-calidad-de-la-educacion">
 												<a className="hover:text-secondary py-2">
-													MEd. con mención en
+													M. Ed. con mención en
 													Evaluación y Acreditación de
 													la Calidad de la Educación
+												</a>
+											</Link>
+										</MenuItem>
+										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+											<Link href="/programas/maestrias/maestria-profesional-en-didactica-en-la-matematica">
+												<a className="hover:text-secondary py-2">
+													M. Profesional en didáctica de la matemática
+												</a>
+											</Link>
+										</MenuItem>
+										<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+											<Link href="/programas/maestrias/maestria-profesional-en-didactica-de-la-comunicacion-e-innovacion">
+												<a className="hover:text-secondary py-2">
+													M. Profesional en didáctica de la comunicación e innovación
 												</a>
 											</Link>
 										</MenuItem>

@@ -164,7 +164,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 						<div>
 							<p className="font-bold text-center">
-								Admisión Posgrado 2024-I
+								Admisión Posgrado 2025-I
 							</p>
 						</div>
 						<div className="mb-2 md:mb-0">
@@ -172,7 +172,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span className="font-bold">
 									Cierre de inscripciones:
 								</span>{' '}
-								<span>14 de julio del 2023</span>
+								<span>28 de marzo del 2025</span>
 							</p>
 						</div>
 						{/* <a
@@ -429,17 +429,22 @@ const Programa = ({ programa, otrosProgramas }) => {
 						label="Plana docente"
 						link="/comunidad/plana-docente"
 					></div> */}
-					<div label="Malla curricular">
-						<MallaCurricular
-							asignaturas={programa.asignaturas}
-							tipo={programa.tipo}
-							electivos={programa.electivos}
-							// ogUrl={ogUrl}
-						/>
-					</div>
-					<div label="Inversión económica">
-						<InversionEconomica inversion={programa.inversion} />
-					</div>
+					{
+						(programa.asignaturas == undefined || programa.asignaturas.length == 0 ) ??
+						<div label="Malla curricular">
+							<MallaCurricular
+								asignaturas={programa.asignaturas}
+								tipo={programa.tipo}
+								electivos={programa.electivos}
+							/>
+						</div>
+					}
+					{
+						(programa.inversion == undefined || programa.inversion.length == 0) ??
+						<div label="Inversión económica">
+							<InversionEconomica inversion={programa.inversion} />
+						</div>
+					}
 					{/* 
 					<div
 						label="Testimonios de egresados"
