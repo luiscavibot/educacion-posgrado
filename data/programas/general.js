@@ -5,6 +5,7 @@ export const maestrias = [
 		subtitulo: '',
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'maestria-profesional-en-didactica-en-la-matematica',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM_Maestria_en_educacion_2025_1_Maestria_profesional_en_didactica_de_la_matematica_744a00e4e4.pdf',
 		miniHomeImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_minihome_7990fd6a64.webp',
 		bannerImg:
@@ -127,6 +128,7 @@ export const maestrias = [
 		subtitulo: '',
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'maestria-profesional-en-didactica-de-la-comunicacion-e-innovacion',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM_Maestria_en_educacion_2025_1_Maestria_profesional_en_didactica_de_la_comunicacion_d219d804c0.pdf',
 		miniHomeImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_minihome_88ed10e960.webp',
 		bannerImg:

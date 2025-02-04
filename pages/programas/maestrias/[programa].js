@@ -175,14 +175,16 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span>28 de marzo del 2025</span>
 							</p>
 						</div>
-						{/* <a
-							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-secondary text-blanco hover:bg-secondary-hover hover:shadow-md"
-							href={`#`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Ver brochure
-						</a> */}
+						{programa.brochure &&
+							<a
+								className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-secondary text-blanco hover:bg-secondary-hover hover:shadow-md"
+								href={programa.brochure}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Ver brochure
+							</a>
+						}
 					</div>
 				</div>
 			</div>
