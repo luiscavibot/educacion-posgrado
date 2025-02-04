@@ -229,7 +229,7 @@ const FormacionContentModal = ({
 					</div>
 					<div className="w-full h-60 rounded-xl overflow-hidden mt-8">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7949758880272!2d-77.08402632394713!3d-12.057623042105025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9470f9bf1fd%3A0xc6a364b4fdf6a683!2sFacultad%20de%20Ciencias%20Administrativas%20-%20UNMSM!5e0!3m2!1ses-419!2spe!4v1691005132810!5m2!1ses-419!2spe"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.837080183649!2d-77.08735282412847!3d-12.05472824205069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c945e1196a1f%3A0xca572064c653b108!2sFacultad%20de%20Educaci%C3%B3n%20-%20UNMSM!5e0!3m2!1ses!2spe!4v1738708620390!5m2!1ses!2spe"
 							width="100%"
 							height="100%"
 							style={{ border: 0 }}
