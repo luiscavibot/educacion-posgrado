@@ -17,7 +17,7 @@ import { useHome } from '../hooks/useHome';
 
 export default function Home() {
 	const [isOpenHeader, setIsOpenHeader] = useState(true);
-	const { alerta } = useAlertasInformativas();
+	// const { alerta } = useAlertasInformativas();
 	const { isLoading, agendaDestacadas, ultimasHome } = useHome();
 
 	return (
@@ -26,9 +26,10 @@ export default function Home() {
 				<>
 					<AsideSocialNetworks />
 					<div className="max-md:fixed sticky max-md:bottom-0 md:top-0 z-20 w-full">
-						{isOpenHeader && alerta && (
+						{/* {isOpenHeader && alerta && ( */}
+						{isOpenHeader && (
 							<BannerAdmisionHome
-								alerta={alerta}
+								// alerta={alerta}
 								setIsOpenHeader={setIsOpenHeader}
 							/>
 						)}

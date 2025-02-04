@@ -2,9 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { IoClose } from 'react-icons/io5';
 import CampanaIcon from '../icons/CampanaIcon';
-// import anuncio_admision from '../../data/admision/anuncio_admision.json';
+import anuncio_admision from '../../data/admision/anuncio_admision.json';
 
-export const BannerAdmisionHome = ({ setIsOpenHeader, alerta }) => {
+export const BannerAdmisionHome = (
+	{
+		setIsOpenHeader,
+		// alerta
+	}
+) => {
 	return (
 		<div className="bg-alert bg-cover bg-center relative shadow-[0px_-2px_4px_rgba(0,0,0,0.25)] md:shadow-none">
 			<div className="flex flex-col md:flex-row justify-center gap-y-[1px] gap-x-2 px-3 py-3 md:py-5">
@@ -12,15 +17,14 @@ export const BannerAdmisionHome = ({ setIsOpenHeader, alerta }) => {
 					<CampanaIcon className="fill-textColorOne" />
 				</span>
 				<div className="font-bold text-textColorOne text-lg">
-					{alerta.titulo}
+					{anuncio_admision.titulo}
 				</div>
 				<div className="text-textColorOne text-lg">
-					{alerta.descripcion}
+					{anuncio_admision.cierreDeInscripciones}
 				</div>
 				<div>
-					{/* <Link href="/formacion-academica/admision?posgrado"> */}
-					<Link href={alerta.url}>
-						<a className="py-3 px-4 rounded-lg bg-primary hover:bg-primary-hover text-blanco max-md:inline-block">
+					<Link href="/admision">
+						<a className="py-3 px-4 rounded-lg bg-primary hover:bg-primary-hover transition-colors duration-300 text-blanco max-md:inline-block">
 							Más información
 						</a>
 					</Link>
