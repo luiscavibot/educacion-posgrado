@@ -66,6 +66,9 @@ const Index = () => {
 													{programa.modalidad ===
 														'SEMIPRESENCIAL' &&
 														'Semipresencial'}
+													{programa.modalidad ===
+													'AMBAS' &&
+													'Semipresencial y Presencial'}
 												</div>
 											</div>
 											<div className="text-content text-textColorOne group-hover:text-secondary">

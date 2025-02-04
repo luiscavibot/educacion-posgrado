@@ -3,14 +3,14 @@ export const maestrias = [
 		titulo: 'Maestría Profesional en didactica en la matemática',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
-		modalidad: 'PRESENCIAL',
+		modalidad: 'SEMIPRESENCIAL',
 		slug: 'maestria-profesional-en-didactica-en-la-matematica',
 		miniHomeImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_minihome_7990fd6a64.webp',
 		bannerImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_banner_b80517614d.webp',
 		grado: 'Magíster en Didactica en la Matemática',
-		duracion: '2 años (4 semestres)',
+		duracion: '1 año (2 semestres)',
 		objetivos:
 			'Formar profesionales capaces de analizar y comprender los procesos de aprendizaje y enseñanza de la matemática. Desarrollar habilidades para diseñar y evaluar estrategias didácticas que favorezcan la comprensión y el aprendizaje significativo de la matemática. Fomentar la capacidad de reflexionar críticamente sobre los enfoques y metodologías utilizados en la enseñanza de la matemática para reforzar su desarrollo académico y profesional. Proporcionar herramientas metodológicas y digitales para la investigación en el campo de la didáctica de la matemática.',
 		description:
@@ -125,14 +125,14 @@ export const maestrias = [
 		titulo: 'Maestría Profesional en didactica de la comunicación e innovación',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
-		modalidad: 'PRESENCIAL',
+		modalidad: 'SEMIPRESENCIAL',
 		slug: 'maestria-profesional-en-didactica-de-la-comunicacion-e-innovacion',
 		miniHomeImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_minihome_88ed10e960.webp',
 		bannerImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_banner_cd49c8f441.webp',
 		grado: 'Magíster en Didactica de la comunicación e innovación',
-		duracion: '2 años (4 semestres)',
+		duracion: '1 año (2 semestres)',
 		objetivos:
 			'Desarrollar competencias en investigación para ser productores de ciencia como base de su desarrollo académico y profesional. Formar educadores comprometidos con la formación integral del estudiante para aportar en los diferentes contextos sociales y culturales. Formar profesionales conocedores de la didáctica de la comunicación para potenciar la formación integral de los estudiantes y sociedad. Potenciar especialistas en comunicación e innovación para iniciar una eficiente carrera profesional en el campo de la docencia.',
 		description:
@@ -247,7 +247,7 @@ export const maestrias = [
 		titulo: 'Maestría en Educación con mención en Gestión de la Educación',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
-		modalidad: 'PRESENCIAL',
+		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-gestion-de-la-educacion',
 		miniHomeImg:
 			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/maestria-gestion-educacion-minihome.png',
@@ -369,7 +369,7 @@ export const maestrias = [
 		titulo: 'Maestría en Educación con mención en Docencia Universitaria',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
-		modalidad: 'PRESENCIAL',
+		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-docencia-universitaria',
 		miniHomeImg:
 			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/maestria-docencia-universitaria-minihome.png',
@@ -491,7 +491,7 @@ export const maestrias = [
 		titulo: 'Maestría en Educación con mención en Evaluación y Acreditación de la Calidad de la Educación',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
-		modalidad: 'PRESENCIAL',
+		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-evaluacion-y-acreditacion-de-la-calidad-de-la-educacion',
 		miniHomeImg:
 			'https://unmsm-web-static-files.s3.sa-east-1.amazonaws.com/fac-educacion/maestria-evaluacion-acreditacion-educacion-minihome.png',

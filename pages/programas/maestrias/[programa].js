@@ -221,6 +221,9 @@ const Programa = ({ programa, otrosProgramas }) => {
 											{programa.modalidad ===
 												'SEMIPRESENCIAL' &&
 												'Semipresencial'}
+											{programa.modalidad ===
+											'AMBAS' &&
+											'Semipresencial y presencial'}
 										</span>
 									</p>
 								</div>
@@ -532,6 +535,9 @@ const Programa = ({ programa, otrosProgramas }) => {
 												{otrosPrograma.modalidad ===
 													'SEMIPRESENCIAL' &&
 													'Semipresencial'}
+												{otrosPrograma.modalidad ===
+													'AMBAS' &&
+													'Semipresencial y presencial'}
 											</div>
 										</div>
 										<div className="text-content text-textColorOne group-hover:text-secondary">
