@@ -21,7 +21,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaFacebookF />
 					</button>
 				</a>
@@ -33,7 +33,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaTwitter />
 					</button>
 				</a>
@@ -45,7 +45,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillYoutube />
 					</button>
 				</a>
@@ -57,7 +57,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillInstagram />
 					</button>
 				</a>
@@ -69,7 +69,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<AiFillLinkedin />
 					</button>
 				</a>
@@ -81,7 +81,7 @@ export default function RedesSocialesHome({
 					rel="noopener noreferrer"
 					className="inline pointer-events-auto"
 				>
-					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-transparente rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
+					<button className="shadow-[0px_1px_4px_rgba(0,0,0,0.25);] text-primary bg-[#ffffffe0] rounded-md outline outline-[1.5px] outline-primary p-2 text-base hover:-translate-y-1 hover:shadow-lg duration-300">
 						<FaTiktok />
 					</button>
 				</a>
