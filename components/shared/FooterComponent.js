@@ -31,13 +31,26 @@ const FooterComponent = ({ inHome }) => {
 					<div className="lg:col-start-2 lg:col-span-10 text-blanco grid grid-cols-2 lg:grid-cols-[281px_auto_auto_auto_auto] gap-x-4 lg:gap-x-10 gap-y-14 lg:gap-y-0 px-4 lg:px-0">
 						<div className="col-span-2 lg:col-span-1">
 							<div className="w-full mb-3">
-								<Logo className="h-24 w-full mb-3" />
+								{/* <Logo className="h-24 w-full mb-3" /> */}
+								<Link href="/">
+									<a className="flex items-center gap-3 mb-3">
+										<div className="w-16">
+											<Image
+												src="https://unmsm-static-files.s3.us-east-2.amazonaws.com/general/escudo-unmsm.png"
+												alt="escudo-unmsm"
+												width={130.94}
+												height={158}
+											/>
+										</div>
+										<p className="font-bold text-lg">Posgrado Educación</p>
+									</a>
+								</Link>
 
 								<p className="text-sm mb-2">
 									<b>Dirección:</b> Av. Carlos Germán Amezaga
 									#375 - Cercado de Lima (
 									<a
-										href="https://goo.gl/maps/6jXz2gUmn5QKXWdh9"
+										href="https://maps.app.goo.gl/V6jhRuwQYbJ2diw76"
 										target="_blank"
 										className="font-bold underline"
 										rel="noopener noreferrer"
@@ -48,7 +61,7 @@ const FooterComponent = ({ inHome }) => {
 								</p>
 
 								<p className="text-sm">
-									<b>Teléfono:</b> (01) 6197000 Anexo
+									<b>Teléfono:</b> (01) 6197000 Anexo 2624
 								</p>
 							</div>
 						</div>
@@ -105,11 +118,11 @@ const FooterComponent = ({ inHome }) => {
 									<a>Comunidad</a>
 								</Link>
 							</p>
-							<p className="">
+							{/* <p className="">
 								<Link href="/tramites/preguntas-frecuentes">
 									<a>Preguntas frecuentes</a>
 								</Link>
-							</p>
+							</p> */}
 						</div>
 					</div>
 				</div>

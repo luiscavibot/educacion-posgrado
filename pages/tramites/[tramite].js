@@ -178,7 +178,7 @@ const Tramite = ({ ultimasNoticias }) => {
 					</div>
 
 					<div className="mx-4 md:mx-0 col-span-full lg:col-span-2 mb-5">
-						<div className="bg-complementaryTwo px-4 py-4 rounded-lg text-sm mb-6">
+						{/* <div className="bg-complementaryTwo px-4 py-4 rounded-lg text-sm mb-6">
 							<p className="mb-2">
 								¿Dificultades para realizar un trámite?
 							</p>
@@ -187,9 +187,9 @@ const Tramite = ({ ultimasNoticias }) => {
 									Ir a Preguntas frecuentes
 								</a>
 							</Link>
-						</div>
+						</div> */}
 						<a
-							href="#"
+							href="https://unmsm-static-files-v2.s3.us-east-2.amazonaws.com/educacion/documents/fut-unmsm-educacion_compressed.pdf"
 							className="text-blanco text-[15px] py-3 px-4 bg-primary rounded-lg mb-8 inline-flex items-center justify-center gap-x-2 hover:bg-primary-hover transition-colors duration-300"
 							rel="noreferrer noopener"
 							target="_blank"

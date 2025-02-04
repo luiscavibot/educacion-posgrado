@@ -411,7 +411,7 @@ const SideBar = ({ interno }) => {
 													MAT
 												</a>
 											</div>
-											<div onClick={handleSidebar}>
+											{/* <div onClick={handleSidebar}>
 												<a
 													href="https://forms.gle/6QHcRQ5gZQKxpZpn8"
 													rel="noopener noreferrer"
@@ -420,7 +420,7 @@ const SideBar = ({ interno }) => {
 												>
 													Registro de pagos
 												</a>
-											</div>
+											</div> */}
 										</div>
 									</Accordion.Content>
 								</>

@@ -86,7 +86,7 @@ const SubMenu = ({ theme, color }) => {
 										MAT
 									</a>
 								</MenuItem>
-								<MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
+								{/* <MenuItem className="list-none p-2 rounded-lg cursor-default select-none last-of-type:border-b-0 focus-visible:shadow-outline-purple focus-visible:outline-0">
 									<a
 										href="https://forms.gle/6QHcRQ5gZQKxpZpn8"
 										target="_blank"
@@ -95,7 +95,7 @@ const SubMenu = ({ theme, color }) => {
 									>
 										Registro de pagos
 									</a>
-								</MenuItem>
+								</MenuItem> */}
 							</Menu>
 						</Dropdown>
 					</li>
