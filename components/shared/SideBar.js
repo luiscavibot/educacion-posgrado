@@ -428,10 +428,12 @@ const SideBar = ({ interno }) => {
 							<div>
 								<RedesSocialesHome
 									className="text-lg mt-12 mb-8 flex gap-4 items-center justify-center"
-									facebook={`${process.env.NEXT_PUBLIC_FACEBOOK}`}
-									youtube={`${process.env.NEXT_PUBLIC_YOUTUBE}`}
-									tiktok={`${process.env.NEXT_PUBLIC_TIKTOK}`}
-									linkedin={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
+									facebook={process.env.NEXT_PUBLIC_FACEBOOK}
+									youtube={process.env.NEXT_PUBLIC_YOUTUBE}
+									twitter={process.env.NEXT_PUBLIC_TWITTER}
+									instagram={process.env.NEXT_PUBLIC_INSTAGRAM}
+									tiktok={process.env.NEXT_PUBLIC_TIKTOK}
+									linkedin={process.env.NEXT_PUBLIC_LINKEDIN}
 								/>
 							</div>
 						</div>

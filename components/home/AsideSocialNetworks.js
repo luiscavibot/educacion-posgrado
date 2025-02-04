@@ -10,10 +10,11 @@ const AsideSocialNetworks = () => {
 				<div className="container px-4 m-auto flex items-center justify-end">
 					<RedesSocialesHome
 						className="text-lg flex flex-col gap-3"
-						facebook={`${process.env.NEXT_PUBLIC_FACEBOOK}`}
-						youtube={`${process.env.NEXT_PUBLIC_YOUTUBE}`}
-						tiktok={`${process.env.NEXT_PUBLIC_TIKTOK}`}
-						linkedin={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
+						facebook={process.env.NEXT_PUBLIC_FACEBOOK}
+						youtube={process.env.NEXT_PUBLIC_YOUTUBE}
+						instagram={process.env.NEXT_PUBLIC_INSTAGRAM}
+						tiktok={process.env.NEXT_PUBLIC_TIKTOK}
+						linkedin={process.env.NEXT_PUBLIC_LINKEDIN}
 					/>
 				</div>
 			</div>

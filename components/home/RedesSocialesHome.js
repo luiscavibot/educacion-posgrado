@@ -4,14 +4,15 @@ import { FaFacebookF, FaTiktok, FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 
 export default function RedesSocialesHome({
-	facebook = '',
-	instagram = '',
-	twitter = '',
-	youtube = '',
-	className = '',
-	linkedin = '',
-	tiktok = '',
+	facebook,
+	instagram,
+	twitter,
+	youtube,
+	className,
+	linkedin,
+	tiktok,
 }) {
+
 	return (
 		<div className={className}>
 			{facebook && (

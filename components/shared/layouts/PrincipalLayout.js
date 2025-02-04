@@ -21,7 +21,14 @@ const PrincipalLayout = ({ children, metaTags }) => {
 					</div>
 					<div className="fixed inset-y-0 pt-[25rem] w-14 right-0 md:block hidden">
 						<div ref={refSocialMedia}>
-							<SocialMediaAside />
+							<SocialMediaAside
+								facebook={process.env.NEXT_PUBLIC_FACEBOOK}
+								youtube={process.env.NEXT_PUBLIC_YOUTUBE}
+								twitter={process.env.NEXT_PUBLIC_TWITTER}
+								instagram={process.env.NEXT_PUBLIC_INSTAGRAM}
+								tiktok={process.env.NEXT_PUBLIC_TIKTOK}
+								linkedin={process.env.NEXT_PUBLIC_LINKEDIN}
+							/>
 						</div>
 					</div>
 					<div id="footerId">
