@@ -50,13 +50,13 @@ export const ProcesoEvaluacionDoctorado = () => {
 					</li>
 				</ul>
 			</div>
-			<p>
+			{/* <p>
 				El examen virtual se llevará a cabo el sábado 29 de marzo a las 16:00 horas, con una duración de 50 minutos. La sustentación del proyecto de investigación virtual se llevará a cabo el 30 de marzo, los resultados finales se publicarán el 05 de abril. El ingreso a cada programa de posgrado es en estricto orden de mérito según el número de vacantes disponibles.{' '}
 				<span className="font-bold">
 					El puntaje total mínimo aprobatorio para acceder a una
 					vacante es de 65 puntos.
 				</span>
-			</p>
+			</p> */}
 		</div>
 	);
 };

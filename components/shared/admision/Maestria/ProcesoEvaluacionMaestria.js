@@ -47,13 +47,13 @@ export const ProcesoEvaluacionMaestria = () => {
 					</li>
 				</ul>
 			</div>
-			<p>
+			{/* <p>
 				El examen virtual se llevará a cabo el sábado 29 de marzo a las 16:00 horas, con una duración de 50 minutos. La entrevista virtual se llevará a cabo los días 31 de marzo y 01 de abril, los resultados finales se publicarán el 05 de abril. El ingreso a cada programa de posgrado es en estricto orden de mérito según el número de vacantes disponibles.{' '}
 				<span className="font-bold">
 					El puntaje mínimo acumulativo para poder competir por una
 					vacante es de 65 puntos.
 				</span>
-			</p>
+			</p> */}
 		</div>
 	);
 };
