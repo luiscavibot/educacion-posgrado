@@ -19,7 +19,7 @@ export const CronogramaAcademico = () => {
 								colSpan="2"
 								className="!bg-tertiary text-blanco text-center"
 							>
-								Admisión general 2025-I
+								Admisión general 2025-II
 							</th>
 						</tr>
 						<tr className="!bg-tertiary/50 text-blanco text-center">
@@ -30,63 +30,31 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>
-								Envío a DGEP Resolución de Decanato que aprueba el cuadro de vacantes para la admisión 2025-I y 2025-II
-							</td>
-							<td>9 al 13 de diciembre de 2024</td>
-						</tr>
-						<tr>
-							<td>
-								Aprobación de cuadro de vacantes para posgrado de la UNMSM con RR
-							</td>
-							<td>16 al 31 de diciembre del 2024</td>
-						</tr>
-						<tr>
-							<td>
 								Inscripción de postulantes y envío de expediente
 							</td>
-							<td>Del 02 de enero al 28 de marzo</td>
+							<td>Del 05 de mayo al 08 de agosto</td>
 						</tr>
 						<tr>
 							<td>
-								Examen de aptitud
+								Examen de conocimientos
 							</td>
-							<td>Hasta 29 de marzo</td>
+							<td>Hasta el 10 de agosto</td>
 						</tr>
 						<tr>
 							<td>
 								Evaluación del expediente
 							</td>
-							<td>Hasta el 31 de marzo</td>
+							<td>Hasta el 13 de agosto</td>
 						</tr>
 						<tr>
 							<td>Entrevista personal (solo maestría)</td>
-							<td>Hasta el 02 de abril</td>
-						</tr>
-						<tr>
-							<td>Ingreso de evaluación al SISEVA para generación de actas</td>
-							<td>04 de abril</td>
+							<td>Hasta el 15 de agosto</td>
 						</tr>
 						<tr>
 							<td>
 								Publicación de resultados
 							</td>
-							<td>05 de abril</td>
-						</tr>
-						<tr>
-							<td>Resolución de Decanato de ingresantes, envío a la DGEP y la oficina del SUM</td>
-							<td>07 de abril</td>
-						</tr>
-						<tr>
-							<td>
-								Consolidado de ingresantes, envío a la Oficina de Planificación
-							</td>
-							<td>08 de abril</td>
-						</tr>
-						<tr>
-							<td>
-								Oficina de Planificación envío a MINEDU - SUNEDU
-							</td>
-							<td>10 de abril</td>
+							<td>18 de agosto</td>
 						</tr>
 					</tbody>
 				</table>
@@ -111,30 +79,30 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>Reactualización de matrícula</td>
-							<td>Hasta el 03 de marzo</td>
+							<td>Hasta el 08 de agosto</td>
 						</tr>
 						<tr>
 							<td>Matrícula regular</td>
-							<td>Del 10 de marzo al 11 de abril</td>
+							<td>Del 08 al 29 de agosto</td>
 						</tr>
 						<tr>
 							<td>Matrícula de ingresantes</td>
-							<td>Del 08 al 14 de abril</td>
+							<td>Del 22 al 29 de agosto</td>
+						</tr>
+						<tr>
+							<td>Reserva de matrícula</td>
+							<td>Hasta el 19 de setiembre</td>
 						</tr>
 						<tr>
 							<td>
 								Matrícula extemporánea y rectificación de
 								matrícula
 							</td>
-							<td>Del 24 al 30 de abril</td>
-						</tr>
-						<tr>
-							<td>Reserva de matrícula</td>
-							<td>Hasta el 24 de junio</td>
+							<td>Del 12 al 19 de setiembre</td>
 						</tr>
 						<tr>
 							<td>Anulación de matrícula</td>
-							<td>Del 19 al 24 de junio</td>
+							<td>Del 15 al 19 de setiembre</td>
 						</tr>
 					</tbody>
 				</table>
@@ -162,7 +130,7 @@ export const CronogramaAcademico = () => {
 								Capacitación en base de datos, aspectos de
 								investigación y normativa de posgrado
 							</td>
-							<td>12 y/o 13 de abril</td>
+							<td>29 al 31 de agosto</td>
 						</tr>
 					</tbody>
 				</table>
@@ -187,15 +155,15 @@ export const CronogramaAcademico = () => {
 					<tbody>
 						<tr>
 							<td>Inicio de clases</td>
-							<td>14 de abril</td>
+							<td>01 de setiembre</td>
 						</tr>
 						<tr>
 							<td>Fin de clases</td>
-							<td>03 de agosto</td>
+							<td>21 de diciembre</td>
 						</tr>
 						<tr>
 							<td>Ingreso de notas</td>
-							<td>Del 04 al 07 de agosto</td>
+							<td>Del 22 al 26 de diciembre</td>
 						</tr>
 					</tbody>
 				</table>

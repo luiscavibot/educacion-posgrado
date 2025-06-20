@@ -25,7 +25,7 @@ export const GuiaAdmisionDoctorado = () => {
 			<div className="mb-6">
 				¿Estás listo/a para postular a un doctorado? Sigue, por favor,
 				detenidamente los siguientes pasos del proceso de admisión
-				2025-I:
+				2025-II:
 			</div>
 			<div className="relative">
 				<div className="grid grid-cols-[88px_auto] mb-10">

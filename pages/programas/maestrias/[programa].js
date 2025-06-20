@@ -164,7 +164,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 						<div>
 							<p className="font-bold text-center">
-								Admisión Posgrado 2025-I
+								Admisión Posgrado 2025-II
 							</p>
 						</div>
 						<div className="mb-2 md:mb-0">
@@ -172,7 +172,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span className="font-bold">
 									Cierre de inscripciones:
 								</span>{' '}
-								<span>28 de marzo del 2025</span>
+								<span>08 de agosto del 2025</span>
 							</p>
 						</div>
 						{programa.brochure &&

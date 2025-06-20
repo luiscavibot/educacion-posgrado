@@ -1,6 +1,6 @@
 export const maestrias = [
 	{
-		titulo: 'Maestría Profesional en didactica en la matemática',
+		titulo: 'Maestría Profesional en didáctica en la matemática',
 		tipo: 'MAESTRIA',
 		subtitulo: '',
 		modalidad: 'SEMIPRESENCIAL',
@@ -10,7 +10,7 @@ export const maestrias = [
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_minihome_7990fd6a64.webp',
 		bannerImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_matematica_banner_b80517614d.webp',
-		grado: 'Magíster en Didactica en la Matemática',
+		grado: 'Magíster en Didáctica en la Matemática',
 		duracion: '1 año (2 semestres)',
 		objetivos:
 			'Formar profesionales capaces de analizar y comprender los procesos de aprendizaje y enseñanza de la matemática. Desarrollar habilidades para diseñar y evaluar estrategias didácticas que favorezcan la comprensión y el aprendizaje significativo de la matemática. Fomentar la capacidad de reflexionar críticamente sobre los enfoques y metodologías utilizados en la enseñanza de la matemática para reforzar su desarrollo académico y profesional. Proporcionar herramientas metodológicas y digitales para la investigación en el campo de la didáctica de la matemática.',
@@ -123,17 +123,17 @@ export const maestrias = [
 		// },
 	},
 	{
-		titulo: 'Maestría Profesional en didactica de la comunicación e innovación',
+		titulo: 'Maestría Profesional en didáctica de la comunicación e innovación',
 		tipo: 'MAESTRIA',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM+-+Maestr%C3%ADa+en+educaci%C3%B3n+2025-II+-+Maestr%C3%ADa+profesional+en+did%C3%A1ctica+de+la+comunicaci%C3%B3n+.pdf',
 		subtitulo: '',
 		modalidad: 'SEMIPRESENCIAL',
 		slug: 'maestria-profesional-en-didactica-de-la-comunicacion-e-innovacion',
-		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM_Maestria_en_educacion_2025_1_Maestria_profesional_en_didactica_de_la_comunicacion_d219d804c0.pdf',
 		miniHomeImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_minihome_88ed10e960.webp',
 		bannerImg:
 			'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/maestria_profesional_en_didactica_de_la_comunicacion_e_innovacion_banner_cd49c8f441.webp',
-		grado: 'Magíster en Didactica de la comunicación e innovación',
+		grado: 'Magíster en Didáctica de la comunicación e innovación',
 		duracion: '1 año (2 semestres)',
 		objetivos:
 			'Desarrollar competencias en investigación para ser productores de ciencia como base de su desarrollo académico y profesional. Formar educadores comprometidos con la formación integral del estudiante para aportar en los diferentes contextos sociales y culturales. Formar profesionales conocedores de la didáctica de la comunicación para potenciar la formación integral de los estudiantes y sociedad. Potenciar especialistas en comunicación e innovación para iniciar una eficiente carrera profesional en el campo de la docencia.',
@@ -248,6 +248,7 @@ export const maestrias = [
 	{
 		titulo: 'Maestría en Educación con mención en Gestión de la Educación',
 		tipo: 'MAESTRIA',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM+-+Maestr%C3%ADa+en+educaci%C3%B3n+2025-II+-+Maestr%C3%ADa+en+educaci%C3%B3n+con+menci%C3%B3n+en+gesti%C3%B3n+de+la+educac.pdf',
 		subtitulo: '',
 		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-gestion-de-la-educacion',
@@ -370,6 +371,7 @@ export const maestrias = [
 	{
 		titulo: 'Maestría en Educación con mención en Docencia Universitaria',
 		tipo: 'MAESTRIA',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM+-+Maestr%C3%ADa+en+educaci%C3%B3n+2025-II+-+Maestr%C3%ADa+en+educaci%C3%B3n+con+menci%C3%B3n+en+docencia+universitar.pdf',
 		subtitulo: '',
 		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-docencia-universitaria',
@@ -492,6 +494,7 @@ export const maestrias = [
 	{
 		titulo: 'Maestría en Educación con mención en Evaluación y Acreditación de la Calidad de la Educación',
 		tipo: 'MAESTRIA',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM+-+Maestr%C3%ADa+en+educaci%C3%B3n+2025-II+-+Maestr%C3%ADa+en+educaci%C3%B3n+con+menci%C3%B3n+en+evaluaci%C3%B3n+y+acr.pdf',
 		subtitulo: '',
 		modalidad: 'AMBAS',
 		slug: 'maestria-en-educacion-con-mencion-en-evaluacion-y-acreditacion-de-la-calidad-de-la-educacion',
@@ -616,6 +619,7 @@ export const doctorados = [
 	{
 		titulo: 'Doctorado en Educación y Docencia Universitaria',
 		tipo: 'DOCTORADO',
+		brochure: 'https://posgrado-unmsm.s3.sa-east-1.amazonaws.com/UNMSM+-+Doctorado+en+educaci%C3%B3n+y+docencia+universitaria+2025-II.pdf',
 		subtitulo: '',
 		modalidad: 'PRESENCIAL',
 		slug: 'doctorado-en-educacion-y-docencia-universitaria',

@@ -158,7 +158,7 @@ const Programa = ({ programa, otrosProgramas }) => {
 					<div className="bg-tertiary/90 text-blanco md:absolute bottom-0 inset-x-0 py-4 w-full flex flex-col md:flex-row justify-center items-center gap-2 px-4">
 						<div>
 							<p className="font-bold text-center">
-								Admisión Posgrado 2025-I
+								Admisión Posgrado 2025-II
 							</p>
 						</div>
 						<div className="mb-2 md:mb-0">
@@ -166,17 +166,19 @@ const Programa = ({ programa, otrosProgramas }) => {
 								<span className="font-bold">
 									Cierre de inscripciones:
 								</span>{' '}
-								<span>28 de marzo del 2025</span>
+								<span>08 de agosto del 2025</span>
 							</p>
 						</div>
-						{/* <a
-							className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-secondary text-blanco hover:bg-secondary-hover hover:shadow-md"
-							href={`#`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Ver brochure
-						</a> */}
+						{programa.brochure &&
+							<a
+								className="shadow-[0px_1px_4px_rgba(0,0,0,0.25)] font-semibold text-center rounded-lg py-2 px-3 text-sm duration-100 bg-secondary text-blanco hover:bg-secondary-hover hover:shadow-md"
+								href={programa.brochure}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Ver brochure
+							</a>
+						}
 					</div>
 				</div>
 			</div>
