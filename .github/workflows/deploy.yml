@@ -1,0 +1,53 @@
+name: Deploy to Amazon EKS
+run-name: ${{github.actor}} is deploying to Amazon EKS
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-image-to-amazon-ecr:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ${{ secrets.AWS_REGION }}
+
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Login to Amazon ECR
+              run: aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT}}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+
+            - name: Build Docker image
+              run: |
+                  docker build -t ${{ secrets.PROJECT_NAME }} .
+                  docker tag ${{ secrets.PROJECT_NAME}}:latest ${{ secrets.AWS_ACCOUNT}}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:latest
+                  docker push ${{ secrets.AWS_ACCOUNT}}.dkr.ecr.${{ secrets.AWS_REGION}}.amazonaws.com/${{ secrets.PROJECT_NAME}}:latest
+
+    deploy-in-amazon-eks:
+        runs-on: ubuntu-latest
+        needs: build-image-to-amazon-ecr
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ${{ secrets.AWS_REGION }}
+
+            - name: Deploy to Amazon EKS
+              run: |
+                  aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
+                  kubectl apply -f k8s/
+                  kubectl rollout restart deployment ${{ secrets.PROJECT_NAME }}-deployment

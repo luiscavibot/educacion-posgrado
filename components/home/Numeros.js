@@ -71,7 +71,7 @@ const Numeros = () => {
 						})}
 					</div>
 					<p className="absolute bottom-3 text-xs">
-						Datos estadísticos de la Facultad de Educación (2022).
+						Datos estadísticos de la Facultad de Educación (2022)
 					</p>
 				</div>
 				{/* </div> */}
